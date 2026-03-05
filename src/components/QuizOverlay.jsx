@@ -97,7 +97,7 @@ function QuizOverlay({ card, coins, language, onCoinsChange, onAnswer, onTimeout
                 </div>
 
                 <div className="quiz-content">
-                    <div className="quiz-emoji">{card.emoji}</div>
+                    {card.level === 1 && <div className="quiz-emoji">{card.emoji}</div>}
                     {card.category === 'math' ? (
                         <h2 className="quiz-question" dir="ltr">{card.text[language]}</h2>
                     ) : (
