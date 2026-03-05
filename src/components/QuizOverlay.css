@@ -25,6 +25,11 @@
     animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.quiz-card.not-ready {
+    pointer-events: none;
+    user-select: none;
+}
+
 @keyframes modalPop {
     0% {
         transform: scale(0.8);

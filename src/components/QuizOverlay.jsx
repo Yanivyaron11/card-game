@@ -80,7 +80,7 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
 
     return (
         <div className="quiz-overlay-backdrop">
-            <div className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''}`}>
+            <div className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''}`}>
                 <div className="quiz-stats-header">
                     <div className="stat-item lives-display">
                         <span className="stat-label">{t.hearts}:</span>
