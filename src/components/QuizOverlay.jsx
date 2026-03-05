@@ -12,6 +12,9 @@ function QuizOverlay({ card, coins, language, onCoinsChange, onAnswer, onTimeout
     useEffect(() => {
         setTimeLeft(30);
         setEliminatedOptions([]);
+    }, [card.id]);
+
+    useEffect(() => {
         timerRef.current = setInterval(() => {
             setTimeLeft(prev => {
                 if (prev <= 1) {
@@ -29,7 +32,7 @@ function QuizOverlay({ card, coins, language, onCoinsChange, onAnswer, onTimeout
         return () => {
             if (timerRef.current) clearInterval(timerRef.current);
         };
-    }, [card, onTimeout]);
+    }, [card.id, onTimeout]);
 
     const handleOptionClick = (index) => {
         if (eliminatedOptions.includes(index)) return;

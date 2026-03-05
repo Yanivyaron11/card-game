@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Card from './Card';
 import QuizOverlay from './QuizOverlay';
 import { generateDeck } from '../utils/deck';
@@ -23,7 +23,7 @@ function GameBoard({ config, lives, onLivesChange, coins, onCoinsChange, languag
         setActiveCardId(id);
     };
 
-    const handleAnswer = (cardId, isCorrect) => {
+    const handleAnswer = useCallback((cardId, isCorrect) => {
         if (isCorrect) {
             playSound('correct');
             setDeck(prev => {
@@ -53,7 +53,7 @@ function GameBoard({ config, lives, onLivesChange, coins, onCoinsChange, languag
                 onGameOver();
             }
         }
-    };
+    }, [lives, onLivesChange, onGameOver, onVictory]);
 
     const checkWinCondition = (currentDeck) => {
         if (currentDeck.length > 0 && currentDeck.every(card => card.isSolved || card.isFailed)) {
