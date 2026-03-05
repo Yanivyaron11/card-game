@@ -8,7 +8,10 @@ function Card({ card, onClick }) {
     return (
         <div
             className={`card ${isSolved ? 'solved' : ''} ${isFailed ? 'failed' : ''}`}
-            onClick={(!isSolved && !isFailed) ? onClick : undefined}
+            onPointerDown={(!isSolved && !isFailed) ? (e) => {
+                e.preventDefault();
+                onClick();
+            } : undefined}
         >
             <div className="card-inner">
                 {/* Card Back (Default state) */}

@@ -129,7 +129,11 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
                         <button
                             key={i}
                             className={`quiz-option-btn ${eliminatedOptions.includes(i) ? 'eliminated' : ''}`}
-                            onClick={() => handleOptionClick(i)}
+                            onPointerDown={() => handleOptionClick(i)}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                            }}
                             disabled={eliminatedOptions.includes(i)}
                         >
                             <span className="option-label">{labels[i]}</span>
@@ -144,14 +148,22 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
                         <div className="powerup-buttons">
                             <button
                                 className={`powerup-btn ${coins < 2 || eliminatedOptions.length > 0 ? 'locked' : ''}`}
-                                onClick={handle5050}
+                                onPointerDown={handle5050}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                }}
                             >
                                 <span className="cost">🪙 2</span>
                                 <div>½ 50/50</div>
                             </button>
                             <button
                                 className={`powerup-btn ${coins < 5 ? 'locked' : ''}`}
-                                onClick={handleSolve}
+                                onPointerDown={handleSolve}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                }}
                             >
                                 <span className="cost">🪙 5</span>
                                 <div>💡 {t.solve}</div>
