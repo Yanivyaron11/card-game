@@ -8,7 +8,7 @@ function App() {
   const [gameState, setGameState] = useState('start') // start, playing, game_over, victory
   const [gameConfig, setGameConfig] = useState(null)
   const [lives, setLives] = useState(1) // 1 extra heart
-  const [coins, setCoins] = useState(10) // Starting wealth
+  const [coins, setCoins] = useState(0) // Starting wealth
   const [language, setLanguage] = useState('en') // en, he
 
   const t = translations[language];
@@ -17,7 +17,7 @@ function App() {
     setGameConfig(config);
     const initialLives = config.gridSize === 9 ? 1 : config.gridSize === 16 ? 2 : 3;
     setLives(initialLives);
-    setCoins(10);
+    setCoins(0);
     setGameState('playing');
   };
 
