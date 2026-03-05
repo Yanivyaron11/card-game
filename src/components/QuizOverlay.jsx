@@ -8,7 +8,6 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
     const [timeLeft, setTimeLeft] = useState(30);
     const [eliminatedOptions, setEliminatedOptions] = useState([]);
     const [isReady, setIsReady] = useState(false);
-    const [activePointerId, setActivePointerId] = useState(null);
     const timerRef = useRef(null);
     const timeoutRef = useRef(onTimeout);
 
@@ -84,20 +83,6 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
     const optionLabelsHe = ['א', 'ב', 'ג', 'ד'];
     const labels = language === 'he' ? optionLabelsHe : optionLabelsEn;
 
-    const handlePointerDown = (id) => {
-        if (!isReady) return;
-        setActivePointerId(id);
-    };
-
-    const handlePointerUp = (id, action) => {
-        if (!isReady || activePointerId !== id) {
-            setActivePointerId(null);
-            return;
-        }
-        setActivePointerId(null);
-        action();
-    };
-
     return (
         <div className="quiz-overlay-backdrop">
             {!isReady && (
@@ -156,10 +141,7 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
                         <button
                             key={i}
                             className={`quiz-option-btn ${eliminatedOptions.includes(i) ? 'eliminated' : ''}`}
-                            onPointerDown={() => handlePointerDown(`opt-${i}`)}
-                            onPointerUp={() => handlePointerUp(`opt-${i}`, () => handleOptionClick(i))}
-                            onPointerLeave={() => setActivePointerId(null)}
-                            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                            onClick={() => handleOptionClick(i)}
                             disabled={!isReady || eliminatedOptions.includes(i)}
                         >
                             <span className="option-label">{labels[i]}</span>
@@ -174,10 +156,7 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
                         <div className="powerup-buttons">
                             <button
                                 className={`powerup-btn ${coins < 2 || eliminatedOptions.length > 0 ? 'locked' : ''}`}
-                                onPointerDown={() => handlePointerDown('power-5050')}
-                                onPointerUp={() => handlePointerUp('power-5050', handle5050)}
-                                onPointerLeave={() => setActivePointerId(null)}
-                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                                onClick={handle5050}
                                 disabled={!isReady}
                             >
                                 <span className="cost">🪙 2</span>
@@ -185,10 +164,7 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
                             </button>
                             <button
                                 className={`powerup-btn ${coins < 5 ? 'locked' : ''}`}
-                                onPointerDown={() => handlePointerDown('power-solve')}
-                                onPointerUp={() => handlePointerUp('power-solve', handleSolve)}
-                                onPointerLeave={() => setActivePointerId(null)}
-                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                                onClick={handleSolve}
                                 disabled={!isReady}
                             >
                                 <span className="cost">🪙 5</span>
