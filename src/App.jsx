@@ -9,7 +9,7 @@ function App() {
   const [gameConfig, setGameConfig] = useState(null)
   const [lives, setLives] = useState(1) // 1 extra heart
   const [coins, setCoins] = useState(0) // Starting wealth
-  const [language, setLanguage] = useState('en') // en, he
+  const [language, setLanguage] = useState('he') // en, he
 
   const t = translations[language];
 
