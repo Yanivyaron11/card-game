@@ -1,16 +1,44 @@
-# React + Vite
+# Kids Card Game 🦁🌍🎬➕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun, interactive, and educational card game designed for children. Match cards, answer fun quiz questions, and earn coins!
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Multi-topic Experience**: Choose from Animals, Countries, Movies, and Simple Math.
+- **Dynamic Difficulty**: Three levels of challenge to suit different ages.
+- **Bilingual Support**: Full support for both **English** and **Hebrew (RTL)**.
+- **Educational Quizzes**: Correct matches trigger a mini-quiz to test your knowledge.
+- **Power-ups**: Use earned coins for "50/50" eliminations or "Solve" hints.
+- **Sleek Design**: Modern glassmorphism UI with vibrant colors and smooth animations.
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React**: Core UI framework.
+- **Vite**: Ultra-fast build tool and dev server.
+- **Vanilla CSS**: Custom design system for visual excellence.
 
-## Expanding the ESLint configuration
+## 🌍 Hebrew Localization Fixes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Special attention was given to Hebrew rendering, ensuring that:
+- Right-to-Left (RTL) layout is consistent across all components.
+- Math expressions (e.g., "3 x 3", "5 + 7") maintain their correct mathematical order (LTR) within the RTL context, avoiding common BiDi reordering issues.
+
+## 🏃 Getting Started
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/Yanivyaron11/card-game.git
+    cd card-game
+    ```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Run locally**:
+    ```bash
+    npm run dev
+    ```
+
+## 📜 License
+
+MIT License - feel free to use and adapt!
