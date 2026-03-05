@@ -45,6 +45,45 @@
     padding-bottom: 1rem;
 }
 
+.quiz-stats-header {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.5rem 1rem;
+    background: #f8fafc;
+    border-radius: 30px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.quiz-stats-header .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat-label {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.hearts.mini {
+    display: flex;
+    gap: 3px;
+}
+
+.heart-icon.mini {
+    font-size: 1rem;
+}
+
+.coins-value.mini {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #b45309;
+}
+
 .topic-info {
     display: flex;
     align-items: center;

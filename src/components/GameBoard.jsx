@@ -104,6 +104,7 @@ function GameBoard({ config, lives, onLivesChange, coins, onCoinsChange, languag
                 <QuizOverlay
                     card={activeCard}
                     coins={coins}
+                    lives={lives}
                     language={language}
                     onCoinsChange={onCoinsChange}
                     onAnswer={(isCorrect) => handleAnswer(activeCard.id, isCorrect)}

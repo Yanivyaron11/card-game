@@ -3,7 +3,7 @@ import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './QuizOverlay.css';
 
-function QuizOverlay({ card, coins, language, onCoinsChange, onAnswer, onTimeout }) {
+function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, onTimeout }) {
     const t = translations[language];
     const [timeLeft, setTimeLeft] = useState(30);
     const [eliminatedOptions, setEliminatedOptions] = useState([]);
@@ -77,6 +77,21 @@ function QuizOverlay({ card, coins, language, onCoinsChange, onAnswer, onTimeout
     return (
         <div className="quiz-overlay-backdrop">
             <div className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''}`}>
+                <div className="quiz-stats-header">
+                    <div className="stat-item lives-display">
+                        <span className="stat-label">{t.hearts}:</span>
+                        <div className="hearts mini">
+                            {Array.from({ length: Math.max(0, lives + 1) }).map((_, i) => (
+                                <span key={i} className="heart-icon mini">❤️</span>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="stat-item coins-display">
+                        <span className="stat-label">{t.coins}:</span>
+                        <div key={coins} className="coins-value mini coin-pop">🪙 {coins}</div>
+                    </div>
+                </div>
+
                 <div className="quiz-header">
                     <div className="topic-info">
                         <span className="topic-icon">{card.topicIcon}</span>
