@@ -1,10 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './QuizOverlay.css';
 
-function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, onTimeout }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout }) {
+    const { cardId } = useParams();
+    const navigate = useNavigate();
     const t = translations[language];
+
+    // Find the correct card from the deck based on the URL parameter
+    const card = deck.find(c => c.id === cardId);
+
     const [timeLeft, setTimeLeft] = useState(30);
     const [eliminatedOptions, setEliminatedOptions] = useState([]);
     const [isReady, setIsReady] = useState(false);
@@ -16,14 +23,16 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
     }, [onTimeout]);
 
     useEffect(() => {
+        if (!card) return; // Prevent crashes if card is not found yet
         setTimeLeft(30);
         setEliminatedOptions([]);
         setIsReady(false);
         const readyTimeout = setTimeout(() => setIsReady(true), 500);
         return () => clearTimeout(readyTimeout);
-    }, [card.id]);
+    }, [card?.id]);
 
     useEffect(() => {
+        if (!card) return;
         timerRef.current = setInterval(() => {
             setTimeLeft(prev => {
                 if (prev <= 1) {
@@ -41,12 +50,21 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
         return () => {
             if (timerRef.current) clearInterval(timerRef.current);
         };
-    }, [card.id]);
+    }, [card?.id]);
+
+    // Handle case where card is not found or user navigated directly
+    useEffect(() => {
+        if (deck.length > 0 && !card) {
+            navigate('/play');
+        }
+    }, [deck, card, navigate]);
+
+    if (!card) return null;
 
     const handleOptionClick = (index) => {
         if (!isReady || eliminatedOptions.includes(index)) return;
         if (timerRef.current) clearInterval(timerRef.current);
-        onAnswer(index === card.correctAnswer);
+        onAnswer(card.id, index === card.correctAnswer);
     };
 
     const handle5050 = () => {
@@ -76,7 +94,7 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
         playSound('buy');
         onCoinsChange(prev => prev - 5);
         if (timerRef.current) clearInterval(timerRef.current);
-        onAnswer(true);
+        onAnswer(card.id, true);
     };
 
     const optionLabelsEn = ['A', 'B', 'C', 'D'];
