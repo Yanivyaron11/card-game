@@ -26,9 +26,6 @@ function GameBoard({ config, lives, onLivesChange, coins, onCoinsChange, languag
     const handleAnswer = (cardId, isCorrect) => {
         if (isCorrect) {
             playSound('correct');
-            // Reward increases with level (5, 10, 15)
-            const reward = (activeCard.level || 1) * 5;
-            onCoinsChange(prev => prev + reward);
             setDeck(prev => {
                 const newDeck = prev.map(card =>
                     card.id === cardId ? { ...card, isSolved: true } : card
