@@ -23,25 +23,9 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         timeoutRef.current = onTimeout;
     }, [onTimeout]);
 
-    // Native DOM Capture-Phase Blocker (The ultimate ghost-click killer)
     useEffect(() => {
-        const handleNativeClickCapture = (e) => {
-            const timeSinceMount = Date.now() - mountTimeRef.current;
-            if (timeSinceMount < 600) {
-                // If a click arrives immediately after this component mounts,
-                // it's a delayed OS ghost-click from the previous screen.
-                // Stop it in the native DOM before React even sees it.
-                e.stopPropagation();
-            }
-        };
-
-        // Attach to the top level window in the CAPTURE phase (true)
-        window.addEventListener('click', handleNativeClickCapture, true);
-
-        return () => {
-            window.removeEventListener('click', handleNativeClickCapture, true);
-        };
-    }, []);
+        timeoutRef.current = onTimeout;
+    }, [onTimeout]);
 
     useEffect(() => {
         if (!card) return; // Prevent crashes if card is not found yet
@@ -180,7 +164,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <button
                             key={i}
                             className={`quiz-option-btn ${eliminatedOptions.includes(i) ? 'eliminated' : ''}`}
-                            onClick={() => handleOptionClick(i)}
+                            onPointerDown={(e) => {
+                                // IMPORTANT: Only act on real pointer down events, ignore synthetic clicks
+                                e.preventDefault();
+                                handleOptionClick(i);
+                            }}
+                            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
                             disabled={!isReady || eliminatedOptions.includes(i)}
                         >
                             <span className="option-label">{labels[i]}</span>
@@ -195,7 +184,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <div className="powerup-buttons">
                             <button
                                 className={`powerup-btn ${coins < 2 || eliminatedOptions.length > 0 ? 'locked' : ''}`}
-                                onClick={handle5050}
+                                onPointerDown={(e) => {
+                                    e.preventDefault();
+                                    handle5050();
+                                }}
+                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
                                 disabled={!isReady}
                             >
                                 <span className="cost">🪙 2</span>
@@ -203,7 +196,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             </button>
                             <button
                                 className={`powerup-btn ${coins < 5 ? 'locked' : ''}`}
-                                onClick={handleSolve}
+                                onPointerDown={(e) => {
+                                    e.preventDefault();
+                                    handleSolve();
+                                }}
+                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
                                 disabled={!isReady}
                             >
                                 <span className="cost">🪙 5</span>

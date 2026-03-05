@@ -8,12 +8,11 @@ function Card({ card, onClick }) {
     return (
         <div
             className={`card ${isSolved ? 'solved' : ''} ${isFailed ? 'failed' : ''}`}
-            onClick={(!isSolved && !isFailed) ? onClick : undefined}
-            onTouchEnd={(!isSolved && !isFailed) ? (e) => {
-                // IMPORTANT: preventDefault() here kills the browser's synthetic Ghost Click
+            onPointerDown={(!isSolved && !isFailed) ? (e) => {
                 e.preventDefault();
                 onClick();
             } : undefined}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
         >
             <div className="card-inner">
                 {/* Card Back (Default state) */}
