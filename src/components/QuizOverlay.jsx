@@ -7,11 +7,15 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
     const t = translations[language];
     const [timeLeft, setTimeLeft] = useState(30);
     const [eliminatedOptions, setEliminatedOptions] = useState([]);
+    const [isReady, setIsReady] = useState(false);
     const timerRef = useRef(null);
 
     useEffect(() => {
         setTimeLeft(30);
         setEliminatedOptions([]);
+        setIsReady(false);
+        const readyTimeout = setTimeout(() => setIsReady(true), 500);
+        return () => clearTimeout(readyTimeout);
     }, [card.id]);
 
     useEffect(() => {
@@ -35,13 +39,13 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
     }, [card.id, onTimeout]);
 
     const handleOptionClick = (index) => {
-        if (eliminatedOptions.includes(index)) return;
+        if (!isReady || eliminatedOptions.includes(index)) return;
         if (timerRef.current) clearInterval(timerRef.current);
         onAnswer(index === card.correctAnswer);
     };
 
     const handle5050 = () => {
-        if (coins < 2 || eliminatedOptions.length > 0) {
+        if (!isReady || coins < 2 || eliminatedOptions.length > 0) {
             playSound('error');
             return;
         }
@@ -60,7 +64,7 @@ function QuizOverlay({ card, lives, coins, language, onCoinsChange, onAnswer, on
     };
 
     const handleSolve = () => {
-        if (coins < 5) {
+        if (!isReady || coins < 5) {
             playSound('error');
             return;
         }
