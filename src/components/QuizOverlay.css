@@ -292,11 +292,49 @@
 }
 
 @media (max-width: 600px) {
+    .quiz-card {
+        padding: 1rem;
+        gap: 1rem;
+        max-width: 95vw;
+    }
+
     .quiz-options {
         grid-template-columns: 1fr;
+        gap: 0.5rem;
     }
 
     .quiz-question {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .quiz-emoji {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .quiz-header {
+        padding-bottom: 0.5rem;
+    }
+
+    .quiz-option-btn {
+        padding: 0.8rem;
+    }
+
+    .option-text {
+        font-size: 1rem;
+    }
+
+    .quiz-stats-header {
+        gap: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .powerup-buttons {
+        gap: 0.8rem;
+    }
+
+    .powerup-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 }

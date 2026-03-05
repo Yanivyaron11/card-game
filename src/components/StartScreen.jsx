@@ -33,7 +33,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
         <div className="start-screen glass-panel">
             <div className="language-selector">
                 <button onClick={toggleLanguage} className="lang-toggle-btn">
-                    {language === 'en' ? '🇮🇱 עברית' : '🇺🇸 English'}
+                    {language === 'en' ? '🇮🇱' : '🇺🇸'}
                 </button>
             </div>
 

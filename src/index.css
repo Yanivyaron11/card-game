@@ -36,7 +36,9 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -62,6 +64,12 @@ button:hover {
 
 button:active {
   transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem;
+  }
 }
 
 .glass-panel {

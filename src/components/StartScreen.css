@@ -143,22 +143,23 @@
     gap: 0.5rem;
 }
 
-.lang-btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-    border-radius: 20px;
+.lang-toggle-btn {
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    border-radius: 50%;
     background: var(--glass-bg);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.lang-btn.active {
-    background: var(--accent);
-    color: var(--text-dark);
-    border-color: var(--accent);
-    font-weight: bold;
+.lang-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) rotate(5deg);
 }
 
 [dir="rtl"] .language-selector {
@@ -172,6 +173,44 @@
 
 [dir="rtl"] .topic-card {
     flex-direction: row-reverse;
+}
+
+@media (max-width: 600px) {
+    .start-screen {
+        padding: 0.8rem;
+        gap: 0.8rem;
+    }
+
+    .start-screen h2 {
+        font-size: 1.2rem;
+    }
+
+    .topic-options {
+        gap: 0.5rem;
+    }
+
+    .topic-card {
+        padding: 0.8rem;
+    }
+
+    .topic-icon {
+        font-size: 1.2rem;
+    }
+
+    .topic-name {
+        font-size: 0.8rem;
+    }
+
+    .grid-options,
+    .diff-options {
+        gap: 0.5rem;
+    }
+
+    .grid-btn,
+    .diff-btn {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
 }
 
 .start-btn:hover {

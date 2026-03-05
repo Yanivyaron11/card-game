@@ -101,3 +101,27 @@
 .end-screen p {
     font-size: 1.5rem;
 }
+
+@media (max-width: 600px) {
+    .stats-header {
+        padding: 0.5rem 1rem;
+        gap: 1rem;
+    }
+
+    .stat-item h3 {
+        font-size: 0.9rem;
+    }
+
+    .coins-value {
+        font-size: 1.2rem;
+    }
+
+    .heart-icon {
+        font-size: 1.2rem;
+    }
+
+    .card-grid {
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+}
