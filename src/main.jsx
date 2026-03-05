@@ -10,9 +10,19 @@ createRoot(document.getElementById('root')).render(
 )
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('SW registered'))
-      .catch(err => console.log('SW registration failed', err));
-  });
+  if (import.meta.env.DEV) {
+    // Unregister service worker in development to prevent Vite HMR issues
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      for (let registration of registrations) {
+        registration.unregister();
+        console.log('SW unregistered in dev mode');
+      }
+    });
+  } else {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('SW registered'))
+        .catch(err => console.log('SW registration failed', err));
+    });
+  }
 }
