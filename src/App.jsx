@@ -16,8 +16,9 @@ function App() {
   const handleStartGame = (config) => {
     setGameConfig(config);
     const initialLives = config.gridSize === 9 ? 1 : config.gridSize === 16 ? 2 : 3;
+    const initialCoins = config.gridSize === 9 ? 5 : config.gridSize === 16 ? 10 : 15;
     setLives(initialLives);
-    setCoins(0);
+    setCoins(initialCoins);
     setGameState('playing');
   };
 
