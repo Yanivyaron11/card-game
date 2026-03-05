@@ -17,10 +17,31 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const [isReady, setIsReady] = useState(false);
     const timerRef = useRef(null);
     const timeoutRef = useRef(onTimeout);
+    const mountTimeRef = useRef(Date.now());
 
     useEffect(() => {
         timeoutRef.current = onTimeout;
     }, [onTimeout]);
+
+    // Native DOM Capture-Phase Blocker (The ultimate ghost-click killer)
+    useEffect(() => {
+        const handleNativeClickCapture = (e) => {
+            const timeSinceMount = Date.now() - mountTimeRef.current;
+            if (timeSinceMount < 600) {
+                // If a click arrives immediately after this component mounts,
+                // it's a delayed OS ghost-click from the previous screen.
+                // Stop it in the native DOM before React even sees it.
+                e.stopPropagation();
+            }
+        };
+
+        // Attach to the top level window in the CAPTURE phase (true)
+        window.addEventListener('click', handleNativeClickCapture, true);
+
+        return () => {
+            window.removeEventListener('click', handleNativeClickCapture, true);
+        };
+    }, []);
 
     useEffect(() => {
         if (!card) return; // Prevent crashes if card is not found yet
