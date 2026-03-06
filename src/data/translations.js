@@ -1,6 +1,6 @@
 export const translations = {
     en: {
-        title: "Young at Heart Card Game",
+        title: "Smarty",
         start_game: "START GAME",
         lets_play: "Let's Play!",
         choose_size: "1. Choose Grid Size",
@@ -44,7 +44,7 @@ export const translations = {
         music_track3: "Track 3 (Dreamy)"
     },
     he: {
-        title: "משחק קלפים לילדים בנפשם",
+        title: "Smarty",
         start_game: "התחל משחק",
         lets_play: "בואו נשחק!",
         choose_size: "1. בחרו את גודל הלוח",

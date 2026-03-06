@@ -1,4 +1,4 @@
-# Kids Card Game 🦁🌍🎬➕🐒
+# Smarty 🦁🌍🎬➕🐒
 
 A fun, interactive, and educational card game designed for children. Match cards, answer fun quiz questions, and earn coins!
 
