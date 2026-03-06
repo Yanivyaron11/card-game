@@ -7,12 +7,38 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         return [];
     }
 
-    const availableQuestions = questions.filter(q =>
+    // 1. Get primary questions (matching topics AND difficulty)
+    let primaryPool = questions.filter(q =>
         selectedTopics.includes(q.category) && q.level === difficulty
     );
 
+    // 2. If not enough, get questions from other difficulty levels for the same topics
+    let backupPool = [];
+    if (primaryPool.length < gridSize) {
+        backupPool = questions.filter(q =>
+            selectedTopics.includes(q.category) && q.level !== difficulty
+        );
+    }
+
+    // Combine unique questions
+    let allUniqueQuestions = [...primaryPool];
+    for (const q of backupPool) {
+        if (allUniqueQuestions.length >= gridSize) break;
+        if (!allUniqueQuestions.some(aq => aq.text.en === q.text.en)) {
+            allUniqueQuestions.push(q);
+        }
+    }
+
+    // 3. If STILL not enough, allow repetitions (last resort)
+    let finalSelection = [...allUniqueQuestions];
+    while (finalSelection.length < gridSize && finalSelection.length > 0) {
+        const remainingNeeded = gridSize - finalSelection.length;
+        const toAdd = finalSelection.slice(0, remainingNeeded);
+        finalSelection = [...finalSelection, ...toAdd];
+    }
+
     // Map topic details to each question
-    const questionsWithTopicInfo = availableQuestions.map(q => {
+    const deckWithTopicInfo = finalSelection.map(q => {
         const topic = topics.find(t => t.id === q.category);
         return {
             ...q,
@@ -21,20 +47,8 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         };
     });
 
-    // Shuffle available questions
-    const shuffledAvailable = [...questionsWithTopicInfo].sort(() => Math.random() - 0.5);
-
-    // We need enough questions to fill the grid.
-    if (shuffledAvailable.length === 0) {
-        console.warn('No questions found for the selected topics and difficulty!');
-        return [];
-    }
-
-    // Limit the deck to the gridSize, but don't duplicate if we have fewer questions
-    const deck = shuffledAvailable.slice(0, gridSize);
-
     // Shuffle the final deck
-    const finalDeck = deck.sort(() => Math.random() - 0.5);
+    const finalDeck = [...deckWithTopicInfo].sort(() => Math.random() - 0.5);
 
     // Add unique IDs to each card for React keys
     return finalDeck.map((card, index) => ({
