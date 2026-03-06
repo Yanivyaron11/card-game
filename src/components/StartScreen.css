@@ -86,8 +86,8 @@
 
 .topic-options {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
     justify-content: center;
 }
 
@@ -95,16 +95,18 @@
     background: rgba(255, 255, 255, 0.4);
     border: 2px solid transparent;
     border-radius: 12px;
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 0.8rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     cursor: pointer;
     transition: all 0.3s;
     opacity: 0.95;
-    width: fit-content;
-    min-width: 160px;
-    justify-content: flex-start;
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .topic-card:hover {
@@ -217,13 +219,14 @@
     }
 
     .topic-options {
-        gap: 0.8rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
     }
 
     .topic-card {
-        padding: 0.6rem 0.8rem;
-        gap: 8px;
-        min-width: 130px;
+        padding: 0.5rem;
+        gap: 4px;
+        min-width: 0;
     }
 
     .topic-icon {

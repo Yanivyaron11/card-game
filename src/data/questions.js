@@ -5,7 +5,7 @@ export const topics = [
     { id: 'math', name: { en: 'Math', he: 'חשבון' }, icon: '➕' },
     { id: 'monkeys', name: { en: 'Monkeys', he: 'קופים' }, icon: '🐒' },
     { id: 'food', name: { en: 'Food', he: 'אוכל' }, icon: '🍕' },
-    { id: 'london', name: { en: 'London', he: 'לונדון' }, icon: '🎡' },
+    { id: 'london', name: { en: 'London', he: 'לונדון' }, icon: '🕰️' },
 ];
 
 export const questions = [
