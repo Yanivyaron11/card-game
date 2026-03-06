@@ -215,6 +215,7 @@ function App() {
               coins={coins[currentPlayer] || 0}
               language={language}
               gameMode={gameConfig.gameMode}
+              timeLeft={timeLeft}
               onCoinsChange={(newAmount) => setCoins(prev => ({ ...prev, [currentPlayer]: newAmount }))}
               onAnswer={handleAnswer}
               onTimeout={(cardId) => handleAnswer(cardId, false)}

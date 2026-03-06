@@ -4,7 +4,7 @@ import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './QuizOverlay.css';
 
-function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, gameMode }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, gameMode, timeLeft: gameTimeLeft }) {
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
@@ -164,9 +164,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <span className="topic-icon">{card.topicIcon}</span>
                         <span className="topic-name">{card.topicName[language]}</span>
                     </div>
-                    {gameMode !== 'time_attack' && (
-                        <div className="timer-container">
-                            <div className="timer-label">⏰ {timeLeft}{t.timer}</div>
+                    <div className="timer-container">
+                        <div className="timer-label">
+                            ⏰ {gameMode === 'time_attack' ? gameTimeLeft : timeLeft}{t.timer}
+                        </div>
+                        {gameMode !== 'time_attack' && (
                             <div className="timer-bar-large">
                                 <div
                                     className="timer-fill-large"
@@ -176,8 +178,8 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                     }}
                                 ></div>
                             </div>
-                        </div>
-                    )}
+                        )}
+                    </div>
                 </div>
 
                 <div className="quiz-content">
