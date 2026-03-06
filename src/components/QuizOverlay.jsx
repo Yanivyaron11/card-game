@@ -97,7 +97,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             return;
         }
         playSound('buy');
-        onCoinsChange(prev => prev - 5);
+        onCoinsChange(coins - 5);
         if (timerRef.current) clearInterval(timerRef.current);
         onAnswer(card.id, true);
     };

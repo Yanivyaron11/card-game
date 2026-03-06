@@ -63,8 +63,8 @@ function App() {
   const handleAnswer = (cardId, isCorrect) => {
     if (isCorrect) {
       playSound('correct');
-      // Add coins for correct answer
-      setCoins(prev => ({ ...prev, [currentPlayer]: prev[currentPlayer] + 2 }));
+      // Coins no longer increase on correct answer
+      // setCoins(prev => ({ ...prev, [currentPlayer]: prev[currentPlayer] + 2 }));
 
       setDeck(prev => {
         const newDeck = prev.map(card =>

@@ -20,7 +20,7 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  background: linear-gradient(135deg, #1A535C 0%, #4ECDC4 100%);
+  background: linear-gradient(135deg, #2e1065 0%, #7c3aed 100%);
   color: var(--text-light);
   min-height: 100vh;
   margin: 0;

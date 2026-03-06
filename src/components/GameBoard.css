@@ -168,13 +168,15 @@
 }
 
 .p2 .player-score-value {
-    color: #2e86de;
+    color: #00d2ff;
+    /* Brighter blue for contrast */
 }
 
 .player-label {
     font-size: 0.7rem;
     font-weight: bold;
     text-transform: uppercase;
+    color: var(--text-light);
     opacity: 0.8;
 }
 

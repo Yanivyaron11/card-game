@@ -8,7 +8,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const t = translations[language];
     const [gridSize, setGridSize] = useState(16); // 4x4 default
     const [difficulty, setDifficulty] = useState(1); // Level 1 default
-    const [selectedTopics, setSelectedTopics] = useState(topics.map(t => t.id)); // All selected by default
+    const [selectedTopics, setSelectedTopics] = useState(['monkeys']); // Monkeys selected by default
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
     const [gameMode, setGameMode] = useState('solo'); // solo or 1v1
 
