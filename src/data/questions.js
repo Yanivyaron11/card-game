@@ -684,6 +684,7 @@ export const questions = [
     { category: 'art', level: 3, text: { en: 'Who designed the glass pyramid entrance to the Louvre?', he: 'מי תכנן את כניסת פירמידת הזכוכית ללובר?' }, options: { en: ['Frank Gehry', 'I.M. Pei', 'Renzo Piano', 'Norman Foster'], he: ['פרנק גרי', 'איי אם פיי (I.M. Pei)', 'רנצו פיאנו', 'נורמן פוסטר'] }, correctAnswer: 1, emoji: '📐💎' },
     { category: 'art', level: 3, text: { en: 'Which technique uses a sharp-pointed tool to scratch fine lines into a copper plate?', he: 'איזו טכניקה משתמשת בכלי חד כדי לחרוט קווים עדינים על לוח נחושת?' }, options: { en: ['Etching', 'Engraving', 'Lithography', 'Woodcut'], he: ['תצריב', 'חריטה (Engraving)', 'ליתוגרפיה', 'חיתוך עץ'] }, correctAnswer: 1, emoji: '✍️💿' },
     { category: 'art', level: 3, text: { en: 'What is the name of the movement that started in the 1960s and uses minimal design?', he: 'מה שמה של התנועה שהחלה בשנות ה-60 ומשתמשת בעיצוב מינימלי?' }, options: { en: ['Minimalism', 'Conceptual Art', 'Performance Art', 'Modernism'], he: ['מינימליזם (Minimalism)', 'אמנות מושגית', 'אמנות מיצג', 'מודרניזם'] }, correctAnswer: 0, emoji: '⬛' },
+    { category: 'art', level: 3, text: { en: 'What was the first feature-length animated film?', he: 'מה היה סרט האנימציה באורך מלא הראשון?' }, options: { en: ['Snow White', 'Fantasia', 'Pinocchio', 'Dumbo'], he: ['שלגיה', 'פנטזיה', 'פינוקיו', 'דמבו'] }, correctAnswer: 0, emoji: '🍎📽️' }
 ];
 
 
