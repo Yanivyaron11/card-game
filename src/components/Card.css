@@ -50,6 +50,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 !important;
+    /* Override .glass-panel 2rem padding */
+    overflow: hidden;
+    /* Ensure content never spills */
 }
 
 .card-back {

@@ -88,7 +88,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
             </div>
 
             <div
-                className="card-grid"
+                className={`card-grid size-${gridCols}`}
                 style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)` }}
             >
                 {deck.map(card => (

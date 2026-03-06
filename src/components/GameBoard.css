@@ -315,4 +315,17 @@
         gap: 0.5rem;
         padding: 0.5rem;
     }
+
+    .card-grid.size-5 {
+        gap: 0.3rem;
+        padding: 0.3rem;
+    }
+
+    .card-grid.size-5 .pattern {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    .card-grid.size-5 .status-indicator {
+        font-size: clamp(1.2rem, 5vw, 2rem);
+    }
 }
