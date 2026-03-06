@@ -4,7 +4,7 @@ import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './QuizOverlay.css';
 
-function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, gameMode }) {
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
@@ -23,6 +23,8 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const [timeLeft, setTimeLeft] = useState(initialTime);
     const [eliminatedOptions, setEliminatedOptions] = useState([]);
     const [isReady, setIsReady] = useState(false);
+    const [selectedAnswer, setSelectedAnswer] = useState(-1);
+    const [isAnswering, setIsAnswering] = useState(false);
     const timerRef = useRef(null);
     const timeoutRef = useRef(onTimeout);
     const mountTimeRef = useRef(Date.now());
@@ -39,13 +41,15 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         if (!card) return; // Prevent crashes if card is not found yet
         setTimeLeft(initialTime);
         setEliminatedOptions([]);
+        setSelectedAnswer(-1);
+        setIsAnswering(false);
         setIsReady(false);
         const readyTimeout = setTimeout(() => setIsReady(true), 500);
         return () => clearTimeout(readyTimeout);
     }, [card?.id]);
 
     useEffect(() => {
-        if (!card) return;
+        if (!card || gameMode === 'time_attack') return;
         timerRef.current = setInterval(() => {
             setTimeLeft(prev => {
                 if (prev <= 1) {
@@ -75,13 +79,22 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     if (!card) return null;
 
     const handleOptionClick = (index) => {
-        if (!isReady || eliminatedOptions.includes(index)) return;
+        if (!isReady || isAnswering || eliminatedOptions.includes(index)) return;
         if (timerRef.current) clearInterval(timerRef.current);
-        onAnswer(card.id, index === card.correctAnswer);
+
+        setIsAnswering(true);
+        setSelectedAnswer(index);
+
+        const isCorrect = index === card.correctAnswer;
+        playSound(isCorrect ? 'correct' : 'wrong');
+
+        setTimeout(() => {
+            onAnswer(card.id, isCorrect, true);
+        }, 1500);
     };
 
     const handle5050 = () => {
-        if (!isReady || coins < 2 || eliminatedOptions.length > 0) {
+        if (!isReady || isAnswering || coins < 2 || eliminatedOptions.length > 0) {
             playSound('error');
             return;
         }
@@ -100,14 +113,21 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     };
 
     const handleSolve = () => {
-        if (!isReady || coins < 5) {
+        if (!isReady || isAnswering || coins < 5) {
             playSound('error');
             return;
         }
         playSound('buy');
-        onCoinsChange(coins - 5);
+        onCoinsChange(prev => prev - 5);
         if (timerRef.current) clearInterval(timerRef.current);
-        onAnswer(card.id, true);
+
+        setIsAnswering(true);
+        setSelectedAnswer(card.correctAnswer);
+        playSound('correct');
+
+        setTimeout(() => {
+            onAnswer(card.id, true, true);
+        }, 1500);
     };
 
     const optionLabelsEn = ['A', 'B', 'C', 'D'];
@@ -144,18 +164,20 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <span className="topic-icon">{card.topicIcon}</span>
                         <span className="topic-name">{card.topicName[language]}</span>
                     </div>
-                    <div className="timer-container">
-                        <div className="timer-label">⏰ {timeLeft}{t.timer}</div>
-                        <div className="timer-bar-large">
-                            <div
-                                className="timer-fill-large"
-                                style={{
-                                    width: `${(timeLeft / initialTime) * 100}%`,
-                                    backgroundColor: timeLeft <= 5 ? 'var(--primary)' : 'var(--secondary)'
-                                }}
-                            ></div>
+                    {gameMode !== 'time_attack' && (
+                        <div className="timer-container">
+                            <div className="timer-label">⏰ {timeLeft}{t.timer}</div>
+                            <div className="timer-bar-large">
+                                <div
+                                    className="timer-fill-large"
+                                    style={{
+                                        width: `${(timeLeft / initialTime) * 100}%`,
+                                        backgroundColor: timeLeft <= 5 ? 'var(--primary)' : 'var(--secondary)'
+                                    }}
+                                ></div>
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </div>
 
                 <div className="quiz-content">
@@ -168,22 +190,30 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 </div>
 
                 <div className="quiz-options">
-                    {card.options[language].map((opt, i) => (
-                        <button
-                            key={i}
-                            className={`quiz-option-btn ${eliminatedOptions.includes(i) ? 'eliminated' : ''}`}
-                            onPointerDown={(e) => {
-                                // IMPORTANT: Only act on real pointer down events, ignore synthetic clicks
-                                e.preventDefault();
-                                handleOptionClick(i);
-                            }}
-                            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-                            disabled={!isReady || eliminatedOptions.includes(i)}
-                        >
-                            <span className="option-label">{labels[i]}</span>
-                            <span className="option-text">{opt}</span>
-                        </button>
-                    ))}
+                    {card.options[language].map((opt, i) => {
+                        let className = "quiz-option-btn";
+                        if (eliminatedOptions.includes(i)) className += " eliminated";
+                        if (isAnswering) {
+                            if (i === card.correctAnswer) className += " correct";
+                            else if (i === selectedAnswer) className += " wrong";
+                        }
+
+                        return (
+                            <button
+                                key={i}
+                                className={className}
+                                onPointerDown={(e) => {
+                                    e.preventDefault();
+                                    handleOptionClick(i);
+                                }}
+                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                                disabled={!isReady || isAnswering || eliminatedOptions.includes(i)}
+                            >
+                                <span className="option-label">{labels[i]}</span>
+                                <span className="option-text">{opt}</span>
+                            </button>
+                        );
+                    })}
                 </div>
 
                 <div className="quiz-footer">
@@ -191,25 +221,25 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <h4>{t.powerups}</h4>
                         <div className="powerup-buttons">
                             <button
-                                className={`powerup-btn ${coins < 2 || eliminatedOptions.length > 0 ? 'locked' : ''}`}
+                                className={`powerup-btn ${coins < 2 || eliminatedOptions.length > 0 || isAnswering ? 'locked' : ''}`}
                                 onPointerDown={(e) => {
                                     e.preventDefault();
                                     handle5050();
                                 }}
                                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-                                disabled={!isReady}
+                                disabled={!isReady || isAnswering}
                             >
                                 <span className="cost">🪙 2</span>
                                 <div>½ 50/50</div>
                             </button>
                             <button
-                                className={`powerup-btn ${coins < 5 ? 'locked' : ''}`}
+                                className={`powerup-btn ${coins < 5 || isAnswering ? 'locked' : ''}`}
                                 onPointerDown={(e) => {
                                     e.preventDefault();
                                     handleSolve();
                                 }}
                                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-                                disabled={!isReady}
+                                disabled={!isReady || isAnswering}
                             >
                                 <span className="cost">🪙 5</span>
                                 <div>💡 {t.solve}</div>

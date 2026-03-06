@@ -17,6 +17,33 @@
     max-width: 500px;
 }
 
+.timer-display-global {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    border: 2px solid var(--secondary);
+    box-shadow: 0 0 15px rgba(78, 205, 196, 0.2);
+}
+
+.timer-display-global h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #4ecdc4;
+    text-shadow: 0 0 5px rgba(78, 205, 196, 0.5);
+}
+
+.hearts-coins-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
 .game-controls {
     display: flex;
     justify-content: space-between;

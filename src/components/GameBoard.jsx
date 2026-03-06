@@ -5,7 +5,7 @@ import { playSound, getSoundEnabled, setSoundEnabled } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './GameBoard.css';
 
-function GameBoard({ config, deck, lives, coins, language, onCardSelected, currentPlayer, scores }) {
+function GameBoard({ config, deck, lives, coins, language, onCardSelected, currentPlayer, scores, timeLeft }) {
     const t = translations[language];
     const navigate = useNavigate();
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
@@ -40,7 +40,21 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
             </div>
 
             <div className="stats-header glass-panel">
-                {config.gameMode === 'solo' ? (
+                {config.gameMode === 'time_attack' ? (
+                    <div className="stat-item timer-display-global">
+                        <h3>{t.time_left.replace('{n}', timeLeft)}</h3>
+                        <div className="hearts-coins-row">
+                            <div className="hearts mini">
+                                {Array.from({ length: Math.max(0, (lives[1] || 0) + 1) }).map((_, i) => (
+                                    <span key={i} className="heart-icon mini">❤️</span>
+                                ))}
+                            </div>
+                            <div className="stat-item coins-display">
+                                <div key={coins[1]} className="coins-value coin-pop">🪙 {coins[1]}</div>
+                            </div>
+                        </div>
+                    </div>
+                ) : config.gameMode === 'solo' ? (
                     <>
                         <div className="stat-item lives-display">
                             <h3>{t.hearts}:</h3>

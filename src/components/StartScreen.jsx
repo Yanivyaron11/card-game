@@ -71,6 +71,12 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                     >
                         ⚔️ {t.v1}
                     </button>
+                    <button
+                        className={`mode-btn ${gameMode === 'time_attack' ? 'active' : ''}`}
+                        onClick={() => setGameMode('time_attack')}
+                    >
+                        ⏱️ {t.time_attack}
+                    </button>
                 </div>
             </div>
 

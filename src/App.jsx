@@ -19,12 +19,32 @@ function App() {
   const [language, setLanguage] = useState('he') // en, he
   const [currentPlayer, setCurrentPlayer] = useState(1); // 1 or 2
   const [scores, setScores] = useState({ 1: 0, 2: 0 });
+  const [timeLeft, setTimeLeft] = useState(0);
 
   const t = translations[language];
 
   useEffect(() => {
     playMusic();
   }, []);
+
+  useEffect(() => {
+    let timer;
+    if (gameState === 'playing' && gameConfig?.gameMode === 'time_attack' && timeLeft > 0) {
+      timer = setInterval(() => {
+        setTimeLeft(prev => {
+          if (prev <= 1) {
+            clearInterval(timer);
+            playSound('wrong');
+            setGameState('game_over');
+            navigate('/result');
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => clearInterval(timer);
+  }, [gameState, gameConfig, timeLeft, navigate]);
 
   // If user hits back button on browser from quiz to root, we should handle it
   // But for this simple app, we'll keep state at App level.
@@ -41,6 +61,13 @@ function App() {
     } else {
       setLives({ 1: initialLives });
       setCoins({ 1: initialCoins });
+    }
+
+    if (config.gameMode === 'time_attack') {
+      const timeLimit = config.gridSize === 9 ? 90 : config.gridSize === 16 ? 180 : 300;
+      setTimeLeft(timeLimit);
+    } else {
+      setTimeLeft(0);
     }
 
     setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
@@ -65,9 +92,16 @@ function App() {
     }
   };
 
-  const handleAnswer = (cardId, isCorrect) => {
+  const handleAnswer = (cardId, isCorrect, silent = false) => {
+    if (!silent) {
+      if (isCorrect) {
+        playSound('correct');
+      } else {
+        playSound('wrong');
+      }
+    }
+
     if (isCorrect) {
-      playSound('correct');
       // Coins no longer increase on correct answer
       // setCoins(prev => ({ ...prev, [currentPlayer]: prev[currentPlayer] + 2 }));
 
@@ -84,12 +118,10 @@ function App() {
         setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
       }
     } else {
-      playSound('wrong');
-
       const newPlayerLives = lives[currentPlayer] - 1;
       setLives(prev => ({ ...prev, [currentPlayer]: newPlayerLives }));
 
-      if (gameConfig.gameMode === 'solo') {
+      if (gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack') {
         setDeck(prev => {
           const newDeck = prev.map(card =>
             card.id === cardId ? { ...card, isFailed: true } : card
@@ -98,7 +130,7 @@ function App() {
           return newDeck;
         });
 
-        if (newPlayerLives < 0) {
+        if ((gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack') && newPlayerLives < 0) {
           playSound('wrong');
           setGameState('game_over');
           navigate('/result');
@@ -117,7 +149,6 @@ function App() {
         // If one player runs out of hearts, the game ends
         if (newPlayerLives < 0) {
           // In 1v1, when someone runs out of hearts, we end the game and compare scores
-          // (Determining winner by score rather than just hearts)
           playSound('victory');
           setGameState('victory');
           navigate('/result');
@@ -153,35 +184,37 @@ function App() {
         } />
 
         <Route path="/play" element={
-          (!gameConfig || gameState !== 'playing') ? (
+          (!gameConfig || !gameConfig.gameMode || gameState !== 'playing') ? (
             <div className="end-screen glass-panel">
               <button onClick={handleReturnToStart}>{t.try_again}</button>
             </div>
           ) : (
             <GameBoard
               config={gameConfig}
-              deck={deck}
+              deck={deck || []}
               lives={lives}
               coins={coins}
               language={language}
               currentPlayer={currentPlayer}
               scores={scores}
+              timeLeft={timeLeft}
               onCardSelected={(id) => navigate(`/quiz/${id}`)}
             />
           )
         } />
 
         <Route path="/quiz/:cardId" element={
-          (!gameConfig || gameState !== 'playing') ? (
+          (!gameConfig || !gameConfig.gameMode || gameState !== 'playing') ? (
             <div className="end-screen glass-panel">
               <button onClick={handleReturnToStart}>{t.try_again}</button>
             </div>
           ) : (
             <QuizOverlay
-              deck={deck}
-              lives={lives[currentPlayer]}
-              coins={coins[currentPlayer]}
+              deck={deck || []}
+              lives={lives[currentPlayer] || 0}
+              coins={coins[currentPlayer] || 0}
               language={language}
+              gameMode={gameConfig.gameMode}
               onCoinsChange={(newAmount) => setCoins(prev => ({ ...prev, [currentPlayer]: newAmount }))}
               onAnswer={handleAnswer}
               onTimeout={(cardId) => handleAnswer(cardId, false)}
@@ -200,7 +233,7 @@ function App() {
             {gameState === 'victory' && (
               <>
                 <h2>{t.you_win} 🎉</h2>
-                {gameConfig.gameMode === '1v1' ? (
+                {gameConfig?.gameMode === '1v1' ? (
                   <p>
                     {scores[1] > scores[2] ? t.p1_wins : scores[2] > scores[1] ? t.p2_wins : t.draw}
                     <br />
