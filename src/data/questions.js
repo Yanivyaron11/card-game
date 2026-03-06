@@ -1,8 +1,8 @@
 export const topics = [
     { id: 'animals', name: { en: 'Animals', he: 'חיות' }, icon: '🦁' },
     { id: 'countries', name: { en: 'Countries', he: 'מדינות' }, icon: '🌍' },
-    { id: 'movies', name: { en: 'Movies (Pixar/Disney)', he: 'סרטים (פיקסאר/דיסני)' }, icon: '🎬' },
-    { id: 'math', name: { en: 'Simple Math', he: 'חשבון פשוט' }, icon: '➕' },
+    { id: 'movies', name: { en: 'Movies', he: 'סרטים' }, icon: '🎬' },
+    { id: 'math', name: { en: 'Math', he: 'חשבון' }, icon: '➕' },
 ];
 
 export const questions = [
