@@ -10,9 +10,10 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
     const navigate = useNavigate();
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
 
-    const handleCardClick = (id) => {
+    const handleCardClick = (card) => {
+        if (card.isSolved || card.isFailed) return;
         playSound('pop');
-        onCardSelected(id);
+        onCardSelected(card.id);
     };
 
     const toggleSound = () => {
@@ -95,7 +96,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                         key={card.id}
                         card={card}
                         language={language}
-                        onClick={() => handleCardClick(card.id)}
+                        onClick={() => handleCardClick(card)}
                     />
                 ))}
             </div>
