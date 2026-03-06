@@ -64,7 +64,7 @@ function App() {
     }
 
     if (config.gameMode === 'time_attack') {
-      const timeLimit = config.gridSize === 9 ? 45 : config.gridSize === 16 ? 90 : 150;
+      const timeLimit = config.gridSize === 9 ? 75 : config.gridSize === 16 ? 120 : 180;
       setTimeLeft(timeLimit);
     } else {
       setTimeLeft(0);
