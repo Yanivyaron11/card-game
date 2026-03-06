@@ -1,6 +1,6 @@
 export const translations = {
     en: {
-        title: "Kids Card Game",
+        title: "Young at Heart Card Game",
         start_game: "START GAME",
         lets_play: "Let's Play!",
         choose_size: "1. Choose Grid Size",
