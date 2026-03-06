@@ -1,4 +1,4 @@
-import { questions, topics } from '../data/questions';
+import { questions, topics } from '../data/questions.js';
 
 export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     // Filter questions by selected topics AND difficulty level
@@ -30,11 +30,8 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         return [];
     }
 
-    let deck = [];
-    while (deck.length < gridSize) {
-        const need = gridSize - deck.length;
-        deck = [...deck, ...shuffledAvailable.slice(0, need)];
-    }
+    // Limit the deck to the gridSize, but don't duplicate if we have fewer questions
+    const deck = shuffledAvailable.slice(0, gridSize);
 
     // Shuffle the final deck
     const finalDeck = deck.sort(() => Math.random() - 0.5);
