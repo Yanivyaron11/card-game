@@ -60,9 +60,11 @@ button {
   box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
 }
 
-button:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+@media (hover: hover) {
+  button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+  }
 }
 
 button:active {
