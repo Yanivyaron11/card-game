@@ -42,7 +42,7 @@ export const translations = {
         music_track3: "Track 3 (Dreamy)"
     },
     he: {
-        title: "משחק קלפים לילדים",
+        title: "משחק קלפים לילדים בנפשם",
         start_game: "התחל משחק",
         lets_play: "בואו נשחק!",
         choose_size: "1. בחרו את גודל הלוח",
