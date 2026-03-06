@@ -12,7 +12,15 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     // Find the correct card from the deck based on the URL parameter
     const card = deck.find(c => c.id === cardId);
 
-    const [timeLeft, setTimeLeft] = useState(30);
+    const getInitialTime = () => {
+        if (!card) return 30;
+        if (card.level === 3) return 10;
+        if (card.level === 2) return 20;
+        return 30;
+    };
+
+    const initialTime = getInitialTime();
+    const [timeLeft, setTimeLeft] = useState(initialTime);
     const [eliminatedOptions, setEliminatedOptions] = useState([]);
     const [isReady, setIsReady] = useState(false);
     const timerRef = useRef(null);
@@ -29,7 +37,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
     useEffect(() => {
         if (!card) return; // Prevent crashes if card is not found yet
-        setTimeLeft(30);
+        setTimeLeft(initialTime);
         setEliminatedOptions([]);
         setIsReady(false);
         const readyTimeout = setTimeout(() => setIsReady(true), 500);
@@ -142,7 +150,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             <div
                                 className="timer-fill-large"
                                 style={{
-                                    width: `${(timeLeft / 30) * 100}%`,
+                                    width: `${(timeLeft / initialTime) * 100}%`,
                                     backgroundColor: timeLeft <= 5 ? 'var(--primary)' : 'var(--secondary)'
                                 }}
                             ></div>

@@ -1,15 +1,21 @@
-# Kids Card Game 🦁🌍🎬➕
+# Kids Card Game 🦁🌍🎬➕🐒
 
 A fun, interactive, and educational card game designed for children. Match cards, answer fun quiz questions, and earn coins!
 
 ## 🚀 Features
 
-- **Multi-topic Experience**: Choose from Animals, Countries, Movies, and Simple Math.
-- **Dynamic Difficulty**: Three levels of challenge to suit different ages.
+- **Multi-topic Experience**: Choose from **Animals**, **Countries**, **Movies**, **Math**, and the new **Monkeys** category.
+- **Vast Question Library**: Each category now features 60+ questions (20 per difficulty level).
+- **Mathematical Challenge**: 70+ math questions, with Level 3 featuring order of operations, percentages, and larger numbers.
+- **Dynamic Difficulty**: Three levels of challenge with **adaptive timers**:
+  - **Level 1**: 30 seconds
+  - **Level 2**: 20 seconds
+  - **Level 3**: 10 seconds
+- **Adaptive Deck Generation**: Ensures a full board every time by intelligently falling back to other difficulty levels or allowing repetitions as a last resort.
 - **Bilingual Support**: Full support for both **English** and **Hebrew (RTL)**.
-- **Educational Quizzes**: Correct matches trigger a mini-quiz to test your knowledge.
+- **Interactive Audio**: Choose between three calming background music tracks or play in silence.
 - **Power-ups**: Use earned coins for "50/50" eliminations or "Solve" hints.
-- **Sleek Design**: Modern glassmorphism UI with vibrant colors and smooth animations.
+- **Sleek Design**: Modern glassmorphism UI with vibrant colors and smooth animations, optimized for mobile viewports.
 
 ## 🛠️ Technology Stack
 
