@@ -216,6 +216,12 @@
 
     .start-screen h2 {
         font-size: 1.2rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    [dir="rtl"] .start-screen h2 {
+        text-align: right;
     }
 
     .topic-options {
