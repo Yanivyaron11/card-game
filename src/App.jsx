@@ -114,13 +114,12 @@ function App() {
           return newDeck;
         });
 
-        // If one player runs out of hearts, maybe they lose immediately? 
-        // User asked for hearts for each, usually that means they are knocked out.
-        // For now, let's keep playing until board clear, but hearts as a "health" limit.
+        // If one player runs out of hearts, the game ends
         if (newPlayerLives < 0) {
-          // Player is out of hearts. In 1v1, this might mean game over for them.
-          // To keep it simple: if either player hits < 0 hearts, game ends.
-          setGameState('game_over');
+          // In 1v1, when someone runs out of hearts, we end the game and compare scores
+          // (Determining winner by score rather than just hearts)
+          playSound('victory');
+          setGameState('victory');
           navigate('/result');
           return;
         }
