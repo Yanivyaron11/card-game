@@ -92,7 +92,7 @@
 }
 
 .topic-card {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.4);
     border: 2px solid transparent;
     border-radius: 12px;
     padding: 0.8rem 1rem;
@@ -101,7 +101,7 @@
     gap: 10px;
     cursor: pointer;
     transition: all 0.3s;
-    opacity: 0.6;
+    opacity: 0.95;
     width: fit-content;
     min-width: 160px;
     justify-content: flex-start;
