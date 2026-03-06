@@ -1,21 +1,42 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from './Card';
-import { playSound } from '../utils/sounds';
+import { playSound, getSoundEnabled, setSoundEnabled } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './GameBoard.css';
 
 function GameBoard({ config, deck, lives, coins, language, onCardSelected }) {
     const t = translations[language];
+    const navigate = useNavigate();
+    const [soundOn, setSoundOn] = useState(getSoundEnabled());
 
     const handleCardClick = (id) => {
         playSound('pop');
         onCardSelected(id);
     };
 
+    const toggleSound = () => {
+        const newState = !soundOn;
+        setSoundEnabled(newState);
+        setSoundOn(newState);
+    };
+
+    const handleQuit = () => {
+        navigate('/');
+    };
+
     const gridCols = config.gridSize === 9 ? 3 : config.gridSize === 25 ? 5 : 4;
 
     return (
         <div className="game-board-container">
+            <div className="game-controls">
+                <button className="control-btn" onClick={toggleSound}>
+                    {soundOn ? '🔊' : '🔇'}
+                </button>
+                <button className="control-btn quit-btn" onClick={handleQuit}>
+                    {t.quit_game} ✕
+                </button>
+            </div>
+
             <div className="stats-header glass-panel">
                 <div className="stat-item lives-display">
                     <h3>{t.hearts}:</h3>

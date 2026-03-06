@@ -23,7 +23,10 @@ export const translations = {
         topic_countries: "Countries",
         topic_movies: "Movies",
         topic_math: "Math",
-        select_at_least_one: "Please select at least one topic!"
+        select_at_least_one: "Please select at least one topic!",
+        quit_game: "Quit Game",
+        sound_on: "Sound: On",
+        sound_off: "Sound: Off"
     },
     he: {
         title: "משחק קלפים לילדים",
@@ -49,6 +52,9 @@ export const translations = {
         topic_countries: "מדינות",
         topic_movies: "סרטים",
         topic_math: "חשבון",
-        select_at_least_one: "אנא בחרו לפחות נושא אחד!"
+        select_at_least_one: "אנא בחרו לפחות נושא אחד!",
+        quit_game: "צא מהמשחק",
+        sound_on: "צליל: פועל",
+        sound_off: "צליל: כבוי"
     }
 };

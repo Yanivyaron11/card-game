@@ -17,6 +17,40 @@
     max-width: 500px;
 }
 
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 1rem;
+}
+
+.control-btn {
+    background: var(--glass-bg);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.quit-btn {
+    background: rgba(255, 107, 107, 0.7);
+    color: white;
+}
+
+.quit-btn:hover {
+    background: rgba(255, 107, 107, 0.9);
+}
+
 .stat-item {
     display: flex;
     align-items: center;

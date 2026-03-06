@@ -1,4 +1,14 @@
+let isSoundEnabled = localStorage.getItem('soundEnabled') !== 'false';
+
+export const setSoundEnabled = (enabled) => {
+    isSoundEnabled = enabled;
+    localStorage.setItem('soundEnabled', enabled);
+};
+
+export const getSoundEnabled = () => isSoundEnabled;
+
 export const playSound = (type) => {
+    if (!isSoundEnabled) return;
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     if (!AudioContext) return;
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { topics } from '../data/questions';
+import { getSoundEnabled, setSoundEnabled } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './StartScreen.css';
 
@@ -8,6 +9,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [gridSize, setGridSize] = useState(16); // 4x4 default
     const [difficulty, setDifficulty] = useState(1); // Level 1 default
     const [selectedTopics, setSelectedTopics] = useState(topics.map(t => t.id)); // All selected by default
+    const [soundOn, setSoundOn] = useState(getSoundEnabled());
 
     const handleTopicToggle = (topicId) => {
         setSelectedTopics(prev =>
@@ -31,8 +33,15 @@ function StartScreen({ onStart, language, onLanguageChange }) {
 
     return (
         <div className="start-screen glass-panel">
-            <div className="language-selector">
-                <button onClick={toggleLanguage} className="lang-toggle-btn">
+            <div className="top-controls">
+                <button onClick={() => {
+                    const newState = !soundOn;
+                    setSoundEnabled(newState);
+                    setSoundOn(newState);
+                }} className="icon-toggle-btn">
+                    {soundOn ? '🔊' : '🔇'}
+                </button>
+                <button onClick={toggleLanguage} className="icon-toggle-btn">
                     {language === 'en' ? '🇮🇱' : '🇺🇸'}
                 </button>
             </div>
