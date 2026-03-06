@@ -34,7 +34,12 @@ export const translations = {
         p1_wins: "Player 1 Wins!",
         p2_wins: "Player 2 Wins!",
         draw: "It's a Draw!",
-        score: "Score"
+        score: "Score",
+        bg_music: "Background Music",
+        music_off: "Off",
+        music_track1: "Track 1 (Calm)",
+        music_track2: "Track 2 (Nature)",
+        music_track3: "Track 3 (Dreamy)"
     },
     he: {
         title: "משחק קלפים לילדים",
@@ -71,6 +76,11 @@ export const translations = {
         p1_wins: "שחקן 1 ניצח!",
         p2_wins: "שחקן 2 ניצח!",
         draw: "תיקו!",
-        score: "ניקוד"
+        score: "ניקוד",
+        bg_music: "מוזיקת רקע",
+        music_off: "ללא",
+        music_track1: "מנגינה 1 (רגוע)",
+        music_track2: "מנגינה 2 (טבע)",
+        music_track3: "מנגינה 3 (חלומי)"
     }
 };

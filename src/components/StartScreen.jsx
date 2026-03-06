@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { topics } from '../data/questions';
-import { getSoundEnabled, setSoundEnabled } from '../utils/sounds';
+import { playSound, getSoundEnabled, setSoundEnabled, getMusicTrack, setMusicTrack } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './StartScreen.css';
 
@@ -10,6 +10,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [difficulty, setDifficulty] = useState(1); // Level 1 default
     const [selectedTopics, setSelectedTopics] = useState(['monkeys']); // Monkeys selected by default
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
+    const [musicTrack, setMusicTrackState] = useState(getMusicTrack());
     const [gameMode, setGameMode] = useState('solo'); // solo or 1v1
 
     const handleTopicToggle = (topicId) => {
@@ -18,6 +19,12 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                 ? prev.filter(id => id !== topicId)
                 : [...prev, topicId]
         );
+    };
+
+    const handleMusicChange = (trackId) => {
+        setMusicTrackState(trackId);
+        setMusicTrack(trackId);
+        playSound('pop');
     };
 
     const handleStart = () => {
@@ -119,6 +126,36 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                             <span className="topic-name">{topic.name[language]}</span>
                         </div>
                     ))}
+                </div>
+            </div>
+
+            <div className="config-section">
+                <h3>4. {t.bg_music}</h3>
+                <div className="mode-options">
+                    <button
+                        className={`mode-btn ${musicTrack === 'off' ? 'active' : ''}`}
+                        onClick={() => handleMusicChange('off')}
+                    >
+                        {t.music_off}
+                    </button>
+                    <button
+                        className={`mode-btn ${musicTrack === 'track1' ? 'active' : ''}`}
+                        onClick={() => handleMusicChange('track1')}
+                    >
+                        🎵 1
+                    </button>
+                    <button
+                        className={`mode-btn ${musicTrack === 'track2' ? 'active' : ''}`}
+                        onClick={() => handleMusicChange('track2')}
+                    >
+                        🎵 2
+                    </button>
+                    <button
+                        className={`mode-btn ${musicTrack === 'track3' ? 'active' : ''}`}
+                        onClick={() => handleMusicChange('track3')}
+                    >
+                        🎵 3
+                    </button>
                 </div>
             </div>
 

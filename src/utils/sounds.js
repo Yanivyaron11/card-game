@@ -102,3 +102,68 @@ export const playSound = (type) => {
             break;
     }
 };
+
+let currentMusic = null;
+let currentTrackId = localStorage.getItem('musicTrack') || 'off';
+
+const musicTracks = {
+    track1: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+    track2: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+    track3: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'
+};
+
+export const setMusicTrack = (trackId) => {
+    currentTrackId = trackId;
+    localStorage.setItem('musicTrack', trackId);
+
+    if (trackId === 'off') {
+        stopMusic();
+    } else {
+        playMusic(trackId);
+    }
+};
+
+export const getMusicTrack = () => currentTrackId;
+
+export const playMusic = (trackId = currentTrackId) => {
+    if (trackId === 'off') return;
+
+    const url = musicTracks[trackId];
+    if (!url) return;
+
+    if (currentMusic) {
+        if (currentMusic.src === url) {
+            currentMusic.play().catch(e => {
+                console.log("Music play blocked, waiting for interaction", e);
+                // On block, we wait for next click to try again
+                const retry = () => {
+                    currentMusic.play();
+                    window.removeEventListener('click', retry);
+                };
+                window.addEventListener('click', retry);
+            });
+            return;
+        }
+        stopMusic();
+    }
+
+    currentMusic = new Audio(url);
+    currentMusic.loop = true;
+    currentMusic.volume = 0.4;
+    currentMusic.play().catch(e => {
+        console.log("Music play blocked, waiting for interaction", e);
+        const retry = () => {
+            currentMusic?.play();
+            window.removeEventListener('click', retry);
+        };
+        window.addEventListener('click', retry);
+    });
+};
+
+export const stopMusic = () => {
+    if (currentMusic) {
+        currentMusic.pause();
+        currentMusic.currentTime = 0;
+        currentMusic = null;
+    }
+};

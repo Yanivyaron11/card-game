@@ -5,7 +5,7 @@ import GameBoard from './components/GameBoard'
 import QuizOverlay from './components/QuizOverlay'
 import { translations } from './data/translations'
 import { generateDeck } from './utils/deck'
-import { playSound } from './utils/sounds'
+import { playSound, playMusic, stopMusic } from './utils/sounds'
 import './App.css'
 
 function App() {
@@ -22,10 +22,15 @@ function App() {
 
   const t = translations[language];
 
+  useEffect(() => {
+    playMusic();
+  }, []);
+
   // If user hits back button on browser from quiz to root, we should handle it
   // But for this simple app, we'll keep state at App level.
 
   const handleStartGame = (config) => {
+    playMusic(); // Ensure music is playing/unlocked on interaction
     setGameConfig(config);
     const initialLives = config.gridSize === 9 ? 1 : config.gridSize === 16 ? 2 : 3;
     const initialCoins = config.gridSize === 9 ? 5 : config.gridSize === 16 ? 10 : 15;
