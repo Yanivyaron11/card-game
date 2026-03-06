@@ -14,9 +14,11 @@ function App() {
   const [gameState, setGameState] = useState('start') // start, playing, game_over, victory
   const [gameConfig, setGameConfig] = useState(null)
   const [deck, setDeck] = useState([])
-  const [lives, setLives] = useState(1) // 1 extra heart
-  const [coins, setCoins] = useState(0) // Starting wealth
+  const [lives, setLives] = useState({ 1: 1, 2: 1 })
+  const [coins, setCoins] = useState({ 1: 0, 2: 0 })
   const [language, setLanguage] = useState('he') // en, he
+  const [currentPlayer, setCurrentPlayer] = useState(1); // 1 or 2
+  const [scores, setScores] = useState({ 1: 0, 2: 0 });
 
   const t = translations[language];
 
@@ -27,9 +29,18 @@ function App() {
     setGameConfig(config);
     const initialLives = config.gridSize === 9 ? 1 : config.gridSize === 16 ? 2 : 3;
     const initialCoins = config.gridSize === 9 ? 5 : config.gridSize === 16 ? 10 : 15;
-    setLives(initialLives);
-    setCoins(initialCoins);
+
+    if (config.gameMode === '1v1') {
+      setLives({ 1: initialLives, 2: initialLives });
+      setCoins({ 1: initialCoins, 2: initialCoins });
+    } else {
+      setLives({ 1: initialLives });
+      setCoins({ 1: initialCoins });
+    }
+
     setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
+    setCurrentPlayer(1);
+    setScores({ 1: 0, 2: 0 });
     setGameState('playing');
     navigate('/play');
   };
@@ -52,31 +63,64 @@ function App() {
   const handleAnswer = (cardId, isCorrect) => {
     if (isCorrect) {
       playSound('correct');
+      // Add coins for correct answer
+      setCoins(prev => ({ ...prev, [currentPlayer]: prev[currentPlayer] + 2 }));
+
       setDeck(prev => {
         const newDeck = prev.map(card =>
-          card.id === cardId ? { ...card, isSolved: true } : card
+          card.id === cardId ? { ...card, isSolved: true, owner: currentPlayer } : card
         );
         checkWinCondition(newDeck);
         return newDeck;
       });
+
+      if (gameConfig.gameMode === '1v1') {
+        setScores(prev => ({ ...prev, [currentPlayer]: prev[currentPlayer] + 1 }));
+        setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+      }
     } else {
       playSound('wrong');
-      const newLives = lives - 1;
-      setLives(newLives);
 
-      setDeck(prev => {
-        const newDeck = prev.map(card =>
-          card.id === cardId ? { ...card, isFailed: true } : card
-        );
-        checkWinCondition(newDeck);
-        return newDeck;
-      });
+      const newPlayerLives = lives[currentPlayer] - 1;
+      setLives(prev => ({ ...prev, [currentPlayer]: newPlayerLives }));
 
-      if (newLives < 0) {
-        playSound('wrong');
-        setGameState('game_over');
-        navigate('/result');
-        return; // Crucial: avoid navigating to /play if game over
+      if (gameConfig.gameMode === 'solo') {
+        setDeck(prev => {
+          const newDeck = prev.map(card =>
+            card.id === cardId ? { ...card, isFailed: true } : card
+          );
+          checkWinCondition(newDeck);
+          return newDeck;
+        });
+
+        if (newPlayerLives < 0) {
+          playSound('wrong');
+          setGameState('game_over');
+          navigate('/result');
+          return;
+        }
+      } else {
+        // 1v1: Pass turn even on fail
+        setDeck(prev => {
+          const newDeck = prev.map(card =>
+            card.id === cardId ? { ...card, isFailed: true } : card
+          );
+          checkWinCondition(newDeck);
+          return newDeck;
+        });
+
+        // If one player runs out of hearts, maybe they lose immediately? 
+        // User asked for hearts for each, usually that means they are knocked out.
+        // For now, let's keep playing until board clear, but hearts as a "health" limit.
+        if (newPlayerLives < 0) {
+          // Player is out of hearts. In 1v1, this might mean game over for them.
+          // To keep it simple: if either player hits < 0 hearts, game ends.
+          setGameState('game_over');
+          navigate('/result');
+          return;
+        }
+
+        setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
       }
     }
 
@@ -116,6 +160,8 @@ function App() {
               lives={lives}
               coins={coins}
               language={language}
+              currentPlayer={currentPlayer}
+              scores={scores}
               onCardSelected={(id) => navigate(`/quiz/${id}`)}
             />
           )
@@ -129,10 +175,10 @@ function App() {
           ) : (
             <QuizOverlay
               deck={deck}
-              lives={lives}
-              coins={coins}
+              lives={lives[currentPlayer]}
+              coins={coins[currentPlayer]}
               language={language}
-              onCoinsChange={setCoins}
+              onCoinsChange={(newAmount) => setCoins(prev => ({ ...prev, [currentPlayer]: newAmount }))}
               onAnswer={handleAnswer}
               onTimeout={(cardId) => handleAnswer(cardId, false)}
             />
@@ -150,7 +196,15 @@ function App() {
             {gameState === 'victory' && (
               <>
                 <h2>{t.you_win} 🎉</h2>
-                <p>{t.matched_all}</p>
+                {gameConfig.gameMode === '1v1' ? (
+                  <p>
+                    {scores[1] > scores[2] ? t.p1_wins : scores[2] > scores[1] ? t.p2_wins : t.draw}
+                    <br />
+                    {t.score}: {scores[1]} - {scores[2]}
+                  </p>
+                ) : (
+                  <p>{t.matched_all}</p>
+                )}
               </>
             )}
             <button onClick={handleReturnToStart}>

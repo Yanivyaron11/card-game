@@ -26,7 +26,15 @@ export const translations = {
         select_at_least_one: "Please select at least one topic!",
         quit_game: "Quit Game",
         sound_on: "Sound: On",
-        sound_off: "Sound: Off"
+        sound_off: "Sound: Off",
+        game_mode: "Game Mode",
+        solo: "Solo",
+        v1: "1 vs 1",
+        player_turn: "Player {n}'s Turn",
+        p1_wins: "Player 1 Wins!",
+        p2_wins: "Player 2 Wins!",
+        draw: "It's a Draw!",
+        score: "Score"
     },
     he: {
         title: "משחק קלפים לילדים",
@@ -55,6 +63,14 @@ export const translations = {
         select_at_least_one: "אנא בחרו לפחות נושא אחד!",
         quit_game: "צא מהמשחק",
         sound_on: "צליל: פועל",
-        sound_off: "צליל: כבוי"
+        sound_off: "צליל: כבוי",
+        game_mode: "מצב משחק",
+        solo: "יחיד",
+        v1: "1 נגד 1",
+        player_turn: "תור שחקן {n}",
+        p1_wins: "שחקן 1 ניצח!",
+        p2_wins: "שחקן 2 ניצח!",
+        draw: "תיקו!",
+        score: "ניקוד"
     }
 };

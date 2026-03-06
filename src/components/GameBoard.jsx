@@ -5,7 +5,7 @@ import { playSound, getSoundEnabled, setSoundEnabled } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './GameBoard.css';
 
-function GameBoard({ config, deck, lives, coins, language, onCardSelected }) {
+function GameBoard({ config, deck, lives, coins, language, onCardSelected, currentPlayer, scores }) {
     const t = translations[language];
     const navigate = useNavigate();
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
@@ -39,18 +39,51 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected }) {
             </div>
 
             <div className="stats-header glass-panel">
-                <div className="stat-item lives-display">
-                    <h3>{t.hearts}:</h3>
-                    <div className="hearts">
-                        {Array.from({ length: Math.max(0, lives + 1) }).map((_, i) => (
-                            <span key={i} className="heart-icon">❤️</span>
-                        ))}
+                {config.gameMode === 'solo' ? (
+                    <>
+                        <div className="stat-item lives-display">
+                            <h3>{t.hearts}:</h3>
+                            <div className="hearts">
+                                {Array.from({ length: Math.max(0, (lives[1] || 0) + 1) }).map((_, i) => (
+                                    <span key={i} className="heart-icon">❤️</span>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="stat-item coins-display">
+                            <h3>{t.coins}:</h3>
+                            <div key={coins[1]} className="coins-value coin-pop">🪙 {coins[1]}</div>
+                        </div>
+                    </>
+                ) : (
+                    <div className="multiplayer-stats">
+                        <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`}>
+                            <div className="player-label">P1</div>
+                            <div className="player-score-value">{t.score}: {scores[1]}</div>
+                            <div className="p-hearts">
+                                {Array.from({ length: Math.max(0, (lives[1] || 0) + 1) }).map((_, i) => (
+                                    <span key={i} className="heart-mini">❤️</span>
+                                ))}
+                            </div>
+                            <div className="p-coins">🪙 {coins[1]}</div>
+                        </div>
+
+                        <div className="vs-center">
+                            <div className="vs-text">VS</div>
+                            <div className="turn-indicator-dot"></div>
+                        </div>
+
+                        <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`}>
+                            <div className="player-label">P2</div>
+                            <div className="player-score-value">{t.score}: {scores[2]}</div>
+                            <div className="p-hearts">
+                                {Array.from({ length: Math.max(0, (lives[2] || 0) + 1) }).map((_, i) => (
+                                    <span key={i} className="heart-mini">❤️</span>
+                                ))}
+                            </div>
+                            <div className="p-coins">🪙 {coins[2]}</div>
+                        </div>
                     </div>
-                </div>
-                <div className="stat-item coins-display">
-                    <h3>{t.coins}:</h3>
-                    <div key={coins} className="coins-value coin-pop">🪙 {coins}</div>
-                </div>
+                )}
             </div>
 
             <div

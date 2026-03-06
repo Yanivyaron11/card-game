@@ -2,16 +2,12 @@ import './Card.css';
 
 function Card({ card, onClick }) {
     // Simple card that only displays topic and solved status
-    const isSolved = card.isSolved;
-    const isFailed = card.isFailed;
+    const ownerClass = card.owner ? `player-${card.owner}` : '';
 
     return (
         <div
-            className={`card ${isSolved ? 'solved' : ''} ${isFailed ? 'failed' : ''}`}
-            onPointerDown={(!isSolved && !isFailed) ? (e) => {
-                e.preventDefault();
-                onClick();
-            } : undefined}
+            className={`card ${card.isSolved ? 'solved' : ''} ${card.isFailed ? 'failed' : ''} ${ownerClass}`}
+            onPointerDown={onClick}
             onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
         >
             <div className="card-inner">
@@ -23,7 +19,7 @@ function Card({ card, onClick }) {
                 {/* Card Front (Solved or Failed state) */}
                 <div className="card-front glass-panel">
                     <div className="status-indicator">
-                        {isSolved ? <span className="check">✅</span> : <span className="cross">❌</span>}
+                        {card.isSolved ? <span className="check">✅</span> : <span className="cross">❌</span>}
                     </div>
                 </div>
             </div>

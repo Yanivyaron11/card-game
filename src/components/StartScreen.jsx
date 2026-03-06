@@ -10,6 +10,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [difficulty, setDifficulty] = useState(1); // Level 1 default
     const [selectedTopics, setSelectedTopics] = useState(topics.map(t => t.id)); // All selected by default
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
+    const [gameMode, setGameMode] = useState('solo'); // solo or 1v1
 
     const handleTopicToggle = (topicId) => {
         setSelectedTopics(prev =>
@@ -24,7 +25,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             alert(t.select_at_least_one);
             return;
         }
-        onStart({ gridSize, topics: selectedTopics, difficulty });
+        onStart({ gridSize, topics: selectedTopics, difficulty, gameMode });
     };
 
     const toggleLanguage = () => {
@@ -47,6 +48,24 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             </div>
 
             <h2>{t.lets_play}</h2>
+
+            <div className="config-section">
+                <h3>{t.game_mode}</h3>
+                <div className="mode-options">
+                    <button
+                        className={`mode-btn ${gameMode === 'solo' ? 'active' : ''}`}
+                        onClick={() => setGameMode('solo')}
+                    >
+                        👤 {t.solo}
+                    </button>
+                    <button
+                        className={`mode-btn ${gameMode === '1v1' ? 'active' : ''}`}
+                        onClick={() => setGameMode('1v1')}
+                    >
+                        ⚔️ {t.v1}
+                    </button>
+                </div>
+            </div>
 
             <div className="config-section">
                 <h3>{t.choose_size}</h3>
