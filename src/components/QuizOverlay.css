@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(8px);
     display: flex;
@@ -11,6 +11,8 @@
     align-items: center;
     z-index: 1000;
     padding: 1rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .quiz-card {
@@ -325,9 +327,17 @@
 
 @media (max-width: 600px) {
     .quiz-card {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
         gap: 1rem;
         max-width: 95vw;
+        margin: auto;
+        /* Required for scrolling if card is centered but scrollable */
+    }
+
+    .quiz-overlay-backdrop {
+        align-items: flex-start;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .quiz-options {
