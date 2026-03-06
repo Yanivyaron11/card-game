@@ -99,7 +99,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             return;
         }
         playSound('buy');
-        onCoinsChange(prev => prev - 2);
+        onCoinsChange(coins - 2);
 
         // Find all incorrect indices
         const wrongIndices = card.options.en
@@ -118,7 +118,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             return;
         }
         playSound('buy');
-        onCoinsChange(prev => prev - 5);
+        onCoinsChange(coins - 5);
         if (timerRef.current) clearInterval(timerRef.current);
 
         setIsAnswering(true);
