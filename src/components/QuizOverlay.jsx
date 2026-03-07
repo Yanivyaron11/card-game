@@ -49,7 +49,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     }, [card?.id]);
 
     useEffect(() => {
-        if (!card || gameMode === 'time_attack') return;
+        if (!card || gameMode === 'time_attack' || gameMode === 'solo') return;
         timerRef.current = setInterval(() => {
             setTimeLeft(prev => {
                 if (prev <= 1) {
@@ -167,11 +167,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <span className="topic-icon">{card.topicIcon}</span>
                         <span className="topic-name">{card.topicName[language]}</span>
                     </div>
-                    <div className="timer-container">
-                        <div className="timer-label">
-                            ⏰ {gameMode === 'time_attack' ? gameTimeLeft : timeLeft}{t.timer}
-                        </div>
-                        {gameMode !== 'time_attack' && (
+                    {(gameMode !== 'time_attack' && gameMode !== 'solo') && (
+                        <div className="timer-container">
+                            <div className="timer-label">
+                                ⏰ {timeLeft}{t.timer}
+                            </div>
                             <div className="timer-bar-large">
                                 <div
                                     className="timer-fill-large"
@@ -181,8 +181,15 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                     }}
                                 ></div>
                             </div>
-                        )}
-                    </div>
+                        </div>
+                    )}
+                    {gameMode === 'time_attack' && (
+                        <div className="timer-container">
+                            <div className="timer-label">
+                                ⏰ {gameTimeLeft}{t.timer}
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 <div className="quiz-content">
