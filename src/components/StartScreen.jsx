@@ -26,7 +26,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const [gridSize, setGridSize] = useState(16);
     const [difficulty, setDifficulty] = useState(1);
-    const [selectedTopics, setSelectedTopics] = useState(['general']);
+    const [selectedTopics, setSelectedTopics] = useState([]);
     const [gameMode, setGameMode] = useState('solo');
 
     // Filter topics based on active pool
