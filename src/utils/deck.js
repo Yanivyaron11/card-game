@@ -1,5 +1,14 @@
 import { questions, topics } from '../data/questions.js';
 
+const shuffle = (array) => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+};
+
 export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     // Filter questions by selected topics AND difficulty level
     if (!Array.isArray(selectedTopics)) {
@@ -8,16 +17,16 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     }
 
     // 1. Get primary questions (matching topics AND difficulty)
-    let primaryPool = questions
-        .filter(q => selectedTopics.includes(q.category) && q.level === difficulty)
-        .sort(() => Math.random() - 0.5);
+    let primaryPool = shuffle(
+        questions.filter(q => selectedTopics.includes(q.category) && q.level === difficulty)
+    );
 
     // 2. Combine with other difficulty levels if needed
     let allUniqueQuestions = [...primaryPool];
     if (allUniqueQuestions.length < gridSize) {
-        const backupPool = questions
-            .filter(q => selectedTopics.includes(q.category) && q.level !== difficulty)
-            .sort(() => Math.random() - 0.5);
+        const backupPool = shuffle(
+            questions.filter(q => selectedTopics.includes(q.category) && q.level !== difficulty)
+        );
 
         for (const q of backupPool) {
             if (allUniqueQuestions.length >= gridSize) break;
@@ -48,7 +57,7 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     });
 
     // Shuffle the final deck
-    const finalDeck = [...deckWithTopicInfo].sort(() => Math.random() - 0.5);
+    const finalDeck = shuffle(deckWithTopicInfo);
 
     // Add unique IDs to each card for React keys
     return finalDeck.map((card, index) => ({
@@ -58,3 +67,4 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         isSolved: false
     }));
 };
+
