@@ -1,19 +1,33 @@
-self.addEventListener('install', () => self.skipWaiting());
+const CACHE_NAME = 'smarty-v1';
+const ASSETS = [
+    '/',
+    '/index.html',
+    '/manifest.json',
+    '/favicon.png',
+    '/icon-512.png'
+];
+
+self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
+    );
+    self.skipWaiting();
+});
 
 self.addEventListener('activate', (event) => {
     event.waitUntil(
-        caches.keys().then((cacheNames) => {
-            return Promise.all(
-                cacheNames.map((cacheName) => caches.delete(cacheName))
-            );
-        }).then(() => {
-            return self.registration.unregister();
-        })
+        caches.keys().then((keys) => Promise.all(
+            keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+        ))
     );
     self.clients.claim();
 });
 
-// Always bypass cache and go to network to kill the cache loop
 self.addEventListener('fetch', (event) => {
-    event.respondWith(fetch(event.request));
+    event.respondWith(
+        caches.match(event.request).then((response) => {
+            return response || fetch(event.request);
+        })
+    );
 });
+

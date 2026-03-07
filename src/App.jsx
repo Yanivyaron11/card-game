@@ -8,6 +8,8 @@ import { generateDeck } from './utils/deck'
 import { playSound, playMusic, stopMusic } from './utils/sounds'
 import './App.css'
 
+import InstallPrompt from './components/InstallPrompt'
+
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -173,6 +175,9 @@ function App() {
   return (
     <div className={`app-container ${language === 'he' ? 'rtl-mode' : ''}`} dir={language === 'he' ? 'rtl' : 'ltr'}>
       <h1 className="title-glow" onClick={handleReturnToStart} style={{ cursor: 'pointer' }}>{t.title}</h1>
+
+      <InstallPrompt language={language} />
+
 
       <Routes>
         <Route path="/" element={
