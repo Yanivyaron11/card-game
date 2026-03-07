@@ -42,8 +42,10 @@ export const translations = {
         music_off: "Off",
         music_track1: "Track 1 (Calm)",
         music_track2: "Track 2 (Nature)",
-        music_track3: "Track 3 (Dreamy)"
+        music_track3: "Track 3 (Dreamy)",
+        questions_count: "questions"
     },
+
     he: {
         title: "Smarty",
         start_game: "התחל משחק",
@@ -87,6 +89,8 @@ export const translations = {
         music_off: "ללא",
         music_track1: "מנגינה 1 (רגוע)",
         music_track2: "מנגינה 2 (טבע)",
-        music_track3: "מנגינה 3 (חלומי)"
+        music_track3: "מנגינה 3 (חלומי)",
+        questions_count: "שאלות"
     }
+
 };

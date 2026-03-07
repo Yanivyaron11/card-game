@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { topics } from '../data/questions';
+import { topics, questionCounts } from '../data/questions';
+
 import { playSound, getSoundEnabled, setSoundEnabled, getMusicTrack, setMusicTrack } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './StartScreen.css';
@@ -129,7 +130,11 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                             onClick={() => handleTopicToggle(topic.id)}
                         >
                             <span className="topic-icon">{topic.icon}</span>
-                            <span className="topic-name">{topic.name[language]}</span>
+                            <div className="topic-info-main">
+                                <span className="topic-name">{topic.name[language]}</span>
+                                <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
+                            </div>
+
                         </div>
                     ))}
                 </div>

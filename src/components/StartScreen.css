@@ -131,6 +131,19 @@
 .topic-name {
     font-weight: 600;
     font-size: 0.9rem;
+    line-height: 1.1;
+}
+
+.topic-count {
+    font-size: 0.7rem;
+    opacity: 0.8;
+    font-weight: normal;
+}
+
+.topic-info-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .mode-options {
