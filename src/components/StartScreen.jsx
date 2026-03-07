@@ -11,8 +11,15 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     // Persistent settings
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
     const [activePool, setActivePool] = useState(() => {
-        const saved = localStorage.getItem('activeCategories');
-        return saved ? JSON.parse(saved) : topics.map(t => t.id).slice(0, 9);
+        try {
+            const saved = localStorage.getItem('activeCategories');
+            if (!saved) return topics.map(t => t.id).slice(0, 9);
+            const parsed = JSON.parse(saved);
+            return Array.isArray(parsed) && parsed.length > 0 ? parsed : topics.map(t => t.id).slice(0, 9);
+        } catch (e) {
+            console.error("Failed to parse activeCategories", e);
+            return topics.map(t => t.id).slice(0, 9);
+        }
     });
 
     const [musicTrack, setMusicTrackState] = useState(getMusicTrack());
