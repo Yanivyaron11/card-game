@@ -10,6 +10,8 @@
     align-items: center;
     z-index: 2000;
     backdrop-filter: blur(5px);
+    overflow-y: auto;
+    /* Allow scrolling overlay if modal is too tall */
     padding: 20px;
 }
 
@@ -22,6 +24,8 @@
     padding: 1.5rem;
     position: relative;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    /* Extra centering insurance */
 }
 
 .modal-header {
