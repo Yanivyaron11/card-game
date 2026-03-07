@@ -1,18 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { topics, questionCounts } from '../data/questions';
-
 import { playSound, getSoundEnabled, setSoundEnabled, getMusicTrack, setMusicTrack } from '../utils/sounds';
 import { translations } from '../data/translations';
+import SettingsModal from './SettingsModal';
 import './StartScreen.css';
 
 function StartScreen({ onStart, language, onLanguageChange }) {
     const t = translations[language];
-    const [gridSize, setGridSize] = useState(16); // 4x4 default
-    const [difficulty, setDifficulty] = useState(1); // Level 1 default
-    const [selectedTopics, setSelectedTopics] = useState(['general']); // General Knowledge selected by default
+
+    // Persistent settings
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
+    const [activePool, setActivePool] = useState(() => {
+        const saved = localStorage.getItem('activeCategories');
+        return saved ? JSON.parse(saved) : topics.map(t => t.id).slice(0, 9);
+    });
+
     const [musicTrack, setMusicTrackState] = useState(getMusicTrack());
-    const [gameMode, setGameMode] = useState('solo'); // solo or 1v1
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+    const [gridSize, setGridSize] = useState(16);
+    const [difficulty, setDifficulty] = useState(1);
+    const [selectedTopics, setSelectedTopics] = useState(['general']);
+    const [gameMode, setGameMode] = useState('solo');
+
+    // Filter topics based on active pool
+    const visibleTopics = topics.filter(t => activePool.includes(t.id));
 
     const handleTopicToggle = (topicId) => {
         setSelectedTopics(prev =>
@@ -22,10 +33,26 @@ function StartScreen({ onStart, language, onLanguageChange }) {
         );
     };
 
-    const handleMusicChange = (trackId) => {
-        setMusicTrackState(trackId);
-        setMusicTrack(trackId);
-        playSound('pop');
+    const handleCategoryPoolToggle = (topicId) => {
+        setActivePool(prev => {
+            const isRemoving = prev.includes(topicId);
+            if (!isRemoving && prev.length >= 9) {
+                // Optional: add a sound or alert here if you want
+                playSound('error');
+                return prev;
+            }
+            const next = isRemoving
+                ? prev.filter(id => id !== topicId)
+                : [...prev, topicId];
+            localStorage.setItem('activeCategories', JSON.stringify(next));
+            return next;
+        });
+    };
+
+    const handleSoundToggle = (enabled) => {
+        setSoundEnabled(enabled);
+        setSoundOn(enabled);
+        if (enabled) playSound('pop');
     };
 
     const handleStart = () => {
@@ -36,24 +63,34 @@ function StartScreen({ onStart, language, onLanguageChange }) {
         onStart({ gridSize, topics: selectedTopics, difficulty, gameMode });
     };
 
-    const toggleLanguage = () => {
-        onLanguageChange(language === 'en' ? 'he' : 'en');
-    };
-
     return (
         <div className="start-screen glass-panel">
             <div className="top-controls">
-                <button onClick={() => {
-                    const newState = !soundOn;
-                    setSoundEnabled(newState);
-                    setSoundOn(newState);
-                }} className="icon-toggle-btn">
-                    {soundOn ? '🔊' : '🔇'}
-                </button>
-                <button onClick={toggleLanguage} className="icon-toggle-btn">
-                    {language === 'en' ? '🇮🇱' : '🇺🇸'}
+                <button
+                    onClick={() => setIsSettingsOpen(true)}
+                    className="icon-toggle-btn settings-gear"
+                    title={t.settings}
+                >
+                    ⚙️
                 </button>
             </div>
+
+            <SettingsModal
+                isOpen={isSettingsOpen}
+                onClose={() => setIsSettingsOpen(false)}
+                language={language}
+                onLanguageChange={onLanguageChange}
+                soundOn={soundOn}
+                onSoundToggle={handleSoundToggle}
+                musicTrack={musicTrack}
+                onMusicChange={(track) => {
+                    setMusicTrack(track);
+                    setMusicTrackState(track);
+                    playSound('pop');
+                }}
+                activeCategories={activePool}
+                onCategoryToggle={handleCategoryPoolToggle}
+            />
 
             <h2>{t.lets_play}</h2>
 
@@ -84,22 +121,13 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             <div className="config-section">
                 <h3>{t.choose_size}</h3>
                 <div className="grid-options">
-                    <button
-                        className={`grid-btn ${gridSize === 9 ? 'active' : ''}`}
-                        onClick={() => setGridSize(9)}
-                    >
+                    <button className={`grid-btn ${gridSize === 9 ? 'active' : ''}`} onClick={() => setGridSize(9)}>
                         <span dir="ltr">3 x 3</span>
                     </button>
-                    <button
-                        className={`grid-btn ${gridSize === 16 ? 'active' : ''}`}
-                        onClick={() => setGridSize(16)}
-                    >
+                    <button className={`grid-btn ${gridSize === 16 ? 'active' : ''}`} onClick={() => setGridSize(16)}>
                         <span dir="ltr">4 x 4</span>
                     </button>
-                    <button
-                        className={`grid-btn ${gridSize === 25 ? 'active' : ''}`}
-                        onClick={() => setGridSize(25)}
-                    >
+                    <button className={`grid-btn ${gridSize === 25 ? 'active' : ''}`} onClick={() => setGridSize(25)}>
                         <span dir="ltr">5 x 5</span>
                     </button>
                 </div>
@@ -123,7 +151,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             <div className="config-section">
                 <h3>{t.choose_topics}</h3>
                 <div className="topic-options">
-                    {topics.map(topic => (
+                    {visibleTopics.map(topic => (
                         <div
                             key={topic.id}
                             className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`}
@@ -134,39 +162,8 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                                 <span className="topic-name">{topic.name[language]}</span>
                                 <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
                             </div>
-
                         </div>
                     ))}
-                </div>
-            </div>
-
-            <div className="config-section">
-                <h3>4. {t.bg_music}</h3>
-                <div className="mode-options">
-                    <button
-                        className={`mode-btn ${musicTrack === 'off' ? 'active' : ''}`}
-                        onClick={() => handleMusicChange('off')}
-                    >
-                        {t.music_off}
-                    </button>
-                    <button
-                        className={`mode-btn ${musicTrack === 'track1' ? 'active' : ''}`}
-                        onClick={() => handleMusicChange('track1')}
-                    >
-                        🎵 1
-                    </button>
-                    <button
-                        className={`mode-btn ${musicTrack === 'track2' ? 'active' : ''}`}
-                        onClick={() => handleMusicChange('track2')}
-                    >
-                        🎵 2
-                    </button>
-                    <button
-                        className={`mode-btn ${musicTrack === 'track3' ? 'active' : ''}`}
-                        onClick={() => handleMusicChange('track3')}
-                    >
-                        🎵 3
-                    </button>
                 </div>
             </div>
 
@@ -176,3 +173,4 @@ function StartScreen({ onStart, language, onLanguageChange }) {
 }
 
 export default StartScreen;
+

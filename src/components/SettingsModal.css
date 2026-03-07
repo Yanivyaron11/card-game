@@ -1,0 +1,139 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+.settings-scroll-area {
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 5px;
+}
+
+.settings-section {
+    margin-bottom: 2rem;
+}
+
+.settings-section h3 {
+    font-size: 1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.settings-options,
+.settings-music-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.settings-btn,
+.music-track-btn {
+    flex: 1;
+    min-width: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.settings-btn.active,
+.music-track-btn.active {
+    background: var(--secondary);
+    border-color: white;
+}
+
+.category-pool {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.8rem;
+}
+
+.pool-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.pool-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.pool-item.selected {
+    background: var(--secondary);
+    border-color: white;
+    box-shadow: 0 4px 10px rgba(78, 205, 196, 0.3);
+}
+
+.pool-icon {
+    font-size: 1.2rem;
+}
+
+.pool-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.modal-footer-btn {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 500px) {
+    .category-pool {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

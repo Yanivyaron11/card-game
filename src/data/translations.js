@@ -43,8 +43,17 @@ export const translations = {
         music_track1: "Track 1 (Calm)",
         music_track2: "Track 2 (Nature)",
         music_track3: "Track 3 (Dreamy)",
-        questions_count: "questions"
+        questions_count: "questions",
+        settings: "Settings",
+        language_name: "Language",
+        sound_effects: "Sound Effects",
+        music: "Music",
+        active_categories: "Select up to 9 Active Categories",
+        close: "Close",
+        on: "On",
+        off: "Off"
     },
+
 
     he: {
         title: "Smarty",
@@ -90,7 +99,16 @@ export const translations = {
         music_track1: "מנגינה 1 (רגוע)",
         music_track2: "מנגינה 2 (טבע)",
         music_track3: "מנגינה 3 (חלומי)",
-        questions_count: "שאלות"
+        questions_count: "שאלות",
+        settings: "הגדרות",
+        language_name: "שפה",
+        sound_effects: "צלילים",
+        music: "מוזיקה",
+        active_categories: "בחרו עד 9 נושאים פעילים",
+        close: "סגור",
+        on: "פעיל",
+        off: "כבוי"
     }
+
 
 };

@@ -3,7 +3,7 @@ export const topics = [
     { id: 'countries', name: { en: 'Countries', he: 'מדינות' }, icon: '🌍' },
     { id: 'movies', name: { en: 'Movies', he: 'סרטים' }, icon: '🎬' },
     { id: 'math', name: { en: 'Math', he: 'חשבון' }, icon: '➕' },
-    // { id: 'israeli_music', name: { en: 'Israeli Music', he: 'מוזיקה ישראלית' }, icon: '🎸' },
+    { id: 'israeli_music', name: { en: 'Israeli Music', he: 'מוזיקה ישראלית' }, icon: '🎸' },
     { id: 'general', name: { en: 'General Knowledge', he: 'ידע כללי' }, icon: '🧠' },
     { id: 'food', name: { en: 'Food', he: 'אוכל' }, icon: '🍕' },
     { id: 'london', name: { en: 'London', he: 'לונדון' }, icon: '💂' },
