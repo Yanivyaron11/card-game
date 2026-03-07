@@ -1,4 +1,4 @@
-const CACHE_NAME = 'smarty-v2';
+const CACHE_NAME = 'smarty-v3';
 const ASSETS = [
     '/',
     '/index.html',
@@ -24,6 +24,16 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+    // For HTML requests (navigation), use Network First strategy
+    // This ensures we always get the latest index.html with the correct hashed JS/CSS filenames
+    if (event.request.mode === 'navigate' || (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html'))) {
+        event.respondWith(
+            fetch(event.request).catch(() => caches.match(event.request))
+        );
+        return;
+    }
+
+    // For other static assets, use Cache First strategy
     event.respondWith(
         caches.match(event.request).then((response) => {
             return response || fetch(event.request);
