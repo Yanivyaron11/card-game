@@ -149,7 +149,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <div className="level-badge mini">{t.level} {card.level}</div>
                     </div>
                     <div className="stat-item lives-display">
-                        <span className="stat-label">{t.hearts}:</span>
+
                         <div className="hearts mini">
                             {Array.from({ length: Math.max(0, lives + 1) }).map((_, i) => (
                                 <span key={i} className="heart-icon mini">❤️</span>
@@ -157,7 +157,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </div>
                     </div>
                     <div className="stat-item coins-display">
-                        <span className="stat-label">{t.coins}:</span>
+
                         <div key={coins} className="coins-value mini coin-pop">🪙 {coins}</div>
                     </div>
                 </div>

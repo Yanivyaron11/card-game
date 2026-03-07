@@ -61,7 +61,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                             <div className="level-badge">{t.level} {config.difficulty}</div>
                         </div>
                         <div className="stat-item lives-display">
-                            <h3>{t.hearts}:</h3>
+
                             <div className="hearts">
                                 {Array.from({ length: Math.max(0, (lives[1] || 0) + 1) }).map((_, i) => (
                                     <span key={i} className="heart-icon">❤️</span>
@@ -69,7 +69,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                             </div>
                         </div>
                         <div className="stat-item coins-display">
-                            <h3>{t.coins}:</h3>
+
                             <div key={coins[1]} className="coins-value coin-pop">🪙 {coins[1]}</div>
                         </div>
                     </>
