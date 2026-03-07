@@ -42,6 +42,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
             <div className="stats-header glass-panel">
                 {config.gameMode === 'time_attack' ? (
                     <div className="stat-item timer-display-global">
+                        <div className="level-badge mini">{t.level} {config.difficulty}</div>
                         <h3>{t.time_left.replace('{n}', timeLeft)}</h3>
                         <div className="hearts-coins-row">
                             <div className="hearts mini">
@@ -56,6 +57,9 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                     </div>
                 ) : config.gameMode === 'solo' ? (
                     <>
+                        <div className="stat-item level-display">
+                            <div className="level-badge">{t.level} {config.difficulty}</div>
+                        </div>
                         <div className="stat-item lives-display">
                             <h3>{t.hearts}:</h3>
                             <div className="hearts">
@@ -73,6 +77,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                     <div className="multiplayer-stats">
                         <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`}>
                             <div className="player-label">P1</div>
+                            <div className="level-badge mini">{t.level} {config.difficulty}</div>
                             <div className="player-score-value">{t.score}: {scores[1]}</div>
                             <div className="p-hearts">
                                 {Array.from({ length: Math.max(0, (lives[1] || 0) + 1) }).map((_, i) => (
@@ -83,12 +88,14 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                         </div>
 
                         <div className="vs-center">
+                            <div className="level-badge mini">{t.level} {config.difficulty}</div>
                             <div className="vs-text">VS</div>
                             <div className="turn-indicator-dot"></div>
                         </div>
 
                         <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`}>
                             <div className="player-label">P2</div>
+                            <div className="level-badge mini">{t.level} {config.difficulty}</div>
                             <div className="player-score-value">{t.score}: {scores[2]}</div>
                             <div className="p-hearts">
                                 {Array.from({ length: Math.max(0, (lives[2] || 0) + 1) }).map((_, i) => (

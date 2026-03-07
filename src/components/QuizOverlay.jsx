@@ -145,6 +145,9 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             )}
             <div className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''}`}>
                 <div className="quiz-stats-header">
+                    <div className="stat-item level-display">
+                        <div className="level-badge mini">{t.level} {card.level}</div>
+                    </div>
                     <div className="stat-item lives-display">
                         <span className="stat-label">{t.hearts}:</span>
                         <div className="hearts mini">
