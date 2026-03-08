@@ -170,8 +170,9 @@ if (!content.includes("id: 'judaism'")) {
     content = content.replace('export const topics = [', 'export const topics = [\n    ' + topicInsert);
 }
 
-// Ensure clean replacement
-content = content.replace(/    \{ category: 'judaism',[\s\S]*? \},\n/g, '');
+// We are no longer replacing the old judaism questions!
+// The user had 100 questions already there about Bible stories.
+// We are adding our 100 new culture/history questions on top of them.
 
 const parts = content.split('export const questions = [');
 content = parts[0] + 'export const questions = [' + '\n' + finalQuestions.join(',\n') + ',\n' + parts[1];
