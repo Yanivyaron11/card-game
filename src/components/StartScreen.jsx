@@ -13,9 +13,17 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [activePool, setActivePool] = useState(() => {
         try {
             const saved = localStorage.getItem('activeCategories');
-            if (!saved) return topics.map(t => t.id).slice(0, 9);
+            const defaultPool = topics.map(t => t.id).slice(0, 9);
+            if (!saved) return defaultPool;
             const parsed = JSON.parse(saved);
-            return Array.isArray(parsed) && parsed.length > 0 ? parsed : topics.map(t => t.id).slice(0, 9);
+
+            // Check if saved array uses the old system (e.g. 'patisserie' instead of 'food_group')
+            const validParentIds = topics.map(t => t.id);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+                const hasValidParent = parsed.some(id => validParentIds.includes(id));
+                return hasValidParent ? parsed : defaultPool;
+            }
+            return defaultPool;
         } catch (e) {
             console.error("Failed to parse activeCategories", e);
             return topics.map(t => t.id).slice(0, 9);
@@ -28,6 +36,13 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [difficulty, setDifficulty] = useState(1);
     const [selectedTopics, setSelectedTopics] = useState([]);
     const [gameMode, setGameMode] = useState('solo');
+    const [expandedTopics, setExpandedTopics] = useState([]);
+
+    const toggleTopicExpand = (groupId) => {
+        setExpandedTopics(prev =>
+            prev.includes(groupId) ? prev.filter(id => id !== groupId) : [...prev, groupId]
+        );
+    };
 
     // Filter topics based on active pool
     const visibleTopics = topics.filter(t => activePool.includes(t.id));
@@ -158,19 +173,62 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             <div className="config-section">
                 <h3>{t.choose_topics}</h3>
                 <div className="topic-options">
-                    {visibleTopics.map(topic => (
-                        <div
-                            key={topic.id}
-                            className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`}
-                            onClick={() => handleTopicToggle(topic.id)}
-                        >
-                            <span className="topic-icon">{topic.icon}</span>
-                            <div className="topic-info-main">
-                                <span className="topic-name">{topic.name[language]}</span>
-                                <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
+                    {visibleTopics.map(topic => {
+                        if (!topic.subTopics) {
+                            return (
+                                <div
+                                    key={topic.id}
+                                    className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`}
+                                    onClick={() => handleTopicToggle(topic.id)}
+                                >
+                                    <span className="topic-icon">{topic.icon}</span>
+                                    <div className="topic-info-main">
+                                        <span className="topic-name">{topic.name[language]}</span>
+                                        <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
+                                    </div>
+                                </div>
+                            );
+                        }
+
+                        const isExpanded = expandedTopics.includes(topic.id);
+                        const folderCount = topic.subTopics.reduce((acc, sub) => acc + (questionCounts[sub.id] || 0), 0);
+                        const selectedSubTopics = topic.subTopics.filter(sub => selectedTopics.includes(sub.id));
+                        const isPartiallySelected = selectedSubTopics.length > 0 && selectedSubTopics.length < topic.subTopics.length;
+                        const isFullySelected = selectedSubTopics.length === topic.subTopics.length && topic.subTopics.length > 0;
+
+                        return (
+                            <div key={topic.id} className="topic-group-container">
+                                <div
+                                    className={`topic-card folder-card ${isFullySelected ? 'selected' : isPartiallySelected ? 'partially-selected' : ''}`}
+                                    onClick={() => toggleTopicExpand(topic.id)}
+                                >
+                                    <span className="topic-icon">{topic.icon}</span>
+                                    <div className="topic-info-main">
+                                        <span className="topic-name">{topic.name[language]}</span>
+                                        <span className="topic-count folder-count">{folderCount} {t.questions_count}</span>
+                                    </div>
+                                    <div className={`folder-chevron ${isExpanded ? 'expanded' : ''}`}>▼</div>
+                                </div>
+                                {isExpanded && (
+                                    <div className="subtopics-container">
+                                        {topic.subTopics.map(sub => (
+                                            <div
+                                                key={sub.id}
+                                                className={`topic-card sub-card ${selectedTopics.includes(sub.id) ? 'selected' : ''}`}
+                                                onClick={() => handleTopicToggle(sub.id)}
+                                            >
+                                                <span className="topic-icon">{sub.icon}</span>
+                                                <div className="topic-info-main">
+                                                    <span className="topic-name">{sub.name[language]}</span>
+                                                    <span className="topic-count">{questionCounts[sub.id] || 0} {t.questions_count}</span>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
 

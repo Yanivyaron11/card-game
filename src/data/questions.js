@@ -1,37 +1,5 @@
 export const topics = [
     {
-        "id": "maccabi_haifa",
-        "name": {
-            "en": "Maccabi Haifa",
-            "he": "מכבי חיפה"
-        },
-        "icon": "⚽"
-    },
-    {
-        "id": "animals",
-        "name": {
-            "en": "Animals",
-            "he": "חיות"
-        },
-        "icon": "🦁"
-    },
-    {
-        "id": "countries",
-        "name": {
-            "en": "Countries",
-            "he": "מדינות"
-        },
-        "icon": "🌍"
-    },
-    {
-        "id": "movies",
-        "name": {
-            "en": "Kids Movies",
-            "he": "סרטי ילדים"
-        },
-        "icon": "🎬"
-    },
-    {
         "id": "math",
         "name": {
             "en": "Math",
@@ -40,12 +8,176 @@ export const topics = [
         "icon": "➕"
     },
     {
-        "id": "israeli_music",
+        "id": "food_group",
         "name": {
-            "en": "Israeli Music",
-            "he": "מוזיקה ישראלית"
+            "en": "Food & Culinary",
+            "he": "אוכל וקולינריה"
         },
-        "icon": "🎸"
+        "icon": "🍔",
+        "subTopics": [
+            {
+                "id": "food",
+                "name": {
+                    "en": "General Food",
+                    "he": "אוכל כללי"
+                },
+                "icon": "🍕"
+            },
+            {
+                "id": "patisserie",
+                "name": {
+                    "en": "Patisserie",
+                    "he": "קונדיטוריה"
+                },
+                "icon": "🥐"
+            }
+        ]
+    },
+    {
+        "id": "science_group",
+        "name": {
+            "en": "Science & Nature",
+            "he": "מדע וטבע"
+        },
+        "icon": "🔬",
+        "subTopics": [
+            {
+                "id": "animals",
+                "name": {
+                    "en": "Animals",
+                    "he": "חיות"
+                },
+                "icon": "🦁"
+            },
+            {
+                "id": "nature",
+                "name": {
+                    "en": "Nature",
+                    "he": "טבע"
+                },
+                "icon": "🌿"
+            },
+            {
+                "id": "human_body",
+                "name": {
+                    "en": "The Human Body",
+                    "he": "גוף האדם"
+                },
+                "icon": "🧬"
+            },
+            {
+                "id": "psychology",
+                "name": {
+                    "en": "Psychology",
+                    "he": "פסיכולוגיה"
+                },
+                "icon": "🧠"
+            }
+        ]
+    },
+    {
+        "id": "world_group",
+        "name": {
+            "en": "World & Geography",
+            "he": "עולם וגאוגרפיה"
+        },
+        "icon": "🌍",
+        "subTopics": [
+            {
+                "id": "countries",
+                "name": {
+                    "en": "Countries",
+                    "he": "מדינות"
+                },
+                "icon": "🗺️"
+            },
+            {
+                "id": "london",
+                "name": {
+                    "en": "London",
+                    "he": "לונדון"
+                },
+                "icon": "💂"
+            }
+        ]
+    },
+    {
+        "id": "culture_group",
+        "name": {
+            "en": "Culture & Art",
+            "he": "תרבות ואמנות"
+        },
+        "icon": "🎭",
+        "subTopics": [
+            {
+                "id": "judaism",
+                "name": {
+                    "en": "Judaism",
+                    "he": "יהדות"
+                },
+                "icon": "🔯"
+            },
+            {
+                "id": "art",
+                "name": {
+                    "en": "Art",
+                    "he": "אמנות"
+                },
+                "icon": "🎨"
+            }
+        ]
+    },
+    {
+        "id": "entertainment_group",
+        "name": {
+            "en": "Entertainment",
+            "he": "בידור"
+        },
+        "icon": "🍿",
+        "subTopics": [
+            {
+                "id": "movies",
+                "name": {
+                    "en": "Kids Movies",
+                    "he": "סרטי ילדים"
+                },
+                "icon": "🎬"
+            },
+            {
+                "id": "israeli_music",
+                "name": {
+                    "en": "Israeli Music",
+                    "he": "מוזיקה ישראלית"
+                },
+                "icon": "🎸"
+            },
+            {
+                "id": "sopranos",
+                "name": {
+                    "en": "The Sopranos",
+                    "he": "הסופרנוס"
+                },
+                "icon": "🔫"
+            }
+        ]
+    },
+    {
+        "id": "sports_group",
+        "name": {
+            "en": "Sports",
+            "he": "ספורט"
+        },
+        "icon": "⚽",
+        "subTopics": [
+            {
+                "id": "maccabi_haifa",
+                "name": {
+                    "en": "Maccabi Haifa",
+                    "he": "מכבי חיפה"
+                },
+                "icon": "🟢"
+            }
+        ]
     },
     {
         "id": "general",
@@ -54,78 +186,6 @@ export const topics = [
             "he": "ידע כללי"
         },
         "icon": "🧠"
-    },
-    {
-        "id": "food",
-        "name": {
-            "en": "Food",
-            "he": "אוכל"
-        },
-        "icon": "🍕"
-    },
-    {
-        "id": "london",
-        "name": {
-            "en": "London",
-            "he": "לונדון"
-        },
-        "icon": "💂"
-    },
-    {
-        "id": "art",
-        "name": {
-            "en": "Art",
-            "he": "אמנות"
-        },
-        "icon": "🎨"
-    },
-    {
-        "id": "nature",
-        "name": {
-            "en": "Nature",
-            "he": "טבע"
-        },
-        "icon": "🌿"
-    },
-    {
-        "id": "sopranos",
-        "name": {
-            "en": "The Sopranos",
-            "he": "הסופרנוס"
-        },
-        "icon": "🔫"
-    },
-    {
-        "id": "human_body",
-        "name": {
-            "en": "The Human Body",
-            "he": "גוף האדם"
-        },
-        "icon": "🧬"
-    },
-    {
-        "id": "psychology",
-        "name": {
-            "en": "Psychology",
-            "he": "פסיכולוגיה"
-        },
-        "icon": "🧠"
-    },
-    {
-        "id": "judaism",
-        "name": {
-            "en": "Judaism",
-            "he": "יהדות"
-        },
-        "icon": "🔯"
-    },
-    {
-        "id": "patisserie",
-        "name": {
-            "en": "Patisserie",
-            "he": "קונדיטוריה"
-        },
-        "icon": "🥐"
     }
 ];
 
