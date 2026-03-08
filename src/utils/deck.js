@@ -23,11 +23,11 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     let eligibleQuestions = questions.filter(q => selectedTopics.includes(q.category) && q.level === difficulty);
 
     // 1a. Filter out questions already seen in this session
-    let unseenEligible = eligibleQuestions.filter(q => !sessionSeenQuestions.has(q.text.en));
+    let unseenEligible = eligibleQuestions.filter(q => !sessionSeenQuestions.has(q.id));
 
     // If we've exhausted our completely unplayed pool, gracefully clear the history for these topics!
     if (unseenEligible.length < gridSize) {
-        eligibleQuestions.forEach(q => sessionSeenQuestions.delete(q.text.en));
+        eligibleQuestions.forEach(q => sessionSeenQuestions.delete(q.id));
         unseenEligible = eligibleQuestions; // Reset pool for this category/level combination
     }
 
@@ -119,14 +119,14 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         let backupEligible = questions.filter(q =>
             selectedTopics.includes(q.category) &&
             q.level !== difficulty &&
-            !allUniqueQuestions.some(aq => aq.text.en === q.text.en)
+            !allUniqueQuestions.some(aq => aq.id === q.id)
         );
 
-        let unseenBackup = backupEligible.filter(q => !sessionSeenQuestions.has(q.text.en));
+        let unseenBackup = backupEligible.filter(q => !sessionSeenQuestions.has(q.id));
 
         // If backup pool is exhausted, clear history for the backups
         if (allUniqueQuestions.length + unseenBackup.length < gridSize) {
-            backupEligible.forEach(q => sessionSeenQuestions.delete(q.text.en));
+            backupEligible.forEach(q => sessionSeenQuestions.delete(q.id));
             unseenBackup = backupEligible;
         }
 
@@ -187,8 +187,8 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     // Final selection
     let deckSelection = allUniqueQuestions.slice(0, gridSize);
 
-    // Track chosen questions in session history securely using English text as unique ID
-    deckSelection.forEach(q => sessionSeenQuestions.add(q.text.en));
+    // Track chosen questions in session history securely using the unique question ID
+    deckSelection.forEach(q => sessionSeenQuestions.add(q.id));
 
     // 3. If STILL not enough, allow repetitions (last resort)
     while (deckSelection.length < gridSize && deckSelection.length > 0) {
