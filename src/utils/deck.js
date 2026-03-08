@@ -16,13 +16,38 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         return [];
     }
 
-    // 1. Get primary questions (matching topics AND difficulty)
-    let primaryPool = shuffle(
-        questions.filter(q => selectedTopics.includes(q.category) && q.level === difficulty)
-    );
+    // 1. Get all eligible questions
+    const eligibleQuestions = questions.filter(q => selectedTopics.includes(q.category) && q.level === difficulty);
 
-    // 2. Combine with other difficulty levels if needed
-    let allUniqueQuestions = [...primaryPool];
+    // 2. Group by Category + SubCategory for balancing
+    const groups = {};
+    eligibleQuestions.forEach(q => {
+        const key = `${q.category}-${q.subCategory || 'default'}`;
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(q);
+    });
+
+    // Shuffle each group
+    Object.keys(groups).forEach(key => {
+        groups[key] = shuffle(groups[key]);
+    });
+
+    // 3. Round-robin selection to ensure variety
+    let allUniqueQuestions = [];
+    const groupKeys = Object.keys(groups);
+    let groupIdx = 0;
+
+    // Pick until we hit gridSize OR run out of unique questions in primary level
+    const totalAvailable = eligibleQuestions.length;
+    while (allUniqueQuestions.length < gridSize && allUniqueQuestions.length < totalAvailable) {
+        const key = groupKeys[groupIdx % groupKeys.length];
+        if (groups[key].length > 0) {
+            allUniqueQuestions.push(groups[key].pop());
+        }
+        groupIdx++;
+    }
+
+    // 4. Combine with other difficulty levels if STILL needed
     if (allUniqueQuestions.length < gridSize) {
         const backupPool = shuffle(
             questions.filter(q => selectedTopics.includes(q.category) && q.level !== difficulty)
@@ -36,7 +61,7 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         }
     }
 
-    // Slice to gridSize (in case we have too many)
+    // Final selection
     let deckSelection = allUniqueQuestions.slice(0, gridSize);
 
     // 3. If STILL not enough, allow repetitions (last resort)
