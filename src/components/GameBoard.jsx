@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Card from './Card';
 import { playSound, getSoundEnabled, setSoundEnabled } from '../utils/sounds';
 import { translations } from '../data/translations';
+import { markQuestionAsSeen } from '../utils/deck';
 import './GameBoard.css';
 
 function GameBoard({ config, deck, lives, coins, language, onCardSelected, currentPlayer, scores, timeLeft }) {
@@ -13,6 +14,12 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
     const handleCardClick = (card) => {
         if (card.isSolved || card.isFailed) return;
         playSound('pop');
+
+        // Mark question as seen only when explicitly clicked
+        if (card.questionId) {
+            markQuestionAsSeen(card.questionId);
+        }
+
         onCardSelected(card.id);
     };
 

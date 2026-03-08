@@ -12,6 +12,10 @@ const shuffle = (array) => {
 // Session-level tracker to avoid repeating questions across multiple games until refresh
 export const sessionSeenQuestions = new Set();
 
+export const markQuestionAsSeen = (id) => {
+    if (id) sessionSeenQuestions.add(id);
+};
+
 export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     // Filter questions by selected topics AND difficulty level
     if (!Array.isArray(selectedTopics)) {
@@ -188,7 +192,7 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     let deckSelection = allUniqueQuestions.slice(0, gridSize);
 
     // Track chosen questions in session history securely using the unique question ID
-    deckSelection.forEach(q => sessionSeenQuestions.add(q.id));
+    // REMOVED: Batch-marking moved to markQuestionAsSeen triggered on click in UI
 
     // 3. If STILL not enough, allow repetitions (last resort)
     while (deckSelection.length < gridSize && deckSelection.length > 0) {
@@ -210,12 +214,16 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     // Shuffle the final deck
     const finalDeck = shuffle(deckWithTopicInfo);
 
-    // Add unique IDs to each card for React keys
-    return finalDeck.map((card, index) => ({
-        ...card,
-        id: `card-${index}-${Math.random().toString(36).substr(2, 9)}`,
-        isFlipped: false,
-        isSolved: false
-    }));
+    // Add unique IDs to each card for React keys while preserving the original questionId
+    return finalDeck.map((card, index) => {
+        const questionId = card.id; // The unique ID from questions.js (e.g. q-math-1)
+        return {
+            ...card,
+            questionId,
+            id: `card-${index}-${Math.random().toString(36).substr(2, 9)}`,
+            isFlipped: false,
+            isSolved: false
+        };
+    });
 };
 
