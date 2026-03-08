@@ -32,10 +32,21 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         groups[key] = shuffle(groups[key]);
     });
 
-    // 3. Round-robin selection to ensure variety
+    // 3. Weighted Round-robin selection to ensure variety but prioritize specific subcategories
     let allUniqueQuestions = [];
     const groupKeys = Object.keys(groups);
     let groupIdx = 0;
+
+    // Determine the "weight" or "pulls per cycle" for each group.
+    // The user strictly wants geometry, word_problems, and measurement to dominate.
+    const getGroupWeight = (key) => {
+        if (key === 'math-word_problems') return 3; // Pull 3 logic puzzles per cycle
+        if (key === 'math-geometry') return 2;      // Pull 2 geometry per cycle
+        if (key === 'math-measurement') return 2;   // Pull 2 measurement per cycle
+        if (key === 'math-fractions') return 1;     // Pull 1 fraction per cycle
+        if (key === 'math-arithmetic') return 1;    // Pull 1 arithmetic per cycle (up to max 3)
+        return 1; // Default for everything else
+    };
 
     // Track templateIds already picked to avoid repetitiveness
     const pickedTemplateIds = new Set();
@@ -44,6 +55,7 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     while (allUniqueQuestions.length < gridSize) {
         const validKeys = groupKeys.filter(k => {
             if (groups[k].length === 0) return false;
+            // Strict Arithmetic ceiling
             if (k === 'math-arithmetic' && (subCategoryCounts[k] || 0) >= 3) return false;
             return true;
         });
@@ -51,21 +63,28 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         if (validKeys.length === 0) break; // No more eligible questions
 
         const key = validKeys[groupIdx % validKeys.length];
+        const pullsThisCycle = getGroupWeight(key);
 
-        // Find a question in this group that hasn't had its templateId picked yet
-        const qIdx = groups[key].findIndex(q => !q.templateId || !pickedTemplateIds.has(q.templateId));
+        for (let p = 0; p < pullsThisCycle && allUniqueQuestions.length < gridSize; p++) {
+            // Check viability AGAIN inside the loop because lists empty and quotas hit
+            if (groups[key].length === 0) break;
+            if (key === 'math-arithmetic' && (subCategoryCounts[key] || 0) >= 3) break;
 
-        if (qIdx !== -1) {
-            const q = groups[key].splice(qIdx, 1)[0];
-            allUniqueQuestions.push(q);
-            if (q.templateId) pickedTemplateIds.add(q.templateId);
-            subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
-        } else {
-            // If we've used ALL templates in this subCategory, start allowing repetitions 
-            // but only as a last resort within this level
-            const q = groups[key].pop();
-            allUniqueQuestions.push(q);
-            subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
+            // Find a question in this group that hasn't had its templateId picked yet
+            const qIdx = groups[key].findIndex(q => !q.templateId || !pickedTemplateIds.has(q.templateId));
+
+            if (qIdx !== -1) {
+                const q = groups[key].splice(qIdx, 1)[0];
+                allUniqueQuestions.push(q);
+                if (q.templateId) pickedTemplateIds.add(q.templateId);
+                subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
+            } else {
+                // If we've used ALL templates in this subCategory, start allowing repetitions 
+                // but only as a last resort within this level
+                const q = groups[key].pop();
+                allUniqueQuestions.push(q);
+                subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
+            }
         }
         groupIdx++;
     }
@@ -97,17 +116,23 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
             if (validKeys.length === 0) break; // No more backup questions
 
             const key = validKeys[bIdx % validKeys.length];
+            const pullsThisCycle = getGroupWeight(key);
 
-            const qIdx = backupGroups[key].findIndex(q => !q.templateId || !pickedTemplateIds.has(q.templateId));
-            if (qIdx !== -1) {
-                const q = backupGroups[key].splice(qIdx, 1)[0];
-                allUniqueQuestions.push(q);
-                if (q.templateId) pickedTemplateIds.add(q.templateId);
-                subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
-            } else {
-                const q = backupGroups[key].pop();
-                allUniqueQuestions.push(q);
-                subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
+            for (let p = 0; p < pullsThisCycle && allUniqueQuestions.length < gridSize; p++) {
+                if (!backupGroups[key] || backupGroups[key].length === 0) break;
+                if (key === 'math-arithmetic' && (subCategoryCounts[key] || 0) >= 3) break;
+
+                const qIdx = backupGroups[key].findIndex(q => !q.templateId || !pickedTemplateIds.has(q.templateId));
+                if (qIdx !== -1) {
+                    const q = backupGroups[key].splice(qIdx, 1)[0];
+                    allUniqueQuestions.push(q);
+                    if (q.templateId) pickedTemplateIds.add(q.templateId);
+                    subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
+                } else {
+                    const q = backupGroups[key].pop();
+                    allUniqueQuestions.push(q);
+                    subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
+                }
             }
             bIdx++;
         }
