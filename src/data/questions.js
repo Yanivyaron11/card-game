@@ -129,6 +129,25 @@ export const topics = [
     }
 ];
 
+export const questionCounts = {
+    "judaism": 409,
+    "maccabi_haifa": 155,
+    "math": 500,
+    "patisserie": 400,
+    "israeli_music": 286,
+    "animals": 120,
+    "countries": 246,
+    "movies": 112,
+    "food": 320,
+    "london": 201,
+    "art": 101,
+    "nature": 100,
+    "general": 100,
+    "sopranos": 100,
+    "human_body": 100,
+    "psychology": 60
+};
+
 export const questions = [
     {
         "id": "q-judaism-1",
