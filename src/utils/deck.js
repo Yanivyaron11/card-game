@@ -9,6 +9,9 @@ const shuffle = (array) => {
     return newArray;
 };
 
+// Session-level tracker to avoid repeating questions across multiple games until refresh
+export const sessionSeenQuestions = new Set();
+
 export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     // Filter questions by selected topics AND difficulty level
     if (!Array.isArray(selectedTopics)) {
@@ -16,8 +19,19 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         return [];
     }
 
-    // 1. Get all eligible questions
-    const eligibleQuestions = questions.filter(q => selectedTopics.includes(q.category) && q.level === difficulty);
+    // 1. Get all eligible questions matching topic and difficulty
+    let eligibleQuestions = questions.filter(q => selectedTopics.includes(q.category) && q.level === difficulty);
+
+    // 1a. Filter out questions already seen in this session
+    let unseenEligible = eligibleQuestions.filter(q => !sessionSeenQuestions.has(q.text.en));
+
+    // If we've exhausted our completely unplayed pool, gracefully clear the history for these topics!
+    if (unseenEligible.length < gridSize) {
+        eligibleQuestions.forEach(q => sessionSeenQuestions.delete(q.text.en));
+        unseenEligible = eligibleQuestions; // Reset pool for this category/level combination
+    }
+
+    eligibleQuestions = unseenEligible;
 
     // 2. Group by Category + SubCategory for balancing
     const groups = {};
@@ -70,8 +84,18 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
             if (groups[key].length === 0) break;
             if (key === 'math-arithmetic' && (subCategoryCounts[key] || 0) >= 3) break;
 
-            // Find a question in this group that hasn't had its templateId picked yet
-            const qIdx = groups[key].findIndex(q => !q.templateId || !pickedTemplateIds.has(q.templateId));
+            // Instead of consistently selecting from index 0, pick a random starting offset 
+            // to prevent the first items in the shuffled array from being overwhelmingly favored
+            const offset = Math.floor(Math.random() * groups[key].length);
+            let qIdx = -1;
+
+            for (let i = 0; i < groups[key].length; i++) {
+                const checkIdx = (offset + i) % groups[key].length;
+                if (!groups[key][checkIdx].templateId || !pickedTemplateIds.has(groups[key][checkIdx].templateId)) {
+                    qIdx = checkIdx;
+                    break;
+                }
+            }
 
             if (qIdx !== -1) {
                 const q = groups[key].splice(qIdx, 1)[0];
@@ -80,8 +104,9 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
                 subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
             } else {
                 // If we've used ALL templates in this subCategory, start allowing repetitions 
-                // but only as a last resort within this level
-                const q = groups[key].pop();
+                // by popping a random remaining element.
+                const randomPopIdx = Math.floor(Math.random() * groups[key].length);
+                const q = groups[key].splice(randomPopIdx, 1)[0];
                 allUniqueQuestions.push(q);
                 subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
             }
@@ -91,11 +116,21 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
 
     // 4. Combine with other difficulty levels if STILL needed
     if (allUniqueQuestions.length < gridSize) {
-        const backupEligible = questions.filter(q =>
+        let backupEligible = questions.filter(q =>
             selectedTopics.includes(q.category) &&
             q.level !== difficulty &&
             !allUniqueQuestions.some(aq => aq.text.en === q.text.en)
         );
+
+        let unseenBackup = backupEligible.filter(q => !sessionSeenQuestions.has(q.text.en));
+
+        // If backup pool is exhausted, clear history for the backups
+        if (allUniqueQuestions.length + unseenBackup.length < gridSize) {
+            backupEligible.forEach(q => sessionSeenQuestions.delete(q.text.en));
+            unseenBackup = backupEligible;
+        }
+
+        backupEligible = unseenBackup;
 
         const backupGroups = {};
         backupEligible.forEach(q => {
@@ -122,14 +157,25 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
                 if (!backupGroups[key] || backupGroups[key].length === 0) break;
                 if (key === 'math-arithmetic' && (subCategoryCounts[key] || 0) >= 3) break;
 
-                const qIdx = backupGroups[key].findIndex(q => !q.templateId || !pickedTemplateIds.has(q.templateId));
+                const offset = Math.floor(Math.random() * backupGroups[key].length);
+                let qIdx = -1;
+
+                for (let i = 0; i < backupGroups[key].length; i++) {
+                    const checkIdx = (offset + i) % backupGroups[key].length;
+                    if (!backupGroups[key][checkIdx].templateId || !pickedTemplateIds.has(backupGroups[key][checkIdx].templateId)) {
+                        qIdx = checkIdx;
+                        break;
+                    }
+                }
+
                 if (qIdx !== -1) {
                     const q = backupGroups[key].splice(qIdx, 1)[0];
                     allUniqueQuestions.push(q);
                     if (q.templateId) pickedTemplateIds.add(q.templateId);
                     subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
                 } else {
-                    const q = backupGroups[key].pop();
+                    const randomPopIdx = Math.floor(Math.random() * backupGroups[key].length);
+                    const q = backupGroups[key].splice(randomPopIdx, 1)[0];
                     allUniqueQuestions.push(q);
                     subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
                 }
@@ -140,6 +186,9 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
 
     // Final selection
     let deckSelection = allUniqueQuestions.slice(0, gridSize);
+
+    // Track chosen questions in session history securely using English text as unique ID
+    deckSelection.forEach(q => sessionSeenQuestions.add(q.text.en));
 
     // 3. If STILL not enough, allow repetitions (last resort)
     while (deckSelection.length < gridSize && deckSelection.length > 0) {
