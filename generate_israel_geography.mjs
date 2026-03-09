@@ -86,17 +86,17 @@ const smallTowns = processedData.filter(s => s.pop < 10000);
 // 100 Qualitative
 // Total = 300
 
-// 1. Population (40 questions)
-for (let i = 0; i < 40; i++) {
+// 1. Population (80 questions)
+for (let i = 0; i < 80; i++) {
     let cityA, cityB;
-    if (i < 20 && smallTowns.length > 1) {
+    if (i < 40 && smallTowns.length > 1) {
         cityA = randomItem(smallTowns);
         cityB = randomItem(smallTowns);
     } else {
         cityA = randomItem(mediumCities);
         cityB = randomItem(bigCities);
     }
-    while (cityA === cityB) cityB = (i < 20 && smallTowns.length > 1 ? randomItem(smallTowns) : randomItem(bigCities));
+    while (cityA === cityB) cityB = (i < 40 && smallTowns.length > 1 ? randomItem(smallTowns) : randomItem(bigCities));
     const correctIndex = cityA.pop > cityB.pop ? 0 : 1;
     const { options, correctAnswer } = createOptions(cityA, cityB, correctIndex);
     questions.push({
@@ -124,8 +124,9 @@ const fakeNames = [
     { en: "Mitzpe Yam", he: "מצפה ים" }, { en: "Beit haPardes", he: "בית הפרדס" },
     { en: "Avivim haChadasha", he: "אביבים החדשה" }
 ];
-for (let i = 0; i < 80; i++) {
-    const pool = i < 40 && smallTowns.length > 0 ? smallTowns : processedData;
+// 2. Existence (120 questions)
+for (let i = 0; i < 120; i++) {
+    const pool = i < 60 && smallTowns.length > 0 ? smallTowns : processedData;
     const real = randomItem(pool);
     const fake = randomItem(fakeNames);
     const enOpts = [real.nameEn, fake.en].sort();
@@ -145,27 +146,9 @@ for (let i = 0; i < 80; i++) {
     });
 }
 
-// 3. Status (80 questions)
-for (let i = 0; i < 80; i++) {
-    const pool = i < 40 && smallTowns.length > 0 ? smallTowns : bigCities;
-    const city = randomItem(pool);
-    const isCity = city.statusHe === 'עירייה';
-    const enOpts = ["Yes", "No"];
-    const heOpts = ["כן", "לא"];
-    const correctIdx = isCity ? 0 : 1;
-    questions.push({
-        id: `israel_geo_status_${i}`,
-        category: "israel_cities",
-        level: city.pop > 40000 ? 1 : (city.pop < 15000 ? 3 : 2),
-        emoji: "📜",
-        text: {
-            en: `Is ${city.nameEn} officially defined as a "City" (Municipality)?`,
-            he: `האם ${city.nameHe} מוגדרת רשמית כעיר (עירייה)?`
-        },
-        options: { en: enOpts, he: heOpts },
-        correctAnswer: correctIdx
-    });
-}
+// 3. Status (Status questions REMOVED per user request)
+// We redistributed the 80 status questions to Population (+40) and Existence (+40)
+
 
 // 4. Qualitative (100 questions) (Already defined levels mostly as 1 and 2)
 const qualitative = [];
