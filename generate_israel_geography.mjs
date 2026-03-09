@@ -75,35 +75,36 @@ function createOptions(cityA, cityB, correctIndex) {
     return { options: { en, he }, correctAnswer: idx };
 }
 
-// 1. Population (50 questions)
 const bigCities = processedData.filter(s => s.pop > 40000).sort((a, b) => b.pop - a.pop);
 const mediumCities = processedData.filter(s => s.pop > 10000 && s.pop <= 40000);
 const smallTowns = processedData.filter(s => s.pop <= 10000);
 
-for (let i = 0; i < 50; i++) {
+// NEW DISTRIBUTION: 
+// 20% Population = 40 questions
+// 40% Existence = 80 questions
+// 40% Status = 80 questions
+// Total = 200
+
+// 1. Population (40 questions) - 20%
+for (let i = 0; i < 40; i++) {
     let cityA, cityB;
-    if (i < 20) {
-        // More focus on small towns
+    if (i < 25) {
         cityA = randomItem(smallTowns);
         cityB = randomItem(smallTowns);
-    } else if (i < 35) {
-        cityA = randomItem(mediumCities);
-        cityB = randomItem(mediumCities);
     } else {
-        cityA = randomItem(bigCities);
+        cityA = randomItem(mediumCities);
         cityB = randomItem(bigCities);
     }
 
-    while (cityA === cityB) cityB = (i < 20 ? randomItem(smallTowns) : (i < 35 ? randomItem(mediumCities) : randomItem(bigCities)));
+    while (cityA === cityB) cityB = (i < 25 ? randomItem(smallTowns) : randomItem(bigCities));
 
-    const isLevel1 = Math.abs(cityA.pop - cityB.pop) > 50000 || (cityA.pop > 10000 && cityB.pop < 2000);
     const correctIndex = cityA.pop > cityB.pop ? 0 : 1;
     const { options, correctAnswer } = createOptions(cityA, cityB, correctIndex);
 
     questions.push({
         id: `israel_geo_pop_${i}`,
         category: "israel_cities",
-        level: isLevel1 ? 1 : (cityA.pop < 5000 ? 3 : 2),
+        level: (cityA.pop < 5000) ? 3 : 2,
         emoji: "🏙️",
         text: {
             en: `Which city has a larger population: ${cityA.nameEn} or ${cityB.nameEn}?`,
@@ -114,7 +115,7 @@ for (let i = 0; i < 50; i++) {
     });
 }
 
-// 2. Existence (40 questions) - focus on obscure ones
+// 2. Existence (80 questions) - 40%
 const fakeNames = [
     { en: "Givat Savyon", he: "גבעת סביון" },
     { en: "Tel Rimon", he: "תל רימון" },
@@ -127,10 +128,13 @@ const fakeNames = [
     { en: "Ganei Yerushalayim", he: "גני ירושלים" },
     { en: "Elon HaSharon", he: "אלון השרון" },
     { en: "Nof haSela", he: "נוף הסלע" },
-    { en: "Givat haBroshim", he: "גבעת הברושים" }
+    { en: "Givat haBroshim", he: "גבעת הברושים" },
+    { en: "Mitzpe Yam", he: "מצפה ים" },
+    { en: "Beit haPardes", he: "בית הפרדס" },
+    { en: "Avivim haChadasha", he: "אביבים החדשה" }
 ];
-for (let i = 0; i < 40; i++) {
-    const pool = i < 25 ? smallTowns : processedData;
+for (let i = 0; i < 80; i++) {
+    const pool = i < 60 ? smallTowns : processedData;
     const real = randomItem(pool);
     const fake = randomItem(fakeNames);
 
@@ -155,53 +159,9 @@ for (let i = 0; i < 40; i++) {
     });
 }
 
-// 3. Districts (40 questions)
-const districtMap = {
-    'הצפון': 'North District',
-    'המרכז': 'Central District',
-    'הדרום': 'South District',
-    'ירושלים': 'Jerusalem District',
-    'חיפה': 'Haifa District',
-    'תל אביב': 'Tel Aviv District',
-    'אזור יהודה ושומרון': 'Judea and Samaria Area'
-};
-const districtsHe = Object.keys(districtMap);
-
-for (let i = 0; i < 40; i++) {
-    const pool = i < 20 ? smallTowns : processedData.filter(s => s.pop > 10000);
-    const city = randomItem(pool);
-    const correctDistrictHe = city.districtHe;
-    const correctDistrictEn = districtMap[correctDistrictHe];
-    if (!correctDistrictEn) continue;
-
-    let otherDistricts = districtsHe.filter(d => d !== correctDistrictHe);
-    const wrong1 = randomItem(otherDistricts);
-    const wrong2 = randomItem(otherDistricts.filter(d => d !== wrong1));
-
-    const enOpts = [correctDistrictEn, districtMap[wrong1], districtMap[wrong2]].sort();
-    const heOpts = [correctDistrictHe, wrong1, wrong2].sort();
-    const correctIdx = enOpts.indexOf(correctDistrictEn);
-
-    questions.push({
-        id: `israel_geo_dist_${i}`,
-        category: "israel_cities",
-        level: city.pop < 5000 ? 3 : 2,
-        emoji: "📍",
-        text: {
-            en: `In which district is the city of ${city.nameEn} located?`,
-            he: `באיזה מחוז נמצאת העיר ${city.nameHe}?`
-        },
-        options: {
-            en: enOpts,
-            he: heOpts
-        },
-        correctAnswer: correctIdx
-    });
-}
-
-// 4. Status (35 questions)
-for (let i = 0; i < 35; i++) {
-    const pool = i < 20 ? smallTowns : processedData;
+// 3. Status (80 questions) - 40%
+for (let i = 0; i < 80; i++) {
+    const pool = i < 60 ? smallTowns : bigCities;
     const city = randomItem(pool);
     const isCity = city.statusHe === 'עירייה';
 
@@ -226,35 +186,9 @@ for (let i = 0; i < 35; i++) {
     });
 }
 
-// 5. Scale (35 questions)
-for (let i = 0; i < 35; i++) {
-    const big = randomItem(bigCities);
-    const small = randomItem(smallTowns.filter(s => s.pop < 3000));
-
-    const enOpts = [small.nameEn, big.nameEn].sort();
-    const heOpts = [small.nameHe, big.nameHe].sort();
-    const correctIdx = enOpts.indexOf(small.nameEn);
-
-    questions.push({
-        id: `israel_geo_scale_${i}`,
-        category: "israel_cities",
-        level: 1,
-        emoji: "🏚️",
-        text: {
-            en: `Which of these is a small town (less than 3,000 people)?`,
-            he: `איזה מהבאים הוא יישוב קטן (פחות מ-3,000 תושבים)?`
-        },
-        options: {
-            en: enOpts,
-            he: heOpts
-        },
-        correctAnswer: correctIdx
-    });
-}
-
 let content = fs.readFileSync(outputPath, 'utf8');
 
-// 1. Ensure israel_group is in topics (without nested questions)
+// 1. Ensure israel_group is in topics
 const newTopic = {
     id: "israel_group",
     name: { en: "Israel Geography", he: "ידיעת הארץ" },
@@ -268,12 +202,13 @@ const newTopic = {
     ]
 };
 
-if (!content.includes('id: "israel_group"')) {
+if (!content.includes('"id": "israel_group"') && !content.includes("'id': 'israel_group'")) {
     const topicStr = JSON.stringify(newTopic, null, 4);
     content = content.replace(/export const topics = \[/, `export const topics = [\n${topicStr},`);
 }
 
-// 2. Clear existing israel_cities questions to avoid duplicates
+// 2. Clear existing israel_cities questions
+// Modified to be more precise: only delete lines that start with the category.
 const lines = content.split('\n');
 const filteredLines = lines.filter(line => !line.includes('"category":"israel_cities"'));
 content = filteredLines.join('\n');
@@ -282,7 +217,6 @@ content = filteredLines.join('\n');
 const questionsStr = questions.map(q => JSON.stringify(q)).join(',\n    ');
 
 if (content.includes('export const questions = [')) {
-    // Inject at the start of questions array
     content = content.replace(/export const questions = \[/, `export const questions = [\n    ${questionsStr},`);
 }
 
