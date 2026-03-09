@@ -201,13 +201,26 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         deckSelection = [...deckSelection, ...toAdd];
     }
 
+    // Function to find topic by ID in nested structure
+    const findTopicRecursively = (topicList, targetId) => {
+        for (const t of topicList) {
+            if (t.id === targetId) return t;
+            if (t.subTopics) {
+                const found = findTopicRecursively(t.subTopics, targetId);
+                if (found) return found;
+            }
+        }
+        return null;
+    };
+
     // Map topic details to each question
     const deckWithTopicInfo = deckSelection.map(q => {
-        const topic = topics.find(t => t.id === q.category);
+        const topic = findTopicRecursively(topics, q.category);
         return {
             ...q,
             topicName: topic ? topic.name : { en: q.category, he: q.category },
-            topicIcon: topic ? topic.icon : ''
+            topicIcon: topic ? topic.icon : '',
+            topicColor: topic ? topic.color : null
         };
     });
 

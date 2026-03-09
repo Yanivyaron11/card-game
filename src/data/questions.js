@@ -175,7 +175,8 @@ export const topics = [
                     "en": "Maccabi Haifa",
                     "he": "מכבי חיפה"
                 },
-                "icon": "🟢"
+                "icon": "⚽",
+                "color": "#4ade80"
             },
             {
                 "id": "chelsea",
@@ -183,7 +184,8 @@ export const topics = [
                     "en": "Chelsea",
                     "he": "צ'לסי"
                 },
-                "icon": "🔵"
+                "icon": "⚽",
+                "color": "#3b82f6"
             }
         ]
     },

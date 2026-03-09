@@ -13,7 +13,21 @@ function Card({ card, onClick }) {
             <div className="card-inner">
                 {/* Card Back (Default state) */}
                 <div className="card-back glass-panel">
-                    <div className="pattern">{card.topicIcon}</div>
+                    <div
+                        className="pattern"
+                        style={card.topicColor ? {
+                            backgroundColor: card.topicColor,
+                            borderRadius: '50%',
+                            width: 'min(5rem, 15vw)',
+                            height: 'min(5rem, 15vw)',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            boxShadow: `0 0 15px ${card.topicColor}`
+                        } : {}}
+                    >
+                        {card.topicIcon}
+                    </div>
                 </div>
 
                 {/* Card Front (Solved or Failed state) */}

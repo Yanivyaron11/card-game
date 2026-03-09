@@ -164,7 +164,21 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
                 <div className="quiz-header">
                     <div className="topic-info">
-                        <span className="topic-icon">{card.topicIcon}</span>
+                        <span
+                            className="topic-icon"
+                            style={card.topicColor ? {
+                                backgroundColor: card.topicColor,
+                                borderRadius: '50%',
+                                padding: '2px',
+                                display: 'inline-flex',
+                                width: '1.5em',
+                                height: '1.5em',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            } : {}}
+                        >
+                            {card.topicIcon}
+                        </span>
                         <span className="topic-name">{card.topicName[language]}</span>
                     </div>
                     {(gameMode !== 'time_attack' && gameMode !== 'solo') && (
@@ -193,7 +207,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 </div>
 
                 <div className="quiz-content">
-                    {card.level === 1 && <div className="quiz-emoji">{card.emoji}</div>}
+                    <div className="quiz-emoji">{card.emoji}</div>
                     {card.category === 'math' ? (
                         <h2 className="quiz-question" dir="ltr">{card.text[language]}</h2>
                     ) : (
