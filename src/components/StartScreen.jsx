@@ -20,8 +20,15 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             // Check if saved array uses the old system (e.g. 'patisserie' instead of 'food_group')
             const validParentIds = topics.map(t => t.id);
             if (Array.isArray(parsed) && parsed.length > 0) {
+                // If they have any valid parents, they are mostly migrated.
+                // But let's be safe and just reset to default if they don't have exactly the parents
                 const hasValidParent = parsed.some(id => validParentIds.includes(id));
-                return hasValidParent ? parsed : defaultPool;
+                if (hasValidParent) return parsed;
+
+                // If no valid parents (all legacy IDs), force a reset to defaultPool
+                // so the new folders actually show up!
+                console.log("Legacy categories detected, resetting to default pool to show folders.");
+                return defaultPool;
             }
             return defaultPool;
         } catch (e) {
