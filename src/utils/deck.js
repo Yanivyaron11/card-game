@@ -69,6 +69,9 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         if (key === 'math-measurement') return 2;   // Pull 2 measurement per cycle
         if (key === 'math-fractions') return 1;     // Pull 1 fraction per cycle
         if (key === 'math-arithmetic') return 1;    // Pull 1 arithmetic per cycle (up to max 3)
+        // Israel Geography balancing
+        if (key === 'israel_cities-qualitative') return 2; // Pull 2 qualitative facts per cycle
+        if (key === 'israel_cities-existence') return 1;   // Pull 1 existence check per cycle
         return 1; // Default for everything else
     };
 
