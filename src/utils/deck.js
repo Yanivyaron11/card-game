@@ -24,22 +24,28 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     }
 
     // 1. Get all eligible questions matching topic and difficulty
-    let eligibleQuestions = questions.filter(q => selectedTopics.includes(q.category) && q.level === difficulty);
+    const eligibleQuestions = questions.filter(q => selectedTopics.includes(q.category) && q.level === difficulty);
 
     // 1a. Filter out questions already seen in this session
     let unseenEligible = eligibleQuestions.filter(q => !sessionSeenQuestions.has(q.id));
 
-    // If we've exhausted our completely unplayed pool, gracefully clear the history for these topics!
-    if (unseenEligible.length < gridSize) {
-        eligibleQuestions.forEach(q => sessionSeenQuestions.delete(q.id));
-        unseenEligible = eligibleQuestions; // Reset pool for this category/level combination
+    // If we have fewer unseen than gridSize, we still take whatever unseen we HAVE,
+    // and then fill the rest from the seen pool (without clearing it entirely).
+    // This ensures we don't repeat the SAME 16 questions immediately every time.
+    let currentPool = [];
+    if (unseenEligible.length >= gridSize) {
+        currentPool = unseenEligible;
+    } else {
+        // Take all unseen + shuffle the rest of eligible
+        const seenPool = shuffle(eligibleQuestions.filter(q => sessionSeenQuestions.has(q.id)));
+        currentPool = [...unseenEligible, ...seenPool];
     }
 
-    eligibleQuestions = unseenEligible;
+    let filteredEligibleQuestions = currentPool;
 
     // 2. Group by Category + SubCategory for balancing
     const groups = {};
-    eligibleQuestions.forEach(q => {
+    filteredEligibleQuestions.forEach(q => {
         const key = `${q.category}-${q.subCategory || 'default'}`;
         if (!groups[key]) groups[key] = [];
         groups[key].push(q);

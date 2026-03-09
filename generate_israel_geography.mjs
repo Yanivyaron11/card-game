@@ -89,20 +89,20 @@ const smallTowns = processedData.filter(s => s.pop < 10000);
 // 1. Population (40 questions)
 for (let i = 0; i < 40; i++) {
     let cityA, cityB;
-    if (i < 25 && smallTowns.length > 1) {
+    if (i < 20 && smallTowns.length > 1) {
         cityA = randomItem(smallTowns);
         cityB = randomItem(smallTowns);
     } else {
         cityA = randomItem(mediumCities);
         cityB = randomItem(bigCities);
     }
-    while (cityA === cityB) cityB = (i < 25 && smallTowns.length > 1 ? randomItem(smallTowns) : randomItem(bigCities));
+    while (cityA === cityB) cityB = (i < 20 && smallTowns.length > 1 ? randomItem(smallTowns) : randomItem(bigCities));
     const correctIndex = cityA.pop > cityB.pop ? 0 : 1;
     const { options, correctAnswer } = createOptions(cityA, cityB, correctIndex);
     questions.push({
         id: `israel_geo_pop_${i}`,
         category: "israel_cities",
-        level: (cityA.pop < 10000) ? 3 : 2,
+        level: (cityA.pop > 80000) ? 1 : (cityA.pop < 15000 ? 3 : 2),
         emoji: "🏙️",
         text: {
             en: `Which city has a larger population: ${cityA.nameEn} or ${cityB.nameEn}?`,
@@ -125,7 +125,7 @@ const fakeNames = [
     { en: "Avivim haChadasha", he: "אביבים החדשה" }
 ];
 for (let i = 0; i < 80; i++) {
-    const pool = i < 60 && smallTowns.length > 0 ? smallTowns : processedData;
+    const pool = i < 40 && smallTowns.length > 0 ? smallTowns : processedData;
     const real = randomItem(pool);
     const fake = randomItem(fakeNames);
     const enOpts = [real.nameEn, fake.en].sort();
@@ -134,7 +134,7 @@ for (let i = 0; i < 80; i++) {
     questions.push({
         id: `israel_geo_exist_${i}`,
         category: "israel_cities",
-        level: real.pop > 50000 ? 1 : (real.pop < 10000 ? 3 : 2),
+        level: real.pop > 40000 ? 1 : (real.pop < 15000 ? 3 : 2),
         emoji: "🗺️",
         text: {
             en: `Which of these is a real city or town in Israel?`,
@@ -147,7 +147,7 @@ for (let i = 0; i < 80; i++) {
 
 // 3. Status (80 questions)
 for (let i = 0; i < 80; i++) {
-    const pool = i < 60 && smallTowns.length > 0 ? smallTowns : bigCities;
+    const pool = i < 40 && smallTowns.length > 0 ? smallTowns : bigCities;
     const city = randomItem(pool);
     const isCity = city.statusHe === 'עירייה';
     const enOpts = ["Yes", "No"];
@@ -156,7 +156,7 @@ for (let i = 0; i < 80; i++) {
     questions.push({
         id: `israel_geo_status_${i}`,
         category: "israel_cities",
-        level: city.pop < 10000 ? 3 : 2,
+        level: city.pop > 40000 ? 1 : (city.pop < 15000 ? 3 : 2),
         emoji: "📜",
         text: {
             en: `Is ${city.nameEn} officially defined as a "City" (Municipality)?`,
@@ -167,7 +167,7 @@ for (let i = 0; i < 80; i++) {
     });
 }
 
-// 4. Qualitative (100 questions)
+// 4. Qualitative (100 questions) (Already defined levels mostly as 1 and 2)
 const qualitative = [];
 const handpicked = [
     { text: { en: "What is the largest city in Israel by population?", he: "מהי העיר הגדולה בישראל מבחינת מספר תושבים?" }, options: { en: ["Haifa", "Tel Aviv", "Jerusalem", "Rishon LeZion"], he: ["חיפה", "תל אביב", "ירושלים", "ראשון לציון"] }, correctAnswer: 2, emoji: '🏙️' },
@@ -178,22 +178,13 @@ const handpicked = [
     { text: { en: "Which city is the lowest city in the world?", he: "איזו עיר היא הנמוכה בעולם?" }, options: { en: ["Arad", "Jericho", "Eilat", "Ein Gedi"], he: ["ערד", "יריחו", "אילת", "עין גדי"] }, correctAnswer: 1, emoji: '📉' },
     { text: { en: "Which city is known for Mount Carmel?", he: "איזו עיר ידועה בזכות הר הכרמל?" }, options: { en: ["Ashdod", "Eilat", "Haifa", "Tel Aviv"], he: ["אשדוד", "אילת", "חיפה", "תל אביב"] }, correctAnswer: 2, emoji: '⚓' },
     { text: { en: "Which city is the southernmost in Israel?", he: "מהי העיר הדרומית ביותר בישראל?" }, options: { en: ["Mizpe Ramon", "Be'er Sheva", "Eilat", "Yotvata"], he: ["מצפה רמון", "באר שבע", "אילת", "יוטבתה"] }, correctAnswer: 2, emoji: '☀️' },
-    { text: { en: "Which city is on the shores of the Sea of Galilee?", he: "איזו עיר שוכנת לחוף הכנרת?" }, options: { en: ["Tiberias", "Bet She'an", "Afula", "Katzrin"], he: ["טבריה", "בית שאן", "עפולה", "קצרין"] }, correctAnswer: 0, emoji: '🌊' },
-    { text: { en: "Which city is known for Kabbalah history?", he: "איזו עיר צפונית ידועה בהיסטוריית הקבלה שלה?" }, options: { en: ["Haifa", "Zefat", "Akko", "Nahariyya"], he: ["חיפה", "צפת", "עכו", "נהרייה"] }, correctAnswer: 1, emoji: '🎨' },
-    { text: { en: "Which city is home to the Weizmann Institute of Science?", he: "באיזו עיר נמצא מכון ויצמן למדע?" }, options: { en: ["Rehovot", "Tel Aviv", "Haifa", "Jerusalem"], he: ["רחובות", "תל אביב", "חיפה", "ירושלים"] }, correctAnswer: 0, emoji: '🔬' },
-    { text: { en: "Which city is nicknamed 'The Mother of Settlements'?", he: "איזו עיר מכונה 'אם המושבות'?" }, options: { en: ["Petah Tikva", "Rishon LeZion", "Netanya", "Hadera"], he: ["פתח תקווה", "ראשון לציון", "נתניה", "חדרה"] }, correctAnswer: 0, emoji: '🏘️' },
-    { text: { en: "Where is the Ben Gurion Airport located?", he: "איפה נמצא נמל התעופה בן גוריון?" }, options: { en: ["Tel Aviv", "Lod/Ben Gurion", "Haifa", "Eilat"], he: ["תל אביב", "לוד/נתב\"ג", "חיפה", "אילת"] }, correctAnswer: 1, emoji: '✈️' },
-    { text: { en: "Which city is the 'Diamond City' of Israel?", he: "איזו עיר היא 'עיר היהלומים' של ישראל?" }, options: { en: ["Netanya", "Ramat Gan", "Tel Aviv", "Herzliyya"], he: ["נתניה", "רמת גן", "תל אביב", "הרצלייה"] }, correctAnswer: 1, emoji: '💎' },
-    { text: { en: "Which city is known for the Technion - Israel Institute of Technology?", he: "באיזו עיר נמצא הטכניון?" }, options: { en: ["Haifa", "Tel Aviv", "Beer Sheva", "Jerusalem"], he: ["חיפה", "תל אביב", "באר שבע", "ירושלים"] }, correctAnswer: 0, emoji: '🎓' },
-    { text: { en: "Which city is famous for its ancient Roman theater and port?", he: "איזו עיר מפורסמת בתיאטרון הרומי והנמל העתיק שלה?" }, options: { en: ["Caesarea", "Akko", "Jaffa", "Ashkelon"], he: ["קיסריה", "עכו", "יפו", "אשקלון"] }, correctAnswer: 0, emoji: '🏺' },
-    { text: { en: "Which city is known as the 'Capital of the Galilee'?", he: "איזו עיר נחשבת ל'בירת הגליל'?" }, options: { en: ["Tiberias", "Nazareth", "Karmiel", "Safed"], he: ["טבריה", "נצרת", "כרמיאל", "צפת"] }, correctAnswer: 1, emoji: '⛰️' },
-    { text: { en: "Which city is known as the 'City of Spirits' or 'City of Wind'?", he: "איזו עיר מכונה 'עיר הרוחות'?" }, options: { en: ["Arad", "Safed", "Jerusalem", "Eilat"], he: ["ערד", "צפת", "ירושלים", "אילת"] }, correctAnswer: 0, emoji: '🌬️' },
-    { text: { en: "Where is the largest university in Israel, the Hebrew University, located?", he: "היכן נמצאת האוניברסיטה העברית?" }, options: { en: ["Jerusalem", "Tel Aviv", "Haifa", "Ramat Gan"], he: ["ירושלים", "תל אביב", "חיפה", "רמת גן"] }, correctAnswer: 0, emoji: '📚' },
-    { text: { en: "Which city is known for its wine industry and a famous winery?", he: "איזו עיר ידועה בתעשיית היין וביקב המפורסם שלה?" }, options: { en: ["Zikhron Ya\\'akov", "Rishon LeZion", "Qatzrin", "Binyamina"], he: ["זכרון יעקב", "ראשון לציון", "קצרין", "בנימינה"] }, correctAnswer: 1, emoji: '🍷' },
-    { text: { en: "Which city is the site of the Cave of the Patriarchs (Me\\'arat HaMachpelah)?", he: "באיזו עיר נמצאת מערת המכפלה?" }, options: { en: ["Jerusalem", "Hebron", "Tiberias", "Betlehem"], he: ["ירושלים", "חברון", "טבריה", "בית לחם"] }, correctAnswer: 1, emoji: '🕌' },
-    { text: { en: "Which city is known for the Baha\\'i Holy shrines?", he: "באיזו עיר נמצאים המקומות הקדושים לבהאיים (מלבד חיפה)?" }, options: { en: ["Akko", "Nazareth", "Jaffa", "Netanya"], he: ["עכו", "נצרת", "יפו", "נתניה"] }, correctAnswer: 0, emoji: '🕍' },
-    { text: { en: "Which city hosted the 1950s 'First City of the Negev' initiative?", he: "איזו עיר הייתה הראשונה שהוקמה בנגב לאחר קום המדינה?" }, options: { en: ["Yeruham", "Dimona", "Be\\'er Sheva", "Arad"], he: ["ירוחם", "דימונה", "באר שבע", "ערד"] }, correctAnswer: 0, emoji: '🌵' },
-    { text: { en: "Which city is known for its unique glass art museum?", he: "איזו עיר ידועה במוזיאון זכוכית ייחודי?" }, options: { en: ["Arad", "Tel Aviv", "Haifa", "Jerusalem"], he: ["ערד", "תל אביב", "חיפה", "ירושלים"] }, correctAnswer: 0, emoji: '🧪' }
+    { text: { en: "Which city is known for its unique glass art museum?", he: "איזו עיר ידועה במוזיאון זכוכית ייחודי?" }, options: { en: ["Arad", "Tel Aviv", "Haifa", "Jerusalem"], he: ["ערד", "תל אביב", "חיפה", "ירושלים"] }, correctAnswer: 0, emoji: '🧪' },
+    { text: { en: "Which city is known as the 'Children's City' of Israel?", he: "איזו עיר מכונה 'עיר הילדים'?" }, options: { en: ["Holon", "Rishon LeZion", "Netanya", "Ashdod"], he: ["חולון", "ראשון לציון", "נתניה", "אשדוד"] }, correctAnswer: 0, emoji: '🧒' },
+    { text: { en: "Which city is the center of Israel's high-tech industry (Silicon Wadi)?", he: "איזו עיר נחשבת למרכז ההייטק של ישראל (סיליקון ואדי)?" }, options: { en: ["Herzliyya", "Tel Aviv", "Raanana", "Yokneam"], he: ["הרצלייה", "תל אביב", "רעננה", "יקנעם"] }, correctAnswer: 0, emoji: '💻' },
+    { text: { en: "Which city is associated with the ancient Maccabees?", he: "איזו עיר מזוהה עם המכבים הקדומים?" }, options: { en: ["Modi\\'in", "Jerusalem", "Hebron", "Bet She\\'an"], he: ["מודיעין", "ירושלים", "חברון", "בית שאן"] }, correctAnswer: 0, emoji: '�' },
+    { text: { en: "In which city is the Israeli Parliament (Knesset) located?", he: "באיזו עיר נמצאת הכנסת?" }, options: { en: ["Tel Aviv", "Jerusalem", "Haifa", "Beeer Sheva"], he: ["תל אביב", "ירושלים", "חיפה", "באר שבע"] }, correctAnswer: 1, emoji: '🏛️' },
+    { text: { en: "Which city is home to Ben-Gurion University of the Negev?", he: "באיזו עיר נמצאת אוניברסיטת בן-גוריון בנגב?" }, options: { en: ["Be\\'er Sheva", "Eilat", "Arad", "Mizpe Ramon"], he: ["באר שבע", "אילת", "ערד", "מצפה רמון"] }, correctAnswer: 0, emoji: '�' },
+    { text: { en: "Which city is known for its 'Holiday of Holidays' festival celebrating co-existence?", he: "איזו עיר ידועה בפסטיבל 'החג של החגים'?" }, options: { en: ["Haifa", "Jaffa", "Akko", "Ramla"], he: ["חיפה", "יפו", "עכו", "רמלה"] }, correctAnswer: 0, emoji: '�' }
 ];
 
 handpicked.forEach((q, i) => qualitative.push({ ...q, id: `q_iz_hand_${i}`, category: 'israel_cities', level: 1 }));
@@ -256,7 +247,13 @@ if (!content.includes('"id": "israel_group"')) {
 
 // 2. Clear existing
 const lines = content.split('\n');
-const filteredLines = lines.filter(line => !line.includes('"category":"israel_cities"'));
+const filteredLines = lines.filter(line => {
+    // Remove ANY question with category israel_cities, israel_geo, or israel_geography to be safe
+    const hasCategory = line.match(/"category"\s*:\s*"israel_(cities|geo|geography)"/);
+    // Also remove stray q_iz questions from previous iterations that might be missing category
+    const isStray = line.match(/"id"\s*:\s*"q_iz_/) || line.match(/"id"\s*:\s*"israel_geo_/);
+    return !hasCategory && !isStray;
+});
 content = filteredLines.join('\n');
 
 // 3. Inject
