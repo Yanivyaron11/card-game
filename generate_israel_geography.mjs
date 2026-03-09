@@ -75,21 +75,35 @@ function createOptions(cityA, cityB, correctIndex) {
     return { options: { en, he }, correctAnswer: idx };
 }
 
-// 1. Population
+// 1. Population (50 questions)
 const bigCities = processedData.filter(s => s.pop > 40000).sort((a, b) => b.pop - a.pop);
-for (let i = 0; i < 25; i++) {
-    const cityA = randomItem(bigCities);
-    let cityB = randomItem(bigCities);
-    while (cityA === cityB) cityB = randomItem(bigCities);
+const mediumCities = processedData.filter(s => s.pop > 10000 && s.pop <= 40000);
+const smallTowns = processedData.filter(s => s.pop <= 10000);
 
-    const isLevel1 = Math.abs(cityA.pop - cityB.pop) > 50000;
+for (let i = 0; i < 50; i++) {
+    let cityA, cityB;
+    if (i < 20) {
+        // More focus on small towns
+        cityA = randomItem(smallTowns);
+        cityB = randomItem(smallTowns);
+    } else if (i < 35) {
+        cityA = randomItem(mediumCities);
+        cityB = randomItem(mediumCities);
+    } else {
+        cityA = randomItem(bigCities);
+        cityB = randomItem(bigCities);
+    }
+
+    while (cityA === cityB) cityB = (i < 20 ? randomItem(smallTowns) : (i < 35 ? randomItem(mediumCities) : randomItem(bigCities)));
+
+    const isLevel1 = Math.abs(cityA.pop - cityB.pop) > 50000 || (cityA.pop > 10000 && cityB.pop < 2000);
     const correctIndex = cityA.pop > cityB.pop ? 0 : 1;
     const { options, correctAnswer } = createOptions(cityA, cityB, correctIndex);
 
     questions.push({
         id: `israel_geo_pop_${i}`,
         category: "israel_cities",
-        level: isLevel1 ? 1 : 2,
+        level: isLevel1 ? 1 : (cityA.pop < 5000 ? 3 : 2),
         emoji: "🏙️",
         text: {
             en: `Which city has a larger population: ${cityA.nameEn} or ${cityB.nameEn}?`,
@@ -100,7 +114,7 @@ for (let i = 0; i < 25; i++) {
     });
 }
 
-// 2. Existence
+// 2. Existence (40 questions) - focus on obscure ones
 const fakeNames = [
     { en: "Givat Savyon", he: "גבעת סביון" },
     { en: "Tel Rimon", he: "תל רימון" },
@@ -111,10 +125,13 @@ const fakeNames = [
     { en: "Ramat Yam", he: "רמת ים" },
     { en: "Nof HaEmek", he: "נוף העמק" },
     { en: "Ganei Yerushalayim", he: "גני ירושלים" },
-    { en: "Elon HaSharon", he: "אלון השרון" }
+    { en: "Elon HaSharon", he: "אלון השרון" },
+    { en: "Nof haSela", he: "נוף הסלע" },
+    { en: "Givat haBroshim", he: "גבעת הברושים" }
 ];
-for (let i = 0; i < 15; i++) {
-    const real = randomItem(processedData);
+for (let i = 0; i < 40; i++) {
+    const pool = i < 25 ? smallTowns : processedData;
+    const real = randomItem(pool);
     const fake = randomItem(fakeNames);
 
     const enOpts = [real.nameEn, fake.en].sort();
@@ -124,7 +141,7 @@ for (let i = 0; i < 15; i++) {
     questions.push({
         id: `israel_geo_exist_${i}`,
         category: "israel_cities",
-        level: real.pop > 20000 ? 1 : 3,
+        level: real.pop > 20000 ? 1 : (real.pop < 1000 ? 3 : 2),
         emoji: "🗺️",
         text: {
             en: `Which of these is a real city or town in Israel?`,
@@ -138,7 +155,7 @@ for (let i = 0; i < 15; i++) {
     });
 }
 
-// 3. Districts
+// 3. Districts (40 questions)
 const districtMap = {
     'הצפון': 'North District',
     'המרכז': 'Central District',
@@ -150,8 +167,9 @@ const districtMap = {
 };
 const districtsHe = Object.keys(districtMap);
 
-for (let i = 0; i < 20; i++) {
-    const city = randomItem(processedData.filter(s => s.pop > 20000));
+for (let i = 0; i < 40; i++) {
+    const pool = i < 20 ? smallTowns : processedData.filter(s => s.pop > 10000);
+    const city = randomItem(pool);
     const correctDistrictHe = city.districtHe;
     const correctDistrictEn = districtMap[correctDistrictHe];
     if (!correctDistrictEn) continue;
@@ -167,7 +185,7 @@ for (let i = 0; i < 20; i++) {
     questions.push({
         id: `israel_geo_dist_${i}`,
         category: "israel_cities",
-        level: 2,
+        level: city.pop < 5000 ? 3 : 2,
         emoji: "📍",
         text: {
             en: `In which district is the city of ${city.nameEn} located?`,
@@ -181,9 +199,10 @@ for (let i = 0; i < 20; i++) {
     });
 }
 
-// 4. Status
-for (let i = 0; i < 20; i++) {
-    const city = randomItem(processedData.filter(s => s.pop > 5000));
+// 4. Status (35 questions)
+for (let i = 0; i < 35; i++) {
+    const pool = i < 20 ? smallTowns : processedData;
+    const city = randomItem(pool);
     const isCity = city.statusHe === 'עירייה';
 
     const enOpts = ["Yes", "No"];
@@ -193,7 +212,7 @@ for (let i = 0; i < 20; i++) {
     questions.push({
         id: `israel_geo_status_${i}`,
         category: "israel_cities",
-        level: 3,
+        level: city.pop < 5000 ? 3 : 2,
         emoji: "📜",
         text: {
             en: `Is ${city.nameEn} officially defined as a "City" (Municipality)?`,
@@ -207,10 +226,10 @@ for (let i = 0; i < 20; i++) {
     });
 }
 
-// 5. Scale
-for (let i = 0; i < 20; i++) {
+// 5. Scale (35 questions)
+for (let i = 0; i < 35; i++) {
     const big = randomItem(bigCities);
-    const small = randomItem(processedData.filter(s => s.pop < 3000));
+    const small = randomItem(smallTowns.filter(s => s.pop < 3000));
 
     const enOpts = [small.nameEn, big.nameEn].sort();
     const heOpts = [small.nameHe, big.nameHe].sort();
@@ -254,13 +273,21 @@ if (!content.includes('id: "israel_group"')) {
     content = content.replace(/export const topics = \[/, `export const topics = [\n${topicStr},`);
 }
 
-// 2. Inject into questions array
+// 2. Clear existing israel_cities questions to avoid duplicates
+const lines = content.split('\n');
+const filteredLines = lines.filter(line => !line.includes('"category":"israel_cities"'));
+content = filteredLines.join('\n');
+
+// 3. Inject into questions array
 const questionsStr = questions.map(q => JSON.stringify(q)).join(',\n    ');
 
 if (content.includes('export const questions = [')) {
     // Inject at the start of questions array
     content = content.replace(/export const questions = \[/, `export const questions = [\n    ${questionsStr},`);
 }
+
+// 4. Update questionCounts
+content = content.replace(/"israel_cities": \d+/, `"israel_cities": ${questions.length}`);
 
 fs.writeFileSync(outputPath, content);
 console.log(`Successfully injected ${questions.length} questions into top-level questions array.`);
