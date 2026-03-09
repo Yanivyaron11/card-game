@@ -59,7 +59,15 @@ export const topics = [
                     "he": "פסיכולוגיה"
                 },
                 "icon": "🧠"
-            }
+            },
+            {
+    "id": "records",
+    "name": {
+        "en": "Records & Discoveries",
+        "he": "שיאים וגילויים"
+    },
+    "icon": "🏆"
+}
         ]
     },
     {
@@ -202,7 +210,8 @@ export const questionCounts = {
     "food": 320,
     "london": 201,
     "art": 101,
-    "nature": 66,
+    "nature": 1,
+    "records": 66,
     "general": 100,
     "sopranos": 100,
     "human_body": 100,
@@ -210,6 +219,31 @@ export const questionCounts = {
 };
 
 export const questions = [
+    {
+    "id": "q-records-new-1",
+    "category": "records",
+    "level": 2,
+    "text": {
+        "en": "What is the longest mountain range on land?",
+        "he": "מהו רכס ההרים הארוך ביותר ביבשה?"
+    },
+    "options": {
+        "en": [
+            "The Andes",
+            "The Himalayas",
+            "The Rockies",
+            "The Alps"
+        ],
+        "he": [
+            "הרי האנדים",
+            "הרי ההימלאיה",
+            "הרי הרוקי",
+            "הרי האלפים"
+        ]
+    },
+    "correctAnswer": 0,
+    "emoji": "🏔️📏"
+},
     // --- GENERATED_QUESTIONS_START ---
     {"id":"israel_geo_fact_bool_59","category":"israel_cities","subCategory":"qualitative","templateId":"israel-city-bool","level":1,"emoji":"🧐","text":{"en":"Is Ahituv located in the Central district?","he":"האם אחיטוב נמצאת במחוז המרכז?"},"options":{"en":["Yes","No"],"he":["כן","לא"]},"correctAnswer":0},
     {"id":"israel_geo_fact_year_118","category":"israel_cities","subCategory":"qualitative","templateId":"israel-city-fact","level":2,"emoji":"📅","text":{"en":"In what year was the town of Burgeta founded?","he":"באיזו שנה נוסד היישוב בורגתה?"},"options":{"en":["1954","1969","1949","1939"],"he":["1954","1969","1949","1939"]},"correctAnswer":2},
@@ -53664,7 +53698,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2079",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the highest mountain in the world?",
@@ -53689,7 +53723,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2080",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the longest river in the world?",
@@ -53714,7 +53748,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2081",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the largest ocean on Earth?",
@@ -53739,7 +53773,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2082",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the largest desert in the world?",
@@ -53764,7 +53798,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2083",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the hottest planet in our solar system?",
@@ -53789,7 +53823,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2084",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the largest planet in our solar system?",
@@ -53814,7 +53848,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2085",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the smallest planet in our solar system?",
@@ -54014,7 +54048,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2093",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "Which is the coldest continent on Earth?",
@@ -54039,7 +54073,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2094",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the closest star to Earth?",
@@ -54089,7 +54123,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2096",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "Which planet has the biggest rings?",
@@ -54139,7 +54173,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2098",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the highest waterfall in the world?",
@@ -54164,7 +54198,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2099",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the largest country in the world by land area?",
@@ -54189,7 +54223,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2100",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the deepest point in the world's oceans?",
@@ -54214,7 +54248,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2101",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the largest forest in the world?",
@@ -54239,7 +54273,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2102",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the hottest place on Earth ever recorded?",
@@ -54289,7 +54323,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2104",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the tallest type of tree?",
@@ -54314,7 +54348,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2105",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the largest lake in the world?",
@@ -54339,7 +54373,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2106",
-        "category": "nature",
+        "category": "records",
         "level": 1,
         "text": {
             "en": "What is the deepest lake in the world?",
@@ -54514,7 +54548,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2113",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest coral reef system in the world?",
@@ -54539,7 +54573,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2114",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the highest mountain in Africa?",
@@ -54564,7 +54598,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2115",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the highest peak in North America?",
@@ -54589,7 +54623,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2116",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the longest mountain range on land?",
@@ -54614,7 +54648,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2117",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest lake in Africa?",
@@ -54639,7 +54673,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2118",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest peninsula in the world?",
@@ -54664,7 +54698,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2119",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the deepest canyon in the world?",
@@ -54689,7 +54723,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2120",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest bay in the world by area?",
@@ -54714,7 +54748,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2121",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "Which is the largest tropical rainforest in the world?",
@@ -54739,7 +54773,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2122",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the salt detector lake in Israel, known as the lowest point on land?",
@@ -54764,7 +54798,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2123",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the tallest grass in the world?",
@@ -54789,7 +54823,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2124",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest flower in the world?",
@@ -54839,7 +54873,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2126",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest planet without rings?",
@@ -54864,7 +54898,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2127",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "Which island continent is the smallest continent?",
@@ -54914,7 +54948,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2129",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the highest active volcano in the world?",
@@ -54939,7 +54973,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2130",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest monolith in the world?",
@@ -54989,7 +55023,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2132",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the longest living tree species?",
@@ -55039,7 +55073,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2134",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the highest salinity body of water on Earth?",
@@ -55064,7 +55098,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2135",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest volcanic eruption in history approx.?",
@@ -55089,7 +55123,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2136",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest delta in the world?",
@@ -55139,7 +55173,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2138",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest lizard in the world?",
@@ -55164,7 +55198,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2139",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the world's largest rodent?",
@@ -55189,7 +55223,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2140",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the tallest geyser in the world currently?",
@@ -55214,7 +55248,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2141",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest ice sheet on Earth?",
@@ -55239,7 +55273,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2142",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "Which is the largest moon in the solar system?",
@@ -55264,7 +55298,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2143",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the largest continent by area?",
@@ -55289,7 +55323,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2144",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the smallest ocean in the world?",
@@ -55314,7 +55348,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2145",
-        "category": "nature",
+        "category": "records",
         "level": 2,
         "text": {
             "en": "What is the tallest waterfall in Asia?",
@@ -55339,7 +55373,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2146",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the oldest living individual tree in the world?",
@@ -55364,7 +55398,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2147",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the most voluminous single-stem tree in the world?",
@@ -55389,7 +55423,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2148",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the tallest tree in the world?",
@@ -55489,7 +55523,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2152",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the highest mountain in South America?",
@@ -55539,7 +55573,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2154",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the largest moon of Jupiter?",
@@ -55564,7 +55598,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2155",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the highest wind speed ever recorded on Earth?",
@@ -55614,7 +55648,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2157",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the largest seed in the world?",
@@ -55664,7 +55698,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2159",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the deepest point in the Atlantic Ocean?",
@@ -55689,7 +55723,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2160",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the salt detector body of water with the highest salinity?",
@@ -55714,7 +55748,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2161",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the highest mountain in Antarctica?",
@@ -55739,7 +55773,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2162",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the most active volcano on Earth by eruption frequency?",
@@ -55914,7 +55948,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2169",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the highest temperature ever recorded on Earth's surface approx.?",
@@ -55939,7 +55973,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2170",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the largest cold desert in the world?",
@@ -55964,7 +55998,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2171",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the highest mountain in Europe?",
@@ -55989,7 +56023,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2172",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the largest island in the Mediterranean Sea?",
@@ -56014,7 +56048,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2173",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the largest volcano in the Solar System?",
@@ -56039,7 +56073,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2174",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the most abundant element in Earth's crust?",
@@ -56089,7 +56123,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2176",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the world's largest single-cell organism approx.?",
@@ -56114,7 +56148,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2177",
-        "category": "nature",
+        "category": "records",
         "level": 3,
         "text": {
             "en": "What is the deepest lake in the United States?",
