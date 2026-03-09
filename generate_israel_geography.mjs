@@ -99,7 +99,8 @@ const fakeCities = [
     { en: "Pardesh haDarim", he: "פרדס הדרים" }
 ];
 
-for (let i = 0; i < 85; i++) {
+// 1. Existence (60 questions)
+for (let i = 0; i < 60; i++) {
     const isReal = Math.random() > 0.5;
     const city = isReal ? cities[Math.floor(Math.random() * cities.length)] : fakeCities[Math.floor(Math.random() * fakeCities.length)];
     const distractorsPool = isReal ? fakeCities : cities;
@@ -130,8 +131,9 @@ for (let i = 0; i < 85; i++) {
     });
 }
 
+// 2. Qualitative / Historical Facts (Target 200)
 const qualitative = [];
-const factQuestions = [
+const handCraftedFacts = [
     { qEn: "Which city was the first Hebrew city of the modern era, founded in 1909?", qHe: "איזו עיר הייתה העיר העברית הראשונה בעת החדשה, ונוסדה בשנת 1909?", aEn: "Tel Aviv", aHe: "תל אביב", wEn: ["Haifa", "Jerusalem", "Netanya"], wHe: ["חיפה", "ירושלים", "נתניה"], e: "🏙️", l: 1 },
     { qEn: "Which 'Moshava' was founded in 1882 and is known as the 'First to Zion'?", qHe: "איזו מושבה נוסדה בשנת 1882 וידועה בשם 'ראשון לציון'?", aEn: "Rishon LeZion", aHe: "ראשון לציון", wEn: ["Rehovot", "Hadera", "Petah Tikva"], wHe: ["רחובות", "חדרה", "פתח תקווה"], e: "🍷", l: 1 },
     { qEn: "Which city is known as the 'Mother of the Colonies' (Em HaMoshavot)?", qHe: "איזו עיר מכונה 'אם המושבות'?", aEn: "Petah Tikva", aHe: "פתח תקווה", wEn: ["Rosh Pinna", "Zikhron Ya\\'akov", "Mazkeret Batya"], wHe: ["ראש פינה", "זכרון יעקב", "מזכרת בתיה"], e: "🚜", l: 1 },
@@ -154,7 +156,7 @@ const factQuestions = [
     { qEn: "Which city is known as the 'City of Orchards' (Ir HaHadarim)?", qHe: "איזו עיר מכונה 'עיר ההדרים'?", aEn: "Rehovot", aHe: "רחובות", wEn: ["Hadera", "Netanya", "Kfar Saba"], wHe: ["חדרה", "נתניה", "כפר סבא"], e: "🍊", l: 1 }
 ];
 
-factQuestions.forEach((q, idx) => {
+handCraftedFacts.forEach((q, idx) => {
     const [optsEn, optsHe] = shuffleWithSync([q.aEn, ...q.wEn], [q.aHe, ...q.wHe]);
     qualitative.push({
         id: `israel_geo_fact_${idx}`,
@@ -169,49 +171,71 @@ factQuestions.forEach((q, idx) => {
     });
 });
 
-cities.forEach((c, idx) => {
-    if (idx < 100) {
-        const isTrue = Math.random() > 0.5;
-        const otherDist = cities.find(x => x.districtEn !== c.districtEn) || cities[0];
-        qualitative.push({
-            id: `israel_geo_fact_bool_${idx}`,
-            category: "israel_cities",
-            subCategory: "qualitative",
-            templateId: "israel-city-bool",
-            level: Math.random() > 0.5 ? 2 : 1,
-            emoji: "🧐",
-            text: {
-                en: `Is ${c.en} located in the ${isTrue ? c.districtEn : otherDist.districtEn} district?`,
-                he: `האם ${c.he} נמצאת במחוז ${isTrue ? c.districtHe : otherDist.districtHe}?`
-            },
-            options: { en: ["Yes", "No"], he: ["כן", "לא"] },
-            correctAnswer: isTrue ? 0 : 1
-        });
-    }
-    if (idx >= 100 && idx < 200) {
-        const otherDists = cities.filter(x => x.districtEn !== c.districtEn).map(x => ({ en: x.districtEn, he: x.districtHe }));
-        const uniqueOthers = [];
-        const seen = new Set([c.districtEn]);
-        for (const d of otherDists) {
-            if (!seen.has(d.en)) {
-                uniqueOthers.push(d);
-                seen.add(d.en);
-            }
-            if (uniqueOthers.length >= 3) break;
+// Generate automated year facts to reach ~200 total facts
+const validYearCities = cities.filter(c => c.year && !isNaN(parseInt(c.year))).slice(0, 180);
+validYearCities.forEach((c, idx) => {
+    const year = parseInt(c.year);
+    const wrongYears = [year - 10, year + 5, year + 20].map(y => y.toString());
+    const [optsEn, optsHe] = shuffleWithSync([c.year, ...wrongYears], [c.year, ...wrongYears]);
+    qualitative.push({
+        id: `israel_geo_fact_year_${idx}`,
+        category: "israel_cities",
+        subCategory: "qualitative",
+        templateId: "israel-city-fact",
+        level: year < 1920 ? 3 : (year < 1950 ? 2 : 1),
+        emoji: "📅",
+        text: { en: `In what year was the town of ${c.en} founded?`, he: `באיזו שנה נוסד היישוב ${c.he}?` },
+        options: { en: optsEn, he: optsHe },
+        correctAnswer: optsEn.indexOf(c.year)
+    });
+});
+
+// 3. Boolean (Level 1 only, 70 questions)
+const boolCities = cities.slice(0, 70);
+boolCities.forEach((c, idx) => {
+    const isTrue = Math.random() > 0.5;
+    const otherDist = cities.find(x => x.districtEn !== c.districtEn) || cities[0];
+    qualitative.push({
+        id: `israel_geo_fact_bool_${idx}`,
+        category: "israel_cities",
+        subCategory: "qualitative",
+        templateId: "israel-city-bool",
+        level: 1, // USER REQUEST: level 1 only
+        emoji: "🧐",
+        text: {
+            en: `Is ${c.en} located in the ${isTrue ? c.districtEn : otherDist.districtEn} district?`,
+            he: `האם ${c.he} נמצאת במחוז ${isTrue ? c.districtHe : otherDist.districtHe}?`
+        },
+        options: { en: ["Yes", "No"], he: ["כן", "לא"] },
+        correctAnswer: isTrue ? 0 : 1
+    });
+});
+
+// 4. Multiple Choice District (70 questions)
+const distCities = cities.slice(100, 170);
+distCities.forEach((c, idx) => {
+    const otherDists = cities.filter(x => x.districtEn !== c.districtEn).map(x => ({ en: x.districtEn, he: x.districtHe }));
+    const uniqueOthers = [];
+    const seen = new Set([c.districtEn]);
+    for (const d of otherDists) {
+        if (!seen.has(d.en)) {
+            uniqueOthers.push(d);
+            seen.add(d.en);
         }
-        const [optsEn, optsHe] = shuffleWithSync([c.districtEn, ...uniqueOthers.map(o => o.en)], [c.districtHe, ...uniqueOthers.map(o => o.he)]);
-        qualitative.push({
-            id: `israel_geo_fact_dist_${idx}`,
-            category: "israel_cities",
-            subCategory: "qualitative",
-            templateId: "israel-city-district",
-            level: Math.random() > 0.5 ? 2 : 1,
-            emoji: "🗺️",
-            text: { en: `In which district is the city of ${c.en} located?`, he: `באיזה מחוז נמצאת העיר ${c.he}?` },
-            options: { en: optsEn, he: optsHe },
-            correctAnswer: optsEn.indexOf(c.districtEn)
-        });
+        if (uniqueOthers.length >= 3) break;
     }
+    const [optsEn, optsHe] = shuffleWithSync([c.districtEn, ...uniqueOthers.map(o => o.en)], [c.districtHe, ...uniqueOthers.map(o => o.he)]);
+    qualitative.push({
+        id: `israel_geo_fact_dist_${idx}`,
+        category: "israel_cities",
+        subCategory: "qualitative",
+        templateId: "israel-city-district",
+        level: Math.random() > 0.5 ? 2 : 1,
+        emoji: "🗺️",
+        text: { en: `In which district is the city of ${c.en} located?`, he: `באיזה מחוז נמצאת העיר ${c.he}?` },
+        options: { en: optsEn, he: optsHe },
+        correctAnswer: optsEn.indexOf(c.districtEn)
+    });
 });
 
 const finalQuestions = shuffle([...generatedQuestions, ...qualitative]);
@@ -225,13 +249,11 @@ function replaceBlock(content, startMarker, endMarker, newBlock) {
         console.warn(`Markers not found: ${startMarker} or ${endMarker}`);
         return content;
     }
-    // Surgical replacement between markers
     return content.substring(0, startIdx + startMarker.length) +
         "\n" + newBlock + "\n    " +
         content.substring(endIdx);
 }
 
-// 1. Update Topics (WITH COMMA)
 const topicGroup = {
     "id": "israel_group",
     "name": { "en": "Israel Geography", "he": "ידיעת הארץ" },
@@ -245,14 +267,11 @@ const topicGroup = {
         }
     ]
 };
-// We add a comma after the object so it fits in the array successfully
 const topicInjected = "    " + JSON.stringify(topicGroup, null, 4) + ",";
 content = replaceBlock(content, "// --- GENERATED_TOPICS_START ---", "// --- GENERATED_TOPICS_END ---", topicInjected);
 
-// 2. Update Counts
 content = replaceBlock(content, "// --- GENERATED_COUNTS_START ---", "// --- GENERATED_COUNTS_END ---", `    "israel_cities": ${finalQuestions.length},`);
 
-// 3. Update Questions
 const questionsStr = finalQuestions.map(q => JSON.stringify(q)).join(',\n    ') + ",";
 content = replaceBlock(content, "// --- GENERATED_QUESTIONS_START ---", "// --- GENERATED_QUESTIONS_END ---", "    " + questionsStr);
 
