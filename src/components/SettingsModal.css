@@ -113,6 +113,10 @@
     cursor: pointer;
     transition: all 0.2s;
     border: 2px solid transparent;
+    min-width: 0;
+    /* Prevent flex items from overflowing grid */
+    flex: 1;
+    /* Allow stretching to fill grid cell smoothly */
 }
 
 .pool-item:hover {
@@ -132,6 +136,12 @@
 .pool-name {
     font-size: 0.85rem;
     font-weight: 500;
+    white-space: normal;
+    /* Allow wrapping */
+    word-break: break-word;
+    /* Prevent long words from breaking layout */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .modal-footer-btn {
@@ -144,7 +154,7 @@
     }
 
     .category-pool {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.5rem;
     }
 
@@ -163,7 +173,7 @@
 
 @media (max-width: 360px) {
     .category-pool {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         /* Stack on very small screens */
     }
 }
