@@ -21,12 +21,12 @@ export const topics = [
     },
     // --- GENERATED_TOPICS_END ---
     {
-        "id": "science_group",
+        "id": "nature_group",
         "name": {
-            "en": "Science & Nature",
-            "he": "מדע וטבע"
+            "en": "Nature",
+            "he": "טבע"
         },
-        "icon": "🔬",
+        "icon": "🌿",
         "subTopics": [
             {
                 "id": "animals",
@@ -45,21 +45,23 @@ export const topics = [
                 "icon": "🧬"
             },
             {
-                "id": "psychology",
-                "name": {
-                    "en": "Psychology",
-                    "he": "פסיכולוגיה"
-                },
-                "icon": "🧠"
-            },
-            {
                 "id": "records",
                 "name": {
                     "en": "Records & Discoveries",
                     "he": "שיאים וגילויים"
                 },
                 "icon": "🏆"
-            },
+            }
+        ]
+    },
+    {
+        "id": "science_group",
+        "name": {
+            "en": "Science",
+            "he": "מדע"
+        },
+        "icon": "🔬",
+        "subTopics": [
             {
                 "id": "math",
                 "name": {
@@ -67,6 +69,14 @@ export const topics = [
                     "he": "חשבון"
                 },
                 "icon": "🔢"
+            },
+            {
+                "id": "psychology",
+                "name": {
+                    "en": "Psychology",
+                    "he": "פסיכולוגיה"
+                },
+                "icon": "🧠"
             }
         ]
     },
