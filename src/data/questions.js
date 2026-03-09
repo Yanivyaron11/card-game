@@ -21,6 +21,40 @@ export const topics = [
     },
     // --- GENERATED_TOPICS_END ---
     {
+        "id": "judaism_group",
+        "name": {
+            "en": "Judaism",
+            "he": "יהדות"
+        },
+        "icon": "🔯",
+        "subTopics": [
+            {
+                "id": "bible_stories",
+                "name": {
+                    "en": "Bible Stories",
+                    "he": "סיפורי התנ''ך"
+                },
+                "icon": "📜"
+            },
+            {
+                "id": "holidays",
+                "name": {
+                    "en": "Holidays",
+                    "he": "חגים"
+                },
+                "icon": "🕎"
+            },
+            {
+                "id": "tradition",
+                "name": {
+                    "en": "Tradition",
+                    "he": "מסורת"
+                },
+                "icon": "🍷"
+            }
+        ]
+    },
+    {
         "id": "nature_group",
         "name": {
             "en": "Nature",
@@ -114,14 +148,6 @@ export const topics = [
         },
         "icon": "🎭",
         "subTopics": [
-            {
-                "id": "judaism",
-                "name": {
-                    "en": "Judaism",
-                    "he": "יהדות"
-                },
-                "icon": "🔯"
-            },
             {
                 "id": "art",
                 "name": {
@@ -234,7 +260,9 @@ export const questionCounts = {
     // --- GENERATED_COUNTS_START ---
     "israel_cities": 400,
     // --- GENERATED_COUNTS_END ---
-    "judaism": 409,
+    "bible_stories": 327,
+    "holidays": 50,
+    "tradition": 32,
     "maccabi_haifa": 155,
     "chelsea": 100,
     "math": 500,
@@ -783,7 +811,7 @@ export const questions = [
 
     {
         "id": "q-judaism-1",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "On which day of Creation did God create humanity?",
@@ -808,7 +836,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What kind of bird did Noah send out first from the ark?",
@@ -833,7 +861,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-3",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What was the sign of the covenant God made with Noah after the flood?",
@@ -858,7 +886,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-4",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who was Abraham's nephew who lived in the city of Sodom?",
@@ -883,7 +911,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-5",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What did Lot's wife turn into when she looked back at Sodom?",
@@ -908,7 +936,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-6",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Which son of Abraham was almost sacrificed on Mount Moriah?",
@@ -933,7 +961,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-7",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who were the twin sons of Isaac and Rebecca?",
@@ -958,7 +986,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-8",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "For what item did Esau sell his birthright to Jacob?",
@@ -983,7 +1011,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-9",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What did Jacob see ascending and descending a ladder in his dream at Bethel?",
@@ -1008,7 +1036,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-10",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "How many years did Jacob agree to work for Laban to marry Rachel initially (before being tricked)?",
@@ -1033,7 +1061,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-11",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which of Jacob's wives was the mother of Joseph and Benjamin?",
@@ -1058,7 +1086,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-12",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What unique gift did Jacob give to his favorite son, Joseph?",
@@ -1083,7 +1111,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-13",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "To whom did Joseph's brothers sell him into slavery?",
@@ -1108,7 +1136,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-14",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "In Pharaoh's dream, what did the seven thin cows do to the seven fat cows?",
@@ -1133,7 +1161,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-15",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "When Joseph's brothers came to Egypt for food, which brother did Joseph keep as a hostage?",
@@ -1158,7 +1186,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-16",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Who was the first high priest (Kohen Gadol) of Israel?",
@@ -1183,7 +1211,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-17",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What tribe of Israel did Moses and Aaron belong to?",
@@ -1208,7 +1236,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-18",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What was the first plague God brought upon Egypt?",
@@ -1233,7 +1261,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-19",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What was the final, tenth plague hit upon Egypt?",
@@ -1258,7 +1286,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-20",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What large body of water did Moses part for the Israelites to escape?",
@@ -1283,7 +1311,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-21",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What miraclous food fell from the sky to feed the Israelites in the desert?",
@@ -1308,7 +1336,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-22",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "While Moses was on Mount Sinai, what idol did the Israelites construct and worship?",
@@ -1333,7 +1361,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-23",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who supported Moses' arms during the battle against Amalek?",
@@ -1358,7 +1386,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-24",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "How many spies were sent to scout out the land of Canaan?",
@@ -1383,7 +1411,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-25",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who were the only two faithful spies who encouraged the Israelites to enter Canaan?",
@@ -1408,7 +1436,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-26",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who led a major rebellion against the leadership of Moses and Aaron in the desert?",
@@ -1433,7 +1461,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-27",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What did Moses strike with his staff (instead of speaking to it) to get water at Meribah?",
@@ -1458,7 +1486,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-28",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Whose talking donkey saw an angel of the Lord blocking the way?",
@@ -1483,7 +1511,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-29",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Moses died before entering the Promised Land. What mountain did he die on?",
@@ -1508,7 +1536,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-30",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who succeeded Moses as the leader of the Israelites?",
@@ -1533,7 +1561,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-31",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which city's walls fell down remarkably after the Israelites marched around it?",
@@ -1558,7 +1586,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-32",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who was the female judge and prophetess who led Israel to victory under General Barak?",
@@ -1583,7 +1611,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-33",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "How many soldiers did Gideon take with him to defeat the Midianites, proving it was a miracle?",
@@ -1608,7 +1636,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-34",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who was the remarkably strong judge of Israel whose weakness was his hair?",
@@ -1633,7 +1661,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-35",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who was the Philistine woman who betrayed Samson and cut his hair?",
@@ -1658,7 +1686,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-36",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "From which country did Ruth immigrate to Bethlehem with her mother-in-law, Naomi?",
@@ -1683,7 +1711,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-37",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who was the prophet that anointed both the first and second kings of Israel?",
@@ -1708,7 +1736,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-38",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Who was the very first King of Israel?",
@@ -1733,7 +1761,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-39",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What instrument did the young David play to soothe King Saul's troubled spirit?",
@@ -1758,7 +1786,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-40",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What was the name of the giant Philistine warrior that David famously defeated?",
@@ -1783,7 +1811,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-41",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who was David's best friend, and the son of King Saul?",
@@ -1808,7 +1836,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-42",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which King of Israel built the First Temple in Jerusalem?",
@@ -1833,7 +1861,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-43",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "King Solomon was famous throughout the ancient world for possessing what trait?",
@@ -1858,7 +1886,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-44",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Which foreign monarch famously visited King Solomon to test his wisdom?",
@@ -1883,7 +1911,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-45",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "After King Solomon died, Israel split into two kingdoms. What were they called?",
@@ -1908,7 +1936,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-46",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who was the wicked King of Israel who, alongside his wife Jezebel, fiercely opposed the prophet Elijah?",
@@ -1933,7 +1961,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-47",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "On which mountain did Elijah famously challenge and defeat the 450 prophets of Baal?",
@@ -1958,7 +1986,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-48",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "How was the prophet Elijah taken up into heaven?",
@@ -1983,7 +2011,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-49",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which prophet succeeded Elijah and famously cured Naaman the Syrian of his leprosy?",
@@ -2008,7 +2036,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-50",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Which prophet was thrown into a den of lions but emerged completely unharmed?",
@@ -2033,7 +2061,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-51",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What three friends of Daniel were thrown into a fiery furnace and survived?",
@@ -2058,7 +2086,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-52",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Which prophet spent 3 days and 3 nights in the belly of a large fish?",
@@ -2083,7 +2111,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-53",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "To which wicked city was Jonah commanded by God to preach repentance?",
@@ -2108,7 +2136,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-54",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who was the beautiful Jewish woman who became Queen of Persia and saved her people?",
@@ -2133,7 +2161,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-55",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who was Esther's cousin who raised her and uncovered an assassination plot against the king?",
@@ -2158,7 +2186,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-56",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Which biblical figure completely lost his wealth, health, and family, yet refused to curse God?",
@@ -2183,7 +2211,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-57",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who led the rebuilding of the walls of Jerusalem after the Babylonian exile?",
@@ -2208,7 +2236,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-58",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Which prophet experienced a famous vision of a valley filled with dry bones coming back to life?",
@@ -2233,7 +2261,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-59",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "Which biblical book consists mostly of beautiful poems, songs, and prayers, primarily attributed to King David?",
@@ -2258,7 +2286,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-60",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: God created light on the first day of creation.",
@@ -2283,7 +2311,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-61",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: God created light on the second day.",
@@ -2308,7 +2336,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-62",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Eve was created from one of Adam's ribs.",
@@ -2333,7 +2361,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-63",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Eve was created from clay like Adam.",
@@ -2358,7 +2386,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-64",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Cain was a farmer, while Abel was a shepherd.",
@@ -2383,7 +2411,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-65",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Cain was NOT a farmer, while Abel was a shepherd.",
@@ -2408,7 +2436,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-66",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Methuselah is recorded as the oldest person in the Bible, living 969 years.",
@@ -2433,7 +2461,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-67",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Noah is recorded as the oldest person in the Bible, living 969 years.",
@@ -2458,7 +2486,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-68",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: The Tower of Babel was built to reach the heavens and make a name for its builders.",
@@ -2483,7 +2511,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-69",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: The Tower of Babel was built to worship the moon.",
@@ -2508,7 +2536,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-70",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Abraham's original name was Abram.",
@@ -2533,7 +2561,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-71",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Abraham's original name was NOT Abram.",
@@ -2558,7 +2586,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-72",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Sarah, Abraham's wife, laughed when she heard she would have a child at an old age.",
@@ -2583,7 +2611,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-73",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Sarah cried when she heard she would have a child.",
@@ -2608,7 +2636,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-74",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Esau was a skilled hunter, while Jacob was a quiet man dwelling in tents.",
@@ -2633,7 +2661,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-75",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Jacob was a hunter, and Esau was a shepherd.",
@@ -2658,7 +2686,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-76",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Jacob struggled with an angel until daybreak.",
@@ -2683,7 +2711,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-77",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Jacob struggled with an angel until daybreak.",
@@ -2708,7 +2736,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-78",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Jacob's name was changed to Israel after his struggle with the angel.",
@@ -2733,7 +2761,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-79",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Jacob's name was NOT changed to Israel after his struggle with the angel.",
@@ -2758,7 +2786,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-80",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Joseph had prophetic dreams involving sheaves of wheat and stars bowing down to him.",
@@ -2783,7 +2811,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-81",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Joseph had prophetic dreams involving sheaves of wheat and stars bowing down to him.",
@@ -2808,7 +2836,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-82",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Potiphar's wife falsely accused Joseph, leading to his imprisonment in Egypt.",
@@ -2833,7 +2861,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-83",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Potiphar's wife falsely accused Joseph, leading to his imprisonment in Egypt.",
@@ -2858,7 +2886,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-84",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Moses was hidden in a basket among the reeds of the Nile River.",
@@ -2883,7 +2911,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-85",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Moses was hidden in a cave near the sea.",
@@ -2908,7 +2936,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-86",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: God spoke to Moses from a burning bush that was not consumed by the fire.",
@@ -2933,7 +2961,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-87",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: God spoke to Moses from a burning bush that was NOT not consumed by the fire.",
@@ -2958,7 +2986,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-88",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: The Israelite slaves in Egypt were forced to make bricks without straw.",
@@ -2983,7 +3011,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-89",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: The Israelite slaves in Egypt were forced to make bricks without straw.",
@@ -3008,7 +3036,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-90",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: The Ten Commandments were given on two stone tablets.",
@@ -3033,7 +3061,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-91",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: The Ten Commandments were given on golden scrolls.",
@@ -3058,7 +3086,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-92",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Aaron cast his staff on the ground before Pharaoh and it turned into a snake.",
@@ -3083,7 +3111,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-93",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Aaron cast his staff on the ground before Pharaoh and it turned into a snake.",
@@ -3108,7 +3136,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-94",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Moses struck the rock twice to get water, which prevented him from entering the Promised Land.",
@@ -3133,7 +3161,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-95",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Moses struck the rock twice to get water, which prevented him from entering the Promised Land.",
@@ -3158,7 +3186,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-96",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Rahab hid the Israelite spies on the roof of her house in Jericho.",
@@ -3183,7 +3211,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-97",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Rahab betrayed the Israelite spies in Jericho.",
@@ -3208,7 +3236,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-98",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: The Ark of the Covenant was carried by the priests when they crossed the Jordan River.",
@@ -3233,7 +3261,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-99",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: The Ark of the Covenant was NOT carried by the priests when they crossed the Jordan River.",
@@ -3258,7 +3286,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-100",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Gideon used a fleece of wool to test God's will.",
@@ -3283,7 +3311,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-101",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Gideon used a fleece of wool to test God's will.",
@@ -3308,7 +3336,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-102",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Samson killed a lion with his bare hands.",
@@ -3333,7 +3361,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-103",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Samson killed a bear with his bare hands.",
@@ -3358,7 +3386,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-104",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Ruth was the great-grandmother of King David.",
@@ -3383,7 +3411,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-105",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Ruth was NOT the great-grandmother of King David.",
@@ -3408,7 +3436,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-106",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: God called Samuel three times in the night when he was a boy working in the temple.",
@@ -3433,7 +3461,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-107",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: God called Samuel three times in the night when he was NOT a boy working in the temple.",
@@ -3458,7 +3486,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-108",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: King Saul consulted the Witch of Endor to speak with the deceased Samuel.",
@@ -3483,7 +3511,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-109",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: King Saul consulted the Witch of Endor to speak with the deceased Samuel.",
@@ -3508,7 +3536,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-110",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: David spared King Saul's life in a cave in Engedi by only cutting off the corner of his robe.",
@@ -3533,7 +3561,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-111",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: David spared King Saul's life in a cave in Engedi by only cutting off the corner of his robe.",
@@ -3558,7 +3586,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-112",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: King Solomon wrote three biblical books: Proverbs, Ecclesiastes, and Song of Songs.",
@@ -3583,7 +3611,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-113",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: King Solomon wrote three biblical books: Proverbs, Ecclesiastes, and Song of Songs.",
@@ -3608,7 +3636,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-114",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Elijah contested the prophets of Baal and caused fire to fall from heaven to consume his sacrifice.",
@@ -3633,7 +3661,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-115",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Elijah contested the prophets of Baal and caused fire to fall from heaven to consume his sacrifice.",
@@ -3658,7 +3686,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-116",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Jehu was anointed king specifically to destroy the wicked house of Ahab and Jezebel.",
@@ -3683,7 +3711,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-117",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Jehu was NOT anointed king specifically to destroy the wicked house of Ahab and Jezebel.",
@@ -3708,7 +3736,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-118",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "True or False: Naaman, the Syrian commander, had to wash in the Jordan River seven times to cure his leprosy.",
@@ -3733,7 +3761,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-119",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Naaman, the Syrian commander, had to was NOTh in the Jordan River seven times to cure his leprosy.",
@@ -3758,7 +3786,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-120",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I was swallowed by a large fish.",
@@ -3783,7 +3811,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-121",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I led the Israelites after Moses died.",
@@ -3808,7 +3836,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-122",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I asked God for wisdom to rule the people.",
@@ -3833,7 +3861,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-123",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I interpreted Pharaoh's dreams in Egypt.",
@@ -3858,7 +3886,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-124",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I survived the lions' den.",
@@ -3883,7 +3911,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-125",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I went up to heaven in a whirlwind.",
@@ -3908,7 +3936,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-126",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I built an ark to survive a great flood.",
@@ -3933,7 +3961,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-127",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I defeated a giant named Goliath.",
@@ -3958,7 +3986,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-128",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? My strength was in my hair.",
@@ -3983,7 +4011,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-129",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I became Queen of Persia and saved my people.",
@@ -4008,7 +4036,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-130",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I was swallowed by a large fish.",
@@ -4033,7 +4061,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-131",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I led the Israelites after Moses died.",
@@ -4058,7 +4086,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-132",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I asked God for wisdom to rule the people.",
@@ -4083,7 +4111,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-133",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I interpreted Pharaoh's dreams in Egypt.",
@@ -4108,7 +4136,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-134",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I survived the lions' den.",
@@ -4133,7 +4161,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-135",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I went up to heaven in a whirlwind.",
@@ -4158,7 +4186,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-136",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I built an ark to survive a great flood.",
@@ -4183,7 +4211,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-137",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I defeated a giant named Goliath.",
@@ -4208,7 +4236,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-138",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? My strength was in my hair.",
@@ -4233,7 +4261,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-139",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I became Queen of Persia and saved my people.",
@@ -4258,7 +4286,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-140",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I was swallowed by a large fish.",
@@ -4283,7 +4311,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-141",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I led the Israelites after Moses died.",
@@ -4308,7 +4336,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-142",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I asked God for wisdom to rule the people.",
@@ -4333,7 +4361,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-143",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I interpreted Pharaoh's dreams in Egypt.",
@@ -4358,7 +4386,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-144",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I survived the lions' den.",
@@ -4383,7 +4411,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-145",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I went up to heaven in a whirlwind.",
@@ -4408,7 +4436,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-146",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I built an ark to survive a great flood.",
@@ -4433,7 +4461,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-147",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I defeated a giant named Goliath.",
@@ -4458,7 +4486,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-148",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? My strength was in my hair.",
@@ -4483,7 +4511,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-149",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I became Queen of Persia and saved my people.",
@@ -4508,7 +4536,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-150",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I was swallowed by a large fish.",
@@ -4533,7 +4561,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-151",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I led the Israelites after Moses died.",
@@ -4558,7 +4586,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-152",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I asked God for wisdom to rule the people.",
@@ -4583,7 +4611,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-153",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I interpreted Pharaoh's dreams in Egypt.",
@@ -4608,7 +4636,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-154",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I survived the lions' den.",
@@ -4633,7 +4661,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-155",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I went up to heaven in a whirlwind.",
@@ -4658,7 +4686,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-156",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I built an ark to survive a great flood.",
@@ -4683,7 +4711,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-157",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I defeated a giant named Goliath.",
@@ -4708,7 +4736,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-158",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? My strength was in my hair.",
@@ -4733,7 +4761,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-159",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I became Queen of Persia and saved my people.",
@@ -4758,7 +4786,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-160",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I was swallowed by a large fish.",
@@ -4783,7 +4811,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-161",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I led the Israelites after Moses died.",
@@ -4808,7 +4836,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-162",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I asked God for wisdom to rule the people.",
@@ -4833,7 +4861,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-163",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I interpreted Pharaoh's dreams in Egypt.",
@@ -4858,7 +4886,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-164",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I survived the lions' den.",
@@ -4883,7 +4911,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-165",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I went up to heaven in a whirlwind.",
@@ -4908,7 +4936,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-166",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I built an ark to survive a great flood.",
@@ -4933,7 +4961,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-167",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I defeated a giant named Goliath.",
@@ -4958,7 +4986,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-168",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? My strength was in my hair.",
@@ -4983,7 +5011,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-169",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I became Queen of Persia and saved my people.",
@@ -5008,7 +5036,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-170",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I was swallowed by a large fish.",
@@ -5033,7 +5061,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-171",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I led the Israelites after Moses died.",
@@ -5058,7 +5086,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-172",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I asked God for wisdom to rule the people.",
@@ -5083,7 +5111,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-173",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I interpreted Pharaoh's dreams in Egypt.",
@@ -5108,7 +5136,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-174",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I survived the lions' den.",
@@ -5133,7 +5161,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-175",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I went up to heaven in a whirlwind.",
@@ -5158,7 +5186,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-176",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I built an ark to survive a great flood.",
@@ -5183,7 +5211,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-177",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I defeated a giant named Goliath.",
@@ -5208,7 +5236,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-178",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? My strength was in my hair.",
@@ -5233,7 +5261,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-179",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I became Queen of Persia and saved my people.",
@@ -5258,7 +5286,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-180",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I was swallowed by a large fish.",
@@ -5283,7 +5311,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-181",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I led the Israelites after Moses died.",
@@ -5308,7 +5336,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-182",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I asked God for wisdom to rule the people.",
@@ -5333,7 +5361,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-183",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I interpreted Pharaoh's dreams in Egypt.",
@@ -5358,7 +5386,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-184",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I survived the lions' den.",
@@ -5383,7 +5411,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-185",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I went up to heaven in a whirlwind.",
@@ -5408,7 +5436,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-186",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I built an ark to survive a great flood.",
@@ -5433,7 +5461,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-187",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I defeated a giant named Goliath.",
@@ -5458,7 +5486,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-188",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? My strength was in my hair.",
@@ -5483,7 +5511,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-189",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I became Queen of Persia and saved my people.",
@@ -5508,7 +5536,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-190",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I was swallowed by a large fish.",
@@ -5533,7 +5561,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-191",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I led the Israelites after Moses died.",
@@ -5558,7 +5586,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-192",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I asked God for wisdom to rule the people.",
@@ -5583,7 +5611,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-193",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I interpreted Pharaoh's dreams in Egypt.",
@@ -5608,7 +5636,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-194",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I survived the lions' den.",
@@ -5633,7 +5661,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-195",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I went up to heaven in a whirlwind.",
@@ -5658,7 +5686,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-196",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I built an ark to survive a great flood.",
@@ -5683,7 +5711,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-197",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I defeated a giant named Goliath.",
@@ -5708,7 +5736,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-198",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? My strength was in my hair.",
@@ -5733,7 +5761,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-199",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I became Queen of Persia and saved my people.",
@@ -5758,7 +5786,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-200",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I was swallowed by a large fish.",
@@ -5783,7 +5811,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-201",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I led the Israelites after Moses died.",
@@ -5808,7 +5836,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-202",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I asked God for wisdom to rule the people.",
@@ -5833,7 +5861,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-203",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I interpreted Pharaoh's dreams in Egypt.",
@@ -5858,7 +5886,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-204",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I survived the lions' den.",
@@ -5883,7 +5911,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-205",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I went up to heaven in a whirlwind.",
@@ -5908,7 +5936,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-206",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I built an ark to survive a great flood.",
@@ -5933,7 +5961,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-207",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I defeated a giant named Goliath.",
@@ -5958,7 +5986,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-208",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? My strength was in my hair.",
@@ -5983,7 +6011,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-209",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who am I? I became Queen of Persia and saved my people.",
@@ -6008,7 +6036,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-210",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What is the Jewish New Year called?",
@@ -6033,7 +6061,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-211",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What instrument made from a ram's horn is blown on Rosh Hashanah?",
@@ -6058,7 +6086,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-212",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "On which holiday do Jews build temporary outdoor booths?",
@@ -6083,7 +6111,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-213",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What is the holiest and most solemn day of the Jewish year, known as the Day of Atonement?",
@@ -6108,7 +6136,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-214",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "According to tradition, how many branches does the Hanukkah Menorah (Hanukkiah) have?",
@@ -6133,7 +6161,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-215",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Which holiday celebrates the saving of the Jewish people from Haman, as told in the Book of Esther?",
@@ -6158,7 +6186,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-216",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What unleavened bread is traditionally eaten during Passover?",
@@ -6183,7 +6211,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-217",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which holiday marks the giving of the Torah at Mount Sinai?",
@@ -6208,7 +6236,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-218",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What is the central ritual meal eaten on the first night (or first two nights) of Passover?",
@@ -6233,7 +6261,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-219",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "Which of the following is NOT one of the Four Species waved on Sukkot?",
@@ -6258,7 +6286,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-220",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What is the holiday that celebrates the 'New Year for Trees'?",
@@ -6283,7 +6311,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-221",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "During Hanukkah, what letters are written on a dreidel outside of Israel?",
@@ -6308,7 +6336,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-222",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What is the name of the book read during the Passover Seder?",
@@ -6333,7 +6361,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-223",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Tisha B'Av is a day of fasting primarily commemorating what event?",
@@ -6358,7 +6386,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-224",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "Which fast day occurs the day immediately following Rosh Hashanah?",
@@ -6383,7 +6411,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-225",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "On Shavuot, it is a widespread custom to eat what type of food?",
@@ -6408,7 +6436,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-226",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "What is the name of the special braided bread traditionally eaten on Shabbat and holidays?",
@@ -6433,7 +6461,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-227",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "During Sukkot, Jews pray for what specific natural phenomenon during 'Tefillat Geshem' on Shemini Atzeret?",
@@ -6458,7 +6486,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-228",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "The period of 49 days counted between Passover and Shavuot is known as what?",
@@ -6483,7 +6511,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-229",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Which holiday is considered a 'minor' holiday and involves bonfires, usually associated with Rabbi Shimon bar Yochai?",
@@ -6508,7 +6536,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-230",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What is the name of the small head-covering worn by observant Jewish men?",
@@ -6533,7 +6561,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-231",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What sits on the doorposts of Jewish homes containing a small parchment scroll?",
@@ -6558,7 +6586,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-232",
-        "category": "judaism",
+        "category": "tradition",
         "level": 1,
         "text": {
             "en": "What is the day of rest in Judaism that lasts from Friday evening to Saturday evening?",
@@ -6583,7 +6611,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-233",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What dietary laws determine which foods Jews can and cannot eat?",
@@ -6608,7 +6636,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-234",
-        "category": "judaism",
+        "category": "tradition",
         "level": 1,
         "text": {
             "en": "In Jewish dietary laws, what two types of food must never be cooked or eaten together?",
@@ -6633,7 +6661,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-235",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the term for food that is completely neutral (neither meat nor dairy)?",
@@ -6658,7 +6686,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-236",
-        "category": "judaism",
+        "category": "tradition",
         "level": 2,
         "text": {
             "en": "What is the name of the prayer shawl worn by Jewish adults during morning prayers?",
@@ -6683,7 +6711,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-237",
-        "category": "judaism",
+        "category": "tradition",
         "level": 2,
         "text": {
             "en": "What are the small black leather boxes containing Torah verses worn by observant Jews on their arm and head during prayers?",
@@ -6708,7 +6736,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-238",
-        "category": "judaism",
+        "category": "tradition",
         "level": 2,
         "text": {
             "en": "What is the name of the ceremony concluding Shabbat, separating the holy day from the new week?",
@@ -6733,7 +6761,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-239",
-        "category": "judaism",
+        "category": "tradition",
         "level": 2,
         "text": {
             "en": "A kosher animal must possess which two physical characteristics?",
@@ -6758,7 +6786,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-240",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the traditional canopy under which a Jewish couple is married?",
@@ -6783,7 +6811,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-241",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the Jewish legal contract signed before a wedding ceremony called?",
@@ -6808,7 +6836,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-242",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the pool of naturally-sourced water used for ritual immersion in Judaism called?",
@@ -6833,7 +6861,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-243",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "What is the required quorum of ten Jewish adults needed for certain religious obligations, like public prayer?",
@@ -6858,7 +6886,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-244",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "A 'Get' is a document used in Jewish law entirely for what purpose?",
@@ -6883,7 +6911,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-245",
-        "category": "judaism",
+        "category": "tradition",
         "level": 1,
         "text": {
             "en": "What is the language primarily used in traditional Jewish prayer and the Torah?",
@@ -6908,7 +6936,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-246",
-        "category": "judaism",
+        "category": "tradition",
         "level": 1,
         "text": {
             "en": "What is the handwritten scroll containing the Five Books of Moses kept in every synagogue?",
@@ -6933,7 +6961,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-247",
-        "category": "judaism",
+        "category": "tradition",
         "level": 1,
         "text": {
             "en": "What is the foundational Jewish prayer that declares faith in one God, starting with 'Hear O Israel'?",
@@ -6958,7 +6986,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-248",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What language, a mixture of Hebrew and German, was spoken by Ashkenazi Jews in Eastern Europe?",
@@ -6983,7 +7011,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-249",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What language is the primary language of the Talmud?",
@@ -7008,7 +7036,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-250",
-        "category": "judaism",
+        "category": "tradition",
         "level": 2,
         "text": {
             "en": "What is the daily prayer book used by Jews called?",
@@ -7033,7 +7061,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-251",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What is the prayer book specifically used for the High Holidays (Rosh Hashanah and Yom Kippur) called?",
@@ -7058,7 +7086,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-252",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "The Talmud consists of two main parts: the Mishnah and the...?",
@@ -7083,7 +7111,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-253",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Which famous 12th-century Jewish philosopher and physician wrote the 'Mishneh Torah'?",
@@ -7108,7 +7136,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-254",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "The 'Kaddish' is originally a prayer praising God, but in modern practice, it is most widely known as a prayer for what?",
@@ -7133,7 +7161,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-255",
-        "category": "judaism",
+        "category": "tradition",
         "level": 1,
         "text": {
             "en": "What is the capital of Israel, considered the holiest city in Judaism?",
@@ -7158,7 +7186,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-256",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What is the holy site in Jerusalem that is the last remaining retaining wall of the Second Temple?",
@@ -7183,7 +7211,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-257",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What is the six-pointed star that is a widely recognized symbol of Judaism and Israel?",
@@ -7208,7 +7236,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-258",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "In what year was the modern State of Israel established?",
@@ -7233,7 +7261,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-259",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who is considered the founder of modern political Zionism?",
@@ -7258,7 +7286,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-260",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the name of the Israeli national anthem?",
@@ -7283,7 +7311,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-261",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which 11th-century French rabbi provides the most heavily utilized commentary on the Torah and Talmud?",
@@ -7308,7 +7336,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-262",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What numeric value is associated with the Hebrew word 'Chai' (Life)?",
@@ -7333,7 +7361,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-263",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Jews tracing their ancestry to Central and Eastern Europe are generally referred to as what?",
@@ -7358,7 +7386,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-264",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Jews tracing their ancestry to the Iberian Peninsula (Spain/Portugal) are generally referred to as what?",
@@ -7383,7 +7411,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-265",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What massive fortress adjacent to the Dead Sea was the site of the last stand of Jewish rebels against the Romans?",
@@ -7408,7 +7436,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-266",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "In 1947, a Bedouin shepherd stumbled upon ancient scriptures in caves near the Dead Sea. What are they called?",
@@ -7433,7 +7461,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-267",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who is credited as the driving force behind the revival of the Hebrew language in the late 19th/early 20th century?",
@@ -7458,7 +7486,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-268",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Which mystical branch of Judaism deals with the esoteric teachings of the Torah, heavily relying on the Zohar?",
@@ -7483,7 +7511,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-269",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What greets visitors on the door frame of a traditional Jewish home?",
@@ -7508,7 +7536,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-270",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "During the Purim reading of the Megillah, what do people spin or shake to make noise when Haman's name is read?",
@@ -7533,7 +7561,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-271",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "How many days does the holiday of Hanukkah last?",
@@ -7558,7 +7586,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-272",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which famous Jewish food is a braided egg bread?",
@@ -7583,7 +7611,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-273",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "At the end of the Passover Seder, children traditionally search for a hidden piece of matzah called what?",
@@ -7608,7 +7636,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-274",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "What is the name of the sweet paste of fruits and nuts eaten on Passover symbolizing the mortar used by slaves in Egypt?",
@@ -7633,7 +7661,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-275",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What fruit is commonly eaten dipped in honey on Rosh Hashanah?",
@@ -7658,7 +7686,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-276",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "A rabbi's teaching or sermon given in the synagogue is often called a what?",
@@ -7683,7 +7711,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-277",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which Jewish life cycle event celebrates a girl reaching the age of religious maturity?",
@@ -7708,7 +7736,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-278",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the ritual circumcsion of a Jewish baby boy on his eighth day called?",
@@ -7733,7 +7761,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-279",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the week-long mourning period in Judaism following the burial of a close relative?",
@@ -7758,7 +7786,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-280",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "The anniversary of a death in Judaism is known by what Yiddish term?",
@@ -7783,7 +7811,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-281",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What traditional Jewish potato pancake is frequently eaten during Hanukkah?",
@@ -7808,7 +7836,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-282",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What jelly-filled donut is very popular in Israel during Hanukkah?",
@@ -7833,7 +7861,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-283",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What triangular filled pastry is traditionally eaten on Purim?",
@@ -7858,7 +7886,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-284",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "In an observant Jewish home, two sinks and separate dishes are kept to strictly separate what?",
@@ -7883,7 +7911,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-285",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "Before drinking wine or grape juice, which blessing is recited?",
@@ -7908,7 +7936,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-286",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "Before eating bread, which blessing is recited, often done after washing hands?",
@@ -7933,7 +7961,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-287",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "The 'Bimah' in a synagogue refers to what?",
@@ -7958,7 +7986,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-288",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "What is the Eternal Light that hangs above the Ark in a synagogue called?",
@@ -7983,7 +8011,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-289",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What is the 9th, elevated candle on a Hanukkah Menorah used to light the others called?",
@@ -8008,7 +8036,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-290",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What is the word used to say 'Hello', 'Goodbye', and 'Peace' in Hebrew?",
@@ -8033,7 +8061,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-291",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What phrase translates to 'Congratulations' or 'Good Luck' in Jewish culture?",
@@ -8058,7 +8086,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-292",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Before taking a shot or raising a glass, Jews typically toast with what phrase meaning 'To Life'?",
@@ -8083,7 +8111,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-293",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Maimonides compiled the 13 Principles of Faith. What is the popular hymn based on these principles sung at the end of services?",
@@ -8108,7 +8136,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-294",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "On Yom Kippur, it is customary to wear what color clothing to symbolize purity?",
@@ -8133,7 +8161,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-295",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "What is the traditional act of throwing bread crumbs into moving water on Rosh Hashanah called?",
@@ -8158,7 +8186,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-296",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "During the month preceding Rosh Hashanah, the Shofar is blown every morning. What is the name of this Jewish month?",
@@ -8183,7 +8211,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-297",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "Which Jewish holiday celebrates the 15th of Av, often considered a festival of love, similar to Valentine's Day?",
@@ -8208,7 +8236,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-298",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "According to Halakha, a Jewish day technically begins at what time?",
@@ -8233,7 +8261,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-299",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "What is the 'Simneida' (Simanim) at the Rosh Hashanah Seder?",
@@ -8258,7 +8286,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-300",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: The word 'Torah' literally translates to 'Teaching' or 'Instruction'.",
@@ -8283,7 +8311,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-301",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: There are 613 Mitzvot (commandments) in traditional Rabbinic Judaism.",
@@ -8308,7 +8336,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-302",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "True or False: Minyan is the required quorum of 10 Jewish adults for public prayer.",
@@ -8333,7 +8361,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-303",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "True or False: A synagogue is called 'Beit Knesseth' in Hebrew, meaning House of Assembly.",
@@ -8358,7 +8386,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-304",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: A tallit katan is traditionally worn underneath everyday clothing.",
@@ -8383,7 +8411,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-305",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Tzedakah is the Hebrew word for charity or righteous giving.",
@@ -8408,7 +8436,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-306",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "True or False: Bimah is the elevated platform in a synagogue where the Torah is read.",
@@ -8433,7 +8461,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-307",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Rashi's commentary is printed in a special traditional font called 'Rashi script'.",
@@ -8458,7 +8486,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-308",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: The Talmud is comprised of 63 tractates (Masechtot).",
@@ -8483,7 +8511,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-309",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "True or False: Hasidic Judaism was founded by the Baal Shem Tov in the 18th century.",
@@ -70754,7 +70782,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2761",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What holiday is known as the \"Festival of Lights\"?",
@@ -70779,7 +70807,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2762",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What do we eat on Passover instead of bread?",
@@ -70804,7 +70832,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2763",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "How many candles are on a Hanukkah Menorah (including the Shamash)?",
@@ -70829,7 +70857,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2764",
-        "category": "judaism",
+        "category": "tradition",
         "level": 1,
         "text": {
             "en": "What is the name of the special bread for Shabbat?",
@@ -70854,7 +70882,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2765",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Which symbol is often associated with Judaism and appears on the Israeli flag?",
@@ -70879,7 +70907,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2766",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What do we blow on Rosh Hashanah?",
@@ -70904,7 +70932,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2767",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What fruit is traditionally eaten with honey on Rosh Hashanah?",
@@ -70929,7 +70957,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2768",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What is the name of the Jewish New Year?",
@@ -70954,7 +70982,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2769",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What do we build and sit in during the holiday of Sukkot?",
@@ -70979,7 +71007,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2770",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What do we do on Purim?",
@@ -71004,7 +71032,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2771",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who led the Israelites out of Egypt?",
@@ -71029,7 +71057,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2772",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the holiest day of the year in Judaism?",
@@ -71054,7 +71082,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2773",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "How many commandments (Mitzvot) are there in the Torah?",
@@ -71079,7 +71107,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2774",
-        "category": "judaism",
+        "category": "tradition",
         "level": 2,
         "text": {
             "en": "What is the \"Mezuzah\"?",
@@ -71104,7 +71132,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2775",
-        "category": "judaism",
+        "category": "tradition",
         "level": 2,
         "text": {
             "en": "What is the name of the white prayer shawl worn by Jewish men?",
@@ -71129,7 +71157,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2776",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the \"Western Wall\" in Hebrew?",
@@ -71154,7 +71182,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2777",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which holiday celebrates the receiving of the Torah at Mount Sinai?",
@@ -71179,7 +71207,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2778",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What is the name of the traditional triangular pastry eaten on Purim?",
@@ -71204,7 +71232,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2779",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the Hebrew term for the charity box?",
@@ -71229,7 +71257,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2780",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the \"Torah\"?",
@@ -71254,7 +71282,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2781",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the name of the Jewish legal code developed after the Second Temple?",
@@ -71279,7 +71307,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2782",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who was the first patriarch of the Jewish people?",
@@ -71304,7 +71332,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2783",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the significance of the year 1948 in Jewish history?",
@@ -71329,7 +71357,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2784",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is \"Kabbalah\"?",
@@ -71354,7 +71382,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2785",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "How many years did the Israelites wander in the desert?",
@@ -71379,7 +71407,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2786",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the \"Talmud\"?",
@@ -71404,7 +71432,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2787",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What does \"Tzedakah\" literally mean in Hebrew?",
@@ -71429,7 +71457,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2788",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Which king built the First Temple in Jerusalem?",
@@ -71454,7 +71482,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2789",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "What is the name of the platform from which the Torah is read in a synagogue?",
@@ -71479,7 +71507,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2790",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is \"Tikkun Olam\"?",
@@ -71504,7 +71532,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2791",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What is the name of the special head covering worn by Jewish men?",
@@ -71529,7 +71557,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2792",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Which language is the Torah written in?",
@@ -71554,7 +71582,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2793",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What do we say when we wish someone good luck or congratulations?",
@@ -71579,7 +71607,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2794",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What day is the Jewish day of rest?",
@@ -71604,7 +71632,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2795",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What is a \"Bar/Bat Mitzvah\"?",
@@ -71629,7 +71657,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2796",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What do we eat on Hanukkah that is fried in oil?",
@@ -71654,7 +71682,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2797",
-        "category": "judaism",
+        "category": "tradition",
         "level": 1,
         "text": {
             "en": "What is a \"Synagogue\"?",
@@ -71679,7 +71707,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2798",
-        "category": "judaism",
+        "category": "tradition",
         "level": 1,
         "text": {
             "en": "What is the \"Eternal Light\" in a synagogue called in Hebrew?",
@@ -71704,7 +71732,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2799",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who was the first woman according to the Torah?",
@@ -71729,7 +71757,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2800",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What did God give to Moses on Mount Sinai?",
@@ -71754,7 +71782,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2801",
-        "category": "judaism",
+        "category": "tradition",
         "level": 2,
         "text": {
             "en": "What is \"Kosher\"?",
@@ -71779,7 +71807,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2802",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the \"Haggadah\"?",
@@ -71804,7 +71832,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2803",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Who are the \"Three Patriarchs\"?",
@@ -71829,7 +71857,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2804",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the \"Havdalah\" ceremony?",
@@ -71854,7 +71882,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2805",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the name of the canopy used at Jewish weddings?",
@@ -71879,7 +71907,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2806",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "Which matriarch was known for her kindness at the well?",
@@ -71904,7 +71932,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2807",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is \"Lashon Hara\"?",
@@ -71929,7 +71957,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2808",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What are the two Talmuds?",
@@ -71954,7 +71982,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2809",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "What is the name of the Jewish month in which Passover falls?",
@@ -71979,7 +72007,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2810",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who was the first king of Israel?",
@@ -72004,7 +72032,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2811",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is \"Gemara\"?",
@@ -72029,7 +72057,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2812",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Which city is the burial place of the Patriarchs and Matriarchs (except Rachel)?",
@@ -72054,7 +72082,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2813",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who was the prophet that challenged the prophets of Baal?",
@@ -72079,7 +72107,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2814",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What does the word \"Mashiach\" (Messiah) literally mean in Hebrew?",
@@ -72104,7 +72132,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2815",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "In what year was the Second Temple destroyed?",
@@ -72129,7 +72157,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2816",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Who built the Ark to save the animals from the Great Flood?",
@@ -72154,7 +72182,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2817",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "How many sons did Jacob (Yaakov) have?",
@@ -72179,7 +72207,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2818",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What was special about the coat Jacob gave to Joseph?",
@@ -72204,7 +72232,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2819",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Who was swallowed by a giant fish (or whale)?",
@@ -72229,7 +72257,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2820",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What was the source of Samson's (Shimshon) strength?",
@@ -72254,7 +72282,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2821",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Who was the sister of Moses and Aaron?",
@@ -72279,7 +72307,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2822",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What do we eat on Shavuot?",
@@ -72304,7 +72332,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2823",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What is the name of the potato pancakes eaten on Hanukkah?",
@@ -72329,7 +72357,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2824",
-        "category": "judaism",
+        "category": "holidays",
         "level": 1,
         "text": {
             "en": "What is the name of the spinning top used on Hanukkah?",
@@ -72354,7 +72382,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2825",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What is the first letter of the Hebrew alphabet?",
@@ -72379,7 +72407,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2826",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What is the last letter of the Hebrew alphabet?",
@@ -72404,7 +72432,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2827",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What are the first five books of the Bible called?",
@@ -72429,7 +72457,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2828",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "How many days did the world take to be created?",
@@ -72454,7 +72482,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2829",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "What did God create on the first day?",
@@ -72479,7 +72507,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2830",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 1,
         "text": {
             "en": "Who was the giant defeated by David?",
@@ -72504,7 +72532,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2831",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What do we search for with a candle the night before Passover?",
@@ -72529,7 +72557,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2832",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the \"Afikoman\"?",
@@ -72554,7 +72582,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2833",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What vegetable is often used as \"Karpas\" on the Seder plate?",
@@ -72579,7 +72607,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2834",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What does the egg on the Seder plate represent?",
@@ -72604,7 +72632,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2835",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "How many cups of wine are poured at the Passover Seder?",
@@ -72629,7 +72657,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2836",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the name of the special cup for the prophet who visits the Seder?",
@@ -72654,7 +72682,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2837",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What do we celebrate on Simchat Torah?",
@@ -72679,7 +72707,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2838",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What holiday comes exactly 50 days after the second day of Passover?",
@@ -72704,7 +72732,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2839",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What is the \"Lulav and Etrog\" used for?",
@@ -72729,7 +72757,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2840",
-        "category": "judaism",
+        "category": "tradition",
         "level": 2,
         "text": {
             "en": "What is the name of the day before a holiday or Shabbat?",
@@ -72754,7 +72782,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2841",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the \"Kiddush\"?",
@@ -72779,7 +72807,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2842",
-        "category": "judaism",
+        "category": "holidays",
         "level": 2,
         "text": {
             "en": "What do we dip the apple in on Rosh Hashanah?",
@@ -72804,7 +72832,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2843",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is the special food eaten on Tu BiShvat?",
@@ -72829,7 +72857,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2844",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What is \"Tu BiShvat\" known as?",
@@ -72854,7 +72882,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2845",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 2,
         "text": {
             "en": "What do we label a food that is neither meat nor dairy?",
@@ -72879,7 +72907,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2846",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who was the first woman to be called a \"Prophetess\" in the Torah?",
@@ -72904,7 +72932,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2847",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "How many spies did Moses send to scout the land of Canaan?",
@@ -72929,7 +72957,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2848",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Who took over as leader of the Israelites after Moses died?",
@@ -72954,7 +72982,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2849",
-        "category": "judaism",
+        "category": "tradition",
         "level": 3,
         "text": {
             "en": "What is the name of the prayer for the deceased?",
@@ -72979,7 +73007,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2850",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the \"Brit Milah\"?",
@@ -73004,7 +73032,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2851",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the age for a boy to become a Bar Mitzvah?",
@@ -73029,7 +73057,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2852",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the age for a girl to become a Bat Mitzvah?",
@@ -73054,7 +73082,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2853",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the \"Shiva\"?",
@@ -73079,7 +73107,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2854",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is the \"Aufruf\"?",
@@ -73104,7 +73132,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2855",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is \"Pidyon HaBen\"?",
@@ -73129,7 +73157,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2856",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "Which Hebrew month usually falls around September/October?",
@@ -73154,7 +73182,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2857",
-        "category": "judaism",
+        "category": "holidays",
         "level": 3,
         "text": {
             "en": "Which Hebrew month is known for the holiday of Purim?",
@@ -73179,7 +73207,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2858",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What is \"Gematria\"?",
@@ -73204,7 +73232,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2859",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "What does the word \"Chai\" mean and what is its Gematria value?",
@@ -73229,7 +73257,7 @@ export const questions = [
     },
     {
         "id": "q-judaism-2860",
-        "category": "judaism",
+        "category": "bible_stories",
         "level": 3,
         "text": {
             "en": "In a Jewish wedding, how many circles does the bride usually make around the groom?",
