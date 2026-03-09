@@ -4,39 +4,46 @@
     left: 0;
     right: 0;
     bottom: 0;
+    height: fit-content;
+    /* Force fit content as requested */
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Center vertically again, relying on internal scroll */
     z-index: 2000;
     backdrop-filter: blur(5px);
-    overflow-y: auto;
-    padding: 5px;
-    /* Minimized to maximize width on small devices */
+    overflow: hidden;
+    /* Stop page/overlay from scrolling */
+    padding: 10px;
 }
 
 .modal-content {
-    width: 100%;
+    width: 95vw;
+    /* Fixed width to prevent horizontal overflow */
     max-width: 500px;
-    max-height: 95vh;
-    /* Slightly taller allowed */
+    max-height: 90vh;
+    /* Constrain height to force internal scroll */
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    /* Reduced inner padding */
+    padding: 0;
+    /* Remove padding here, move to header/scroll-area */
     position: relative;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     margin: auto;
-    /* Extra centering insurance */
+    overflow: hidden;
+    /* Contain children */
 }
 
 .modal-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
-    padding: 0 0.5rem;
-    /* Ensure items aren't touching the literal edge */
+    padding: 1rem;
+    min-height: 56px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    /* Header never shrinks */
 }
 
 .modal-header h2 {
@@ -45,6 +52,9 @@
 }
 
 .close-btn {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 1.4rem;
@@ -60,6 +70,12 @@
     border-radius: 50%;
     transition: all 0.2s;
     flex-shrink: 0;
+    z-index: 100;
+}
+
+[dir="rtl"] .close-btn {
+    left: auto;
+    right: 0.8rem;
 }
 
 .close-btn:hover {
@@ -70,7 +86,8 @@
 .settings-scroll-area {
     overflow-y: auto;
     flex: 1;
-    padding-right: 5px;
+    padding: 1rem;
+    padding-right: 1.2rem;
 }
 
 .settings-section {
@@ -165,12 +182,9 @@
 
 @media (max-width: 500px) {
     .modal-content {
-        padding: 0.8rem;
-        margin: 0;
-        width: 100%;
-        max-width: 100%;
+        width: 95vw;
+        max-height: 85vh;
         border-radius: 12px;
-        /* Slightly tighter curves */
     }
 
     .category-pool {

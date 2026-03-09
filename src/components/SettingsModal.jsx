@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { topics } from '../data/questions';
 import { translations } from '../data/translations';
 import './SettingsModal.css';
@@ -16,6 +16,12 @@ function SettingsModal({
     onMusicChange
 }) {
     const [expandedTopics, setExpandedTopics] = useState([]);
+
+    useEffect(() => {
+        if (isOpen) {
+            setExpandedTopics([]);
+        }
+    }, [isOpen]);
 
     if (!isOpen) return null;
 
@@ -113,7 +119,6 @@ function SettingsModal({
                                             className={`pool-item ${activeCategories.includes(topic.id) ? 'selected' : ''}`}
                                             onClick={() => onCategoryToggle(topic.id)}
                                         >
-                                            <span className="pool-icon">{topic.icon}</span>
                                             <span className="pool-name">{topic.name[language]}</span>
                                         </div>
                                     );
@@ -130,7 +135,6 @@ function SettingsModal({
                                             className={`pool-item folder-item ${isFullySelected ? 'selected' : isPartiallySelected ? 'partially-selected' : ''}`}
                                             onClick={() => toggleTopicExpand(topic.id)}
                                         >
-                                            <span className="pool-icon">{topic.icon}</span>
                                             <span className="pool-name">{topic.name[language]}</span>
                                             <div className={`folder-chevron ${isExpanded ? 'expanded' : ''}`}>▼</div>
                                         </div>

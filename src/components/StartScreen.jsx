@@ -183,7 +183,6 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                             className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`}
                             onClick={() => handleTopicToggle(topic.id)}
                         >
-                            <span className="topic-icon">{topic.icon}</span>
                             <div className="topic-info-main">
                                 <span className="topic-name">{topic.name[language]}</span>
                                 <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
