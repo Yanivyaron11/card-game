@@ -54,7 +54,8 @@ export const translations = {
         off: "Off",
         new_content_title: "New Category Added!",
         new_content_desc: "We've added a new category to explore: {name}. Happy playing!",
-        got_it: "Got it!"
+        got_it: "Got it!",
+        total_questions: "{n} questions in the game"
     },
 
 
@@ -113,7 +114,8 @@ export const translations = {
         off: "כבוי",
         new_content_title: "נושא חדש נוסף!",
         new_content_desc: "הוספנו נושא חדש למשחק: {name}. תהנו!",
-        got_it: "הבנתי!"
+        got_it: "הבנתי!",
+        total_questions: "{n} שאלות במשחק"
     }
 
 

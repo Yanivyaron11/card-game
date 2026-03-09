@@ -177,6 +177,9 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             />
 
             <h2>{t.lets_play}</h2>
+            <p className="total-questions-count">
+                {t.total_questions.replace('{n}', Object.values(questionCounts).reduce((a, b) => a + b, 0).toLocaleString())}
+            </p>
 
             <div className="config-section">
                 <h3>{t.game_mode}</h3>
