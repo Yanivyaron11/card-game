@@ -260,9 +260,9 @@ export const questionCounts = {
     // --- GENERATED_COUNTS_START ---
     "israel_cities": 400,
     // --- GENERATED_COUNTS_END ---
-    "bible_stories": 327,
-    "holidays": 50,
-    "tradition": 32,
+    "bible_stories": 377,
+    "holidays": 100,
+    "tradition": 82,
     "maccabi_haifa": 155,
     "chelsea": 100,
     "math": 500,
@@ -84529,5 +84529,3758 @@ export const questions = [
         },
         "correctAnswer": 0,
         "emoji": "🦗"
+    }
+,
+    {
+        "id": "q-judaism-ext-bible-1",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who built the ark to survive the flood?",
+            "he": "מי בנה את תיבת העצי גופר כדי להינצל מהמבול?"
+        },
+        "options": {
+            "en": [
+                "Noah",
+                "Moses",
+                "Abraham",
+                "Samuel"
+            ],
+            "he": [
+                "נח",
+                "משה",
+                "אברהם",
+                "שמואל"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🚢"
+    },
+    {
+        "id": "q-judaism-ext-bible-2",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who led the Israelites out of Egypt?",
+            "he": "מיהו האיש שהוציא את בני ישראל ממצרים?"
+        },
+        "options": {
+            "en": [
+                "Joshua",
+                "Aaron",
+                "Moses",
+                "David"
+            ],
+            "he": [
+                "יהושע",
+                "אהרן",
+                "משה",
+                "דוד"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "📜"
+    },
+    {
+        "id": "q-judaism-ext-bible-3",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who fought Goliath the Philistine with a sling and a stone?",
+            "he": "מי נלחם בגוליית הפלשתי בעזרת קלע ואבן?"
+        },
+        "options": {
+            "en": [
+                "Saul",
+                "David",
+                "Solomon",
+                "Samson"
+            ],
+            "he": [
+                "שאול",
+                "דויד",
+                "שלמה",
+                "שמשון"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🎯"
+    },
+    {
+        "id": "q-judaism-ext-bible-4",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Which prophet was swallowed by a big fish?",
+            "he": "איזה נביא נבלע על ידי דג גדול?"
+        },
+        "options": {
+            "en": [
+                "Jonah",
+                "Elijah",
+                "Jeremiah",
+                "Isaiah"
+            ],
+            "he": [
+                "יונה",
+                "אליהו",
+                "ירמיהו",
+                "ישעיהו"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🐋"
+    },
+    {
+        "id": "q-judaism-ext-bible-5",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Who was the strongest man who lost his power when his hair was cut?",
+            "he": "מי היה האיש החזק ביותר שאיבד את כוחו כששיערו נגזז?"
+        },
+        "options": {
+            "en": [
+                "Gideon",
+                "Barak",
+                "Samson",
+                "Jephthah"
+            ],
+            "he": [
+                "גדעון",
+                "ברק",
+                "שמשון",
+                "יפתח"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "💪"
+    },
+    {
+        "id": "q-judaism-ext-bible-6",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "What was the name of the King who built the first Temple?",
+            "he": "מה היה שמו של המלך שבנה את בית המקדש הראשון?"
+        },
+        "options": {
+            "en": [
+                "David",
+                "Solomon",
+                "Saul",
+                "Hezekiah"
+            ],
+            "he": [
+                "דוד",
+                "שלמה",
+                "שאול",
+                "חזקיהו"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🏛️"
+    },
+    {
+        "id": "q-judaism-ext-bible-7",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who was the Queen who saved the Jews in Shushan?",
+            "he": "מי הייתה המלכה שהצילה את היהודים בשושן?"
+        },
+        "options": {
+            "en": [
+                "Ruth",
+                "Esther",
+                "Deborah",
+                "Hannah"
+            ],
+            "he": [
+                "רות",
+                "אסתר",
+                "דבורה",
+                "חנה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👑"
+    },
+    {
+        "id": "q-judaism-ext-bible-8",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "What were the names of the two brothers, sons of Adam and Eve?",
+            "he": "איך קראו לשני האחים שהיו הבנים של אדם וחוה?"
+        },
+        "options": {
+            "en": [
+                "Cain and Abel",
+                "Shem and Ham",
+                "Isaac and Ishmael",
+                "Dan and Naphtali"
+            ],
+            "he": [
+                "קין והבל",
+                "שם וחם",
+                "יצחק וישמעאל",
+                "דן ונפתלי"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "👨‍👦‍👦"
+    },
+    {
+        "id": "q-judaism-ext-bible-9",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "Who ascended to heaven in a chariot of fire?",
+            "he": "מי עלה לשמיים במרכבת אש?"
+        },
+        "options": {
+            "en": [
+                "Elisha",
+                "Elijah",
+                "Moses",
+                "Enoch"
+            ],
+            "he": [
+                "אלישע",
+                "אליהו",
+                "משה",
+                "חנוך"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🔥"
+    },
+    {
+        "id": "q-judaism-ext-bible-10",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "Which leader made the sun stand still in Gibeon?",
+            "he": "איזה מנהיג עצר את השמש בגבעון?"
+        },
+        "options": {
+            "en": [
+                "Moses",
+                "Joshua",
+                "Deborah",
+                "Gideon"
+            ],
+            "he": [
+                "משה",
+                "יהושע",
+                "דבורה",
+                "גדעון"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "☀️"
+    },
+    {
+        "id": "q-judaism-ext-bible-11",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "How many spies did Moses send to scout the land of Canaan?",
+            "he": "כמה מרגלים שלח משה לתור את ארץ כנען?"
+        },
+        "options": {
+            "en": [
+                "10",
+                "12",
+                "7",
+                "40"
+            ],
+            "he": [
+                "10",
+                "12",
+                "7",
+                "40"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕵️"
+    },
+    {
+        "id": "q-judaism-ext-bible-12",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "What was special about the coat Jacob gave Joseph?",
+            "he": "מה היה צבע הכתונת המיוחדת שנתן יעקב ליוסף?"
+        },
+        "options": {
+            "en": [
+                "It was gold",
+                "It was a coat of many colors",
+                "It was long",
+                "It was holy"
+            ],
+            "he": [
+                "הייתה מזהב",
+                "הייתה כתונת פסים",
+                "הייתה ארוכה",
+                "הייתה קדושה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🧥"
+    },
+    {
+        "id": "q-judaism-ext-bible-13",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "What happened to the Tower of Babel when God intervened?",
+            "he": "מה קרה למגדל בבל כשאלוהים התערב?"
+        },
+        "options": {
+            "en": [
+                "It burned",
+                "Languages were confused",
+                "It sank in the sea",
+                "It turned to gold"
+            ],
+            "he": [
+                "הוא נשרף",
+                "השפות התבלבלו",
+                "הוא טבע בים",
+                "הוא נהפך לזהב"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🏗️"
+    },
+    {
+        "id": "q-judaism-ext-bible-14",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Who was the leader and judge who sat under a palm tree?",
+            "he": "מי הייתה המנהיגה והשופטת שידרה תחת התומר?"
+        },
+        "options": {
+            "en": [
+                "Jael",
+                "Deborah",
+                "Miriam",
+                "Zipporah"
+            ],
+            "he": [
+                "יעל",
+                "דבורה",
+                "מיריים",
+                "ציפורה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🌴"
+    },
+    {
+        "id": "q-judaism-ext-bible-15",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "How many years did the Israelites wander in the desert?",
+            "he": "כמה שנים נדדו בני ישראל במדבר?"
+        },
+        "options": {
+            "en": [
+                "7",
+                "40",
+                "10",
+                "100"
+            ],
+            "he": [
+                "7",
+                "40",
+                "10",
+                "100"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🏜️"
+    },
+    {
+        "id": "q-judaism-ext-bible-16",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "On which mountain did Moses receive the Ten Commandments?",
+            "he": "באיזה הר קיבל משה את עשרת הדיברות?"
+        },
+        "options": {
+            "en": [
+                "Mount Nebo",
+                "Mount Sinai",
+                "Mount Tabor",
+                "Mount Hermon"
+            ],
+            "he": [
+                "הר נבו",
+                "הר סיני",
+                "הר תבור",
+                "הר החרמון"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "⛰️"
+    },
+    {
+        "id": "q-judaism-ext-bible-17",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Who was the woman who turned into a pillar of salt?",
+            "he": "מי הייתה האישה שהפכה לנציב מלח?"
+        },
+        "options": {
+            "en": [
+                "Lot's wife",
+                "Sarah",
+                "Rebecca",
+                "Rachel"
+            ],
+            "he": [
+                "אשת לוט",
+                "שרה",
+                "רבקה",
+                "רחל"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🧂"
+    },
+    {
+        "id": "q-judaism-ext-bible-18",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who interpreted Pharaoh's dreams in Egypt?",
+            "he": "מי פתר את חלומות פרעה במצרים?"
+        },
+        "options": {
+            "en": [
+                "Judah",
+                "Benjamin",
+                "Joseph",
+                "Levi"
+            ],
+            "he": [
+                "יהודה",
+                "בנימין",
+                "יוסף",
+                "לוי"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "💤"
+    },
+    {
+        "id": "q-judaism-ext-bible-19",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "What was the name of the first King of Israel?",
+            "he": "מה היה שמו של המלך הראשון של ישראל?"
+        },
+        "options": {
+            "en": [
+                "David",
+                "Saul",
+                "Solomon",
+                "Jeroboam"
+            ],
+            "he": [
+                "דוד",
+                "שאול",
+                "שלמה",
+                "ירבעם"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👑"
+    },
+    {
+        "id": "q-judaism-ext-bible-20",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Who led the Israelites into Canaan after Moses died?",
+            "he": "מי הכניס את בני ישראל לארץ כנען אחרי מות משה?"
+        },
+        "options": {
+            "en": [
+                "Caleb",
+                "Joshua",
+                "Phinehas",
+                "Eleazar"
+            ],
+            "he": [
+                "כלב",
+                "יהושע",
+                "פנחס",
+                "אלעזר"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🎺"
+    },
+    {
+        "id": "q-judaism-ext-bible-21",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Who was Jacob's first wife?",
+            "he": "מיהי האישה שהייתה אשתו הראשונה של יעקב?"
+        },
+        "options": {
+            "en": [
+                "Rachel",
+                "Leah",
+                "Zilpah",
+                "Bilhah"
+            ],
+            "he": [
+                "רחל",
+                "לאה",
+                "זילפה",
+                "בלהה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "💍"
+    },
+    {
+        "id": "q-judaism-ext-bible-22",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "Which stream did Jacob cross when he wrestled with the angel?",
+            "he": "איזה נחל עבר יעקב כשנאבק עם המלאך?"
+        },
+        "options": {
+            "en": [
+                "Yarkon",
+                "Jabbok",
+                "Arnon",
+                "Jordan"
+            ],
+            "he": [
+                "נחל הירקון",
+                "מעבר יבוק",
+                "נחל ארנון",
+                "הירדן"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🤼"
+    },
+    {
+        "id": "q-judaism-ext-bible-23",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who rescued Moses from the Nile?",
+            "he": "מי הייתה המיילדת שהצילה את משה מהיאור?"
+        },
+        "options": {
+            "en": [
+                "Jochebed",
+                "Pharaoh's daughter",
+                "Miriam",
+                "Zipporah"
+            ],
+            "he": [
+                "יוכבד",
+                "בת פרעה",
+                "מרים",
+                "ציפורה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🧺"
+    },
+    {
+        "id": "q-judaism-ext-bible-24",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "What was the name of the first High Priest?",
+            "he": "מה היה שמו של הכהן הגדול הראשון?"
+        },
+        "options": {
+            "en": [
+                "Moses",
+                "Aaron",
+                "Eleazar",
+                "Ithamar"
+            ],
+            "he": [
+                "משה",
+                "אהרן",
+                "אלעזר",
+                "איתמר"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👳"
+    },
+    {
+        "id": "q-judaism-ext-bible-25",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "Who killed Sisera with a tent peg?",
+            "he": "מי הרג את סיסרא בעזרת יתד האוהל?"
+        },
+        "options": {
+            "en": [
+                "Deborah",
+                "Jael",
+                "Hannah",
+                "Abigail"
+            ],
+            "he": [
+                "דבורה",
+                "יעל",
+                "חנה",
+                "אביגיל"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "⛺"
+    },
+    {
+        "id": "q-judaism-ext-bible-26",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "What were the names of the three patriarchs?",
+            "he": "איך נקראו שלושת אבות האומה?"
+        },
+        "options": {
+            "en": [
+                "Moses, Aaron, Miriam",
+                "Abraham, Isaac, Jacob",
+                "David, Solomon, Saul",
+                "Shem, Ham, Japheth"
+            ],
+            "he": [
+                "משה אהרן ומרים",
+                "אברהם יצחק ויעקב",
+                "דוד שלמה ושאול",
+                "שם חם ויפת"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👴"
+    },
+    {
+        "id": "q-judaism-ext-bible-27",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who are the four matriarchs?",
+            "he": "מיהן ארבע האמהות?"
+        },
+        "options": {
+            "en": [
+                "Sarah, Rebecca, Rachel, Leah",
+                "Esther, Ruth, Deborah",
+                "Jochebed, Miriam, Zipporah",
+                "Hannah, Peninnah"
+            ],
+            "he": [
+                "שרה רבקה רחל ולאה",
+                "אסתר רות ודבורה",
+                "יוכבד מרים וציפורה",
+                "חנה ופנינה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "👸"
+    },
+    {
+        "id": "q-judaism-ext-bible-28",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "What did God create on the first day?",
+            "he": "מה ברא אלוהים ביום הראשון?"
+        },
+        "options": {
+            "en": [
+                "Animals",
+                "Light and darkness",
+                "Sun and moon",
+                "Plants"
+            ],
+            "he": [
+                "חיות",
+                "אור וחושך",
+                "שמש וירח",
+                "צמחים"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "💡"
+    },
+    {
+        "id": "q-judaism-ext-bible-29",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "What act of sanctification did Hananiah, Mishael, and Azariah perform?",
+            "he": "מהו קידוש השם שעשו חנניה מישאל ועזריה?"
+        },
+        "options": {
+            "en": [
+                "Built a synagogue",
+                "Entered the fiery furnace",
+                "Went to Jerusalem",
+                "Wrote a Torah"
+            ],
+            "he": [
+                "בנו בית כנסת",
+                "נכנסו לכבשן האש",
+                "עלו לירושלים",
+                "כתבו ספר תורה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🔥"
+    },
+    {
+        "id": "q-judaism-ext-bible-30",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Who was the man who was 'slow of speech and slow of tongue'?",
+            "he": "מי היה האיש שהיה 'כבד פה וכבד לשון'?"
+        },
+        "options": {
+            "en": [
+                "Moses",
+                "Aaron",
+                "Jeremiah",
+                "Jonah"
+            ],
+            "he": [
+                "משה",
+                "אהרן",
+                "ירמיהו",
+                "יונה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🗣️"
+    },
+    {
+        "id": "q-judaism-ext-bible-31",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who threw Joseph into the pit?",
+            "he": "מי זרק את יוסף לבור?"
+        },
+        "options": {
+            "en": [
+                "His brothers",
+                "The Ishmaelites",
+                "The Egyptians",
+                "The Philistines"
+            ],
+            "he": [
+                "אחיו",
+                "הישמעאלים",
+                "המצרים",
+                "הפלשתים"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🕳️"
+    },
+    {
+        "id": "q-judaism-ext-bible-32",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Which plague was the eighth?",
+            "he": "איזו מכה הייתה השמינית?"
+        },
+        "options": {
+            "en": [
+                "Blood",
+                "Frogs",
+                "Locusts",
+                "Darkness"
+            ],
+            "he": [
+                "דם",
+                "צפרדע",
+                "ארבה",
+                "חושך"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🦗"
+    },
+    {
+        "id": "q-judaism-ext-bible-33",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "What did the Israelites eat in the desert?",
+            "he": "מה אכלו בני ישראל במדבר?"
+        },
+        "options": {
+            "en": [
+                "Bread",
+                "Manna",
+                "Meat",
+                "Grapes"
+            ],
+            "he": [
+                "לחם",
+                "מן",
+                "בשר",
+                "ענבים"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🍞"
+    },
+    {
+        "id": "q-judaism-ext-bible-34",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "How many times did they circle Jericho on the seventh day?",
+            "he": "כמה פעמים הקיפו את יריחו ביום השביעי?"
+        },
+        "options": {
+            "en": [
+                "Once",
+                "Three times",
+                "Seven times",
+                "Ten times"
+            ],
+            "he": [
+                "פעם אחת",
+                "שלוש פעמים",
+                "שבע פעמים",
+                "עשר פעמים"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🎺"
+    },
+    {
+        "id": "q-judaism-ext-bible-35",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Who was Ruth?",
+            "he": "מי הייתה רות?"
+        },
+        "options": {
+            "en": [
+                "The Moabite convert",
+                "Moses' wife",
+                "Pharaoh's daughter",
+                "David's sister"
+            ],
+            "he": [
+                "הגיורת המואבייה",
+                "אשת משה",
+                "בת פרעה",
+                "אחות דוד"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🌾"
+    },
+    {
+        "id": "q-judaism-ext-bible-36",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "Which prophet was taken to heaven in a whirlwind?",
+            "he": "איזה נביא נלקח בסערה השמימה?"
+        },
+        "options": {
+            "en": [
+                "Elijah",
+                "Elisha",
+                "Micah",
+                "Habakkuk"
+            ],
+            "he": [
+                "אליהו",
+                "אלישע",
+                "מיכה",
+                "חבקוק"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🌪️"
+    },
+    {
+        "id": "q-judaism-ext-bible-37",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "Who was Boaz?",
+            "he": "מי היה בועז?"
+        },
+        "options": {
+            "en": [
+                "King of Judah",
+                "Ruth's husband",
+                "High Priest",
+                "Prophet"
+            ],
+            "he": [
+                "מלך יהודה",
+                "בעלה של רות",
+                "כהן גדול",
+                "נביא"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🏘️"
+    },
+    {
+        "id": "q-judaism-ext-bible-38",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "What was the name of Moses and Aaron's sister?",
+            "he": "מה שמה של אחות משה ואהרן?"
+        },
+        "options": {
+            "en": [
+                "Miriam",
+                "Leah",
+                "Dinah",
+                "Tamar"
+            ],
+            "he": [
+                "מרים",
+                "לאה",
+                "דינה",
+                "תמר"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "💃"
+    },
+    {
+        "id": "q-judaism-ext-bible-39",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Which sea was split by the Israelites?",
+            "he": "איזה ים נחצה על ידי בני ישראל?"
+        },
+        "options": {
+            "en": [
+                "The Dead Sea",
+                "The Mediterranean",
+                "The Red Sea",
+                "The Sea of Galilee"
+            ],
+            "he": [
+                "ים המלח",
+                "הים התיכון",
+                "ים סוף",
+                "ים כנרת"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🌊"
+    },
+    {
+        "id": "q-judaism-ext-bible-40",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who was the master of dreams?",
+            "he": "מי היה בעל החלומות?"
+        },
+        "options": {
+            "en": [
+                "Joseph",
+                "Daniel",
+                "Pharaoh",
+                "Jacob"
+            ],
+            "he": [
+                "יוסף",
+                "דניאל",
+                "פרעה",
+                "יעקב"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "💭"
+    },
+    {
+        "id": "q-judaism-ext-bible-41",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "What was the name of Abraham's wife?",
+            "he": "מה שם הרעייה של אברהם?"
+        },
+        "options": {
+            "en": [
+                "Sarah",
+                "Rebecca",
+                "Rachel",
+                "Leah"
+            ],
+            "he": [
+                "שרה",
+                "רבקה",
+                "רחל",
+                "לאה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "👵"
+    },
+    {
+        "id": "q-judaism-ext-bible-42",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Which son of Isaac loved to hunt?",
+            "he": "מי היה בנו של יצחק שאהב לצוד?"
+        },
+        "options": {
+            "en": [
+                "Jacob",
+                "Esau",
+                "Joseph",
+                "Judah"
+            ],
+            "he": [
+                "יעקב",
+                "עשו",
+                "יוסף",
+                "יהודה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🏹"
+    },
+    {
+        "id": "q-judaism-ext-bible-43",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "What was the sign of Noah's covenant?",
+            "he": "מהו סימן הברית של נח?"
+        },
+        "options": {
+            "en": [
+                "The flood",
+                "The ark",
+                "Rainbow",
+                "Dove"
+            ],
+            "he": [
+                "המבול",
+                "התיבה",
+                "קשת בענן",
+                "היונה"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🌈"
+    },
+    {
+        "id": "q-judaism-ext-bible-44",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "How many tribes did Israel have?",
+            "he": "כמה שבטים היו לישראל?"
+        },
+        "options": {
+            "en": [
+                "7",
+                "10",
+                "12",
+                "13"
+            ],
+            "he": [
+                "7",
+                "10",
+                "12",
+                "13"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🕍"
+    },
+    {
+        "id": "q-judaism-ext-bible-45",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who was the wisest man?",
+            "he": "מי היה המלך החכם באדם?"
+        },
+        "options": {
+            "en": [
+                "Saul",
+                "David",
+                "Solomon",
+                "Hezekiah"
+            ],
+            "he": [
+                "שאול",
+                "דוד",
+                "שלמה",
+                "חזקיהו"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🧠"
+    },
+    {
+        "id": "q-judaism-ext-bible-46",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "Who made Jerusalem the capital city?",
+            "he": "מי בנה את ירושלים כעיר הבירה?"
+        },
+        "options": {
+            "en": [
+                "Joshua",
+                "Saul",
+                "David",
+                "Solomon"
+            ],
+            "he": [
+                "יהושע",
+                "שאול",
+                "דוד",
+                "שלמה"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🕍"
+    },
+    {
+        "id": "q-judaism-ext-bible-47",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "Where did the Israelites grow up in Egypt?",
+            "he": "איפה גדלו בני ישראל במצרים?"
+        },
+        "options": {
+            "en": [
+                "Cairo",
+                "Goshen",
+                "Alexandria",
+                "Sinai"
+            ],
+            "he": [
+                "קהיר",
+                "גושן",
+                "אלכסנדריה",
+                "סיני"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🌾"
+    },
+    {
+        "id": "q-judaism-ext-bible-48",
+        "category": "bible_stories",
+        "level": 3,
+        "text": {
+            "en": "Who was 'the weeping prophet'?",
+            "he": "מי היה 'הנביא הבוכה'?"
+        },
+        "options": {
+            "en": [
+                "Jeremiah",
+                "Isaiah",
+                "Ezekiel",
+                "Amos"
+            ],
+            "he": [
+                "ירמיהו",
+                "ישעיהו",
+                "יחזקאל",
+                "עמוס"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "😢"
+    },
+    {
+        "id": "q-judaism-ext-bible-49",
+        "category": "bible_stories",
+        "level": 2,
+        "text": {
+            "en": "What was the vessel Moses was placed in?",
+            "he": "מהו הכלי שבו הונח משה ביאור?"
+        },
+        "options": {
+            "en": [
+                "Boat",
+                "Ark",
+                "Box",
+                "Basket"
+            ],
+            "he": [
+                "סירה",
+                "תיבה",
+                "קופסה",
+                "סל"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🧺"
+    },
+    {
+        "id": "q-judaism-ext-bible-50",
+        "category": "bible_stories",
+        "level": 1,
+        "text": {
+            "en": "Who saw the burning bush?",
+            "he": "מי ראה את הסנה הבוער?"
+        },
+        "options": {
+            "en": [
+                "Abraham",
+                "Isaac",
+                "Moses",
+                "Noah"
+            ],
+            "he": [
+                "אברהם",
+                "יצחק",
+                "משה",
+                "נח"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🔥"
+    }
+,
+    {
+        "id": "q-judaism-ext-holidays-1",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "On which holiday do we eat Matzah?",
+            "he": "באיזה חג אוכלים מצות?"
+        },
+        "options": {
+            "en": [
+                "Passover",
+                "Sukkot",
+                "Hanukkah",
+                "Shavuot"
+            ],
+            "he": [
+                "פסח",
+                "סוכות",
+                "חנוכה",
+                "שבועות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🍞"
+    },
+    {
+        "id": "q-judaism-ext-holidays-2",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "Which instrument is played on Rosh Hashanah?",
+            "he": "איזה כלי מנגנים בו בראש השנה?"
+        },
+        "options": {
+            "en": [
+                "Guitar",
+                "Flute",
+                "Shofar",
+                "Drums"
+            ],
+            "he": [
+                "גיטרה",
+                "חליל",
+                "שופר",
+                "תופים"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🎺"
+    },
+    {
+        "id": "q-judaism-ext-holidays-3",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "What do we light for eight days on Hanukkah?",
+            "he": "מה מדליקים שמונה ימים בחנוכה?"
+        },
+        "options": {
+            "en": [
+                "Shabbat candles",
+                "Hanukkiah",
+                "Bonfires",
+                "Fireworks"
+            ],
+            "he": [
+                "נרות שבת",
+                "חנוכייה",
+                "מדורות",
+                "זיקוקים"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕎"
+    },
+    {
+        "id": "q-judaism-ext-holidays-4",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "On which holiday do we dress up and have a parade?",
+            "he": "באיזה חג מתחפשים ועושים עדלאידע?"
+        },
+        "options": {
+            "en": [
+                "Purim",
+                "Hanukkah",
+                "Passover",
+                "Independence Day"
+            ],
+            "he": [
+                "פורים",
+                "חנוכה",
+                "פסח",
+                "יום העצמאות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎭"
+    },
+    {
+        "id": "q-judaism-ext-holidays-5",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "What do we build in the yard for Sukkot?",
+            "he": "מה בונים בחצר לכבוד חג הסוכות?"
+        },
+        "options": {
+            "en": [
+                "Tent",
+                "Small house",
+                "Sukkah",
+                "Warehouse"
+            ],
+            "he": [
+                "אוהל",
+                "בית קטן",
+                "סוכה",
+                "מחסן"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🛖"
+    },
+    {
+        "id": "q-judaism-ext-holidays-6",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "On which holiday do we eat dairy foods like cheesecake?",
+            "he": "באיזה חג אוכלים מאכלי חלב כמו עוגת גבינה?"
+        },
+        "options": {
+            "en": [
+                "Shavuot",
+                "Passover",
+                "Purim",
+                "Sukkot"
+            ],
+            "he": [
+                "שבועות",
+                "פסח",
+                "פורים",
+                "סוכות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🍰"
+    },
+    {
+        "id": "q-judaism-ext-holidays-7",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "What do we dip in honey on Rosh Hashanah?",
+            "he": "מה טובלים בדבש בראש השנה?"
+        },
+        "options": {
+            "en": [
+                "Apple",
+                "Bread",
+                "Grapes",
+                "Watermelon"
+            ],
+            "he": [
+                "תפוח",
+                "לחם",
+                "ענבים",
+                "אבטיח"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🍎"
+    },
+    {
+        "id": "q-judaism-ext-holidays-8",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "Which holiday is also called the 'New Year for Trees'?",
+            "he": "איזה חג נקרא גם 'חג האילנות'?"
+        },
+        "options": {
+            "en": [
+                "Shavuot",
+                "Tu BiShvat",
+                "Hanukkah",
+                "Passover"
+            ],
+            "he": [
+                "שבועות",
+                "טו בשבט",
+                "חנוכה",
+                "פסח"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🌳"
+    },
+    {
+        "id": "q-judaism-ext-holidays-9",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "On which holiday do we light bonfires and eat potatoes?",
+            "he": "באיזה חג מדליקים מדורות ואוכלים תפוחי אדמה?"
+        },
+        "options": {
+            "en": [
+                "Lag BaOmer",
+                "Hanukkah",
+                "Independence Day",
+                "Sukkot"
+            ],
+            "he": [
+                "ל''ג בעומר",
+                "חנוכה",
+                "יום העצמאות",
+                "סוכות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🔥"
+    },
+    {
+        "id": "q-judaism-ext-holidays-10",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "On which day of the year do we fast and not eat or drink?",
+            "he": "באיזה יום בשנה צמים ולא אוכלים ולא שותים?"
+        },
+        "options": {
+            "en": [
+                "Independence Day",
+                "Yom Kippur",
+                "Rosh Hashanah",
+                "Sukkot"
+            ],
+            "he": [
+                "יום העצמאות",
+                "יום כיפור",
+                "ראש השנה",
+                "סוכות"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕍"
+    },
+    {
+        "id": "q-judaism-ext-holidays-11",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What are the 'Four Species'?",
+            "he": "מהם 'ארבעת המינים'?"
+        },
+        "options": {
+            "en": [
+                "Apple, honey, pomegranate, date",
+                "Lulav, Etrog, Hadas, Arava",
+                "Matzah, Maror, Charoset, Egg",
+                "Donut, Latke, Dreidel, Coin"
+            ],
+            "he": [
+                "תפוח, דבש, רימון ותמר",
+                "לולב, אתרוג, הדס וערבה",
+                "מצה, מרור, חרוסת וביצה",
+                "סופגנייה, לביבה, סביבון ומטבע"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🌿"
+    },
+    {
+        "id": "q-judaism-ext-holidays-12",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "How many candles do we light on the last day of Hanukkah (without the Shamash)?",
+            "he": "כמה נרות מדליקים ביום האחרון של חנוכה (בלי השמש)?"
+        },
+        "options": {
+            "en": [
+                "7",
+                "8",
+                "9",
+                "1"
+            ],
+            "he": [
+                "7",
+                "8",
+                "9",
+                "1"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕯️"
+    },
+    {
+        "id": "q-judaism-ext-holidays-13",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What does the Dreidel symbolize?",
+            "he": "מה מסמל הסביבון?"
+        },
+        "options": {
+            "en": [
+                "The battle victory",
+                "A great miracle happened there",
+                "Building the Temple",
+                "Leaving Egypt"
+            ],
+            "he": [
+                "את הניצחון בקרב",
+                "נס גדול היה שם",
+                "את בניית בית המקדש",
+                "את היציאה ממצרים"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🌀"
+    },
+    {
+        "id": "q-judaism-ext-holidays-14",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "On which holiday do we read the Haggadah?",
+            "he": "באיזה חג קוראים את הגדה?"
+        },
+        "options": {
+            "en": [
+                "Sukkot",
+                "Passover",
+                "Shavuot",
+                "Purim"
+            ],
+            "he": [
+                "סוכות",
+                "פסח",
+                "חג השבועות",
+                "פורים"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "📖"
+    },
+    {
+        "id": "q-judaism-ext-holidays-15",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "Which holiday marks the receiving of the Torah?",
+            "he": "איזה חג מציין את קבלת התורה?"
+        },
+        "options": {
+            "en": [
+                "Shavuot",
+                "Yom Kippur",
+                "Rosh Hashanah",
+                "Sukkot"
+            ],
+            "he": [
+                "שבועות",
+                "יום כיפור",
+                "ראש השנה",
+                "סוכות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "📜"
+    },
+    {
+        "id": "q-judaism-ext-holidays-16",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "What do we give to friends and neighbors on Purim?",
+            "he": "מה מחלקים בפורים לחברים ולשכנים?"
+        },
+        "options": {
+            "en": [
+                "Matzahs",
+                "Passover gift",
+                "Mishloach Manot",
+                "Hanukkah Gelt"
+            ],
+            "he": [
+                "מצות",
+                "שי לפסח",
+                "משלוח מנות",
+                "דמי חנוכה"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🎁"
+    },
+    {
+        "id": "q-judaism-ext-holidays-17",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "Which fruit is commonly eaten on Rosh Hashanah to increase our merits?",
+            "he": "איזה פרי נהוג לאכול בראש השנה כדי שזכויותינו ירבו כרימון?"
+        },
+        "options": {
+            "en": [
+                "Grapes",
+                "Pomegranate",
+                "Date",
+                "Apple"
+            ],
+            "he": [
+                "ענבים",
+                "רימון",
+                "תמר",
+                "תפוח"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🏮"
+    },
+    {
+        "id": "q-judaism-ext-holidays-18",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "On which holiday do we eat donuts?",
+            "he": "באיזה חג אוכלים סופגניות?"
+        },
+        "options": {
+            "en": [
+                "Purim",
+                "Hanukkah",
+                "Passover",
+                "Lag BaOmer"
+            ],
+            "he": [
+                "פורים",
+                "חנוכה",
+                "פסח",
+                "ל''ג בעומר"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🍩"
+    },
+    {
+        "id": "q-judaism-ext-holidays-19",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What do some people sit on or wear on Yom Kippur (traditionally)?",
+            "he": "על מה יושבים ביום כיפור בבית הכנסת (לפי המסורת)?"
+        },
+        "options": {
+            "en": [
+                "Gold chairs",
+                "Leather shoes",
+                "White clothes and canvas shoes",
+                "Colorful holiday clothes"
+            ],
+            "he": [
+                "כסאות זהב",
+                "נעלי עור",
+                "מבגדים לבנים ונעלי בד",
+                "בגדי חג צבעוניים"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "👟"
+    },
+    {
+        "id": "q-judaism-ext-holidays-20",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "What is 'Hamantash'?",
+            "he": "מהו 'אוזן המן'?"
+        },
+        "options": {
+            "en": [
+                "Type of bread",
+                "Filled cookie for Purim",
+                "One of the seven species",
+                "Sukkah decoration"
+            ],
+            "he": [
+                "סוג של לחם",
+                "עוגייה ממולאת לפורים",
+                "פרי משבעת המינים",
+                "קישוט לסוכה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "📐"
+    },
+    {
+        "id": "q-judaism-ext-holidays-21",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "Who were the Maccabees?",
+            "he": "מי היו המכבים?"
+        },
+        "options": {
+            "en": [
+                "Kings of Israel",
+                "The fighters of Hanukkah",
+                "Builders of the Tabernacle",
+                "False prophets"
+            ],
+            "he": [
+                "מלכי ישראל",
+                "הלוחמים של חנוכה",
+                "בוני המשכן",
+                "נביאי השקר"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "⚔️"
+    },
+    {
+        "id": "q-judaism-ext-holidays-22",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "Which ceremony is held at the end of Shabbat or holidays?",
+            "he": "איזה טקס נערך בצאת השבת או בצאת החגים?"
+        },
+        "options": {
+            "en": [
+                "Kiddush",
+                "Havdalah",
+                "Kabbalat Shabbat",
+                "Birkat HaMazon"
+            ],
+            "he": [
+                "קידוש",
+                "הבדלה",
+                "קבלת שבת",
+                "ברכת המזון"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕯️"
+    },
+    {
+        "id": "q-judaism-ext-holidays-23",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "On which holiday do we read the Megillah (Scroll) of Esther?",
+            "he": "באיזה חג קוראים את מגילת אסתר?"
+        },
+        "options": {
+            "en": [
+                "Passover",
+                "Sukkot",
+                "Purim",
+                "Hanukkah"
+            ],
+            "he": [
+                "פסח",
+                "סוכות",
+                "פורים",
+                "חנוכה"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "👸"
+    },
+    {
+        "id": "q-judaism-ext-holidays-24",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "What do we do in 'Tachlich' on Rosh Hashanah?",
+            "he": "מה עושים ב'תשליך' בראש השנה?"
+        },
+        "options": {
+            "en": [
+                "Throw bread into water",
+                "Eat apple in honey",
+                "Blow the Shofar",
+                "Build a sukkah"
+            ],
+            "he": [
+                "משליכים חתיכות לחם למים",
+                "אוכלים תפוח בדבש",
+                "תוקעים בשופר",
+                "בונים סוכה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🌊"
+    },
+    {
+        "id": "q-judaism-ext-holidays-25",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "What is the Shabbat before Passover called?",
+            "he": "כיצד נקרא השבת שלפני חג הפסח?"
+        },
+        "options": {
+            "en": [
+                "Shabbat HaMalka",
+                "Shabbat HaGadol",
+                "Shabbat Shuva",
+                "Shabbat Chazon"
+            ],
+            "he": [
+                "שבת המלכה",
+                "שבת הגדול",
+                "שבת שובה",
+                "שבת חזון"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕍"
+    },
+    {
+        "id": "q-judaism-ext-holidays-26",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "On which holiday is it customary to bring 'Bikkurim' (first fruits)?",
+            "he": "באיזה חג נוהגים להביא ביכורים?"
+        },
+        "options": {
+            "en": [
+                "Sukkot",
+                "Shavuot",
+                "Passover",
+                "Rosh Hashanah"
+            ],
+            "he": [
+                "סוכות",
+                "שבועות",
+                "פסח",
+                "ראש השנה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🧺"
+    },
+    {
+        "id": "q-judaism-ext-holidays-27",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What does the wine symbolize in Kiddush?",
+            "he": "מה מסמל היין בקידוש?"
+        },
+        "options": {
+            "en": [
+                "Joy and holiness",
+                "The war",
+                "The sorrow",
+                "Tilling the soil"
+            ],
+            "he": [
+                "שמחה וקדושה",
+                "את המלחמה",
+                "את הצער",
+                "את עבודת האדמה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🍷"
+    },
+    {
+        "id": "q-judaism-ext-holidays-28",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What is 'Seudah Mafseket'?",
+            "he": "מהי 'סעודה מפסקת'?"
+        },
+        "options": {
+            "en": [
+                "Final meal before fast",
+                "Seder night meal",
+                "Meal after Shabbat ends",
+                "Purim meal"
+            ],
+            "he": [
+                "הסעודה האחרונה לפני הצום",
+                "סעודת ליל הסדר",
+                "הארוחה אחרי יציאת שבת",
+                "סעודת פורים"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🥙"
+    },
+    {
+        "id": "q-judaism-ext-holidays-29",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "Which vessel is invalid for Hanukkah use?",
+            "he": "איזה כלי פסול לשימוש בחנוכה?"
+        },
+        "options": {
+            "en": [
+                "Metal Hanukkiah",
+                "Glass Hanukkiah",
+                "Non-aligned/uneven Hanukkiah",
+                "Olive oil Hanukkiah"
+            ],
+            "he": [
+                "חנוכייה ממתכת",
+                "חנוכייה מזכוכית",
+                "חנוכייה עם נרות בשורה לא ישרה (לא כשרה)",
+                "חנוכייה עם שמן זית"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🕯️"
+    },
+    {
+        "id": "q-judaism-ext-holidays-30",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "Who is traditionally 'Shamash' (helper) of the Hanukkiah?",
+            "he": "מי נחשב ל'אור של חנוכה' בתוך המשפחה?"
+        },
+        "options": {
+            "en": [
+                "The candle used to light others",
+                "The leader",
+                "The youngest child",
+                "The enlightened one"
+            ],
+            "he": [
+                "הנר שבו מדליקים את שאר הנרות",
+                "המנהיג",
+                "הילד הקטן",
+                "הנאור"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏮"
+    },
+    {
+        "id": "q-judaism-ext-holidays-31",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What are the 'Seven Species'?",
+            "he": "מהם 'שבעת המינים'?"
+        },
+        "options": {
+            "en": [
+                "Wheat, barley, grape, fig, pome., olive, honey",
+                "Apple, orange, banana, peach, lemon, plum, waterm.",
+                "Matzah, wine, charoset, karpas, maror, chazeret, egg",
+                "Sukkah, lulav, etrog, hadas, arava, shofar, challah"
+            ],
+            "he": [
+                "חיטה, שעורה, גפן, תאנה, רימון, זית ודבש (תמר)",
+                "תפוח, תפוז, בננה, אפרסק, לימון, שזיף ואבטיח",
+                "מצה, יין, חרוסת, כרפס, מרור, חזרת וביצה",
+                "סוכה, לולב, אתרוג, הדס, ערבה, שופר וחלה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🍇"
+    },
+    {
+        "id": "q-judaism-ext-holidays-32",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "On which holiday is it customary to stay up all night studying?",
+            "he": "באיזה חג נוהגים להישאר ערים כל הלילה וללמוד?"
+        },
+        "options": {
+            "en": [
+                "Yom Kippur",
+                "Shavuot night",
+                "Seder night",
+                "Rosh Hashanah night"
+            ],
+            "he": [
+                "יום כיפור",
+                "ליל שבועות",
+                "ליל הסדר",
+                "ליל ראש השנה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "📖"
+    },
+    {
+        "id": "q-judaism-ext-holidays-33",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "What is 'Pesach Seder'?",
+            "he": "מהו 'סדר פסח'?"
+        },
+        "options": {
+            "en": [
+                "House cleaning",
+                "The festive Passover meal",
+                "Making Matzahs",
+                "Cleaning Chametz"
+            ],
+            "he": [
+                "סידור הבית",
+                "הארוחה החגיגית של ליל הפסח",
+                "הכנת המצות",
+                "ניקוי החמץ"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🍽️"
+    },
+    {
+        "id": "q-judaism-ext-holidays-34",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "What is 'Blessing of the Sun'?",
+            "he": "מהי 'ברכת החמה'?"
+        },
+        "options": {
+            "en": [
+                "Daily morning blessing",
+                "Rare blessing every 28 years",
+                "Solar eclipse blessing",
+                "Yom Kippur end blessing"
+            ],
+            "he": [
+                "ברכה שאומרים כל בוקר",
+                "ברכה נדירה פעם ב-28 שנים",
+                "ברכה כשיש ליקוי חמה",
+                "ברכה בסיום יום כיפור"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "☀️"
+    },
+    {
+        "id": "q-judaism-ext-holidays-35",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "What is the festive Shabbat bread called?",
+            "he": "איך קוראים ללחם החגיגי של שבת?"
+        },
+        "options": {
+            "en": [
+                "Pita",
+                "Challah",
+                "Matzah",
+                "Bun"
+            ],
+            "he": [
+                "פיתה",
+                "חלה",
+                "מצה",
+                "לחמנייה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🥯"
+    },
+    {
+        "id": "q-judaism-ext-holidays-36",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What do we do at the end of Yom Kippur?",
+            "he": "מה עושים במוצאי יום כיפור?"
+        },
+        "options": {
+            "en": [
+                "Blow Shofar and eat",
+                "Go to sleep",
+                "Start Seder night",
+                "Light Hanukkiah"
+            ],
+            "he": [
+                "תוקעים בשופר ואוכלים",
+                "הולכים לישון",
+                "מתחילים את ליל הסדר",
+                "מדליקים חנוכייה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎺"
+    },
+    {
+        "id": "q-judaism-ext-holidays-37",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What is 'Simchat Torah'?",
+            "he": "מהי 'שמחת תורה'?"
+        },
+        "options": {
+            "en": [
+                "Moses' birthday",
+                "Finish and restart the Torah reading",
+                "The day Temple was built",
+                "Vacation from school"
+            ],
+            "he": [
+                "יום הולדת למשה",
+                "חג שבו מסיימים ומתחילים את התורה מחדש",
+                "היום שבו נבנה בית המקדש",
+                "חופשה מהלימודים"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "💃"
+    },
+    {
+        "id": "q-judaism-ext-holidays-38",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "Which holiday celebrates the Maccabees' victory over the Greeks?",
+            "he": "באיזה חג מציינים את ניצחון המכבים על היוונים?"
+        },
+        "options": {
+            "en": [
+                "Purim",
+                "Hanukkah",
+                "Passover",
+                "Independence Day"
+            ],
+            "he": [
+                "פורים",
+                "חנוכה",
+                "פסח",
+                "יום העצמאות"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕯️"
+    },
+    {
+        "id": "q-judaism-ext-holidays-39",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "What is a 'Mitzvah'?",
+            "he": "מהי 'מצווה'?"
+        },
+        "options": {
+            "en": [
+                "Punishment",
+                "Commandment or good deed",
+                "Gift",
+                "Story"
+            ],
+            "he": [
+                "עונש",
+                "ציווי או מעשה טוב",
+                "מתנה",
+                "סיפור"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "💖"
+    },
+    {
+        "id": "q-judaism-ext-holidays-40",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "What is 'Musaf' in prayer?",
+            "he": "מהו 'מוסף' בתפילה?"
+        },
+        "options": {
+            "en": [
+                "Morning prayer",
+                "Additional prayer on Shabbat/holidays",
+                "End of prayer",
+                "Torah translation"
+            ],
+            "he": [
+                "תפילת שחרית",
+                "תפילה נוספת בשבתות ובחגים",
+                "הסיום של התפילה",
+                "תרגום לתורה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕍"
+    },
+    {
+        "id": "q-judaism-ext-holidays-41",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "Which scroll is read on Shavuot?",
+            "he": "איזו מגילה קוראים בחג השבועות?"
+        },
+        "options": {
+            "en": [
+                "Scroll of Ruth",
+                "Scroll of Esther",
+                "Song of Songs",
+                "Lamentations"
+            ],
+            "he": [
+                "מגילת רות",
+                "מגילת אסתר",
+                "שיר השירים",
+                "איכה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🌾"
+    },
+    {
+        "id": "q-judaism-ext-holidays-42",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "What is 'Eruv Tavshilin'?",
+            "he": "מהו 'ערוב תבשילין'?"
+        },
+        "options": {
+            "en": [
+                "Type of food",
+                "Permission to cook on holiday for Shabbat",
+                "Shabbat decoration",
+                "Holiday prayer"
+            ],
+            "he": [
+                "סוג של אוכל",
+                "היתר להכין אוכל בחג לשבת",
+                "קישוט לשבת",
+                "תפילת החג"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🍲"
+    },
+    {
+        "id": "q-judaism-ext-holidays-43",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What does water symbolize on Shavuot (traditionally)?",
+            "he": "מה מסמלים המים בשבועות?"
+        },
+        "options": {
+            "en": [
+                "The flood",
+                "Torah being like water",
+                "The ocean",
+                "The rain"
+            ],
+            "he": [
+                "את המבול",
+                "את התורה שנמשלה למים",
+                "את הים",
+                "את הגשם"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "💧"
+    },
+    {
+        "id": "q-judaism-ext-holidays-44",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "On which holiday might we hold an olive branch (as a symbol)?",
+            "he": "באיזה חג מחזיקים ענף זית?"
+        },
+        "options": {
+            "en": [
+                "Passover",
+                "No such official holiday, olive branch is for peace",
+                "Sukkot",
+                "Hanukkah"
+            ],
+            "he": [
+                "פסח",
+                "אין חג כזה באופן רשמי, ענף זית הוא סמל לשלום",
+                "סוכות",
+                "חנוכה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕊️"
+    },
+    {
+        "id": "q-judaism-ext-holidays-45",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "What is the day the 40 years in the desert ended?",
+            "he": "כיצד נקרא היום שבו הסתיימו 40 שנות המדבר?"
+        },
+        "options": {
+            "en": [
+                "Hanukkah",
+                "Tu B'Av",
+                "10th of Nissan",
+                "Passover"
+            ],
+            "he": [
+                "חנוכה",
+                "טו באב",
+                "י' בניסן",
+                "פסח"
+            ]
+        },
+        "correctAnswer": 2,
+        "emoji": "🗓️"
+    },
+    {
+        "id": "q-judaism-ext-holidays-46",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "What is 'Pidyon HaBen'?",
+            "he": "מהי 'פדיון הבן'?"
+        },
+        "options": {
+            "en": [
+                "Ceremony for firstborn male baby",
+                "Birthday",
+                "Golden wedding",
+                "Sales fair"
+            ],
+            "he": [
+                "טקס לתינוק בכור",
+                "יום הולדת",
+                "חתונת זהב",
+                "יריד מכירות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "👶"
+    },
+    {
+        "id": "q-judaism-ext-holidays-47",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "On which holiday is it common to eat/play with nuts?",
+            "he": "באיזה חג נוהגים לאכול אגוזים?"
+        },
+        "options": {
+            "en": [
+                "Passover",
+                "Rosh Hashanah",
+                "Sukkot",
+                "Hanukkah"
+            ],
+            "he": [
+                "פסח",
+                "ראש השנה",
+                "סוכות",
+                "חנוכה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🥜"
+    },
+    {
+        "id": "q-judaism-ext-holidays-48",
+        "category": "holidays",
+        "level": 3,
+        "text": {
+            "en": "What is 'Melaveh Malkah'?",
+            "he": "מהי 'מלווה מלכה'?"
+        },
+        "options": {
+            "en": [
+                "Meal at the end of Shabbat",
+                "Purim meal",
+                "Synagogue song",
+                "Woman's name"
+            ],
+            "he": [
+                "ארוחה במוצאי שבת",
+                "סעודת פורים",
+                "שיר בבית הכנסת",
+                "שם של אישה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏮"
+    },
+    {
+        "id": "q-judaism-ext-holidays-49",
+        "category": "holidays",
+        "level": 2,
+        "text": {
+            "en": "What is 'Affliction' on Yom Kippur?",
+            "he": "מהו 'עינוי' ביום כיפור?"
+        },
+        "options": {
+            "en": [
+                "Hard work",
+                "Fasting and pleasure restrictions",
+                "Long walk",
+                "Long standing"
+            ],
+            "he": [
+                "עבודה קשה",
+                "צום ואיסורי הנאה",
+                "הליכה רבה",
+                "עמידה ממושכת"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕍"
+    },
+    {
+        "id": "q-judaism-ext-holidays-50",
+        "category": "holidays",
+        "level": 1,
+        "text": {
+            "en": "What is 'Afikoman'?",
+            "he": "מיהו 'אפיקומן'?"
+        },
+        "options": {
+            "en": [
+                "Person's name",
+                "Hidden Matzah half at Seder",
+                "Special fruit",
+                "Ceiling decoration"
+            ],
+            "he": [
+                "שם של איש",
+                "חצי המצה המוחבא בליל הסדר",
+                "פרי מיוחד",
+                "קישוט לתקרה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🍘"
+    }
+,
+    {
+        "id": "q-judaism-ext-tradition-1",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What do we attach to the doorpost of the house?",
+            "he": "מה קובעים על מזוזת הבית?"
+        },
+        "options": {
+            "en": [
+                "Picture",
+                "Mezuzah",
+                "Sign",
+                "Bell"
+            ],
+            "he": [
+                "תמונה",
+                "מזוזה",
+                "שלט",
+                "פעמון"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🚪"
+    },
+    {
+        "id": "q-judaism-ext-tradition-2",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What do Jewish men wear on their heads?",
+            "he": "מה חובשים גברים יהודים על הראש?"
+        },
+        "options": {
+            "en": [
+                "Wool hat",
+                "Kippah",
+                "Crown",
+                "Scarf"
+            ],
+            "he": [
+                "כובע צמר",
+                "כיפה",
+                "כתר",
+                "מטפחת"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕍"
+    },
+    {
+        "id": "q-judaism-ext-tradition-3",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "Which blessing is said before enjoying food?",
+            "he": "איזו ברכה אומרים לפני שפירוש נהנים מהאוכל?"
+        },
+        "options": {
+            "en": [
+                "Birkat HaMazon",
+                "Birkat HaNehenin",
+                "Kiddush",
+                "Havdalah"
+            ],
+            "he": [
+                "ברכת המזון",
+                "ברכת הנהנין",
+                "קידוש",
+                "הבדלה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🥗"
+    },
+    {
+        "id": "q-judaism-ext-tradition-4",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is a 'Synagogue'?",
+            "he": "מהו 'בית כנסת'?"
+        },
+        "options": {
+            "en": [
+                "School",
+                "Place of prayer for Jews",
+                "Library",
+                "Gym"
+            ],
+            "he": [
+                "בית ספר",
+                "מקום תפילה ליהודים",
+                "ספרייה",
+                "אולם ספורט"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕍"
+    },
+    {
+        "id": "q-judaism-ext-tradition-5",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is the holy book of the Jews called?",
+            "he": "איך קוראים לספר הקדוש של היהודים?"
+        },
+        "options": {
+            "en": [
+                "Tanakh",
+                "Dictionary",
+                "Encyclopedia",
+                "Songbook"
+            ],
+            "he": [
+                "תנ''ך",
+                "מילון",
+                "אנציקלופדיה",
+                "ספר שירים"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "📖"
+    },
+    {
+        "id": "q-judaism-ext-tradition-6",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What are 'Tzitzit'?",
+            "he": "מהן 'ציציות'?"
+        },
+        "options": {
+            "en": [
+                "Shoelaces",
+                "Fringes on the corners of a garment",
+                "Buttons",
+                "Chains"
+            ],
+            "he": [
+                "שרוכים לנעליים",
+                "פתילים בפינות הבגד",
+                "כפתורים",
+                "שרשראות"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👔"
+    },
+    {
+        "id": "q-judaism-ext-tradition-7",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What do men place on their head and arm during morning prayer?",
+            "he": "מה מניחים גברים על הראש ועל היד בתפילת שחרית?"
+        },
+        "options": {
+            "en": [
+                "Tefillin",
+                "Watch",
+                "Crown",
+                "Scarf"
+            ],
+            "he": [
+                "תפילין",
+                "שעון",
+                "כתר",
+                "צעיף"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "📦"
+    },
+    {
+        "id": "q-judaism-ext-tradition-8",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Tzedakah'?",
+            "he": "מהי 'צדקה'?"
+        },
+        "options": {
+            "en": [
+                "Game",
+                "Donation and help for the needy",
+                "Prayer",
+                "Song"
+            ],
+            "he": [
+                "משחק",
+                "תרומה ועזרה לנזקקים",
+                "תפילה",
+                "שיר"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🪙"
+    },
+    {
+        "id": "q-judaism-ext-tradition-9",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is a 'Minyan' in prayer?",
+            "he": "מי נחשב ל'מניין' בתפילה?"
+        },
+        "options": {
+            "en": [
+                "Group of 5 people",
+                "Group of 10 men (traditionally)",
+                "The entire audience",
+                "Only the Rabbi"
+            ],
+            "he": [
+                "קבוצה של 5 אנשים",
+                "קבוצה של 10 גברים (לפי המסורת האורתודוקסית)",
+                "כל הקהל",
+                "רק הרב"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👥"
+    },
+    {
+        "id": "q-judaism-ext-tradition-10",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Kashrut'?",
+            "he": "מהו 'כשרות'?"
+        },
+        "options": {
+            "en": [
+                "City name",
+                "Rules of food allowed for Jews",
+                "Type of garment",
+                "Special prayer"
+            ],
+            "he": [
+                "שם של עיר",
+                "כללי האוכל המותר ליהודים",
+                "סוג של בגד",
+                "תפילה מיוחדת"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🍽️"
+    },
+    {
+        "id": "q-judaism-ext-tradition-11",
+        "category": "tradition",
+        "level": 3,
+        "text": {
+            "en": "What is 'Pidyon HaBen'?",
+            "he": "מהי 'פדיון הבן'?"
+        },
+        "options": {
+            "en": [
+                "Ceremony for firstborn baby",
+                "Birthday",
+                "Golden wedding",
+                "Clothes sale"
+            ],
+            "he": [
+                "טקס לתינוק בכור",
+                "יום הולדת",
+                "חתונת זהב",
+                "מכירת בגדים"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "👶"
+    },
+    {
+        "id": "q-judaism-ext-tradition-12",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Honor your mother and father'?",
+            "he": "מה זה 'כיבוד אב ואם'?"
+        },
+        "options": {
+            "en": [
+                "Give them gifts",
+                "Listen to them and help them",
+                "Play with them",
+                "Write them a letter"
+            ],
+            "he": [
+                "לתת להם מתנות",
+                "להקשיב להם ולעזור להם",
+                "לשחק איתם",
+                "לכתוב להם מכתב"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👨‍👩‍👧"
+    },
+    {
+        "id": "q-judaism-ext-tradition-13",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Bar Mitzvah'?",
+            "he": "מהו 'בר מצווה'?"
+        },
+        "options": {
+            "en": [
+                "10th birthday",
+                "Ceremony for 13th birthday",
+                "Graduation",
+                "Victory party"
+            ],
+            "he": [
+                "יום הולדת 10",
+                "טקס כשהילד מגיע לגיל 13",
+                "סיום הלימודים",
+                "מסיבת ניצחון"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🎂"
+    },
+    {
+        "id": "q-judaism-ext-tradition-14",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Bat Mitzvah' (traditionally)?",
+            "he": "מהו 'בת מצווה' (לפי רוב המנהגים)?"
+        },
+        "options": {
+            "en": [
+                "Ceremony for 12th birthday",
+                "Women's day",
+                "Ending party",
+                "18th birthday"
+            ],
+            "he": [
+                "טקס כשהילדה מגיעה לגיל 12",
+                "יום האישה",
+                "מסיבת סיום",
+                "יום הולדת 18"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎈"
+    },
+    {
+        "id": "q-judaism-ext-tradition-15",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is a 'Chuppah'?",
+            "he": "מהי 'חופה'?"
+        },
+        "options": {
+            "en": [
+                "Umbrella",
+                "The canopy used in weddings",
+                "Desert tent",
+                "Ceiling decoration"
+            ],
+            "he": [
+                "מטרייה",
+                "הכיסוי שתחתיו מתחתנים",
+                "אוהל במדבר",
+                "קישוט לתקרה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👰"
+    },
+    {
+        "id": "q-judaism-ext-tradition-16",
+        "category": "tradition",
+        "level": 3,
+        "text": {
+            "en": "What is the 'Talmud'?",
+            "he": "מהו 'תלמוד'?"
+        },
+        "options": {
+            "en": [
+                "Cookbook",
+                "Book of wisdom and Halakhic discussions",
+                "Personal journal",
+                "History book"
+            ],
+            "he": [
+                "ספר בישול",
+                "ספר של חוכמה ודיונים בהלכה",
+                "יומן אישי",
+                "ספר היסטוריה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "📚"
+    },
+    {
+        "id": "q-judaism-ext-tradition-17",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What do we say when someone sneezes?",
+            "he": "מה אומרים כשמישהו מתעטש?"
+        },
+        "options": {
+            "en": [
+                "Labriut (to your health)",
+                "Good morning",
+                "Mazel Tov",
+                "Enjoy it"
+            ],
+            "he": [
+                "לבריאות",
+                "בוקר טוב",
+                "מזל טוב",
+                "תתחדש"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🤧"
+    },
+    {
+        "id": "q-judaism-ext-tradition-18",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is a 'Mitzvah'?",
+            "he": "מהי 'מצווה'?"
+        },
+        "options": {
+            "en": [
+                "Name of a boy",
+                "God's commandment or a good deed",
+                "Ball game",
+                "Vacation"
+            ],
+            "he": [
+                "שם של ילד",
+                "ציווי של אלוהים או מעשה טוב",
+                "משחק כדור",
+                "חופשה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "✨"
+    },
+    {
+        "id": "q-judaism-ext-tradition-19",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Gemilut Hasadim'?",
+            "he": "מה זה 'גמילות חסדים'?"
+        },
+        "options": {
+            "en": [
+                "Acts of kindness and help to others",
+                "Learning math",
+                "Going on a trip",
+                "Buying clothes"
+            ],
+            "he": [
+                "פעולות של עזרה וחסד לאחרים",
+                "לימוד חשבון",
+                "נסיעה לטייל",
+                "קניית בגדים"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🤝"
+    },
+    {
+        "id": "q-judaism-ext-tradition-20",
+        "category": "tradition",
+        "level": 3,
+        "text": {
+            "en": "What is 'Halakhah'?",
+            "he": "מהי 'הלכה'?"
+        },
+        "options": {
+            "en": [
+                "Walking style",
+                "Jewish behavioral laws",
+                "Folk story",
+                "Holiday song"
+            ],
+            "he": [
+                "דרך הליכה",
+                "חוקי התנהגות לפי היהדות",
+                "סיפור עם",
+                "שיר חג"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "⚖️"
+    },
+    {
+        "id": "q-judaism-ext-tradition-21",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is a 'Rabbi'?",
+            "he": "מהו 'רב'?"
+        },
+        "options": {
+            "en": [
+                "Foremam",
+                "Teacher and spiritual leader in Judaism",
+                "Doctor",
+                "Police officer"
+            ],
+            "he": [
+                "מנהל עבודה",
+                "מורה ומנהיג רוחני ביהדות",
+                "רופא",
+                "שוטר"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🧔"
+    },
+    {
+        "id": "q-judaism-ext-tradition-22",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is a 'Tzedakah box'?",
+            "he": "מהי 'קופסת צדקה'?"
+        },
+        "options": {
+            "en": [
+                "Toy storage box",
+                "Donation collection box",
+                "Toolbox",
+                "Suitcase"
+            ],
+            "he": [
+                "קופסה לאחסון צעצועים",
+                "קופסה לאיסוף כסף לעזרה",
+                "ארגז כלים",
+                "מזוודה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🗳️"
+    },
+    {
+        "id": "q-judaism-ext-tradition-23",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Shacharit' prayer?",
+            "he": "מהי 'תפילת שחרית'?"
+        },
+        "options": {
+            "en": [
+                "Evening prayer",
+                "Morning prayer",
+                "Afternoon prayer",
+                "Bedtime prayer"
+            ],
+            "he": [
+                "תפילת הערב",
+                "תפילת הבוקר",
+                "תפילת הצהריים",
+                "תפילה לפני השינה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🌅"
+    },
+    {
+        "id": "q-judaism-ext-tradition-24",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Arvit'?",
+            "he": "מהי 'ערבית'?"
+        },
+        "options": {
+            "en": [
+                "Language",
+                "Evening prayer",
+                "Meal",
+                "Place"
+            ],
+            "he": [
+                "שפה",
+                "תפילת הערב",
+                "סעודה",
+                "מקום"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🌙"
+    },
+    {
+        "id": "q-judaism-ext-tradition-25",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Mincha'?",
+            "he": "מהו 'מנחה'?"
+        },
+        "options": {
+            "en": [
+                "Gift",
+                "Afternoon prayer",
+                "Song",
+                "Fruit"
+            ],
+            "he": [
+                "מתנה",
+                "תפילת הצהריים",
+                "שיר",
+                "פרי"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🌤️"
+    },
+    {
+        "id": "q-judaism-ext-tradition-26",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is a 'Beit Midrash'?",
+            "he": "מהו 'בית מדרש'?"
+        },
+        "options": {
+            "en": [
+                "Place for Torah study",
+                "Sleeping quarters",
+                "Zoo",
+                "Shop"
+            ],
+            "he": [
+                "מקום ללימוד תורה",
+                "מקום לישון בו",
+                "גן חיות",
+                "חנות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏫"
+    },
+    {
+        "id": "q-judaism-ext-tradition-27",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "Who is 'Aishet Chayil'?",
+            "he": "מי הייתה 'אשת חיל'?"
+        },
+        "options": {
+            "en": [
+                "Dancer",
+                "A capable/virtuous woman (song on Shabbat)",
+                "Warrior",
+                "Queen"
+            ],
+            "he": [
+                "רקדנית",
+                "אישה חרוצה וטובה (נהוג לשיר לה בשבת)",
+                "לוחמת",
+                "מלכה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👵"
+    },
+    {
+        "id": "q-judaism-ext-tradition-28",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What do we do on 'Shabbat'?",
+            "he": "מה עושים ב'שבת'?"
+        },
+        "options": {
+            "en": [
+                "Work hard",
+                "Rest and celebrate with family",
+                "Travel abroad",
+                "Go to the pool"
+            ],
+            "he": [
+                "עובדים קשה",
+                "נחים וחוגגים עם המשפחה",
+                "נוסעים לחו''ל",
+                "הולכים לבריכה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕯️"
+    },
+    {
+        "id": "q-judaism-ext-tradition-29",
+        "category": "tradition",
+        "level": 3,
+        "text": {
+            "en": "What is 'Hafrashat Challah'?",
+            "he": "מהי 'הפרשת חלה'?"
+        },
+        "options": {
+            "en": [
+                "Eating challah",
+                "The mitzvah to set aside part of the dough",
+                "Buying challah",
+                "Wearing challah"
+            ],
+            "he": [
+                "אכילת חלה",
+                "מצווה להפריש חלק מהבצק כתרומה",
+                "קניית חלה",
+                "חבישת חלה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🥯"
+    },
+    {
+        "id": "q-judaism-ext-tradition-30",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Netilat Yadayim'?",
+            "he": "מהו 'נטילת ידיים'?"
+        },
+        "options": {
+            "en": [
+                "Ritual hand washing before meals (or morning)",
+                "Hand game",
+                "Handshake",
+                "Drawing on hands"
+            ],
+            "he": [
+                "שטיפת ידיים לפני ארוחה (או בבוקר)",
+                "משחק ידיים",
+                "לחיצת ידיים",
+                "ציור על הידיים"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏺"
+    },
+    {
+        "id": "q-judaism-ext-tradition-31",
+        "category": "tradition",
+        "level": 3,
+        "text": {
+            "en": "What is 'Muktzah' on Shabbat?",
+            "he": "מהי 'מוקצה' בשבת?"
+        },
+        "options": {
+            "en": [
+                "Tasty food",
+                "Forbidden items to move (like money or phone)",
+                "Place name",
+                "Shabbat clothes"
+            ],
+            "he": [
+                "אוכל טעים",
+                "דברים שאסור לגעת בהם או להזיז אותם (כמו כסף או טלפון)",
+                "שם של מקום",
+                "בגדי שבת"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🚫"
+    },
+    {
+        "id": "q-judaism-ext-tradition-32",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Oneg Shabbat'?",
+            "he": "מהי 'עונג שבת'?"
+        },
+        "options": {
+            "en": [
+                "Homework",
+                "Enjoying and quality time on Shabbat",
+                "Sports",
+                "Cleaning"
+            ],
+            "he": [
+                "שיעורי בית",
+                "הנאה ובילוי זמן איכות בשבת",
+                "ספורט",
+                "ניקיון"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "😊"
+    },
+    {
+        "id": "q-judaism-ext-tradition-33",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Kiddush'?",
+            "he": "מהו 'קידוש'?"
+        },
+        "options": {
+            "en": [
+                "High jump",
+                "Blessing over wine for Shabbat/holidays",
+                "House cleaning",
+                "Folk dances"
+            ],
+            "he": [
+                "קפיצה גבוהה",
+                "ברכה על היין לכבוד שבת וחגים",
+                "סידור הבית",
+                "ריקודי עם"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🍷"
+    },
+    {
+        "id": "q-judaism-ext-tradition-34",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "Who reads the 'Torah'?",
+            "he": "מי קורא ב'טורה'?"
+        },
+        "options": {
+            "en": [
+                "Everyone together",
+                "The 'Ba'al Koreh' or who is 'called up'",
+                "Only children",
+                "The author"
+            ],
+            "he": [
+                "כולם יחד",
+                "ה'בעל קורא' או מי שעולה לתורה",
+                "רק הילדים",
+                "הסופר"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "📜"
+    },
+    {
+        "id": "q-judaism-ext-tradition-35",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Shmirat HaLashon'?",
+            "he": "מהי 'שמירת הלשון'?"
+        },
+        "options": {
+            "en": [
+                "Brushing teeth",
+                "Avoiding bad speech about others",
+                "Learning languages",
+                "Silence"
+            ],
+            "he": [
+                "צחצוח שיניים",
+                "הימנעות מדיבור רע על אחרים",
+                "למידת שפות",
+                "שתיקה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🤐"
+    },
+    {
+        "id": "q-judaism-ext-tradition-36",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Tzanua' (Modest)?",
+            "he": "מהו 'צנוע'?"
+        },
+        "options": {
+            "en": [
+                "Proud",
+                "Behaving/dressing respectfully/modestly",
+                "Noisy",
+                "Expensive"
+            ],
+            "he": [
+                "גאה",
+                "מתנהג ומתלבש בצורה מכובדת וצנועה",
+                "רועש",
+                "יקר"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🤫"
+    },
+    {
+        "id": "q-judaism-ext-tradition-37",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is a 'Seudah'?",
+            "he": "מהי 'סעודה'?"
+        },
+        "options": {
+            "en": [
+                "Trip",
+                "Festive meal",
+                "Rest",
+                "Jump"
+            ],
+            "he": [
+                "טיול",
+                "ארוחה חגיגית",
+                "מנוחה",
+                "קפיצה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🍲"
+    },
+    {
+        "id": "q-judaism-ext-tradition-38",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is a 'Cantor' (Chazzan)?",
+            "he": "מהו 'חזן'?"
+        },
+        "options": {
+            "en": [
+                "The one who leads prayer with song",
+                "Builder",
+                "Judge",
+                "Teacher"
+            ],
+            "he": [
+                "מי שמוביל את התפילה בשירה",
+                "מי שבונה בתים",
+                "שופט",
+                "מורה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎵"
+    },
+    {
+        "id": "q-judaism-ext-tradition-39",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Parshat HaShavua'?",
+            "he": "מהי 'פרשת השבוע'?"
+        },
+        "options": {
+            "en": [
+                "Current news",
+                "Portion of Torah read that week",
+                "Children's story",
+                "Study program"
+            ],
+            "he": [
+                "חדשות היום",
+                "חלק מהתורה שקוראים באותו שבוע",
+                "סיפור הילדים",
+                "תוכנית הלימודים"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "📅"
+    },
+    {
+        "id": "q-judaism-ext-tradition-40",
+        "category": "tradition",
+        "level": 3,
+        "text": {
+            "en": "What is 'Kaddish'?",
+            "he": "מהו 'קדיש'?"
+        },
+        "options": {
+            "en": [
+                "Prayer praising God (also for deceased)",
+                "Happy song",
+                "Part of the Sukkah",
+                "Book name"
+            ],
+            "he": [
+                "תפילה להלל את השם (נאמם גם לזכר נפטרים)",
+                "שיר שמח",
+                "חלק מהסוכה",
+                "שם של ספר"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🕍"
+    },
+    {
+        "id": "q-judaism-ext-tradition-41",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Baruch HaShem' (abbreviated)?",
+            "he": "מה זה 'בא גד' (לפי המנהג)?"
+        },
+        "options": {
+            "en": [
+                "Sign of luck",
+                "Blessed be the Name - thanking God",
+                "Bread name",
+                "Secret word"
+            ],
+            "he": [
+                "סימן למזל",
+                "ברוך השם - הודייה לאלוהים",
+                "שם של לחם",
+                "מילה סודית"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🙏"
+    },
+    {
+        "id": "q-judaism-ext-tradition-42",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is the 'Land of Israel' for Jews?",
+            "he": "מהי 'ארץ ישראל' עבור היהודים?"
+        },
+        "options": {
+            "en": [
+                "Vacation spot",
+                "The Promised and Holy Land",
+                "Just a regular country",
+                "Workplace"
+            ],
+            "he": [
+                "מקום נופש",
+                "הארץ המובטחת והקדושה",
+                "רק מדינה רגילה",
+                "מקום עבודה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🇮🇱"
+    },
+    {
+        "id": "q-judaism-ext-tradition-43",
+        "category": "tradition",
+        "level": 3,
+        "text": {
+            "en": "What is a 'Sofer Stam'?",
+            "he": "מהו 'סופר סת''ם'?"
+        },
+        "options": {
+            "en": [
+                "Fiction author",
+                "Writes Torah, Tefillin, and Mezuzot",
+                "Bookseller",
+                "Cleaner"
+            ],
+            "he": [
+                "כותב ספרי עלילה",
+                "כותב ספרי תורה, תפילין ומזוזות",
+                "מוכר ספרים",
+                "מנקה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🖋️"
+    },
+    {
+        "id": "q-judaism-ext-tradition-44",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is a 'Tallit'?",
+            "he": "מהי 'טלית'?"
+        },
+        "options": {
+            "en": [
+                "Prayer garment with fringes",
+                "Hat",
+                "Bag",
+                "Sheet"
+            ],
+            "he": [
+                "בגד תפילה עם ציציות בפינות",
+                "כובע",
+                "תיק",
+                "סדין"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🧣"
+    },
+    {
+        "id": "q-judaism-ext-tradition-45",
+        "category": "tradition",
+        "level": 2,
+        "text": {
+            "en": "What is 'Chumash'?",
+            "he": "מהו 'חומש'?"
+        },
+        "options": {
+            "en": [
+                "Five Books of Moses",
+                "Songbook",
+                "Five friends",
+                "Place"
+            ],
+            "he": [
+                "חמשת חומשי תורה",
+                "ספר שירים",
+                "חמשה חברים",
+                "מקום"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "📖"
+    },
+    {
+        "id": "q-judaism-ext-tradition-46",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Emunah'?",
+            "he": "מהי 'אמונה'?"
+        },
+        "options": {
+            "en": [
+                "Fear",
+                "Trust and faith in God",
+                "Anger",
+                "Sadness"
+            ],
+            "he": [
+                "פחד",
+                "ביטחון ואמונה באלוהים",
+                "כעס",
+                "עצב"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "💖"
+    },
+    {
+        "id": "q-judaism-ext-tradition-47",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Blessing of the Home'?",
+            "he": "מהו 'ברכת הבית'?"
+        },
+        "options": {
+            "en": [
+                "Cake recipe",
+                "Prayer/sign asking for peace in home",
+                "Key",
+                "Carpet"
+            ],
+            "he": [
+                "מתכון לעוגה",
+                "תפילה או שלט המבקש שלום בבית",
+                "מפתח",
+                "שטיח"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🏡"
+    },
+    {
+        "id": "q-judaism-ext-tradition-48",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Shalom Aleichem' (song)?",
+            "he": "מהו 'שלום עליכם' (כשיר)?"
+        },
+        "options": {
+            "en": [
+                "Morning song",
+                "Song welcoming angels on Friday night",
+                "Birthday song",
+                "Farewell song"
+            ],
+            "he": [
+                "שיר לבוקר",
+                "שיר שמקבל את פני המלאכים בערב שבת",
+                "שיר יום הולדת",
+                "שיר פרידה"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "👼"
+    },
+    {
+        "id": "q-judaism-ext-tradition-49",
+        "category": "tradition",
+        "level": 3,
+        "text": {
+            "en": "What is 'Cholov Yisroel'?",
+            "he": "מהו 'חלב ישראל'?"
+        },
+        "options": {
+            "en": [
+                "Regular milk",
+                "Milk produced under Jewish supervision",
+                "Chocolate milk",
+                "Coconut milk"
+            ],
+            "he": [
+                "חלב רגיל",
+                "חלב שנחלב בפיקוח יהודי",
+                "חלב בטעם שוקולד",
+                "חלב מקוקוס"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🥛"
+    },
+    {
+        "id": "q-judaism-ext-tradition-50",
+        "category": "tradition",
+        "level": 1,
+        "text": {
+            "en": "What is 'Shabbat keeping'?",
+            "he": "מהי 'שמירת שבת'?"
+        },
+        "options": {
+            "en": [
+                "Buying items on Shabbat",
+                "Keeping the rest and holiness laws of Shabbat",
+                "Running on Shabbat",
+                "Closing the shop"
+            ],
+            "he": [
+                "קניית דברים בשבת",
+                "שמירה על חוקי המנוחה והקדושה של השבת",
+                "ריצה בשבת",
+                "סגירת החנות"
+            ]
+        },
+        "correctAnswer": 1,
+        "emoji": "🕊️"
     }
 ];
