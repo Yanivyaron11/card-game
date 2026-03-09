@@ -23,18 +23,29 @@ function StartScreen({ onStart, language, onLanguageChange }) {
         try {
             const saved = localStorage.getItem('activeCategories');
             const allLeaves = getLeafTopics();
-            const defaultPool = allLeaves.map(t => t.id).slice(0, 9);
-            if (!saved) return defaultPool;
-            const parsed = JSON.parse(saved);
+            const leafIds = allLeaves.map(t => t.id);
+            const defaultPool = leafIds.slice(0, 9);
 
-            if (Array.isArray(parsed) && parsed.length > 0) {
-                const leafIds = allLeaves.map(t => t.id);
-                const hasValidLeaf = parsed.some(id => leafIds.includes(id));
-                const containsParent = parsed.some(id => topics.some(t => t.subTopics && t.id === id));
-                if (hasValidLeaf && !containsParent) return parsed;
-                return defaultPool;
+            if (!saved) return defaultPool;
+
+            let parsed = JSON.parse(saved);
+            if (!Array.isArray(parsed)) return defaultPool;
+
+            // Filter out old IDs that no longer exist
+            let current = parsed.filter(id => leafIds.includes(id));
+
+            // Auto-add new IDs if they are missing and there's room
+            if (current.length < 9) {
+                for (const id of leafIds) {
+                    if (!current.includes(id)) {
+                        current.push(id);
+                        if (current.length >= 9) break;
+                    }
+                }
+                localStorage.setItem('activeCategories', JSON.stringify(current));
             }
-            return defaultPool;
+
+            return current;
         } catch (e) {
             console.error("Failed to parse activeCategories", e);
             return getLeafTopics().map(t => t.id).slice(0, 9);
