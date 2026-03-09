@@ -59,6 +59,14 @@ export const topics = [
                     "he": "שיאים וגילויים"
                 },
                 "icon": "🏆"
+            },
+            {
+                "id": "math",
+                "name": {
+                    "en": "Math",
+                    "he": "חשבון"
+                },
+                "icon": "🔢"
             }
         ]
     },
@@ -173,6 +181,32 @@ export const topics = [
                 },
                 "icon": "⚽",
                 "color": "#3b82f6"
+            }
+        ]
+    },
+    {
+        "id": "lifestyle_group",
+        "name": {
+            "en": "Life & Hobbies",
+            "he": "חיים ופנאי"
+        },
+        "icon": "🍕",
+        "subTopics": [
+            {
+                "id": "food",
+                "name": {
+                    "en": "Food",
+                    "he": "אוכל"
+                },
+                "icon": "🍔"
+            },
+            {
+                "id": "patisserie",
+                "name": {
+                    "en": "Patisserie",
+                    "he": "קונדיטוריה"
+                },
+                "icon": "🥐"
             }
         ]
     },
