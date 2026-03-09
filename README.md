@@ -4,8 +4,8 @@ A fun, interactive, and educational card game designed for children and trivia l
 
 ## 🚀 Features
 
-- **Massive Question Library**: Now featuring over **1,000 questions** across 9 diverse categories!
-- **Multi-topic Experience**: Choose from **Animals**, **Countries**, **Movies**, **Math**, **Food**, **Art**, **Nature**, **London**, and the new **General Knowledge** category.
+- **Massive Question Library**: Now featuring over **3,600 questions** across diverse pedagogical categories!
+- **Multi-topic Experience**: Choose from **Israel Geography**, **Animals**, **Countries**, **Movies**, **Math**, **Food**, **Art**, **Nature**, **London**, **Judaism**, **Sports (Chelsea & Maccabi Haifa)**, and more.
 - **Dynamic Difficulty**: Three levels of challenge with **adaptive timers**:
   - **Level 1**: 30 seconds
   - **Level 2**: 20 seconds
