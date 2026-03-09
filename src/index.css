@@ -75,6 +75,10 @@ button:active {
   #root {
     padding: 1rem;
   }
+
+  .glass-panel {
+    padding: 1.2rem;
+  }
 }
 
 .glass-panel {

@@ -11,17 +11,19 @@
     z-index: 2000;
     backdrop-filter: blur(5px);
     overflow-y: auto;
-    /* Allow scrolling overlay if modal is too tall */
-    padding: 20px;
+    padding: 10px;
+    /* Reduced padding for mobile breathing room */
 }
 
 .modal-content {
     width: 100%;
     max-width: 500px;
-    max-height: 90vh;
+    max-height: 95vh;
+    /* Slightly taller allowed */
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 1rem;
+    /* Reduced inner padding */
     position: relative;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     margin: auto;
@@ -137,8 +139,32 @@
 }
 
 @media (max-width: 500px) {
+    .modal-content {
+        padding: 1rem;
+    }
+
     .category-pool {
         grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .settings-btn,
+    .music-track-btn {
+        padding: 0.6rem;
+        min-width: 60px;
+        font-size: 0.9rem;
+    }
+
+    .settings-options,
+    .settings-music-options {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .category-pool {
+        grid-template-columns: 1fr;
+        /* Stack on very small screens */
     }
 }
 
