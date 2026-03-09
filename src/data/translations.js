@@ -51,7 +51,10 @@ export const translations = {
         active_categories: "Select up to 9 Active Categories",
         close: "Close",
         on: "On",
-        off: "Off"
+        off: "Off",
+        new_content_title: "New Category Added!",
+        new_content_desc: "We've added a new category to explore: {name}. Happy playing!",
+        got_it: "Got it!"
     },
 
 
@@ -107,7 +110,10 @@ export const translations = {
         active_categories: "בחרו עד 9 נושאים פעילים",
         close: "סגור",
         on: "פעיל",
-        off: "כבוי"
+        off: "כבוי",
+        new_content_title: "נושא חדש נוסף!",
+        new_content_desc: "הוספנו נושא חדש למשחק: {name}. תהנו!",
+        got_it: "הבנתי!"
     }
 
 

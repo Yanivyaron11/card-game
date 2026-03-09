@@ -3,12 +3,14 @@ import { topics, questionCounts } from '../data/questions';
 import { playSound, getSoundEnabled, setSoundEnabled, getMusicTrack, setMusicTrack } from '../utils/sounds';
 import { translations } from '../data/translations';
 import SettingsModal from './SettingsModal';
+import NewCategoryModal from './NewCategoryModal';
 import './StartScreen.css';
 
 function StartScreen({ onStart, language, onLanguageChange }) {
     const t = translations[language];
 
     const getLeafTopics = () => {
+        if (!topics || !Array.isArray(topics)) return [];
         let leaves = [];
         topics.forEach(t => {
             if (t.subTopics) leaves.push(...t.subTopics);
@@ -24,31 +26,43 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             const saved = localStorage.getItem('activeCategories');
             const allLeaves = getLeafTopics();
             const leafIds = allLeaves.map(t => t.id);
-            const defaultPool = leafIds.slice(0, 9);
 
-            if (!saved) return defaultPool;
+            // Define common default categories we always want to show if possible
+            const preferredDefaults = ['israel_cities', 'judaism', 'animals', 'countries', 'math', 'israeli_music'];
+            const defaultPool = leafIds.filter(id => preferredDefaults.includes(id));
+
+            // If we don't have enough preferred defaults, just take the first 9
+            if (defaultPool.length < 3) {
+                leafIds.slice(0, 9).forEach(id => {
+                    if (!defaultPool.includes(id)) defaultPool.push(id);
+                });
+            }
+
+            if (!saved) {
+                localStorage.setItem('activeCategories', JSON.stringify(defaultPool));
+                return defaultPool;
+            }
 
             let parsed = JSON.parse(saved);
-            if (!Array.isArray(parsed)) return defaultPool;
+            if (!Array.isArray(parsed) || parsed.length === 0) {
+                localStorage.setItem('activeCategories', JSON.stringify(defaultPool));
+                return defaultPool;
+            }
 
             // Filter out old IDs that no longer exist
             let current = parsed.filter(id => leafIds.includes(id));
 
-            // Auto-add new IDs if they are missing and there's room
-            if (current.length < 9) {
-                for (const id of leafIds) {
-                    if (!current.includes(id)) {
-                        current.push(id);
-                        if (current.length >= 9) break;
-                    }
-                }
-                localStorage.setItem('activeCategories', JSON.stringify(current));
+            // If everything was filtered out, restore defaults
+            if (current.length === 0) {
+                localStorage.setItem('activeCategories', JSON.stringify(defaultPool));
+                return defaultPool;
             }
 
             return current;
         } catch (e) {
             console.error("Failed to parse activeCategories", e);
-            return getLeafTopics().map(t => t.id).slice(0, 9);
+            const fallback = getLeafTopics().map(t => t.id).slice(0, 9);
+            return fallback.length > 0 ? fallback : [];
         }
     });
 
@@ -58,6 +72,31 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [difficulty, setDifficulty] = useState(1);
     const [selectedTopics, setSelectedTopics] = useState([]);
     const [gameMode, setGameMode] = useState('solo');
+    const [newCategories, setNewCategories] = useState([]);
+    const [isNewModalOpen, setIsNewModalOpen] = useState(false);
+
+    useEffect(() => {
+        // Find categories that are marked new and hasn't been seen yet
+        const seenNew = JSON.parse(localStorage.getItem('seenNewCategories') || '[]');
+        const now = new Date();
+        const fresh = getLeafTopics().filter(t =>
+            t.newUntil &&
+            new Date(t.newUntil) > now &&
+            !seenNew.includes(t.id)
+        );
+
+        if (fresh.length > 0) {
+            setNewCategories(fresh);
+            setIsNewModalOpen(true);
+        }
+    }, [activePool]); // Re-check if active pool changes (e.g. if a hidden new category becomes active)
+
+    const handleDismissNew = () => {
+        const seenNew = JSON.parse(localStorage.getItem('seenNewCategories') || '[]');
+        const updated = [...new Set([...seenNew, ...newCategories.map(c => c.id)])];
+        localStorage.setItem('seenNewCategories', JSON.stringify(updated));
+        setIsNewModalOpen(false);
+    };
 
     // Filter topics based on active pool
     const visibleTopics = getLeafTopics().filter(t => activePool.includes(t.id));
@@ -127,6 +166,14 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                 }}
                 activeCategories={activePool}
                 onCategoryToggle={handleCategoryPoolToggle}
+            />
+
+            <NewCategoryModal
+                isOpen={isNewModalOpen}
+                onClose={handleDismissNew}
+                newCategories={newCategories}
+                language={language}
+                t={t}
             />
 
             <h2>{t.lets_play}</h2>
