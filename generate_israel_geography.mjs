@@ -179,80 +179,61 @@ const handpicked = [
     { text: { en: "Which city is known for Mount Carmel?", he: "איזו עיר ידועה בזכות הר הכרמל?" }, options: { en: ["Ashdod", "Eilat", "Haifa", "Tel Aviv"], he: ["אשדוד", "אילת", "חיפה", "תל אביב"] }, correctAnswer: 2, emoji: '⚓' },
     { text: { en: "Which city is the southernmost in Israel?", he: "מהי העיר הדרומית ביותר בישראל?" }, options: { en: ["Mizpe Ramon", "Be'er Sheva", "Eilat", "Yotvata"], he: ["מצפה רמון", "באר שבע", "אילת", "יוטבתה"] }, correctAnswer: 2, emoji: '☀️' },
     { text: { en: "Which city is on the shores of the Sea of Galilee?", he: "איזו עיר שוכנת לחוף הכנרת?" }, options: { en: ["Tiberias", "Bet She'an", "Afula", "Katzrin"], he: ["טבריה", "בית שאן", "עפולה", "קצרין"] }, correctAnswer: 0, emoji: '🌊' },
-    { text: { en: "Which city is known for Kabbalah history?", he: "איזו עיר צפונית ידועה בהיסטוריית הקבלה שלה?" }, options: { en: ["Haifa", "Zefat", "Akko", "Nahariyya"], he: ["חיפה", "צפת", "עכו", "נהרייה"] }, correctAnswer: 1, emoji: '🎨' }
+    { text: { en: "Which city is known for Kabbalah history?", he: "איזו עיר צפונית ידועה בהיסטוריית הקבלה שלה?" }, options: { en: ["Haifa", "Zefat", "Akko", "Nahariyya"], he: ["חיפה", "צפת", "עכו", "נהרייה"] }, correctAnswer: 1, emoji: '🎨' },
+    { text: { en: "Which city is home to the Weizmann Institute of Science?", he: "באיזו עיר נמצא מכון ויצמן למדע?" }, options: { en: ["Rehovot", "Tel Aviv", "Haifa", "Jerusalem"], he: ["רחובות", "תל אביב", "חיפה", "ירושלים"] }, correctAnswer: 0, emoji: '🔬' },
+    { text: { en: "Which city is nicknamed 'The Mother of Settlements'?", he: "איזו עיר מכונה 'אם המושבות'?" }, options: { en: ["Petah Tikva", "Rishon LeZion", "Netanya", "Hadera"], he: ["פתח תקווה", "ראשון לציון", "נתניה", "חדרה"] }, correctAnswer: 0, emoji: '🏘️' },
+    { text: { en: "Where is the Ben Gurion Airport located?", he: "איפה נמצא נמל התעופה בן גוריון?" }, options: { en: ["Tel Aviv", "Lod/Ben Gurion", "Haifa", "Eilat"], he: ["תל אביב", "לוד/נתב\"ג", "חיפה", "אילת"] }, correctAnswer: 1, emoji: '✈️' },
+    { text: { en: "Which city is the 'Diamond City' of Israel?", he: "איזו עיר היא 'עיר היהלומים' של ישראל?" }, options: { en: ["Netanya", "Ramat Gan", "Tel Aviv", "Herzliyya"], he: ["נתניה", "רמת גן", "תל אביב", "הרצלייה"] }, correctAnswer: 1, emoji: '💎' },
+    { text: { en: "Which city is known for the Technion - Israel Institute of Technology?", he: "באיזו עיר נמצא הטכניון?" }, options: { en: ["Haifa", "Tel Aviv", "Beer Sheva", "Jerusalem"], he: ["חיפה", "תל אביב", "באר שבע", "ירושלים"] }, correctAnswer: 0, emoji: '🎓' },
+    { text: { en: "Which city is famous for its ancient Roman theater and port?", he: "איזו עיר מפורסמת בתיאטרון הרומי והנמל העתיק שלה?" }, options: { en: ["Caesarea", "Akko", "Jaffa", "Ashkelon"], he: ["קיסריה", "עכו", "יפו", "אשקלון"] }, correctAnswer: 0, emoji: '🏺' },
+    { text: { en: "Which city is known as the 'Capital of the Galilee'?", he: "איזו עיר נחשבת ל'בירת הגליל'?" }, options: { en: ["Tiberias", "Nazareth", "Karmiel", "Safed"], he: ["טבריה", "נצרת", "כרמיאל", "צפת"] }, correctAnswer: 1, emoji: '⛰️' },
+    { text: { en: "Which city is known as the 'City of Spirits' or 'City of Wind'?", he: "איזו עיר מכונה 'עיר הרוחות'?" }, options: { en: ["Arad", "Safed", "Jerusalem", "Eilat"], he: ["ערד", "צפת", "ירושלים", "אילת"] }, correctAnswer: 0, emoji: '🌬️' },
+    { text: { en: "Where is the largest university in Israel, the Hebrew University, located?", he: "היכן נמצאת האוניברסיטה העברית?" }, options: { en: ["Jerusalem", "Tel Aviv", "Haifa", "Ramat Gan"], he: ["ירושלים", "תל אביב", "חיפה", "רמת גן"] }, correctAnswer: 0, emoji: '📚' },
+    { text: { en: "Which city is known for its wine industry and a famous winery?", he: "איזו עיר ידועה בתעשיית היין וביקב המפורסם שלה?" }, options: { en: ["Zikhron Ya\\'akov", "Rishon LeZion", "Qatzrin", "Binyamina"], he: ["זכרון יעקב", "ראשון לציון", "קצרין", "בנימינה"] }, correctAnswer: 1, emoji: '🍷' },
+    { text: { en: "Which city is the site of the Cave of the Patriarchs (Me\\'arat HaMachpelah)?", he: "באיזו עיר נמצאת מערת המכפלה?" }, options: { en: ["Jerusalem", "Hebron", "Tiberias", "Betlehem"], he: ["ירושלים", "חברון", "טבריה", "בית לחם"] }, correctAnswer: 1, emoji: '🕌' },
+    { text: { en: "Which city is known for the Baha\\'i Holy shrines?", he: "באיזו עיר נמצאים המקומות הקדושים לבהאיים (מלבד חיפה)?" }, options: { en: ["Akko", "Nazareth", "Jaffa", "Netanya"], he: ["עכו", "נצרת", "יפו", "נתניה"] }, correctAnswer: 0, emoji: '🕍' },
+    { text: { en: "Which city hosted the 1950s 'First City of the Negev' initiative?", he: "איזו עיר הייתה הראשונה שהוקמה בנגב לאחר קום המדינה?" }, options: { en: ["Yeruham", "Dimona", "Be\\'er Sheva", "Arad"], he: ["ירוחם", "דימונה", "באר שבע", "ערד"] }, correctAnswer: 0, emoji: '🌵' },
+    { text: { en: "Which city is known for its unique glass art museum?", he: "איזו עיר ידועה במוזיאון זכוכית ייחודי?" }, options: { en: ["Arad", "Tel Aviv", "Haifa", "Jerusalem"], he: ["ערד", "תל אביב", "חיפה", "ירושלים"] }, correctAnswer: 0, emoji: '🧪' }
 ];
 
 handpicked.forEach((q, i) => qualitative.push({ ...q, id: `q_iz_hand_${i}`, category: 'israel_cities', level: 1 }));
 
-// Templates for districts
-const districtData = [
-    { nameEn: "Yotvata", nameHe: "יוטבתה", districtEn: "South District", districtHe: "הדרום" },
-    { nameEn: "Metula", nameHe: "מטולה", districtEn: "North District", districtHe: "הצפון" },
-    { nameEn: "Savyon", nameHe: "סביון", districtEn: "Central District", districtHe: "המרכז" },
-    { nameEn: "Kefar Habad", nameHe: "כפר חבד", districtEn: "Central District", districtHe: "המרכז" },
-    { nameEn: "Mizpe Ramon", nameHe: "מצפה רמון", districtEn: "South District", districtHe: "הדרום" },
-    { nameEn: "Arad", nameHe: "ערד", districtEn: "South District", districtHe: "הדרום" },
-    { nameEn: "Akko", nameHe: "עכו", districtEn: "North District", districtHe: "הצפון" },
-    { nameEn: "Dimona", nameHe: "דימונה", districtEn: "South District", districtHe: "הדרום" },
-    { nameEn: "Katzrin", nameHe: "קצרין", districtEn: "North District", districtHe: "הצפון" },
-    { nameEn: "Nahariyya", nameHe: "נהרייה", districtEn: "North District", districtHe: "הצפון" },
-    { nameEn: "Hadera", nameHe: "חדרה", districtEn: "Haifa District", districtHe: "חיפה" },
-    { nameEn: "Afula", nameHe: "עפולה", districtEn: "North District", districtHe: "הצפון" },
-    { nameEn: "Ra'annana", nameHe: "רעננה", districtEn: "Central District", districtHe: "המרכז" },
-    { nameEn: "Holon", nameHe: "חולון", districtEn: "Tel Aviv District", districtHe: "תל אביב" },
-    { nameEn: "Ashdod", nameHe: "אשדוד", districtEn: "South District", districtHe: "הדרום" }
-];
-
-const allDistricts = [
-    { en: "North District", he: "הצפון" }, { en: "Central District", he: "המרכז" },
-    { en: "South District", he: "הדרום" }, { en: "Jerusalem District", he: "ירושלים" },
-    { en: "Haifa District", he: "חיפה" }, { en: "Tel Aviv District", he: "תל אביב" }
-];
-
-for (let i = 0; i < 40; i++) {
-    const city = districtData[i % districtData.length];
-    const others = allDistricts.filter(d => d.en !== city.districtEn);
-    const wrong1 = randomItem(others);
-    const wrong2 = randomItem(others.filter(d => d.en !== wrong1.en));
-    const enOpts = [city.districtEn, wrong1.en, wrong2.en].sort();
-    const heOpts = enOpts.map(en => [...allDistricts, { en: city.districtEn, he: city.districtHe }].find(d => d.en === en).he);
-    const correctIdx = enOpts.indexOf(city.districtEn);
-    qualitative.push({
-        id: `q_iz_dist_${i}`,
-        category: "israel_cities", level: 2, emoji: "📍",
-        text: { en: `In which district is ${city.nameEn} located?`, he: `באיזה מחוז שוכנת ${city.nameHe}?` },
-        options: { en: enOpts, he: heOpts },
-        correctAnswer: correctIdx
-    });
-}
-
-// Port/Coast templates
-const coastalCities = [
-    { en: "Tel Aviv", he: "תל אביב" }, { en: "Haifa", he: "חיפה" }, { en: "Ashdod", he: "אשדוד" },
-    { en: "Ashqelon", he: "אשקלון" }, { en: "Netanya", he: "נתיבות" }, { en: "Eilat", he: "אילת" },
-    { en: "Nahariyya", he: "נהרייה" }, { en: "Akko", he: "עכו" }
-];
-for (let i = 0; i < 25; i++) {
-    const city = coastalCities[i % coastalCities.length];
-    qualitative.push({
-        id: `q_iz_coast_${i}`,
-        category: "israel_cities", level: 2, emoji: "🏖️",
-        text: { en: `Is ${city.en} located on a coast (sea)?`, he: `האם ${city.he} שוכנת לחוף ים?` },
-        options: { en: ["Yes", "No"], he: ["כן", "לא"] },
-        correctAnswer: 0
-    });
-}
-
+// Port/Coast templates - REMOVED per user request
 // Fill remaining to reach 100
 while (qualitative.length < 100) {
     const city = randomItem(processedData);
-    qualitative.push({
-        id: `q_iz_extra_${qualitative.length}`,
-        category: "israel_cities", level: 2, emoji: "🏘️",
-        text: { en: `Is ${city.nameEn} in the South of Israel?`, he: `האם ${city.nameHe} נמצאת בדרום הארץ?` },
-        options: { en: ["Yes", "No"], he: ["כן", "לא"] },
-        correctAnswer: city.districtHe.includes("דרום") ? 0 : 1
-    });
+    const type = Math.random() > 0.5 ? 'region' : 'status';
+
+    if (type === 'region') {
+        const regions = ["הצפון", "המרכז", "הדרום"];
+        const correctRegion = city.districtHe.includes("צפון") ? "הצפון" : (city.districtHe.includes("מרכז") ? "המרכז" : "הדרום");
+        const options = ["הדרום", "המרכז", "הצפון"];
+        const correctIdx = options.indexOf(correctRegion);
+
+        qualitative.push({
+            id: `q_iz_extra_reg_${qualitative.length}`,
+            category: "israel_cities", level: 2, emoji: "📍",
+            text: {
+                en: `In which part of Israel is ${city.nameEn} located?`,
+                he: `באיזה חלק של ישראל שוכנת ${city.nameHe}?`
+            },
+            options: { en: ["South", "Center", "North"], he: options },
+            correctAnswer: correctIdx
+        });
+    } else {
+        // Status checks (Is it a city/municipality?)
+        const isCity = city.statusHe === 'עירייה';
+        qualitative.push({
+            id: `q_iz_extra_stat_${qualitative.length}`,
+            category: "israel_cities", level: 2, emoji: "🏘️",
+            text: {
+                en: `Is ${city.nameEn} officially defined as a "City" (Municipality)?`,
+                he: `האם ${city.nameHe} מוגדרת רשמית כעיר (עירייה)?`
+            },
+            options: { en: ["Yes", "No"], he: ["כן", "לא"] },
+            correctAnswer: isCity ? 0 : 1
+        });
+    }
 }
 
 const finalQuestions = [...questions, ...qualitative.slice(0, 100)];
