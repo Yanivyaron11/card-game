@@ -196,13 +196,13 @@ export const questionCounts = {
     "math": 500,
     "patisserie": 400,
     "israeli_music": 286,
-    "animals": 120,
+    "animals": 154,
     "countries": 246,
     "movies": 112,
     "food": 320,
     "london": 201,
     "art": 101,
-    "nature": 100,
+    "nature": 66,
     "general": 100,
     "sopranos": 100,
     "human_body": 100,
@@ -53839,7 +53839,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2086",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest animal to ever live?",
@@ -53864,7 +53864,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2087",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the tallest land animal?",
@@ -53889,7 +53889,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2088",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the fastest land animal?",
@@ -53914,7 +53914,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2089",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest type of big cat in the world?",
@@ -53939,7 +53939,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2090",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest bird in the world?",
@@ -53964,7 +53964,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2091",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the smallest bird in the world?",
@@ -53989,7 +53989,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2092",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest fish in the ocean?",
@@ -54114,7 +54114,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2097",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest island in the world?",
@@ -54264,7 +54264,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2103",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest sea on Earth?",
@@ -54364,7 +54364,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2107",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest land mammal in Asia?",
@@ -54389,7 +54389,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2108",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest cat in the Americas?",
@@ -54414,7 +54414,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2109",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest reptile in the world?",
@@ -54439,7 +54439,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2110",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the largest egg in the world?",
@@ -54464,7 +54464,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2111",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the fastest bird in the world?",
@@ -54489,7 +54489,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2112",
-        "category": "nature",
+        "category": "animals",
         "level": 1,
         "text": {
             "en": "What is the longest living land animal?",
@@ -54814,7 +54814,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2125",
-        "category": "nature",
+        "category": "animals",
         "level": 2,
         "text": {
             "en": "What is the fastest fish in the ocean?",
@@ -54889,7 +54889,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2128",
-        "category": "nature",
+        "category": "animals",
         "level": 2,
         "text": {
             "en": "What is the largest archipelago in the world?",
@@ -54964,7 +54964,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2131",
-        "category": "nature",
+        "category": "animals",
         "level": 2,
         "text": {
             "en": "What is the largest cave in the world by volume?",
@@ -55014,7 +55014,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2133",
-        "category": "nature",
+        "category": "animals",
         "level": 2,
         "text": {
             "en": "Which is the largest shark ever to live?",
@@ -55114,7 +55114,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2137",
-        "category": "nature",
+        "category": "animals",
         "level": 2,
         "text": {
             "en": "Which animal is the largest primate in the world?",
@@ -55414,7 +55414,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2149",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the fastest bird in horizontal flight?",
@@ -55439,7 +55439,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2150",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the largest living organism in the world?",
@@ -55464,7 +55464,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2151",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the longest living vertebrate animal?",
@@ -55514,7 +55514,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2153",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the largest volcano on Earth?",
@@ -55589,7 +55589,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2156",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "Which is the largest crab in the world?",
@@ -55639,7 +55639,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2158",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the fastest shark in the ocean?",
@@ -55764,7 +55764,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2163",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "Which animal has the heart with the highest blood pressure?",
@@ -55789,7 +55789,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2164",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the largest invertebrate in the world?",
@@ -55814,7 +55814,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2165",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the world's smallest mammal by mass?",
@@ -55839,7 +55839,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2166",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "Which is the largest snake species by weight?",
@@ -55864,7 +55864,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2167",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the largest flying bird in the world?",
@@ -55889,7 +55889,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2168",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the longest living insect species?",
@@ -56064,7 +56064,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2175",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the fastest animal in the water?",
@@ -56139,7 +56139,7 @@ export const questions = [
     },
     {
         "id": "q-nature-2178",
-        "category": "nature",
+        "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the world's largest canyon after the Yarlung Tsangpo?",
