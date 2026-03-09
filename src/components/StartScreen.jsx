@@ -8,32 +8,36 @@ import './StartScreen.css';
 function StartScreen({ onStart, language, onLanguageChange }) {
     const t = translations[language];
 
+    const getLeafTopics = () => {
+        let leaves = [];
+        topics.forEach(t => {
+            if (t.subTopics) leaves.push(...t.subTopics);
+            else leaves.push(t);
+        });
+        return leaves;
+    };
+
     // Persistent settings
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
     const [activePool, setActivePool] = useState(() => {
         try {
             const saved = localStorage.getItem('activeCategories');
-            const defaultPool = topics.map(t => t.id).slice(0, 9);
+            const allLeaves = getLeafTopics();
+            const defaultPool = allLeaves.map(t => t.id).slice(0, 9);
             if (!saved) return defaultPool;
             const parsed = JSON.parse(saved);
 
-            // Check if saved array uses the old system (e.g. 'patisserie' instead of 'food_group')
-            const validParentIds = topics.map(t => t.id);
             if (Array.isArray(parsed) && parsed.length > 0) {
-                // If they have any valid parents, they are mostly migrated.
-                // But let's be safe and just reset to default if they don't have exactly the parents
-                const hasValidParent = parsed.some(id => validParentIds.includes(id));
-                if (hasValidParent) return parsed;
-
-                // If no valid parents (all legacy IDs), force a reset to defaultPool
-                // so the new folders actually show up!
-                console.log("Legacy categories detected, resetting to default pool to show folders.");
+                const leafIds = allLeaves.map(t => t.id);
+                const hasValidLeaf = parsed.some(id => leafIds.includes(id));
+                const containsParent = parsed.some(id => topics.some(t => t.subTopics && t.id === id));
+                if (hasValidLeaf && !containsParent) return parsed;
                 return defaultPool;
             }
             return defaultPool;
         } catch (e) {
             console.error("Failed to parse activeCategories", e);
-            return topics.map(t => t.id).slice(0, 9);
+            return getLeafTopics().map(t => t.id).slice(0, 9);
         }
     });
 
@@ -43,16 +47,9 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [difficulty, setDifficulty] = useState(1);
     const [selectedTopics, setSelectedTopics] = useState([]);
     const [gameMode, setGameMode] = useState('solo');
-    const [expandedTopics, setExpandedTopics] = useState([]);
-
-    const toggleTopicExpand = (groupId) => {
-        setExpandedTopics(prev =>
-            prev.includes(groupId) ? prev.filter(id => id !== groupId) : [...prev, groupId]
-        );
-    };
 
     // Filter topics based on active pool
-    const visibleTopics = topics.filter(t => activePool.includes(t.id));
+    const visibleTopics = getLeafTopics().filter(t => activePool.includes(t.id));
 
     const handleTopicToggle = (topicId) => {
         setSelectedTopics(prev =>
@@ -180,62 +177,19 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             <div className="config-section">
                 <h3>{t.choose_topics}</h3>
                 <div className="topic-options">
-                    {visibleTopics.map(topic => {
-                        if (!topic.subTopics) {
-                            return (
-                                <div
-                                    key={topic.id}
-                                    className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`}
-                                    onClick={() => handleTopicToggle(topic.id)}
-                                >
-                                    <span className="topic-icon">{topic.icon}</span>
-                                    <div className="topic-info-main">
-                                        <span className="topic-name">{topic.name[language]}</span>
-                                        <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
-                                    </div>
-                                </div>
-                            );
-                        }
-
-                        const isExpanded = expandedTopics.includes(topic.id);
-                        const folderCount = topic.subTopics.reduce((acc, sub) => acc + (questionCounts[sub.id] || 0), 0);
-                        const selectedSubTopics = topic.subTopics.filter(sub => selectedTopics.includes(sub.id));
-                        const isPartiallySelected = selectedSubTopics.length > 0 && selectedSubTopics.length < topic.subTopics.length;
-                        const isFullySelected = selectedSubTopics.length === topic.subTopics.length && topic.subTopics.length > 0;
-
-                        return (
-                            <div key={topic.id} className="topic-group-container">
-                                <div
-                                    className={`topic-card folder-card ${isFullySelected ? 'selected' : isPartiallySelected ? 'partially-selected' : ''}`}
-                                    onClick={() => toggleTopicExpand(topic.id)}
-                                >
-                                    <span className="topic-icon">{topic.icon}</span>
-                                    <div className="topic-info-main">
-                                        <span className="topic-name">{topic.name[language]}</span>
-                                        <span className="topic-count folder-count">{folderCount} {t.questions_count}</span>
-                                    </div>
-                                    <div className={`folder-chevron ${isExpanded ? 'expanded' : ''}`}>▼</div>
-                                </div>
-                                {isExpanded && (
-                                    <div className="subtopics-container">
-                                        {topic.subTopics.map(sub => (
-                                            <div
-                                                key={sub.id}
-                                                className={`topic-card sub-card ${selectedTopics.includes(sub.id) ? 'selected' : ''}`}
-                                                onClick={() => handleTopicToggle(sub.id)}
-                                            >
-                                                <span className="topic-icon">{sub.icon}</span>
-                                                <div className="topic-info-main">
-                                                    <span className="topic-name">{sub.name[language]}</span>
-                                                    <span className="topic-count">{questionCounts[sub.id] || 0} {t.questions_count}</span>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
+                    {visibleTopics.map(topic => (
+                        <div
+                            key={topic.id}
+                            className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`}
+                            onClick={() => handleTopicToggle(topic.id)}
+                        >
+                            <span className="topic-icon">{topic.icon}</span>
+                            <div className="topic-info-main">
+                                <span className="topic-name">{topic.name[language]}</span>
+                                <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
                             </div>
-                        );
-                    })}
+                        </div>
+                    ))}
                 </div>
             </div>
 

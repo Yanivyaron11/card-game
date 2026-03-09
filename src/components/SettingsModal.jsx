@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { topics } from '../data/questions';
 import { translations } from '../data/translations';
 import './SettingsModal.css';
@@ -15,9 +15,17 @@ function SettingsModal({
     musicTrack,
     onMusicChange
 }) {
+    const [expandedTopics, setExpandedTopics] = useState([]);
+
     if (!isOpen) return null;
 
     const t = translations[language];
+
+    const toggleTopicExpand = (groupId) => {
+        setExpandedTopics(prev =>
+            prev.includes(groupId) ? prev.filter(id => id !== groupId) : [...prev, groupId]
+        );
+    };
 
     return (
         <div className="modal-overlay" onClick={onClose}>
@@ -97,16 +105,52 @@ function SettingsModal({
                     <section className="settings-section">
                         <h3>{t.active_categories}</h3>
                         <div className="category-pool">
-                            {topics.map(topic => (
-                                <div
-                                    key={topic.id}
-                                    className={`pool-item ${activeCategories.includes(topic.id) ? 'selected' : ''}`}
-                                    onClick={() => onCategoryToggle(topic.id)}
-                                >
-                                    <span className="pool-icon">{topic.icon}</span>
-                                    <span className="pool-name">{topic.name[language]}</span>
-                                </div>
-                            ))}
+                            {topics.map(topic => {
+                                if (!topic.subTopics) {
+                                    return (
+                                        <div
+                                            key={topic.id}
+                                            className={`pool-item ${activeCategories.includes(topic.id) ? 'selected' : ''}`}
+                                            onClick={() => onCategoryToggle(topic.id)}
+                                        >
+                                            <span className="pool-icon">{topic.icon}</span>
+                                            <span className="pool-name">{topic.name[language]}</span>
+                                        </div>
+                                    );
+                                }
+
+                                const isExpanded = expandedTopics.includes(topic.id);
+                                const selectedSubTopics = topic.subTopics.filter(sub => activeCategories.includes(sub.id));
+                                const isPartiallySelected = selectedSubTopics.length > 0 && selectedSubTopics.length < topic.subTopics.length;
+                                const isFullySelected = selectedSubTopics.length === topic.subTopics.length && topic.subTopics.length > 0;
+
+                                return (
+                                    <div key={topic.id} className="settings-topic-group">
+                                        <div
+                                            className={`pool-item folder-item ${isFullySelected ? 'selected' : isPartiallySelected ? 'partially-selected' : ''}`}
+                                            onClick={() => toggleTopicExpand(topic.id)}
+                                        >
+                                            <span className="pool-icon">{topic.icon}</span>
+                                            <span className="pool-name">{topic.name[language]}</span>
+                                            <div className={`folder-chevron ${isExpanded ? 'expanded' : ''}`}>▼</div>
+                                        </div>
+                                        {isExpanded && (
+                                            <div className="settings-subtopics-container">
+                                                {topic.subTopics.map(sub => (
+                                                    <div
+                                                        key={sub.id}
+                                                        className={`pool-item sub-item ${activeCategories.includes(sub.id) ? 'selected' : ''}`}
+                                                        onClick={() => onCategoryToggle(sub.id)}
+                                                    >
+                                                        <span className="pool-icon">{sub.icon}</span>
+                                                        <span className="pool-name">{sub.name[language]}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </section>
                 </div>
