@@ -274,7 +274,7 @@ export const questionCounts = {
     "maccabi_haifa": 155,
     "chelsea": 100,
     "math": 500,
-    "tel_aviv": 243,
+    "tel_aviv": 273,
     "patisserie": 400,
     "israeli_music": 286,
     "animals": 154,
@@ -90793,7 +90793,7 @@ export const questions = [
         "correctAnswer": 0,
         "emoji": "💻"
     }
-,
+    ,
     {
         "id": "q-tel-aviv-101",
         "category": "tel_aviv",
@@ -92169,7 +92169,7 @@ export const questions = [
         "correctAnswer": 0,
         "emoji": "🗞️"
     }
-,
+    ,
     {
         "id": "q-tel-aviv-156",
         "category": "tel_aviv",
@@ -93620,7 +93620,7 @@ export const questions = [
         "correctAnswer": 0,
         "emoji": "🎙️"
     },
-        {
+    {
         "id": "q-tel-aviv-214",
         "category": "tel_aviv",
         "level": 2,
@@ -94369,5 +94369,755 @@ export const questions = [
         },
         "correctAnswer": 0,
         "emoji": "🕰️"
+    },
+    {
+        "id": "q-tel-aviv-244",
+        "category": "tel_aviv",
+        "level": 1,
+        "text": {
+            "en": "Which two sports clubs are the most decorated and successful in Tel Aviv?",
+            "he": "אילו שני מועדוני ספורט הם המעוטרים והמצליחים ביותר בתל אביב?"
+        },
+        "options": {
+            "en": [
+                "Maccabi and Hapoel",
+                "Beitar and Shimshon",
+                "Bnei Yehuda and Maccabi Jaffa",
+                "Hakoah and Beitar"
+            ],
+            "he": [
+                "מכבי והפועל",
+                "בית''ר ושמשון",
+                "בני יהודה ומכבי יפו",
+                "הכח ובית''ר"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "⚽"
+    },
+    {
+        "id": "q-tel-aviv-245",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which famous football stadium serves as the home for Maccabi, Hapoel, and Bnei Yehuda?",
+            "he": "איזה אצטדיון כדורגל מפורסם משמש כביתם של מכבי, הפועל ובני יהודה?"
+        },
+        "options": {
+            "en": [
+                "Bloomfield Stadium",
+                "HaMoshava Stadium",
+                "Ramat Gan Stadium",
+                "Sammy Ofer Stadium"
+            ],
+            "he": [
+                "אצטדיון בלומפילד",
+                "אצטדיון המושבה",
+                "אצטדיון רמת גן",
+                "אצטדיון סמי עופר"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏟️"
+    },
+    {
+        "id": "q-tel-aviv-246",
+        "category": "tel_aviv",
+        "level": 3,
+        "text": {
+            "en": "In what year did Tel Aviv host the first-ever Maccabiah Games?",
+            "he": "באיזו שנה אירחה תל אביב את המכביה הראשונה בהיסטוריה?"
+        },
+        "options": {
+            "en": [
+                "1932",
+                "1948",
+                "1950",
+                "1920"
+            ],
+            "he": [
+                "1932",
+                "1948",
+                "1950",
+                "1920"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏅"
+    },
+    {
+        "id": "q-tel-aviv-247",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which sports arena in Tel Aviv is considered one of the most famous in Europe for basketball?",
+            "he": "איזה היכל ספורט בתל אביב נחשב לאחד המפורסמים באירופה לכדורסל?"
+        },
+        "options": {
+            "en": [
+                "Menora Mivtachim Arena",
+                "Shlomo Group Arena",
+                "Malha Arena",
+                "Jerusalem Arena"
+            ],
+            "he": [
+                "היכל מנורה מבטחים",
+                "היכל קבוצת שלמה",
+                "היכל הספורט מלחה",
+                "ארנה ירושלים"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏀"
+    },
+    {
+        "id": "q-tel-aviv-248",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which station in Tel Aviv is considered the second largest in the world in terms of floor area?",
+            "he": "איזו תחנה בתל אביב נחשבת לשנייה בגודלה בעולם מבחינת שטח קומות?"
+        },
+        "options": {
+            "en": [
+                "The New Central Bus Station",
+                "HaHagana Railway Station",
+                "Savidor Central Station",
+                "HaShalom Station"
+            ],
+            "he": [
+                "התחנה המרכזית החדשה",
+                "תחנת רכבת ההגנה",
+                "תחנת רכבת סובידור מרכז",
+                "תחנת רכבת השלום"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🚌"
+    },
+    {
+        "id": "q-tel-aviv-249",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which light rail line ('Dankal') was the first to start operating in the city?",
+            "he": "איזה קו של הרכבת הקלה ('דנקל') היה הראשון שהחל לפעול בעיר?"
+        },
+        "options": {
+            "en": [
+                "The Red Line",
+                "The Green Line",
+                "The Purple Line",
+                "The Blue Line"
+            ],
+            "he": [
+                "הקו האדום",
+                "הקו הירוק",
+                "הקו הסגול",
+                "הקו הכחול"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🚃"
+    },
+    {
+        "id": "q-tel-aviv-250",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which public transportation service operates for free in Tel Aviv and its surroundings on weekends?",
+            "he": "איזה שירות תחבורה ציבורית פועל בתל אביב וסביבתה בסופי שבוע בחינם?"
+        },
+        "options": {
+            "en": [
+                "Naim B'sofash",
+                "Golden Bus",
+                "Night Lines",
+                "Metropoline"
+            ],
+            "he": [
+                "נעים בסופ''ש",
+                "אוטובוס הזהב",
+                "קווי לילה",
+                "מטרופולין"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🚌"
+    },
+    {
+        "id": "q-tel-aviv-251",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which port was established in 1936 as the first Hebrew port in modern times?",
+            "he": "איזה נמל הוקם ב-1936 כנמל העברי הראשון בעת החדשה?"
+        },
+        "options": {
+            "en": [
+                "Tel Aviv Port",
+                "Jaffa Port",
+                "Haifa Port",
+                "Ashdod Port"
+            ],
+            "he": [
+                "נמל תל אביב",
+                "נמל יפו",
+                "נמל חיפה",
+                "נמל אשדוד"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "⚓"
+    },
+    {
+        "id": "q-tel-aviv-252",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which airport that operated within the city was officially closed in 2019?",
+            "he": "איזה שדה תעופה שפעל בתוך העיר נסגר סופית בשנת 2019?"
+        },
+        "options": {
+            "en": [
+                "Sde Dov",
+                "Ben Gurion Airport",
+                "Herzliya Airport",
+                "Atarot Airport"
+            ],
+            "he": [
+                "שדה דב",
+                "נמל תעופה בן גוריון",
+                "שדה התעופה הרצליה",
+                "שדה התעופה עטרות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "✈️"
+    },
+    {
+        "id": "q-tel-aviv-253",
+        "category": "tel_aviv",
+        "level": 1,
+        "text": {
+            "en": "What was the name of Tel Aviv's first municipal bicycle rental project?",
+            "he": "איך נקרא פרויקט השכרת האופניים העירוני הראשון של תל אביב?"
+        },
+        "options": {
+            "en": [
+                "Tel-O-Fun",
+                "Metro",
+                "Bike Air",
+                "We Ride"
+            ],
+            "he": [
+                "תל-אופן",
+                "מטרו",
+                "בייק-אייר",
+                "ווי-רייד"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🚲"
+    },
+    {
+        "id": "q-tel-aviv-254",
+        "category": "tel_aviv",
+        "level": 1,
+        "text": {
+            "en": "Which university is the largest in Israel and located in the north of the city?",
+            "he": "איזו אוניברסיטה היא הגדולה ביותר בישראל ונמצאת בצפון העיר?"
+        },
+        "options": {
+            "en": [
+                "Tel Aviv University",
+                "Hebrew University",
+                "Bar Ilan University",
+                "Technion"
+            ],
+            "he": [
+                "אוניברסיטת תל אביב",
+                "האוניברסיטה העברית",
+                "אוניברסיטת בר אילן",
+                "הטכניון"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎓"
+    },
+    {
+        "id": "q-tel-aviv-255",
+        "category": "tel_aviv",
+        "level": 3,
+        "text": {
+            "en": "In which boulevard in Jaffa were wide sidewalks built to compete with Tel Aviv's boulevards?",
+            "he": "באיזו שדרה ביפו נבנו מדרכות רחבות כדי להתחרות בשדרות תל אביב?"
+        },
+        "options": {
+            "en": [
+                "Jerusalem Boulevard",
+                "Rothschild Boulevard",
+                "Independence Boulevard",
+                "Zionism Boulevard"
+            ],
+            "he": [
+                "שדרות ירושלים",
+                "שדרות רוטשילד",
+                "שדרות העצמאות",
+                "שדרות הציונות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🌳"
+    },
+    {
+        "id": "q-tel-aviv-256",
+        "category": "tel_aviv",
+        "level": 1,
+        "text": {
+            "en": "Which street in Tel Aviv is famous for its many cafes and culture?",
+            "he": "איזה רחוב בתל אביב מפורסם בזכות בתי הקפה הרבים והתרבות שבו?"
+        },
+        "options": {
+            "en": [
+                "Dizengoff Street",
+                "Allenby Street",
+                "Ben Yehuda Street",
+                "King George Street"
+            ],
+            "he": [
+                "רחוב דיזנגוף",
+                "רחוב אלנבי",
+                "רחוב בן יהודה",
+                "רחוב קינג ג'ורג'"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "☕"
+    },
+    {
+        "id": "q-tel-aviv-257",
+        "category": "tel_aviv",
+        "level": 3,
+        "text": {
+            "en": "Which street is considered the heart of the Israeli economy and contains the Stock Exchange?",
+            "he": "איזה רחוב נחשב ללב הכלכלה הישראלית ומכיל את הבורסה לניירות ערך?"
+        },
+        "options": {
+            "en": [
+                "Ahad Ha'am Street",
+                "HaYarkon Street",
+                "Ibn Gabirol Street",
+                "Begin Road"
+            ],
+            "he": [
+                "רחוב אחד העם",
+                "רחוב הירקון",
+                "רחוב אבן גבירול",
+                "דרך בגין"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "📈"
+    },
+    {
+        "id": "q-tel-aviv-258",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "On which street in Tel Aviv is there a particularly high concentration of art galleries?",
+            "he": "באיזה רחוב בתל אביב יש ריכוז גבוה במיוחד של גלריות לאמנות?"
+        },
+        "options": {
+            "en": [
+                "Gordon Street",
+                "Yehuda HaYamit Street",
+                "Herzl Street",
+                "Basel Street"
+            ],
+            "he": [
+                "רחוב גורדון",
+                "רחוב יהודה הימית",
+                "רחוב הרצל",
+                "רחוב בזל"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🖼️"
+    },
+    {
+        "id": "q-tel-aviv-259",
+        "category": "tel_aviv",
+        "level": 1,
+        "text": {
+            "en": "What is the name of the nightly cultural event where the city's institutions stay open all night?",
+            "he": "איך נקרא אירוע התרבות הלילי שבו מוסדות העיר נשארים פתוחים כל הלילה?"
+        },
+        "options": {
+            "en": [
+                "White Night (Laila Lavan)",
+                "Night of Stars",
+                "Night Marathon",
+                "Lights Festival"
+            ],
+            "he": [
+                "לילה לבן",
+                "לילה של כוכבים",
+                "מרתון הלילה",
+                "פסטיבל האורות"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "⚪"
+    },
+    {
+        "id": "q-tel-aviv-260",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which annual event is considered the largest of its kind in the Middle East and Asia?",
+            "he": "איזה אירוע שנתי נחשב לגדול ביותר מסוגו במזרח התיכון ובאסיה?"
+        },
+        "options": {
+            "en": [
+                "Tel Aviv Pride Parade",
+                "Film Festival",
+                "Adloyada",
+                "Flower Exhibition"
+            ],
+            "he": [
+                "מצעד הגאווה",
+                "פסטיבל הסרטים",
+                "העדלאידע",
+                "תערוכת הפרחים"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🌈"
+    },
+    {
+        "id": "q-tel-aviv-261",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which complex in Tel Aviv was originally established as a German Templar colony?",
+            "he": "איזה מתחם בתל אביב הוקם במקור כמושבה טמפלרית גרמנית?"
+        },
+        "options": {
+            "en": [
+                "Sarona",
+                "The American Colony",
+                "Neve Tzedek",
+                "The Station Compound"
+            ],
+            "he": [
+                "שרונה",
+                "המושבה האמריקאית",
+                "נווה צדק",
+                "מתחם התחנה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏰"
+    },
+    {
+        "id": "q-tel-aviv-262",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "In which neighborhood in Tel Aviv is there a high concentration of street art and graffiti?",
+            "he": "באיזו שכונה בתל אביב יש ריכוז גבוה של אמנות רחוב וגרפיטי?"
+        },
+        "options": {
+            "en": [
+                "Florentin Neighborhood",
+                "Ramat HaChayal",
+                "Bavli",
+                "Maoz Aviv"
+            ],
+            "he": [
+                "שכונת פלורנטין",
+                "רמת החייל",
+                "שיכון בבלי",
+                "מעוז אביב"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎨"
+    },
+    {
+        "id": "q-tel-aviv-263",
+        "category": "tel_aviv",
+        "level": 3,
+        "text": {
+            "en": "In which European city was a 'Tel Aviv Beach' established on a river bank?",
+            "he": "באיזו עיר אירופאית הוקם 'חוף תל אביב' על גדת נחל?"
+        },
+        "options": {
+            "en": [
+                "Vienna",
+                "Berlin",
+                "Paris",
+                "London"
+            ],
+            "he": [
+                "וינה",
+                "ברלין",
+                "פריז",
+                "לונדון"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏖️"
+    },
+    {
+        "id": "q-tel-aviv-264",
+        "category": "tel_aviv",
+        "level": 1,
+        "text": {
+            "en": "Which football team is most closely associated with the Hatikva neighborhood?",
+            "he": "איזו קבוצת כדורגל מזוהה יותר מכל עם שכונת התקווה?"
+        },
+        "options": {
+            "en": [
+                "Bnei Yehuda Tel Aviv",
+                "Hapoel Tel Aviv",
+                "Maccabi Tel Aviv",
+                "Beitar Tel Aviv"
+            ],
+            "he": [
+                "בני יהודה תל אביב",
+                "הפועל תל אביב",
+                "מכבי תל אביב",
+                "בית''ר תל אביב"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🦁"
+    },
+    {
+        "id": "q-tel-aviv-265",
+        "category": "tel_aviv",
+        "level": 3,
+        "text": {
+            "en": "Approximately how many streets are there in the city of Tel Aviv-Jaffa?",
+            "he": "כמה רחובות יש בערך בעיר תל אביב-יפו?"
+        },
+        "options": {
+            "en": [
+                "About 1,500",
+                "About 500",
+                "About 5,000",
+                "About 10,000"
+            ],
+            "he": [
+                "כ-1,500",
+                "כ-500",
+                "כ-5,000",
+                "כ-10,000"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "路"
+    },
+    {
+        "id": "q-tel-aviv-266",
+        "category": "tel_aviv",
+        "level": 3,
+        "text": {
+            "en": "Where was Tel Aviv University originally established in 1953?",
+            "he": "איפה הוקמה אוניברסיטת תל אביב במקור בשנת 1953?"
+        },
+        "options": {
+            "en": [
+                "Abu Kabir",
+                "Ramat Aviv",
+                "HaYarkon",
+                "Neve Tzedek"
+            ],
+            "he": [
+                "אבו כביר",
+                "רמת אביב",
+                "הירקון",
+                "נווה צדק"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏛️"
+    },
+    {
+        "id": "q-tel-aviv-267",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which city is a 'sister city' of Tel Aviv in the United States?",
+            "he": "איזו עיר היא 'עיר תאומה' של תל אביב בארצות הברית?"
+        },
+        "options": {
+            "en": [
+                "New York",
+                "Los Angeles",
+                "Miami",
+                "Seattle"
+            ],
+            "he": [
+                "ניו יורק",
+                "לוס אנג'לס",
+                "מיאמי",
+                "סיאטל"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏙️"
+    },
+    {
+        "id": "q-tel-aviv-268",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "The Kerem HaTeimanim neighborhood was established in 1904 outside the wall of...",
+            "he": "שכונת כרם התימנים הוקמה בשנת 1904 מחוץ לחומה של..."
+        },
+        "options": {
+            "en": [
+                "Jaffa",
+                "Jerusalem",
+                "Akko",
+                "Tiberias"
+            ],
+            "he": [
+                "יפו",
+                "ירושלים",
+                "עכו",
+                "טבריה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏺"
+    },
+    {
+        "id": "q-tel-aviv-269",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Who was the first mayor of Tel Aviv?",
+            "he": "מי היה ראש העיר הראשון של תל אביב?"
+        },
+        "options": {
+            "en": [
+                "Meir Dizengoff",
+                "Israel Rokach",
+                "Shlomo Lahat",
+                "Ron Huldai"
+            ],
+            "he": [
+                "מאיר דיזנגוף",
+                "ישראל רוקח",
+                "שלמה להט",
+                "רון חולדאי"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎩"
+    },
+    {
+        "id": "q-tel-aviv-270",
+        "category": "tel_aviv",
+        "level": 1,
+        "text": {
+            "en": "On which street is the 'Independence House' where the state was declared located?",
+            "he": "באיזה רחוב שוכן 'בית העצמאות' שבו הוכרזה המדינה?"
+        },
+        "options": {
+            "en": [
+                "Rothschild Blvd",
+                "Herzl St",
+                "Ahad Ha'am St",
+                "Bialik St"
+            ],
+            "he": [
+                "שדרות רוטשילד",
+                "רחוב הרצל",
+                "רחוב אחד העם",
+                "רחוב ביאליק"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "📜"
+    },
+    {
+        "id": "q-tel-aviv-271",
+        "category": "tel_aviv",
+        "level": 3,
+        "text": {
+            "en": "Which famous series dealt with a group of young people in Tel Aviv in the 90s?",
+            "he": "איזו סדרה מפורסמת עסקה בחבורת צעירים בתל אביב בשנות ה-90?"
+        },
+        "options": {
+            "en": [
+                "Florentin",
+                "Hafuch",
+                "Ramat Aviv Gimmel",
+                "Saturdays and Holidays"
+            ],
+            "he": [
+                "פלורנטין",
+                "הפוך",
+                "רמת אביב ג'",
+                "שבתות וחגים"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "📺"
+    },
+    {
+        "id": "q-tel-aviv-272",
+        "category": "tel_aviv",
+        "level": 2,
+        "text": {
+            "en": "Which structure in Jaffa is considered the historical transport icon of Jaffa Port?",
+            "he": "איזה מבנה ביפו נחשב לאייקון התחבורה ההיסטורי של נמל יפו?"
+        },
+        "options": {
+            "en": [
+                "Jaffa Lighthouse",
+                "The Clock Tower",
+                "Jaffa Railway Station",
+                "Customs House"
+            ],
+            "he": [
+                "מגדלור יפו",
+                "מגדל השעון",
+                "תחנת הרכבת יפו",
+                "בית המכס"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🔦"
+    },
+    {
+        "id": "q-tel-aviv-273",
+        "category": "tel_aviv",
+        "level": 1,
+        "text": {
+            "en": "By what famous nickname is Tel Aviv known because of its white buildings?",
+            "he": "באיזה כינוי מפורסם ידועה תל אביב בגלל הבניינים הלבנים שבה?"
+        },
+        "options": {
+            "en": [
+                "The White City",
+                "City of Lights",
+                "Beach City",
+                "The City That Never Sleeps"
+            ],
+            "he": [
+                "העיר הלבנה",
+                "עיר האורות",
+                "עיר החוף",
+                "העיר ללא הפסקה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏙️"
     }
 ];
