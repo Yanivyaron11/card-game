@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { topics } from '../data/questions';
+import { topics } from '../data/questions/index';
 import { translations } from '../data/translations';
 import './SettingsModal.css';
 

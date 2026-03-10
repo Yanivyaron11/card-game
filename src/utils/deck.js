@@ -1,4 +1,4 @@
-import { questions, topics } from '../data/questions.js';
+import { questions, topics } from '../data/questions/index';
 
 const shuffle = (array) => {
     const newArray = [...array];

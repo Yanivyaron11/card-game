@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { topics, questionCounts } from '../data/questions';
+import { topics, questionCounts } from '../data/questions/index';
 import { playSound, getSoundEnabled, setSoundEnabled, getMusicTrack, setMusicTrack } from '../utils/sounds';
 import { translations } from '../data/translations';
 import SettingsModal from './SettingsModal';
