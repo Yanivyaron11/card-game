@@ -274,7 +274,7 @@ export const questionCounts = {
     "maccabi_haifa": 155,
     "chelsea": 100,
     "math": 500,
-    "tel_aviv": 300,
+    "tel_aviv": 243,
     "patisserie": 400,
     "israeli_music": 286,
     "animals": 154,
@@ -93620,3029 +93620,754 @@ export const questions = [
         "correctAnswer": 0,
         "emoji": "🎙️"
     },
-    {
+        {
         "id": "q-tel-aviv-214",
         "category": "tel_aviv",
         "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 1",
-            "he": "שאלה כללית על תל אביב 1"
+            "en": "In what year was the 'Seashell Lottery' held, marking the city's founding?",
+            "he": "באיזו שנה נערכה 'הגרלת הצדפים' שסימנה את הקמת העיר?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "1909",
+                "1917",
+                "1923",
+                "1948"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "1909",
+                "1917",
+                "1923",
+                "1948"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🐚"
     },
     {
         "id": "q-tel-aviv-215",
         "category": "tel_aviv",
-        "level": 2,
+        "level": 1,
         "text": {
-            "en": "General Tel Aviv Question 2",
-            "he": "שאלה כללית על תל אביב 2"
+            "en": "What was Tel Aviv originally called as a small neighborhood?",
+            "he": "איך נקראה תל אביב בראשיתה כשכונה קטנה?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Neve Tzedek",
+                "Ahuzat Bait",
+                "Sarona",
+                "Kerem HaTeimanim"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "נווה צדק",
+                "אחוזת בית",
+                "שרונה",
+                "כרם התימנים"
             ]
         },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
+        "correctAnswer": 1,
+        "emoji": "🏡"
     },
     {
         "id": "q-tel-aviv-216",
         "category": "tel_aviv",
-        "level": 2,
+        "level": 3,
         "text": {
-            "en": "General Tel Aviv Question 3",
-            "he": "שאלה כללית על תל אביב 3"
+            "en": "Who translated Herzl's book 'Altneuland' to the name 'Tel Aviv'?",
+            "he": "מי תרגם את שם ספרו של הרצל 'אלטנוילנד' לשם 'תל אביב'?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Nahum Sokolow",
+                "Chaim Nachman Bialik",
+                "Meir Dizengoff",
+                "Eliezer Ben-Yehuda"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "נחום סוקולוב",
+                "חיים נחמן ביאליק",
+                "מאיר דיזנגוף",
+                "אליעזר בן יהודה"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🖋️"
     },
     {
         "id": "q-tel-aviv-217",
         "category": "tel_aviv",
         "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 4",
-            "he": "שאלה כללית על תל אביב 4"
+            "en": "What is the literal meaning of the name 'Tel Aviv'?",
+            "he": "מהי המשמעות המילולית של השם 'תל אביב'?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Mountain of flowers",
+                "Antiquities and renewal",
+                "Spring beach",
+                "City of lights"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "הר של פרחים",
+                "עתיקות והתחדשות",
+                "חוף אביבי",
+                "עיר האורות"
             ]
         },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
+        "correctAnswer": 1,
+        "emoji": "🌱"
     },
     {
         "id": "q-tel-aviv-218",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 5",
-            "he": "שאלה כללית על תל אביב 5"
+            "en": "For which architectural style is Tel Aviv's 'White City' famous?",
+            "he": "באיזה סגנון אדריכלות מפורסמת 'העיר הלבנה' של תל אביב?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Bauhaus / International Style",
+                "Gothic",
+                "Baroque",
+                "Post-modern"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "באוהאוס / הסגנון הבינלאומי",
+                "גותי",
+                "בארוק",
+                "פוסט-מודרני"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🏗️"
     },
     {
         "id": "q-tel-aviv-219",
         "category": "tel_aviv",
         "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 6",
-            "he": "שאלה כללית על תל אביב 6"
+            "en": "Which Jewish neighborhood was founded outside Jaffa back in 1887?",
+            "he": "איזו שכונה יהודית הוקמה מחוץ ליפו עוד ב-1887?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Neve Tzedek",
+                "Florentin",
+                "Shapira",
+                "Hatikva"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "נווה צדק",
+                "פלורנטין",
+                "שפירא",
+                "התקווה"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🏠"
     },
     {
         "id": "q-tel-aviv-220",
         "category": "tel_aviv",
         "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 7",
-            "he": "שאלה כללית על תל אביב 7"
+            "en": "In which biblical story is Jaffa mentioned as an escape port?",
+            "he": "באיזה סיפור מקראי מוזכרת העיר יפו כנמל בריחה?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Jonah the Prophet",
+                "David and Goliath",
+                "Noah's Ark",
+                "Splitting of the Red Sea"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "יונה הנביא",
+                "דוד וגוליית",
+                "תיבת נח",
+                "קריעת ים סוף"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🐋"
     },
     {
         "id": "q-tel-aviv-221",
         "category": "tel_aviv",
         "level": 3,
         "text": {
-            "en": "General Tel Aviv Question 8",
-            "he": "שאלה כללית על תל אביב 8"
+            "en": "In what year were the cities of Tel Aviv and Jaffa officially merged?",
+            "he": "באיזו שנה אוחדו רשמית הערים תל אביב ויפו?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "1920",
+                "1948",
+                "1949",
+                "1967"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "1920",
+                "1948",
+                "1949",
+                "1967"
             ]
         },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
+        "correctAnswer": 2,
+        "emoji": "🤝"
     },
     {
         "id": "q-tel-aviv-222",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 1,
         "text": {
-            "en": "General Tel Aviv Question 9",
-            "he": "שאלה כללית על תל אביב 9"
+            "en": "What is the largest park in Tel Aviv, serving as a 'green lung'?",
+            "he": "מהו הפארק הגדול ביותר בתל אביב המשמש כ'ריאה ירוקה'?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Meir Park",
+                "Independence Garden",
+                "Yarkon Park (Ganei Yehoshua)",
+                "South Park"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "גן מאיר",
+                "גן העצמאות",
+                "פארק הירקון (גני יהושע)",
+                "פארק דרום"
             ]
         },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
+        "correctAnswer": 2,
+        "emoji": "🌳"
     },
     {
         "id": "q-tel-aviv-223",
         "category": "tel_aviv",
         "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 10",
-            "he": "שאלה כללית על תל אביב 10"
+            "en": "Which building was the first skyscraper in Israel and the Middle East?",
+            "he": "איזה בניין היה גורד השחקים הראשון בישראל ובמזרח התיכון?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Shalom Meir Tower",
+                "Azrieli Tower",
+                "Moshe Aviv Tower",
+                "Binyanei HaUma"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "מגדל שלום מאיר",
+                "מגדל עזריאלי",
+                "מגדל משה אביב",
+                "בנייני האומה"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🏢"
     },
     {
         "id": "q-tel-aviv-224",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 1,
         "text": {
-            "en": "General Tel Aviv Question 11",
-            "he": "שאלה כללית על תל אביב 11"
+            "en": "Which three geometric shapes make up the Azrieli Towers?",
+            "he": "אילו שלושה צורות גאומטריות מרכיבות את מגדלי עזריאלי?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Circle, Square, Triangle",
+                "Diamond, Star, Heart",
+                "Rectangle, Ellipse, Trapezoid",
+                "Cube, Pyramid, Cylinder"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "עיגול, ריבוע, משולש",
+                "מעוין, כוכב, לב",
+                "מלבן, אליפסה, טרפז",
+                "קוביה, פירמידה, גליל"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "📐"
     },
     {
         "id": "q-tel-aviv-225",
         "category": "tel_aviv",
-        "level": 2,
+        "level": 3,
         "text": {
-            "en": "General Tel Aviv Question 12",
-            "he": "שאלה כללית על תל אביב 12"
+            "en": "How do you say 'Tel Aviv' in Israeli Sign Language?",
+            "he": "כיצד אומרים 'תל אביב' בשפת הסימנים הישראלית?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Movement of wearing a mask",
+                "Movement of swimming",
+                "Movement of driving",
+                "Movement of eating"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "תנועה של חבישת מסכה",
+                "תנועה של שחייה",
+                "תנועה של נהיגה",
+                "תנועה של אכילה"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🎭"
     },
     {
         "id": "q-tel-aviv-226",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 13",
-            "he": "שאלה כללית על תל אביב 13"
+            "en": "What appears in Tel Aviv's emblem alongside the text 'I will build you and you shall be built'?",
+            "he": "מה מופיע בסמל העיר תל אביב לצד הכיתוב 'אבנך ונבנית'?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Lighthouse and a gate",
+                "Lion",
+                "Star of David",
+                "Olive branch"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "מגדלור ושער",
+                "אריה",
+                "מגן דוד",
+                "ענף זית"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🛡️"
     },
     {
         "id": "q-tel-aviv-227",
         "category": "tel_aviv",
-        "level": 2,
+        "level": 1,
         "text": {
-            "en": "General Tel Aviv Question 14",
-            "he": "שאלה כללית על תל אביב 14"
+            "en": "Which famous nickname describes the nightlife and constant activity in the city?",
+            "he": "איזה כינוי מפורסם מתאר את חיי הלילה והפעילות התמידית בעיר?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "The Holy City",
+                "The City That Never Sleeps",
+                "City of Lights",
+                "The Red City"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "עיר הקודש",
+                "העיר ללא הפסקה",
+                "עיר האורות",
+                "העיר האדומה"
             ]
         },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
+        "correctAnswer": 1,
+        "emoji": "🌙"
     },
     {
         "id": "q-tel-aviv-228",
         "category": "tel_aviv",
         "level": 3,
         "text": {
-            "en": "General Tel Aviv Question 15",
-            "he": "שאלה כללית על תל אביב 15"
+            "en": "At which address did David Ben-Gurion declare the establishment of Israel?",
+            "he": "באיזו כתובת הכריז דוד בן גוריון על הקמת מדינת ישראל?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "16 Rothschild Blvd",
+                "1 Dizengoff St",
+                "100 Herzl St",
+                "20 Yefet St"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "שדרות רוטשילד 16",
+                "רחוב דיזנגוף 1",
+                "רחוב הרצל 100",
+                "רחוב יפת 20"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🇮🇱"
     },
     {
         "id": "q-tel-aviv-229",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 1,
         "text": {
-            "en": "General Tel Aviv Question 16",
-            "he": "שאלה כללית על תל אביב 16"
+            "en": "What is Israel's national theater located in Tel Aviv called?",
+            "he": "איך נקרא התיאטרון הלאומי של ישראל השוכן בתל אביב?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Habima",
+                "Cameri",
+                "Beit Lessin",
+                "Gesher"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "הבימה",
+                "הקאמרי",
+                "בית ליסין",
+                "גשר"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🎭"
     },
     {
         "id": "q-tel-aviv-230",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 17",
-            "he": "שאלה כללית על תל אביב 17"
+            "en": "Which museum holds the largest collection of Israeli art in the world?",
+            "he": "איזה מוזיאון מחזיק באוסף הגדול ביותר של אמנות ישראלית בעולם?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Tel Aviv Museum of Art",
+                "Israel Museum",
+                "Children's Museum",
+                "Science Museum"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "מוזיאון תל אביב לאמנות",
+                "מוזיאון ישראל",
+                "מוזיאון הילדים",
+                "מוזיאון המדע"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🎨"
     },
     {
         "id": "q-tel-aviv-231",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 18",
-            "he": "שאלה כללית על תל אביב 18"
+            "en": "What was the first Hebrew high school built in the city called?",
+            "he": "איך נקרא בית הספר התיכון העברי הראשון שהוקם בעיר?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Herzliya Gymnasium",
+                "Alliance",
+                "Reali",
+                "Shevah Mofet"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "גימנסיה הרצליה",
+                "אליאנס",
+                "הריאלי",
+                "שבח מופת"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🏫"
     },
     {
         "id": "q-tel-aviv-232",
         "category": "tel_aviv",
-        "level": 2,
+        "level": 1,
         "text": {
-            "en": "General Tel Aviv Question 19",
-            "he": "שאלה כללית על תל אביב 19"
+            "en": "What is Tel Aviv's main and largest market, operating since the 1920s?",
+            "he": "מהו השוק המרכזי והגדול ביותר של תל אביב הפועל משנות ה-20?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Carmel Market",
+                "Levinsky Market",
+                "Flea Market",
+                "Hatikva Market"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "שוק הכרמל",
+                "שוק לוינסקי",
+                "שוק הפשפשים",
+                "שוק התקווה"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🍓"
     },
     {
         "id": "q-tel-aviv-233",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 20",
-            "he": "שאלה כללית על תל אביב 20"
+            "en": "Jaffa Port is considered one of the ... ports in the world?",
+            "he": "נמל יפו נחשב לאחד הנמלים ה... בעולם?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Oldest",
+                "Largest",
+                "Deepest",
+                "Newest"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "העתיקים ביותר",
+                "הגדולים ביותר",
+                "העמוקים ביותר",
+                "החדשים ביותר"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "⚓"
     },
     {
         "id": "q-tel-aviv-234",
         "category": "tel_aviv",
         "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 21",
-            "he": "שאלה כללית על תל אביב 21"
+            "en": "What is the name of the modern pedestrian bridge over the Ayalon Highway?",
+            "he": "מה שמו של הגשר המודרני להולכי רגל מעל נתיבי איילון?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Yehudit Bridge",
+                "Chords Bridge",
+                "Peace Bridge",
+                "Yarkon Bridge"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "גשר יהודית",
+                "גשר המיתרים",
+                "גשר השלום",
+                "גשר הירקון"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🌉"
     },
     {
         "id": "q-tel-aviv-235",
         "category": "tel_aviv",
-        "level": 2,
+        "level": 1,
         "text": {
-            "en": "General Tel Aviv Question 22",
-            "he": "שאלה כללית על תל אביב 22"
+            "en": "Which central square in the city is used for protests and memorial rallies?",
+            "he": "איזו כיכר מרכזית בעיר משמשת להפגנות ועצרות זיכרון?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Rabin Square",
+                "State Square",
+                "Dizengoff Square",
+                "Atarim Square"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "כיכר רבין",
+                "כיכר המדינה",
+                "כיכר דיזנגוף",
+                "כיכר אתרים"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🕯️"
     },
     {
         "id": "q-tel-aviv-236",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 23",
-            "he": "שאלה כללית על תל אביב 23"
+            "en": "Which culture center in Neve Tzedek is the most important for dance in Israel?",
+            "he": "איזה מרכז תרבות בנווה צדק נחשב לחשוב ביותר למחול בישראל?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Suzanne Dellal Center",
+                "Peres Peace Center",
+                "Cinematheque",
+                "Culture Hall"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "מרכז סוזן דלל",
+                "מרכז פרס לשלום",
+                "הסינמטק",
+                "היכל התרבות"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "💃"
     },
     {
         "id": "q-tel-aviv-237",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 24",
-            "he": "שאלה כללית על תל אביב 24"
+            "en": "Where is the Israel Philharmonic Orchestra based?",
+            "he": "איפה שוכנת התזמורת הפילהרמונית הישראלית?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Heichal HaTarbut",
+                "Binyanei HaUma",
+                "Israeli Opera",
+                "Jerusalem Theater"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "היכל התרבות",
+                "בנייני האומה",
+                "האופרה הישראלית",
+                "תיאטרון ירושלים"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🎻"
     },
     {
         "id": "q-tel-aviv-238",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 25",
-            "he": "שאלה כללית על תל אביב 25"
+            "en": "Which museum displays the global story of the Jewish people?",
+            "he": "איזה מוזיאון מציג את הסיפור הגלובלי של העם היהודי?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "ANU Museum (Beit Hatfutsot)",
+                "Haganah Museum",
+                "Lehi Museum",
+                "Yad Vashem"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "מוזיאון אנו (בית התפוצות)",
+                "מוזיאון ההגנה",
+                "מוזיאון הלח''י",
+                "יד ושם"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🌍"
     },
     {
         "id": "q-tel-aviv-239",
         "category": "tel_aviv",
-        "level": 2,
+        "level": 1,
         "text": {
-            "en": "General Tel Aviv Question 26",
-            "he": "שאלה כללית על תל אביב 26"
+            "en": "What is the most central and historic boulevard in the city?",
+            "he": "מהי השדרה ההיסטורית והמרכזית ביותר בעיר?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Rothschild Blvd",
+                "Jerusalem Blvd",
+                "Nordau Blvd",
+                "Chen Blvd"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "שדרות רוטשילד",
+                "שדרות ירושלים",
+                "שדרות נורדאו",
+                "שדרות חן"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🌳"
     },
     {
         "id": "q-tel-aviv-240",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 27",
-            "he": "שאלה כללית על תל אביב 27"
+            "en": "In which neighborhood is the largest university in Israel located?",
+            "he": "באיזו שכונה נמצאת האוניברסיטה הגדולה בישראל?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Ramat Aviv",
+                "Tzahala",
+                "Yad Eliyahu",
+                "Neve Sharet"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "רמת אביב",
+                "צהלה",
+                "יד אליהו",
+                "נווה שרת"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🎓"
     },
     {
         "id": "q-tel-aviv-241",
         "category": "tel_aviv",
-        "level": 2,
+        "level": 3,
         "text": {
-            "en": "General Tel Aviv Question 28",
-            "he": "שאלה כללית על תל אביב 28"
+            "en": "What is the length of the Tel Aviv-Jaffa beach strip?",
+            "he": "מהו אורך רצועת החוף של תל אביב-יפו?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "About 14 km",
+                "About 5 km",
+                "About 50 km",
+                "About 2 km"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "כ-14 קילומטרים",
+                "כ-5 קילומטרים",
+                "כ-50 קילומטרים",
+                "כ-2 קילומטרים"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🏖️"
     },
     {
         "id": "q-tel-aviv-242",
         "category": "tel_aviv",
-        "level": 3,
+        "level": 2,
         "text": {
-            "en": "General Tel Aviv Question 29",
-            "he": "שאלה כללית על תל אביב 29"
+            "en": "What is the marked walking trail through the city's historic sites called?",
+            "he": "איך נקרא מסלול ההליכה המסומן העובר בין אתרי ההיסטוריה בעיר?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "Independence Trail",
+                "Israel Trail",
+                "Orange Trail",
+                "Sea Trail"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "שביל העצמאות",
+                "שביל ישראל",
+                "שביל התפוזים",
+                "שביל הים"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "👣"
     },
     {
         "id": "q-tel-aviv-243",
         "category": "tel_aviv",
-        "level": 2,
+        "level": 1,
         "text": {
-            "en": "General Tel Aviv Question 30",
-            "he": "שאלה כללית על תל אביב 30"
+            "en": "Which iconic structure serves as the famous entry point to the city of Jaffa?",
+            "he": "איזה מבנה אייקוני משמש כנקודת הכניסה המפורסמת לעיר יפו?"
         },
         "options": {
             "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
+                "The Clock Tower",
+                "Jaffa Lighthouse",
+                "St. Peter's Church",
+                "Jaffa Port"
             ],
             "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
+                "מגדל השעון",
+                "מגדלור יפו",
+                "כנסיית סנט פיטר",
+                "נמל יפו"
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-244",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 31",
-            "he": "שאלה כללית על תל אביב 31"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-245",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 32",
-            "he": "שאלה כללית על תל אביב 32"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-246",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 33",
-            "he": "שאלה כללית על תל אביב 33"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-247",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 34",
-            "he": "שאלה כללית על תל אביב 34"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-248",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 35",
-            "he": "שאלה כללית על תל אביב 35"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-249",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 36",
-            "he": "שאלה כללית על תל אביב 36"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-250",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 37",
-            "he": "שאלה כללית על תל אביב 37"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-251",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 38",
-            "he": "שאלה כללית על תל אביב 38"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-252",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 39",
-            "he": "שאלה כללית על תל אביב 39"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-253",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 40",
-            "he": "שאלה כללית על תל אביב 40"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-254",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 41",
-            "he": "שאלה כללית על תל אביב 41"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-255",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 42",
-            "he": "שאלה כללית על תל אביב 42"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-256",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 43",
-            "he": "שאלה כללית על תל אביב 43"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-257",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 44",
-            "he": "שאלה כללית על תל אביב 44"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-258",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 45",
-            "he": "שאלה כללית על תל אביב 45"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-259",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 46",
-            "he": "שאלה כללית על תל אביב 46"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-260",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 47",
-            "he": "שאלה כללית על תל אביב 47"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-261",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 48",
-            "he": "שאלה כללית על תל אביב 48"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-262",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 49",
-            "he": "שאלה כללית על תל אביב 49"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-263",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 50",
-            "he": "שאלה כללית על תל אביב 50"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-264",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 51",
-            "he": "שאלה כללית על תל אביב 51"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-265",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 52",
-            "he": "שאלה כללית על תל אביב 52"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-266",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 53",
-            "he": "שאלה כללית על תל אביב 53"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-267",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 54",
-            "he": "שאלה כללית על תל אביב 54"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-268",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 55",
-            "he": "שאלה כללית על תל אביב 55"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-269",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 56",
-            "he": "שאלה כללית על תל אביב 56"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-270",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 57",
-            "he": "שאלה כללית על תל אביב 57"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-271",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 58",
-            "he": "שאלה כללית על תל אביב 58"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-272",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 59",
-            "he": "שאלה כללית על תל אביב 59"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-273",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 60",
-            "he": "שאלה כללית על תל אביב 60"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-274",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 61",
-            "he": "שאלה כללית על תל אביב 61"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-275",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 62",
-            "he": "שאלה כללית על תל אביב 62"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-276",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 63",
-            "he": "שאלה כללית על תל אביב 63"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-277",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 64",
-            "he": "שאלה כללית על תל אביב 64"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-278",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 65",
-            "he": "שאלה כללית על תל אביב 65"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-279",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 66",
-            "he": "שאלה כללית על תל אביב 66"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-280",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 67",
-            "he": "שאלה כללית על תל אביב 67"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-281",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 68",
-            "he": "שאלה כללית על תל אביב 68"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-282",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 69",
-            "he": "שאלה כללית על תל אביב 69"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-283",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 70",
-            "he": "שאלה כללית על תל אביב 70"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-284",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 71",
-            "he": "שאלה כללית על תל אביב 71"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-285",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 72",
-            "he": "שאלה כללית על תל אביב 72"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-286",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 73",
-            "he": "שאלה כללית על תל אביב 73"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-287",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 74",
-            "he": "שאלה כללית על תל אביב 74"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-288",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 75",
-            "he": "שאלה כללית על תל אביב 75"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-289",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 76",
-            "he": "שאלה כללית על תל אביב 76"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-290",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 77",
-            "he": "שאלה כללית על תל אביב 77"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-291",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 78",
-            "he": "שאלה כללית על תל אביב 78"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-292",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 79",
-            "he": "שאלה כללית על תל אביב 79"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-293",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 80",
-            "he": "שאלה כללית על תל אביב 80"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-294",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 81",
-            "he": "שאלה כללית על תל אביב 81"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-295",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 82",
-            "he": "שאלה כללית על תל אביב 82"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-296",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 83",
-            "he": "שאלה כללית על תל אביב 83"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-297",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 84",
-            "he": "שאלה כללית על תל אביב 84"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-298",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 85",
-            "he": "שאלה כללית על תל אביב 85"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-299",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 86",
-            "he": "שאלה כללית על תל אביב 86"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-300",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 87",
-            "he": "שאלה כללית על תל אביב 87"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-301",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 88",
-            "he": "שאלה כללית על תל אביב 88"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-302",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 89",
-            "he": "שאלה כללית על תל אביב 89"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-303",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 90",
-            "he": "שאלה כללית על תל אביב 90"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-304",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 91",
-            "he": "שאלה כללית על תל אביב 91"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-305",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 92",
-            "he": "שאלה כללית על תל אביב 92"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-306",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 93",
-            "he": "שאלה כללית על תל אביב 93"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-307",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 94",
-            "he": "שאלה כללית על תל אביב 94"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-308",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 95",
-            "he": "שאלה כללית על תל אביב 95"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-309",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 96",
-            "he": "שאלה כללית על תל אביב 96"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-310",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 97",
-            "he": "שאלה כללית על תל אביב 97"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-311",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 98",
-            "he": "שאלה כללית על תל אביב 98"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-312",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 99",
-            "he": "שאלה כללית על תל אביב 99"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-313",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 100",
-            "he": "שאלה כללית על תל אביב 100"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-314",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 101",
-            "he": "שאלה כללית על תל אביב 101"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-315",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 102",
-            "he": "שאלה כללית על תל אביב 102"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-316",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 103",
-            "he": "שאלה כללית על תל אביב 103"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-317",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 104",
-            "he": "שאלה כללית על תל אביב 104"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-318",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 105",
-            "he": "שאלה כללית על תל אביב 105"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-319",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 106",
-            "he": "שאלה כללית על תל אביב 106"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-320",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 107",
-            "he": "שאלה כללית על תל אביב 107"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-321",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 108",
-            "he": "שאלה כללית על תל אביב 108"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-322",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 109",
-            "he": "שאלה כללית על תל אביב 109"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-323",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 110",
-            "he": "שאלה כללית על תל אביב 110"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-324",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 111",
-            "he": "שאלה כללית על תל אביב 111"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-325",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 112",
-            "he": "שאלה כללית על תל אביב 112"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-326",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 113",
-            "he": "שאלה כללית על תל אביב 113"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-327",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 114",
-            "he": "שאלה כללית על תל אביב 114"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-328",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 115",
-            "he": "שאלה כללית על תל אביב 115"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-329",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 116",
-            "he": "שאלה כללית על תל אביב 116"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-330",
-        "category": "tel_aviv",
-        "level": 3,
-        "text": {
-            "en": "General Tel Aviv Question 117",
-            "he": "שאלה כללית על תל אביב 117"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-331",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 118",
-            "he": "שאלה כללית על תל אביב 118"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-332",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 119",
-            "he": "שאלה כללית על תל אביב 119"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-333",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 120",
-            "he": "שאלה כללית על תל אביב 120"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
-    },
-    {
-        "id": "q-tel-aviv-334",
-        "category": "tel_aviv",
-        "level": 2,
-        "text": {
-            "en": "General Tel Aviv Question 121",
-            "he": "שאלה כללית על תל אביב 121"
-        },
-        "options": {
-            "en": [
-                "Correct Answer",
-                "Wrong 1",
-                "Wrong 2",
-                "Wrong 3"
-            ],
-            "he": [
-                "תשובה נכונה",
-                "טעות 1",
-                "טעות 2",
-                "טעות 3"
-            ]
-        },
-        "correctAnswer": 0,
-        "emoji": "🏙️"
+        "emoji": "🕰️"
     }
 ];
