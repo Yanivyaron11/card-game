@@ -4,6 +4,8 @@ import { playSound, getSoundEnabled, setSoundEnabled, getMusicTrack, setMusicTra
 import { translations } from '../data/translations';
 import SettingsModal from './SettingsModal';
 import NewCategoryModal from './NewCategoryModal';
+import NewFeatureModal from './NewFeatureModal';
+import { features } from '../data/features';
 import './StartScreen.css';
 
 function StartScreen({ onStart, language, onLanguageChange }) {
@@ -74,6 +76,8 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [gameMode, setGameMode] = useState('solo');
     const [newCategories, setNewCategories] = useState([]);
     const [isNewModalOpen, setIsNewModalOpen] = useState(false);
+    const [newFeatures, setNewFeatures] = useState([]);
+    const [isFeatureModalOpen, setIsFeatureModalOpen] = useState(false);
 
     useEffect(() => {
         // Find categories that are marked new and hasn't been seen yet
@@ -89,13 +93,41 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             setNewCategories(fresh);
             setIsNewModalOpen(true);
         }
-    }, [activePool]); // Re-check if active pool changes (e.g. if a hidden new category becomes active)
+
+        // Check for new features
+        const seenFeatures = JSON.parse(localStorage.getItem('seenNewFeatures') || '[]');
+        const freshFeatures = features.filter(f =>
+            f.newUntil &&
+            new Date(f.newUntil) > now &&
+            !seenFeatures.includes(f.id)
+        );
+
+        if (freshFeatures.length > 0) {
+            setNewFeatures(freshFeatures);
+            // If category modal is already open, we'll trigger this one after category modal is dismissed
+            if (fresh.length === 0) {
+                setIsFeatureModalOpen(true);
+            }
+        }
+    }, [activePool]);
 
     const handleDismissNew = () => {
         const seenNew = JSON.parse(localStorage.getItem('seenNewCategories') || '[]');
         const updated = [...new Set([...seenNew, ...newCategories.map(c => c.id)])];
         localStorage.setItem('seenNewCategories', JSON.stringify(updated));
         setIsNewModalOpen(false);
+
+        // After dismissing category modal, check if we have features to show
+        if (newFeatures.length > 0) {
+            setIsFeatureModalOpen(true);
+        }
+    };
+
+    const handleDismissFeatures = () => {
+        const seenFeatures = JSON.parse(localStorage.getItem('seenNewFeatures') || '[]');
+        const updated = [...new Set([...seenFeatures, ...newFeatures.map(f => f.id)])];
+        localStorage.setItem('seenNewFeatures', JSON.stringify(updated));
+        setIsFeatureModalOpen(false);
     };
 
     // Filter topics based on active pool
@@ -172,6 +204,14 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                 isOpen={isNewModalOpen}
                 onClose={handleDismissNew}
                 newCategories={newCategories}
+                language={language}
+                t={t}
+            />
+
+            <NewFeatureModal
+                isOpen={isFeatureModalOpen}
+                onClose={handleDismissFeatures}
+                features={newFeatures}
                 language={language}
                 t={t}
             />
