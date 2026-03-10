@@ -176,6 +176,45 @@
     margin: 0;
 }
 
+.hint-box {
+    background: #fff9db;
+    border: 2px dashed #fab005;
+    border-radius: 15px;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    animation: slideDown 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(250, 176, 5, 0.1);
+}
+
+.hint-icon {
+    font-size: 1.4rem;
+}
+
+.hint-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #856404;
+    margin: 0;
+    line-height: 1.3;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 
 .quiz-options {
     display: grid;

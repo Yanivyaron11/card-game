@@ -56266,7 +56266,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "📅"
+        "emoji": "📅",
+        "hint": {"en":"It's the number of days in a full week.","he":"זהו מספר הימים בשבוע מלא."}
     },
     {
         "id": "q-general-2180",
@@ -56291,7 +56292,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "☀️"
+        "emoji": "☀️",
+        "hint": {"en":"Think of the color of the ocean on a clear day.","he":"חשבו על צבע האוקיינוס ביום בהיר."}
     },
     {
         "id": "q-general-2181",
@@ -56316,7 +56318,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🪥"
+        "emoji": "🪥",
+        "hint": {"en":"It's a tool with bristles used with toothpaste.","he":"זהו כלי עם סיבים שמשתמשים בו עם משחת שיניים."}
     },
     {
         "id": "q-general-2182",
@@ -56341,7 +56344,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🌸"
+        "emoji": "🌸",
+        "hint": {"en":"The season when flowers start to bloom.","he":"העונה שבה הפרחים מתחילים לפרוח."}
     },
     {
         "id": "q-general-2183",
@@ -56366,7 +56370,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🖐️"
+        "emoji": "🖐️",
+        "hint": {"en":"It's the same number as the toes on one foot.","he":"זהו אותו מספר כמו מספר האצבעות בכף רגל אחת."}
     },
     {
         "id": "q-general-2184",
@@ -56391,7 +56396,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "❄️"
+        "emoji": "❄️",
+        "hint": {"en":"Think of the temperature of ice cream or snow.","he":"חשבו על הטמפרטורה של גלידה או שלג."}
     },
     {
         "id": "q-general-2185",
@@ -56416,7 +56422,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍎"
+        "emoji": "🍎",
+        "hint": {"en":"A round fruit that can be red, green, or yellow.","he":"פרי עגול שיכול להיות אדום, ירוק או צהוב."}
     },
     {
         "id": "q-general-2186",
@@ -56441,7 +56448,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "👟"
+        "emoji": "👟",
+        "hint": {"en":"You wear these on your feet for protection while walking.","he":"נועלים אותם על הרגליים להגנה בזמן ההליכה."}
     },
     {
         "id": "q-general-2187",
@@ -56466,7 +56474,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🔺"
+        "emoji": "🔺",
+        "hint": {"en":"Think of a slice of pizza or a musical instrument.","he":"חשבו על משולש פיצה או על כלי נגינה."}
     },
     {
         "id": "q-general-2188",
@@ -56491,7 +56500,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "✏️"
+        "emoji": "✏️",
+        "hint": {"en":"A writing tool that uses lead and has an eraser.","he":"כלי כתיבה שמשתמש בעופרת ויש לו מחק."}
     },
     {
         "id": "q-general-2189",
@@ -56516,7 +56526,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🚲"
+        "emoji": "🚲",
+        "hint": {"en":"Count the main circles used for movement on the frame.","he":"ספרו את המעגלים העיקריים המשמשים לתנועה על השלדה."}
     },
     {
         "id": "q-general-2190",
@@ -56541,7 +56552,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌅"
+        "emoji": "🌅",
+        "hint": {"en":"The direction where the day begins for us.","he":"הכיוון שבו היום מתחיל עבורנו."}
     },
     {
         "id": "q-general-2191",
@@ -56566,7 +56578,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐱"
+        "emoji": "🐱",
+        "hint": {"en":"A small pet that likes to chase mice.","he":"חיית מחמד קטנה שאוהבת לרדוף אחרי עכברים."}
     },
     {
         "id": "q-general-2192",
@@ -56591,7 +56604,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "☔"
+        "emoji": "☔",
+        "hint": {"en":"A foldable device you hold over your head.","he":"מכשיר מתקפל שמחזיקים מעל הראש."}
     },
     {
         "id": "q-general-2193",
@@ -56616,7 +56630,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌿"
+        "emoji": "🌿",
+        "hint": {"en":"It's the same color as the leaves on most trees.","he":"זהו אותו צבע כמו העלים ברוב העצים."}
     },
     {
         "id": "q-general-2194",
@@ -56641,7 +56656,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "📅"
+        "emoji": "📅",
+        "hint": {"en":"Think of the number of siblings in some large families or tribes.","he":"חשבו על מספר האחים במשפחות גדולות או בשבטים."}
     },
     {
         "id": "q-general-2195",
@@ -56666,7 +56682,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "👩"
+        "emoji": "👩",
+        "hint": {"en":"She is your mother's sister.","he":"היא אחותה של אמך."}
     },
     {
         "id": "q-general-2196",
@@ -56691,7 +56708,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍯"
+        "emoji": "🍯",
+        "hint": {"en":"A sweet, golden liquid often eaten with apples on Rosh Hashanah.","he":"נוזל מתוק וזהוב שלעיתים קרובות נאכל עם תפוח בראש השנה."}
     },
     {
         "id": "q-general-2197",
@@ -56716,7 +56734,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🔤"
+        "emoji": "🔤",
+        "hint": {"en":"It's the very first letter you learn in English class.","he":"זוהי האות הראשונה שלומדים בשיעורי אנגלית."}
     },
     {
         "id": "q-general-2198",
@@ -56741,7 +56760,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "😴"
+        "emoji": "😴",
+        "hint": {"en":"You close your eyes and dream during this activity.","he":"עוצמים עיניים וחולמים במהלך הפעילות הזו."}
     },
     {
         "id": "q-general-2199",
@@ -56766,7 +56786,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🔴"
+        "emoji": "🔴",
+        "hint": {"en":"Named after the Roman god of war, it's the fourth planet.","he":"קרוי על שם אל המלחמה הרומי, זהו כוכב הלכת הרביעי."}
     },
     {
         "id": "q-general-2200",
@@ -56791,7 +56812,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌊"
+        "emoji": "🌊",
+        "hint": {"en":"It covers more than one-third of the entire Earth's surface.","he":"הוא מכסה יותר משליש מכל שטח פני כדור הארץ."}
     },
     {
         "id": "q-general-2201",
@@ -56816,7 +56838,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌈"
+        "emoji": "🌈",
+        "hint": {"en":"The number of days in a week is the same as the number of colors.","he":"מספר הימים בשבוע הוא אותו מספר כמו מספר הצבעים."}
     },
     {
         "id": "q-general-2202",
@@ -56841,7 +56864,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🚀"
+        "emoji": "🚀",
+        "hint": {"en":"He famously said, 'That's one small step for man...'","he":"הוא אמר את המשפט המפורסם: 'צעד קטן לאדם...'"}
     },
     {
         "id": "q-general-2203",
@@ -56866,7 +56890,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🎡"
+        "emoji": "🎡",
+        "hint": {"en":"Home to Big Ben and the River Thames.","he":"ביתו של הביג בן ונהר התמזה."}
     },
     {
         "id": "q-general-2204",
@@ -56891,7 +56916,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "💨"
+        "emoji": "💨",
+        "hint": {"en":"It's the gas that makes up about 21% of Mother Nature's air.","he":"זהו הגז המהווה כ-21% מהאוויר בטבע."}
     },
     {
         "id": "q-general-2205",
@@ -56916,7 +56942,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦴"
+        "emoji": "🦴",
+        "hint": {"en":"A baby has about 300, but they fuse as you grow.","he":"לתינוק יש כ-300, אך הן מתאחות ככל שגדלים."}
     },
     {
         "id": "q-general-2206",
@@ -56941,7 +56968,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐋"
+        "emoji": "🐋",
+        "hint": {"en":"It lives in the ocean and can reach 30 meters in length.","he":"הוא חי באוקיינוס ויכול להגיע לאורך של 30 מטרים."}
     },
     {
         "id": "q-general-2207",
@@ -56966,7 +56994,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "❄️"
+        "emoji": "❄️",
+        "hint": {"en":"Water turns to ice at this temperature.","he":"מים הופכים לקרח בטמפרטורה הזו."}
     },
     {
         "id": "q-general-2208",
@@ -56991,7 +57020,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🎨"
+        "emoji": "🎨",
+        "hint": {"en":"He was an Italian polymath of the High Renaissance.","he":"הוא היה איש אשכולות איטלקי בתקופת הרנסאנס."}
     },
     {
         "id": "q-general-2209",
@@ -57016,7 +57046,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇨🇳"
+        "emoji": "🇨🇳",
+        "hint": {"en":"Located in Asia, with the capital city Beijing.","he":"נמצאת באסיה, עם עיר הבירה בייג'ינג."}
     },
     {
         "id": "q-general-2210",
@@ -57041,7 +57072,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "💎"
+        "emoji": "💎",
+        "hint": {"en":"Often used in engagement rings and industrial drills.","he":"משמש לעיתים קרובות בטבעות אירוסין ובמקדחים תעשייתיים."}
     },
     {
         "id": "q-general-2211",
@@ -57066,7 +57098,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌍"
+        "emoji": "🌍",
+        "hint": {"en":"How many major landmasses are on Earth?","he":"כמה גושי יבשה עיקריים יש בכדור הארץ?"}
     },
     {
         "id": "q-general-2212",
@@ -57091,7 +57124,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "☀️"
+        "emoji": "☀️",
+        "hint": {"en":"It has the shortest orbit around the sun.","he":"יש לו את המסלול הקצר ביותר סביב השמש."}
     },
     {
         "id": "q-general-2213",
@@ -57116,7 +57150,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "👩‍🚀"
+        "emoji": "👩‍🚀",
+        "hint": {"en":"Comes from the Greek word for 'star' and 'sailor'.","he":"מקור המילה ביוונית ומשמעותה 'מלח כוכבים'."}
     },
     {
         "id": "q-general-2214",
@@ -57141,7 +57176,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐦"
+        "emoji": "🐦",
+        "hint": {"en":"A large bird native to Africa that lays the largest eggs.","he":"ציפור גדולה שמקורה באפריקה ומטילה את הביצים הגדולות ביותר."}
     },
     {
         "id": "q-general-2215",
@@ -57166,7 +57202,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🗼"
+        "emoji": "🗼",
+        "hint": {"en":"Known as the City of Light.","he":"ידועה כעיר האורות."}
     },
     {
         "id": "q-general-2216",
@@ -57191,7 +57228,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "❤️"
+        "emoji": "❤️",
+        "hint": {"en":"It beats about 100,000 times a day.","he":"הוא פועם כ-100,000 פעמים ביום."}
     },
     {
         "id": "q-general-2217",
@@ -57216,7 +57254,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🎻"
+        "emoji": "🎻",
+        "hint": {"en":"Associated with famous composers like Mozart and Vivaldi.","he":"מזוהה עם מלחינים מפורסמים כמו מוצרט וויולדי."}
     },
     {
         "id": "q-general-2218",
@@ -57241,7 +57280,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🗼"
+        "emoji": "🗼",
+        "hint": {"en":"The Louvre Museum is also in this French city.","he":"מוזיאון הלובר נמצא גם הוא בעיר הצרפתית הזו."}
     },
     {
         "id": "q-general-2219",
@@ -57266,7 +57306,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🌿"
+        "emoji": "🌿",
+        "hint": {"en":"Comes from the Greek words for 'light' and 'composition'.","he":"מגיע מהמילים היווניות ל'אור' ו'הרכבה'."}
     },
     {
         "id": "q-general-2220",
@@ -57291,7 +57332,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇺🇸"
+        "emoji": "🇺🇸",
+        "hint": {"en":"Think of the number of stars on the American flag.","he":"חשבו על מספר הכוכבים בדגל ארצות הברית."}
     },
     {
         "id": "q-general-2221",
@@ -57316,7 +57358,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌡️"
+        "emoji": "🌡️",
+        "hint": {"en":"Often called 'quicksilver', it was used in old thermometers.","he":"נהוג לקרוא לה 'כסף חי', והיא שימשה במדחומים ישנים."}
     },
     {
         "id": "q-general-2222",
@@ -57341,7 +57384,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🎨"
+        "emoji": "🎨",
+        "hint": {"en":"You can mix these to create every other color.","he":"ניתן לערבב אותם כדי ליצור כל צבע אחר."}
     },
     {
         "id": "q-general-2223",
@@ -57366,7 +57410,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "📚"
+        "emoji": "📚",
+        "hint": {"en":"An English playwright and poet known as the 'Bard of Avon'.","he":"מחזאי ומשורר אנגלי המכונה 'הבארד מאייבון'."}
     },
     {
         "id": "q-general-2224",
@@ -57391,7 +57436,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇦🇺"
+        "emoji": "🇦🇺",
+        "hint": {"en":"The largest country in Oceania.","he":"המדינה הגדולה ביותר באוקיאניה."}
     },
     {
         "id": "q-general-2225",
@@ -57416,7 +57462,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "✨"
+        "emoji": "✨",
+        "hint": {"en":"She carries pixie dust and can fly.","he":"היא נושאת אבקת פיות ויכולה לעוף."}
     },
     {
         "id": "q-general-2226",
@@ -57441,7 +57488,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "👃"
+        "emoji": "👃",
+        "hint": {"en":"You use it to enjoy the scent of flowers.","he":"משתמשים בו כדי ליהנות מריח הפרחים."}
     },
     {
         "id": "q-general-2227",
@@ -57466,7 +57514,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🏜️"
+        "emoji": "🏜️",
+        "hint": {"en":"Wait, the answer might be colder than you expect!","he":"חכו, התשובה עשויה להיות קרה יותר ממה שציפיתם!"}
     },
     {
         "id": "q-general-2228",
@@ -57491,7 +57540,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🎸"
+        "emoji": "🎸",
+        "hint": {"en":"Each one represents a different note on the musical scale.","he":"כל אחד מהם מייצג צליל שונה בסולם המוזיקלי."}
     },
     {
         "id": "q-general-2229",
@@ -57516,7 +57566,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "💰"
+        "emoji": "💰",
+        "hint": {"en":"Comes from the Latin word 'Aurum'.","he":"מקורו במילה הלטינית 'Aurum'."}
     },
     {
         "id": "q-general-2230",
@@ -57541,7 +57592,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🕊️"
+        "emoji": "🕊️",
+        "hint": {"en":"It was the year of the liberation of the death camps.","he":"זו הייתה השנה של שחרור מחנות ההשמדה."}
     },
     {
         "id": "q-general-2231",
@@ -57566,7 +57618,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🧠"
+        "emoji": "🧠",
+        "hint": {"en":"Famous for the equation E=mc².","he":"מפורסם בזכות המשוואה E=mc²."}
     },
     {
         "id": "q-general-2232",
@@ -57591,7 +57644,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇯🇵"
+        "emoji": "🇯🇵",
+        "hint": {"en":"Located on the island of Honshu.","he":"שוכנת באי הונשו."}
     },
     {
         "id": "q-general-2233",
@@ -57616,7 +57670,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🪐"
+        "emoji": "🪐",
+        "hint": {"en":"A giant gas planet with prominent rings.","he":"כוכב לכת גזי ענק עם טבעות בולטות."}
     },
     {
         "id": "q-general-2234",
@@ -57641,7 +57696,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🌊"
+        "emoji": "🌊",
+        "hint": {"en":"Flows through eleven countries in Northeastern Africa.","he":"זורם דרך אחת עשרה מדינות בצפון מזרח אפריקה."}
     },
     {
         "id": "q-general-2235",
@@ -57666,7 +57722,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "📜"
+        "emoji": "📜",
+        "hint": {"en":"He was the third president of the United States.","he":"הוא היה הנשיא השלישי של ארצות הברית."}
     },
     {
         "id": "q-general-2236",
@@ -57691,7 +57748,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "⛪"
+        "emoji": "⛪",
+        "hint": {"en":"Located within the city of Rome, Italy.","he":"שוכנת בתוך העיר רומא, איטליה."}
     },
     {
         "id": "q-general-2237",
@@ -57716,7 +57774,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "💧"
+        "emoji": "💧",
+        "hint": {"en":"The lightest element in the periodic table.","he":"היסוד הקל ביותר בטבלה המחזורית."}
     },
     {
         "id": "q-general-2238",
@@ -57741,7 +57800,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍎"
+        "emoji": "🍎",
+        "hint": {"en":"Discovered by Sir Isaac Newton when an apple fell.","he":"התגלה על ידי סר אייזק ניוטון בעקבות נפילת תפוח."}
     },
     {
         "id": "q-general-2239",
@@ -57766,7 +57826,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🏛️"
+        "emoji": "🏛️",
+        "hint": {"en":"Home of the Parthenon and ancient democracy.","he":"ביתם של הפרתנון והדמוקרטיה העתיקה."}
     },
     {
         "id": "q-general-2240",
@@ -57791,7 +57852,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇺🇸"
+        "emoji": "🇺🇸",
+        "hint": {"en":"His face is on the one-dollar bill.","he":"פניו מופיעים על שטר של דולר אחד."}
     },
     {
         "id": "q-general-2241",
@@ -57816,7 +57878,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🦵"
+        "emoji": "🦵",
+        "hint": {"en":"It protects the body and regulates temperature.","he":"הוא מגן על הגוף ומסייע בוויסות הטמפרטורה."}
     },
     {
         "id": "q-general-2242",
@@ -57841,7 +57904,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "💀"
+        "emoji": "💀",
+        "hint": {"en":"A tragedy by William Shakespeare about the Prince of Denmark.","he":"טרגדיה מאת ויליאם שייקספיר על הנסיך מדנמרק."}
     },
     {
         "id": "q-general-2243",
@@ -57866,7 +57930,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "⚡"
+        "emoji": "⚡",
+        "hint": {"en":"Exactly 299,792,458 meters per second.","he":"בדיוק 299,792,458 מטרים לשנייה."}
     },
     {
         "id": "q-general-2244",
@@ -57891,7 +57956,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "❄️"
+        "emoji": "❄️",
+        "hint": {"en":"A cold, ice-covered continent with no permanent residents.","he":"יבשת קרה ומכוסה בקרח ללא תושבי קבע."}
     },
     {
         "id": "q-general-2245",
@@ -57916,7 +57982,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "💷"
+        "emoji": "💷",
+        "hint": {"en":"The symbol for this currency is £.","he":"הסימול של המטבע הזה הוא £."}
     },
     {
         "id": "q-general-2246",
@@ -57941,7 +58008,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "💊"
+        "emoji": "💊",
+        "hint": {"en":"A Scottish physician who discovered the first antibiotic.","he":"רופא סקוטי שגילה את האנטיביוטיקה הראשונה."}
     },
     {
         "id": "q-general-2247",
@@ -57966,7 +58034,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "💨"
+        "emoji": "💨",
+        "hint": {"en":"It makes up about 78% of the Earth's atmosphere.","he":"הוא מהווה כ-78% מאטמוספירת כדור הארץ."}
     },
     {
         "id": "q-general-2248",
@@ -57991,7 +58060,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🏔️"
+        "emoji": "🏔️",
+        "hint": {"en":"Located in the Himalayas, on the border of Nepal and China.","he":"נמצא בהימלאיה, על הגבול שבין נפאל לסין."}
     },
     {
         "id": "q-general-2249",
@@ -58016,7 +58086,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇨🇦"
+        "emoji": "🇨🇦",
+        "hint": {"en":"Located in Ontario, known for the Parliament Hill.","he":"שוכנת באונטריו, ידועה בזכות גבעת הפרלמנט."}
     },
     {
         "id": "q-general-2250",
@@ -58041,7 +58112,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "⛵"
+        "emoji": "⛵",
+        "hint": {"en":"An Italian explorer sailing for Spain.","he":"חוקר איטלקי שהפליג בשירות ספרד."}
     },
     {
         "id": "q-general-2251",
@@ -58066,7 +58138,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🔭"
+        "emoji": "🔭",
+        "hint": {"en":"Involves using telescopes to study the universe.","he":"כולל שימוש בטלסקופים לחקר היקום."}
     },
     {
         "id": "q-general-2252",
@@ -58091,7 +58164,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌿"
+        "emoji": "🌿",
+        "hint": {"en":"Human exhale this gas, while plants 'breathe' it in.","he":"בני אדם נושפים את הגז הזה, בעוד צמחים 'נושמים' אותו."}
     },
     {
         "id": "q-general-2253",
@@ -58116,7 +58190,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🛡️"
+        "emoji": "🛡️",
+        "hint": {"en":"A national heroine of France and a Catholic saint.","he":"גיבורה לאומית של צרפת וקדושה קתולית."}
     },
     {
         "id": "q-general-2254",
@@ -58141,7 +58216,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🗣️"
+        "emoji": "🗣️",
+        "hint": {"en":"Look to the most populous country in the world for several decades.","he":"חפשו את המדינה המאוכלסת ביותר בעולם במשך כמה עשרות שנים."}
     },
     {
         "id": "q-general-2255",
@@ -58166,7 +58242,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🏟️"
+        "emoji": "🏟️",
+        "hint": {"en":"The largest amphitheatre ever built, located in Italy.","he":"האמפיתיאטרון הגדול ביותר שנבנה אי פעם, נמצא באיטליה."}
     },
     {
         "id": "q-general-2256",
@@ -58191,7 +58268,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🏝️"
+        "emoji": "🏝️",
+        "hint": {"en":"Florida and Italy are famous examples.","he":"פלורידה ואיטליה הן דוגמאות מפורסמות."}
     },
     {
         "id": "q-general-2257",
@@ -58216,7 +58294,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "☀️"
+        "emoji": "☀️",
+        "hint": {"en":"Crucial for bone health and immune function.","he":"חיוני לבריאות העצם ולתפקוד מערכת החיסון."}
     },
     {
         "id": "q-general-2258",
@@ -58241,7 +58320,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🎤"
+        "emoji": "🎤",
+        "hint": {"en":"A British singer known for his four-octave vocal range.","he":"זמר בריטי הידוע במנעד קולי של ארבע אוקטבות."}
     },
     {
         "id": "q-general-2259",
@@ -58266,7 +58346,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🔢"
+        "emoji": "🔢",
+        "hint": {"en":"It starts with 3.14159...","he":"זה מתחיל ב-3.14159..."}
     },
     {
         "id": "q-general-2260",
@@ -58291,7 +58372,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇮🇳"
+        "emoji": "🇮🇳",
+        "hint": {"en":"A country in South Asia that recently became the most populous.","he":"מדינה בדרום אסיה שהפכה לאחרונה למאוכלסת ביותר."}
     },
     {
         "id": "q-general-2261",
@@ -58316,7 +58398,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇮🇹"
+        "emoji": "🇮🇹",
+        "hint": {"en":"The 'Eternal City', located in the Lazio region.","he":"ה'עיר הנצחית', שוכנת במחוז לאציו."}
     },
     {
         "id": "q-general-2262",
@@ -58341,7 +58424,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "📜"
+        "emoji": "📜",
+        "hint": {"en":"An ancient Greek epic poet from the 8th century BC.","he":"משורר אפוס יווני עתיק מהמאה ה-8 לפנה\"ס."}
     },
     {
         "id": "q-general-2263",
@@ -58366,7 +58450,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🩺"
+        "emoji": "🩺",
+        "hint": {"en":"A long, flat gland located deep in the abdomen.","he":"בלוטה ארוכה ושטוחה השוכנת עמוק בבטן."}
     },
     {
         "id": "q-general-2264",
@@ -58391,7 +58476,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌉"
+        "emoji": "🌉",
+        "hint": {"en":"Think of the Danyang-Kunshan Grand Bridge.","he":"חשבו על הגשר הגדול דניאנג-קונשאן."}
     },
     {
         "id": "q-general-2265",
@@ -58416,7 +58502,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🧪"
+        "emoji": "🧪",
+        "hint": {"en":"She conducted pioneering research on radioactivity.","he":"היא ערכה מחקר חלוצי על רדיואקטיביות."}
     },
     {
         "id": "q-general-2266",
@@ -58441,7 +58528,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🌅"
+        "emoji": "🌅",
+        "hint": {"en":"An East Asian island country also known as Nihon.","he":"מדינת איים במזרח אסיה הידועה גם בשם ניהון."}
     },
     {
         "id": "q-general-2267",
@@ -58466,7 +58554,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🌌"
+        "emoji": "🌌",
+        "hint": {"en":"A barred spiral galaxy part of the Local Group.","he":"גלקסיה ספירלית מוטלת שהיא חלק מהקבוצה המקומית."}
     },
     {
         "id": "q-general-2268",
@@ -58491,7 +58580,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌍"
+        "emoji": "🌍",
+        "hint": {"en":"It's a solid ball, mainly made of iron and nickel.","he":"זהו כדור מוצק, העשוי בעיקר מברזל וניקל."}
     },
     {
         "id": "q-general-2269",
@@ -58516,7 +58606,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🎸"
+        "emoji": "🎸",
+        "hint": {"en":"An American singer and actor, often called 'The King'.","he":"זמר ושחקן אמריקאי, המכונה לעיתים קרובות 'המלך'."}
     },
     {
         "id": "q-general-2270",
@@ -58541,7 +58632,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇪🇬"
+        "emoji": "🇪🇬",
+        "hint": {"en":"The largest city in the Arab world, located near the Nile.","he":"העיר הגדולה ביותר בעולם הערבי, השוכנת ליד הנילוס."}
     },
     {
         "id": "q-general-2271",
@@ -58566,7 +58658,8 @@ export const questions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌊"
+        "emoji": "🌊",
+        "hint": {"en":"It connects to the Atlantic Ocean via the Strait of Gibraltar.","he":"הוא מתחבר לאוקיינוס האטלנטי דרך מצר גיברלטר."}
     },
     {
         "id": "q-general-2272",

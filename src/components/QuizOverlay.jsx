@@ -25,6 +25,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const [isReady, setIsReady] = useState(false);
     const [selectedAnswer, setSelectedAnswer] = useState(-1);
     const [isAnswering, setIsAnswering] = useState(false);
+    const [isHintVisible, setIsHintVisible] = useState(false);
     const timerRef = useRef(null);
     const timeoutRef = useRef(onTimeout);
     const mountTimeRef = useRef(Date.now());
@@ -43,6 +44,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         setEliminatedOptions([]);
         setSelectedAnswer(-1);
         setIsAnswering(false);
+        setIsHintVisible(false);
         setIsReady(false);
         const readyTimeout = setTimeout(() => setIsReady(true), 500);
         return () => clearTimeout(readyTimeout);
@@ -130,6 +132,16 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         }, 1500);
     };
 
+    const handleHint = () => {
+        if (!isReady || isAnswering || coins < 3 || isHintVisible) {
+            playSound('error');
+            return;
+        }
+        playSound('buy');
+        onCoinsChange(coins - 3);
+        setIsHintVisible(true);
+    };
+
     const optionLabelsEn = ['A', 'B', 'C', 'D'];
     const optionLabelsHe = ['א', 'ב', 'ג', 'ד'];
     const labels = language === 'he' ? optionLabelsHe : optionLabelsEn;
@@ -208,6 +220,14 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
                 <div className="quiz-content">
                     <div className="quiz-emoji">{card.emoji}</div>
+
+                    {isHintVisible && card.hint && (
+                        <div className="hint-box">
+                            <span className="hint-icon">💡</span>
+                            <p className="hint-text">{card.hint[language] || card.hint}</p>
+                        </div>
+                    )}
+
                     {card.category === 'math' ? (
                         <h2 className="quiz-question" dir="ltr">{card.text[language]}</h2>
                     ) : (
@@ -258,6 +278,20 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                 <span className="cost">🪙 2</span>
                                 <div>½ 50/50</div>
                             </button>
+                            {card.hint && (
+                                <button
+                                    className={`powerup-btn ${coins < 3 || isHintVisible || isAnswering ? 'locked' : ''}`}
+                                    onPointerDown={(e) => {
+                                        e.preventDefault();
+                                        handleHint();
+                                    }}
+                                    onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                                    disabled={!isReady || isAnswering}
+                                >
+                                    <span className="cost">🪙 3</span>
+                                    <div>🔍 {t.hint}</div>
+                                </button>
+                            )}
                             <button
                                 className={`powerup-btn ${coins < 5 || isAnswering ? 'locked' : ''}`}
                                 onPointerDown={(e) => {
