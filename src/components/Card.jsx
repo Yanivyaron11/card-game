@@ -30,7 +30,7 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars }) {
                 <div className="card-back glass-panel">
                     {isEligibleForRebound && !card.isSolved && !card.isFailed && !isBlocked && (
                         <div className="super-answer-badge">
-                            {rebounderEmoji} {t.rebound_badge}
+                            <span className="rebound-emoji">{rebounderEmoji}</span> {t.rebound_badge}
                         </div>
                     )}
                     <div
