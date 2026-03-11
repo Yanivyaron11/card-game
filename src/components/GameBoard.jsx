@@ -51,6 +51,12 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                     <div className="stat-item timer-display-global">
                         <div className="level-badge mini">{t.level} {config.difficulty}</div>
                         <h3>{t.time_left.replace('{n}', timeLeft)}</h3>
+                        {config.avatars?.[1] && (
+                            <div className="avatar-display-timeattack">
+                                <span className="player-avatar-emoji mini">{config.avatars[1].emoji}</span>
+                                <span className="player-avatar-name mini">{config.avatars[1].name[language]}</span>
+                            </div>
+                        )}
                         <div className="hearts-coins-row">
                             <div className="hearts mini">
                                 {Array.from({ length: Math.max(0, (lives[1] || 0) + 1) }).map((_, i) => (
@@ -84,7 +90,12 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                     <div className="multiplayer-stats">
                         <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`}>
                             <div className="player-label">
-                                {config.playerNames?.[1] || (language === 'he' ? 'שחקן 1' : 'Player 1')}
+                                {config.avatars?.[1] ? (
+                                    <>
+                                        <span className="player-avatar-emoji">{config.avatars[1].emoji}</span>
+                                        <span className="player-avatar-name">{config.avatars[1].name[language]}</span>
+                                    </>
+                                ) : (language === 'he' ? 'שחקן 1' : 'Player 1')}
                             </div>
                             <div className="level-badge mini">{t.level} {config.difficulty}</div>
                             <div className="player-score-value">{t.score}: {scores[1]}</div>
@@ -106,7 +117,12 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
 
                         <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`}>
                             <div className="player-label">
-                                {config.playerNames?.[2] || (language === 'he' ? 'שחקן 2' : 'Player 2')}
+                                {config.avatars?.[2] ? (
+                                    <>
+                                        <span className="player-avatar-emoji">{config.avatars[2].emoji}</span>
+                                        <span className="player-avatar-name">{config.avatars[2].name[language]}</span>
+                                    </>
+                                ) : (language === 'he' ? 'שחקן 2' : 'Player 2')}
                             </div>
                             <div className="level-badge mini">{t.level} {config.difficulty}</div>
                             <div className="player-score-value">{t.score}: {scores[2]}</div>

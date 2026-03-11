@@ -99,6 +99,33 @@
     color: #b45309;
 }
 
+.avatar-display-mini {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    padding-left: 1rem;
+    border-left: 1px solid #e2e8f0;
+}
+
+[dir="rtl"] .avatar-display-mini {
+    border-left: none;
+    border-right: 1px solid #e2e8f0;
+    padding-left: 0;
+    padding-right: 1rem;
+}
+
+.quiz-avatar-emoji {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.quiz-avatar-name {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--background);
+}
+
 
 .level-badge {
     background: linear-gradient(135deg, var(--accent), #ff9f43);
@@ -215,6 +242,75 @@
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+}
+
+.feedback-toast {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--secondary);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    white-space: normal;
+    text-align: center;
+    max-width: 85%;
+    width: fit-content;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    animation: feedbackFadeUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid var(--secondary);
+    backdrop-filter: blur(8px);
+}
+
+.feedback-toast.streak-active {
+    background: linear-gradient(135deg, rgba(142, 45, 226, 0.95), rgba(74, 0, 224, 0.95));
+    color: white;
+    border-color: #ffd700;
+    box-shadow: 0 10px 40px rgba(74, 0, 224, 0.3);
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    max-width: 85%;
+    width: fit-content;
+    white-space: normal;
+    animation: feedbackFadeUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), streakGlow 2s infinite alternate;
+}
+
+@keyframes feedbackFadeUp {
+    0% {
+        transform: translate(-50%, -30%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes streakGlow {
+    from {
+        box-shadow: 0 0 20px rgba(74, 0, 224, 0.4);
+    }
+
+    to {
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+    }
+}
+
+@keyframes feedbackPop {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
     }
 }
 

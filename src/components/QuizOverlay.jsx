@@ -4,7 +4,7 @@ import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './QuizOverlay.css';
 
-function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, gameMode, timeLeft: gameTimeLeft }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, gameMode, timeLeft: gameTimeLeft, avatar, streak }) {
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
@@ -29,6 +29,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const timerRef = useRef(null);
     const timeoutRef = useRef(onTimeout);
     const mountTimeRef = useRef(Date.now());
+    const feedbackMessageRef = useRef("");
 
     useEffect(() => {
         timeoutRef.current = onTimeout;
@@ -88,6 +89,15 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         setSelectedAnswer(index);
 
         const isCorrect = index === card.correctAnswer;
+        if (isCorrect) {
+            const currentStreak = streak + 1;
+            const feedbackPool = currentStreak >= 3 ? t.streak_feedbacks : t.correct_feedbacks;
+            const randomMsg = feedbackPool[Math.floor(Math.random() * feedbackPool.length)];
+            feedbackMessageRef.current = randomMsg
+                .replace('{name}', avatar?.name[language] || "")
+                .replace('{n}', currentStreak);
+        }
+
         playSound(isCorrect ? 'correct' : 'wrong');
 
         setTimeout(() => {
@@ -170,9 +180,14 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </div>
                     )}
                     <div className="stat-item coins-display">
-
                         <div key={coins} className="coins-value mini coin-pop">🪙 {coins}</div>
                     </div>
+                    {avatar && (
+                        <div className="stat-item avatar-display-mini">
+                            <span className="quiz-avatar-emoji">{avatar.emoji}</span>
+                            <span className="quiz-avatar-name">{avatar.name[language]}</span>
+                        </div>
+                    )}
                 </div>
 
                 <div className="quiz-header">
@@ -226,6 +241,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <div className="hint-box">
                             <span className="hint-icon">💡</span>
                             <p className="hint-text">{card.hint[language] || card.hint}</p>
+                        </div>
+                    )}
+
+                    {isAnswering && selectedAnswer === card.correctAnswer && avatar && (
+                        <div className={`feedback-toast ${(streak + 1) >= 3 ? 'streak-active' : ''}`}>
+                            {feedbackMessageRef.current}
                         </div>
                     )}
 

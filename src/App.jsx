@@ -22,6 +22,7 @@ function App() {
   const [currentPlayer, setCurrentPlayer] = useState(1); // 1 or 2
   const [scores, setScores] = useState({ 1: 0, 2: 0 });
   const [timeLeft, setTimeLeft] = useState(0);
+  const [streaks, setStreaks] = useState({ 1: 0, 2: 0 });
 
   const t = translations[language];
 
@@ -75,6 +76,7 @@ function App() {
     setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
     setCurrentPlayer(1);
     setScores({ 1: 0, 2: 0 });
+    setStreaks({ 1: 0, 2: 0 });
     setGameState('playing');
     navigate('/play');
   };
@@ -128,6 +130,9 @@ function App() {
         );
 
         const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + 1 };
+        const newStreaks = { ...streaks, [currentPlayer]: streaks[currentPlayer] + 1 };
+        setStreaks(newStreaks);
+
         if (gameConfig.gameMode === '1v1') {
           setScores(newScores);
           setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
@@ -140,6 +145,7 @@ function App() {
       if (gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack') {
         const newPlayerLives = lives[currentPlayer] - 1;
         setLives(prev => ({ ...prev, [currentPlayer]: newPlayerLives }));
+        setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
 
         setDeck(prev => {
           const newDeck = prev.map(card =>
@@ -166,6 +172,7 @@ function App() {
         });
 
         // Always switch turn on wrong answer in 1v1
+        setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
         setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
       }
     }
@@ -230,6 +237,8 @@ function App() {
               language={language}
               gameMode={gameConfig.gameMode}
               timeLeft={timeLeft}
+              avatar={gameConfig.avatars?.[currentPlayer]}
+              streak={streaks[currentPlayer]}
               onCoinsChange={(newAmount) => setCoins(prev => ({ ...prev, [currentPlayer]: newAmount }))}
               onAnswer={handleAnswer}
               onTimeout={(cardId) => handleAnswer(cardId, false)}
@@ -242,12 +251,18 @@ function App() {
             {gameState === 'game_over' && (
               <>
                 <h2>{t.game_over} 😢</h2>
+                {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
+                  <div className="result-avatar">
+                    <span className="result-emoji">{gameConfig.avatars[1].emoji}</span>
+                    <p>{gameConfig.avatars[1].name[language]}</p>
+                  </div>
+                )}
                 {gameConfig?.gameMode === '1v1' ? (
                   <p>
                     {scores[1] > scores[2]
-                      ? t.player_wins.replace('{name}', gameConfig.playerNames?.[1] || (language === 'he' ? 'שחקן 1' : 'Player 1'))
+                      ? t.player_wins.replace('{name}', gameConfig.avatars?.[1] ? `${gameConfig.avatars[1].emoji} ${gameConfig.avatars[1].name[language]}` : (language === 'he' ? 'שחקן 1' : 'Player 1'))
                       : scores[2] > scores[1]
-                        ? t.player_wins.replace('{name}', gameConfig.playerNames?.[2] || (language === 'he' ? 'שחקן 2' : 'Player 2'))
+                        ? t.player_wins.replace('{name}', gameConfig.avatars?.[2] ? `${gameConfig.avatars[2].emoji} ${gameConfig.avatars[2].name[language]}` : (language === 'he' ? 'שחקן 2' : 'Player 2'))
                         : t.draw
                     }
                     <br />
@@ -261,12 +276,18 @@ function App() {
             {gameState === 'victory' && (
               <>
                 <h2>{t.you_win} 🎉</h2>
+                {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
+                  <div className="result-avatar">
+                    <span className="result-emoji">{gameConfig.avatars[1].emoji}</span>
+                    <p>{gameConfig.avatars[1].name[language]}</p>
+                  </div>
+                )}
                 {gameConfig?.gameMode === '1v1' ? (
                   <p>
                     {scores[1] > scores[2]
-                      ? t.player_wins.replace('{name}', gameConfig.playerNames?.[1] || (language === 'he' ? 'שחקן 1' : 'Player 1'))
+                      ? t.player_wins.replace('{name}', gameConfig.avatars?.[1] ? `${gameConfig.avatars[1].emoji} ${gameConfig.avatars[1].name[language]}` : (language === 'he' ? 'שחקן 1' : 'Player 1'))
                       : scores[2] > scores[1]
-                        ? t.player_wins.replace('{name}', gameConfig.playerNames?.[2] || (language === 'he' ? 'שחקן 2' : 'Player 2'))
+                        ? t.player_wins.replace('{name}', gameConfig.avatars?.[2] ? `${gameConfig.avatars[2].emoji} ${gameConfig.avatars[2].name[language]}` : (language === 'he' ? 'שחקן 2' : 'Player 2'))
                         : t.draw
                     }
                     <br />
@@ -283,7 +304,7 @@ function App() {
           </div>
         } />
       </Routes>
-    </div>
+    </div >
   )
 }
 

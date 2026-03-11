@@ -227,6 +227,39 @@
     text-transform: uppercase;
     color: var(--text-light);
     opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.player-avatar-emoji {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.player-avatar-name {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: white;
+}
+
+.avatar-display-timeattack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    margin: 0.2rem 0;
+}
+
+.player-avatar-emoji.mini {
+    font-size: 1.4rem;
+}
+
+.player-avatar-name.mini {
+    font-size: 0.7rem;
 }
 
 .p-hearts {

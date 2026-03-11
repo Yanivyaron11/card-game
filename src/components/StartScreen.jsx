@@ -6,6 +6,7 @@ import SettingsModal from './SettingsModal';
 import NewCategoryModal from './NewCategoryModal';
 import NewFeatureModal from './NewFeatureModal';
 import { features } from '../data/features';
+import { avatars } from '../data/avatars';
 import './StartScreen.css';
 
 function StartScreen({ onStart, language, onLanguageChange }) {
@@ -78,7 +79,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [isNewModalOpen, setIsNewModalOpen] = useState(false);
     const [newFeatures, setNewFeatures] = useState([]);
     const [isFeatureModalOpen, setIsFeatureModalOpen] = useState(false);
-    const [playerNames, setPlayerNames] = useState({ 1: '', 2: '' });
+    const [selectedAvatars, setSelectedAvatars] = useState({ 1: null, 2: null });
 
     useEffect(() => {
         // Find categories that are marked new and hasn't been seen yet
@@ -169,7 +170,34 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             alert(t.select_at_least_one);
             return;
         }
-        onStart({ gridSize, topics: selectedTopics, difficulty, gameMode, playerNames });
+        if (gameMode === 'solo' && !selectedAvatars[1]) {
+            alert(language === 'he' ? 'אנא בחר אווטאר' : 'Please select an avatar');
+            return;
+        }
+        if (gameMode === '1v1' && (!selectedAvatars[1] || !selectedAvatars[2])) {
+            alert(language === 'he' ? 'אנא בחר אווטאר לכל שחקן' : 'Please select an avatar for each player');
+            return;
+        }
+
+        // Map avatars to name objects for backward compatibility if needed, 
+        // or just pass the whole avatar objects
+        const configAvatars = {
+            1: selectedAvatars[1],
+            2: selectedAvatars[2]
+        };
+
+        onStart({ gridSize, topics: selectedTopics, difficulty, gameMode, avatars: configAvatars });
+    };
+
+    const handleAvatarSelect = (avatar, playerNum) => {
+        playSound('pop');
+        setSelectedAvatars(prev => {
+            // If picking for P1, and it's already P2's choice, swap or prevent? 
+            // Let's prevent picking the same one.
+            if (playerNum === 1 && prev[2]?.id === avatar.id) return prev;
+            if (playerNum === 2 && prev[1]?.id === avatar.id) return prev;
+            return { ...prev, [playerNum]: avatar };
+        });
     };
 
     return (
@@ -245,30 +273,63 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                     </button>
                 </div>
 
-                {gameMode === '1v1' && (
-                    <div className="player-names-container card-pop">
-                        <div className="name-input-field">
-                            <label className="input-label">{t.player1_name}</label>
-                            <input
-                                type="text"
-                                maxLength={12}
-                                value={playerNames[1]}
-                                onChange={(e) => setPlayerNames(prev => ({ ...prev, 1: e.target.value }))}
-                                placeholder={language === 'he' ? 'שחקן 1' : 'Player 1'}
-                                className="name-input glass-panel"
-                            />
-                        </div>
-                        <div className="name-input-field">
-                            <label className="input-label">{t.player2_name}</label>
-                            <input
-                                type="text"
-                                maxLength={12}
-                                value={playerNames[2]}
-                                onChange={(e) => setPlayerNames(prev => ({ ...prev, 2: e.target.value }))}
-                                placeholder={language === 'he' ? 'שחקן 2' : 'Player 2'}
-                                className="name-input glass-panel"
-                            />
-                        </div>
+                {(gameMode === 'solo' || gameMode === '1v1' || gameMode === 'time_attack') && (
+                    <div className="avatar-selection-container card-pop">
+                        {gameMode === '1v1' ? (
+                            <>
+                                <div className="avatar-player-section">
+                                    <h4>{t.player1_name}</h4>
+                                    <div className="avatar-grid small">
+                                        {avatars.map(avatar => (
+                                            <button
+                                                key={`p1-${avatar.id}`}
+                                                className={`avatar-btn ${selectedAvatars[1]?.id === avatar.id ? 'active' : ''} ${selectedAvatars[2]?.id === avatar.id ? 'disabled' : ''}`}
+                                                onClick={() => handleAvatarSelect(avatar, 1)}
+                                                disabled={selectedAvatars[2]?.id === avatar.id}
+                                                title={avatar.name[language]}
+                                            >
+                                                <span className="avatar-emoji">{avatar.emoji}</span>
+                                                <span className="avatar-name">{avatar.name[language]}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="avatar-player-section">
+                                    <h4>{t.player2_name}</h4>
+                                    <div className="avatar-grid small">
+                                        {avatars.map(avatar => (
+                                            <button
+                                                key={`p2-${avatar.id}`}
+                                                className={`avatar-btn ${selectedAvatars[2]?.id === avatar.id ? 'active' : ''} ${selectedAvatars[1]?.id === avatar.id ? 'disabled' : ''}`}
+                                                onClick={() => handleAvatarSelect(avatar, 2)}
+                                                disabled={selectedAvatars[1]?.id === avatar.id}
+                                                title={avatar.name[language]}
+                                            >
+                                                <span className="avatar-emoji">{avatar.emoji}</span>
+                                                <span className="avatar-name">{avatar.name[language]}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
+                            <div className="avatar-player-section">
+                                <h4>{language === 'he' ? 'בחר את האוואטר שלך' : 'Choose your avatar'}</h4>
+                                <div className="avatar-grid">
+                                    {avatars.map(avatar => (
+                                        <button
+                                            key={`solo-${avatar.id}`}
+                                            className={`avatar-btn ${selectedAvatars[1]?.id === avatar.id ? 'active' : ''}`}
+                                            onClick={() => handleAvatarSelect(avatar, 1)}
+                                            title={avatar.name[language]}
+                                        >
+                                            <span className="avatar-emoji">{avatar.emoji}</span>
+                                            <span className="avatar-name">{avatar.name[language]}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

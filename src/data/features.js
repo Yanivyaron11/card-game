@@ -11,5 +11,18 @@ export const features = [
         },
         icon: '💡',
         newUntil: '2026-03-24'
+    },
+    {
+        id: 'avatar_system',
+        title: {
+            en: 'Avatars are Here!',
+            he: 'הכירו את האוואטרים!'
+        },
+        description: {
+            en: 'Choose your unique hero! 10 cute avatars with names and personalized cheers are waiting for you.',
+            he: 'בחרו את הגיבור שלכם! 10 אוואטרים חמודים עם שמות ומסרים אישיים מחכים לכם.'
+        },
+        icon: '🦁',
+        newUntil: '2026-04-11'
     }
 ];

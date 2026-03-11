@@ -60,7 +60,19 @@ export const translations = {
         total_questions: "{n} questions in the game",
         player1_name: "Player 1 Name",
         player2_name: "Player 2 Name",
-        player_wins: "{name} Wins!"
+        player_wins: "{name} Wins!",
+        correct_feedbacks: [
+            "Great job, {name}! 🌟",
+            "Amazing, {name}! ✨",
+            "Well done, {name}! 👏",
+            "Excellent, {name}! 🏆",
+            "You got it, {name}! 🎯"
+        ],
+        streak_feedbacks: [
+            "WOAH! {n} IN A ROW! You're on fire, {name}! 🔥",
+            "UNBELIEVABLE! {n} straight! {name} is unstoppable! 🚀",
+            "AWESOME! {n} correct! You're a pro, {name}! ⭐"
+        ]
     },
 
 
@@ -125,7 +137,19 @@ export const translations = {
         total_questions: "{n} שאלות במשחק",
         player1_name: "שם שחקן 1",
         player2_name: "שם שחקן 2",
-        player_wins: "{name} ניצח/ה!"
+        player_wins: "{name} ניצח/ה!",
+        correct_feedbacks: [
+            "יופי, {name}! 🌟",
+            "כל הכבוד, {name}! ✨",
+            "מעולה, {name}! 👏",
+            "מצוין, {name}! 🏆",
+            "בול, {name}! 🎯"
+        ],
+        streak_feedbacks: [
+            "וואו! {n} ברצף! {name}, את/ה אלוף/ה! 🔥",
+            "לא ייאמן! {n} ישר! {name} לא עוצר/ת! 🚀",
+            "מדהים! {n} נכונות! את/ה פשוט תותח/ית, {name}! ⭐"
+        ]
     }
 
 
