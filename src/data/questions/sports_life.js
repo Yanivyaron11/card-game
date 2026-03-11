@@ -677,6 +677,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-336",
+        "hint": { "en": "The club was founded early in the 20th century.", "he": "המועדון נוסד בתחילת המאה ה-20." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -703,6 +704,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-337",
+        "hint": { "en": "A team from Turin, Italy.", "he": "קבוצה מטורינו, איטליה." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -729,6 +731,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-338",
+        "hint": { "en": "A French midfielder who became a Haifa legend.", "he": "קשר צרפתי שהפך לאגדה בחיפה." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -755,6 +758,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-339",
+        "hint": { "en": "His name starts with A and ends with u.", "he": "שמו מתחיל ב-א' ומסתיים ב-ו'." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -781,6 +785,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-340",
+        "hint": { "en": "A high-scoring game ending with a 5 in it.", "he": "משחק רב שערים שנגמר עם 5." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -807,6 +812,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-341",
+        "hint": { "en": "A legendary defender whose last name is Benado.", "he": "בלם אגדי ששם משפחתו בנאדו." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -833,6 +839,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-342",
+        "hint": { "en": "He scored a late, dramatic goal.", "he": "הוא כבש שער מאוחר ודרמטי." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -858,6 +865,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-343",
+        "hint": { "en": "He came from the MLS.", "he": "הוא הגיע מה-MLS." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -883,6 +891,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-344",
+        "hint": { "en": "A very large margin, double digits locally.", "he": "פער גדול מאוד, מספר דו-ספרתי מקומי." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -908,6 +917,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-345",
+        "hint": { "en": "It's more than 40 games.", "he": "זה מעל 40 משחקים." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -933,6 +943,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-346",
+        "hint": { "en": "It's around 30,000.", "he": "זה בסביבות ה-30,000." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -958,6 +969,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-347",
+        "hint": { "en": "A midfielder known for his powerful shots.", "he": "קשר הידוע בבעיטות העוצמתיות שלו." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -983,6 +995,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-348",
+        "hint": { "en": "A team from Tel Aviv, but not Maccabi.", "he": "קבוצה מתל אביב, אבל לא מכבי." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1008,6 +1021,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-349",
+        "hint": { "en": "A now-defunct European cup.", "he": "גביע אירופי שכבר לא קיים." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1033,6 +1047,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-350",
+        "hint": { "en": "He coached the Israeli national team later.", "he": "הוא אימן את נבחרת ישראל מאוחר יותר." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1058,6 +1073,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-351",
+        "hint": { "en": "A famous businessman whose name is Ya'akov.", "he": "איש עסקים מפורסם ששמו יעקב." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1083,6 +1099,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-352",
+        "hint": { "en": "A double-digit number of consecutive wins.", "he": "מספר דו-ספרתי של ניצחונות רצופים." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1108,6 +1125,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-353",
+        "hint": { "en": "A creative midfielder from the 60s.", "he": "קשר יצירתי משנות ה-60." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1133,6 +1151,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-354",
+        "hint": { "en": "A striker from the former Soviet Union.", "he": "חלוץ מברית המועצות לשעבר." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1811,6 +1830,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-381",
+        "hint": { "en": "The answer is Juventus.", "he": "התשובה היא יובנטוס." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1836,6 +1856,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-382",
+        "hint": { "en": "A team with a very small name, also from Tel Aviv.", "he": "קבוצה עם שם קטן מאוד, גם מתל אביב." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1861,6 +1882,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-383",
+        "hint": { "en": "Maccabi Tel Aviv was the opponent.", "he": "מכבי תל אביב הייתה היריבה." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2411,6 +2433,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-405",
+        "hint": { "en": "Yes, it was their first major title.", "he": "כן, זה היה התואר המשמעותי הראשון שלהם." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2436,6 +2459,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-406",
+        "hint": { "en": "Yes, they won it in the early 90s.", "he": "כן, הם זכו בו בתחילת שנות ה-90." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2461,6 +2485,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-407",
+        "hint": { "en": "Yes, their winning streak continued.", "he": "כן, רצף הזכיות שלהם נמשך." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2486,6 +2511,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-408",
+        "hint": { "en": "Yes, another cup in the mid-90s.", "he": "כן, עוד גביע באמצע שנות ה-90." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2511,6 +2537,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-409",
+        "hint": { "en": "Yes, a famous year for the club.", "he": "כן, שנה מפורסמת למועדון." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2536,6 +2563,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-410",
+        "hint": { "en": "Yes, after a long drought.", "he": "כן, אחרי בצורת ארוכה." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2561,6 +2589,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-411",
+        "hint": { "en": "Search for 'Maccabi Netanya'.", "he": "חפשו את 'מכבי נתניה'." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2586,6 +2615,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-412",
+        "hint": { "en": "The opponent was Hapoel Tel Aviv.", "he": "היריבה הייתה הפועל תל אביב." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2611,6 +2641,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-413",
+        "hint": { "en": "Beitar Tel Aviv was the team.", "he": "ביתר תל אביב הייתה הקבוצה." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2636,6 +2667,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-414",
+        "hint": { "en": "A very high points total, near 100.", "he": "סך נקודות גבוה מאוד, קרוב ל-100." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2661,6 +2693,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-415",
+        "hint": { "en": "It's around 97 goals.", "he": "זה בסביבות ה-97 שערים." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2686,6 +2719,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-416",
+        "hint": { "en": "A number between 40 and 50.", "he": "מספר בין 40 ל-50." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2711,6 +2745,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-417",
+        "hint": { "en": "A number between 20 and 30.", "he": "מספר בין 20 ל-30." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2736,6 +2771,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-418",
+        "hint": { "en": "Maccabi Tel Aviv at the Ramat Gan Stadium.", "he": "מכבי תל אביב באצטדיון רמת גן." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2761,6 +2797,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-419",
+        "hint": { "en": "Against Manchester United/Olympiacos at Old Trafford.", "he": "נגד מנצ'סטר יונייטד/אולימפיאקוס באולד טראפורד." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2786,6 +2823,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-420",
+        "hint": { "en": "A very small triple-digit number.", "he": "מספר תלת-ספרתי קטן מאוד." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2861,6 +2899,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-423",
+        "hint": { "en": "His first name is Nir.", "he": "שמו הפרטי הוא ניר." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2886,6 +2925,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-424",
+        "hint": { "en": "A midfielder whose name is Yaniv.", "he": "קשר ששמו יניב." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2911,6 +2951,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-425",
+        "hint": { "en": "His name rhymes with 'hat'.", "he": "שמו מתחרז עם 'קאת'." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2936,6 +2977,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-426",
+        "hint": { "en": "Yakubu was the first foreigner, but who was the first Israeli?", "he": "יעקובו היה הזר הראשון, אבל מי היה הישראלי הראשון?" },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2961,6 +3003,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-427",
+        "hint": { "en": "A player with the last name Buanani.", "he": "שחקן עם שם המשפחה בואנני." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -2986,6 +3029,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-428",
+        "hint": { "en": "A team named Hapoel Tayibe.", "he": "קבוצה בשם הפועל טייבה." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3011,6 +3055,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-429",
+        "hint": { "en": "It was in the mid-80s.", "he": "זה היה באמצע שנות ה-80." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3036,6 +3081,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-430",
+        "hint": { "en": "Hapoel Jerusalem was the opponent.", "he": "הפועל ירושלים הייתה היריבה." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3086,6 +3132,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-432",
+        "hint": { "en": "Yes, their first title.", "he": "כן, האליפות הראשונה שלהם." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3136,6 +3183,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-434",
+        "hint": { "en": "Yes, the back-to-back win.", "he": "כן, הזכייה השנייה ברציפות." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3186,6 +3234,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-436",
+        "hint": { "en": "Yes, the late 80s success.", "he": "כן, ההצלחה בסוף שנות ה-80." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3236,6 +3285,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-438",
+        "hint": { "en": "Yes, the double year.", "he": "כן, שנת הדאבל." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3286,6 +3336,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-440",
+        "hint": { "en": "Yes, the unbeaten season.", "he": "כן, העונה ללא הפסד." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3336,6 +3387,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-442",
+        "hint": { "en": "Yes, under Avram Grant.", "he": "כן, תחת אברהם גרנט." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3386,6 +3438,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-444",
+        "hint": { "en": "Yes, back-to-back under Grant.", "he": "כן, אליפות שנייה ברציפות תחת גרנט." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3436,6 +3489,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-446",
+        "hint": { "en": "Yes, under Roni Levy.", "he": "כן, תחת רוני לוי." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3486,6 +3540,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-448",
+        "hint": { "en": "Yes, the second under Roni Levy.", "he": "כן, השנייה תחת רוני לוי." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3536,6 +3591,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-450",
+        "hint": { "en": "Yes, the third in a row under Roni Levy.", "he": "כן, השלישית ברציפות תחת רוני לוי." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3586,6 +3642,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-452",
+        "hint": { "en": "Yes, after a short gap.", "he": "כן, אחרי הפסקה קצרה." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3636,6 +3693,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-454",
+        "hint": { "en": "Yes, with Elisha Levy.", "he": "כן, עם אלישע לוי." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3686,6 +3744,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-456",
+        "hint": { "en": "Yes, breaking the drought with Bakhar.", "he": "כן, שבירת הבצורת עם בכר." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3736,6 +3795,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-458",
+        "hint": { "en": "Yes, consecutive titles with Bakhar.", "he": "כן, אליפות שנייה ברציפות עם בכר." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3786,6 +3846,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-460",
+        "hint": { "en": "Yes, the three-peat with Bakhar.", "he": "כן, האליפות השלישית ברציפות עם בכר." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3811,6 +3872,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-461",
+        "hint": { "en": "Yes, it is the official count.", "he": "כן, זה המניין הרשמי." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3836,6 +3898,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-462",
+        "hint": { "en": "Yes, the count is correct.", "he": "כן, המניין נכון." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3861,6 +3924,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-463",
+        "hint": { "en": "Yes, true information.", "he": "כן, מידע נכון." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3886,6 +3950,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-464",
+        "hint": { "en": "Yes, confirmed records.", "he": "כן, רשומות מאושרות." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3911,6 +3976,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-965",
+        "hint": { "en": "It strengthens the gluten structure.", "he": "זה מחזק את מבנה הגלוטן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -3937,6 +4003,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-966",
+        "hint": { "en": "It is an acid.", "he": "זוהי חומצה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -3963,6 +4030,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-967",
+        "hint": { "en": "Cooking continue after removal from heat.", "he": "הבישול ממשיך לאחר ההסרה מהאש." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -3989,6 +4057,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-968",
+        "hint": { "en": "The starch granules swell and absorb water.", "he": "גרגרי העמילן מתנפחים וסופגים מים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4015,6 +4084,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-969",
+        "hint": { "en": "It contains emulsifiers to hold more liquid and sugar.", "he": "זה מכיל מתחלבים כדי להחזיק יותר נוזלים וסוכר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4067,6 +4137,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-971",
+        "hint": { "en": "To prevent the dough from rising too much or blistering.", "he": "כדי למנוע מהבצק לתפוח יותר מדי או ליצור בועות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4093,6 +4164,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-972",
+        "hint": { "en": "Mixing fat into flour to create a sandy texture.", "he": "ערבוב שומן לתוך קמח ליצירת מרקם חולי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4144,6 +4216,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-974",
+        "hint": { "en": "A glaze used to give pastries a shiny finish.", "he": "זיגוג המשמש למתן גימור מבריק למאפים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4169,6 +4242,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-975",
+        "hint": { "en": "Almond sponge, buttercream, and ganache.", "he": "ספוג שקדים, קרם חמאה וגנאש." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4219,6 +4293,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-977",
+        "hint": { "en": "The sisters who owned the hotel where it was invented.", "he": "האחיות שהיו בבעלותן המלון בו הוא הומצא." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4269,6 +4344,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-979",
+        "hint": { "en": "Galette des Rois.", "he": "גאלט דה רואה (Galette des Rois)." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4319,6 +4395,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-981",
+        "hint": { "en": "Ground almonds and sugar.", "he": "שקדים טחונים וסוכר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4344,6 +4421,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-982",
+        "hint": { "en": "A moist, unrefined brown sugar with plenty of molasses.", "he": "סוכר חום לח ולא מזוקק עם הרבה מולסה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4394,6 +4472,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-984",
+        "hint": { "en": "An almond-flavored pastry cream.", "he": "קרם מאפה בטעם שקדים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4419,6 +4498,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-985",
+        "hint": { "en": "The ability to attract and hold water molecules.", "he": "היכולת למשוך ולהחזיק מולקולות מים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4444,6 +4524,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-986",
+        "hint": { "en": "A temperature range where sugar forms a flexible ball in cold water.", "he": "טווח טמפרטורות בו הסוכר יוצר כדור גמיש במים קרים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4469,6 +4550,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-987",
+        "hint": { "en": "A mixture of glucose and fructose that prevents crystallization.", "he": "תערובת של גלוקוז ופרוקטוז המונעת התגבשות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4494,6 +4576,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-988",
+        "hint": { "en": "A reaction involving polyphenol oxidase.", "he": "תגובה הכוללת פוליפנול אוקסידאז." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4519,6 +4602,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-989",
+        "hint": { "en": "To provide elasticity and structure in the absence of gluten.", "he": "לספק אלסטיות ומבנה בהיעדר גלוטן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4569,6 +4653,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-991",
+        "hint": { "en": "Gelatin is animal-based; Agar is plant-based.", "he": "ג'לטין מבוסס מן החי; אגר מבוסס מן הצומח." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4594,6 +4679,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-992",
+        "hint": { "en": "Slowly adding hot liquid to eggs to raise their temperature without scrambling.", "he": "הוספה איטית של נוזל חם לביצים כדי להעלות את הטמפרטורה שלהן בלי לבשל אותן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4619,6 +4705,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-993",
+        "hint": { "en": "Whisked egg yolks and sugar syrup.", "he": "חלמונים מוקצפים וסירופ סוכר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4644,6 +4731,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-994",
+        "hint": { "en": "Pastry cream mixed with whipped cream and gelatin.", "he": "קרם פטיסייר מעורבב עם קצפת וג'לטין." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4694,6 +4782,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-996",
+        "hint": { "en": "It acts as an emulsifier to reduce viscosity.", "he": "הוא משמש כמתחלב להפחתת הצמיגות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4719,6 +4808,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-997",
+        "hint": { "en": "Fat or sugar crystals rising to the surface.", "he": "גבישי שומן או סוכר שעולים על פני השטח." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4744,6 +4834,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-998",
+        "hint": { "en": "It originated from the Austrian Kipferl.", "he": "הוא מקורו בקיפרל (Kipferl) האוסטרי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4769,6 +4860,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-999",
+        "hint": { "en": "A small French pastry with a custard center and caramelized crust.", "he": "מאפה צרפתי קטן עם מרכז קרמי וקרום מקורמל." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4819,6 +4911,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1001",
+        "hint": { "en": "Shortcrust pastry (Pâte Brisée).", "he": "בצק פריך (Pâte Brisée)." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4844,6 +4937,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1002",
+        "hint": { "en": "A crumbly topping made of flour, butter, and sugar.", "he": "תוספת פירורית העשויה מקמח, חמאה וסוכר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4869,6 +4963,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1003",
+        "hint": { "en": "A mixture of nuts and caramelized sugar.", "he": "תערובת של אגוזים וסוכר מקורמל." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -4894,6 +4989,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1004",
+        "hint": { "en": "A sponge cake made by whisking whole eggs with sugar over heat.", "he": "עוגת ספוג המוכנת על ידי הקצפת ביצים שלמות עם סוכר מעל חום." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5044,6 +5140,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1010",
+        "hint": { "en": "To ensure stability, shine, and a proper snap.", "he": "כדי להבטיח יציבות, ברק ושבירה נכונה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5094,6 +5191,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1012",
+        "hint": { "en": "To preserve the air bubbles incorporated during whisking.", "he": "כדי לשמר את בועות האוויר שנוצרו בזמן ההקצפה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5219,6 +5317,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1017",
+        "hint": { "en": "To keep the fat solid for a flaky texture.", "he": "כדי לשמור על השומן מוצק למרקם פתיתי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5294,6 +5393,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1020",
+        "hint": { "en": "The sugar might crystallize.", "he": "הסוכר עלול להתגבש." },
         "category": "patisserie",
         "level": 3,
         "text": {
