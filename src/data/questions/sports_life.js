@@ -11095,6 +11095,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1244",
+        "hint": { "en": "Gradually add hot milk to prevent the eggs from scrambling.", "he": "הוסיפו חלב חם בהדרגה כדי למנוע מהביצים להיקרש." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11145,6 +11146,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1246",
+        "hint": { "en": "The correct temp to ensure the dough cooks without burning.", "he": "הטמפרטורה הנכונה להבטחת בישול הבצק ללא חריכה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11195,6 +11197,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1248",
+        "hint": { "en": "It protects the fruit and makes the tart look professional.", "he": "זה מגן על הפירות ומעניק לטארט מראה מקצועי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11245,6 +11248,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1250",
+        "hint": { "en": "Aligns the crystals for a hard, shiny finish.", "he": "מסדר את הגבישים לקבלת גימור קשה ומבריק." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11270,6 +11274,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1251",
+        "hint": { "en": "The butter will melt prematurely, destroying the flaky layers.", "he": "החמאה תימס בטרם עת ותהרוס את השכבות הפריכות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11345,6 +11350,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1254",
+        "hint": { "en": "They won't form a skin and will crack during baking.", "he": "הם לא יפתחו קרום וייסדקו בזמן האפייה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11370,6 +11376,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1255",
+        "hint": { "en": "Removes moisture so the dough can absorb eggs and puff up.", "he": "מסיר לחות כדי שהבצק יוכל לספוג ביצים ולהתנפח." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11395,6 +11402,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1256",
+        "hint": { "en": "Fat prevents the egg whites from developing a strong foam.", "he": "שומן מונע מחלבוני הביצה לפתח קצף חזק." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11520,6 +11528,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1261",
+        "hint": { "en": "They will stay dense and absorb too much fat.", "he": "הן יישארו דחוסות ויספגו יותר מדי שומן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11545,6 +11554,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1262",
+        "hint": { "en": "Ensures the fat is integrated without breaking the gluten.", "he": "מבטיח שהשומן ישולב מבלי לשבור את הגלוטן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11570,6 +11580,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1263",
+        "hint": { "en": "To create a beautiful sheen and seal in moisture.", "he": "כדי ליצור ברק יפה ולאטום את הלחות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11595,6 +11606,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1264",
+        "hint": { "en": "The mousse will stay liquid and won't hold its shape.", "he": "המוס יישאר נוזלי ולא ישמור על צורתו." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11720,6 +11732,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1269",
+        "hint": { "en": "A moist surface causes the macarons to explode in heat.", "he": "משטח לח גורם למקרונים להתפוצץ בחום." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11770,6 +11783,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1271",
+        "hint": { "en": "Egg whites are highly sensitive to any trace of oil.", "he": "חלבונים רגישים מאוד לכל זכר של שמן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11820,6 +11834,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1273",
+        "hint": { "en": "The chocolate and cream will separate into a grainy mess.", "he": "השוקולד והשמנת ייפרדו למסה גרגירית." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11870,6 +11885,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1275",
+        "hint": { "en": "Glucose provides a barrier against crystals forming.", "he": "הגלוקוז מהווה מחסום נגד היווצרות גבישים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11895,6 +11911,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1276",
+        "hint": { "en": "Instant heat creates the steam necessary for rising.", "he": "חום מיידי יוצר את האדים הדרושים לתפיחה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11920,6 +11937,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1277",
+        "hint": { "en": "The butter will bleed out, making the bread greasy.", "he": "החמאה תזלוג החוצה ותהפוך את הלחם לשומני." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11945,6 +11963,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1278",
+        "hint": { "en": "Adds a protective, glossy layer to fresh fruit.", "he": "מוסיף שכבת הגנה מבריקה לפירות טריים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -11970,6 +11989,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1279",
+        "hint": { "en": "Structural integrity for airy, whipped desserts.", "he": "שלמות מבנית לקינוחים אווריריים ומוקצפים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12020,6 +12040,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1281",
+        "hint": { "en": "Puff pastry depends on solid fat to create lift.", "he": "בצק עלים תלוי בשומן מוצק כדי ליצור הרמה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12045,6 +12066,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1282",
+        "hint": { "en": "You'll deflate the eggs and the cake won't rise.", "he": "תוציאו את האוויר מהביצים והעוגה לא תתפח." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12070,6 +12092,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1283",
+        "hint": { "en": "The bread will be brittle and flat without gluten.", "he": "הלחם יהיה פריך ושטוח ללא גלוטן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12120,6 +12143,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1285",
+        "hint": { "en": "Crucial for the hollow center of a profiterole.", "he": "קריטי למרכז החלול של הפחזנית." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12145,6 +12169,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1286",
+        "hint": { "en": "Maximum volume requires a perfectly clean environment.", "he": "נפח מקסימלי דורש סביבה נקייה לחלוטין." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12195,6 +12220,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1288",
+        "hint": { "en": "Emulsification creates the smooth, luxurious texture.", "he": "האמולסיה יוצרת את המרקם החלק והיוקרתי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12220,6 +12246,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1289",
+        "hint": { "en": "Slowly heating prevents the egg protein from curdling.", "he": "חימום איטי מונע מחלבון הביצה להיקרש." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12270,6 +12297,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1291",
+        "hint": { "en": "Prevents soggy dough and allows for perfect coloring.", "he": "מונע בצק ספוג בשמן ומאפשר השחמה מושלמת." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12295,6 +12323,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1292",
+        "hint": { "en": "Butter must be added in stages for rich brioche.", "he": "יש להוסיף חמאה בשלבים עבור בריוש עשיר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12320,6 +12349,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1293",
+        "hint": { "en": "Fruit appearance will degrade very quickly.", "he": "מראה הפרי יתדרדר מהר מאוד." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12345,6 +12375,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1294",
+        "hint": { "en": "Without gelatin, it's just a thick cream, not a mousse.", "he": "ללא ג'לטין, זה פשוט קרם סמיך, לא מוס." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12395,6 +12426,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1296",
+        "hint": { "en": "To prevent the butter from leaking during the process.", "he": "כדי למנוע מהחמאה לדלוף במהלך התהליך." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12445,6 +12477,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1298",
+        "hint": { "en": "Kneading creates the 'stretch' needed to hold air.", "he": "הלישה יוצרת את ה'מתיחה' הדרושה להחזקת אוויר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12495,6 +12528,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1300",
+        "hint": { "en": "Essential for 'puffing' the dough with steam later.", "he": "חיוני ל'ניפוח' הבצק בעזרת אדים מאוחר יותר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12620,6 +12654,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1305",
+        "hint": { "en": "Stabilizes the sugar molecules to prevent graininess.", "he": "מייצב את מולקולות הסוכר למניעת גרגיריות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12645,6 +12680,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1306",
+        "hint": { "en": "They will stay raw inside and brown too fast outside.", "he": "הן יישארו נאוות בפנים וישחימו מהר מדי בחוץ." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12695,6 +12731,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1308",
+        "hint": { "en": "High-shine finish is the hallmark of quality pastry.", "he": "גימור מבריק הוא סימן היכר של קונדיטוריה איכותית." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12745,6 +12782,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1310",
+        "hint": { "en": "Chocolate won't set firmly and will melt at a touch.", "he": "השוקולד לא יתקשה ויימס במגע." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12770,6 +12808,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1311",
+        "hint": { "en": "Each fold needs to stay cold to remain distinct.", "he": "כל קיפול צריך להישאר קר כדי להישאר נפרד." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12870,6 +12909,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1315",
+        "hint": { "en": "Moisture is the enemy of a light, risen choux.", "he": "הלחות היא האויב של בצק רבוך קליל ותפוח." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12895,6 +12935,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1316",
+        "hint": { "en": "Oil disrupts the bond between egg protein and air.", "he": "שמן משבש את החיבור בין חלבון הביצה לאוויר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12920,6 +12961,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1317",
+        "hint": { "en": "Cold water keeps the butter pieces solid.", "he": "מים קרים שומרים על חתיכות החמאה מוצקות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -12995,6 +13037,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1320",
+        "hint": { "en": "A proven method to stop large crystals from growing.", "he": "שיטה מוכחת לעצירת גדילת גבישים גדולים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13020,6 +13063,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1321",
+        "hint": { "en": "Ensures the crust is robust while the inside is soft.", "he": "מבטיח שהקרום יהיה חזק בזמן שהפנים רך." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13195,6 +13239,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1328",
+        "hint": { "en": "Without kneading, your bread won't have a structure.", "he": "ללא לישה, ללחם שלכם לא יהיה מבנה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13270,6 +13315,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1331",
+        "hint": { "en": "Meringue needs total cleanliness for stability.", "he": "מרנג זקוק לניקיון מוחלט ליציבות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13320,6 +13366,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1333",
+        "hint": { "en": "Combines fat and water into a smooth, shiny state.", "he": "משלב שומן ומים למצב חלק ומבריק." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13345,6 +13392,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1334",
+        "hint": { "en": "Slow addition protects the yolks from overcooking.", "he": "הוספה איטית מגנה על החלמונים מבישול יתר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13370,6 +13418,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1335",
+        "hint": { "en": "Essential for clear, professional-grade syrups.", "he": "חיוני לסירופים צלולים ברמה מקצועית." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13420,6 +13469,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1337",
+        "hint": { "en": "Prevents the fat from over-lubricating the dough.", "he": "מונע מהשומן לשמן את הבצק יותר מדי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13445,6 +13495,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1338",
+        "hint": { "en": "It seals the fruit to prevent browning.", "he": "זה אוטם את הפרי כדי למנוע השחמה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13545,6 +13596,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1342",
+        "hint": { "en": "Fold as if the bubbles were fragile crystals.", "he": "קפלו כאילו בועות האוויר היו גבישים שבירים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13595,6 +13647,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1344",
+        "hint": { "en": "No rest equals no feet on your macarons.", "he": "אין מנוחה פירושו שאין 'רגליים' למקרונים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13645,6 +13698,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1346",
+        "hint": { "en": "Grease kills the volume of the egg foam.", "he": "שומן הורס את הנפח של קצף הביצים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13720,6 +13774,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1349",
+        "hint": { "en": "Temper to avoid 'scrambled' dessert outcomes.", "he": "השוו טמפרטורות כדי להימנע מקינוח בטעם חביתה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13770,6 +13825,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1351",
+        "hint": { "en": "The doughnuts will be oily and unappetizing.", "he": "הסופגניות יהיו שומניות ולא מעוררות תיאבון." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13870,6 +13926,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1355",
+        "hint": { "en": "Tempering gives chocolate its snap and gloss.", "he": "טמפרור נותן לשוקולד את הברק והשבירה (Snap)." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -13995,6 +14052,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1360",
+        "hint": { "en": "Removing water is the magic behind choux pastry.", "he": "הסרת המים היא הקסם שמאחורי בצק רבוך." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -14045,6 +14103,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1362",
+        "hint": { "en": "Warm butter results in a tough, hard pie crust.", "he": "חמאה חמה מביאה לקרום פאי קשה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -14070,6 +14129,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1363",
+        "hint": { "en": "Ganache relies on a perfect fat-to-liquid bond.", "he": "גנאש מסתמך על חיבור מושלם בין שומן לנוזל." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -16778,6 +16838,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1785",
+        "hint": { "en": "Think of raw fish and rice.", "he": "חשבו על דג נא ואורז." },
         "category": "food",
         "level": 3,
         "text": {
@@ -16803,6 +16864,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1786",
+        "hint": { "en": "Associated with peppers and heat.", "he": "מזוהה עם פלפלים וחריפות." },
         "category": "food",
         "level": 3,
         "text": {
@@ -16828,6 +16890,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1787",
+        "hint": { "en": "A black or white 'diamond' found in woods.", "he": "יהלום שחור או לבן שנמצא ביערות (כמהין)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -16853,6 +16916,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1788",
+        "hint": { "en": "Compare with red or yellow varieties.", "he": "השוו לזנים אדומים או צהובים." },
         "category": "food",
         "level": 3,
         "text": {
@@ -16878,6 +16942,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1789",
+        "hint": { "en": "Found in the skins of dark grapes.", "he": "נמצא בקליפות של ענבים כהים (רזברטרול)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -16903,6 +16968,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1790",
+        "hint": { "en": "A common supplement for vegans.", "he": "תוסף תזונה נפוץ לטבעונים (B12)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -16928,6 +16994,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1791",
+        "hint": { "en": "Associated with high-end Wagyu beef.", "he": "מזוהה עם בקר וואגיו יוקרתי." },
         "category": "food",
         "level": 3,
         "text": {
@@ -16953,6 +17020,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1792",
+        "hint": { "en": "It's brown, sweet, and often comes in sticks.", "he": "הוא חום, מתוק ולעתים מגיע במקלות (קינמון)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -16978,6 +17046,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1793",
+        "hint": { "en": "It starts with 'W' and is often a protein supplement.", "he": "זה מתחיל ב-'W' (מי גבינה - Whey)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17003,6 +17072,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1794",
+        "hint": { "en": "Very thin layers, name sounds like 'Phyllis'.", "he": "שכבות דקות מאוד, השם נשמע כמו פילו." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17028,6 +17098,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1795",
+        "hint": { "en": "Is it a fruit, vegetable, or something else?", "he": "האם זה פרי, ירק או משהו אחר?" },
         "category": "food",
         "level": 3,
         "text": {
@@ -17053,6 +17124,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1796",
+        "hint": { "en": "Think of a traditional French onion or bean soup.", "he": "חשבו על מרק בצל או שעועית צרפתי." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17078,6 +17150,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1797",
+        "hint": { "en": "A small country famous for watches and banking.", "he": "מדינה קטנה המפורסמת בשעונים ובבנקאות (שוויץ)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17103,6 +17176,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1798",
+        "hint": { "en": "Ends with '-ose'.", "he": "מסתיים ב-'-וז' (סוכרוז)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17128,6 +17202,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1799",
+        "hint": { "en": "You only eat the stalk, never the leaves.", "he": "אוכלים רק את הגבעול, לעולם לא את העלים." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17153,6 +17228,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1800",
+        "hint": { "en": "Kopi Luwak is the famous name.", "he": "קופי לואק הוא השם המפורסם." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17178,6 +17254,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1801",
+        "hint": { "en": "Commonly used in professional kitchens for prep.", "he": "בשימוש נפוץ במטבחים מקצועיים להכנות (מיז אן פלאס)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17203,6 +17280,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1802",
+        "hint": { "en": "Bromelain is found in this tropical fruit.", "he": "ברומליין נמצא בפרי הטרופי הזה (אננס)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17228,6 +17306,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1803",
+        "hint": { "en": "It's a type of sausage made with... crimson liquid.", "he": "זה סוג של נקניקייה העשויה מנוזל אדום עמוק (דם)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17253,6 +17332,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1804",
+        "hint": { "en": "Maybe it's a spice or a method.", "he": "אולי זה תבלין או שיטת הכנה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17278,6 +17358,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1805",
+        "hint": { "en": "The name means 'under vacuum' in French.", "he": "השם פירושו 'תחת ואקום' בצרפתית (סו-ויד)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17303,6 +17384,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1806",
+        "hint": { "en": "A crocus flower native to SW Asia.", "he": "פרח כרכוס שמקורו בדרום-מערב אסיה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17328,6 +17410,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1807",
+        "hint": { "en": "Commonly used in ice cream or jams.", "he": "בשימוש נפוץ בגלידות או ריבות (אגר אגר וכדומה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17353,6 +17436,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1808",
+        "hint": { "en": "Developed shortly after WWII.", "he": "פותח זמן קצר לאחר מלחמת העולם השנייה (שנות ה-40)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17378,6 +17462,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1809",
+        "hint": { "en": "Helps with calcium absorption.", "he": "עוזר בספיגת סידן (ויטמין D)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17403,6 +17488,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1810",
+        "hint": { "en": "It's spicy, fermented cabbage.", "he": "זה כרוב חריף ומתסס (קימצ'י)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17428,6 +17514,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1811",
+        "hint": { "en": "The same gas we breathe out.", "he": "אותו גז שאנחנו נשיפה החוצה (פחמן דו-חמצני)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17453,6 +17540,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1812",
+        "hint": { "en": "It's like a pancake but much thinner.", "he": "זה כמו פנקייק אבל הרבה יותר דק (קרפ)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17478,6 +17566,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1813",
+        "hint": { "en": "Found in many Middle Eastern desserts.", "he": "נמצא בקינוחים מזרח-תיכוניים רבים (פיסטוק)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17503,6 +17592,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1814",
+        "hint": { "en": "Starts with 'P' (Potato).", "he": "מתחיל ב-'P' (תפוח אדמה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17528,6 +17618,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1815",
+        "hint": { "en": "Often used as a sugar substitute.", "he": "משמש לעתים קרובות כתחליף סוכר (סטיביה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17553,6 +17644,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1816",
+        "hint": { "en": "Maybe it's a star or dragon fruit.", "he": "אולי זה פרי כוכב או פרי הדרקון." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17578,6 +17670,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1817",
+        "hint": { "en": "A very popular bean flavor used in baking.", "he": "טעם פופולרי מאוד של פולים לשימוש באפייה (וניל)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17603,6 +17696,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1818",
+        "hint": { "en": "It's the stuff in flour that makes dough stretchy.", "he": "זה החומר בקמח שהופך את הבצק למתוח (גלוטן)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17628,6 +17722,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1819",
+        "hint": { "en": "Think of a country between Europe and Asia.", "he": "חשבו על מדינה בין אירופה לאסיה (טורקיה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17653,6 +17748,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1820",
+        "hint": { "en": "The name sounds like 'Caramel'.", "he": "השם נשמע כמו 'קרמל' (קרמליזציה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17678,6 +17774,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1821",
+        "hint": { "en": "C is for...?", "he": "ויטמין שמתחיל באות ג'?" },
         "category": "food",
         "level": 3,
         "text": {
@@ -17703,6 +17800,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1822",
+        "hint": { "en": "Associated with bananas.", "he": "מזוהה עם בננות." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17728,6 +17826,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1823",
+        "hint": { "en": "A green, fatty fruit used for toast.", "he": "פרי ירוק ושומני המשמש לממרח על טוסט (אבוקדו)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17753,6 +17852,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1824",
+        "hint": { "en": "It's called Hollandaise.", "he": "הוא נקרא הולנדז." },
         "category": "food",
         "level": 3,
         "text": {
