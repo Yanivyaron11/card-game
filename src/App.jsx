@@ -90,10 +90,8 @@ function App() {
     // Early termination for 1v1
     if (gameConfig?.gameMode === '1v1') {
       const maxPossiblePoints = currentDeck.filter(c => !c.isSolved && !c.isFailed).reduce((acc, card) => {
-        const canEverBeRebound = !card.isTainted && card.options.length > 2 && card.failedAttempts === 0;
+        const canEverBeRebound = !card.isTainted && card.options.he.length > 2 && card.failedAttempts === 0;
         // If it was already failed once and is eligible, it's worth 2 points NOW.
-        // If it's a fresh card, it can be 1 pt now or 2 pt later (rebound). 
-        // To be safe for "unreachable" logic, we assume max 2 points per remaining card.
         return acc + (canEverBeRebound || card.failedAttempts === 1 ? 2 : 1);
       }, 0);
       const scoreDiff = Math.abs(currentScores[1] - currentScores[2]);
@@ -144,7 +142,7 @@ function App() {
           const isEligibleForRebound = card &&
             card.failedAttempts === 1 &&
             !card.isTainted &&
-            card.options.length > 2;
+            card.options.he.length > 2;
 
           const points = isEligibleForRebound ? 2 : 1;
           const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + points };
@@ -183,7 +181,7 @@ function App() {
           const newDeck = prev.map(card => {
             if (card.id === cardId) {
               const newFailedCount = (card.failedAttempts || 0) + 1;
-              const isBinary = card.options.length <= 2;
+              const isBinary = card.options.he.length <= 2;
               const shouldLockImmediately = isBinary || card.isTainted;
 
               return {

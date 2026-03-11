@@ -74,6 +74,7 @@ export const translations = {
             "AWESOME! {n} correct! You're a pro, {name}! ⭐"
         ],
         rebound: "Rebound! 2 Points!",
+        rebound_badge: "REBOUND!",
         rebound_feedback: "REBOUND, {name}! 🎯 You earned 2 points!"
     },
 
@@ -153,6 +154,7 @@ export const translations = {
             "מדהים! {n} נכונות! {name}, את/ה מקצוען/ית! ⭐"
         ],
         rebound: "ריבאונד! 2 נקודות!",
+        rebound_badge: "ריבאונד!",
         rebound_feedback: "ריבאונד, {name}! 🎯 קיבלת 2 נקודות!"
     }
 };

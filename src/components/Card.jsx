@@ -1,14 +1,17 @@
+import { translations } from '../data/translations';
 import './Card.css';
 
-function Card({ card, onClick, currentPlayer, gameMode }) {
+function Card({ card, onClick, currentPlayer, gameMode, language }) {
+    const t = translations[language];
     // Simple card that only displays topic and solved status
     const isBlocked = gameMode === '1v1' &&
         card.failedAttempts === 1 &&
         card.lastFailedPlayer === currentPlayer;
 
-    const isEligibleForRebound = !card.isTainted &&
-        card.options.length > 2 &&
-        card.failedAttempts === 1;
+    const isEligibleForRebound = card.options &&
+        card.options.he.length > 2 &&
+        card.failedAttempts === 1 &&
+        !card.isTainted;
 
     const ownerClass = card.owner ? `player-${card.owner}` : '';
 
@@ -22,7 +25,7 @@ function Card({ card, onClick, currentPlayer, gameMode }) {
                 {/* Card Back (Default state) */}
                 <div className="card-back glass-panel">
                     {isEligibleForRebound && !card.isSolved && !card.isFailed && !isBlocked && (
-                        <div className="super-answer-badge">x2</div>
+                        <div className="super-answer-badge">{t.rebound_badge}</div>
                     )}
                     <div
                         className="pattern"
