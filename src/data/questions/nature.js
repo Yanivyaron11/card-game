@@ -1457,6 +1457,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1506",
+        "hint": { "en": "A giant sea creature that lives in the deep ocean.", "he": "יצור ים ענק שחי במעמקי האוקיינוס (דיונון ענק)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -1482,6 +1483,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1507",
+        "hint": { "en": "The name sounds like something very bright and intense.", "he": "השם נשמע כמו משהו בוער ואינטנסיבי (Flamboyance)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -1507,6 +1509,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1508",
+        "hint": { "en": "An marine mammal like a whale or a seal.", "he": "יונק ימי כמו לווייתן או כלב ים (לווייתן מקור סוברבי)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -1532,6 +1535,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1509",
+        "hint": { "en": "They don't have traditional teeth, but they have 47 'sharp tools'.", "he": "אין להם שיניים רגילות, אלא 47 'כלי חיתוך' חדים." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -1557,6 +1561,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1510",
+        "hint": { "en": "A very small, colorful bird that hums.", "he": "ציפור קטנה וצבעונית שמשמיעה זמזום (קוליברי)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2582,6 +2587,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1659",
+        "hint": { "en": "Found on the Rock of Gibraltar.", "he": "נמצא על צוק גיברלטר (מקוק ברברי)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2607,6 +2613,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1660",
+        "hint": { "en": "Think of the ones that look most like humans.", "he": "חשבו על אלו שהכי דומים לבני אדם (שימפנזים או בונובו)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2632,6 +2639,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1661",
+        "hint": { "en": "The name starts with P.", "he": "השם מתחיל ב-פ' (פרימטים)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2657,6 +2665,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1662",
+        "hint": { "en": "Compare with monkeys; apes don't have tails.", "he": "השוו לקופים; לקופי אדם אין זנב." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2682,6 +2691,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1663",
+        "hint": { "en": "They are known for being very peaceful and social.", "he": "הם ידועים כחברותיים ודיפלומטיים מאוד." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2707,6 +2717,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1664",
+        "hint": { "en": "Think of the Mandrill or Vervet monkey.", "he": "חשבו על המנדריל או קוף הוורבט." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2732,6 +2743,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1665",
+        "hint": { "en": "Comes from the word 'Primate'.", "he": "מגיע מהמילה 'פרימט' (פרימטולוגיה)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2757,6 +2769,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1666",
+        "hint": { "en": "Look for the Mandrill.", "he": "חפשו את המנדריל." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2782,6 +2795,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1667",
+        "hint": { "en": "It's called a 'prehensile' tail.", "he": "זה נקרא זנב לופת (Prehensile)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2807,6 +2821,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1668",
+        "hint": { "en": "Think of Colobus or Langur monkeys.", "he": "חשבו על קופי הקולובוס או הלנגור." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2832,6 +2847,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1669",
+        "hint": { "en": "They are arboreal animals.", "he": "הם בעלי חיים שוכני עצים." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2857,6 +2873,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1670",
+        "hint": { "en": "Found only on the island of Sumatra.", "he": "נמצא רק באי סומטרה (אורנגאוטן סומטרה)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2882,6 +2899,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1671",
+        "hint": { "en": "The tiny Tarsier.", "he": "הקיפוף הזעיר (טרסייר)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2907,6 +2925,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1672",
+        "hint": { "en": "The same as humans: 2-1-2-3.", "he": "כמו אצל בני אדם: 2-1-2-3." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2932,6 +2951,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1673",
+        "hint": { "en": "They use it for social bonding.", "he": "הם משתמשים בזה לחיזוק קשרים חברתיים (פוליטיקה של שימפנזים)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2957,6 +2977,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1674",
+        "hint": { "en": "Deforestation for palm oil.", "he": "בירוא יערות עבור שמן דקלים." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -2982,6 +3003,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1675",
+        "hint": { "en": "Check for the Proboscis monkey.", "he": "חפשו את קוף החוטם." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -3007,6 +3029,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1676",
+        "hint": { "en": "It's a way of moving called brachiation.", "he": "זו דרך תנועה הנקראת 'ברכיאציה' (התנדנדות)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -3032,6 +3055,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1677",
+        "hint": { "en": "The name tells you when it's active.", "he": "השם אומר לכם מתי הוא פעיל (בלילה)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -3057,6 +3081,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-animals-1678",
+        "hint": { "en": "Think of Spider monkeys.", "he": "חשבו על קופי עכביש." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -4807,6 +4832,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2149",
+        "hint": { "en": "It's a type of swift.", "he": "זה סוג של סיס (סיס זנב-קוץ)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -4832,6 +4858,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2150",
+        "hint": { "en": "A massive fungus in Oregon.", "he": "פטרייה עצומה במדינת אורגון (ארמילאריה)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -4907,6 +4934,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2153",
+        "hint": { "en": "A shield volcano in Hawaii.", "he": "הר געש מגן בהוואי (מאונה לואה)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -4932,6 +4960,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2154",
+        "hint": { "en": "Starts with G.", "he": "מתחיל ב-ג' (גנימד)." },
         "category": "records",
         "level": 3,
         "text": {
@@ -4957,6 +4986,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2155",
+        "hint": { "en": "Measured during a tropical cyclone.", "he": "נמדד במהלך סופה טרופית (מעל 400 קמ\"ש)." },
         "category": "records",
         "level": 3,
         "text": {
@@ -4982,6 +5012,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2156",
+        "hint": { "en": "The Japanese spider crab.", "he": "סרטן העכביש היפני." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -5007,6 +5038,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2157",
+        "hint": { "en": "The Coco de Mer.", "he": "קוקוס הים (קוקו דה מר)." },
         "category": "records",
         "level": 3,
         "text": {
@@ -5032,6 +5064,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2158",
+        "hint": { "en": "The Shortfin Mako.", "he": "ענתוש קצר-סנפיר (מאקו)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -5057,6 +5090,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2159",
+        "hint": { "en": "The Milwaukee Deep.", "he": "תהום מילווקי." },
         "category": "records",
         "level": 3,
         "text": {
@@ -5082,6 +5116,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2160",
+        "hint": { "en": "Don't think of the Dead Sea; look for Don Juan Pond.", "he": "אל תחשבו על ים המלח; חפשו את בריכת דון חואן." },
         "category": "records",
         "level": 3,
         "text": {
@@ -5107,6 +5142,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2161",
+        "hint": { "en": "Mount Vinson.", "he": "הר וינסון." },
         "category": "records",
         "level": 3,
         "text": {
@@ -5132,6 +5168,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2162",
+        "hint": { "en": "Located in Hawaii.", "he": "נמצא בהוואי (קילוואה)." },
         "category": "records",
         "level": 3,
         "text": {
@@ -5157,6 +5194,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2163",
+        "hint": { "en": "The Giraffe has to pump blood all the way up its neck.", "he": "לג'ירפה יש צורך להזרים דם במעלה הצוואר הארוך." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -5182,6 +5220,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2164",
+        "hint": { "en": "Colossal Squid.", "he": "דיונון קולוסאלי." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -5207,6 +5246,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2165",
+        "hint": { "en": "Etruscan shrew.", "he": "חדף זעיר (Etruscan shrew)." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -5232,6 +5272,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2166",
+        "hint": { "en": "Green Anaconda.", "he": "אנקונדה ירוקה." },
         "category": "animals",
         "level": 3,
         "text": {
@@ -6307,6 +6348,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2631",
+        "hint": { "en": "It's the thigh bone.", "he": "זוהי עצם הירך (פמור)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6332,6 +6374,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2632",
+        "hint": { "en": "These cells are shaped like objects used in road traffic.", "he": "התאים האלו מעוצבים כמו חרוטים (מדוכים - Cones)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6357,6 +6400,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2633",
+        "hint": { "en": "Thirty-something.", "he": "שלושים וכמה (33)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6382,6 +6426,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2634",
+        "hint": { "en": "Starts with M.", "he": "מתחיל ב-מ' (מלנין)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6407,6 +6452,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2635",
+        "hint": { "en": "At the base of the brain.", "he": "בבסיס המוח." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6432,6 +6478,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2636",
+        "hint": { "en": "Also found in milk.", "he": "נמצא גם בחלב (סידן)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6457,6 +6504,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2637",
+        "hint": { "en": "The pancreas produces insulin for this.", "he": "הלבלב מייצר אינסולין למטרה זו." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6482,6 +6530,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2638",
+        "hint": { "en": "Cerebrospinal fluid.", "he": "נוזל המוח והשדרה (CSF)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6507,6 +6556,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2639",
+        "hint": { "en": "Starts with H.", "he": "מתחיל ב-ה' (המוגלובין)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6532,6 +6582,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2640",
+        "hint": { "en": "Between 4 and 6.", "he": "בין 4 ל-6 (כ-5 ליטרים)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6557,6 +6608,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2641",
+        "hint": { "en": "Epiglottis.", "he": "מכסה הגרון (אפיגלוטיס)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6582,6 +6634,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2642",
+        "hint": { "en": "Contains three fluid-filled loops.", "he": "מכיל שלוש לולאות מלאות נוזל." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6607,6 +6660,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2643",
+        "hint": { "en": "Starts with M.", "he": "מתחיל ב-מ' (מיטוזה)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6632,6 +6686,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2644",
+        "hint": { "en": "It's type O.", "he": "סוג דם O." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6657,6 +6712,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2645",
+        "hint": { "en": "The Liver.", "he": "הכבד." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6682,6 +6738,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2646",
+        "hint": { "en": "The Mitral or Bicuspid valve.", "he": "המסתם המיטרלי (או הדו-צניפי)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6707,6 +6764,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2647",
+        "hint": { "en": "The Nephron.", "he": "הנפרון." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6732,6 +6790,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2648",
+        "hint": { "en": "Inside the bones.", "he": "בתוך העצמות (מוח העצם)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6757,6 +6816,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2649",
+        "hint": { "en": "Hyperglycemia.", "he": "היפרגליקמיה." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -6782,6 +6842,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2650",
+        "hint": { "en": "The Olfactory nerve.", "he": "עצב הריח (אולפקטורי)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7557,6 +7618,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2681",
+        "hint": { "en": "The Aorta.", "he": "אבי העורקים (אאורטה)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7582,6 +7644,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2682",
+        "hint": { "en": "Keratin protein.", "he": "חלבון קרטין." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7607,6 +7670,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2683",
+        "hint": { "en": "The upper arm.", "he": "הזרוע העליונה." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7632,6 +7696,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2684",
+        "hint": { "en": "Plasma.", "he": "פלזמה." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7657,6 +7722,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2685",
+        "hint": { "en": "The Liver is the body's filter.", "he": "הכבד הוא המסנן של הגוף." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7682,6 +7748,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2686",
+        "hint": { "en": "The Diaphragm.", "he": "הסרעפת." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7707,6 +7774,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2687",
+        "hint": { "en": "Twenty-three.", "he": "עשרים ושלושה (23)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7732,6 +7800,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2688",
+        "hint": { "en": "The Larynx.", "he": "לרינקס." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7757,6 +7826,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2689",
+        "hint": { "en": "Sensory neurons.", "he": "נוירון תחושתי (סנסורי)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7782,6 +7852,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2690",
+        "hint": { "en": "The Epiglottis.", "he": "מכסה הגרון (אפיגלוטיס)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7807,6 +7878,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2691",
+        "hint": { "en": "In the middle ear.", "he": "באוזן התיכונה (שריר המשוורת)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7832,6 +7904,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2692",
+        "hint": { "en": "The Masseter (jaw muscle).", "he": "שריר המלעס (בלסת)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7857,6 +7930,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2693",
+        "hint": { "en": "The Pancreas.", "he": "הלבלב." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7882,6 +7956,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2694",
+        "hint": { "en": "The Fibula.", "he": "השוקית (פיבולה)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7907,6 +7982,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2695",
+        "hint": { "en": "Detecting rotation and movement.", "he": "זיהוי סיבוב ותנועה." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7932,6 +8008,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2696",
+        "hint": { "en": "The Cerebrum.", "he": "המוח הגדול (צרברום)." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7957,6 +8034,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2697",
+        "hint": { "en": "A Stethoscope.", "he": "סטטוסקופ." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -7982,6 +8060,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2698",
+        "hint": { "en": "The Liver.", "he": "הכבד." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -8007,6 +8086,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2699",
+        "hint": { "en": "A Synapse.", "he": "סינפסה." },
         "category": "human_body",
         "level": 3,
         "text": {
@@ -8032,6 +8112,7 @@ export const natureQuestions = [
     },
 {
         "id": "q-human_body-2700",
+        "hint": { "en": "Myoglobin.", "he": "מיוגלובין." },
         "category": "human_body",
         "level": 3,
         "text": {

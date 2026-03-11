@@ -8532,6 +8532,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-776",
+        "hint": { "en": "Just add the tens.", "he": "פשוט הוסיפו את העשרות." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-1",
@@ -8613,6 +8614,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-779",
+        "hint": { "en": "Add 40 and then another 5.", "he": "הוסיפו 40 ואז עוד 5." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-4",
@@ -8694,6 +8696,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-782",
+        "hint": { "en": "Think of 60+30 and then add the units.", "he": "חשבו על 60+30 ואז הוסיפו את היחידות." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-7",
@@ -8775,6 +8778,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-785",
+        "hint": { "en": "Double 24.", "he": "פעמיים 24." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-0",
@@ -8856,6 +8860,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-788",
+        "hint": { "en": "60 and 10 and 2+8.", "he": "60 ועוד 10 ועוד 2+8." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-3",
@@ -8937,6 +8942,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-791",
+        "hint": { "en": "Just increase the tens digit by 1.", "he": "פשוט הגדילו את ספרת העשרות ב-1." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-6",
@@ -9018,6 +9024,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-794",
+        "hint": { "en": "Almost 50+50.", "he": "כמעט 50+50." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-9",
@@ -9099,6 +9106,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-797",
+        "hint": { "en": "Add 10 and then 4.", "he": "הוסיפו 10 ואז 4." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-2",
@@ -9180,6 +9188,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-800",
+        "hint": { "en": "Exceeds 100.", "he": "זה עובר את ה-100." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-5",
@@ -9261,6 +9270,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-803",
+        "hint": { "en": "Add 10 and then 5.", "he": "הוסיפו 10 ואז 5." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-8",
@@ -9342,6 +9352,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-806",
+        "hint": { "en": "80+20 + 5+9.", "he": "80+20 ועוד 5+9." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-1",
@@ -9423,6 +9434,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-809",
+        "hint": { "en": "Add 10 and then 4.", "he": "הוסיפו 10 ואז 4." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-4",
@@ -9504,6 +9516,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-812",
+        "hint": { "en": "Almost 100+47.", "he": "כמעט 100+47." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-7",
@@ -9585,6 +9598,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-815",
+        "hint": { "en": "80+30 + 9+3.", "he": "80+30 ועוד 9+3." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-0",
@@ -9666,6 +9680,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-818",
+        "hint": { "en": "90+10 + 6+9.", "he": "90+10 ועוד 6+9." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-3",
@@ -9747,6 +9762,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-821",
+        "hint": { "en": "Add 30 and then 1.", "he": "הוסיפו 30 ואז 1." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-6",
@@ -9828,6 +9844,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-824",
+        "hint": { "en": "70+40 + 7+5.", "he": "70+40 ועוד 7+5." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-9",

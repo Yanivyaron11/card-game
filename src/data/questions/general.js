@@ -2649,6 +2649,7 @@ export const generalQuestions = [
     },
 {
         "id": "q-general-2277",
+        "hint": { "en": "She was known as 'The Lady with the Lamp'.", "he": "היא הייתה ידועה כ'הגברת עם המנורה'." },
         "category": "general",
         "level": 3,
         "text": {
@@ -2674,6 +2675,7 @@ export const generalQuestions = [
     },
 {
         "id": "q-general-2278",
+        "hint": { "en": "It's the first element on the periodic table.", "he": "זהו היסוד הראשון בטבלה המחזורית (מימן)." },
         "category": "general",
         "level": 3,
         "text": {
