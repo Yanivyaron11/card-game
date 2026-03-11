@@ -10823,6 +10823,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2938",
+        "hint": { "en": "Think of a legendary artist who also happens to be a great actor.", "he": "חשבו על אמן אגדי שהוא גם שחקן מצוין." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10848,6 +10849,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2939",
+        "hint": { "en": "This artist is known for soulful ballads and a deep voice.", "he": "אמן זה מוכר בזכות בלדות מלאות נשמה וקול עמוק." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10873,6 +10875,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2940",
+        "hint": { "en": "A pioneer of Israeli rock 'n' roll.", "he": "מחלוצי הרוקנרול הישראלי." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10898,6 +10901,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2941",
+        "hint": { "en": "One of the members of the 'Kaveret' group.", "he": "אחד מחברי להקת 'כוורת'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10923,6 +10927,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2942",
+        "hint": { "en": "He frequently collaborated with Shalom Hanoch.", "he": "הוא שיתף פעולה לעתים קרובות עם שלום חנוך." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10948,6 +10953,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2943",
+        "hint": { "en": "Look for the voice behind 'Sof HaOna'.", "he": "חפשו את הקול שמאחורי 'סוף העונה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10973,6 +10979,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2944",
+        "hint": { "en": "This artist's first name means 'lion'.", "he": "שמו הפרטי של האמן הזה פירושו 'אריה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10998,6 +11005,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2945",
+        "hint": { "en": "A very influential singer-songwriter from the 70s.", "he": "זמר-יוצר משפיע מאוד משנות ה-70." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11023,6 +11031,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2946",
+        "hint": { "en": "Think of a song about 'Ushik' or 'Sufat Chul'.", "he": "חשבו על שיר על 'עושיק' או 'סופת חול'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11048,6 +11057,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2947",
+        "hint": { "en": "This band is famous for their humor and complex harmonies.", "he": "הלהקה הזו מפורסמת בהומור ובהרמוניות המורכבות שלה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11073,6 +11083,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2948",
+        "hint": { "en": "Look for hits like 'Rakevet Laila' or 'Az Lama Li Politika'.", "he": "חפשו להיטים כמו 'רכבת לילה' או 'אז למה לי פוליטיקה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11098,6 +11109,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2949",
+        "hint": { "en": "The artist often called 'The King of Israeli Rock'.", "he": "האמן המכונה לעתים 'מלך הרוק הישראלי'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11123,6 +11135,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2950",
+        "hint": { "en": "The band that gave us 'Sof HaOna'.", "he": "הלהקה שנתנה לנו את 'סוף העונה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11148,6 +11161,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2951",
+        "hint": { "en": "A leading alt-rock band from the 90s.", "he": "להקת רוק אלטרנטיבי מובילה משנות ה-90." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11173,6 +11187,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2952",
+        "hint": { "en": "Think of 'Paca Paca' or 'Maka Afora'.", "he": "חשבו על 'פקה פקה' או 'מכה אפורה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11198,6 +11213,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2953",
+        "hint": { "en": "A heavy rock band known for high energy and deep lyrics.", "he": "להקת רוק כבד המוכרת באנרגיה גבוהה ומילים עמוקות." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11223,6 +11239,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2954",
+        "hint": { "en": "A versatile performer known for TV and music.", "he": "אמן רב-תחומי המוכר מהטלוויזיה ומהמוזיקה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11248,6 +11265,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2955",
+        "hint": { "en": "Associated with 'Simanim Shel Ohavim' and 'Inyan Shel Zman'.", "he": "מזוהה עם 'סימנים של אוהבים' ו'עניין של זמן'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11273,6 +11291,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2956",
+        "hint": { "en": "Think of a song about a 'San Remo' or a child's toy.", "he": "חשבו על שיר על 'סן רמו' או צעצוע של ילד." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11298,6 +11317,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2957",
+        "hint": { "en": "Often performs with an acoustic guitar.", "he": "מופיע לעתים קרובות עם גיטרה אקוסטית." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11323,6 +11343,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2958",
+        "hint": { "en": "A band associated with the Florentin neighborhood.", "he": "להקה המזוהה עם שכונת פלורנטין." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11348,6 +11369,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2959",
+        "hint": { "en": "Check for 'Holat Ahava' or similar titles.", "he": "חפשו את 'חולת אהבה' או שמות דומים." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11373,6 +11395,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2960",
+        "hint": { "en": "Songs from the album 'Sippurei Poogy'.", "he": "שירים מהאלבום 'סיפורי פוגי'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11523,6 +11546,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2966",
+        "hint": { "en": "This album title mentions a type of monster or a big animal.", "he": "שם האלבום הזה מזכיר סוג של מפלצת או חיה גדולה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11548,6 +11572,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2967",
+        "hint": { "en": "Look for an album from the mid-80s.", "he": "חפשו אלבום מאמצע שנות ה-80." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11573,6 +11598,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2968",
+        "hint": { "en": "The band's breakout album.", "he": "אלבום הפריצה של הלהקה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11598,6 +11624,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2969",
+        "hint": { "en": "Their third studio album.", "he": "אלבום האולפן השלישי שלהם." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11623,6 +11650,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2970",
+        "hint": { "en": "Named after a famous movie character or machine.", "he": "נקרא על שם דמות קולנועית מפורסמת או מכונה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11648,6 +11676,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2971",
+        "hint": { "en": "A title related to a 'big monster'.", "he": "שם הקשור ל'מפלצת גדולה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11673,6 +11702,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2972",
+        "hint": { "en": "Released in 1988.", "he": "שוחרר בשנת 1988." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11698,6 +11728,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2973",
+        "hint": { "en": "Think of 'Ladies and Gentlemen'.", "he": "חשבו על 'גבירותיי ורבותיי'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11723,6 +11754,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2974",
+        "hint": { "en": "An album with 'Monster' in the name.", "he": "אלבום עם 'מפלצת' בשם." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11748,6 +11780,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2975",
+        "hint": { "en": "Their 1990 release.", "he": "האלבום שלהם משנת 1990." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11773,6 +11806,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2976",
+        "hint": { "en": "Look for 'Miflatzot HaTehila'.", "he": "חפשו את 'מפלצות התהילה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11798,6 +11832,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2977",
+        "hint": { "en": "Released in the mid-90s.", "he": "שוחרר באמצע שנות ה-90." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11823,6 +11858,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2978",
+        "hint": { "en": "The album 'Peak' in Hebrew.", "he": "האלבום 'שיא' בעברית." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11848,6 +11884,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2979",
+        "hint": { "en": "Something about 'Goodbye'.", "he": "משהו על 'להתראות'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11873,6 +11910,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2980",
+        "hint": { "en": "Their last studio album before the first breakup.", "he": "אלבום האולפן האחרון שלהם לפני הפירוק הראשון." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11898,6 +11936,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2981",
+        "hint": { "en": "A 1995 release.", "he": "שוחרר בשנת 1995." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11923,6 +11962,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2982",
+        "hint": { "en": "A live performance recording.", "he": "הקלטה של הופעה חיה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11948,6 +11988,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2983",
+        "hint": { "en": "Their unplugged session.", "he": "הסשן האנפלאגד שלהם." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11973,6 +12014,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2984",
+        "hint": { "en": "A return to rock in 2003.", "he": "חזרה לרוק בשנת 2003." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -11998,6 +12040,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2985",
+        "hint": { "en": "Released during their second reunion.", "he": "שוחרר במהלך האיחוד השני שלהם." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -12023,6 +12066,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2986",
+        "hint": { "en": "Their newest studio work.", "he": "עבודת האולפן החדשה ביותר שלהם." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -12048,6 +12092,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2987",
+        "hint": { "en": "The 2000s era.", "he": "תקופת שנות ה-2000." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -12073,6 +12118,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2988",
+        "hint": { "en": "Look for 'Romantika Atidit'.", "he": "חפשו את 'רומנטיקה עתידנית'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -12098,6 +12144,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2989",
+        "hint": { "en": "Albums released after 2010.", "he": "אלבומים ששוחררו אחרי 2010." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -12123,6 +12170,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2990",
+        "hint": { "en": "The current decade.", "he": "העשור הנוכחי." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13398,6 +13446,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3041",
+        "hint": { "en": "Associated with 'Waiting for Messi' or similar vibes.", "he": "מזוהה עם 'לחכות למשיח' או אווירה דומה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13423,6 +13472,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3042",
+        "hint": { "en": "A giant of Israeli culture, often wore a simple T-shirt.", "he": "ענק של התרבות הישראלית, לבש לעתים קרובות חולצת טי פשוטה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13448,6 +13498,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3043",
+        "hint": { "en": "A band that broke all records in the 70s.", "he": "להקה ששברה את כל השיאים בשנות ה-70." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13473,6 +13524,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3044",
+        "hint": { "en": "Look for the album 'Radio Hazak'.", "he": "חפשו את האלבום 'רדיו חזק'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13498,6 +13550,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3045",
+        "hint": { "en": "A female artist with a powerful voice.", "he": "אמנית בעלת קול עוצמתי." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13523,6 +13576,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3046",
+        "hint": { "en": "The 'Queen of Israeli Pop' in the 80s.", "he": "מלכת הפופ הישראלי בשנות ה-80." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13548,6 +13602,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3047",
+        "hint": { "en": "Associated with Mediterranean rock.", "he": "מזוהה עם רוק ים-תיכוני." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13573,6 +13628,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3048",
+        "hint": { "en": "A rapper who changed the game in the 2000s.", "he": "ראפר ששינה את חוקי המשחק בשנות ה-2000." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13598,6 +13654,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3049",
+        "hint": { "en": "Think of 'Efer VeAvak'.", "he": "חשבו על 'אפר ואבק'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13623,6 +13680,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3050",
+        "hint": { "en": "A soulful singer from the Black Hebrew community.", "he": "זמרת נשמה מקהילת העבריים מדימונה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13648,6 +13706,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3051",
+        "hint": { "en": "The artist who sang 'Olat Chozeret'.", "he": "האמן ששר את 'עולה חוזרת'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13673,6 +13732,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3052",
+        "hint": { "en": "A world-renowned electronic duo.", "he": "צמד אלקטרוני בעל שם עולמי." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13698,6 +13758,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3053",
+        "hint": { "en": "A classic about a 'Red Sweater'.", "he": "קלאסיקה על 'סוודר אדום'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13723,6 +13784,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3054",
+        "hint": { "en": "Think of 'Ani VeAta'.", "he": "חשבו על 'אני ואתה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13748,6 +13810,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3055",
+        "hint": { "en": "She sang 'Hallelujah'.", "he": "היא שרה את 'הללויה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13773,6 +13836,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3056",
+        "hint": { "en": "A song about 'Jerusalem of Gold'.", "he": "שיר על 'ירושלים של זהב'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13798,6 +13862,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3057",
+        "hint": { "en": "Think of the 'Balkan' sound.", "he": "חשבו על הצליל ה'בלקני'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13823,6 +13888,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3058",
+        "hint": { "en": "A very famous Eurovision winner.", "he": "זוכה אירוויזיון מפורסם מאוד." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13848,6 +13914,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3059",
+        "hint": { "en": "The diva of the 80s and 90s.", "he": "הדיווה של שנות ה-80 וה-90." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13873,6 +13940,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-3060",
+        "hint": { "en": "His first name means 'hope'.", "he": "שמו הפרטי פירושו 'תקווה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -13898,6 +13966,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3261",
+        "hint": { "en": "He's big, green, and lives in a swamp.", "he": "הוא גדול, ירוק וחי בביצה." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -13948,6 +14017,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3263",
+        "hint": { "en": "A loud animal that never stops talking.", "he": "חיה רעשנית שלעולם לא מפסיקה לדבר." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -13973,6 +14043,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3264",
+        "hint": { "en": "He has a pointy nose and wants to steal the moon.", "he": "יש לו אף מחודד והוא רוצה לגנוב את הירח (גרו)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -13998,6 +14069,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3265",
+        "hint": { "en": "Think of the color of a banana.", "he": "חשבו על הצבע של בננה." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14048,6 +14120,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3267",
+        "hint": { "en": "The King of the Jungle (in Central Park).", "he": "מלך הג'ונגל (בסנטרל פארק)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14073,6 +14146,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3268",
+        "hint": { "en": "His name is Marty.", "he": "קוראים לו מרטי." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14148,6 +14222,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3271",
+        "hint": { "en": "An acorn is his only goal.", "he": "בלוט הוא המטרה היחידה שלו." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14173,6 +14248,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3272",
+        "hint": { "en": "His name is Sid.", "he": "קוראים לו סיד." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14198,6 +14274,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3273",
+        "hint": { "en": "It's a Night Fury.", "he": "זה 'זעם לילי' (Night Fury)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14348,6 +14425,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3279",
+        "hint": { "en": "His name starts with B.", "he": "השם שלו מתחיל ב-ב' (ברונו)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14373,6 +14451,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3280",
+        "hint": { "en": "It's a golden flower with a sun in the middle.", "he": "זהו פרח זהוב עם שמש במרכזו." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14398,6 +14477,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3281",
+        "hint": { "en": "His name is Pascal.", "he": "קוראים לו פסקל." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14423,6 +14503,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3282",
+        "hint": { "en": "She's a small police officer with long ears.", "he": "היא שוטרת קטנה עם אוזניים ארוכות (ארנבת)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14448,6 +14529,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3283",
+        "hint": { "en": "The slowest animal you can imagine.", "he": "החיה הכי איטית שאתם יכולים לדמיין (עצלנים)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14573,6 +14655,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3288",
+        "hint": { "en": "A place with massive waterfalls in South America.", "he": "מקום עם מפלים אדירים בדרום אמריקה (מפלי גן עדן)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14598,6 +14681,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3289",
+        "hint": { "en": "A very tall, colorful, and flightless bird.", "he": "ציפור גדולה מאוד, צבעונית ולא עפה." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14623,6 +14707,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3290",
+        "hint": { "en": "He cleans up all the garbage on Earth.", "he": "הוא מנקה את כל האשפה על כדור הארץ (רובוט)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14748,6 +14833,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3295",
+        "hint": { "en": "P. Sherman, 42 Wallaby Way, Sydney.", "he": "פי שרמן, וולאבי 42, סידני." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14798,6 +14884,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3297",
+        "hint": { "en": "His name is Miles.", "he": "קוראים לו מיילס (מיילס מוראלס)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14873,6 +14960,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3300",
+        "hint": { "en": "A giant fish hook.", "he": "קרס דייג ענק." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14898,6 +14986,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3301",
+        "hint": { "en": "A colorful celebration of ancestors.", "he": "חגיגה צבעונית של זיכרון אבות (יום המתים)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14923,6 +15012,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3302",
+        "hint": { "en": "The movie is named after her.", "he": "הסרט קרוי על שמה (קוקו)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -14998,6 +15088,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3305",
+        "hint": { "en": "Her name starts with S (Sarabi).", "he": "השם שלה מתחיל ב-ס' (סאראבי)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -15023,6 +15114,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3306",
+        "hint": { "en": "No worries for the rest of your days.", "he": "אל דאגה לכל יתר הימים." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -15048,6 +15140,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3307",
+        "hint": { "en": "His name is Chip.", "he": "קוראים לו צ'יפ (צ'יפ)." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -15073,6 +15166,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3308",
+        "hint": { "en": "A place that is 'Far Far Away'.", "he": "מקום שהוא 'הרחק הרחק מכאן'." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -15098,6 +15192,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-3309",
+        "hint": { "en": "A very ordinary guy named Emmet.", "he": "בחור רגיל מאוד בשם אמט." },
         "category": "movies",
         "level": 3,
         "text": {

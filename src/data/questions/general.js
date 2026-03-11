@@ -2519,6 +2519,7 @@ export const generalQuestions = [
     },
 {
         "id": "q-general-2272",
+        "hint": { "en": "Think of puddles disappearing on a hot day.", "he": "חשבו על שלוליות שנעלמות ביום חם." },
         "category": "general",
         "level": 3,
         "text": {
@@ -2544,6 +2545,7 @@ export const generalQuestions = [
     },
 {
         "id": "q-general-2273",
+        "hint": { "en": "Two names, starting with A and B.", "he": "שני שמות, מתחילים ב-א' וב-ב' (אלכסנדר בל)." },
         "category": "general",
         "level": 3,
         "text": {
@@ -2569,6 +2571,7 @@ export const generalQuestions = [
     },
 {
         "id": "q-general-2274",
+        "hint": { "en": "The most northern and snowy state.", "he": "המדינה הכי צפונית ומושלגת." },
         "category": "general",
         "level": 3,
         "text": {
@@ -2594,6 +2597,7 @@ export const generalQuestions = [
     },
 {
         "id": "q-general-2275",
+        "hint": { "en": "A majestic eagle with a white head.", "he": "עיט מרשים עם ראש לבן (עיטם לבן-ראש)." },
         "category": "general",
         "level": 3,
         "text": {
@@ -2619,6 +2623,7 @@ export const generalQuestions = [
     },
 {
         "id": "q-general-2276",
+        "hint": { "en": "It shares the country's name prefix (Brasilia).", "he": "השם דומה מאוד לשם המדינה (ברזיליה)." },
         "category": "general",
         "level": 3,
         "text": {
