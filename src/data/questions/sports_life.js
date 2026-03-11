@@ -18762,6 +18762,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1859",
+        "hint": { "en": "Beaten egg whites trap air.", "he": "חלבוני ביצה מוקצפים לוכדים אוויר." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18787,6 +18788,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1860",
+        "hint": { "en": "Capsaicin.", "he": "קפסאיצין (Capsaicin)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18812,6 +18814,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1861",
+        "hint": { "en": "Kibbeh.", "he": "קובה/קיבה (Kibbeh)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18837,6 +18840,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1862",
+        "hint": { "en": "Extra virgin olive oil.", "he": "שמן זית כתית מעולה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18862,6 +18866,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1863",
+        "hint": { "en": "Biscotti.", "he": "ביסקוטי (Biscotti)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18887,6 +18892,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1864",
+        "hint": { "en": "The stalk.", "he": "הגבעול." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18912,6 +18918,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1865",
+        "hint": { "en": "Corn (Tamales, Arepas, etc.).", "he": "תירס (טמאלס, ארפאס וכו')." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18937,6 +18944,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1866",
+        "hint": { "en": "It's named after a British city.", "he": "השם שלו לקוח מעיר בריטית (Reuben Sandwich)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18962,6 +18970,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1867",
+        "hint": { "en": "Penicillium mold.", "he": "עובש פניצילין (Penicillium)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18987,6 +18996,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1868",
+        "hint": { "en": "Cardamom.", "he": "הל (Cardamom)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19012,6 +19022,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1869",
+        "hint": { "en": "Bechamel sauce.", "he": "רוטב בשמל (Bechamel)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19037,6 +19048,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1870",
+        "hint": { "en": "China.", "he": "סין." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19062,6 +19074,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1871",
+        "hint": { "en": "Coq au vin.", "he": "קוק או ון (Coq au Vin)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19087,6 +19100,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1872",
+        "hint": { "en": "Fermentation.", "he": "תסיסה (Fermentation)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19112,6 +19126,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1873",
+        "hint": { "en": "Baba Ghanoush.", "he": "בבא גאנוש." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19137,6 +19152,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1874",
+        "hint": { "en": "Vitamin K.", "he": "ויטמין K." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19162,6 +19178,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1875",
+        "hint": { "en": "Miso soup.", "he": "מרק מיסו." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19187,6 +19204,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1876",
+        "hint": { "en": "Mace.", "he": "מייס (Mace)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19212,6 +19230,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1877",
+        "hint": { "en": "Focaccia.", "he": "פוקאצ'ה (Focaccia)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19237,6 +19256,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2279",
+        "hint": { "en": "Binchotan charcoal.", "he": "פחם בינצ'וטן (Binchotan)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19262,6 +19282,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2280",
+        "hint": { "en": "Spherification.", "he": "ספריפיקציה (Spherification)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19287,6 +19308,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2281",
+        "hint": { "en": "Roquefort.", "he": "רוקפור (Roquefort)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19312,6 +19334,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2282",
+        "hint": { "en": "Truffle.", "he": "כמהין (Truffle)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19337,6 +19360,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2283",
+        "hint": { "en": "Durian (means 'thorn' in Malay).", "he": "דוריאן (פירושו 'קוץ' במלאית)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19362,6 +19386,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2284",
+        "hint": { "en": "A bouquet garni (herbs tied together).", "he": "זר ירוק (Bouquet garni)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19387,6 +19412,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2285",
+        "hint": { "en": "Tamarind or hibiscus.", "he": "תמרינד או כרכדה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19412,6 +19438,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2286",
+        "hint": { "en": "Picung / Kepayang.", "he": "פיקונג/קפאיאנג." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19437,6 +19464,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2287",
+        "hint": { "en": "Ube (purple yam).", "he": "אובה (בטטה סגולה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19462,6 +19490,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2288",
+        "hint": { "en": "Conching.", "he": "קונצ'ינג (Conching)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19487,6 +19516,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2289",
+        "hint": { "en": "Glutamate (umami taste).", "he": "גלוטמט (טעם אומאמי)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19512,6 +19542,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2290",
+        "hint": { "en": "Narezushi.", "he": "נארזושי (Narezushi)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19537,6 +19568,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2291",
+        "hint": { "en": "Bergamot orange.", "he": "ברגמוט (Bergamot)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19562,6 +19594,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2292",
+        "hint": { "en": "Suet.", "he": "בשר חלב (Suet)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19587,6 +19620,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2293",
+        "hint": { "en": "Mise en place (everything in its place).", "he": "מיז אן פלאס (הכל במקומו)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19612,6 +19646,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2294",
+        "hint": { "en": "Asafoetida.", "he": "אסמודאוס / hing (אסאפוטידה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19637,6 +19672,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2295",
+        "hint": { "en": "Khachapuri.", "he": "חצ'פורי (Khachapuri)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19662,6 +19698,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2296",
+        "hint": { "en": "Linalool or geraniol (rose/citrus).", "he": "לינלול או גרניול (ורדים/הדרים)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19687,6 +19724,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2297",
+        "hint": { "en": "Brunoise cut (tiny cubes).", "he": "חיתוך ברונואז (קוביות זעירות)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -19712,6 +19750,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2298",
+        "hint": { "en": "Anchovies (for garum).", "he": "אנשובי (ל-גארום)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20362,6 +20401,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2324",
+        "hint": { "en": "Auguste Escoffier.", "he": "אוגוסט אסקופייה (Escoffier)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20387,6 +20427,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2325",
+        "hint": { "en": "Emilia-Romagna.", "he": "אמיליה-רומניה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20412,6 +20453,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2326",
+        "hint": { "en": "Spherification.", "he": "ספריפיקציה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20437,6 +20479,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2327",
+        "hint": { "en": "Beurre blanc.", "he": "בר בלאן (Beurre blanc)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20462,6 +20505,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2328",
+        "hint": { "en": "The Maillard reaction.", "he": "תגובת מייאר." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20487,6 +20531,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2329",
+        "hint": { "en": "Dashi.", "he": "דאשי (Dashi)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20512,6 +20557,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2330",
+        "hint": { "en": "Aspergillus oryzae (Koji mold).", "he": "פטרייה אספרגילוס אוריזה (קוג'י)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20537,6 +20583,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2331",
+        "hint": { "en": "Amuse-bouche.", "he": "אמוז-בוש (Amuse-bouche)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20562,6 +20609,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2332",
+        "hint": { "en": "Panko breadcrumbs.", "he": "פנקו (Panko)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20587,6 +20635,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2333",
+        "hint": { "en": "A Salamander broiler.", "he": "סלמנדר גריל." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20612,6 +20661,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2334",
+        "hint": { "en": "Clarified butter (Ghee).", "he": "חמאה מזוקקת (גהי)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20637,6 +20687,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2335",
+        "hint": { "en": "Veloute sauce.", "he": "רוטב ולוטה (Veloute)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20662,6 +20713,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2336",
+        "hint": { "en": "Espagnole sauce.", "he": "רוטב אספניול (Espagnole)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20687,6 +20739,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2337",
+        "hint": { "en": "Demi-glace.", "he": "דמי-גלאס (Demi-glace)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20712,6 +20765,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2338",
+        "hint": { "en": "Chiffonade cut.", "he": "חיתוך שיפונד (Chiffonade)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20737,6 +20791,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2339",
+        "hint": { "en": "Tempering chocolate.", "he": "טמפרור שוקולד (Tempering)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20762,6 +20817,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2340",
+        "hint": { "en": "Bone marrow.", "he": "מוח עצם." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20787,6 +20843,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2341",
+        "hint": { "en": "Umami.", "he": "אומאמי (Umami)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20812,6 +20869,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2342",
+        "hint": { "en": "Kobe beef.", "he": "בקר קובה (Kobe beef)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20837,6 +20895,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2343",
+        "hint": { "en": "Souffle.", "he": "סופלה (Souffle)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20862,6 +20921,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2344",
+        "hint": { "en": "A Terrine.", "he": "טרין (Terrine)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20887,6 +20947,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2345",
+        "hint": { "en": "Zesting.", "he": "גרידה (Zesting)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20912,6 +20973,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2346",
+        "hint": { "en": "Macerating.", "he": "מסרציה (Macerating)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20937,6 +20999,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2347",
+        "hint": { "en": "Poaching.", "he": "בישול בנוזל (Poaching)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -20962,6 +21025,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2348",
+        "hint": { "en": "Panna cotta.", "he": "פאנה קוטה (Panna cotta)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21612,6 +21676,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2374",
+        "hint": { "en": "A culinary preparation or cooking technique.", "he": "הכנה קולינרית או טכניקת בישול." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21637,6 +21702,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2375",
+        "hint": { "en": "A precise knife skill or cutting method.", "he": "מיומנות סכין מדויקת או שיטת חיתוך." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21662,6 +21728,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2376",
+        "hint": { "en": "A classical French sauce or preparation.", "he": "רוטב או הכנה צרפתית קלאסית." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21687,6 +21754,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2377",
+        "hint": { "en": "A molecular gastronomy process.", "he": "תהליך של גסטרונומיה מולקולרית." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21712,6 +21780,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2378",
+        "hint": { "en": "A French culinary term.", "he": "מונח קולינרי צרפתי." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21737,6 +21806,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2379",
+        "hint": { "en": "A specific ingredient used in cooking.", "he": "מרכיב ספציפי המשמש בבישול." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21762,6 +21832,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2380",
+        "hint": { "en": "Milk and roux (butter and flour).", "he": "חלב ורו (חמאה וקמח)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21787,6 +21858,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2381",
+        "hint": { "en": "A French mother sauce.", "he": "רוטב אם צרפתי." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21812,6 +21884,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2382",
+        "hint": { "en": "To purify or clarify a stock.", "he": "לטהר או להבהיר ציר." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21837,6 +21910,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2383",
+        "hint": { "en": "A fine mesh strainer (Tamis or Chinois).", "he": "מסננת רשת דקה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21862,6 +21936,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2384",
+        "hint": { "en": "A Japanese knife technique.", "he": "טכניקת סכין יפנית." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21887,6 +21962,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2385",
+        "hint": { "en": "A type of emulsion sauce.", "he": "סוג של רוטב אמולסיה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21912,6 +21988,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2386",
+        "hint": { "en": "A culinary term for a dish preparation.", "he": "מונח קולינרי להכנת מנה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21937,6 +22014,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2387",
+        "hint": { "en": "A preservation or fermentation process.", "he": "תהליך שימור או תסיסה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21962,6 +22040,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2388",
+        "hint": { "en": "A professional kitchen tool or piece of equipment.", "he": "כלי מטבח מקצועי." },
         "category": "food",
         "level": 3,
         "text": {
@@ -21987,6 +22066,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2389",
+        "hint": { "en": "Kombu seaweed and katsuobushi.", "he": "אצות קומבו ודג בוניטו מיובש." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22012,6 +22092,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2390",
+        "hint": { "en": "A specific cooking method.", "he": "שיטת בישול מסוימת." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22037,6 +22118,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2391",
+        "hint": { "en": "Gluten formation in dough.", "he": "יצירת גלוטן בבצק." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22062,6 +22144,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2392",
+        "hint": { "en": "A specific pasta shape or sauce.", "he": "צורת פסטה ספציפית או רוטב." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22087,6 +22170,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2393",
+        "hint": { "en": "En papillote (cooked in parchment).", "he": "בנייר (En papillote)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22112,6 +22196,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2394",
+        "hint": { "en": "A deglaze liquid.", "he": "נוזל להמסת שאריות צלייה (deglaze)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22137,6 +22222,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2395",
+        "hint": { "en": "A classic French knife cut.", "he": "חיתוך סכין צרפתי קלאסי." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22162,6 +22248,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2396",
+        "hint": { "en": "A cooking oil with a high smoke point.", "he": "שמן בישול בעל נקודת עשן גבוהה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22187,6 +22274,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2397",
+        "hint": { "en": "The Sous Chef.", "he": "הסו-שף." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22212,6 +22300,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2398",
+        "hint": { "en": "A tubular pasta shape.", "he": "צורת פסטה צינורית." },
         "category": "food",
         "level": 3,
         "text": {
@@ -22237,6 +22326,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-2399",
+        "hint": { "en": "A ribbon-shaped pasta.", "he": "פסטה בצורת סרטים." },
         "category": "food",
         "level": 3,
         "text": {

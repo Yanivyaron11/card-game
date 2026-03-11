@@ -9403,6 +9403,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3185",
+        "hint": { "en": "Think of the Grand Canyon or Statue of Liberty.", "he": "חשבו על הגרנד קניון או פסל החירות." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9428,6 +9429,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3186",
+        "hint": { "en": "Think of Mount Rushmore or Niagara Falls.", "he": "חשבו על הר ראשמור או מפלי ניאגרה." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9453,6 +9455,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3187",
+        "hint": { "en": "Think of the Golden Gate Bridge or Yellowstone.", "he": "חשבו על גשר השער הזהב או ילוסטון." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9478,6 +9481,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3188",
+        "hint": { "en": "Think of the White House or the Lincoln Memorial.", "he": "חשבו על הבית הלבן או אנדרטת לינקולן." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9503,6 +9507,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3189",
+        "hint": { "en": "Think of the Las Vegas Strip or the Brooklyn Bridge.", "he": "חשבו על לאס וגאס או גשר ברוקלין." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9528,6 +9533,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3190",
+        "hint": { "en": "Think of Yosemite or the Mississippi River.", "he": "חשבו על יוסמיטי או נהר המיסיסיפי." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10428,6 +10434,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3226",
+        "hint": { "en": "Think of Big Ben or Buckingham Palace.", "he": "חשבו על ביג בן או ארמון בקינגהם." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10453,6 +10460,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3227",
+        "hint": { "en": "Think of Stonehenge or the Tower of London.", "he": "חשבו על סטונהנג' או מגדל לונדון." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10478,6 +10486,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3228",
+        "hint": { "en": "Think of the Palace of Westminster or the British Museum.", "he": "חשבו על ארמון וסטמינסטר או המוזיאון הבריטי." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10503,6 +10512,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3229",
+        "hint": { "en": "Think of the White Cliffs of Dover or Hadrian's Wall.", "he": "חשבו על צוקי דובר הלבנים או חומת הדרייאנוס." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10528,6 +10538,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3230",
+        "hint": { "en": "Think of Edinburgh Castle or Loch Ness.", "he": "חשבו על טירת אדינבורו או לוך נס." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10553,6 +10564,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3231",
+        "hint": { "en": "Think of Windsor Castle or the Tate Modern.", "he": "חשבו על טירת וינדזור או מוזיאון טייט מודרן." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10578,6 +10590,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3232",
+        "hint": { "en": "Think of the Shard or the National Gallery.", "he": "חשבו על שארד או הגלריה הלאומית." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10603,6 +10616,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3233",
+        "hint": { "en": "Think of the Lake District or Sherwood Forest.", "he": "חשבו על מחוז האגמים או יער שרווד." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10628,6 +10642,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3234",
+        "hint": { "en": "Think of Oxford or Cambridge University.", "he": "חשבו על אוניברסיטת אוקספורד או קיימברידג'." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10653,6 +10668,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3235",
+        "hint": { "en": "Think of the SS Great Britain or Coventry Cathedral.", "he": "חשבו על הספינה SS Great Britain." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10678,6 +10694,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3236",
+        "hint": { "en": "Think of Kew Gardens or Hampton Court Palace.", "he": "חשבו על גני קיו או ארמון המפטון קורט." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10703,6 +10720,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3237",
+        "hint": { "en": "Think of the Roman Baths in Bath.", "he": "חשבו על המרחצאות הרומיים בבאת'." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10728,6 +10746,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3238",
+        "hint": { "en": "Think of the Globe Theatre or St. Paul's Cathedral.", "he": "חשבו על תיאטרון הגלוב או קתדרלת סנט פול." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10753,6 +10772,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3239",
+        "hint": { "en": "Think of Blenheim Palace or Chatsworth House.", "he": "חשבו על ארמון בלנהיים." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -10778,6 +10798,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3240",
+        "hint": { "en": "Think of the Angel of the North or the Falkirk Wheel.", "he": "חשבו על מלאך הצפון (Angel of the North)." },
         "category": "countries",
         "level": 3,
         "text": {
