@@ -73,8 +73,8 @@ export const translations = {
             "UNBELIEVABLE! {n} straight! {name} is unstoppable! 🚀",
             "AWESOME! {n} correct! You're a pro, {name}! ⭐"
         ],
-        super_answer: "Super Answer! 2 Points!",
-        super_answer_feedback: "SUPER ANSWER, {name}! 🎯 You earned 2 points!"
+        rebound: "Rebound! 2 Points!",
+        rebound_feedback: "REBOUND, {name}! 🎯 You earned 2 points!"
     },
 
 
@@ -152,7 +152,7 @@ export const translations = {
             "לא יאומן! {n} רצוף! {name} בלתי עצר/ה! 🚀",
             "מדהים! {n} נכונות! {name}, את/ה מקצוען/ית! ⭐"
         ],
-        super_answer: "סופר תשובה! 2 נקודות!",
-        super_answer_feedback: "סופר תשובה, {name}! 🎯 קיבלת 2 נקודות!"
+        rebound: "ריבאונד! 2 נקודות!",
+        rebound_feedback: "ריבאונד, {name}! 🎯 קיבלת 2 נקודות!"
     }
 };

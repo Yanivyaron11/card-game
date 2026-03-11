@@ -245,7 +245,9 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
             id: `card-${index}-${Math.random().toString(36).substr(2, 9)}`,
             isFlipped: false,
             isSolved: false,
-            failedAttempts: 0
+            failedAttempts: 0,
+            isTainted: false,
+            lastFailedPlayer: null
         };
     });
 };

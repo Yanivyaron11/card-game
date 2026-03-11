@@ -13,6 +13,12 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
 
     const handleCardClick = (card) => {
         if (card.isSolved || card.isFailed) return;
+
+        // Block original player from re-attempting in 1v1
+        if (config.gameMode === '1v1' && card.failedAttempts === 1 && card.lastFailedPlayer === currentPlayer) {
+            return;
+        }
+
         playSound('pop');
 
         // Mark question as seen only when explicitly clicked
@@ -149,6 +155,8 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                         card={card}
                         language={language}
                         onClick={() => handleCardClick(card)}
+                        currentPlayer={currentPlayer}
+                        gameMode={config.gameMode}
                     />
                 ))}
             </div>

@@ -93,8 +93,8 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             const currentStreak = streak + 1;
             let randomMsg = "";
 
-            if (gameMode === '1v1' && card.failedAttempts >= 1) {
-                randomMsg = t.super_answer_feedback;
+            if (gameMode === '1v1' && card.failedAttempts >= 1 && !card.isTainted && card.options.length > 2) {
+                randomMsg = t.rebound_feedback;
             } else {
                 const feedbackPool = currentStreak >= 3 ? t.streak_feedbacks : t.correct_feedbacks;
                 randomMsg = feedbackPool[Math.floor(Math.random() * feedbackPool.length)];
@@ -119,6 +119,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         }
         playSound('buy');
         onCoinsChange(coins - 2);
+        if (onPowerUpUsed) onPowerUpUsed(card.id);
 
         // Find all incorrect indices
         const wrongIndices = card.options.en
@@ -138,6 +139,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         }
         playSound('buy');
         onCoinsChange(coins - 5);
+        if (onPowerUpUsed) onPowerUpUsed(card.id);
         if (timerRef.current) clearInterval(timerRef.current);
 
         setIsAnswering(true);
@@ -156,6 +158,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         }
         playSound('buy');
         onCoinsChange(coins - 3);
+        if (onPowerUpUsed) onPowerUpUsed(card.id);
         setIsHintVisible(true);
     };
 
@@ -257,9 +260,9 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </div>
                     )}
 
-                    {gameMode === '1v1' && card.failedAttempts >= 1 && (
+                    {gameMode === '1v1' && card.failedAttempts >= 1 && !card.isTainted && card.options.length > 2 && (
                         <div className="super-answer-indicator">
-                            🚀 {t.super_answer}
+                            🚀 {t.rebound}
                         </div>
                     )}
 

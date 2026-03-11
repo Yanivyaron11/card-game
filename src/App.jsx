@@ -90,7 +90,11 @@ function App() {
     // Early termination for 1v1
     if (gameConfig?.gameMode === '1v1') {
       const maxPossiblePoints = currentDeck.filter(c => !c.isSolved && !c.isFailed).reduce((acc, card) => {
-        return acc + (card.failedAttempts >= 1 ? 1 : 2);
+        const canEverBeRebound = !card.isTainted && card.options.length > 2 && card.failedAttempts === 0;
+        // If it was already failed once and is eligible, it's worth 2 points NOW.
+        // If it's a fresh card, it can be 1 pt now or 2 pt later (rebound). 
+        // To be safe for "unreachable" logic, we assume max 2 points per remaining card.
+        return acc + (canEverBeRebound || card.failedAttempts === 1 ? 2 : 1);
       }, 0);
       const scoreDiff = Math.abs(currentScores[1] - currentScores[2]);
 
@@ -136,7 +140,13 @@ function App() {
 
         if (gameConfig.gameMode === '1v1') {
           const card = prev.find(c => c.id === cardId);
-          const points = (card && card.failedAttempts >= 1) ? 2 : 1;
+          // Rebound only if: failed once before (by opponent), NOT tainted, and > 2 options
+          const isEligibleForRebound = card &&
+            card.failedAttempts === 1 &&
+            !card.isTainted &&
+            card.options.length > 2;
+
+          const points = isEligibleForRebound ? 2 : 1;
           const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + points };
           setScores(newScores);
           setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
@@ -173,10 +183,14 @@ function App() {
           const newDeck = prev.map(card => {
             if (card.id === cardId) {
               const newFailedCount = (card.failedAttempts || 0) + 1;
+              const isBinary = card.options.length <= 2;
+              const shouldLockImmediately = isBinary || card.isTainted;
+
               return {
                 ...card,
                 failedAttempts: newFailedCount,
-                isFailed: newFailedCount >= 2 // Lock after 2 failures
+                lastFailedPlayer: currentPlayer,
+                isFailed: shouldLockImmediately || newFailedCount >= 2
               };
             }
             return card;
@@ -195,6 +209,12 @@ function App() {
     if (location.pathname.startsWith('/quiz')) {
       navigate('/play');
     }
+  };
+
+  const handlePowerUpUsed = (cardId) => {
+    setDeck(prev => prev.map(card =>
+      card.id === cardId ? { ...card, isTainted: true } : card
+    ));
   };
 
   const handleReturnToStart = () => {
@@ -256,6 +276,7 @@ function App() {
               onCoinsChange={(newAmount) => setCoins(prev => ({ ...prev, [currentPlayer]: newAmount }))}
               onAnswer={handleAnswer}
               onTimeout={(cardId) => handleAnswer(cardId, false)}
+              onPowerUpUsed={handlePowerUpUsed}
             />
           )
         } />

@@ -1,19 +1,27 @@
 import './Card.css';
 
-function Card({ card, onClick }) {
+function Card({ card, onClick, currentPlayer, gameMode }) {
     // Simple card that only displays topic and solved status
+    const isBlocked = gameMode === '1v1' &&
+        card.failedAttempts === 1 &&
+        card.lastFailedPlayer === currentPlayer;
+
+    const isEligibleForRebound = !card.isTainted &&
+        card.options.length > 2 &&
+        card.failedAttempts === 1;
+
     const ownerClass = card.owner ? `player-${card.owner}` : '';
 
     return (
         <div
-            className={`card ${card.isSolved ? 'solved' : ''} ${card.isFailed ? 'failed' : ''} ${ownerClass}`}
-            onPointerDown={onClick}
+            className={`card ${card.isSolved ? 'solved' : ''} ${card.isFailed ? 'failed' : ''} ${isBlocked ? 'blocked' : ''} ${ownerClass}`}
+            onPointerDown={isBlocked ? null : onClick}
             onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
         >
             <div className="card-inner">
                 {/* Card Back (Default state) */}
                 <div className="card-back glass-panel">
-                    {card.failedAttempts >= 1 && !card.isSolved && !card.isFailed && (
+                    {isEligibleForRebound && !card.isSolved && !card.isFailed && !isBlocked && (
                         <div className="super-answer-badge">x2</div>
                     )}
                     <div
