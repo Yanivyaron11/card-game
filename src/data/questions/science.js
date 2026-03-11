@@ -9926,6 +9926,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-827",
+        "hint": { "en": "80+30 is 110, now add the units.", "he": "80+30 זה 110, עכשיו הוסיפו את היחידות." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-2",
@@ -10007,6 +10008,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-830",
+        "hint": { "en": "30+20 is 50, then add 3+8.", "he": "30+20 זה 50, ואז הוסיפו 3+8." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-5",
@@ -10088,6 +10090,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-833",
+        "hint": { "en": "Simply add 10 to 80 and then 2.", "he": "כל שצריך זה להוסיף 10 ל-80 ואז עוד 2." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-8",
@@ -10169,6 +10172,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-836",
+        "hint": { "en": "80+30 is 110, then add 8+5.", "he": "80+30 זה 110, ואז הוסיפו 8+5." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-1",
@@ -10250,6 +10254,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-839",
+        "hint": { "en": "30+40 and 7+2.", "he": "30+40 ועוד 7+2." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-4",
@@ -10331,6 +10336,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-842",
+        "hint": { "en": "80+20 is 100, now add 2+3.", "he": "80+20 זה 100, עכשיו הוסיפו 2+3." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-7",
@@ -10412,6 +10418,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-845",
+        "hint": { "en": "Very close to 100 + 14.", "he": "קרוב מאוד ל-100 ועוד 14." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-0",
@@ -10493,6 +10500,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-848",
+        "hint": { "en": "60+10 and 9+2.", "he": "60+10 ועוד 9+2." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-3",
@@ -10574,6 +10582,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-851",
+        "hint": { "en": "80+20 and 7+7.", "he": "80+20 ועוד 7+7." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-6",
@@ -10655,6 +10664,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-854",
+        "hint": { "en": "40+10 and 3+1.", "he": "40+10 ועוד 3+1." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-9",
@@ -10736,6 +10746,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-857",
+        "hint": { "en": "20+30 and 1.", "he": "20+30 ועוד 1." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-2",
@@ -10817,6 +10828,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-860",
+        "hint": { "en": "Add the tens: 6+2.", "he": "חברו את העשרות: 6+2." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-5",
@@ -10898,6 +10910,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-863",
+        "hint": { "en": "70+10 and 6+3.", "he": "70+10 ועוד 6+3." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-8",
@@ -11006,6 +11019,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-867",
+        "hint": { "en": "90+10 and 3.", "he": "90+10 ועוד 3." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-2",
@@ -11087,6 +11101,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-870",
+        "hint": { "en": "20+20 and 3.", "he": "20+20 ועוד 3." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-5",
@@ -11168,6 +11183,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-873",
+        "hint": { "en": "Almost 100 + 35.", "he": "כמעט 100 ועוד 35." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-8",
@@ -11249,6 +11265,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-876",
+        "hint": { "en": "20+10 and 5+2.", "he": "20+10 ועוד 5+2." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-1",
@@ -11330,6 +11347,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-879",
+        "hint": { "en": "60+30 and 2+7.", "he": "60+30 ועוד 2+7." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-4",
@@ -11411,6 +11429,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-882",
+        "hint": { "en": "30+20 and 9+2.", "he": "30+20 ועוד 9+2." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-7",
@@ -11492,6 +11511,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-885",
+        "hint": { "en": "20+30 and 8+9.", "he": "20+30 ועוד 8+9." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-0",
@@ -11573,6 +11593,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-888",
+        "hint": { "en": "40+10 and 1+9.", "he": "40+10 ועוד 1+9." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-3",
@@ -11654,6 +11675,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-891",
+        "hint": { "en": "Almost 50 + 50 - 3.", "he": "כמעט 50 + 50 פחות 3." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-6",
@@ -11735,6 +11757,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-894",
+        "hint": { "en": "30+20 and 3+1.", "he": "30+20 ועוד 3+1." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-9",
@@ -11816,6 +11839,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-897",
+        "hint": { "en": "20+40 and 7+1.", "he": "20+40 ועוד 7+1." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-2",
@@ -11897,6 +11921,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-900",
+        "hint": { "en": "20+40 and 2+5.", "he": "20+40 ועוד 2+5." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-5",
@@ -11978,6 +12003,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-903",
+        "hint": { "en": "70+30 is 100, then 4+4.", "he": "70+30 זה 100, ואז 4+4." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-8",
@@ -12059,6 +12085,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-906",
+        "hint": { "en": "60+20 is 80, then 5+8.", "he": "60+20 זה 80, ואז 5+8." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-1",
@@ -12140,6 +12167,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-909",
+        "hint": { "en": "70+30 and 8+4.", "he": "70+30 ועוד 8+4." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-4",
@@ -12221,6 +12249,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-912",
+        "hint": { "en": "50+20 and 5+9.", "he": "50+20 ועוד 5+9." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-7",
@@ -12302,6 +12331,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-915",
+        "hint": { "en": "30+40 and 6+1.", "he": "30+40 ועוד 6+1." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-0",
@@ -12383,6 +12413,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-918",
+        "hint": { "en": "30+20 and 8+8.", "he": "30+20 ועוד 8+8." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-3",
@@ -12464,6 +12495,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-921",
+        "hint": { "en": "50+10 and 1.", "he": "50+10 ועוד 1." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-6",
@@ -12545,6 +12577,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-924",
+        "hint": { "en": "10+10 and 7+1.", "he": "10+10 ועוד 7+1." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-9",
@@ -12626,6 +12659,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-927",
+        "hint": { "en": "90+20 and 8+8.", "he": "90+20 ועוד 8+8." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-2",
@@ -12707,6 +12741,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-930",
+        "hint": { "en": "90+10 and 4+5.", "he": "90+10 ועוד 4+5." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-5",
@@ -12788,6 +12823,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-933",
+        "hint": { "en": "30+10 and 8.", "he": "30+10 ועוד 8." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-8",
@@ -12869,6 +12905,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-936",
+        "hint": { "en": "10+20 and 1+1.", "he": "10+20 ועוד 1+1." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-1",
@@ -12950,6 +12987,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-939",
+        "hint": { "en": "30+20 and 8.", "he": "30+20 ועוד 8." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-4",
@@ -13031,6 +13069,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-942",
+        "hint": { "en": "80+30 and 4+9.", "he": "80+30 ועוד 4+9." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-7",
@@ -13112,6 +13151,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-945",
+        "hint": { "en": "30+10 and 3.", "he": "30+10 ועוד 3." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-0",
@@ -13193,6 +13233,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-948",
+        "hint": { "en": "40+40 and 5+2.", "he": "40+40 ועוד 5+2." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-3",
@@ -13274,6 +13315,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-951",
+        "hint": { "en": "60+10 and 7+3.", "he": "60+10 ועוד 7+3." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-6",
@@ -13355,6 +13397,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-954",
+        "hint": { "en": "90+30 and 2+8.", "he": "90+30 ועוד 2+8." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-9",
@@ -13436,6 +13479,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-957",
+        "hint": { "en": "30+10 and 1+8.", "he": "30+10 ועוד 1+8." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-2",
@@ -13517,6 +13561,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-960",
+        "hint": { "en": "10+40 and 7+4.", "he": "10+40 ועוד 7+4." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-5",
@@ -13598,6 +13643,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-963",
+        "hint": { "en": "20+10 and 4+6.", "he": "20+10 ועוד 4+6." },
         "category": "math",
         "subCategory": "geometry",
         "templateId": "geometry-8",
@@ -14156,6 +14202,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2721",
+        "hint": { "en": "It involved a mock prison setting.", "he": "זה כלל סביבה של כלא דמוי (אסירים וסוהרים)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14181,6 +14228,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2722",
+        "hint": { "en": "Starts with 'A'.", "he": "מתחיל ב-א' (אמנזיה)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14206,6 +14254,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2723",
+        "hint": { "en": "Known for his stages of cognitive development.", "he": "מוכר בזכות שלבי ההתפתחות הקוגניטיבית שלו (פיאז'ה)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14231,6 +14280,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2724",
+        "hint": { "en": "The ability to understand and manage emotions.", "he": "היכולת להבין ולנהל רגשות (אינטליגנציה רגשית)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14256,6 +14306,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2725",
+        "hint": { "en": "Abraham Maslow's famous pyramid.", "he": "הפירמידה המפורסמת של אברהם מאסלו (היררכיית הצרכים)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14281,6 +14332,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2726",
+        "hint": { "en": "Interpretation of symmetrical inkblots.", "he": "פירוש של כתמי דיו סימטריים." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14306,6 +14358,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2727",
+        "hint": { "en": "It's a widespread myth, but false.", "he": "זהו מיתוס נפוץ, אך הוא שקרי." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14327,6 +14380,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2728",
+        "hint": { "en": "The almond-shaped part of the limbic system.", "he": "החלק בצורת שקד במערכת הלימבית (אמיגדלה)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14352,6 +14406,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2729",
+        "hint": { "en": "Humanistic psychology.", "he": "פסיכולוגיה הומניסטית." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14377,6 +14432,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2730",
+        "hint": { "en": "Heuristic.", "he": "היוריסטיקה." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14902,6 +14958,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2751",
+        "hint": { "en": "A field of study related to behavior and mind.", "he": "תחום לימודי הקשור להתנהגות ולנפש (פסיכולוגיה)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14927,6 +14984,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2752",
+        "hint": { "en": "Classical conditioning example.", "he": "דוגמה להתניה קלאסית." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14952,6 +15010,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2753",
+        "hint": { "en": "Sigmund Freud's method.", "he": "השיטה של זיגמונד פרויד (פסיכואנליזה)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -14977,6 +15036,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2754",
+        "hint": { "en": "Ivan Pavlov used these animals.", "he": "איוואן פבלוב השתמש בחיות אלו (כלבים)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -15002,6 +15062,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2755",
+        "hint": { "en": "Reinforcement and punishment.", "he": "חיזוקים וענישה." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -15027,6 +15088,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2756",
+        "hint": { "en": "The study of how people think.", "he": "חקר האופן שבו אנשים חושבים (פסיכולוגיה קוגניטיבית)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -15052,6 +15114,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2757",
+        "hint": { "en": "Social influence on a single individual.", "he": "השפעה חברתית על פרט בודד (קונפורמיות)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -15077,6 +15140,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2758",
+        "hint": { "en": "Obedience to authority experiment.", "he": "ניסוי של ציות לסמכות (מילגרם)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -15102,6 +15166,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2759",
+        "hint": { "en": "A fake treatment with no active ingredients.", "he": "טיפול דמה ללא מרכיבים פעילים (פלצבו)." },
         "category": "psychology",
         "level": 3,
         "text": {
@@ -15127,6 +15192,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-psychology-2760",
+        "hint": { "en": "Longitudinal study.", "he": "מחקר אורך (לונגיטודינלי)." },
         "category": "psychology",
         "level": 3,
         "text": {

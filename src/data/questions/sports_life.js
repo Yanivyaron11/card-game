@@ -17878,6 +17878,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1825",
+        "hint": { "en": "It's a very elegant European country.", "he": "זו מדינה אירופאית אלגנטית מאוד (צרפת או אוסטריה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17903,6 +17904,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1826",
+        "hint": { "en": "Think of garlic or basil.", "he": "חשבו על שום או בזיליקום." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17928,6 +17930,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1827",
+        "hint": { "en": "Cacao beans.", "he": "פולי קקאו (Cacao)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17953,6 +17956,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1828",
+        "hint": { "en": "A clear soup from French cuisine.", "he": "מרק צלול מהמטבח הצרפתי (קונסומה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -17978,6 +17982,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1829",
+        "hint": { "en": "Saturated fats like butter or coconut oil.", "he": "שומנים רוויים כמו חמאה או שמן קוקוס." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18003,6 +18008,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1830",
+        "hint": { "en": "Angel Food Cake.", "he": "עוגת 'מזון מלאכים' (Angel Food Cake)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18028,6 +18034,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1831",
+        "hint": { "en": "Citric acid.", "he": "חומצת לימון (חומצה ציטרית)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18053,6 +18060,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1832",
+        "hint": { "en": "Ajo Blanco.", "he": "אחו בלאנקו (Ajo Blanco)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18078,6 +18086,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1833",
+        "hint": { "en": "Iran.", "he": "איראן." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18103,6 +18112,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1834",
+        "hint": { "en": "Maillard reaction.", "he": "תגובת מייאר (Maillard)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18128,6 +18138,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1835",
+        "hint": { "en": "Anchovies.", "he": "אנשובי." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18153,6 +18164,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1836",
+        "hint": { "en": "Chickpeas (for Hummus) or Semolina (for Couscous).", "he": "גרגירי חומוס (לחומוס) או סולת (לקוסקוס)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18178,6 +18190,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1837",
+        "hint": { "en": "Ethylene gas.", "he": "גז אתילן." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18203,6 +18216,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1838",
+        "hint": { "en": "Mascarpone.", "he": "מסקרפונה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18228,6 +18242,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1839",
+        "hint": { "en": "Cloves.", "he": "ציפורן (Clove)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18253,6 +18268,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1840",
+        "hint": { "en": "Vanillin.", "he": "וונילין (Vanillin)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18278,6 +18294,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1841",
+        "hint": { "en": "Italy or Japan.", "he": "איטליה או יפן." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18303,6 +18320,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1842",
+        "hint": { "en": "Julienne.", "he": "ז'וליין (Julienne)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18328,6 +18346,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1843",
+        "hint": { "en": "Lactose.", "he": "לקטוז." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18353,6 +18372,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1844",
+        "hint": { "en": "Molecular Gastronomy.", "he": "גסטרונומיה מולקולרית." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18378,6 +18398,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1845",
+        "hint": { "en": "Green curry or similar.", "he": "קארי ירוק או דומה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18403,6 +18424,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1846",
+        "hint": { "en": "Almonds (for Orgeat).", "he": "שקדים (עבור סירופ רוזטה/אורז'ה)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18428,6 +18450,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1847",
+        "hint": { "en": "Semolina or flour.", "he": "סולת או קמח." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18453,6 +18476,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1848",
+        "hint": { "en": "Madagascar.", "he": "מדגסקר." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18478,6 +18502,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1849",
+        "hint": { "en": "Injera.", "he": "אינג'ירה." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18503,6 +18528,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1850",
+        "hint": { "en": "Cinnamon.", "he": "קינמון." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18528,6 +18554,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1851",
+        "hint": { "en": "Couscous.", "he": "קוסקוס." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18553,6 +18580,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1852",
+        "hint": { "en": "Walnut or Cashew.", "he": "אגוז מלך או קשיו." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18578,6 +18606,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1853",
+        "hint": { "en": "Wasabi.", "he": "וואסאבי." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18603,6 +18632,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1854",
+        "hint": { "en": "Acetic acid.", "he": "חומצה אצטית (חומץ)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18628,6 +18658,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1855",
+        "hint": { "en": "The stigma (the tiny red threads).", "he": "הצלקות (החוטים האדומים הקטנים)." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18653,6 +18684,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1856",
+        "hint": { "en": "Gelato.", "he": "ג'לאטו." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18678,6 +18710,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1857",
+        "hint": { "en": "Lingonberry or Bilberry.", "he": "אוכמניות או דומדמניות." },
         "category": "food",
         "level": 3,
         "text": {
@@ -18703,6 +18736,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-food-1858",
+        "hint": { "en": "Papadum.", "he": "פאפאדם (Papadum)." },
         "category": "food",
         "level": 3,
         "text": {
