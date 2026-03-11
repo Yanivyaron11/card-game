@@ -319,7 +319,7 @@ export const questionCounts = {
     "sopranos": 100,
     "human_body": 100,
     "psychology": 60,
-    "riddles": 150,
+    "riddles": 250,
     "physics": 150
 };
 
