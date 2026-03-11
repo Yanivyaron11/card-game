@@ -14,11 +14,15 @@ export function injectHints(filePath, hintsMap) {
             const snapshot = content.slice(idIndex, idIndex + 500);
             if (snapshot.includes('"hint":')) continue;
 
-            // Determine the indentation of the ID line
+            // Determine the indentation of the ID line (only whitespace)
             const lineStart = content.lastIndexOf('\n', idIndex) + 1;
-            const indentation = content.slice(lineStart, idIndex);
+            const fullIndentation = content.slice(lineStart, idIndex);
+            const indentationMatch = fullIndentation.match(/^\s*/);
+            const indentation = indentationMatch ? indentationMatch[0] : '';
 
-            const hintStr = `\n${indentation}"hint": { "en": "${hintObj.en}", "he": "${hintObj.he}" },`;
+            const escapedEn = hintObj.en.replace(/"/g, '\\"');
+            const escapedHe = hintObj.he.replace(/"/g, '\\"');
+            const hintStr = `\n${indentation}"hint": { "en": "${escapedEn}", "he": "${escapedHe}" },`;
 
             // Find the END of the ID field (the comma or just the end of the line)
             const endOfIdField = content.indexOf(',', idIndex);
