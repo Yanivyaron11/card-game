@@ -160,3 +160,18 @@
         box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
     }
 }
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .super-answer-badge {
+        font-size: 0.5rem;
+        padding: 0px 4px;
+        top: 1px;
+        right: 1px;
+        gap: 1.5px;
+    }
+
+    .rebound-emoji {
+        font-size: 0.8rem;
+    }
+}
