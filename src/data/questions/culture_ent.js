@@ -833,6 +833,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1397",
+        "hint": { "en": "A pioneer of Hebrew song and founder of the Israel Conservatory of Music.", "he": "חלוץ הזמר העברי ומייסד הקונסרבטוריון הישראלי למוזיקה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -3573,6 +3574,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1611",
+        "hint": { "en": "A movie featuring a young hero named Taran and a magic cauldron.", "he": "סרט הכולל גיבור צעיר בשם טרן וקדרה קסומה." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3598,6 +3600,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1612",
+        "hint": { "en": "Her name starts with M and she has curly red hair.", "he": "שמה מתחיל ב-מ' ויש לה שיער אדום מתולתל." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3623,6 +3626,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1613",
+        "hint": { "en": "P. Sherman, 42 Wallaby Way, Sydney.", "he": "פ. שרמן, דרך וולבי 42, סידני." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3648,6 +3652,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1614",
+        "hint": { "en": "His name rhymes with 'gusto'.", "he": "שמו מתחרז עם 'גוסטו'." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3673,6 +3678,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1615",
+        "hint": { "en": "He just wants to stop being the bad guy.", "he": "הוא רק רוצה להפסיק להיות האיש הרע." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3698,6 +3704,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1616",
+        "hint": { "en": "A famous actor whose first name is Tom.", "he": "שחקן מפורסם ששמו הפרטי הוא טום." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3723,6 +3730,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1617",
+        "hint": { "en": "A clumsy chicken who joins the voyage.", "he": "תרנגול מגושם שמצטרף למסע." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3748,6 +3756,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1618",
+        "hint": { "en": "Think of a very common English last name, often associated with a trade.", "he": "חשבו על שם משפחה אנגלי נפוץ מאוד." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -5448,6 +5457,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2045",
+        "hint": { "en": "A movement that challenged the definition of art itself.", "he": "תנועה שקראה תיגר על הגדרת האמנות עצמה." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5473,6 +5483,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2046",
+        "hint": { "en": "A way of creating depth on a flat surface.", "he": "דרך ליצירת עומק על משטח שטוח." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5498,6 +5509,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2047",
+        "hint": { "en": "A Dutch master known for his handle of light and shadow.", "he": "אמן הולנדי הידוע בטיפולו באור וצל." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5523,6 +5535,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2048",
+        "hint": { "en": "A technique using tiny dots of color.", "he": "טכניקה המשתמשת בנקודות קטנות של צבע." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5548,6 +5561,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2049",
+        "hint": { "en": "A rare purple dye.", "he": "צבע סגול נדיר." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5573,6 +5587,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2050",
+        "hint": { "en": "He made sculptures that move with the wind.", "he": "הוא יצר פסלים שזזים עם הרוח." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5598,6 +5613,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2051",
+        "hint": { "en": "Think of the word prefix 'litho' meaning stone.", "he": "חשבו על המילה 'ליתו' שמשמעותה אבן." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5623,6 +5639,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2052",
+        "hint": { "en": "A Dutch artist who painted many portraits and group scenes.", "he": "אמן הולנדי שצייר פורטרטים רבים וסצנות קבוצתיות." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5648,6 +5665,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2053",
+        "hint": { "en": "A famous museum in Florence, Italy.", "he": "מוזיאון מפורסם בפירנצה, איטליה." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5673,6 +5691,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2054",
+        "hint": { "en": "Painting scenes of everyday life.", "he": "ציור סצנות מחיי היומיום." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5698,6 +5717,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2055",
+        "hint": { "en": "The mastermind behind the dome of the Florence Cathedral.", "he": "המוח מאחורי כיפת הקתדרלה של פירנצה." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5723,6 +5743,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2056",
+        "hint": { "en": "A movement that looked towards the future.", "he": "תנועה שהביטה לעבר העתיד." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5748,6 +5769,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2057",
+        "hint": { "en": "A tool for supporting a canvas while painting.", "he": "כלי לתמיכה בקנבס בזמן הציור." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5773,6 +5795,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2058",
+        "hint": { "en": "The museum in Madrid that houses works by Velasquez and Goya.", "he": "המוזיאון במדריד המאכלס את יצירותיהם של ולסקז וגויה." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5798,6 +5821,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2059",
+        "hint": { "en": "A mathematical ratio found in nature and art.", "he": "יחס מתמטי שנמצא בטבע ובאמנות." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5823,6 +5847,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2060",
+        "hint": { "en": "He painted melting clocks.", "he": "הוא צייר שעונים נמסים." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5848,6 +5873,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2061",
+        "hint": { "en": "A high honor in the Japanese art world.", "he": "כבוד גדול בעולם האמנות היפני." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5873,6 +5899,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2062",
+        "hint": { "en": "A Renaissance polymath who also designed flying machines.", "he": "איש רנסנס רב-תחומי שעיצב גם מכונות תעופה." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5898,6 +5925,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2063",
+        "hint": { "en": "The name of this technique starts with an S.", "he": "שם הטכניקה מתחיל ב-S." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5923,6 +5951,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2064",
+        "hint": { "en": "The decade of the 'Roaring Twenties'.", "he": "העשור של 'שנות העשרים הסוערות'." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5948,6 +5977,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2065",
+        "hint": { "en": "A style focused on color fields and large canvases.", "he": "סגנון המתמקד בשדות צבע ובקנבסים גדולים." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5973,6 +6003,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2066",
+        "hint": { "en": "Using objects to represent ideas or qualities.", "he": "שימוש בחפצים כדי לייצג רעיונות או איכויות." },
         "category": "art",
         "level": 3,
         "text": {
@@ -5998,6 +6029,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2067",
+        "hint": { "en": "He was famous for his large murals in Mexico and the US.", "he": "הוא היה מפורסם בציורי הקיר הגדולים שלו במקסיקו ובארה״ב." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6023,6 +6055,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2068",
+        "hint": { "en": "A French artist known for 'The Thinker'.", "he": "אמן צרפתי הידוע בזכות 'האדם החושב'." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6048,6 +6081,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2069",
+        "hint": { "en": "Printing using a mesh or screen.", "he": "הדפסה באמצעות רשת." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6073,6 +6107,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2070",
+        "hint": { "en": "The impressionist who focused on the effects of light.", "he": "האימפרסיוניסט שהתמקד בהשפעות האור." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6098,6 +6133,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2071",
+        "hint": { "en": "A quick drawing that captures the main features.", "he": "ציור מהיר שתופס את המאפיינים העיקריים." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6123,6 +6159,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2072",
+        "hint": { "en": "A Bulgarian-born artist who worked with Jeanne-Claude.", "he": "אמן יליד בולגריה שעבד עם ז'אן-קלוד." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6148,6 +6185,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2073",
+        "hint": { "en": "The lightness or darkness of a color.", "he": "הבהירות או הכהות של צבע." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6173,6 +6211,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2074",
+        "hint": { "en": "An Italian movement from the early 20th century.", "he": "תנועה איטלקית מתחילת המאה ה-20." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6198,6 +6237,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2075",
+        "hint": { "en": "A Chinese-American architect.", "he": "אדריכל סיני-אמריקאי." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6223,6 +6263,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2076",
+        "hint": { "en": "A printing process where the image is incised into a surface.", "he": "תהליך הדפסה שבו התמונה נחרטת לתוך משטח." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6248,6 +6289,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2077",
+        "hint": { "en": "A style that uses very simple shapes and forms.", "he": "סגנון המשתמש בצורות פשוטות מאוד." },
         "category": "art",
         "level": 3,
         "text": {
@@ -6273,6 +6315,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-art-2078",
+        "hint": { "en": "A classic Disney story about a girl and seven small friends.", "he": "סיפור דיסני קלאסי על ילדה ושבעה חברים קטנים." },
         "category": "art",
         "level": 3,
         "text": {
@@ -7048,6 +7091,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2531",
+        "hint": { "en": "The name of a state in the US known for its forests.", "he": "שם של מדינה בארה״ב הידועה ביערותיה." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7073,6 +7117,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2532",
+        "hint": { "en": "He was a member of the Russian Mob.", "he": "הוא היה חבר במאפיה הרוסית." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7098,6 +7143,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2533",
+        "hint": { "en": "An actor who passed away in 2013.", "he": "שחקן שנפטר בשנת 2013." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7123,6 +7169,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2534",
+        "hint": { "en": "A classic hit by the band Journey.", "he": "להיט קלאסי של להקת Journey." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7148,6 +7195,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2535",
+        "hint": { "en": "A character who owned a fish market.", "he": "דמות שהיה לה שוק דגים." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7173,6 +7221,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2536",
+        "hint": { "en": "She took a long 'ride' with Silvio.", "he": "היא יצאה ל'נסיעה' ארוכה עם סילביו." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7198,6 +7247,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2537",
+        "hint": { "en": "A religious figure appearing in an unexpected place.", "he": "דמות דתית המופיעה במקום לא צפוי." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7223,6 +7273,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2538",
+        "hint": { "en": "A horror movie with a very 'clever' name.", "he": "סרט אימה עם שם 'חכם' מאוד." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7248,6 +7299,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2539",
+        "hint": { "en": "Tony kills him after a fight about a horse.", "he": "טוני הורג אותו אחרי ריב על סוס." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7273,6 +7325,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2540",
+        "hint": { "en": "Her name starts with L.", "he": "שמה מתחיל ב-L." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7298,6 +7351,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2541",
+        "hint": { "en": "Inside a bird feeder.", "he": "בתוך מתקן להאכיל ציפורים." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7323,6 +7377,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2542",
+        "hint": { "en": "A blend of slasher and mob genres.", "he": "שילוב של ז'אנר האימה וז'אנר הפשע." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7348,6 +7403,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2543",
+        "hint": { "en": "She went by the name 'Danielle' while undercover.", "he": "היא השתמשה בשם 'דניאל' בזמן שהייתה סמויה." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7373,6 +7429,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2544",
+        "hint": { "en": "Her name starts with K.", "he": "שמה מתחיל ב-K." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7398,6 +7455,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2545",
+        "hint": { "en": "A popular lunch meat also known as ham.", "he": "נקניק פופולרי הידוע גם כשינקן." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7423,6 +7481,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2546",
+        "hint": { "en": "He is a close friend of Tony and very concerned about his hair.", "he": "הוא חבר קרוב של טוני ודואג מאוד לשיער שלו." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7448,6 +7507,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2547",
+        "hint": { "en": "The strip club where they often meet.", "he": "מועדון החשפנות שבו הם נפגשים לעיתים קרובות." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7473,6 +7533,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2548",
+        "hint": { "en": "Tony finds him at his farm.", "he": "טוני מוצא אותו בחווה שלו." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7498,6 +7559,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2549",
+        "hint": { "en": "Related to one of the five families.", "he": "קשור לאחת מחמש המשפחות." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -7523,6 +7585,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2550",
+        "hint": { "en": "He loses his briefcase in this place.", "he": "הוא מאבד את מזוודתו במקום הזה." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8298,6 +8361,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2581",
+        "hint": { "en": "A biker gang.", "he": "כנופיית אופנוענים." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8323,6 +8387,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2582",
+        "hint": { "en": "Tony didn't want anyone else to do it.", "he": "טוני לא רצה שאף אחד אחר יעשה את זה." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8348,6 +8413,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2583",
+        "hint": { "en": "A number higher than five but less than ten.", "he": "מספר גבוה מחמש אך נמוך מעשר." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8373,6 +8439,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2584",
+        "hint": { "en": "A reference to a location in Italy.", "he": "התייחסות למיקום באיטליה." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8398,6 +8465,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2585",
+        "hint": { "en": "A major bridge connecting New Jersey and New York.", "he": "גשר מרכזי המחבר בין ניו ג'רזי לניו יורק." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8423,6 +8491,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2586",
+        "hint": { "en": "A box of a certain brand of candy.", "he": "קופסה של מותג מסוים של ממתקים." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8448,6 +8517,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2587",
+        "hint": { "en": "Related to his facial expression.", "he": "קשור להבעת פניו." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8473,6 +8543,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2588",
+        "hint": { "en": "A dispute over a racing horse named Pie-O-My.", "he": "מחלוקת על סוס מרוצים בשם פאי-או-מאי." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8498,6 +8569,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2589",
+        "hint": { "en": "A waste management business.", "he": "עסק לניהול פסולת." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8523,6 +8595,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2590",
+        "hint": { "en": "He spent a long time in prison.", "he": "הוא בילה זמן רב בכלא." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8548,6 +8621,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2591",
+        "hint": { "en": "The cat stares at a picture on the wall.", "he": "החתול בוהה בתמונה שעל הקיר." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8573,6 +8647,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2592",
+        "hint": { "en": "He died in the middle of a very private moment.", "he": "הוא מת באמצע רגע פרטי מאוד." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8598,6 +8673,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2593",
+        "hint": { "en": "A classic movie starring James Cagney.", "he": "סרט קלאסי בכיכובו של ג'יימס קאגני." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8623,6 +8699,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2594",
+        "hint": { "en": "Tony's uncle and father figure.", "he": "דודו של טוני ודמות אב." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8648,6 +8725,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2595",
+        "hint": { "en": "A disease that affects the lungs.", "he": "מחלה הפוגעת בריאות." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8673,6 +8751,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2596",
+        "hint": { "en": "The name of Tony's boat.", "he": "שם הסירה של טוני." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8698,6 +8777,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2597",
+        "hint": { "en": "The same as the name of a famous apostle.", "he": "זהה לשמו של שליח מפורסם." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8723,6 +8803,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2598",
+        "hint": { "en": "He is often very surprised or frustrated.", "he": "הוא לרוב מופתע מאוד או מתוסכל." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8748,6 +8829,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2599",
+        "hint": { "en": "The show ends before we find out for sure.", "he": "הסדרה מסתיימת לפני שאנחנו מגלים בוודאות." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -8773,6 +8855,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-sopranos-2600",
+        "hint": { "en": "The same one that plays at Holsten's.", "he": "אותו אחד שמתנגן אצל הולסטנס." },
         "category": "sopranos",
         "level": 3,
         "text": {
@@ -10298,6 +10381,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2921",
+        "hint": { "en": "A famous Israeli rock star.", "he": "כוכב רוק ישראלי מפורסם." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10323,6 +10407,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2922",
+        "hint": { "en": "He is known for his poetic and soulful music.", "he": "הוא ידוע במוזיקה הפואטית והנשמתית שלו." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10348,6 +10433,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2923",
+        "hint": { "en": "A popular female singer with a powerful voice.", "he": "זמרת פופולרית עם קול עוצמתי." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10373,6 +10459,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2924",
+        "hint": { "en": "A band known for their unique sound and hits.", "he": "להקת עבר ידועה עם להיטים רבים." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10398,6 +10485,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2925",
+        "hint": { "en": "He sang about the 'Land of Israel'.", "he": "הוא שר על 'ארץ ישראל'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10423,6 +10511,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2926",
+        "hint": { "en": "A soulful performer.", "he": "מבצע בעל נשמה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10448,6 +10537,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2927",
+        "hint": { "en": "A duo of talented musicians.", "he": "צמד מוזיקאים מוכשרים." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10473,6 +10563,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2928",
+        "hint": { "en": "A veteran of the Israeli music scene.", "he": "ותיק בסצנת המוזיקה הישראלית." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10498,6 +10589,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2929",
+        "hint": { "en": "Known for emotional ballads.", "he": "ידוע בבלדות מרגשות." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10523,6 +10615,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2930",
+        "hint": { "en": "A modern pop icon.", "he": "אייקון פופ מודרני." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10548,6 +10641,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2931",
+        "hint": { "en": "A band with a Mediterranean flair.", "he": "להקה עם ניחוח ים-תיכוני." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10573,6 +10667,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2932",
+        "hint": { "en": "He has a very distinct vocal style.", "he": "יש לו סגנון ווקאלי ייחודי מאוד." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10598,6 +10693,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2933",
+        "hint": { "en": "A female artist with many chart-topping hits.", "he": "זמרת עם להיטים רבים בראש המצעדים." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10623,6 +10719,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2934",
+        "hint": { "en": "A collaboration of diverse artists.", "he": "שיתוף פעולה של אמנים מגוונים." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10648,6 +10745,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2935",
+        "hint": { "en": "He is a master of the guitar.", "he": "הוא אמן בגיטרה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10673,6 +10771,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2936",
+        "hint": { "en": "A band that defined a decade.", "he": "להקה שהגדירה עשור." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -10698,6 +10797,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-2937",
+        "hint": { "en": "A singer-songwriter with deep lyrics.", "he": "זמר-יוצר עם מילים עמוקות." },
         "category": "israeli_music",
         "level": 3,
         "text": {
