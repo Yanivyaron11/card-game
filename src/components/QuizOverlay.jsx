@@ -264,7 +264,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </div>
                     )}
 
-                    {gameMode === '1v1' && card.failedAttempts >= 1 && !card.isTainted && card.options.he.length > 2 && !reboundCancelled && (
+                    {gameMode === '1v1' && card.failedAttempts === 1 && !card.isTainted && card.options.he.length > 2 && !reboundCancelled && (
                         <div className="super-answer-indicator">
                             🚀 {t.rebound}
                         </div>
