@@ -8,6 +8,7 @@ import { worldQuestions } from './world.js';
 import { culture_entQuestions } from './culture_ent.js';
 import { sports_lifeQuestions } from './sports_life.js';
 import { generalQuestions } from './general.js';
+import { mathQuestions } from './math.js';
 
 export const topics = [
     // --- GENERATED_TOPICS_START ---
@@ -293,7 +294,7 @@ export const questionCounts = {
     "tradition": 82,
     "maccabi_haifa": 155,
     "chelsea": 100,
-    "math": 500,
+    "math": 300,
     "tel_aviv": 273,
     "patisserie": 400,
     "israeli_music": 286,
@@ -320,5 +321,6 @@ export const questions = [
     ...culture_entQuestions,
     ...sports_lifeQuestions,
     ...riddlesQuestions,
+    ...mathQuestions,
     ...generalQuestions
 ];
