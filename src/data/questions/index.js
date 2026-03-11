@@ -9,6 +9,7 @@ import { culture_entQuestions } from './culture_ent.js';
 import { sports_lifeQuestions } from './sports_life.js';
 import { generalQuestions } from './general.js';
 import { mathQuestions } from './math.js';
+import { physicsQuestions } from './physics.js';
 
 export const topics = [
     // --- GENERATED_TOPICS_START ---
@@ -139,6 +140,15 @@ export const topics = [
                     "he": "חידות"
                 },
                 "icon": "🧩",
+                "newUntil": "2026-03-25"
+            },
+            {
+                "id": "physics",
+                "name": {
+                    "en": "Physics",
+                    "he": "פיזיקה"
+                },
+                "icon": "⚛️",
                 "newUntil": "2026-03-25"
             }
         ]
@@ -309,7 +319,8 @@ export const questionCounts = {
     "sopranos": 100,
     "human_body": 100,
     "psychology": 60,
-    "riddles": 150
+    "riddles": 150,
+    "physics": 150
 };
 
 export const questions = [
@@ -322,5 +333,6 @@ export const questions = [
     ...sports_lifeQuestions,
     ...riddlesQuestions,
     ...mathQuestions,
+    ...physicsQuestions,
     ...generalQuestions
 ];
