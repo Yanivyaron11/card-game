@@ -22,7 +22,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🏔️📏"
+        "emoji": "🏔️📏",
+        "hint": {"en":"Travels through 7 countries in South America.","he":"עובר דרך 7 מדינות בדרום אמריקה."}
     },
 {
         "id": "q-animals-1451",
@@ -47,7 +48,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "👑🦁"
+        "emoji": "👑🦁",
+        "hint": {"en":"This big cat has a majestic mane.","he":"לחתול הגדול הזה יש רעמה מלכותית."}
     },
 {
         "id": "q-animals-1452",
@@ -72,7 +74,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐼🎋"
+        "emoji": "🐼🎋",
+        "hint": {"en":"It's a type of tall grass that grows very fast.","he":"זהו סוג של עשב גבוה שצומח מהר מאוד."}
     },
 {
         "id": "q-animals-1453",
@@ -97,7 +100,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🕷️🕸️"
+        "emoji": "🕷️🕸️",
+        "hint": {"en":"Spiders have two more legs than insects.","he":"לעכבישים יש שתי רגליים יותר מאשר לחרקים."}
     },
 {
         "id": "q-animals-1454",
@@ -122,7 +126,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🦓🖤"
+        "emoji": "🦓🖤",
+        "hint": {"en":"It looks like a horse with a very unique pattern.","he":"זה נראה כמו סוס עם דפוס מאוד ייחודי."}
     },
 {
         "id": "q-animals-1455",
@@ -147,7 +152,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🦒🌳"
+        "emoji": "🦒🌳",
+        "hint": {"en":"It uses its very long neck to reach leaves at the top of trees.","he":"היא משתמשת בצווארה הארוך מאוד כדי להגיע לעלים בראש העצים."}
     },
 {
         "id": "q-animals-1456",
@@ -172,7 +178,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐶❤️"
+        "emoji": "🐶❤️",
+        "hint": {"en":"A common English term for a young dog.","he":"מונח נפוץ לכלב צעיר."}
     },
 {
         "id": "q-animals-1457",
@@ -197,7 +204,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐘💦"
+        "emoji": "🐘💦",
+        "hint": {"en":"The largest land animal uses this to drink and smell.","he":"חיית היבשה הגדולה ביותר משתמשת בזה כדי לשתות ולהריח."}
     },
 {
         "id": "q-animals-1458",
@@ -222,7 +230,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🐄🗣️"
+        "emoji": "🐄🗣️",
+        "hint": {"en":"It's the classic sound from the farm.","he":"זהו הקול הקלאסי מהחווה."}
     },
 {
         "id": "q-animals-1459",
@@ -247,7 +256,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐧❄️"
+        "emoji": "🐧❄️",
+        "hint": {"en":"This bird lives in cold places and is a great swimmer.","he":"ציפור זו חיה במקומות קרים והיא שחיינית מצוינת."}
     },
 {
         "id": "q-animals-1460",
@@ -272,7 +282,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐝🍯"
+        "emoji": "🐝🍯",
+        "hint": {"en":"A sweet treat made from flower nectar.","he":"ממתק מתוק המיוצר מצוף פרחים."}
     },
 {
         "id": "q-animals-1461",
@@ -297,7 +308,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐪☀️"
+        "emoji": "🐪☀️",
+        "hint": {"en":"A place with lots of sand and very little water.","he":"מקום עם הרבה חול ומעט מאוד מים."}
     },
 {
         "id": "q-animals-1462",
@@ -322,7 +334,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦘🇦🇺"
+        "emoji": "🦘🇦🇺",
+        "hint": {"en":"This animal carries its baby, called a Joey, inside it.","he":"חיה זו נושאת את התינוק שלה, הנקרא ג'ואי, בתוכה."}
     },
 {
         "id": "q-animals-1463",
@@ -347,7 +360,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐄🥛"
+        "emoji": "🐄🥛",
+        "hint": {"en":"The most common farm animal that provides milk.","he":"חיית החווה הנפוצה ביותר המספקת חלב."}
     },
 {
         "id": "q-animals-1464",
@@ -372,7 +386,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🐷🐽"
+        "emoji": "🐷🐽",
+        "hint": {"en":"This animal likes to roll in the mud to stay cool.","he":"חיה זו אוהבת להתגלגל בבוץ כדי להישאר קרירה."}
     },
 {
         "id": "q-animals-1465",
@@ -397,7 +412,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐱🐾"
+        "emoji": "🐱🐾",
+        "hint": {"en":"A small, fluffy young feline.","he":"חתול צעיר, קטן ופרוותי."}
     },
 {
         "id": "q-animals-1466",
@@ -422,7 +438,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🦒🌳"
+        "emoji": "🦒🌳",
+        "hint": {"en":"Same as the tallest animal!","he":"אותה חיה כמו החיה הגבוהה ביותר!"}
     },
 {
         "id": "q-animals-1467",
@@ -447,7 +464,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐌🏠"
+        "emoji": "🐌🏠",
+        "hint": {"en":"It leaves a trail of slime as it moves very slowly.","he":"הוא משאיר שובל של ריר כשהוא נע לאט מאוד."}
     },
 {
         "id": "q-animals-1468",
@@ -472,7 +490,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐈🐭"
+        "emoji": "🐈🐭",
+        "hint": {"en":"A common house pet that is a natural hunter.","he":"חיית מחמד נפוצה שהיא ציידת טבעית."}
     },
 {
         "id": "q-animals-1469",
@@ -497,7 +516,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🐢🛡️"
+        "emoji": "🐢🛡️",
+        "hint": {"en":"It can pull its head and legs inside for protection.","he":"הוא יכול למשוך את ראשו ורגליו פנימה להגנה."}
     },
 {
         "id": "q-animals-1470",
@@ -522,7 +542,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦆🌊"
+        "emoji": "🦆🌊",
+        "hint": {"en":"A water bird that loves ponds.","he":"ציפור מים שאוהבת בריכות."}
     },
 {
         "id": "q-animals-1471",
@@ -547,7 +568,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🐆⚡"
+        "emoji": "🐆⚡",
+        "hint": {"en":"This spotted cat can reach speeds over 100 km/h.","he":"חתול מנומר זה יכול להגיע למהירות של מעל 100 קמ\"ש."}
     },
 {
         "id": "q-animals-1472",
@@ -572,7 +594,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🕊️✌️"
+        "emoji": "🕊️✌️",
+        "hint": {"en":"A white bird often seen in art representing harmony.","he":"ציפור לבנה הנפוצה באמנות כמייצגת הרמוניה."}
     },
 {
         "id": "q-animals-1473",
@@ -597,7 +620,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦇🌙"
+        "emoji": "🦇🌙",
+        "hint": {"en":"This animal uses echolocation to find its way in the dark.","he":"חיה זו משתמשת בסונאר (איכון הד) כדי למצוא את דרכה בחושך."}
     },
 {
         "id": "q-animals-1474",
@@ -622,7 +646,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐋🌊"
+        "emoji": "🐋🌊",
+        "hint": {"en":"Even though it lives in the water, it's actually a mammal.","he":"למרות שהוא חי במים, הוא למעשה יונק."}
     },
 {
         "id": "q-animals-1475",
@@ -647,7 +672,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🦎🎨"
+        "emoji": "🦎🎨",
+        "hint": {"en":"A lizard that blends into its surroundings perfectly.","he":"לטאה שמתמזגת עם סביבתה בצורה מושלמת."}
     },
 {
         "id": "q-animals-1476",
@@ -672,7 +698,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🐝🌸"
+        "emoji": "🐝🌸",
+        "hint": {"en":"The sweet liquid found inside flowers.","he":"הנוזל המתוק שנמצא בתוך הפרחים."}
     },
 {
         "id": "q-animals-1477",
@@ -697,7 +724,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦫🪵"
+        "emoji": "🦫🪵",
+        "hint": {"en":"This rodent has very strong teeth for cutting down trees.","he":"למכרסם זה יש שיניים חזקות מאוד לכריתת עצים."}
     },
 {
         "id": "q-animals-1478",
@@ -722,7 +750,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐘🧠"
+        "emoji": "🐘🧠",
+        "hint": {"en":"People say this large animal 'never forgets'.","he":"אומרים שחיה גדולה זו 'לעולם לא שוכחת'."}
     },
 {
         "id": "q-animals-1479",
@@ -747,7 +776,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐢⏳"
+        "emoji": "🐢⏳",
+        "hint": {"en":"Some of these can live for over 150 years.","he":"חלק מאלה יכולים לחיות מעל 150 שנה."}
     },
 {
         "id": "q-animals-1480",
@@ -772,7 +802,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦜🗣️"
+        "emoji": "🦜🗣️",
+        "hint": {"en":"A colorful bird that can repeat what you say.","he":"ציפור צבעונית שיכולה לחזור על מה שאתם אומרים."}
     },
 {
         "id": "q-animals-1481",
@@ -797,7 +828,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐙❤️"
+        "emoji": "🐙❤️",
+        "hint": {"en":"One more than 2, but much more than humans have.","he":"אחד יותר מ-2, אבל הרבה יותר ממה שיש לבני אדם."}
     },
 {
         "id": "q-animals-1482",
@@ -822,7 +854,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐎😴"
+        "emoji": "🐎😴",
+        "hint": {"en":"Many large animals do this, but this one is a common farm animal used for riding.","he":"חיות גדולות רבות עושות זאת, אבל זו חיית חווה נפוצה המשמשת לרכיבה."}
     },
 {
         "id": "q-animals-1483",
@@ -847,7 +880,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐘🏔️"
+        "emoji": "🐘🏔️",
+        "hint": {"en":"This animal has a long trunk and big ears.","he":"לחיה זו יש חדק ארוך ואוזניים גדולות."}
     },
 {
         "id": "q-animals-1484",
@@ -872,7 +906,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐪🏜️"
+        "emoji": "🐪🏜️",
+        "hint": {"en":"It has humps on its back and lives in hot, sandy places.","he":"יש לו דבשות על הגב והוא חי במקומות חמים וחוליים."}
     },
 {
         "id": "q-animals-1485",
@@ -897,7 +932,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐍👅"
+        "emoji": "🐍👅",
+        "hint": {"en":"They use their forked tongue to 'taste' the air.","he":"הם משתמשים בלשונם המפוצלת כדי 'לטעום' את האוויר."}
     },
 {
         "id": "q-animals-1486",
@@ -922,7 +958,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦅⚡"
+        "emoji": "🦅⚡",
+        "hint": {"en":"A bird of prey known for its incredible diving speed.","he":"ציפור טרף הידועה במהירות הצלילה המדהימה שלה."}
     },
 {
         "id": "q-animals-1487",
@@ -947,7 +984,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🦞🌊"
+        "emoji": "🦞🌊",
+        "hint": {"en":"They belong to the group called decapods, which means 'ten feet'.","he":"הם שייכים לקבוצה שנקראת דקאפודים, שמשמעותה 'עשר רגליים'."}
     },
 {
         "id": "q-animals-1488",
@@ -972,7 +1010,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐊🦷"
+        "emoji": "🐊🦷",
+        "hint": {"en":"This large reptile lives in rivers and swamps of Africa and Australia.","he":"זוחל גדול זה חי בנהרות ובביצות של אפריקה ואוסטרליה."}
     },
 {
         "id": "q-animals-1489",
@@ -997,7 +1036,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐺🌑"
+        "emoji": "🐺🌑",
+        "hint": {"en":"A group of these wild dogs is named after a set of cards.","he":"קבוצה של כלבי בר אלו נקראת בשם הדומה לחפיסת קלפים."}
     },
 {
         "id": "q-animals-1490",
@@ -1022,7 +1062,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦉🌑"
+        "emoji": "🦉🌑",
+        "hint": {"en":"This bird is active at night and has very large eyes.","he":"ציפור זו פעילה בלילה ויש לה עיניים גדולות מאוד."}
     },
 {
         "id": "q-animals-1491",
@@ -1047,7 +1088,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦘👶"
+        "emoji": "🦘👶",
+        "hint": {"en":"These animals are called marsupials; the most famous one lives in Australia.","he":"חיות אלו נקראות כיסאים; המפורסמת שבהן חיה באוסטרליה."}
     },
 {
         "id": "q-animals-1492",
@@ -1072,7 +1114,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🦁🦁"
+        "emoji": "🦁🦁",
+        "hint": {"en":"A group of these kings of the savanna is called a 'Pride'.","he":"קבוצה של מלכי הסוואנה הללו נקראת 'גאווה'."}
     },
 {
         "id": "q-animals-1493",
@@ -1097,7 +1140,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🦌🌿"
+        "emoji": "🦌🌿",
+        "hint": {"en":"This bird can rotate its head almost all the way around.","he":"ציפור זו יכולה לסובב את ראשה כמעט עד הסוף."}
     },
 {
         "id": "q-animals-1494",
@@ -1122,7 +1166,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦅📏"
+        "emoji": "🦅📏",
+        "hint": {"en":"This marine animal is often confused with a seal but has external ears.","he":"חיה ימית זו מתבלבלת לעיתים קרובות עם כלב ים, אך יש לה אוזניים חיצוניות."}
     },
 {
         "id": "q-animals-1495",
@@ -1147,7 +1192,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🦘🍼"
+        "emoji": "🦘🍼",
+        "hint": {"en":"This colorful insect starts its life as a caterpillar.","he":"חרק צבעוני זה מתחיל את חייו כזחל."}
     },
 {
         "id": "q-animals-1496",
@@ -1172,7 +1218,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🧬🦎"
+        "emoji": "🧬🦎",
+        "hint": {"en":"This animal is the only mammal that can truly fly.","he":"חיה זו היא היונק היחיד שיכול לעוף באמת."}
     },
 {
         "id": "q-animals-1497",
@@ -1197,7 +1244,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦇🌑"
+        "emoji": "🦇🌑",
+        "hint": {"en":"This fish has no skeleton and some species are very fast.","he":"לדג זה אין שלד וחלק מהמינים שלו מהירים מאוד."}
     },
 {
         "id": "q-animals-1498",
@@ -1222,7 +1270,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦒🩸"
+        "emoji": "🦒🩸",
+        "hint": {"en":"This large bird lives in the Arctic and is mostly white.","he":"ציפור גדולה זו חיה באזור הארקטי והיא בעיקר לבנה."}
     },
 {
         "id": "q-animals-1499",
@@ -1247,7 +1296,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🩸🧮"
+        "emoji": "🩸🧮",
+        "hint": {"en":"This reptile has a shell and can live in both water and land.","he":"לזוחל זה יש שריון והוא יכול לחיות גם במים וגם ביבשה."}
     },
 {
         "id": "q-animals-1500",
@@ -1272,7 +1322,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🦀💙"
+        "emoji": "🦀💙",
+        "hint": {"en":"This small creature has 8 legs and spins webs.","he":"ליצור הקטן הזה יש 8 רגליים והוא טווה קורים."}
     },
 {
         "id": "q-animals-1501",
@@ -1297,7 +1348,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐋📢"
+        "emoji": "🐋📢",
+        "hint": {"en":"This animal is known for its ability to change colors.","he":"חיה זו ידועה ביכולתה לשנות צבעים."}
     },
 {
         "id": "q-animals-1502",
@@ -1322,7 +1374,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🐠⚧️"
+        "emoji": "🐠⚧️",
+        "hint": {"en":"This bird is the largest in the world and cannot fly.","he":"ציפור זו היא הגדולה בעולם והיא אינה יכולה לעוף."}
     },
 {
         "id": "q-animals-1503",
@@ -1347,7 +1400,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦉🏛️"
+        "emoji": "🦉🏛️",
+        "hint": {"en":"This animal lives in a colony and is very hardworking.","he":"חיה זו חיה במושבה והיא חרוצה מאוד."}
     },
 {
         "id": "q-animals-1504",
@@ -1372,7 +1426,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦦🧶"
+        "emoji": "🦦🧶",
+        "hint": {"en":"This animal has a very long neck to eat leaves from tall trees.","he":"לחיה זו יש צוואר ארוך מאוד כדי לאכול עלים מעצים גבוהים."}
     },
 {
         "id": "q-animals-1505",
@@ -1397,7 +1452,8 @@ export const natureQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐛👣"
+        "emoji": "🐛👣",
+        "hint": {"en":"This animal lives in the ocean and has a very high intelligence.","he":"חיה זו חיה באוקיינוס ויש לה אינטליגנציה גבוהה מאוד."}
     },
 {
         "id": "q-animals-1506",
@@ -4626,12 +4682,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2144",
+        "hint": { "en": "They have a tail that can grip branches like an extra hand.", "he": "יש להם זנב שיכול לאחוז בענפים ממש כמו חמישית." },
         "category": "records",
         "level": 2,
         "text": {
             "en": "What is the smallest ocean in the world?",
-            "he": "מהו האוקיינוס הקטן ביותר בעולם?"
-        },
+            "he": "מהו האוקיינוס הקטן ביותר בעולם?" },
         "options": {
             "en": [
                 "Indian",
@@ -4651,12 +4707,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2145",
+        "hint": { "en": "What is the fastest animal in the ocean? Hint: It has a spear-like bill.", "he": "מהו בעל החיים המהיר ביותר באוקיינוס? רמז: יש לו מקור דמוי חנית." },
         "category": "records",
         "level": 2,
         "text": {
             "en": "What is the tallest waterfall in Asia?",
-            "he": "מהו המפל הגבוה ביותר באסיה?"
-        },
+            "he": "מהו המפל הגבוה ביותר באסיה?" },
         "options": {
             "en": [
                 "Nohkalikai Falls",
@@ -4676,12 +4732,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2146",
+        "hint": { "en": "The largest fish in the world.", "he": "הדג הגדול ביותר בעולם." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the oldest living individual tree in the world?",
-            "he": "מהו העץ האינדיבידואלי החי העתיק ביותר בעולם?"
-        },
+            "he": "מהו העץ האינדיבידואלי החי העתיק ביותר בעולם?" },
         "options": {
             "en": [
                 "General Sherman",
@@ -4701,12 +4757,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2147",
+        "hint": { "en": "What is the only mammal that can truly fly?", "he": "מהו היונק היחיד שיכול לעוף באמת?" },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the most voluminous single-stem tree in the world?",
-            "he": "מהו העץ בעל הנפח הגדול ביותר בעולם?"
-        },
+            "he": "מהו העץ בעל הנפח הגדול ביותר בעולם?" },
         "options": {
             "en": [
                 "Methuselah",
@@ -4726,12 +4782,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2148",
+        "hint": { "en": "What is the largest living primate?", "he": "מהו הפרימט (קוף אדם) הגדול ביותר כיום?" },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the tallest tree in the world?",
-            "he": "מהו העץ הגבוה ביותר בעולם?"
-        },
+            "he": "מהו העץ הגבוה ביותר בעולם?" },
         "options": {
             "en": [
                 "Centurion",
@@ -4801,12 +4857,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2151",
+        "hint": { "en": "Their name means 'person of the forest'.", "he": "השם שלהם פירושו 'איש היער'." },
         "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the longest living vertebrate animal?",
-            "he": "מהו בעל החיים בעל החוליות שחי הכי הרבה זמן?"
-        },
+            "he": "מהו בעל החיים בעל החוליות שחי הכי הרבה זמן?" },
         "options": {
             "en": [
                 "Giant Tortoise",
@@ -4826,12 +4882,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2152",
+        "hint": { "en": "Found in South America, it lives near water.", "he": "נמצא בדרום אמריקה וחי בקרבת מים." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the highest mountain in South America?",
-            "he": "מהו ההר הגבוה ביותר בדרום אמריקה?"
-        },
+            "he": "מהו ההר הגבוה ביותר בדרום אמריקה?" },
         "options": {
             "en": [
                 "Mount Fitz Roy",
@@ -5201,12 +5257,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2167",
+        "hint": { "en": "It has a massive wingspan and is found in the Andes.", "he": "בעלת מוטת כנפיים עצומה ונמצאת בהרי האנדים." },
         "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the largest flying bird in the world?",
-            "he": "מהי הציפור המעופפת הגדולה ביותר בעולם?"
-        },
+            "he": "מהי הציפור המעופפת הגדולה ביותר בעולם?" },
         "options": {
             "en": [
                 "Andean Condor",
@@ -5226,12 +5282,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2168",
+        "hint": { "en": "The queen of this social insect colony can live for decades.", "he": "מלכת המושבה של החרק החברתי הזה יכולה לחיות עשרות שנים." },
         "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the longest living insect species?",
-            "he": "מהו סוג החרק שחי הכי הרבה זמן?"
-        },
+            "he": "מהו סוג החרק שחי הכי הרבה זמן?" },
         "options": {
             "en": [
                 "Ant Queen",
@@ -5251,12 +5307,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2169",
+        "hint": { "en": "Recorded in a valley in California known for its heat.", "he": "תועדה בעמק בקליפורניה הידוע בחום הקיצוני שבו." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the highest temperature ever recorded on Earth's surface approx.?",
-            "he": "מהי הטמפרטורה הגבוהה ביותר שתועדה על פני כדור הארץ?"
-        },
+            "he": "מהי הטמפרטורה הגבוהה ביותר שתועדה על פני כדור הארץ?" },
         "options": {
             "en": [
                 "56.7°C",
@@ -5276,12 +5332,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2170",
+        "hint": { "en": "It covers the most southern continent.", "he": "הוא מכסה את היבשת הדרומית ביותר בעולם." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the largest cold desert in the world?",
-            "he": "מהו המדבר הקר הגדול ביותר בעולם?"
-        },
+            "he": "מהו המדבר הקר הגדול ביותר בעולם?" },
         "options": {
             "en": [
                 "Gobi Desert",
@@ -5301,12 +5357,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2171",
+        "hint": { "en": "Located in the Caucasus range in Russia.", "he": "ממוקם ברכס הרי הקווקז ברוסיה." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the highest mountain in Europe?",
-            "he": "מהו ההר הגבוה ביותר באירופה?"
-        },
+            "he": "מהו ההר הגבוה ביותר באירופה?" },
         "options": {
             "en": [
                 "Mont Blanc",
@@ -5326,12 +5382,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2172",
+        "hint": { "en": "A famous river in Egypt.", "he": "נהר מפורסם במצרים." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the largest island in the Mediterranean Sea?",
-            "he": "מהו האי הגדול ביותר בים התיכון?"
-        },
+            "he": "מהו האי הגדול ביותר בים התיכון?" },
         "options": {
             "en": [
                 "Cyprus",
@@ -5351,12 +5407,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2173",
+        "hint": { "en": "The largest and deepest ocean.", "he": "האוקיינוס הגדול והעמוק ביותר." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the largest volcano in the Solar System?",
-            "he": "מהו הר הגעש הגדול ביותר במערכת השמש?"
-        },
+            "he": "מהו הר הגעש הגדול ביותר במערכת השמש?" },
         "options": {
             "en": [
                 "Mauna Loa",
@@ -5376,12 +5432,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2174",
+        "hint": { "en": "The world's highest waterfall.", "he": "המפל הגבוה ביותר בעולם." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the most abundant element in Earth's crust?",
-            "he": "מהו היסוד הנפוץ ביותר בקרום כדור הארץ?"
-        },
+            "he": "מהו היסוד הנפוץ ביותר בקרום כדור הארץ?" },
         "options": {
             "en": [
                 "Iron",
@@ -5401,12 +5457,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2175",
+        "hint": { "en": "Located in Venezuela, named after an aviator.", "he": "ממוקם בוונצואלה, קרוי על שם טייס." },
         "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the fastest animal in the water?",
-            "he": "מהי החיה המהירה ביותר במים?"
-        },
+            "he": "מהי החיה המהירה ביותר במים?" },
         "options": {
             "en": [
                 "Dolphin",
@@ -5426,12 +5482,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2176",
+        "hint": { "en": "The gas that makes up 78% of Earth's atmosphere.", "he": "הגז שמהווה 78% מהאטמוספירה של כדור הארץ." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the world's largest single-cell organism approx.?",
-            "he": "מהו האורגניזם החד-תאי הגדול ביותר בעולם?"
-        },
+            "he": "מהו האורגניזם החד-תאי הגדול ביותר בעולם?" },
         "options": {
             "en": [
                 "Amoeba",
@@ -5451,12 +5507,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2177",
+        "hint": { "en": "The layer of the atmosphere where we live.", "he": "שכבת האטמוספירה שבה אנחנו חיים." },
         "category": "records",
         "level": 3,
         "text": {
             "en": "What is the deepest lake in the United States?",
-            "he": "מהו האגם העמוק ביותר בארצות הברית?"
-        },
+            "he": "מהו האגם העמוק ביותר בארצות הברית?" },
         "options": {
             "en": [
                 "Lake Superior",
@@ -5476,12 +5532,12 @@ export const natureQuestions = [
     },
 {
         "id": "q-nature-2178",
+        "hint": { "en": "A type of rock formed by cooled magma or lava.", "he": "סוג של סלע שנוצר ממגמה או לבה שהתקררו." },
         "category": "animals",
         "level": 3,
         "text": {
             "en": "What is the world's largest canyon after the Yarlung Tsangpo?",
-            "he": "מהו הקניון הגדול בעולם?"
-        },
+            "he": "מהו הקניון הגדול בעולם?" },
         "options": {
             "en": [
                 "Grand Canyon",

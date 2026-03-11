@@ -22,7 +22,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐔🎤"
+        "emoji": "🐔🎤",
+        "hint": {"en":"This singer won Eurovision 2018 with a 'chicken dance' song.","he":"הזמרת הזו זכתה באירוויזיון 2018 עם שיר שכלל 'ריקוד תרנגולת'."}
     },
 {
         "id": "q-israeli_music-1366",
@@ -47,7 +48,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "👗❤️"
+        "emoji": "👗❤️",
+        "hint": {"en":"'Simla Aduma veShtei Tsamaot' is a very famous children's song.","he":"'שמלה אדומה ושתי צמות' הוא שיר ילדים מאוד מפורסם."}
     },
 {
         "id": "q-israeli_music-1367",
@@ -72,7 +74,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦄✨"
+        "emoji": "🦄✨",
+        "hint": {"en":"This superstar represented Israel at Eurovision 2023.","he":"הכוכבת הזו ייצגה את ישראל באירוויזיון 2023."}
     },
 {
         "id": "q-israeli_music-1368",
@@ -97,7 +100,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🎂🔄"
+        "emoji": "🎂🔄",
+        "hint": {"en":"The song title means 'Cake, Cake', but we mostly rotate around.","he":"שם השיר הוא 'עוגה עוגה', אבל אנחנו בעיקר מסתובבים במעגל."}
     },
 {
         "id": "q-israeli_music-1369",
@@ -122,7 +126,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🎸🏙️"
+        "emoji": "🎸🏙️",
+        "hint": {"en":"A famous 90s rock band from Tel Aviv.","he":"להקת רוק מפורסמת משנות ה-90 מתל אביב."}
     },
 {
         "id": "q-israeli_music-1370",
@@ -147,7 +152,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "👧🎶"
+        "emoji": "👧🎶",
+        "hint": {"en":"This young singer is famous for 'Achoti HaKtana'.","he":"הזמרת הצעירה הזו מפורסמת בשיר 'אחותי הקטנה'."}
     },
 {
         "id": "q-israeli_music-1371",
@@ -172,7 +178,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🙏🎵"
+        "emoji": "🙏🎵",
+        "hint": {"en":"The winning song of 1979 ends its main line with a word meaning 'Amen'.","he":"השיר הזוכה משנת 1979 מסיים את השורה הראשונה במילה 'אמן'."}
     },
 {
         "id": "q-israeli_music-1372",
@@ -197,7 +204,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "💰💃"
+        "emoji": "💰💃",
+        "hint": {"en":"Another hit by the 'Unicorn' singer.","he":"להיט נוסף של הזמרת ששרה את 'Unicorn'."}
     },
 {
         "id": "q-israeli_music-1373",
@@ -222,7 +230,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "👦🌲"
+        "emoji": "👦🌲",
+        "hint": {"en":"This is one of the most basic children's songs, not related to a specific holiday.","he":"זהו אחד משירי הילדים הבסיסיים ביותר, ולא קשור לחג ספציפי."}
     },
 {
         "id": "q-israeli_music-1374",
@@ -247,7 +256,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "👵🎶"
+        "emoji": "👵🎶",
+        "hint": {"en":"She was famous for her deep voice and 'Kalaniot' song.","he":"היא הייתה מפורסמת בקולה העמוק ובשיר ה'כלניות'."}
     },
 {
         "id": "q-israeli_music-1375",
@@ -272,7 +282,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🥇🇮🇱"
+        "emoji": "🥇🇮🇱",
+        "hint": {"en":"This song won Eurovision in 1978 and uses the 'B' language.","he":"השיר הזה זכה באירוויזיון 1978 ומשתמש ב'שפת הבי'."}
     },
 {
         "id": "q-israeli_music-1376",
@@ -297,7 +308,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "👦🟡"
+        "emoji": "👦🟡",
+        "hint": {"en":"'I'm a golden boy, come on and see me...'","he":"נדב גדג' שר את זה כשהיה רק בן 16."}
     },
 {
         "id": "q-israeli_music-1377",
@@ -322,7 +334,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "👯‍♂️💥"
+        "emoji": "👯‍♂️💥",
+        "hint": {"en":"The most famous pop duo in Israel for many years.","he":"צמד הפופ המפורסם ביותר בישראל במשך שנים רבות."}
     },
 {
         "id": "q-israeli_music-1378",
@@ -347,7 +360,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🧺🌿"
+        "emoji": "🧺🌿",
+        "hint": {"en":"A Shavuot song about the first fruits (Bikkurim).","he":"שיר לשבועות על הבאת הביכורים."}
     },
 {
         "id": "q-israeli_music-1379",
@@ -372,7 +386,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "💃✨"
+        "emoji": "💃✨",
+        "hint": {"en":"This singer is known for her social media presence and catchy pop hits.","he":"הזמרת הזו ידועה בנוכחותה ברשתות החברתיות ובלהיטי פופ קליטים."}
     },
 {
         "id": "q-israeli_music-1380",
@@ -397,7 +412,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "👑👠"
+        "emoji": "👑👠",
+        "hint": {"en":"This groundbreaking singer won Eurovision 1998.","he":"הזמרת פורצת הדרך הזו זכתה באירוויזיון 1998."}
     },
 {
         "id": "q-israeli_music-1381",
@@ -422,7 +438,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍊✨"
+        "emoji": "🍊✨",
+        "hint": {"en":"'Tammuz' band's song mentions a 'Golden Apple', which is a literal translation of this fruit's name.","he":"השם המילולי של הפרי הזה בעברית הוא 'תפוח זהב'."}
     },
 {
         "id": "q-israeli_music-1382",
@@ -447,7 +464,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "👧🌸"
+        "emoji": "👧🌸",
+        "hint": {"en":"A classic song by Yehonatan Geffen about a very pretty girl.","he":"שיר קלאסי של יהונתן גפן על ילדה מאוד יפה."}
     },
 {
         "id": "q-israeli_music-1383",
@@ -472,7 +490,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🤘🎸"
+        "emoji": "🤘🎸",
+        "hint": {"en":"These two singers are the founders and lead vocalists of the band.","he":"שני הזמרים האלו הם המייסדים והסולנים של הלהקה."}
     },
 {
         "id": "q-israeli_music-1384",
@@ -497,7 +516,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🚂🇪🇬"
+        "emoji": "🚂🇪🇬",
+        "hint": {"en":"A massive hit by Shlomi Bracha and Yuval Banay's band.","he":"להיט ענק של הלהקה של שלומי ברכה ויובל בנאי."}
     },
 {
         "id": "q-israeli_music-1385",
@@ -522,7 +542,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🕍🟡"
+        "emoji": "🕍🟡",
+        "hint": {"en":"The most famous songwriter in Israeli history, known for national songs.","he":"הפזמונאית המפורסמת ביותר בתולדות ישראל, הידועה בשיריה הלאומיים."}
     },
 {
         "id": "q-israeli_music-1386",
@@ -547,7 +568,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🎤🏆"
+        "emoji": "🎤🏆",
+        "hint": {"en":"Same as the 1978 winner!","he":"אותו שיר שזכה ב-1978!"}
     },
 {
         "id": "q-israeli_music-1387",
@@ -572,7 +594,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍫🍬🌀"
+        "emoji": "🍫🍬🌀",
+        "hint": {"en":"A girl group from the 70s named after three types of treats.","he":"שלישיית בנות משנות ה-70 שקרויה על שם שלושה סוגי ממתקים."}
     },
 {
         "id": "q-israeli_music-1388",
@@ -597,7 +620,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "👑🎶"
+        "emoji": "👑🎶",
+        "hint": {"en":"She had a very majestic stage presence and a deep voice.","he":"היה לה קול עמוק ונוכחות בימתית מלכותית."}
     },
 {
         "id": "q-israeli_music-1389",
@@ -622,7 +646,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🎹🌍"
+        "emoji": "🎹🌍",
+        "hint": {"en":"The creator's name is in the title!","he":"שם היוצר מופיע בשם הפרויקט!"}
     },
 {
         "id": "q-israeli_music-1390",
@@ -647,7 +672,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🎸❤️"
+        "emoji": "🎸❤️",
+        "hint": {"en":"A famous rock ballad by the person often called the 'King of Israeli Rock'.","he":"בלדת רוק מפורסמת של מי שמכונה לעיתים 'מלך הרוק הישראלי'."}
     },
 {
         "id": "q-israeli_music-1391",
@@ -672,7 +698,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐝🎸"
+        "emoji": "🐝🎸",
+        "hint": {"en":"The band represented Israel at Eurovision 1974.","he":"הלהקה ייצגה את ישראל באירוויזיון 1974."}
     },
 {
         "id": "q-israeli_music-1392",
@@ -697,7 +724,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🐦🏜️"
+        "emoji": "🐦🏜️",
+        "hint": {"en":"The band's name starts with 'Eth...'.","he":"שם הלהקה מתחיל ב-'אתנ...'."}
     },
 {
         "id": "q-israeli_music-1393",
@@ -722,7 +750,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🕯️😢"
+        "emoji": "🕯️😢",
+        "hint": {"en":"Aviv Geffen wrote this song about his friend, and it became a memorial song.","he":"אביב גפן כתב את השיר על חבר שלו, והוא הפך לשיר זיכרון."}
     },
 {
         "id": "q-israeli_music-1394",
@@ -747,7 +776,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "⭐🤰"
+        "emoji": "⭐🤰",
+        "hint": {"en":"She was the 'sweety from Kiryat Gat' who won the first ever season of the show.","he":"היא הייתה 'המאמי מקריית גת' שזכתה בעונה הראשונה של התוכנית."}
     },
 {
         "id": "q-israeli_music-1395",
@@ -772,7 +802,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🏠🌾"
+        "emoji": "🏠🌾",
+        "hint": {"en":"A song about bringing something from the fields.","he":"שיר על הבאת דברים מהשדה."}
     },
 {
         "id": "q-israeli_music-1396",
@@ -797,7 +828,8 @@ export const culture_entQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🎻🎤"
+        "emoji": "🎻🎤",
+        "hint": {"en":"The lead singer of this indie-country band with the ginger hair.","he":"הסולנית של להקת האינדי-קאנטרי הזו עם השיער הג'ינג'י."}
     },
 {
         "id": "q-israeli_music-1397",
@@ -826,6 +858,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1398",
+        "hint": { "en": "A legendary singer often called 'the voice of the nation'.", "he": "זמרת אגדית המכונה לעיתים 'קול המדינה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -851,6 +884,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1399",
+        "hint": { "en": "A famous show and band from the 1960s.", "he": "מופע ולהקה מפורסמת משנות ה-60." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -876,6 +910,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1400",
+        "hint": { "en": "He sang 'Aba Sheli' and 'HaYeled HaZe Hu Ani'.", "he": "הוא שר את 'אבא שלי' ו'הילד הזה הוא אני'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -901,6 +936,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1401",
+        "hint": { "en": "A rock band led by Berry Sakharof and Rami Fortis (sometimes).", "he": "להקת רוק שבראשה עמדו ברי סחרוף ורמי פורטיס." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -926,6 +962,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1402",
+        "hint": { "en": "Think about the Eurovision winner with 'Hallelujah'.", "he": "חשבו על זוכת האירוויזיון עם 'הללויה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -951,6 +988,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1403",
+        "hint": { "en": "A very tall singer with a deep voice.", "he": "זמר גבוה מאוד עם קול עמוק." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -976,6 +1014,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1404",
+        "hint": { "en": "She won the Eurovision with 'Toy'.", "he": "היא זכתה באירוויזיון עם השיר 'Toy'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1001,6 +1040,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1405",
+        "hint": { "en": "A band named after a Mediterranean city.", "he": "להקה הקרויה על שם עיר ים-תיכונית." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1026,6 +1066,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1406",
+        "hint": { "en": "His first name means 'lion' in Hebrew.", "he": "שמו הפרטי פירושו 'אריה'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1051,6 +1092,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1407",
+        "hint": { "en": "A famous duo consisting of a man and a woman.", "he": "צמד מפורסם המורכב מגבר ואישה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1076,6 +1118,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1408",
+        "hint": { "en": "A rapper known for his patriotic songs.", "he": "ראפר הידוע בשיריו הפטריוטיים." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1101,6 +1144,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1409",
+        "hint": { "en": "The name of a band that includes Shlomo Artzi (early on).", "he": "שם של להקה שכללה את שלמה ארצי (בתחילת דרכו)." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1126,6 +1170,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1410",
+        "hint": { "en": "A group of singers perform together.", "he": "קבוצת זמרים המופיעה יחד." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1151,6 +1196,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1411",
+        "hint": { "en": "She is known as the 'Queen of Hebrew Song'.", "he": "היא ידועה כ'מלכת הזמר העברי'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1176,6 +1222,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1412",
+        "hint": { "en": "A band with a very 'sweet' name.", "he": "להקה עם שם 'מתוק' מאוד." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1201,6 +1248,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1413",
+        "hint": { "en": "He sang about 'The Small Prince'.", "he": "הוא שר על 'הנסיך הקטן'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1851,6 +1899,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1439",
+        "hint": { "en": "A song by Naomi Shemer.", "he": "שיר של נעמי שמר." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1876,6 +1925,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1440",
+        "hint": { "en": "An iconic rock group from the 70s.", "he": "להקת רוק אייקונית משנות ה-70." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1901,6 +1951,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1441",
+        "hint": { "en": "Winner of an international music contest.", "he": "זוכה בתחרות מוזיקה בינלאומית." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1926,6 +1977,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1442",
+        "hint": { "en": "A very successful pop star.", "he": "כוכב פופ מצליח מאוד." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1951,6 +2003,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1443",
+        "hint": { "en": "Related to the Kibbutz movement (often).", "he": "קשור לתנועה הקיבוצית (לרוב)." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -1976,6 +2029,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1444",
+        "hint": { "en": "A soul singer with a unique style.", "he": "זמר נשמה עם סגנון ייחודי." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -2001,6 +2055,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1445",
+        "hint": { "en": "A band of 'friends'.", "he": "להקה של 'חברים'." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -2026,6 +2081,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1446",
+        "hint": { "en": "He has a very famous father in the music industry.", "he": "יש לו אבא מפורסם מאוד בתעשיית המוזיקה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -2051,6 +2107,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1447",
+        "hint": { "en": "A group from the 80s.", "he": "להקה משנות ה-80." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -2076,6 +2133,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1448",
+        "hint": { "en": "She sang for the troops.", "he": "היא שרה לחיילים." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -2101,6 +2159,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1449",
+        "hint": { "en": "A famous oriental music singer.", "he": "זמר מוזיקה מזרחית מפורסם." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -2126,6 +2185,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-israeli_music-1450",
+        "hint": { "en": "A winner of a TV reality show.", "he": "זוכה בתוכנית ריאליטי בטלוויזיה." },
         "category": "israeli_music",
         "level": 3,
         "text": {
@@ -3201,6 +3261,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1599",
+        "hint": { "en": "A movie about a giant ape.", "he": "סרט על קוף ענק." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3226,6 +3287,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1600",
+        "hint": { "en": "A film about a wizard boy.", "he": "סרט על ילד קוסם." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3251,6 +3313,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1601",
+        "hint": { "en": "A movie set in space with Jedis.", "he": "סרט שמתרחש בחלל עם ג'דיי." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3276,6 +3339,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1602",
+        "hint": { "en": "A story about a lion cub.", "he": "סיפור על גור אריות." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3301,6 +3365,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1603",
+        "hint": { "en": "A superhero who dresses like a bat.", "he": "גיבור על שמתלבש כמו עטלף." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3326,6 +3391,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1604",
+        "hint": { "en": "An archeologist with a whip.", "he": "ארכיאולוג עם שוט." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3351,6 +3417,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1605",
+        "hint": { "en": "A film about a sinking ship.", "he": "סרט על ספינה טובעת." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3376,6 +3443,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1606",
+        "hint": { "en": "A movie featuring a clownfish.", "he": "סרט שבו מופיע דג ליצן." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3401,6 +3469,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1607",
+        "hint": { "en": "A story about toys that come to life.", "he": "סיפור על צעצועים שקמים לתחייה." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3426,6 +3495,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1608",
+        "hint": { "en": "A film about a group of superheroes from Marvel.", "he": "סרט על קבוצת גיבורי על ממארוול." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3451,6 +3521,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1609",
+        "hint": { "en": "An animated movie about sisters and snow.", "he": "סרט מצויר על אחיות ושלג." },
         "category": "movies",
         "level": 3,
         "text": {
@@ -3476,6 +3547,7 @@ export const culture_entQuestions = [
     },
 {
         "id": "q-movies-1610",
+        "hint": { "en": "A movie about a secret agent with the code 007.", "he": "סרט על סוכן חשאי עם הקוד 007." },
         "category": "movies",
         "level": 3,
         "text": {

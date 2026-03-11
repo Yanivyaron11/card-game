@@ -22,7 +22,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🟢"
+        "emoji": "🟢",
+        "hint": {"en":"They are often called 'The Greens'.","he":"הם מכונים לעיתים קרובות 'הירוקים'."}
     },
 {
         "id": "q-maccabi_haifa-311",
@@ -47,7 +48,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🏙️"
+        "emoji": "🏙️",
+        "hint": {"en":"The city on Mount Carmel.","he":"העיר שעל הר הכרמל."}
     },
 {
         "id": "q-maccabi_haifa-312",
@@ -72,7 +74,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🏟️"
+        "emoji": "🏟️",
+        "hint": {"en":"Named after a famous Israeli businessman, located at the southern entrance of Haifa.","he":"קרוי על שם איש עסקים ישראלי מפורסם, ממוקם בכניסה הדרומית לחיפה."}
     },
 {
         "id": "q-maccabi_haifa-313",
@@ -97,7 +100,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "💎"
+        "emoji": "💎",
+        "hint": {"en":"A legendary midfielder who played in England and was the captain of the national team.","he":"קשר אגדי ששיחק באנגליה והיה קפטן הנבחרת."}
     },
 {
         "id": "q-maccabi_haifa-314",
@@ -122,7 +126,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍀"
+        "emoji": "🍀",
+        "hint": {"en":"Inspired by their primary color.","he":"בהשראת צבע המדים העיקרי שלהם."}
     },
 {
         "id": "q-maccabi_haifa-315",
@@ -147,7 +152,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇪🇺"
+        "emoji": "🇪🇺",
+        "hint": {"en":"It happened in the 2002-2003 season.","he":"זה קרה בעונת 2002-2003."}
     },
 {
         "id": "q-maccabi_haifa-316",
@@ -172,7 +178,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🎯"
+        "emoji": "🎯",
+        "hint": {"en":"A striker who played in the 80s and is a club legend.","he":"חלוץ ששיחק בשנות ה-80 והוא אגדת מועדון."}
     },
 {
         "id": "q-maccabi_haifa-317",
@@ -197,7 +204,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "⭐"
+        "emoji": "⭐",
+        "hint": {"en":"Associated with the worldwide Maccabi movement.","he":"מזוהה עם תנועת מכבי העולמית."}
     },
 {
         "id": "q-maccabi_haifa-318",
@@ -222,7 +230,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "👕"
+        "emoji": "👕",
+        "hint": {"en":"A beloved captain who grew up in the club and is nicknamed 'The Small one'.","he":"קפטן אהוב שגדל במועדון ומכונה 'הקטן'."}
     },
 {
         "id": "q-maccabi_haifa-319",
@@ -247,7 +256,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🏟️"
+        "emoji": "🏟️",
+        "hint": {"en":"A stadium in the neighborhood of the same name, demolished in 2014.","he":"אצטדיון בשכונה בעלת אותו שם, נהרס בשנת 2014."}
     },
 {
         "id": "q-maccabi_haifa-320",
@@ -272,7 +282,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "⚽"
+        "emoji": "⚽",
+        "hint": {"en":"Played with a round ball on a green field.","he":"משוחק עם כדור עגול על מגרש ירוק."}
     },
 {
         "id": "q-maccabi_haifa-321",
@@ -297,7 +308,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "👔"
+        "emoji": "👔",
+        "hint": {"en":"Owns 'Meir' car import company.","he":"הבעלים של חברת ייבוא הרכב 'מאיר'."}
     },
 {
         "id": "q-maccabi_haifa-322",
@@ -322,7 +334,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "👔"
+        "emoji": "👔",
+        "hint": {"en":"A coach who also won championships with Hapoel Be'er Sheva.","he":"מאמן שזכה באליפויות גם עם הפועל באר שבע."}
     },
 {
         "id": "q-maccabi_haifa-323",
@@ -347,7 +360,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+        "emoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "hint": {"en":"'The Diamond' from Dimona.","he":"'היהלום' מדימונה."}
     },
 {
         "id": "q-maccabi_haifa-324",
@@ -372,7 +386,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🧤"
+        "emoji": "🧤",
+        "hint": {"en":"Born and raised in Haifa, nicknamed 'The Octopus'.","he":"נולד וגדל בחיפה, מכונה 'התמנון'."}
     },
 {
         "id": "q-maccabi_haifa-325",
@@ -397,7 +412,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "✈️"
+        "emoji": "✈️",
+        "hint": {"en":"Known as 'The King of Goals'.","he":"ידוע בכינוי 'אלון מלך השערים'."}
     },
 {
         "id": "q-maccabi_haifa-326",
@@ -422,7 +438,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🧠"
+        "emoji": "🧠",
+        "hint": {"en":"He coached the team during the historic group stage.","he":"הוא אימן את הקבוצה בשלב הבתים ההיסטורי."}
     },
 {
         "id": "q-maccabi_haifa-327",
@@ -447,7 +464,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "👿"
+        "emoji": "👿",
+        "hint": {"en":"Famous English team from Manchester.","he":"קבוצה אנגלית מפורסמת ממנצ'סטר."}
     },
 {
         "id": "q-maccabi_haifa-328",
@@ -472,7 +490,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🧑‍🦱"
+        "emoji": "🧑‍🦱",
+        "hint": {"en":"Known for his amazing curls and free kicks.","he":"ידוע בתלתלים המפורסמים שלו ובבעיטות חופשיות."}
     },
 {
         "id": "q-maccabi_haifa-329",
@@ -497,7 +516,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇭🇷"
+        "emoji": "🇭🇷",
+        "hint": {"en":"A charismatic player who became very attached to the club.","he":"שחקן כריזמטי שהתחבר מאוד למועדון."}
     },
 {
         "id": "q-maccabi_haifa-330",
@@ -522,7 +542,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🇭🇹"
+        "emoji": "🇭🇹",
+        "hint": {"en":"A very tall and strong player, often called 'The Hulk'.","he":"שחקן גבוה וחזק מאוד, המכונה לעיתים 'הענק'."}
     },
 {
         "id": "q-maccabi_haifa-331",
@@ -547,7 +568,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🏅"
+        "emoji": "🏅",
+        "hint": {"en":"A left-footed winger with many goals and assists.","he":"שחקן כנף שמאלי עם המון שערים ובישולים."}
     },
 {
         "id": "q-maccabi_haifa-332",
@@ -572,7 +594,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🦍"
+        "emoji": "🦍",
+        "hint": {"en":"Their name refers to a primate.","he":"השם שלהם מתייחס לסוג של קוף."}
     },
 {
         "id": "q-maccabi_haifa-333",
@@ -597,7 +620,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🏆"
+        "emoji": "🏆",
+        "hint": {"en":"A legendary manager who later coached the national team.","he":"מאמן אגדי שאימן מאוחר יותר את הנבחרת."}
     },
 {
         "id": "q-maccabi_haifa-334",
@@ -622,7 +646,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🛡️"
+        "emoji": "🛡️",
+        "hint": {"en":"They didn't lose a single game in the league.","he":"הם לא הפסידו אף משחק בליגה."}
     },
 {
         "id": "q-maccabi_haifa-335",
@@ -647,7 +672,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🎗️"
+        "emoji": "🎗️",
+        "hint": {"en":"A very talented young keeper.","he":"שוער צעיר ומוכשר מאוד."}
     },
 {
         "id": "q-maccabi_haifa-336",
@@ -672,7 +698,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🕰️"
+        "emoji": "🕰️",
+        "hint": {"en":"In the early 20th century.","he":"בתחילת המאה ה-20."}
     },
 {
         "id": "q-maccabi_haifa-337",
@@ -697,7 +724,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇮🇹"
+        "emoji": "🇮🇹",
+        "hint": {"en":"Known as 'The Old Lady'.","he":"מכונה 'הגברת הזקנה'."}
     },
 {
         "id": "q-maccabi_haifa-338",
@@ -722,7 +750,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "⚽"
+        "emoji": "⚽",
+        "hint": {"en":"The star who wore number 7 at the time.","he":"הכוכב שלבש את חולצה מספר 7 באותו זמן."}
     },
 {
         "id": "q-maccabi_haifa-339",
@@ -747,7 +776,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🇳🇬"
+        "emoji": "🇳🇬",
+        "hint": {"en":"A young Nigerian who later became a star in England.","he":"ניגרי צעיר שהפך מאוחר יותר לכוכב באנגליה."}
     },
 {
         "id": "q-maccabi_haifa-340",
@@ -772,7 +802,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🤯"
+        "emoji": "🤯",
+        "hint": {"en":"A very high score for the winning side (5 goals).","he":"תוצאה גבוהה מאוד לצד המנצח (5 שערים)."}
     },
 {
         "id": "q-maccabi_haifa-341",
@@ -797,7 +828,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🛡️"
+        "emoji": "🛡️",
+        "hint": {"en":"A right-back who holds the record for most appearances.","he":"מגן ימני המחזיק בשיא ההופעות."}
     },
 {
         "id": "q-maccabi_haifa-342",
@@ -1701,6 +1733,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-378",
+        "hint": { "en": "A famous team from Paris, France.", "he": "קבוצה מפורסמת מפריז, צרפת." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1726,6 +1759,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-379",
+        "hint": { "en": "A major club from Greece.", "he": "מועדון פאר מיוון." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -1751,6 +1785,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-maccabi_haifa-380",
+        "hint": { "en": "A legendary English team known as the Red Devils.", "he": "קבוצה אנגלית אגדית המכונה 'השדים האדומים'." },
         "category": "maccabi_haifa",
         "level": 3,
         "text": {
@@ -3897,7 +3932,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🧂"
+        "emoji": "🧂",
+        "hint": {"en":"It helps with the dough's strength and controls how fast it rises.","he":"הוא עוזר לחוזק הבצק ומבקר את מהירות התפיחה."}
     },
 {
         "id": "q-patisserie-966",
@@ -3922,7 +3958,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🥚"
+        "emoji": "🥚",
+        "hint": {"en":"It's an acid that helps keep the foam stable.","he":"זוהי חומצה שעוזרת לשמור על יציבות הקצף."}
     },
 {
         "id": "q-patisserie-967",
@@ -3947,7 +3984,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌡️"
+        "emoji": "🌡️",
+        "hint": {"en":"Think about what happens to the heat once you take the dish off the stove.","he":"חשבו על מה שקורה לחום לאחר שמורידים את התבליל מהאש."}
     },
 {
         "id": "q-patisserie-968",
@@ -3972,7 +4010,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🥣"
+        "emoji": "🥣",
+        "hint": {"en":"It's the process where starch absorbs liquid and thickens.","he":"זהו התהליך שבו עמילן סופג נוזל ומסמיך."}
     },
 {
         "id": "q-patisserie-969",
@@ -3997,7 +4036,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🍰"
+        "emoji": "🍰",
+        "hint": {"en":"It helps the batter hold more liquid and sugar than usual.","he":"זה עוזר לבלילה להחזיק יותר נוזלים וסוכר מהרגיל."}
     },
 {
         "id": "q-patisserie-970",
@@ -4022,7 +4062,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🥧"
+        "emoji": "🥧",
+        "hint": {"en":"Baking the crust empty before adding the filling.","he":"אפיית הקרום כשהוא ריק לפני הוספת המילוי."}
     },
 {
         "id": "q-patisserie-971",
@@ -4047,7 +4088,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍴"
+        "emoji": "🍴",
+        "hint": {"en":"Poking small holes to let steam escape.","he":"ניקוב חורים קטנים כדי לאפשר לאדים לצאת."}
     },
 {
         "id": "q-patisserie-972",
@@ -4072,7 +4114,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🥣"
+        "emoji": "🥣",
+        "hint": {"en":"Mixing fat and flour until it looks like small crumbs.","he":"ערבוב שומן וקמח עד שזה נראה כמו פירורים קטנים."}
     },
 {
         "id": "q-patisserie-973",
@@ -13897,7 +13940,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍌"
+        "emoji": "🍌",
+        "hint": {"en":"It's the same color as the sun.","he":"זה באותו צבע של השמש."}
     },
 {
         "id": "q-food-1680",
@@ -13922,7 +13966,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍓"
+        "emoji": "🍓",
+        "hint": {"en":"A small red fruit often used in desserts.","he":"פרי אדום קטן שמשתמשים בו לעיתים קרובות בקינוחים."}
     },
 {
         "id": "q-food-1681",
@@ -13947,7 +13992,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍯"
+        "emoji": "🍯",
+        "hint": {"en":"It's sweet, sticky, and yellow-gold.","he":"זה מתוק, דביק וצבעו זהוב-צהוב."}
     },
 {
         "id": "q-food-1682",
@@ -13972,7 +14018,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🥕"
+        "emoji": "🥕",
+        "hint": {"en":"Bugs Bunny loves this orange snack.","he":"באגס באני אוהב מאוד את הנשנוש הכתום הזה."}
     },
 {
         "id": "q-food-1683",
@@ -13997,7 +14044,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍳"
+        "emoji": "🍳",
+        "hint": {"en":"You have to crack them open before cooking.","he":"צריך לשבור אותן לפני שמבשלים."}
     },
 {
         "id": "q-food-1684",
@@ -14022,7 +14070,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍕"
+        "emoji": "🍕",
+        "hint": {"en":"It's often round but cut into triangles.","he":"הוא בדרך כלל עגול אבל חותכים אותו למשולשים."}
     },
 {
         "id": "q-food-1685",
@@ -14047,7 +14096,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍎"
+        "emoji": "🍎",
+        "hint": {"en":"The answer is right there in the name!","he":"התשובה נמצאת ממש בתוך השם!"}
     },
 {
         "id": "q-food-1686",
@@ -14072,7 +14122,8 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🥕"
+        "emoji": "🥕",
+        "hint": {"en":"A crunchy root vegetable high in Vitamin A.","he":"ירק שורש פריך עם הרבה ויטמין A."}
     },
 {
         "id": "q-food-1687",

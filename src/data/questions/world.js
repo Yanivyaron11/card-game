@@ -22,7 +22,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🇫🇷🗼"
+        "emoji": "🇫🇷🗼",
+        "hint": {"en":"It's the 'City of Light' and home to the Eiffel Tower.","he":"זוהי 'עיר האורות' והבית של מגדל אייפל."}
     },
 {
         "id": "q-countries-1512",
@@ -47,7 +48,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🗼🥖"
+        "emoji": "🗼🥖",
+        "hint": {"en":"The capital of France.","he":"עיר הבירה של צרפת."}
     },
 {
         "id": "q-countries-1513",
@@ -72,7 +74,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇮🇹👢"
+        "emoji": "🇮🇹👢",
+        "hint": {"en":"Famous for pasta, pizza, and the Colosseum.","he":"מפורסמת בזכות פסטה, פיצה והקולוסיאום."}
     },
 {
         "id": "q-countries-1514",
@@ -97,7 +100,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇺🇸🦅"
+        "emoji": "🇺🇸🦅",
+        "hint": {"en":"Named after the first president and located in a special district (D.C.).","he":"קרויה על שם הנשיא הראשון ונמצאת במחוז מיוחד (D.C)."}
     },
 {
         "id": "q-countries-1515",
@@ -122,7 +126,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇪🇬🐪"
+        "emoji": "🇪🇬🐪",
+        "hint": {"en":"An ancient civilization along the Nile River.","he":"ציוויליזציה עתיקה לאורך נהר הנילוס."}
     },
 {
         "id": "q-countries-1516",
@@ -147,7 +152,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍕🇮🇹"
+        "emoji": "🍕🇮🇹",
+        "hint": {"en":"Think of the colors red, white, and green on their flag.","he":"חשבו על צבעי האדום, לבן וירוק בדגל שלהם."}
     },
 {
         "id": "q-countries-1517",
@@ -172,7 +178,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇮🇳🕌"
+        "emoji": "🇮🇳🕌",
+        "hint": {"en":"A country in South Asia with the second-largest population.","he":"מדינה בדרום אסיה עם האוכלוסייה השנייה בגודלה בעולם."}
     },
 {
         "id": "q-countries-1518",
@@ -197,7 +204,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇦🇺🌏"
+        "emoji": "🇦🇺🌏",
+        "hint": {"en":"It's often called 'The Land Down Under'.","he":"מדינה הגדולה הנמצאת בחצי הכדור הדרומי."}
     },
 {
         "id": "q-countries-1519",
@@ -222,7 +230,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇮🇹🏟️"
+        "emoji": "🇮🇹🏟️",
+        "hint": {"en":"All roads lead here.","he":"כל הדרכים מובילות לשם."}
     },
 {
         "id": "q-countries-1520",
@@ -247,7 +256,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇨🇳🏯"
+        "emoji": "🇨🇳🏯",
+        "hint": {"en":"The world's most populous country.","he":"המדינה עם האוכלוסייה הגדולה בעולם."}
     },
 {
         "id": "q-countries-1521",
@@ -272,7 +282,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇬🇧🎡"
+        "emoji": "🇬🇧🎡",
+        "hint": {"en":"Home to Big Ben and the River Thames.","he":"הבית של הביג בן ונהר התמזה."}
     },
 {
         "id": "q-countries-1522",
@@ -297,7 +308,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇨🇦🍁"
+        "emoji": "🇨🇦🍁",
+        "hint": {"en":"Its flag has a red maple leaf.","he":"בדגל שלה יש עלה מייפל אדום."}
     },
 {
         "id": "q-countries-1523",
@@ -322,7 +334,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🗽🇺🇸"
+        "emoji": "🗽🇺🇸",
+        "hint": {"en":"It stands in New York Harbor.","he":"הוא ניצב בנמל ניו יורק."}
     },
 {
         "id": "q-countries-1524",
@@ -347,7 +360,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇪🇸⚽"
+        "emoji": "🇪🇸⚽",
+        "hint": {"en":"Located in the center of the Iberian Peninsula.","he":"נמצאת במרכז חצי האי האיברי."}
     },
 {
         "id": "q-countries-1525",
@@ -372,7 +386,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇨🇦🏞️"
+        "emoji": "🇨🇦🏞️",
+        "hint": {"en":"A large and cold country in North America.","he":"מדינה גדולה וקרה בצפון אמריקה."}
     },
 {
         "id": "q-countries-1526",
@@ -397,7 +412,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇯🇵🗼"
+        "emoji": "🇯🇵🗼",
+        "hint": {"en":"A huge, high-tech city in the East.","he":"עיר ענקית ומתקדמת במזרח."}
     },
 {
         "id": "q-countries-1527",
@@ -422,7 +438,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇧🇷🦜"
+        "emoji": "🇧🇷🦜",
+        "hint": {"en":"The largest country in South America.","he":"המדינה הגדולה ביותר בדרום אמריקה."}
     },
 {
         "id": "q-countries-1528",
@@ -447,7 +464,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇩🇪🍺"
+        "emoji": "🇩🇪🍺",
+        "hint": {"en":"Home to the Brandenburg Gate.","he":"הבית של שער ברנדנבורג."}
     },
 {
         "id": "q-countries-1529",
@@ -472,7 +490,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇪🇬🏺"
+        "emoji": "🇪🇬🏺",
+        "hint": {"en":"The country with the Pyramids and the Sphinx.","he":"המדינה עם הפירמידות והספינקס."}
     },
 {
         "id": "q-countries-1530",
@@ -497,7 +516,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🇯🇵🚩"
+        "emoji": "🇯🇵🚩",
+        "hint": {"en":"The 'Land of the Rising Sun'.","he":"מכונה 'ארץ השמש העולה'."}
     },
 {
         "id": "q-countries-1531",
@@ -1197,7 +1217,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌊"
+        "emoji": "🌊",
+        "hint": {"en":"The name starts with the letter 'T'.","he":"השם מתחיל באות 'ת'."}
     },
 {
         "id": "q-london-1880",
@@ -1222,7 +1243,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🚌"
+        "emoji": "🚌",
+        "hint": {"en":"The same color as fire trucks in the UK.","he":"זהו אותו צבע כמו של כבאיות בבריטניה."}
     },
 {
         "id": "q-london-1881",
@@ -1247,7 +1269,8 @@ export const worldQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🏰"
+        "emoji": "🏰",
+        "hint": {"en":"The main member of the royal family.","he":"החבר העיקרי במשפחת המלוכה."}
     },
 {
         "id": "q-london-1882",
@@ -3076,6 +3099,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1955",
+        "hint": { "en": "It starts with L and has been the home of the Archbishop since the 13th century.", "he": "שמו מתחיל ב-ל' והוא משמש מעון לארכיבישוף מאז המאה ה-13." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3101,6 +3125,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1956",
+        "hint": { "en": "It bears the city's name and was replaced in 1973.", "he": "הוא נושא את שם העיר והוחלף בשנת 1973." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3126,6 +3151,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1957",
+        "hint": { "en": "A world-famous street carnival held in August.", "he": "קרנבל רחוב מפורסם בעולם המתקיים באוגוסט." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3151,6 +3177,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1958",
+        "hint": { "en": "The square is named after a famous British naval victory.", "he": "הכיכר קרויה על שם ניצחון ימי גדול של הבריטים." },
         "category": "london",
         "level": 3,
         "text": {

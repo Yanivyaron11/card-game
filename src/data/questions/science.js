@@ -24,7 +24,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍎"
+        "emoji": "🍎",
+        "hint": {"en":"You need to add the two numbers together.","he":"צריך לחבר את שני המספרים יחד."}
     },
 {
         "id": "q-math-466",
@@ -51,7 +52,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🐕"
+        "emoji": "🐕",
+        "hint": {"en":"Try multiplying 4 by 5.","he":"נסו להכפיל 4 ב-5."}
     },
 {
         "id": "q-math-467",
@@ -78,7 +80,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🖊️"
+        "emoji": "🖊️",
+        "hint": {"en":"Multiply the number of pens in a box by the number of boxes.","he":"הכפילו את מספר העטים בקופסה במספר הקופסאות."}
     },
 {
         "id": "q-math-468",
@@ -105,7 +108,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍕"
+        "emoji": "🍕",
+        "hint": {"en":"Double the number of pizzas twice, or multiply 2 by 4.","he":"הכפילו את מספר הפיצות ב-2, או חשבו כמה זה 2 כפול 4."}
     },
 {
         "id": "q-math-469",
@@ -132,7 +136,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🚌"
+        "emoji": "🚌",
+        "hint": {"en":"Subtract the taken seats from the total number of seats.","he":"חסרו את המושבים התפוסים מסך כל המושבים."}
     },
 {
         "id": "q-math-470",
@@ -159,7 +164,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🚂"
+        "emoji": "🚂",
+        "hint": {"en":"Add 19 to 134. Think: 134 + 20 - 1.","he":"חברו 19 ל-134. טיפ: אפשר לחבר 20 ואז להחסיר 1."}
     },
 {
         "id": "q-math-471",
@@ -186,7 +192,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🍪"
+        "emoji": "🍪",
+        "hint": {"en":"Just count back one from 13.","he":"פשוט ספרו אחד אחורה מ-13."}
     },
 {
         "id": "q-math-472",
@@ -213,7 +220,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🐦"
+        "emoji": "🐦",
+        "hint": {"en":"Subtract 10 from 15.","he":"חסרו 10 מ-15."}
     },
 {
         "id": "q-math-473",
@@ -240,7 +248,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🌻"
+        "emoji": "🌻",
+        "hint": {"en":"Subtract 34 from 115.","he":"חסרו 34 מ-115."}
     },
 {
         "id": "q-math-474",
@@ -267,7 +276,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🐱"
+        "emoji": "🐱",
+        "hint": {"en":"What is 7 plus 3?","he":"כמה זה 7 ועוד 3?"}
     },
 {
         "id": "q-math-475",
@@ -294,7 +304,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "📚"
+        "emoji": "📚",
+        "hint": {"en":"Add 4 to 26 to reach the next round number.","he":"חברו 4 ל-26 כדי להגיע למספר העגול הבא."}
     },
 {
         "id": "q-math-476",
@@ -321,7 +332,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "✨"
+        "emoji": "✨",
+        "hint": {"en":"Subtract 20, then subtract 5.","he":"חסרו 20, ואז חסרו עוד 5."}
     },
 {
         "id": "q-math-477",
@@ -348,7 +360,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🖍️"
+        "emoji": "🖍️",
+        "hint": {"en":"What is 2 times 4?","he":"כמה זה 2 כפול 4?"}
     },
 {
         "id": "q-math-478",
@@ -375,7 +388,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐠"
+        "emoji": "🐠",
+        "hint": {"en":"Add 4 to 20.","he":"חברו 4 ל-20."}
     },
 {
         "id": "q-math-479",
@@ -402,7 +416,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🎈"
+        "emoji": "🎈",
+        "hint": {"en":"Subtract 1 from the tens digit.","he":"חסרו 1 ספרת העשרות."}
     },
 {
         "id": "q-math-480",
@@ -429,7 +444,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🍎"
+        "emoji": "🍎",
+        "hint": {"en":"What is the next number after 14?","he":"מהו המספר הבא אחרי 14?"}
     },
 {
         "id": "q-math-481",
@@ -456,7 +472,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🐕"
+        "emoji": "🐕",
+        "hint": {"en":"What is 4 times 6?","he":"כמה זה 4 כפול 6?"}
     },
 {
         "id": "q-math-482",
@@ -483,7 +500,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🖊️"
+        "emoji": "🖊️",
+        "hint": {"en":"Double 8.","he":"הכפילו את 8 ב-2."}
     },
 {
         "id": "q-math-483",
@@ -510,7 +528,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍕"
+        "emoji": "🍕",
+        "hint": {"en":"Same as before, 2 times 4.","he":"כמו קודם, כמה זה 2 כפול 4?"}
     },
 {
         "id": "q-math-484",
@@ -537,7 +556,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🚌"
+        "emoji": "🚌",
+        "hint": {"en":"Count up from 8 to 11.","he":"ספרו מ-8 עד 11."}
     },
 {
         "id": "q-math-485",
@@ -564,7 +584,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🚂"
+        "emoji": "🚂",
+        "hint": {"en":"Add 10 to 100.","he":"חברו 10 ל-100."}
     },
 {
         "id": "q-math-486",
@@ -591,7 +612,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍪"
+        "emoji": "🍪",
+        "hint": {"en":"Subtract 3 to get to 10, then 1 more.","he":"חסרו 3 כדי להגיע ל-10, ואז עוד 1."}
     },
 {
         "id": "q-math-487",
@@ -618,7 +640,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐦"
+        "emoji": "🐦",
+        "hint": {"en":"Subtract 4 to get to 20, then 2 more.","he":"חסרו 4 כדי להגיע ל-20, ואז עוד 2."}
     },
 {
         "id": "q-math-488",
@@ -645,7 +668,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🌻"
+        "emoji": "🌻",
+        "hint": {"en":"Subtract 33 from 115.","he":"חסרו 33 מ-115."}
     },
 {
         "id": "q-math-489",
@@ -672,7 +696,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐱"
+        "emoji": "🐱",
+        "hint": {"en":"Add 3 to 8.","he":"חברו 3 ל-8."}
     },
 {
         "id": "q-math-490",
@@ -699,7 +724,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "📚"
+        "emoji": "📚",
+        "hint": {"en":"What is 11 plus 2?","he":"כמה זה 11 ועוד 2?"}
     },
 {
         "id": "q-math-491",
@@ -726,7 +752,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "✨"
+        "emoji": "✨",
+        "hint": {"en":"Subtract 2 from the tens digit.","he":"חסרו 2 מספרת העשרות."}
     },
 {
         "id": "q-math-492",
@@ -753,7 +780,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🖍️"
+        "emoji": "🖍️",
+        "hint": {"en":"What is 2 times 4?","he":"כמה זה 2 כפול 4?"}
     },
 {
         "id": "q-math-493",
@@ -780,7 +808,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐠"
+        "emoji": "🐠",
+        "hint": {"en":"Add 2 to 17.","he":"חברו 2 ל-17."}
     },
 {
         "id": "q-math-494",
@@ -807,7 +836,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🎈"
+        "emoji": "🎈",
+        "hint": {"en":"Subtract the tens (50-30) and then the ones (7-4).","he":"חסרו את העשרות (50 פחות 30) ואז את היחידות (7 פחות 4)."}
     },
 {
         "id": "q-math-495",
@@ -1162,6 +1192,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-508",
+        "hint": { "en": "Numbers that can only be divided by 1 and themselves.", "he": "מספרים שניתן לחלק אותם רק ב-1 ובעצמם." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "fish",
@@ -1189,6 +1220,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-509",
+        "hint": { "en": "It is the square of 10.", "he": "זהו הריבוע של המספר 10." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -1216,6 +1248,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-510",
+        "hint": { "en": "It is exactly half of the degrees in a full circle.", "he": "זה בדיוק מחצית ממספר המעלות במעגל שלם." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "apples",
@@ -1243,6 +1276,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-511",
+        "hint": { "en": "A field of study named after the Greek word for 'earth measurement'.", "he": "תחום לימוד הקרוי על שם המילה היוונית ל'מדידת קרקע'." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "dogs",
@@ -13522,7 +13556,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🧠"
+        "emoji": "🧠",
+        "hint": {"en":"The scientific word for the study of behavior.","he":"המילה המדעית לחקר ההתנהגות."}
     },
 {
         "id": "q-psychology-2702",
@@ -13547,7 +13582,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "😡"
+        "emoji": "😡",
+        "hint": {"en":"Think of what happens when you get very mad.","he":"חשבו על מה שקורה כשמתעצבנים מאוד."}
     },
 {
         "id": "q-psychology-2703",
@@ -13572,7 +13608,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "❤️"
+        "emoji": "❤️",
+        "hint": {"en":"It's different from sympathy; it's about feeling with them.","he":"זה שונה מסימפתיה; זה קשור להרגיש יחד איתם."}
     },
 {
         "id": "q-psychology-2704",
@@ -13597,7 +13634,8 @@ export const scienceQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "😊"
+        "emoji": "😊",
+        "hint": {"en":"Another word for happiness.","he":"מילה אחרת לשמחה."}
     },
 {
         "id": "q-psychology-2705",

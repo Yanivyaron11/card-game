@@ -1,5 +1,5 @@
 export const judaismQuestions = [
-{
+    {
         "id": "q-judaism-1",
         "category": "bible_stories",
         "level": 1,
@@ -22,9 +22,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🌍"
+        "emoji": "🌍",
+        "hint": { "en": "It was the last day of work before the Shabbat.", "he": "זה היה יום העבודה האחרון לפני השבת." }
     },
-{
+    {
         "id": "q-judaism-2",
         "category": "bible_stories",
         "level": 1,
@@ -47,10 +48,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐦"
+        "emoji": "🐦",
+        "hint": { "en": "This black bird is often considered a bad omen, but it was the first to leave the ark.", "he": "ציפור שחורה זו נחשבת לעיתים קרובות לסימן רע, אך היא הייתה הראשונה שיצאה מהתיבה." }
     },
-{
+    {
         "id": "q-judaism-3",
+        "hint": { "en": "The son who was almost sacrificed on Mount Moriah.", "he": "הבן שכמעט הוקרב על הר המוריה." },
         "category": "bible_stories",
         "level": 1,
         "text": {
@@ -72,9 +75,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🌈"
+        "emoji": "🌈",
+        "hint": { "en": "A beautiful multicolored arc in the sky after the rain.", "he": "קשת יפה ורב-צבעונית בשמיים לאחר הגשם." }
     },
-{
+    {
         "id": "q-judaism-4",
         "category": "bible_stories",
         "level": 2,
@@ -97,9 +101,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🏙️"
+        "emoji": "🏙️",
+        "hint": { "en": "He and his family lived in the wicked city of Sodom.", "he": "הוא ומשפחתו התגוררו בעיר הרשעה סדום." }
     },
-{
+    {
         "id": "q-judaism-5",
         "category": "bible_stories",
         "level": 2,
@@ -122,9 +127,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🧂"
+        "emoji": "🧂",
+        "hint": { "en": "She was punished for looking back and became a white pillar of this seasoning.", "he": "היא נענשה על שהביטה לאחור והפכה לנציב לבן של התבלין הזה." }
     },
-{
+    {
         "id": "q-judaism-6",
         "category": "bible_stories",
         "level": 1,
@@ -147,9 +153,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "⛰️"
+        "emoji": "⛰️",
+        "hint": { "en": "This son's name means 'he will laugh'.", "he": "שמו של הבן הזה מרמז על צחוק." }
     },
-{
+    {
         "id": "q-judaism-7",
         "category": "bible_stories",
         "level": 2,
@@ -172,9 +179,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "👦👦"
+        "emoji": "👦👦",
+        "hint": { "en": "One was a hunter and the other was a 'simple man' living in tents.", "he": "אחד היה איש ציד והשני היה 'איש תם' שיושב אוהלים." }
     },
-{
+    {
         "id": "q-judaism-8",
         "category": "bible_stories",
         "level": 2,
@@ -197,9 +205,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🍲"
+        "emoji": "🍲",
+        "hint": { "en": "Esau was very hungry and sold his future for a hot red bowl of this.", "he": "עשו היה רעב מאוד ומכר את עתידו תמורת קערה אדומה וחמה של זה." }
     },
-{
+    {
         "id": "q-judaism-9",
         "category": "bible_stories",
         "level": 2,
@@ -222,10 +231,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🪜"
+        "emoji": "🪜",
+        "hint": { "en": "Celestial beings were going up and down.", "he": "יצורים שמימיים עלו וירדו בו." }
     },
-{
+    {
         "id": "q-judaism-10",
+        "hint": { "en": "He had to work for many years to marry the woman he loved.", "he": "הוא נאלץ לעבוד שנים רבות כדי לשאת את האישה שאהב." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -247,9 +258,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "⏳"
+        "emoji": "⏳",
+        "hint": { "en": "It's the number of completion, repeated twice later.", "he": "זהו מספר שלמות, שחזר על עצמו פעמיים במצטבר." }
     },
-{
+    {
         "id": "q-judaism-11",
         "category": "bible_stories",
         "level": 2,
@@ -272,9 +284,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "👩"
+        "emoji": "👩",
+        "hint": { "en": "Jacob's most beloved wife.", "he": "אשתו האהובה ביותר של יעקב." }
     },
-{
+    {
         "id": "q-judaism-12",
         "category": "bible_stories",
         "level": 2,
@@ -297,10 +310,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🧥"
+        "emoji": "🧥",
+        "hint": { "en": "A special piece of clothing that made his brothers jealous.", "he": "בגד מיוחד שגרם לאחיו לקנא." }
     },
-{
+    {
         "id": "q-judaism-13",
+        "hint": { "en": "A group of traders traveling with camels.", "he": "קבוצת סוחרים הנוסעים עם גמלים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -322,10 +337,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐫"
+        "emoji": "🐫",
+        "hint": { "en": "They were traveling traders going down to Egypt.", "he": "הם היו סוחרים נודדים שירדו למצרים." }
     },
-{
+    {
         "id": "q-judaism-14",
+        "hint": { "en": "They did something you wouldn't expect a cow to do to another.", "he": "הן עשו משהו שלא היית מצפה מפרה לעשות לאחרת." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -347,9 +364,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐄🐄"
+        "emoji": "🐄🐄",
+        "hint": { "en": "The hungry, skinny ones did something shocking to the healthy ones.", "he": "הרזות והרעבות עשו דבר מזעזע לבריאות והשמנות." }
     },
-{
+    {
         "id": "q-judaism-15",
         "category": "bible_stories",
         "level": 2,
@@ -372,9 +390,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "⛓️"
+        "emoji": "⛓️",
+        "hint": { "en": "Joseph kept him while the others returned to Canaan to bring Benjamin.", "he": "יוסף השאיר אותו במאסר בזמן שהאחרים חזרו לכנען להביא את בנימין." }
     },
-{
+    {
         "id": "q-judaism-16",
         "category": "bible_stories",
         "level": 1,
@@ -397,9 +416,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "👳‍♂️"
+        "emoji": "👳‍♂️",
+        "hint": { "en": "Moses' older brother.", "he": "אחיו הגדול של משה." }
     },
-{
+    {
         "id": "q-judaism-17",
         "category": "bible_stories",
         "level": 2,
@@ -422,10 +442,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🛡️"
+        "emoji": "🛡️",
+        "hint": { "en": "This tribe was chosen for the service in the Tabernacle.", "he": "השבט הזה נבחר לשירות במשכן." }
     },
-{
+    {
         "id": "q-judaism-18",
+        "hint": { "en": "His name means 'Laughter'.", "he": "שמו מרמז על צחוק." },
         "category": "bible_stories",
         "level": 1,
         "text": {
@@ -447,9 +469,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🩸"
+        "emoji": "🩸",
+        "hint": { "en": "The Nile river turned this color.", "he": "נהר הנילוס הפך לצבע הזה." }
     },
-{
+    {
         "id": "q-judaism-19",
         "category": "bible_stories",
         "level": 1,
@@ -472,9 +495,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "💀"
+        "emoji": "💀",
+        "hint": { "en": "The most devastating plague that finally led to the Exodus.", "he": "המכה הקשה ביותר שבסופה יצאו בני ישראל ממצרים." }
     },
-{
+    {
         "id": "q-judaism-20",
         "category": "bible_stories",
         "level": 2,
@@ -497,9 +521,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌊"
+        "emoji": "🌊",
+        "hint": { "en": "A large body of water that split in two.", "he": "גוף מים גדול שנבקע לשניים." }
     },
-{
+    {
         "id": "q-judaism-21",
         "category": "bible_stories",
         "level": 1,
@@ -522,9 +547,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "❄️"
+        "emoji": "❄️",
+        "hint": { "en": "It tasted like wafers made with honey and fell every morning except Shabbat.", "he": "טעמו היה כצפיחית בדבש והוא ירד בכל בוקר מלבד שבת." }
     },
-{
+    {
         "id": "q-judaism-22",
         "category": "bible_stories",
         "level": 2,
@@ -547,9 +573,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🐂"
+        "emoji": "🐂",
+        "hint": { "en": "An idol made of jewelry while Moses was on the mountain.", "he": "פסל שנעשה מתכשיטים בזמן שמשה היה על ההר." }
     },
-{
+    {
         "id": "q-judaism-23",
         "category": "bible_stories",
         "level": 2,
@@ -572,10 +599,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "💪"
+        "emoji": "💪",
+        "hint": { "en": "They stood on each side to keep his hands raised for victory.", "he": "הם עמדו משני צדדיו כדי לשמור על ידיו מורמות לניצחון." }
     },
-{
+    {
         "id": "q-judaism-24",
+        "hint": { "en": "There was one representative for each of the tribes.", "he": "היה נציג אחד לכל אחד מהשבטים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -597,10 +626,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🕵️"
+        "emoji": "🕵️",
+        "hint": { "en": "One for each tribe of Israel.", "he": "אחד לכל שבט משבטי ישראל." }
     },
-{
+    {
         "id": "q-judaism-25",
+        "hint": { "en": "One of them was the future leader Joshua, and the other's name starts with C.", "he": "אחד מהם היה יהושע בן נון, והשני שמו מתחיל בכ'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -622,10 +653,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🤝"
+        "emoji": "🤝",
+        "hint": { "en": "They were the only ones who believed the Israelites could conquer the land.", "he": "הם היו היחידים שהאמינו שבני ישראל יכולים לכבוש את הארץ." }
     },
-{
+    {
         "id": "q-judaism-26",
+        "hint": { "en": "The earth opened up and swallowed him and his followers.", "he": "האדמה פצתה את פיה ובלעה אותו ואת פמלייתו." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -647,10 +680,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🔥"
+        "emoji": "🔥",
+        "hint": { "en": "The earth opened up and swallowed him and his followers.", "he": "האדמה פערה את פיה ובלעה אותו ואת עדתו." }
     },
-{
+    {
         "id": "q-judaism-27",
+        "hint": { "en": "A large stone formation.", "he": "מבנה אבן גדול." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -672,9 +707,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🪨"
+        "emoji": "🪨",
+        "hint": { "en": "Moses was supposed to speak to it, but he hit it instead.", "he": "משה היה אמור לדבר אליו, אך הוא הכה בו במקום זאת." }
     },
-{
+    {
         "id": "q-judaism-28",
         "category": "bible_stories",
         "level": 2,
@@ -697,9 +733,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🫏"
+        "emoji": "🫏",
+        "hint": { "en": "A prophet who was sent to curse Israel but ended up blessing them.", "he": "נביא שנשלח לקלל את ישראל אך בסופו של דבר בירך אותם." }
     },
-{
+    {
         "id": "q-judaism-29",
         "category": "bible_stories",
         "level": 2,
@@ -722,9 +759,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "⛰️"
+        "emoji": "⛰️",
+        "hint": { "en": "From here, Moses could see the Promised Land but could not enter it.", "he": "מכאן יכול היה משה לראות את הארץ המובטחת אך לא להיכנס אליה." }
     },
-{
+    {
         "id": "q-judaism-30",
         "category": "bible_stories",
         "level": 2,
@@ -747,9 +785,10 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🗡️"
+        "emoji": "🗡️",
+        "hint": { "en": "He led the Israelites across the Jordan River.", "he": "הוא הוביל את בני ישראל במעבר נהר הירדן." }
     },
-{
+    {
         "id": "q-judaism-31",
         "category": "bible_stories",
         "level": 2,
@@ -772,10 +811,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🧱"
+        "emoji": "🧱",
+        "hint": { "en": "'And the walls came tumbling down!'", "he": "'והחומה נפלה תחתיה!'" }
     },
-{
+    {
         "id": "q-judaism-32",
+        "hint": { "en": "She sat under a palm tree in the hills of Ephraim.", "he": "היא ישבה תחת תומר בהר אפרים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -797,10 +838,12 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "⚖️"
+        "emoji": "⚖️",
+        "hint": { "en": "She sat under a palm tree and gave judgments.", "he": "היא ישבה תחת התומר ושפטה את העם." }
     },
-{
+    {
         "id": "q-judaism-33",
+        "hint": { "en": "A very small number, related to the number of days in a year (roughly).", "he": "מספר קטן מאוד, קשור למערך הלוחמי המצומצם שלו." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -824,7 +867,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "⚔️"
     },
-{
+    {
         "id": "q-judaism-34",
         "category": "bible_stories",
         "level": 2,
@@ -849,7 +892,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "💪"
     },
-{
+    {
         "id": "q-judaism-35",
         "category": "bible_stories",
         "level": 2,
@@ -874,7 +917,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "✂️"
     },
-{
+    {
         "id": "q-judaism-36",
         "category": "bible_stories",
         "level": 2,
@@ -899,8 +942,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🌾"
     },
-{
+    {
         "id": "q-judaism-37",
+        "hint": { "en": "His name is the same as the book he is in.", "he": "שמו כשם הספר שבו הוא מופיע." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -924,7 +968,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "👑"
     },
-{
+    {
         "id": "q-judaism-38",
         "category": "bible_stories",
         "level": 1,
@@ -949,7 +993,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "👑"
     },
-{
+    {
         "id": "q-judaism-39",
         "category": "bible_stories",
         "level": 1,
@@ -974,7 +1018,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🪕"
     },
-{
+    {
         "id": "q-judaism-40",
         "category": "bible_stories",
         "level": 1,
@@ -999,7 +1043,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🛡️"
     },
-{
+    {
         "id": "q-judaism-41",
         "category": "bible_stories",
         "level": 2,
@@ -1024,7 +1068,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🤝"
     },
-{
+    {
         "id": "q-judaism-42",
         "category": "bible_stories",
         "level": 2,
@@ -1049,7 +1093,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-43",
         "category": "bible_stories",
         "level": 2,
@@ -1074,8 +1118,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🦉"
     },
-{
+    {
         "id": "q-judaism-44",
+        "hint": { "en": "She came from a country in the South to see his wealth and wisdom.", "he": "היא באה ממדינה בדרום כדי לראות את עושרו וחכמתו." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1099,8 +1144,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "👑"
     },
-{
+    {
         "id": "q-judaism-45",
+        "hint": { "en": "One is in the North and the other in the South, where Jerusalem is.", "he": "אחת בצפון והשנייה בדרום, איפה שירושלים נמצאת." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1124,8 +1170,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "💔"
     },
-{
+    {
         "id": "q-judaism-46",
+        "hint": { "en": "A short name, starting with A.", "he": "שם קצר, מתחיל ב-א'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1149,7 +1196,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "😡"
     },
-{
+    {
         "id": "q-judaism-47",
         "category": "bible_stories",
         "level": 2,
@@ -1174,8 +1221,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🔥"
     },
-{
+    {
         "id": "q-judaism-48",
+        "hint": { "en": "He didn't walk up, he was carried by a fiery vehicle.", "he": "הוא לא עלה ברגל, הוא נישא על ידי רכב אש." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1199,7 +1247,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🌪️"
     },
-{
+    {
         "id": "q-judaism-49",
         "category": "bible_stories",
         "level": 2,
@@ -1224,7 +1272,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "✨"
     },
-{
+    {
         "id": "q-judaism-50",
         "category": "bible_stories",
         "level": 1,
@@ -1249,7 +1297,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🦁"
     },
-{
+    {
         "id": "q-judaism-51",
         "category": "bible_stories",
         "level": 2,
@@ -1274,7 +1322,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🔥"
     },
-{
+    {
         "id": "q-judaism-52",
         "category": "bible_stories",
         "level": 1,
@@ -1299,7 +1347,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🐳"
     },
-{
+    {
         "id": "q-judaism-53",
         "category": "bible_stories",
         "level": 2,
@@ -1324,7 +1372,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌆"
     },
-{
+    {
         "id": "q-judaism-54",
         "category": "bible_stories",
         "level": 2,
@@ -1349,7 +1397,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "👑"
     },
-{
+    {
         "id": "q-judaism-55",
         "category": "bible_stories",
         "level": 2,
@@ -1374,8 +1422,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-56",
+        "hint": { "en": "His name rhymes with 'Hope' in English.", "he": "איש תם וישר, ירא אלוהים וסר מרע." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1399,8 +1448,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "😔"
     },
-{
+    {
         "id": "q-judaism-57",
+        "hint": { "en": "He was a cupbearer to the king before returning to Jerusalem.", "he": "הוא היה שר המשקים של המלך לפני שחזר לירושלים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1424,8 +1474,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧱"
     },
-{
+    {
         "id": "q-judaism-58",
+        "hint": { "en": "He is one of the three major prophets.", "he": "הוא אחד משלושת הנביאים הגדולים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1449,8 +1500,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🦴"
     },
-{
+    {
         "id": "q-judaism-59",
+        "hint": { "en": "The Hebrew name of this book is 'Tehillim'.", "he": "שם הספר הזה בעברית הוא 'תהילים'." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -1474,7 +1526,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🎶"
     },
-{
+    {
         "id": "q-judaism-60",
         "category": "bible_stories",
         "level": 2,
@@ -1499,7 +1551,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-61",
         "category": "bible_stories",
         "level": 2,
@@ -1524,7 +1576,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-62",
         "category": "bible_stories",
         "level": 2,
@@ -1549,7 +1601,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-63",
         "category": "bible_stories",
         "level": 2,
@@ -1574,8 +1626,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-64",
+        "hint": { "en": "Think about who brought a gift from the soil.", "he": "חשבו מי הביא מנחה מפרי האדמה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1599,8 +1652,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-65",
+        "hint": { "en": "This is a negative version of the previous question.", "he": "זו גרסה הפוכה לשאלה הקודמת." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1624,7 +1678,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-66",
         "category": "bible_stories",
         "level": 2,
@@ -1649,8 +1703,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-67",
+        "hint": { "en": "The oldest person was actually Methuselah.", "he": "האדם המבוגר ביותר היה בעצם מתושלח." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1674,7 +1729,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-68",
         "category": "bible_stories",
         "level": 2,
@@ -1699,7 +1754,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-69",
         "category": "bible_stories",
         "level": 2,
@@ -1724,8 +1779,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-70",
+        "hint": { "en": "The change involved adding a 'Hay' (H).", "he": "השינוי כלל הוספת האות ה'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1749,7 +1805,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-71",
         "category": "bible_stories",
         "level": 2,
@@ -1774,8 +1830,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-72",
+        "hint": { "en": "She thought it was impossible at her age.", "he": "היא חשבה שזה בלתי אפשרי בגילה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1799,8 +1856,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-73",
+        "hint": { "en": "She was happy and laughed.", "he": "היא הייתה שמחה וצחקה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1824,7 +1882,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-74",
         "category": "bible_stories",
         "level": 2,
@@ -1849,8 +1907,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-75",
+        "hint": { "en": "One was a 'man of the field' and the other 'sat in tents'.", "he": "אחד היה 'איש שדה' והשני 'יושב אוהלים'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1874,7 +1933,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-76",
         "category": "bible_stories",
         "level": 2,
@@ -1899,8 +1958,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-77",
+        "hint": { "en": "This is a well-known miracle/event in the Book of Genesis.", "he": "זהו אירוע מפורסם בספר בראשית." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1924,7 +1984,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-78",
         "category": "bible_stories",
         "level": 2,
@@ -1949,8 +2009,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-79",
+        "hint": { "en": "Israel became his name and the name of the nation.", "he": "ישראל הפך לשמו ולשם האומה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1974,8 +2035,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-80",
+        "hint": { "en": "Twelve of them bowed down in his dream.", "he": "שנים עשר מהם השתחוו לו בחלומו." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -1999,7 +2061,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-81",
         "category": "bible_stories",
         "level": 2,
@@ -2024,7 +2086,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-82",
         "category": "bible_stories",
         "level": 2,
@@ -2049,8 +2111,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-83",
+        "hint": { "en": "This set the stage for Joseph's rise in Egypt.", "he": "זה הכין את הקרקע לעלייתו של יוסף במצרים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2074,8 +2137,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-84",
+        "hint": { "en": "His sister watched from a distance.", "he": "אחותו צפתה מרחוק." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2099,7 +2163,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-85",
         "category": "bible_stories",
         "level": 2,
@@ -2124,8 +2188,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-86",
+        "hint": { "en": "This happened on Mount Horeb.", "he": "זה קרה בהר חורב." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2149,8 +2214,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-87",
+        "hint": { "en": "The bush was NOT consumed.", "he": "הסנה לא נאכל." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2174,8 +2240,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-88",
+        "hint": { "en": "This was a punishment to make their work harder.", "he": "זה היה עונש כדי להקשות על עבודתם." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2199,8 +2266,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-89",
+        "hint": { "en": "They were indeed forced.", "he": "הם אכן אולצו." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2224,7 +2292,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-90",
         "category": "bible_stories",
         "level": 2,
@@ -2249,7 +2317,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-91",
         "category": "bible_stories",
         "level": 2,
@@ -2274,7 +2342,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-92",
         "category": "bible_stories",
         "level": 2,
@@ -2299,7 +2367,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-93",
         "category": "bible_stories",
         "level": 2,
@@ -2324,7 +2392,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-94",
         "category": "bible_stories",
         "level": 2,
@@ -2349,8 +2417,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-95",
+        "hint": { "en": "God told him to speak to the rock, not strike it.", "he": "אלוהים אמר לו לדבר אל הסלע, לא להכות אותו." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2374,7 +2443,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-96",
         "category": "bible_stories",
         "level": 2,
@@ -2399,8 +2468,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-97",
+        "hint": { "en": "She lived in Jericho and helped the spies.", "he": "היא גרה ביריחו ועזרה למרגלים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2424,8 +2494,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-98",
+        "hint": { "en": "The water stopped as soon as their feet touched it.", "he": "המים נעצרו ברגע שרגליהם נגעו בהם." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2449,7 +2520,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-99",
         "category": "bible_stories",
         "level": 2,
@@ -2474,7 +2545,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-100",
         "category": "bible_stories",
         "level": 2,
@@ -2499,8 +2570,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-101",
+        "hint": { "en": "A sign of wetness and dryness.", "he": "סימן של רטיבות ויובש." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2524,8 +2596,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-102",
+        "hint": { "en": "He was a Nazirite with great strength.", "he": "הוא היה נזיר בעל כוח רב." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2549,8 +2622,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-103",
+        "hint": { "en": "The Bible mentions a lion, not a bear.", "he": "התנ\"ך מזכיר אריה, לא דוב." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2574,7 +2648,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-104",
         "category": "bible_stories",
         "level": 2,
@@ -2599,7 +2673,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-105",
         "category": "bible_stories",
         "level": 2,
@@ -2624,8 +2698,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-106",
+        "hint": { "en": "He thought the priest Eli was calling him.", "he": "הוא חשב שהכהן עלי קורא לו." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2649,7 +2724,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-107",
         "category": "bible_stories",
         "level": 2,
@@ -2674,7 +2749,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-108",
         "category": "bible_stories",
         "level": 2,
@@ -2699,7 +2774,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-109",
         "category": "bible_stories",
         "level": 2,
@@ -2724,8 +2799,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-110",
+        "hint": { "en": "He refused to harm 'God's anointed'.", "he": "הוא סירב לפגוע ב'משיח ה''." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2749,8 +2825,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-111",
+        "hint": { "en": "David was merciful.", "he": "דוד היה רחום." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2774,8 +2851,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-112",
+        "hint": { "en": "He is traditionally credited with these three.", "he": "נהוג לייחס לו את שלושתם." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2799,7 +2877,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-113",
         "category": "bible_stories",
         "level": 2,
@@ -2824,7 +2902,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-114",
         "category": "bible_stories",
         "level": 2,
@@ -2849,8 +2927,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-115",
+        "hint": { "en": "This happened on Mount Carmel.", "he": "זה קרה בהר הכרמל." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2874,7 +2953,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-116",
         "category": "bible_stories",
         "level": 2,
@@ -2899,8 +2978,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-117",
+        "hint": { "en": "He was a commander who became king and wiped out the house of Ahab.", "he": "הוא היה מפקד שהפך למלך והשמיד את בית אחאב." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2924,7 +3004,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-118",
         "category": "bible_stories",
         "level": 2,
@@ -2949,8 +3029,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-119",
+        "hint": { "en": "He was skeptical but his servants convinced him to try.", "he": "הוא היה סקפטי אבל משרתיו שוכנעו אותו לנסות." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -2974,7 +3055,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-120",
         "category": "bible_stories",
         "level": 2,
@@ -2999,7 +3080,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-121",
         "category": "bible_stories",
         "level": 2,
@@ -3024,7 +3105,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-122",
         "category": "bible_stories",
         "level": 2,
@@ -3049,7 +3130,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-123",
         "category": "bible_stories",
         "level": 2,
@@ -3074,7 +3155,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-124",
         "category": "bible_stories",
         "level": 2,
@@ -3099,7 +3180,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-125",
         "category": "bible_stories",
         "level": 2,
@@ -3124,7 +3205,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-126",
         "category": "bible_stories",
         "level": 2,
@@ -3149,7 +3230,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-127",
         "category": "bible_stories",
         "level": 2,
@@ -3174,7 +3255,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-128",
         "category": "bible_stories",
         "level": 2,
@@ -3199,7 +3280,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-129",
         "category": "bible_stories",
         "level": 2,
@@ -3224,7 +3305,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-130",
         "category": "bible_stories",
         "level": 2,
@@ -3249,7 +3330,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-131",
         "category": "bible_stories",
         "level": 2,
@@ -3274,7 +3355,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-132",
         "category": "bible_stories",
         "level": 2,
@@ -3299,7 +3380,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-133",
         "category": "bible_stories",
         "level": 2,
@@ -3324,7 +3405,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-134",
         "category": "bible_stories",
         "level": 2,
@@ -3349,7 +3430,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-135",
         "category": "bible_stories",
         "level": 2,
@@ -3374,7 +3455,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-136",
         "category": "bible_stories",
         "level": 2,
@@ -3399,7 +3480,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-137",
         "category": "bible_stories",
         "level": 2,
@@ -3424,7 +3505,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-138",
         "category": "bible_stories",
         "level": 2,
@@ -3449,7 +3530,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-139",
         "category": "bible_stories",
         "level": 2,
@@ -3474,7 +3555,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-140",
         "category": "bible_stories",
         "level": 2,
@@ -3499,7 +3580,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-141",
         "category": "bible_stories",
         "level": 2,
@@ -3524,7 +3605,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-142",
         "category": "bible_stories",
         "level": 2,
@@ -3549,7 +3630,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-143",
         "category": "bible_stories",
         "level": 2,
@@ -3574,7 +3655,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-144",
         "category": "bible_stories",
         "level": 2,
@@ -3599,7 +3680,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-145",
         "category": "bible_stories",
         "level": 2,
@@ -3624,7 +3705,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-146",
         "category": "bible_stories",
         "level": 2,
@@ -3649,7 +3730,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-147",
         "category": "bible_stories",
         "level": 2,
@@ -3674,7 +3755,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-148",
         "category": "bible_stories",
         "level": 2,
@@ -3699,7 +3780,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-149",
         "category": "bible_stories",
         "level": 2,
@@ -3724,7 +3805,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-150",
         "category": "bible_stories",
         "level": 2,
@@ -3749,7 +3830,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-151",
         "category": "bible_stories",
         "level": 2,
@@ -3774,7 +3855,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-152",
         "category": "bible_stories",
         "level": 2,
@@ -3799,7 +3880,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-153",
         "category": "bible_stories",
         "level": 2,
@@ -3824,7 +3905,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-154",
         "category": "bible_stories",
         "level": 2,
@@ -3849,7 +3930,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-155",
         "category": "bible_stories",
         "level": 2,
@@ -3874,7 +3955,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-156",
         "category": "bible_stories",
         "level": 2,
@@ -3899,7 +3980,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-157",
         "category": "bible_stories",
         "level": 2,
@@ -3924,7 +4005,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-158",
         "category": "bible_stories",
         "level": 2,
@@ -3949,7 +4030,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-159",
         "category": "bible_stories",
         "level": 2,
@@ -3974,7 +4055,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-160",
         "category": "bible_stories",
         "level": 2,
@@ -3999,7 +4080,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-161",
         "category": "bible_stories",
         "level": 2,
@@ -4024,7 +4105,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-162",
         "category": "bible_stories",
         "level": 2,
@@ -4049,7 +4130,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-163",
         "category": "bible_stories",
         "level": 2,
@@ -4074,7 +4155,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-164",
         "category": "bible_stories",
         "level": 2,
@@ -4099,7 +4180,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-165",
         "category": "bible_stories",
         "level": 2,
@@ -4124,7 +4205,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-166",
         "category": "bible_stories",
         "level": 2,
@@ -4149,7 +4230,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-167",
         "category": "bible_stories",
         "level": 2,
@@ -4174,7 +4255,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-168",
         "category": "bible_stories",
         "level": 2,
@@ -4199,7 +4280,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-169",
         "category": "bible_stories",
         "level": 2,
@@ -4224,7 +4305,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-170",
         "category": "bible_stories",
         "level": 2,
@@ -4249,7 +4330,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-171",
         "category": "bible_stories",
         "level": 2,
@@ -4274,7 +4355,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-172",
         "category": "bible_stories",
         "level": 2,
@@ -4299,7 +4380,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-173",
         "category": "bible_stories",
         "level": 2,
@@ -4324,7 +4405,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-174",
         "category": "bible_stories",
         "level": 2,
@@ -4349,7 +4430,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-175",
         "category": "bible_stories",
         "level": 2,
@@ -4374,7 +4455,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-176",
         "category": "bible_stories",
         "level": 2,
@@ -4399,7 +4480,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-177",
         "category": "bible_stories",
         "level": 2,
@@ -4424,7 +4505,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-178",
         "category": "bible_stories",
         "level": 2,
@@ -4449,7 +4530,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-179",
         "category": "bible_stories",
         "level": 2,
@@ -4474,7 +4555,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-180",
         "category": "bible_stories",
         "level": 2,
@@ -4499,7 +4580,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-181",
         "category": "bible_stories",
         "level": 2,
@@ -4524,7 +4605,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-182",
         "category": "bible_stories",
         "level": 2,
@@ -4549,7 +4630,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-183",
         "category": "bible_stories",
         "level": 2,
@@ -4574,7 +4655,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-184",
         "category": "bible_stories",
         "level": 2,
@@ -4599,7 +4680,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-185",
         "category": "bible_stories",
         "level": 2,
@@ -4624,7 +4705,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-186",
         "category": "bible_stories",
         "level": 2,
@@ -4649,7 +4730,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-187",
         "category": "bible_stories",
         "level": 2,
@@ -4674,7 +4755,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-188",
         "category": "bible_stories",
         "level": 2,
@@ -4699,7 +4780,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-189",
         "category": "bible_stories",
         "level": 2,
@@ -4724,7 +4805,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-190",
         "category": "bible_stories",
         "level": 2,
@@ -4749,7 +4830,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-191",
         "category": "bible_stories",
         "level": 2,
@@ -4774,7 +4855,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-192",
         "category": "bible_stories",
         "level": 2,
@@ -4799,7 +4880,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-193",
         "category": "bible_stories",
         "level": 2,
@@ -4824,7 +4905,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-194",
         "category": "bible_stories",
         "level": 2,
@@ -4849,7 +4930,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-195",
         "category": "bible_stories",
         "level": 2,
@@ -4874,7 +4955,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-196",
         "category": "bible_stories",
         "level": 2,
@@ -4899,7 +4980,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-197",
         "category": "bible_stories",
         "level": 2,
@@ -4924,7 +5005,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-198",
         "category": "bible_stories",
         "level": 2,
@@ -4949,7 +5030,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-199",
         "category": "bible_stories",
         "level": 2,
@@ -4974,7 +5055,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-200",
         "category": "bible_stories",
         "level": 2,
@@ -4999,7 +5080,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-201",
         "category": "bible_stories",
         "level": 2,
@@ -5024,7 +5105,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-202",
         "category": "bible_stories",
         "level": 2,
@@ -5049,7 +5130,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-203",
         "category": "bible_stories",
         "level": 2,
@@ -5074,7 +5155,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-204",
         "category": "bible_stories",
         "level": 2,
@@ -5099,7 +5180,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-205",
         "category": "bible_stories",
         "level": 2,
@@ -5124,7 +5205,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-206",
         "category": "bible_stories",
         "level": 2,
@@ -5149,7 +5230,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-207",
         "category": "bible_stories",
         "level": 2,
@@ -5174,7 +5255,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-208",
         "category": "bible_stories",
         "level": 2,
@@ -5199,7 +5280,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-209",
         "category": "bible_stories",
         "level": 2,
@@ -5224,7 +5305,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-judaism-210",
         "category": "holidays",
         "level": 1,
@@ -5249,7 +5330,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🍎"
     },
-{
+    {
         "id": "q-judaism-211",
         "category": "holidays",
         "level": 1,
@@ -5274,7 +5355,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📯"
     },
-{
+    {
         "id": "q-judaism-212",
         "category": "holidays",
         "level": 1,
@@ -5299,7 +5380,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "⛺"
     },
-{
+    {
         "id": "q-judaism-213",
         "category": "holidays",
         "level": 1,
@@ -5324,7 +5405,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-214",
         "category": "holidays",
         "level": 1,
@@ -5349,7 +5430,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🕎"
     },
-{
+    {
         "id": "q-judaism-215",
         "category": "bible_stories",
         "level": 1,
@@ -5374,7 +5455,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🎭"
     },
-{
+    {
         "id": "q-judaism-216",
         "category": "holidays",
         "level": 1,
@@ -5399,7 +5480,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍞"
     },
-{
+    {
         "id": "q-judaism-217",
         "category": "bible_stories",
         "level": 2,
@@ -5424,7 +5505,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-218",
         "category": "holidays",
         "level": 2,
@@ -5449,7 +5530,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🍷"
     },
-{
+    {
         "id": "q-judaism-219",
         "category": "holidays",
         "level": 2,
@@ -5474,7 +5555,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🌿"
     },
-{
+    {
         "id": "q-judaism-220",
         "category": "holidays",
         "level": 2,
@@ -5499,7 +5580,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌳"
     },
-{
+    {
         "id": "q-judaism-221",
         "category": "holidays",
         "level": 2,
@@ -5524,7 +5605,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🎲"
     },
-{
+    {
         "id": "q-judaism-222",
         "category": "holidays",
         "level": 2,
@@ -5549,7 +5630,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-223",
         "category": "bible_stories",
         "level": 2,
@@ -5574,8 +5655,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🔥"
     },
-{
+    {
         "id": "q-judaism-224",
+        "hint": { "en": "It is named after a man who was assassinated.", "he": "הוא קרוי על שם אדם שנרצח." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -5599,8 +5681,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🤐"
     },
-{
+    {
         "id": "q-judaism-225",
+        "hint": { "en": "Cheesecakes and blintzes are popular.", "he": "עוגות גבינה ובלינצ'ס פופולריים." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -5624,8 +5707,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🧀"
     },
-{
+    {
         "id": "q-judaism-226",
+        "hint": { "en": "The name starts with Ch.", "he": "השם מתחיל בח'." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -5649,8 +5733,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🍞"
     },
-{
+    {
         "id": "q-judaism-227",
+        "hint": { "en": "We ask for it so the plants can grow.", "he": "אנחנו מבקשים אותו כדי שהצמחים יוכלו לצמוח." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -5674,8 +5759,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🌧️"
     },
-{
+    {
         "id": "q-judaism-228",
+        "hint": { "en": "It's a count that starts on the second night of Passover.", "he": "זו ספירה שמתחילה בלילה השני של פסח." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -5699,8 +5785,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🌾"
     },
-{
+    {
         "id": "q-judaism-229",
+        "hint": { "en": "The 33rd day of the count.", "he": "היום ה-33 לספירה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -5724,7 +5811,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🔥"
     },
-{
+    {
         "id": "q-judaism-230",
         "category": "bible_stories",
         "level": 1,
@@ -5749,7 +5836,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🧢"
     },
-{
+    {
         "id": "q-judaism-231",
         "category": "bible_stories",
         "level": 1,
@@ -5774,7 +5861,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🚪"
     },
-{
+    {
         "id": "q-judaism-232",
         "category": "tradition",
         "level": 1,
@@ -5799,7 +5886,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-233",
         "category": "bible_stories",
         "level": 1,
@@ -5824,7 +5911,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🍲"
     },
-{
+    {
         "id": "q-judaism-234",
         "category": "tradition",
         "level": 1,
@@ -5849,7 +5936,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🥩🧀"
     },
-{
+    {
         "id": "q-judaism-235",
         "category": "bible_stories",
         "level": 2,
@@ -5874,7 +5961,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🍏"
     },
-{
+    {
         "id": "q-judaism-236",
         "category": "tradition",
         "level": 2,
@@ -5899,7 +5986,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🧣"
     },
-{
+    {
         "id": "q-judaism-237",
         "category": "tradition",
         "level": 2,
@@ -5924,7 +6011,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "⬛"
     },
-{
+    {
         "id": "q-judaism-238",
         "category": "tradition",
         "level": 2,
@@ -5949,7 +6036,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🕯️🍷"
     },
-{
+    {
         "id": "q-judaism-239",
         "category": "tradition",
         "level": 2,
@@ -5974,8 +6061,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🐄"
     },
-{
+    {
         "id": "q-judaism-240",
+        "hint": { "en": "It represents the new home being built.", "he": "היא מייצגת את הבית החדש שנבנה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -5999,8 +6087,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "💒"
     },
-{
+    {
         "id": "q-judaism-241",
+        "hint": { "en": "The name rhymes with 'Chutbah'.", "he": "השם מתחרז עם 'כתובה'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6024,8 +6113,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-242",
+        "hint": { "en": "The name starts with M.", "he": "השם מתחיל במ'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6049,8 +6139,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "💧"
     },
-{
+    {
         "id": "q-judaism-243",
+        "hint": { "en": "Required for a full prayer service.", "he": "נדרש לתפילה מלאה." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -6074,8 +6165,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🔟"
     },
-{
+    {
         "id": "q-judaism-244",
+        "hint": { "en": "When a marriage legally ends.", "he": "כאשר נישואין מסתיימים באופן חוקי." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6099,7 +6191,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "💔"
     },
-{
+    {
         "id": "q-judaism-245",
         "category": "tradition",
         "level": 1,
@@ -6124,7 +6216,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "א"
     },
-{
+    {
         "id": "q-judaism-246",
         "category": "tradition",
         "level": 1,
@@ -6149,7 +6241,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-247",
         "category": "tradition",
         "level": 1,
@@ -6174,7 +6266,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🙏🏽"
     },
-{
+    {
         "id": "q-judaism-248",
         "category": "bible_stories",
         "level": 2,
@@ -6199,7 +6291,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🗣️"
     },
-{
+    {
         "id": "q-judaism-249",
         "category": "bible_stories",
         "level": 2,
@@ -6224,7 +6316,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📚"
     },
-{
+    {
         "id": "q-judaism-250",
         "category": "tradition",
         "level": 2,
@@ -6249,7 +6341,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📘"
     },
-{
+    {
         "id": "q-judaism-251",
         "category": "holidays",
         "level": 2,
@@ -6274,8 +6366,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📕"
     },
-{
+    {
         "id": "q-judaism-252",
+        "hint": { "en": "The 'explanation' part of the Talmud.", "he": "חלק ה'הסבר' של התלמוד." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6299,8 +6392,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-253",
+        "hint": { "en": "Also known by the acronym Rambam.", "he": "ידוע גם בראשי התיבות רמב\"ם." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6324,8 +6418,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧠"
     },
-{
+    {
         "id": "q-judaism-254",
+        "hint": { "en": "Recited by those who have lost a loved one.", "he": "נאמר על ידי מי שאיבד אדם יקר." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -6349,7 +6444,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-255",
         "category": "tradition",
         "level": 1,
@@ -6374,7 +6469,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏙️"
     },
-{
+    {
         "id": "q-judaism-256",
         "category": "bible_stories",
         "level": 1,
@@ -6399,7 +6494,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🧱"
     },
-{
+    {
         "id": "q-judaism-257",
         "category": "bible_stories",
         "level": 1,
@@ -6424,7 +6519,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "✡️"
     },
-{
+    {
         "id": "q-judaism-258",
         "category": "bible_stories",
         "level": 1,
@@ -6449,7 +6544,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🇮🇱"
     },
-{
+    {
         "id": "q-judaism-259",
         "category": "bible_stories",
         "level": 2,
@@ -6474,7 +6569,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "👔"
     },
-{
+    {
         "id": "q-judaism-260",
         "category": "bible_stories",
         "level": 2,
@@ -6499,7 +6594,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🎶"
     },
-{
+    {
         "id": "q-judaism-261",
         "category": "bible_stories",
         "level": 2,
@@ -6524,7 +6619,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-262",
         "category": "bible_stories",
         "level": 2,
@@ -6549,8 +6644,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "1️⃣8️⃣"
     },
-{
+    {
         "id": "q-judaism-263",
+        "hint": { "en": "Related to the word for Germany in Hebrew.", "he": "קשור למילה 'אשכנז'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6574,8 +6670,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🌍"
     },
-{
+    {
         "id": "q-judaism-264",
+        "hint": { "en": "Related to the word for Spain in Hebrew.", "he": "קשור למילה 'ספרד'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6599,8 +6696,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🌍"
     },
-{
+    {
         "id": "q-judaism-265",
+        "hint": { "en": "A symbol of Jewish heroism and the last stand.", "he": "סמל לגבורה יהודית ולעמידה האחרונה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6624,8 +6722,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "⛰️"
     },
-{
+    {
         "id": "q-judaism-266",
+        "hint": { "en": "Found in Qumran.", "he": "נמצאו בקומראן." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6649,8 +6748,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-267",
+        "hint": { "en": "His last name is Ben-Yehuda.", "he": "שם משפחתו הוא בן-יהודה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6674,8 +6774,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-268",
+        "hint": { "en": "The name means 'Reception' or 'Tradition'.", "he": "השם פירושו 'מסורת' או 'קבלה'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6699,7 +6800,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "✨"
     },
-{
+    {
         "id": "q-judaism-269",
         "category": "bible_stories",
         "level": 1,
@@ -6724,7 +6825,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🚪"
     },
-{
+    {
         "id": "q-judaism-270",
         "category": "holidays",
         "level": 2,
@@ -6749,7 +6850,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🎉"
     },
-{
+    {
         "id": "q-judaism-271",
         "category": "holidays",
         "level": 1,
@@ -6774,7 +6875,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕎"
     },
-{
+    {
         "id": "q-judaism-272",
         "category": "bible_stories",
         "level": 2,
@@ -6799,7 +6900,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🍞"
     },
-{
+    {
         "id": "q-judaism-273",
         "category": "holidays",
         "level": 2,
@@ -6824,8 +6925,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🔍"
     },
-{
+    {
         "id": "q-judaism-274",
+        "hint": { "en": "It looks like bricks and mortar.", "he": "זה נראה כמו לבנים וטיט." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -6849,7 +6951,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍎"
     },
-{
+    {
         "id": "q-judaism-275",
         "category": "holidays",
         "level": 2,
@@ -6874,8 +6976,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍎"
     },
-{
+    {
         "id": "q-judaism-276",
+        "hint": { "en": "A word starting with D.", "he": "מילה המתחילה בד'." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -6899,7 +7002,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🗣️"
     },
-{
+    {
         "id": "q-judaism-277",
         "category": "bible_stories",
         "level": 2,
@@ -6924,7 +7027,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🎉"
     },
-{
+    {
         "id": "q-judaism-278",
         "category": "bible_stories",
         "level": 2,
@@ -6949,8 +7052,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "👶"
     },
-{
+    {
         "id": "q-judaism-279",
+        "hint": { "en": "A seven-day period.", "he": "תקופה של שבעה ימים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6974,8 +7078,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-280",
+        "hint": { "en": "A German/Yiddish word for 'Year time'.", "he": "מילה ביידיש שפירושה 'זמן שנה'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -6999,7 +7104,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-281",
         "category": "holidays",
         "level": 2,
@@ -7024,7 +7129,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🥔"
     },
-{
+    {
         "id": "q-judaism-282",
         "category": "holidays",
         "level": 2,
@@ -7049,7 +7154,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🍩"
     },
-{
+    {
         "id": "q-judaism-283",
         "category": "holidays",
         "level": 2,
@@ -7074,8 +7179,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🥟"
     },
-{
+    {
         "id": "q-judaism-284",
+        "hint": { "en": "Milk and Meat products.", "he": "מוצרי חלב ובשר." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7099,8 +7205,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍽️"
     },
-{
+    {
         "id": "q-judaism-285",
+        "hint": { "en": "The blessing over 'fruit of the vine'.", "he": "הברכה על 'פרי הגפן'." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -7124,8 +7231,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🍷"
     },
-{
+    {
         "id": "q-judaism-286",
+        "hint": { "en": "The blessing for food 'from the earth'.", "he": "הברכה על אוכל שיוצא 'מן הארץ'." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -7149,8 +7257,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🍞"
     },
-{
+    {
         "id": "q-judaism-287",
+        "hint": { "en": "The stage for reading the Torah.", "he": "הבמה לקריאת התורה." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -7174,8 +7283,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-288",
+        "hint": { "en": "A light that is never turned off.", "he": "אור שמעולם לא כובה." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -7199,7 +7309,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-289",
         "category": "holidays",
         "level": 2,
@@ -7224,7 +7334,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-290",
         "category": "bible_stories",
         "level": 1,
@@ -7249,7 +7359,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-judaism-291",
         "category": "bible_stories",
         "level": 1,
@@ -7274,7 +7384,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🥳"
     },
-{
+    {
         "id": "q-judaism-292",
         "category": "bible_stories",
         "level": 2,
@@ -7299,8 +7409,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥂"
     },
-{
+    {
         "id": "q-judaism-293",
+        "hint": { "en": "A song that starts with A.", "he": "שיר שמתחיל ב-א'." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7324,8 +7435,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🎶"
     },
-{
+    {
         "id": "q-judaism-294",
+        "hint": { "en": "Like the kohanim in the temple.", "he": "כמו הכהנים במקדש." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -7349,8 +7461,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "⚪"
     },
-{
+    {
         "id": "q-judaism-295",
+        "hint": { "en": "The name means 'to cast away'.", "he": "חלק ממנהג ימי התשובה." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -7374,8 +7487,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🌊"
     },
-{
+    {
         "id": "q-judaism-296",
+        "hint": { "en": "A month of repentance before the High Holidays.", "he": "חודש של תשובה לפני החגים הנוראים." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -7399,8 +7513,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🗓️"
     },
-{
+    {
         "id": "q-judaism-297",
+        "hint": { "en": "The 15th of the month of Av.", "he": "ט\"ו באב." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -7424,8 +7539,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "❤️"
     },
-{
+    {
         "id": "q-judaism-298",
+        "hint": { "en": "It starts when the sun goes down.", "he": "הוא מתחיל כשהשמש שוקעת." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7449,8 +7565,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "🌌"
     },
-{
+    {
         "id": "q-judaism-299",
+        "hint": { "en": "Symbols like honey and pomegranate.", "he": "סמלים כמו דבש ורימון." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -7474,8 +7591,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍏"
     },
-{
+    {
         "id": "q-judaism-300",
+        "hint": { "en": "It is the blueprint for Jewish life.", "he": "זוהי תוכנית האב לחיים היהודיים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7499,8 +7617,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-301",
+        "hint": { "en": "Taryag in Hebrew letters.", "he": "תרי\"ג בגימטריה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7524,8 +7643,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-302",
+        "hint": { "en": "Yes, it is true.", "he": "כן, זה נכון." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -7549,8 +7669,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-303",
+        "hint": { "en": "A place for gathering.", "he": "מקום התכנסות." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -7574,8 +7695,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-304",
+        "hint": { "en": "The four-fringed garment.", "he": "בגד ארבע כנפות." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7599,8 +7721,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-305",
+        "hint": { "en": "Giving to those in need.", "he": "נתינה לנזקקים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7624,8 +7747,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-306",
+        "hint": { "en": "The focal point during Torah reading.", "he": "מרכז תשומת הלב בזמן קריאת התורה." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -7649,8 +7773,9 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-307",
+        "hint": { "en": "A distinct typeface used for his commentary.", "he": "גופן מיוחד המשמש לפירושיו." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7674,8 +7799,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-308",
+        "hint": { "en": "Divided into many books.", "he": "מחולק להרבה ספרים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7699,8 +7825,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-309",
+        "hint": { "en": "A movement focused on joy and prayer.", "he": "תנועה המתמקדת בשמחה ובתפילה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -7724,7 +7851,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-2761",
         "category": "holidays",
         "level": 1,
@@ -7749,7 +7876,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕎"
     },
-{
+    {
         "id": "q-judaism-2762",
         "category": "holidays",
         "level": 1,
@@ -7774,7 +7901,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🫓"
     },
-{
+    {
         "id": "q-judaism-2763",
         "category": "holidays",
         "level": 1,
@@ -7799,7 +7926,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-2764",
         "category": "tradition",
         "level": 1,
@@ -7824,7 +7951,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🥖"
     },
-{
+    {
         "id": "q-judaism-2765",
         "category": "bible_stories",
         "level": 1,
@@ -7849,7 +7976,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🔯"
     },
-{
+    {
         "id": "q-judaism-2766",
         "category": "holidays",
         "level": 1,
@@ -7874,7 +8001,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🎺"
     },
-{
+    {
         "id": "q-judaism-2767",
         "category": "holidays",
         "level": 1,
@@ -7899,7 +8026,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍎"
     },
-{
+    {
         "id": "q-judaism-2768",
         "category": "holidays",
         "level": 1,
@@ -7924,7 +8051,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🍎🍯"
     },
-{
+    {
         "id": "q-judaism-2769",
         "category": "holidays",
         "level": 1,
@@ -7949,7 +8076,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🛖"
     },
-{
+    {
         "id": "q-judaism-2770",
         "category": "holidays",
         "level": 1,
@@ -7974,7 +8101,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👺"
     },
-{
+    {
         "id": "q-judaism-2771",
         "category": "bible_stories",
         "level": 2,
@@ -7999,7 +8126,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🌊"
     },
-{
+    {
         "id": "q-judaism-2772",
         "category": "bible_stories",
         "level": 2,
@@ -8024,7 +8151,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-2773",
         "category": "bible_stories",
         "level": 2,
@@ -8049,7 +8176,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-2774",
         "category": "tradition",
         "level": 2,
@@ -8074,7 +8201,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🚪"
     },
-{
+    {
         "id": "q-judaism-2775",
         "category": "tradition",
         "level": 2,
@@ -8099,7 +8226,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧣"
     },
-{
+    {
         "id": "q-judaism-2776",
         "category": "bible_stories",
         "level": 2,
@@ -8124,7 +8251,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🧱"
     },
-{
+    {
         "id": "q-judaism-2777",
         "category": "bible_stories",
         "level": 2,
@@ -8149,7 +8276,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "⛰️"
     },
-{
+    {
         "id": "q-judaism-2778",
         "category": "holidays",
         "level": 2,
@@ -8174,7 +8301,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥟"
     },
-{
+    {
         "id": "q-judaism-2779",
         "category": "bible_stories",
         "level": 2,
@@ -8199,7 +8326,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🪙"
     },
-{
+    {
         "id": "q-judaism-2780",
         "category": "bible_stories",
         "level": 2,
@@ -8224,8 +8351,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-2781",
+        "hint": { "en": "Commonly known as the Law of the Jews.", "he": "מכונה בדרך כלל משפט העברים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8249,8 +8377,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📚"
     },
-{
+    {
         "id": "q-judaism-2782",
+        "hint": { "en": "The father of Issac and Ishmael.", "he": "אביהם של יצחק וישמעאל." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8274,8 +8403,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🧔"
     },
-{
+    {
         "id": "q-judaism-2783",
+        "hint": { "en": "The establishment of the State of Israel.", "he": "הקמת מדינת ישראל." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8299,8 +8429,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🇮🇱"
     },
-{
+    {
         "id": "q-judaism-2784",
+        "hint": { "en": "A major milestone in Jewish history.", "he": "אבן דרך משמעותית בהיסטוריה היהודית." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8324,8 +8455,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "✨"
     },
-{
+    {
         "id": "q-judaism-2785",
+        "hint": { "en": "Related to the generations of the desert.", "he": "קשור לדור המדבר." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8349,8 +8481,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🏜️"
     },
-{
+    {
         "id": "q-judaism-2786",
+        "hint": { "en": "A long period of time, enough for a new generation to grow.", "he": "תקופה ארוכה של זמן, המספיקה לדור חדש לצמוח." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8374,8 +8507,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-2787",
+        "hint": { "en": "Think about the act of choosing.", "he": "חשבו על פעולת הבחירה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8399,8 +8533,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "⚖️"
     },
-{
+    {
         "id": "q-judaism-2788",
+        "hint": { "en": "He was the wise son of King David.", "he": "הוא היה בנו החכם של המלך דוד." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8424,8 +8559,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "👑"
     },
-{
+    {
         "id": "q-judaism-2789",
+        "hint": { "en": "Center stage in the synagogue.", "he": "מרכז הבמה בבית הכנסת." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -8449,8 +8585,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏛️"
     },
-{
+    {
         "id": "q-judaism-2790",
+        "hint": { "en": "A high place for reading.", "he": "מקום גבוה לקריאה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8474,7 +8611,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🌍"
     },
-{
+    {
         "id": "q-judaism-2791",
         "category": "bible_stories",
         "level": 1,
@@ -8499,7 +8636,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧢"
     },
-{
+    {
         "id": "q-judaism-2792",
         "category": "bible_stories",
         "level": 1,
@@ -8524,7 +8661,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🇮🇱"
     },
-{
+    {
         "id": "q-judaism-2793",
         "category": "bible_stories",
         "level": 1,
@@ -8549,7 +8686,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🎉"
     },
-{
+    {
         "id": "q-judaism-2794",
         "category": "bible_stories",
         "level": 1,
@@ -8574,7 +8711,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🍷"
     },
-{
+    {
         "id": "q-judaism-2795",
         "category": "bible_stories",
         "level": 1,
@@ -8599,7 +8736,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🔯"
     },
-{
+    {
         "id": "q-judaism-2796",
         "category": "holidays",
         "level": 1,
@@ -8624,7 +8761,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍩"
     },
-{
+    {
         "id": "q-judaism-2797",
         "category": "tradition",
         "level": 1,
@@ -8649,7 +8786,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-2798",
         "category": "tradition",
         "level": 1,
@@ -8674,7 +8811,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🏮"
     },
-{
+    {
         "id": "q-judaism-2799",
         "category": "bible_stories",
         "level": 2,
@@ -8699,7 +8836,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍎"
     },
-{
+    {
         "id": "q-judaism-2800",
         "category": "bible_stories",
         "level": 2,
@@ -8724,7 +8861,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-2801",
         "category": "tradition",
         "level": 2,
@@ -8749,7 +8886,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥩✔️"
     },
-{
+    {
         "id": "q-judaism-2802",
         "category": "bible_stories",
         "level": 2,
@@ -8774,7 +8911,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-2803",
         "category": "bible_stories",
         "level": 2,
@@ -8799,7 +8936,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧔‍♂️"
     },
-{
+    {
         "id": "q-judaism-2804",
         "category": "bible_stories",
         "level": 2,
@@ -8824,7 +8961,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕯️🍷"
     },
-{
+    {
         "id": "q-judaism-2805",
         "category": "bible_stories",
         "level": 2,
@@ -8849,7 +8986,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "💒"
     },
-{
+    {
         "id": "q-judaism-2806",
         "category": "bible_stories",
         "level": 2,
@@ -8874,7 +9011,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏺"
     },
-{
+    {
         "id": "q-judaism-2807",
         "category": "bible_stories",
         "level": 2,
@@ -8899,8 +9036,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👅❌"
     },
-{
+    {
         "id": "q-judaism-2808",
+        "hint": { "en": "Jerusalem and Babylon versions.", "he": "גרסאות ירושלים ובבל." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8924,8 +9062,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📚📚"
     },
-{
+    {
         "id": "q-judaism-2809",
+        "hint": { "en": "The first month of the Hebrew calendar year in the Bible.", "he": "החודש הראשון בלוח השנה העברי בתנ\"ך." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -8949,8 +9088,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📅"
     },
-{
+    {
         "id": "q-judaism-2810",
+        "hint": { "en": "He was anointed by Samuel.", "he": "הוא נמשח על ידי שמואל." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8974,8 +9114,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "👑"
     },
-{
+    {
         "id": "q-judaism-2811",
+        "hint": { "en": "Anointed by Samuel.", "he": "נמשח על ידי שמואל." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -8999,8 +9140,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-2812",
+        "hint": { "en": "Ancient city in the Judean Hills.", "he": "עיר עתיקה בהרי יהודה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -9024,8 +9166,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🪦"
     },
-{
+    {
         "id": "q-judaism-2813",
+        "hint": { "en": "Famous for the fire from heaven on Mount Carmel.", "he": "מפורסם בזכות האש מהשמיים בהר הכרמל." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -9049,8 +9192,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🔥"
     },
-{
+    {
         "id": "q-judaism-2814",
+        "hint": { "en": "He lived in the time of King Ahab.", "he": "הוא חי בתקופת המלך אחאב." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -9074,8 +9218,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "✨"
     },
-{
+    {
         "id": "q-judaism-2815",
+        "hint": { "en": "A year ending in 70.", "he": "שנה המסתיימת ב-70." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -9099,7 +9244,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏛️🔥"
     },
-{
+    {
         "id": "q-judaism-2816",
         "category": "bible_stories",
         "level": 1,
@@ -9124,7 +9269,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🚢"
     },
-{
+    {
         "id": "q-judaism-2817",
         "category": "bible_stories",
         "level": 1,
@@ -9149,7 +9294,7 @@ export const judaismQuestions = [
         "correctAnswer": 3,
         "emoji": "👨‍👦‍👦"
     },
-{
+    {
         "id": "q-judaism-2818",
         "category": "bible_stories",
         "level": 1,
@@ -9174,7 +9319,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧥"
     },
-{
+    {
         "id": "q-judaism-2819",
         "category": "bible_stories",
         "level": 1,
@@ -9199,7 +9344,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🐋"
     },
-{
+    {
         "id": "q-judaism-2820",
         "category": "bible_stories",
         "level": 1,
@@ -9224,7 +9369,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💇‍♂️"
     },
-{
+    {
         "id": "q-judaism-2821",
         "category": "bible_stories",
         "level": 1,
@@ -9249,7 +9394,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "💃"
     },
-{
+    {
         "id": "q-judaism-2822",
         "category": "holidays",
         "level": 1,
@@ -9274,7 +9419,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍰🧀"
     },
-{
+    {
         "id": "q-judaism-2823",
         "category": "holidays",
         "level": 1,
@@ -9299,7 +9444,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥔"
     },
-{
+    {
         "id": "q-judaism-2824",
         "category": "holidays",
         "level": 1,
@@ -9324,7 +9469,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🪁"
     },
-{
+    {
         "id": "q-judaism-2825",
         "category": "bible_stories",
         "level": 1,
@@ -9349,7 +9494,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🔤"
     },
-{
+    {
         "id": "q-judaism-2826",
         "category": "bible_stories",
         "level": 1,
@@ -9374,7 +9519,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🔚"
     },
-{
+    {
         "id": "q-judaism-2827",
         "category": "bible_stories",
         "level": 1,
@@ -9399,7 +9544,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-2828",
         "category": "bible_stories",
         "level": 1,
@@ -9424,7 +9569,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌍"
     },
-{
+    {
         "id": "q-judaism-2829",
         "category": "bible_stories",
         "level": 1,
@@ -9449,7 +9594,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-2830",
         "category": "bible_stories",
         "level": 1,
@@ -9474,7 +9619,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🪨"
     },
-{
+    {
         "id": "q-judaism-2831",
         "category": "holidays",
         "level": 2,
@@ -9499,7 +9644,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-2832",
         "category": "bible_stories",
         "level": 2,
@@ -9524,7 +9669,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🔍"
     },
-{
+    {
         "id": "q-judaism-2833",
         "category": "bible_stories",
         "level": 2,
@@ -9549,7 +9694,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌿"
     },
-{
+    {
         "id": "q-judaism-2834",
         "category": "bible_stories",
         "level": 2,
@@ -9574,7 +9719,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥚"
     },
-{
+    {
         "id": "q-judaism-2835",
         "category": "holidays",
         "level": 2,
@@ -9599,7 +9744,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🍷"
     },
-{
+    {
         "id": "q-judaism-2836",
         "category": "bible_stories",
         "level": 2,
@@ -9624,7 +9769,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍷✨"
     },
-{
+    {
         "id": "q-judaism-2837",
         "category": "bible_stories",
         "level": 2,
@@ -9649,7 +9794,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🔄📜"
     },
-{
+    {
         "id": "q-judaism-2838",
         "category": "holidays",
         "level": 2,
@@ -9674,7 +9819,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🗓️"
     },
-{
+    {
         "id": "q-judaism-2839",
         "category": "holidays",
         "level": 2,
@@ -9699,7 +9844,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌿🍋"
     },
-{
+    {
         "id": "q-judaism-2840",
         "category": "tradition",
         "level": 2,
@@ -9724,7 +9869,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🌅"
     },
-{
+    {
         "id": "q-judaism-2841",
         "category": "bible_stories",
         "level": 2,
@@ -9749,7 +9894,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍷🙏"
     },
-{
+    {
         "id": "q-judaism-2842",
         "category": "holidays",
         "level": 2,
@@ -9774,7 +9919,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍯"
     },
-{
+    {
         "id": "q-judaism-2843",
         "category": "bible_stories",
         "level": 2,
@@ -9799,7 +9944,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌳🍓"
     },
-{
+    {
         "id": "q-judaism-2844",
         "category": "bible_stories",
         "level": 2,
@@ -9824,7 +9969,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🪴"
     },
-{
+    {
         "id": "q-judaism-2845",
         "category": "bible_stories",
         "level": 2,
@@ -9849,8 +9994,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥚🥦"
     },
-{
+    {
         "id": "q-judaism-2846",
+        "hint": { "en": "She led the women in song after crossing the sea.", "he": "היא הובילה את הנשים בשירה לאחר חציית הים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -9874,8 +10020,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📜✨"
     },
-{
+    {
         "id": "q-judaism-2847",
+        "hint": { "en": "One from each tribe.", "he": "אחד מכל שבט." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -9899,8 +10046,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🕵️‍♂️"
     },
-{
+    {
         "id": "q-judaism-2848",
+        "hint": { "en": "He led the people into the Promised Land.", "he": "הוא הוביל את העם אל הארץ המובטחת." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -9924,8 +10072,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "⚔️"
     },
-{
+    {
         "id": "q-judaism-2849",
+        "hint": { "en": "A prayer of praise.", "he": "תפילת שבח." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -9949,8 +10098,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🙏"
     },
-{
+    {
         "id": "q-judaism-2850",
+        "hint": { "en": "A symbol of protection on doorposts.", "he": "סמל להגנה על מזוזות הדלת." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -9974,8 +10124,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👶"
     },
-{
+    {
         "id": "q-judaism-2851",
+        "hint": { "en": "One year after twelve.", "he": "שנה אחת אחרי שתים עשרה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -9999,8 +10150,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👦"
     },
-{
+    {
         "id": "q-judaism-2852",
+        "hint": { "en": "The age of maturity for girls.", "he": "גיל הבגרות לבנות." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10024,8 +10176,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "👧"
     },
-{
+    {
         "id": "q-judaism-2853",
+        "hint": { "en": "A place of study and prayer.", "he": "מקום של לימוד ותפילה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10049,8 +10202,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🛋️"
     },
-{
+    {
         "id": "q-judaism-2854",
+        "hint": { "en": "The religious leader of a community.", "he": "המנהיג הדתי של הקהילה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10074,8 +10228,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "⛪"
     },
-{
+    {
         "id": "q-judaism-2855",
+        "hint": { "en": "A pointer for reading Torah.", "he": "מצביע לקריאה בתורה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10099,8 +10254,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🪙👶"
     },
-{
+    {
         "id": "q-judaism-2856",
+        "hint": { "en": "The month of the High Holidays.", "he": "חודש החגים הנוראים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10124,8 +10280,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📅"
     },
-{
+    {
         "id": "q-judaism-2857",
+        "hint": { "en": "The month of joy.", "he": "חודש השמחה." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -10149,8 +10306,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🤡"
     },
-{
+    {
         "id": "q-judaism-2858",
+        "hint": { "en": "A light above the Ark.", "he": "אור מעל הארון." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10174,8 +10332,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🔢"
     },
-{
+    {
         "id": "q-judaism-2859",
+        "hint": { "en": "It means luck or constellation.", "he": "זה אומר מזל או קונסטלציה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10199,8 +10358,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧬"
     },
-{
+    {
         "id": "q-judaism-2860",
+        "hint": { "en": "A complete number in many traditions.", "he": "מספר שלם במסורות רבות." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10249,7 +10409,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🚢"
     },
-{
+    {
         "id": "q-judaism-ext-bible-2",
         "category": "bible_stories",
         "level": 1,
@@ -10274,7 +10434,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-ext-bible-3",
         "category": "bible_stories",
         "level": 1,
@@ -10299,7 +10459,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🎯"
     },
-{
+    {
         "id": "q-judaism-ext-bible-4",
         "category": "bible_stories",
         "level": 1,
@@ -10324,7 +10484,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🐋"
     },
-{
+    {
         "id": "q-judaism-ext-bible-5",
         "category": "bible_stories",
         "level": 2,
@@ -10349,7 +10509,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "💪"
     },
-{
+    {
         "id": "q-judaism-ext-bible-6",
         "category": "bible_stories",
         "level": 2,
@@ -10374,7 +10534,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏛️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-7",
         "category": "bible_stories",
         "level": 1,
@@ -10399,7 +10559,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👑"
     },
-{
+    {
         "id": "q-judaism-ext-bible-8",
         "category": "bible_stories",
         "level": 2,
@@ -10424,8 +10584,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "👨‍👦‍👦"
     },
-{
+    {
         "id": "q-judaism-ext-bible-9",
+        "hint": { "en": "A fiery ride to heaven.", "he": "נסיעה לוהטת לשמיים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10449,8 +10610,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🔥"
     },
-{
+    {
         "id": "q-judaism-ext-bible-10",
+        "hint": { "en": "He succeeded Moses.", "he": "הוא ירש את משה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10474,7 +10636,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "☀️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-11",
         "category": "bible_stories",
         "level": 2,
@@ -10499,7 +10661,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕵️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-12",
         "category": "bible_stories",
         "level": 1,
@@ -10524,7 +10686,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧥"
     },
-{
+    {
         "id": "q-judaism-ext-bible-13",
         "category": "bible_stories",
         "level": 2,
@@ -10549,7 +10711,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏗️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-14",
         "category": "bible_stories",
         "level": 2,
@@ -10574,7 +10736,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌴"
     },
-{
+    {
         "id": "q-judaism-ext-bible-15",
         "category": "bible_stories",
         "level": 1,
@@ -10599,7 +10761,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏜️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-16",
         "category": "bible_stories",
         "level": 1,
@@ -10624,7 +10786,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "⛰️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-17",
         "category": "bible_stories",
         "level": 2,
@@ -10649,7 +10811,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🧂"
     },
-{
+    {
         "id": "q-judaism-ext-bible-18",
         "category": "bible_stories",
         "level": 1,
@@ -10674,7 +10836,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "💤"
     },
-{
+    {
         "id": "q-judaism-ext-bible-19",
         "category": "bible_stories",
         "level": 2,
@@ -10699,7 +10861,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👑"
     },
-{
+    {
         "id": "q-judaism-ext-bible-20",
         "category": "bible_stories",
         "level": 2,
@@ -10724,7 +10886,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🎺"
     },
-{
+    {
         "id": "q-judaism-ext-bible-21",
         "category": "bible_stories",
         "level": 2,
@@ -10749,8 +10911,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💍"
     },
-{
+    {
         "id": "q-judaism-ext-bible-22",
+        "hint": { "en": "A small river in the Gilead.", "he": "נהר קטן בגלעד." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10774,7 +10937,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🤼"
     },
-{
+    {
         "id": "q-judaism-ext-bible-23",
         "category": "bible_stories",
         "level": 1,
@@ -10799,7 +10962,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧺"
     },
-{
+    {
         "id": "q-judaism-ext-bible-24",
         "category": "bible_stories",
         "level": 2,
@@ -10824,8 +10987,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👳"
     },
-{
+    {
         "id": "q-judaism-ext-bible-25",
+        "hint": { "en": "She was a brave woman from the Kenites.", "he": "היא הייתה אישה אמיצה מהקינים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10849,7 +11013,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "⛺"
     },
-{
+    {
         "id": "q-judaism-ext-bible-26",
         "category": "bible_stories",
         "level": 1,
@@ -10874,7 +11038,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👴"
     },
-{
+    {
         "id": "q-judaism-ext-bible-27",
         "category": "bible_stories",
         "level": 1,
@@ -10899,7 +11063,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "👸"
     },
-{
+    {
         "id": "q-judaism-ext-bible-28",
         "category": "bible_stories",
         "level": 2,
@@ -10924,8 +11088,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💡"
     },
-{
+    {
         "id": "q-judaism-ext-bible-29",
+        "hint": { "en": "They refused to bow to an idol in Babylon.", "he": "הם סירבו להשתחוות לפסל בבבל." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -10949,7 +11114,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🔥"
     },
-{
+    {
         "id": "q-judaism-ext-bible-30",
         "category": "bible_stories",
         "level": 2,
@@ -10974,7 +11139,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🗣️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-31",
         "category": "bible_stories",
         "level": 1,
@@ -10999,7 +11164,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🕳️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-32",
         "category": "bible_stories",
         "level": 2,
@@ -11024,7 +11189,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🦗"
     },
-{
+    {
         "id": "q-judaism-ext-bible-33",
         "category": "bible_stories",
         "level": 1,
@@ -11049,8 +11214,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍞"
     },
-{
+    {
         "id": "q-judaism-ext-bible-34",
+        "hint": { "en": "The final day of the siege.", "he": "היום האחרון של המצור." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -11074,7 +11240,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🎺"
     },
-{
+    {
         "id": "q-judaism-ext-bible-35",
         "category": "bible_stories",
         "level": 2,
@@ -11099,8 +11265,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🌾"
     },
-{
+    {
         "id": "q-judaism-ext-bible-36",
+        "hint": { "en": "He went up in a storm.", "he": "הוא עלה בסערה." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -11124,8 +11291,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🌪️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-37",
+        "hint": { "en": "A wealthy landowner in Bethlehem.", "he": "בעל קרקעות עשיר בבית לחם." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -11149,7 +11317,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏘️"
     },
-{
+    {
         "id": "q-judaism-ext-bible-38",
         "category": "bible_stories",
         "level": 1,
@@ -11174,7 +11342,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "💃"
     },
-{
+    {
         "id": "q-judaism-ext-bible-39",
         "category": "bible_stories",
         "level": 1,
@@ -11199,7 +11367,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🌊"
     },
-{
+    {
         "id": "q-judaism-ext-bible-40",
         "category": "bible_stories",
         "level": 1,
@@ -11224,7 +11392,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "💭"
     },
-{
+    {
         "id": "q-judaism-ext-bible-41",
         "category": "bible_stories",
         "level": 1,
@@ -11249,7 +11417,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "👵"
     },
-{
+    {
         "id": "q-judaism-ext-bible-42",
         "category": "bible_stories",
         "level": 2,
@@ -11274,7 +11442,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏹"
     },
-{
+    {
         "id": "q-judaism-ext-bible-43",
         "category": "bible_stories",
         "level": 1,
@@ -11299,7 +11467,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🌈"
     },
-{
+    {
         "id": "q-judaism-ext-bible-44",
         "category": "bible_stories",
         "level": 1,
@@ -11324,7 +11492,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-ext-bible-45",
         "category": "bible_stories",
         "level": 1,
@@ -11349,7 +11517,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🧠"
     },
-{
+    {
         "id": "q-judaism-ext-bible-46",
         "category": "bible_stories",
         "level": 2,
@@ -11374,8 +11542,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-ext-bible-47",
+        "hint": { "en": "A fertile region in Egypt.", "he": "אזור פורה במצרים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -11399,8 +11568,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌾"
     },
-{
+    {
         "id": "q-judaism-ext-bible-48",
+        "hint": { "en": "He witnessed the destruction of Jerusalem.", "he": "הוא היה עד לחורבן ירושלים." },
         "category": "bible_stories",
         "level": 3,
         "text": {
@@ -11424,7 +11594,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "😢"
     },
-{
+    {
         "id": "q-judaism-ext-bible-49",
         "category": "bible_stories",
         "level": 2,
@@ -11449,7 +11619,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧺"
     },
-{
+    {
         "id": "q-judaism-ext-bible-50",
         "category": "bible_stories",
         "level": 1,
@@ -11499,7 +11669,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🍞"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-2",
         "category": "holidays",
         "level": 1,
@@ -11524,7 +11694,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🎺"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-3",
         "category": "holidays",
         "level": 1,
@@ -11549,7 +11719,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕎"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-4",
         "category": "holidays",
         "level": 1,
@@ -11574,7 +11744,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🎭"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-5",
         "category": "holidays",
         "level": 1,
@@ -11599,7 +11769,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🛖"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-6",
         "category": "holidays",
         "level": 2,
@@ -11624,7 +11794,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🍰"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-7",
         "category": "holidays",
         "level": 1,
@@ -11649,7 +11819,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🍎"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-8",
         "category": "holidays",
         "level": 1,
@@ -11674,7 +11844,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌳"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-9",
         "category": "holidays",
         "level": 2,
@@ -11699,7 +11869,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🔥"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-10",
         "category": "holidays",
         "level": 1,
@@ -11724,7 +11894,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-11",
         "category": "holidays",
         "level": 2,
@@ -11749,7 +11919,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌿"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-12",
         "category": "holidays",
         "level": 2,
@@ -11774,7 +11944,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-13",
         "category": "holidays",
         "level": 2,
@@ -11799,7 +11969,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌀"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-14",
         "category": "holidays",
         "level": 1,
@@ -11824,7 +11994,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-15",
         "category": "holidays",
         "level": 2,
@@ -11849,7 +12019,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-16",
         "category": "holidays",
         "level": 1,
@@ -11874,7 +12044,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🎁"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-17",
         "category": "holidays",
         "level": 1,
@@ -11899,7 +12069,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏮"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-18",
         "category": "holidays",
         "level": 1,
@@ -11924,7 +12094,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍩"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-19",
         "category": "holidays",
         "level": 2,
@@ -11949,7 +12119,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "👟"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-20",
         "category": "holidays",
         "level": 1,
@@ -11974,8 +12144,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📐"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-21",
+        "hint": { "en": "A family of warriors.", "he": "משפחה של לוחמים." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -11999,8 +12170,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "⚔️"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-22",
+        "hint": { "en": "Making a distinction between sacred and secular.", "he": "עריכת הבחנה בין קודש לחול." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12024,7 +12196,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-23",
         "category": "holidays",
         "level": 1,
@@ -12049,8 +12221,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "👸"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-24",
+        "hint": { "en": "Cast away your sins into the water.", "he": "השלך את חטאיך אל המים." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12074,8 +12247,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🌊"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-25",
+        "hint": { "en": "The Great Sabbath.", "he": "השבת הגדולה." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12099,7 +12273,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-26",
         "category": "holidays",
         "level": 2,
@@ -12124,7 +12298,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧺"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-27",
         "category": "holidays",
         "level": 2,
@@ -12149,7 +12323,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🍷"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-28",
         "category": "holidays",
         "level": 2,
@@ -12174,8 +12348,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🥙"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-29",
+        "hint": { "en": "A vessel with less than the required number of lights.", "he": "כלי עם פחות ממספר הנרות הנדרש." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12199,7 +12374,7 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-30",
         "category": "holidays",
         "level": 1,
@@ -12224,7 +12399,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🏮"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-31",
         "category": "holidays",
         "level": 2,
@@ -12249,8 +12424,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🍇"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-32",
+        "hint": { "en": "Receiving the Torah.", "he": "קבלת התורה." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12274,7 +12450,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-33",
         "category": "holidays",
         "level": 1,
@@ -12299,8 +12475,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍽️"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-34",
+        "hint": { "en": "A blessing once every 28 years.", "he": "ברכה פעם ב-28 שנים." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12324,7 +12501,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "☀️"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-35",
         "category": "holidays",
         "level": 1,
@@ -12349,7 +12526,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥯"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-36",
         "category": "holidays",
         "level": 2,
@@ -12374,7 +12551,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🎺"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-37",
         "category": "holidays",
         "level": 2,
@@ -12399,7 +12576,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💃"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-38",
         "category": "holidays",
         "level": 1,
@@ -12424,7 +12601,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-39",
         "category": "holidays",
         "level": 1,
@@ -12449,8 +12626,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💖"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-40",
+        "hint": { "en": "An additional prayer service.", "he": "תפילה נוספת." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12474,8 +12652,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-41",
+        "hint": { "en": "The story of a convert from Moab.", "he": "סיפורה של גיורת ממואב." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12499,8 +12678,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🌾"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-42",
+        "hint": { "en": "Mixing of cooked foods to allow cooking on a holiday for Shabbat.", "he": "ערבוב תבשילים כדי לאפשר בישול בחג לצורך שבת." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12524,7 +12704,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍲"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-43",
         "category": "holidays",
         "level": 2,
@@ -12549,8 +12729,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💧"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-44",
+        "hint": { "en": "A symbol of peace.", "he": "סמל לשלום." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12574,8 +12755,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-45",
+        "hint": { "en": "The day Moses died (traditionally).", "he": "היום שבו מת משה (לפי המסורת)." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12599,8 +12781,9 @@ export const judaismQuestions = [
         "correctAnswer": 2,
         "emoji": "🗓️"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-46",
+        "hint": { "en": "Redemption of the firstborn son.", "he": "פדיון הבן הבכור." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12624,7 +12807,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "👶"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-47",
         "category": "holidays",
         "level": 2,
@@ -12649,8 +12832,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🥜"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-48",
+        "hint": { "en": "Accompanying the Queen as she departs.", "he": "ליווי המלכה בצאתה." },
         "category": "holidays",
         "level": 3,
         "text": {
@@ -12674,7 +12858,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🏮"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-49",
         "category": "holidays",
         "level": 2,
@@ -12699,7 +12883,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-ext-holidays-50",
         "category": "holidays",
         "level": 1,
@@ -12749,7 +12933,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🚪"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-2",
         "category": "tradition",
         "level": 1,
@@ -12774,7 +12958,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-3",
         "category": "tradition",
         "level": 2,
@@ -12799,7 +12983,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥗"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-4",
         "category": "tradition",
         "level": 1,
@@ -12824,7 +13008,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-5",
         "category": "tradition",
         "level": 1,
@@ -12849,7 +13033,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-6",
         "category": "tradition",
         "level": 2,
@@ -12874,7 +13058,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👔"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-7",
         "category": "tradition",
         "level": 2,
@@ -12899,7 +13083,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📦"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-8",
         "category": "tradition",
         "level": 1,
@@ -12924,7 +13108,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🪙"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-9",
         "category": "tradition",
         "level": 2,
@@ -12949,7 +13133,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👥"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-10",
         "category": "tradition",
         "level": 1,
@@ -12974,8 +13158,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍽️"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-11",
+        "hint": { "en": "A ceremony for firstborn sons.", "he": "טקס לבנים בכורים." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -12999,7 +13184,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "👶"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-12",
         "category": "tradition",
         "level": 1,
@@ -13024,7 +13209,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👨‍👩‍👧"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-13",
         "category": "tradition",
         "level": 1,
@@ -13049,7 +13234,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🎂"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-14",
         "category": "tradition",
         "level": 1,
@@ -13074,7 +13259,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🎈"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-15",
         "category": "tradition",
         "level": 2,
@@ -13099,8 +13284,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👰"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-16",
+        "hint": { "en": "The core text of Rabbinic Judaism.", "he": "טקסט הליבה של היהדות הרבנית." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -13124,7 +13310,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📚"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-17",
         "category": "tradition",
         "level": 1,
@@ -13149,7 +13335,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🤧"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-18",
         "category": "tradition",
         "level": 1,
@@ -13174,7 +13360,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "✨"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-19",
         "category": "tradition",
         "level": 2,
@@ -13199,8 +13385,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🤝"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-20",
+        "hint": { "en": "The way of walking or proceeding.", "he": "הדרך ללכת או להתקדם." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -13224,7 +13411,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "⚖️"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-21",
         "category": "tradition",
         "level": 1,
@@ -13249,7 +13436,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🧔"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-22",
         "category": "tradition",
         "level": 1,
@@ -13274,7 +13461,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🗳️"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-23",
         "category": "tradition",
         "level": 2,
@@ -13299,7 +13486,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌅"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-24",
         "category": "tradition",
         "level": 2,
@@ -13324,7 +13511,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌙"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-25",
         "category": "tradition",
         "level": 2,
@@ -13349,7 +13536,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🌤️"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-26",
         "category": "tradition",
         "level": 2,
@@ -13374,7 +13561,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🏫"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-27",
         "category": "tradition",
         "level": 2,
@@ -13399,7 +13586,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👵"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-28",
         "category": "tradition",
         "level": 1,
@@ -13424,8 +13611,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-29",
+        "hint": { "en": "Separating a portion of dough.", "he": "הפרשת חלק מהבצק." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -13449,7 +13637,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥯"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-30",
         "category": "tradition",
         "level": 2,
@@ -13474,8 +13662,9 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🏺"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-31",
+        "hint": { "en": "Items that are set aside and cannot be moved.", "he": "פריטים המוקצים ואינם ניתנים להזזה." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -13499,7 +13688,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🚫"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-32",
         "category": "tradition",
         "level": 2,
@@ -13524,7 +13713,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "😊"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-33",
         "category": "tradition",
         "level": 1,
@@ -13549,7 +13738,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍷"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-34",
         "category": "tradition",
         "level": 2,
@@ -13574,7 +13763,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📜"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-35",
         "category": "tradition",
         "level": 2,
@@ -13599,7 +13788,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🤐"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-36",
         "category": "tradition",
         "level": 2,
@@ -13624,7 +13813,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🤫"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-37",
         "category": "tradition",
         "level": 1,
@@ -13649,7 +13838,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🍲"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-38",
         "category": "tradition",
         "level": 2,
@@ -13674,7 +13863,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🎵"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-39",
         "category": "tradition",
         "level": 1,
@@ -13699,8 +13888,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "📅"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-40",
+        "hint": { "en": "A prayer of sanctification.", "he": "תפילת קידוש." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -13724,7 +13914,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🕍"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-41",
         "category": "tradition",
         "level": 2,
@@ -13749,7 +13939,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🙏"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-42",
         "category": "tradition",
         "level": 1,
@@ -13774,8 +13964,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🇮🇱"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-43",
+        "hint": { "en": "A professional scribe.", "he": "סופר מקצועי." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -13799,7 +13990,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🖋️"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-44",
         "category": "tradition",
         "level": 1,
@@ -13824,7 +14015,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "🧣"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-45",
         "category": "tradition",
         "level": 2,
@@ -13849,7 +14040,7 @@ export const judaismQuestions = [
         "correctAnswer": 0,
         "emoji": "📖"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-46",
         "category": "tradition",
         "level": 1,
@@ -13874,7 +14065,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "💖"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-47",
         "category": "tradition",
         "level": 1,
@@ -13899,7 +14090,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🏡"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-48",
         "category": "tradition",
         "level": 1,
@@ -13924,8 +14115,9 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "👼"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-49",
+        "hint": { "en": "Milk produced under Jewish supervision.", "he": "חלב המיוצר תחת השגחה יהודית." },
         "category": "tradition",
         "level": 3,
         "text": {
@@ -13949,7 +14141,7 @@ export const judaismQuestions = [
         "correctAnswer": 1,
         "emoji": "🥛"
     },
-{
+    {
         "id": "q-judaism-ext-tradition-50",
         "category": "tradition",
         "level": 1,
