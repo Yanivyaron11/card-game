@@ -157,6 +157,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                         onClick={() => handleCardClick(card)}
                         currentPlayer={currentPlayer}
                         gameMode={config.gameMode}
+                        avatars={config.avatars}
                     />
                 ))}
             </div>
