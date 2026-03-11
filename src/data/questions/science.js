@@ -57,6 +57,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-467",
+        "hint": { "en": "Multiply the number of pens by the number of boxes.", "he": "כפלו את מספר העטים במספר הקופסאות." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -141,6 +142,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-470",
+        "hint": { "en": "Add the two numbers together.", "he": "חברו את שני המספרים יחד." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -225,6 +227,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-473",
+        "hint": { "en": "Subtract the flowers that didn't grow from the total.", "he": "חסרו את הפרחים שלא צמחו מהסך הכל." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -309,6 +312,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-476",
+        "hint": { "en": "Subtract the stickers you gave away.", "he": "חסרו את המדבקות שנתתם." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -393,6 +397,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-479",
+        "hint": { "en": "Subtract the popped balloons.", "he": "חסרו את הבלונים שהתפוצצו." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -477,6 +482,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-482",
+        "hint": { "en": "Double the number of pens.", "he": "כפלו פי 2 את מספר העטים." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -561,6 +567,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-485",
+        "hint": { "en": "Add 100 and 10.", "he": "חברו 100 ו-10." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -645,6 +652,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-488",
+        "hint": { "en": "Calculate 115 minus 33.", "he": "חשבו 115 פחות 33." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -729,6 +737,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-491",
+        "hint": { "en": "Subtract 20 from 125.", "he": "חסרו 20 מ-125." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -813,6 +822,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-494",
+        "hint": { "en": "Subtract 34 from 57.", "he": "חסרו 34 מ-57." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -895,6 +905,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-497",
+        "hint": { "en": "Multiply 4 by 2.", "he": "כפלו 4 ב-2." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -976,6 +987,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-500",
+        "hint": { "en": "Add 10 to 126.", "he": "חברו 10 ל-126." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -1057,6 +1069,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-503",
+        "hint": { "en": "Calculate 74 minus 34.", "he": "חשבו 74 פחות 34." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -1138,6 +1151,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-506",
+        "hint": { "en": "Subtract 39 from 54.", "he": "חסרו 39 מ-54." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -1304,6 +1318,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-512",
+        "hint": { "en": "Calculate 2 times 2.", "he": "חשבו 2 כפול 2." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -1385,6 +1400,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-515",
+        "hint": { "en": "Add 99 and 40.", "he": "חברו 99 ו-40." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -1466,6 +1482,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-518",
+        "hint": { "en": "Subtract 11 from 139.", "he": "חסרו 11 מ-139." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -1547,6 +1564,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-521",
+        "hint": { "en": "Calculate 109 minus 14.", "he": "חשבו 109 פחות 14." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -1628,6 +1646,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-524",
+        "hint": { "en": "Subtract 21 from 67.", "he": "חסרו 21 מ-67." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -1709,6 +1728,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-527",
+        "hint": { "en": "Multiply 4 by 3.", "he": "כפלו 4 ב-3." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -1790,6 +1810,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-530",
+        "hint": { "en": "Add 104 and 27.", "he": "חברו 104 ו-27." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -1871,6 +1892,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-533",
+        "hint": { "en": "Subtract 27 from 125.", "he": "חסרו 27 מ-125." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -1952,6 +1974,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-536",
+        "hint": { "en": "Calculate 97 minus 24.", "he": "חשבו 97 פחות 24." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -2033,6 +2056,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-539",
+        "hint": { "en": "Subtract 7 from 104.", "he": "חסרו 7 מ-104." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -2114,6 +2138,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-542",
+        "hint": { "en": "Multiply 8 by 5.", "he": "כפלו 8 ב-5." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -2195,6 +2220,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-545",
+        "hint": { "en": "Add 67 and 29.", "he": "חברו 67 ו-29." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -2276,6 +2302,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-548",
+        "hint": { "en": "Subtract 24 from 109.", "he": "חסרו 24 מ-109." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -2357,6 +2384,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-551",
+        "hint": { "en": "Calculate 89 minus 39.", "he": "חשבו 89 פחות 39." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -2438,6 +2466,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-554",
+        "hint": { "en": "Subtract 33 from 111.", "he": "חסרו 33 מ-111." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -2519,6 +2548,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-557",
+        "hint": { "en": "Multiply 3 by 6.", "he": "כפלו 3 ב-6." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -2600,6 +2630,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-560",
+        "hint": { "en": "Add 94 and 41.", "he": "חברו 94 ו-41." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -2681,6 +2712,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-563",
+        "hint": { "en": "Subtract 22 from 62.", "he": "חסרו 22 מ-62." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -2762,6 +2794,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-566",
+        "hint": { "en": "Calculate 61 minus 11.", "he": "חשבו 61 פחות 11." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -2843,6 +2876,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-569",
+        "hint": { "en": "Subtract 21 from 85.", "he": "חסרו 21 מ-85." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -2924,6 +2958,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-572",
+        "hint": { "en": "Multiply 7 by 4.", "he": "כפלו 7 ב-4." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -3005,6 +3040,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-575",
+        "hint": { "en": "Add 135 and 27.", "he": "חברו 135 ו-27." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -3086,6 +3122,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-578",
+        "hint": { "en": "Subtract 19 from 112.", "he": "חסרו 19 מ-112." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -3167,6 +3204,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-581",
+        "hint": { "en": "Calculate 77 minus 14.", "he": "חשבו 77 פחות 14." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -3248,6 +3286,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-584",
+        "hint": { "en": "Subtract 13 from 90.", "he": "חסרו 13 מ-90." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -3329,6 +3368,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-587",
+        "hint": { "en": "Multiply 7 by 4.", "he": "כפלו 7 ב-4." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -3410,6 +3450,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-590",
+        "hint": { "en": "Add 54 and 22.", "he": "חברו 54 ו-22." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -3491,6 +3532,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-593",
+        "hint": { "en": "Subtract 24 from 148.", "he": "חסרו 24 מ-148." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -3572,6 +3614,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-596",
+        "hint": { "en": "Calculate 129 minus 11.", "he": "חשבו 129 פחות 11." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -3653,6 +3696,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-599",
+        "hint": { "en": "Subtract 36 from 81.", "he": "חסרו 36 מ-81." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -3734,6 +3778,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-602",
+        "hint": { "en": "Multiply 9 by 5.", "he": "כפלו 9 ב-5." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -3815,6 +3860,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-605",
+        "hint": { "en": "Add 52 and 29.", "he": "חברו 52 ו-29." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -3896,6 +3942,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-608",
+        "hint": { "en": "Subtract 13 from 145.", "he": "חסרו 13 מ-145." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -3977,6 +4024,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-611",
+        "hint": { "en": "Calculate 110 minus 39.", "he": "חשבו 110 פחות 39." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -4058,6 +4106,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-614",
+        "hint": { "en": "Subtract 34 from 136.", "he": "חסרו 34 מ-136." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -4139,6 +4188,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-617",
+        "hint": { "en": "Multiply 11 by 5.", "he": "כפלו 11 ב-5." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -4220,6 +4270,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-620",
+        "hint": { "en": "Add 99 and 9.", "he": "חברו 99 ו-9." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -4301,6 +4352,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-623",
+        "hint": { "en": "Subtract 39 from 57.", "he": "חסרו 39 מ-57." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -4382,6 +4434,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-626",
+        "hint": { "en": "Calculate 98 minus 16.", "he": "חשבו 98 פחות 16." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -4463,6 +4516,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-629",
+        "hint": { "en": "Subtract 42 from 110.", "he": "חסרו 42 מ-110." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -4544,6 +4598,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-632",
+        "hint": { "en": "Multiply 7 by 5.", "he": "כפלו 7 ב-5." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -4625,6 +4680,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-635",
+        "hint": { "en": "Add 112 and 9.", "he": "חברו 112 ו-9." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -4706,6 +4762,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-638",
+        "hint": { "en": "Subtract 17 from 105.", "he": "חסרו 17 מ-105." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -4787,6 +4844,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-641",
+        "hint": { "en": "Calculate 80 minus 15.", "he": "חשבו 80 פחות 15." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -4868,6 +4926,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-644",
+        "hint": { "en": "Subtract 13 from 110.", "he": "חסרו 13 מ-110." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -4949,6 +5008,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-647",
+        "hint": { "en": "Multiply 8 by 5.", "he": "כפלו 8 ב-5." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -5030,6 +5090,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-650",
+        "hint": { "en": "Add 134 and 15.", "he": "חברו 134 ו-15." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "train",
@@ -5111,6 +5172,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-653",
+        "hint": { "en": "Subtract 23 from 90.", "he": "חסרו 23 מ-90." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "flowers",
@@ -5192,6 +5254,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-656",
+        "hint": { "en": "Calculate 138 minus 36.", "he": "חשבו 138 פחות 36." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "stickers",
@@ -5273,6 +5336,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-659",
+        "hint": { "en": "Subtract 36 from 70.", "he": "חסרו 36 מ-70." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "balloons",
@@ -5354,6 +5418,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-662",
+        "hint": { "en": "Multiply 11 by 6.", "he": "כפלו 11 ב-6." },
         "category": "math",
         "subCategory": "word_problems",
         "templateId": "pens",
@@ -5489,6 +5554,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-667",
+        "hint": { "en": "Add 32 and 26.", "he": "חברו 32 ו-26." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-2",
@@ -5570,6 +5636,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-670",
+        "hint": { "en": "Add 89 and 43.", "he": "חברו 89 ו-43." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-5",
@@ -5651,6 +5718,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-673",
+        "hint": { "en": "Double 31.", "he": "כפלו 31 ב-2." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-8",
@@ -5732,6 +5800,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-676",
+        "hint": { "en": "Add 82 and 23.", "he": "חברו 82 ו-23." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-1",
@@ -5813,6 +5882,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-679",
+        "hint": { "en": "Add 84 and 48.", "he": "חברו 84 ו-48." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-4",
@@ -5894,6 +5964,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-682",
+        "hint": { "en": "Add 82 and 48.", "he": "חברו 82 ו-48." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-7",
@@ -5975,6 +6046,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-685",
+        "hint": { "en": "Add 16 and 30.", "he": "חברו 16 ו-30." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-0",
@@ -6056,6 +6128,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-688",
+        "hint": { "en": "Add 16 and 14.", "he": "חברו 16 ו-14." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-3",
@@ -6137,6 +6210,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-691",
+        "hint": { "en": "Add 80 and 37.", "he": "חברו 80 ו-37." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-6",
@@ -6218,6 +6292,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-694",
+        "hint": { "en": "Add 72 and 15.", "he": "חברו 72 ו-15." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-9",
@@ -6299,6 +6374,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-697",
+        "hint": { "en": "Add 85 and 30.", "he": "חברו 85 ו-30." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-2",
@@ -6380,6 +6456,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-700",
+        "hint": { "en": "Calculate 17 plus 23.", "he": "חשבו 17 פלוס 23." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-5",
@@ -6461,6 +6538,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-703",
+        "hint": { "en": "Add 32 and 33.", "he": "חברו 32 ו-33." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-8",
@@ -6542,6 +6620,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-706",
+        "hint": { "en": "Add 38 and 42.", "he": "חברו 38 ו-42." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-1",
@@ -6623,6 +6702,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-709",
+        "hint": { "en": "Add 52 and 17.", "he": "חברו 52 ו-17." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-4",
@@ -6704,6 +6784,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-712",
+        "hint": { "en": "Add 25 and 27.", "he": "חברו 25 ו-27." },
         "category": "math",
         "subCategory": "arithmetic",
         "templateId": "arithmetic-7",
@@ -6839,6 +6920,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-717",
+        "hint": { "en": "Add 11 and 48.", "he": "חברו 11 ו-48." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-2",
@@ -6920,6 +7002,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-720",
+        "hint": { "en": "Add 81 and 39.", "he": "חברו 81 ו-39." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-5",
@@ -7001,6 +7084,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-723",
+        "hint": { "en": "Add 64 and 16.", "he": "חברו 64 ו-16." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-8",
@@ -7082,6 +7166,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-726",
+        "hint": { "en": "Add 83 and 28.", "he": "חברו 83 ו-28." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-1",
@@ -7163,6 +7248,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-729",
+        "hint": { "en": "Add 34 and 36.", "he": "חברו 34 ו-36." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-4",
@@ -7244,6 +7330,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-732",
+        "hint": { "en": "Add 80 and 21.", "he": "חברו 80 ו-21." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-7",
@@ -7325,6 +7412,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-735",
+        "hint": { "en": "Add 81 and 17.", "he": "חברו 81 ו-17." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-0",
@@ -7406,6 +7494,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-738",
+        "hint": { "en": "Add 92 and 39.", "he": "חברו 92 ו-39." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-3",
@@ -7487,6 +7576,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-741",
+        "hint": { "en": "Add 28 and 17.", "he": "חברו 28 ו-17." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-6",
@@ -7568,6 +7658,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-744",
+        "hint": { "en": "Add 64 and 40.", "he": "חברו 64 ו-40." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-9",
@@ -7649,6 +7740,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-747",
+        "hint": { "en": "Add 69 and 37.", "he": "חברו 69 ו-37." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-2",
@@ -7730,6 +7822,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-750",
+        "hint": { "en": "Add 16 and 12.", "he": "חברו 16 ו-12." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-5",
@@ -7811,6 +7904,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-753",
+        "hint": { "en": "Add 74 and 12.", "he": "חברו 74 ו-12." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-8",
@@ -7892,6 +7986,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-756",
+        "hint": { "en": "Add 36 and 37.", "he": "חברו 36 ו-37." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-1",
@@ -7973,6 +8068,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-759",
+        "hint": { "en": "Add 67 and 32.", "he": "חברו 67 ו-32." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-4",
@@ -8054,6 +8150,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-762",
+        "hint": { "en": "Add 87 and 47.", "he": "חברו 87 ו-47." },
         "category": "math",
         "subCategory": "fractions",
         "templateId": "fractions-7",
@@ -8189,6 +8286,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-767",
+        "hint": { "en": "Add 59 and 37.", "he": "חברו 59 ו-37." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-2",
@@ -8270,6 +8368,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-770",
+        "hint": { "en": "Add 69 and 22.", "he": "חברו 69 ו-22." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-5",
@@ -8351,6 +8450,7 @@ export const scienceQuestions = [
     },
 {
         "id": "q-math-773",
+        "hint": { "en": "Add 98 and 11.", "he": "חברו 98 ו-11." },
         "category": "math",
         "subCategory": "measurement",
         "templateId": "measurement-8",
