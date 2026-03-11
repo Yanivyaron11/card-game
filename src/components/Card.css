@@ -124,7 +124,7 @@
     right: 2px;
     background: linear-gradient(135deg, #ffd700, #ffa500);
     color: #000;
-    padding: 2px 8px;
+    padding: 1px 6px;
     border-radius: 20px;
     font-size: 0.65rem;
     font-weight: bold;
@@ -136,7 +136,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 2px;
 }
 
 .rebound-emoji {
