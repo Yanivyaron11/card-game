@@ -72,7 +72,9 @@ export const translations = {
             "WOAH! {n} IN A ROW! You're on fire, {name}! 🔥",
             "UNBELIEVABLE! {n} straight! {name} is unstoppable! 🚀",
             "AWESOME! {n} correct! You're a pro, {name}! ⭐"
-        ]
+        ],
+        super_answer: "Super Answer! 2 Points!",
+        super_answer_feedback: "SUPER ANSWER, {name}! 🎯 You earned 2 points!"
     },
 
 
@@ -146,11 +148,11 @@ export const translations = {
             "בול, {name}! 🎯"
         ],
         streak_feedbacks: [
-            "וואו! {n} ברצף! {name}, את/ה אלוף/ה! 🔥",
-            "לא ייאמן! {n} ישר! {name} לא עוצר/ת! 🚀",
-            "מדהים! {n} נכונות! את/ה פשוט תותח/ית, {name}! ⭐"
-        ]
+            "וואו! {n} תשובות נכונות ברצף! {name}, את/ה באש! 🔥",
+            "לא יאומן! {n} רצוף! {name} בלתי עצר/ה! 🚀",
+            "מדהים! {n} נכונות! {name}, את/ה מקצוען/ית! ⭐"
+        ],
+        super_answer: "סופר תשובה! 2 נקודות!",
+        super_answer_feedback: "סופר תשובה, {name}! 🎯 קיבלת 2 נקודות!"
     }
-
-
 };

@@ -91,8 +91,15 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         const isCorrect = index === card.correctAnswer;
         if (isCorrect) {
             const currentStreak = streak + 1;
-            const feedbackPool = currentStreak >= 3 ? t.streak_feedbacks : t.correct_feedbacks;
-            const randomMsg = feedbackPool[Math.floor(Math.random() * feedbackPool.length)];
+            let randomMsg = "";
+
+            if (gameMode === '1v1' && card.failedAttempts >= 1) {
+                randomMsg = t.super_answer_feedback;
+            } else {
+                const feedbackPool = currentStreak >= 3 ? t.streak_feedbacks : t.correct_feedbacks;
+                randomMsg = feedbackPool[Math.floor(Math.random() * feedbackPool.length)];
+            }
+
             feedbackMessageRef.current = randomMsg
                 .replace('{name}', avatar?.name[language] || "")
                 .replace('{n}', currentStreak);
@@ -247,6 +254,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     {isAnswering && selectedAnswer === card.correctAnswer && avatar && (
                         <div className={`feedback-toast ${(streak + 1) >= 3 ? 'streak-active' : ''}`}>
                             {feedbackMessageRef.current}
+                        </div>
+                    )}
+
+                    {gameMode === '1v1' && card.failedAttempts >= 1 && (
+                        <div className="super-answer-indicator">
+                            🚀 {t.super_answer}
                         </div>
                     )}
 

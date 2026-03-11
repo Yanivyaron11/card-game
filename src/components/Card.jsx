@@ -13,6 +13,9 @@ function Card({ card, onClick }) {
             <div className="card-inner">
                 {/* Card Back (Default state) */}
                 <div className="card-back glass-panel">
+                    {card.failedAttempts >= 1 && !card.isSolved && !card.isFailed && (
+                        <div className="super-answer-badge">x2</div>
+                    )}
                     <div
                         className="pattern"
                         style={card.topicColor ? {
