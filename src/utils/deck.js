@@ -244,7 +244,8 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
             questionId,
             id: `card-${index}-${Math.random().toString(36).substr(2, 9)}`,
             isFlipped: false,
-            isSolved: false
+            isSolved: false,
+            failedAttempts: 0
         };
     });
 };

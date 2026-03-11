@@ -89,10 +89,12 @@ function App() {
 
     // Early termination for 1v1
     if (gameConfig?.gameMode === '1v1') {
-      const remainingCards = currentDeck.filter(c => !c.isSolved && !c.isFailed).length;
+      const maxPossiblePoints = currentDeck.filter(c => !c.isSolved && !c.isFailed).reduce((acc, card) => {
+        return acc + (card.failedAttempts >= 1 ? 1 : 2);
+      }, 0);
       const scoreDiff = Math.abs(currentScores[1] - currentScores[2]);
 
-      if (scoreDiff > remainingCards || allCardsProcessed) {
+      if (scoreDiff > maxPossiblePoints || allCardsProcessed) {
         playSound('victory');
         setGameState('victory');
         navigate('/result');
@@ -129,16 +131,20 @@ function App() {
           card.id === cardId ? { ...card, isSolved: true, owner: currentPlayer } : card
         );
 
-        const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + 1 };
         const newStreaks = { ...streaks, [currentPlayer]: streaks[currentPlayer] + 1 };
         setStreaks(newStreaks);
 
         if (gameConfig.gameMode === '1v1') {
+          const card = prev.find(c => c.id === cardId);
+          const points = (card && card.failedAttempts >= 1) ? 2 : 1;
+          const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + points };
           setScores(newScores);
           setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+          checkWinCondition(newDeck, newScores);
+        } else {
+          checkWinCondition(newDeck, scores);
         }
 
-        checkWinCondition(newDeck, newScores);
         return newDeck;
       });
     } else {
@@ -163,8 +169,21 @@ function App() {
         }
       } else {
         // 1v1: Pure point race. No heart deduction.
-        // We DON'T set isFailed: true anymore, so the card stays up for grabs.
-        checkWinCondition(deck, scores);
+        setDeck(prev => {
+          const newDeck = prev.map(card => {
+            if (card.id === cardId) {
+              const newFailedCount = (card.failedAttempts || 0) + 1;
+              return {
+                ...card,
+                failedAttempts: newFailedCount,
+                isFailed: newFailedCount >= 2 // Lock after 2 failures
+              };
+            }
+            return card;
+          });
+          checkWinCondition(newDeck, scores);
+          return newDeck;
+        });
 
         // Always switch turn on wrong answer in 1v1
         setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
