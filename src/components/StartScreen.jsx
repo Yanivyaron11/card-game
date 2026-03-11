@@ -78,6 +78,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [isNewModalOpen, setIsNewModalOpen] = useState(false);
     const [newFeatures, setNewFeatures] = useState([]);
     const [isFeatureModalOpen, setIsFeatureModalOpen] = useState(false);
+    const [playerNames, setPlayerNames] = useState({ 1: '', 2: '' });
 
     useEffect(() => {
         // Find categories that are marked new and hasn't been seen yet
@@ -168,7 +169,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             alert(t.select_at_least_one);
             return;
         }
-        onStart({ gridSize, topics: selectedTopics, difficulty, gameMode });
+        onStart({ gridSize, topics: selectedTopics, difficulty, gameMode, playerNames });
     };
 
     return (
@@ -243,6 +244,33 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                         ⏱️ {t.time_attack}
                     </button>
                 </div>
+
+                {gameMode === '1v1' && (
+                    <div className="player-names-container card-pop">
+                        <div className="name-input-field">
+                            <label className="input-label">{t.player1_name}</label>
+                            <input
+                                type="text"
+                                maxLength={12}
+                                value={playerNames[1]}
+                                onChange={(e) => setPlayerNames(prev => ({ ...prev, 1: e.target.value }))}
+                                placeholder={language === 'he' ? 'שחקן 1' : 'Player 1'}
+                                className="name-input glass-panel"
+                            />
+                        </div>
+                        <div className="name-input-field">
+                            <label className="input-label">{t.player2_name}</label>
+                            <input
+                                type="text"
+                                maxLength={12}
+                                value={playerNames[2]}
+                                onChange={(e) => setPlayerNames(prev => ({ ...prev, 2: e.target.value }))}
+                                placeholder={language === 'he' ? 'שחקן 2' : 'Player 2'}
+                                className="name-input glass-panel"
+                            />
+                        </div>
+                    </div>
+                )}
             </div>
 
             <div className="config-section">

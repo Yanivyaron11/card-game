@@ -83,7 +83,9 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                 ) : (
                     <div className="multiplayer-stats">
                         <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`}>
-                            <div className="player-label">P1</div>
+                            <div className="player-label">
+                                {config.playerNames?.[1] || (language === 'he' ? 'שחקן 1' : 'Player 1')}
+                            </div>
                             <div className="level-badge mini">{t.level} {config.difficulty}</div>
                             <div className="player-score-value">{t.score}: {scores[1]}</div>
                             {config.gameMode !== '1v1' && (
@@ -103,7 +105,9 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                         </div>
 
                         <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`}>
-                            <div className="player-label">P2</div>
+                            <div className="player-label">
+                                {config.playerNames?.[2] || (language === 'he' ? 'שחקן 2' : 'Player 2')}
+                            </div>
                             <div className="level-badge mini">{t.level} {config.difficulty}</div>
                             <div className="player-score-value">{t.score}: {scores[2]}</div>
                             {config.gameMode !== '1v1' && (

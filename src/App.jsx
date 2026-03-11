@@ -244,7 +244,12 @@ function App() {
                 <h2>{t.game_over} 😢</h2>
                 {gameConfig?.gameMode === '1v1' ? (
                   <p>
-                    {scores[1] > scores[2] ? t.p1_wins : scores[2] > scores[1] ? t.p2_wins : t.draw}
+                    {scores[1] > scores[2]
+                      ? t.player_wins.replace('{name}', gameConfig.playerNames?.[1] || (language === 'he' ? 'שחקן 1' : 'Player 1'))
+                      : scores[2] > scores[1]
+                        ? t.player_wins.replace('{name}', gameConfig.playerNames?.[2] || (language === 'he' ? 'שחקן 2' : 'Player 2'))
+                        : t.draw
+                    }
                     <br />
                     {t.score}: {scores[1]} - {scores[2]}
                   </p>
@@ -258,7 +263,12 @@ function App() {
                 <h2>{t.you_win} 🎉</h2>
                 {gameConfig?.gameMode === '1v1' ? (
                   <p>
-                    {scores[1] > scores[2] ? t.p1_wins : scores[2] > scores[1] ? t.p2_wins : t.draw}
+                    {scores[1] > scores[2]
+                      ? t.player_wins.replace('{name}', gameConfig.playerNames?.[1] || (language === 'he' ? 'שחקן 1' : 'Player 1'))
+                      : scores[2] > scores[1]
+                        ? t.player_wins.replace('{name}', gameConfig.playerNames?.[2] || (language === 'he' ? 'שחקן 2' : 'Player 2'))
+                        : t.draw
+                    }
                     <br />
                     {t.score}: {scores[1]} - {scores[2]}
                   </p>
