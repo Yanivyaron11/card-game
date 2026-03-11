@@ -17,7 +17,8 @@ export const israelQuestions = [
         "hint": { "en": "Established in the early 1980s.", "he": "הוקם בתחילת שנות ה-80." }, "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Efrat founded?", "he": "באיזו שנה נוסד היישוב אפרת?" }, "options": { "en": ["2000", "1970", "1985", "1980"], "he": ["2000", "1970", "1985", "1980"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_year_162", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bet Zevi founded?", "he": "באיזו שנה נוסד היישוב בית צבי?" }, "options": { "en": ["1973", "1953", "1943", "1958"], "he": ["1973", "1953", "1943", "1958"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_bool_39", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Umm Batin located in the South district?", "he": "האם אום בטין נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_exist_21", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Nof haSela", "Reshafim"], "he": ["נוף הסלע", "רשפים"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_21",
+"hint": { "en": "Look for a name that sounds like a familiar Israeli city.", "he": "חפשו שם שנשמע כמו שם של עיר ישראלית מוכרת." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Nof haSela", "Reshafim"], "he": ["נוף הסלע", "רשפים"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_54", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Azor located in the South district?", "he": "האם אזור נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_dist_23", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Eshbal located?", "he": "באיזה מחוז נמצאת העיר אשבל?" }, "options": { "en": ["South", "North", "Jerusalem", "Haifa"], "he": ["הדרום", "הצפון", "ירושלים", "חיפה"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_5", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📜", "text": { "en": "Which city was once the capital of the Tribe of Judah?", "he": "איזו עיר שימשה בעבר כבירת שבט יהודה?" }, "options": { "en": ["Jerusalem", "Beer Sheva", "Bethlehem", "Hebron"], "he": ["ירושלים", "באר שבע", "בית לחם", "חברון"] }, "correctAnswer": 3 },
@@ -43,7 +44,8 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_year_27", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Or HaNer founded?", "he": "באיזו שנה נוסד היישוב אור הנר?" }, "options": { "en": ["1957", "1962", "1947", "1977"], "he": ["1957", "1962", "1947", "1977"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_16", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "🌺", "text": { "en": "Which city is famous for its Bahai Gardens and golden dome?", "he": "איזו עיר מפורסמת בגנים הבהאיים ובכיפת הזהב שלה?" }, "options": { "en": ["Jerusalem", "Ashdod", "Haifa", "Akko"], "he": ["ירושלים", "אשדוד", "חיפה", "עכו"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_year_10", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Even Sappir founded?", "he": "באיזו שנה נוסד היישוב אבן ספיר?" }, "options": { "en": ["1940", "1950", "1970", "1955"], "he": ["1940", "1950", "1970", "1955"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_32", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Kfar Shekhakim", "Rinnatya"], "he": ["כפר שחקים", "רינתיה"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_32",
+"hint": { "en": "One of these is a real town, others are made up.", "he": "אחד מהם הוא יישוב אמיתי, האחרים מומצאים." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Kfar Shekhakim", "Rinnatya"], "he": ["כפר שחקים", "רינתיה"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_42", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Be'erotayim located?", "he": "באיזה מחוז נמצאת העיר בארותיים?" }, "options": { "en": ["North", "Jerusalem", "South", "Central"], "he": ["הצפון", "ירושלים", "הדרום", "המרכז"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_year_35", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Oranit founded?", "he": "באיזו שנה נוסד היישוב אורנית?" }, "options": { "en": ["2005", "1975", "1990", "1985"], "he": ["2005", "1975", "1990", "1985"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_year_153", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Bet Lehem HaGelilit founded?", "he": "באיזו שנה נוסד היישוב בית לחם הגלילית?" }, "options": { "en": ["1948", "1968", "1953", "1938"], "he": ["1948", "1968", "1953", "1938"] }, "correctAnswer": 0 },
@@ -73,20 +75,23 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_bool_24", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Even Sappir located in the South district?", "he": "האם אבן ספיר נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_144", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bet Hilqiyya founded?", "he": "באיזו שנה נוסד היישוב בית חלקיה?" }, "options": { "en": ["1943", "1973", "1958", "1953"], "he": ["1943", "1973", "1958", "1953"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_bool_22", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Even Yehuda located in the South district?", "he": "האם אבן יהודה נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_24", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["En Karmel", "Beit haPardes"], "he": ["עין כרמל", "בית הפרדס"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_24",
+"hint": { "en": "This place is a real town in Israel.", "he": "המקום הזה הוא יישוב אמיתי בישראל." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["En Karmel", "Beit haPardes"], "he": ["עין כרמל", "בית הפרדס"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_10", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 2, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Kefar HaHoresh", "Kfar Shekhakim"], "he": ["כפר החורש", "כפר שחקים"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_51", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Oranim located in the Haifa district?", "he": "האם אורנים נמצאת במחוז חיפה?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_108", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Be'er Ora founded?", "he": "באיזו שנה נוסד היישוב באר אורה?" }, "options": { "en": ["1970", "1955", "1940", "1950"], "he": ["1970", "1955", "1940", "1950"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_year_86", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Asfar founded?", "he": "באיזו שנה נוסד היישוב אספר?" }, "options": { "en": ["1988", "1983", "2003", "1973"], "he": ["1988", "1983", "2003", "1973"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_0", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Avtalyon founded?", "he": "באיזו שנה נוסד היישוב אבטליון?" }, "options": { "en": ["1992", "1987", "1977", "2007"], "he": ["1992", "1987", "1977", "2007"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_40", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Mitzpe Galil", "Horeshim"], "he": ["מצפה גליל", "חורשים"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_40",
+"hint": { "en": "Focus on the name that sounds logically connected to Israeli geography.", "he": "התמקדו בשם שנשמע מחובר גאוגרפית לישראל." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Mitzpe Galil", "Horeshim"], "he": ["מצפה גליל", "חורשים"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_16", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Efrat located?", "he": "באיזה מחוז נמצאת העיר אפרת?" }, "options": { "en": ["North", "Other", "South", "Jerusalem"], "he": ["הצפון", "אזור יהודה ושומרון", "הדרום", "ירושלים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_57", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Alumma founded?", "he": "באיזו שנה נוסד היישוב אלומה?" }, "options": { "en": ["1965", "1955", "1970", "1985"], "he": ["1965", "1955", "1970", "1985"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_107", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Eshta'ol founded?", "he": "באיזו שנה נוסד היישוב אשתאול?" }, "options": { "en": ["1969", "1939", "1954", "1949"], "he": ["1969", "1939", "1954", "1949"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_year_133", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Bet HaLewi founded?", "he": "באיזו שנה נוסד היישוב בית הלוי?" }, "options": { "en": ["1965", "1950", "1945", "1935"], "he": ["1965", "1950", "1945", "1935"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_bool_35", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Odem located in the North district?", "he": "האם אודם נמצאת במחוז הצפון?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_61", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Allon Shevut founded?", "he": "באיזו שנה נוסד היישוב אלון שבות?" }, "options": { "en": ["1990", "1970", "1975", "1960"], "he": ["1990", "1970", "1975", "1960"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_fact_year_111", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 3, "emoji": "📅", "text": { "en": "In what year was the town of Be'er Ya'aqov founded?", "he": "באיזו שנה נוסד היישוב באר יעקב?" }, "options": { "en": ["1912", "1897", "1927", "1907"], "he": ["1912", "1897", "1927", "1907"] }, "correctAnswer": 3 },
+{ "id": "israel_geo_fact_year_111",
+"hint": { "en": "It was founded in the early 20th century, around 1907.", "he": "הוא נוסד בתחילת המאה ה-20, בסביבות 1907." }, "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 3, "emoji": "📅", "text": { "en": "In what year was the town of Be'er Ya'aqov founded?", "he": "באיזו שנה נוסד היישוב באר יעקב?" }, "options": { "en": ["1912", "1897", "1927", "1907"], "he": ["1912", "1897", "1927", "1907"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_year_166", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bet Rimmon founded?", "he": "באיזו שנה נוסד היישוב בית רימון?" }, "options": { "en": ["1997", "1982", "1977", "1967"], "he": ["1997", "1982", "1977", "1967"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_dist_34", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Baqa Al-Gharbiyye located?", "he": "באיזה מחוז נמצאת העיר באקה אל-גרביה?" }, "options": { "en": ["Haifa", "North", "South", "Jerusalem"], "he": ["חיפה", "הצפון", "הדרום", "ירושלים"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_12", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Afaynish located?", "he": "באיזה מחוז נמצאת העיר אפיניש (שבט)?" }, "options": { "en": ["South", "Jerusalem", "North", "Haifa"], "he": ["הדרום", "ירושלים", "הצפון", "חיפה"] }, "correctAnswer": 0 },
@@ -95,7 +100,8 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_dist_29", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Eshel HaNasi located?", "he": "באיזה מחוז נמצאת העיר אשל הנשיא?" }, "options": { "en": ["North", "South", "Jerusalem", "Haifa"], "he": ["הצפון", "הדרום", "ירושלים", "חיפה"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_123", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Bet Oren founded?", "he": "באיזו שנה נוסד היישוב בית אורן?" }, "options": { "en": ["1939", "1944", "1959", "1929"], "he": ["1939", "1944", "1959", "1929"] }, "correctAnswer": 0 },
 { "id": "israel_geo_exist_22", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 2, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Lahavot Haviva", "Kfar Shekhakim"], "he": ["להבות חביבה", "כפר שחקים"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_exist_53", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Barqan", "Avivim haChadasha"], "he": ["ברקן", "אביבים החדשה"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_53",
+"hint": { "en": "Think of a name you've seen on a map of Israel.", "he": "חשבו על שם שראיתם פעם על מפת ישראל." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Barqan", "Avivim haChadasha"], "he": ["ברקן", "אביבים החדשה"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_bool_11", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Abu Tulul located in the Jerusalem district?", "he": "האם אבו תלול נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_33", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 1, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit Habanim", "Mishmar Ayyalon"], "he": ["בית הבנים", "משמר איילון"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_bool_50", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Urim located in the South district?", "he": "האם אורים נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
@@ -112,7 +118,8 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_year_172", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Betar Illit founded?", "he": "באיזו שנה נוסד היישוב ביתר עילית?" }, "options": { "en": ["1985", "1990", "2005", "1975"], "he": ["1985", "1990", "2005", "1975"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_97", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Eshbal founded?", "he": "באיזו שנה נוסד היישוב אשבל?" }, "options": { "en": ["1979", "1999", "1969", "1984"], "he": ["1979", "1999", "1969", "1984"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_66", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Bet Hillel located?", "he": "באיזה מחוז נמצאת העיר בית הלל?" }, "options": { "en": ["South", "North", "Jerusalem", "Haifa"], "he": ["הדרום", "הצפון", "ירושלים", "חיפה"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_5", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Kefar Yehezqel", "Neve Ahva"], "he": ["כפר יחזקאל", "נווה אחווה"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_5",
+"hint": { "en": "Which one sounds like a real Israeli community?", "he": "איזה מהם נשמע כמו יישוב ישראלי אמיתי?" }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Kefar Yehezqel", "Neve Ahva"], "he": ["כפר יחזקאל", "נווה אחווה"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_28", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Or Yehuda founded?", "he": "באיזו שנה נוסד היישוב אור יהודה?" }, "options": { "en": ["1970", "1955", "1950", "1940"], "he": ["1970", "1955", "1950", "1940"] }, "correctAnswer": 2 },
 { "id": "israel_geo_exist_4", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 1, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Almon", "Avivim haChadasha"], "he": ["עלמון", "אביבים החדשה"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_14", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Afiqim located?", "he": "באיזה מחוז נמצאת העיר אפיקים?" }, "options": { "en": ["South", "Haifa", "Jerusalem", "North"], "he": ["הדרום", "חיפה", "ירושלים", "הצפון"] }, "correctAnswer": 3 },
@@ -124,12 +131,14 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_year_168", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bet Shemesh founded?", "he": "באיזו שנה נוסד היישוב בית שמש?" }, "options": { "en": ["1955", "1940", "1970", "1950"], "he": ["1955", "1940", "1970", "1950"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_dist_8", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Asad located?", "he": "באיזה מחוז נמצאת העיר אסד (שבט)?" }, "options": { "en": ["Haifa", "South", "North", "Jerusalem"], "he": ["חיפה", "הדרום", "הצפון", "ירושלים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_dist_2", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Elqana located?", "he": "באיזה מחוז נמצאת העיר אלקנה?" }, "options": { "en": ["Jerusalem", "Other", "North", "South"], "he": ["ירושלים", "אזור יהודה ושומרון", "הצפון", "הדרום"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_28", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Bi'ne", "Givat Savyon"], "he": ["בענה", "גבעת סביון"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_28",
+"hint": { "en": "Only one of these options is a real place.", "he": "רק אחת מהאפשרויות היא מקום אמיתי." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Bi'ne", "Givat Savyon"], "he": ["בענה", "גבעת סביון"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_8", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 1, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Dalton", "Givat Savyon"], "he": ["דלתון", "גבעת סביון"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_167", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Bet She'an founded?", "he": "באיזו שנה נוסד היישוב בית שאן?" }, "options": { "en": ["1968", "1953", "1948", "1938"], "he": ["1968", "1953", "1948", "1938"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_dist_39", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Be'er Milka located?", "he": "באיזה מחוז נמצאת העיר באר מילכה?" }, "options": { "en": ["Haifa", "Jerusalem", "South", "North"], "he": ["חיפה", "ירושלים", "הדרום", "הצפון"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_bool_55", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Ahawa located in the South district?", "he": "האם אחווה נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_exist_51", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Bet Neqofa", "Ramat Yam"], "he": ["בית נקופה", "רמת ים"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_51",
+"hint": { "en": "Scan the names for a real Israeli town.", "he": "חפשו בין השמות עיר או יישוב אמיתי." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Bet Neqofa", "Ramat Yam"], "he": ["בית נקופה", "רמת ים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_109", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Be'er Gannim founded?", "he": "באיזו שנה נוסד היישוב באר גנים?" }, "options": { "en": ["2012", "2017", "2002", "2032"], "he": ["2012", "2017", "2002", "2032"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_65", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Bet HaLewi located?", "he": "באיזה מחוז נמצאת העיר בית הלוי?" }, "options": { "en": ["Jerusalem", "South", "North", "Central"], "he": ["ירושלים", "הדרום", "הצפון", "המרכז"] }, "correctAnswer": 3 },
 { "id": "israel_geo_exist_36", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 2, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Hermesh", "Avivim haChadasha"], "he": ["חרמש", "אביבים החדשה"] }, "correctAnswer": 0 },
@@ -139,13 +148,15 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_dist_61", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Bet Guvrin located?", "he": "באיזה מחוז נמצאת העיר בית גוברין?" }, "options": { "en": ["Jerusalem", "Haifa", "South", "North"], "he": ["ירושלים", "חיפה", "הדרום", "הצפון"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_bool_7", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Abu Qureinat located in the Jerusalem district?", "he": "האם אבו קורינאת (יישוב) נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_85", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Ani'am founded?", "he": "באיזו שנה נוסד היישוב אניעם?" }, "options": { "en": ["1998", "1978", "1983", "1968"], "he": ["1998", "1978", "1983", "1968"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_16", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Mitzpe Galil", "Shlomit"], "he": ["מצפה גליל", "שלומית"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_16",
+"hint": { "en": "Identify the real city name.", "he": "זהו את השם של העיר האמיתית." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Mitzpe Galil", "Shlomit"], "he": ["מצפה גליל", "שלומית"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_69", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Elifaz founded?", "he": "באיזו שנה נוסד היישוב אליפז?" }, "options": { "en": ["1982", "2002", "1987", "1972"], "he": ["1982", "2002", "1987", "1972"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_30", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Ora founded?", "he": "באיזו שנה נוסד היישוב אורה?" }, "options": { "en": ["1970", "1950", "1955", "1940"], "he": ["1970", "1950", "1955", "1940"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_68", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Elyakhin founded?", "he": "באיזו שנה נוסד היישוב אליכין?" }, "options": { "en": ["1955", "1940", "1970", "1950"], "he": ["1955", "1940", "1970", "1950"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_year_119", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bahan founded?", "he": "באיזו שנה נוסד היישוב בחן?" }, "options": { "en": ["1953", "1943", "1973", "1958"], "he": ["1953", "1943", "1973", "1958"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_17", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Avigayil located in the South district?", "he": "האם אביגיל נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_14", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit haPardes", "Newe Mikha'el"], "he": ["בית הפרדס", "נווה מיכאל"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_14",
+"hint": { "en": "One of these is definitely on the map.", "he": "אחד מהם נמצא בוודאות על המפה." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit haPardes", "Newe Mikha'el"], "he": ["בית הפרדס", "נווה מיכאל"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_120", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bitha founded?", "he": "באיזו שנה נוסד היישוב בטחה?" }, "options": { "en": ["1950", "1970", "1940", "1955"], "he": ["1950", "1970", "1940", "1955"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_44", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Ahi'ezer founded?", "he": "באיזו שנה נוסד היישוב אחיעזר?" }, "options": { "en": ["1970", "1940", "1950", "1955"], "he": ["1970", "1940", "1950", "1955"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_year_40", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Ahuzzat Baraq founded?", "he": "באיזו שנה נוסד היישוב אחוזת ברק?" }, "options": { "en": ["1998", "1988", "2003", "2018"], "he": ["1998", "1988", "2003", "2018"] }, "correctAnswer": 0 },
@@ -173,7 +184,8 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_bool_47", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Ora located in the Jerusalem district?", "he": "האם אורה נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_9", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "🏘️", "text": { "en": "Which city is known for the first Templar colony in Israel (Sarona)?", "he": "איזו עיר ידועה במושבה הטמפלרית הראשונה בארץ (שרונה)?" }, "options": { "en": ["Bethlehem-of-Galilee", "Jerusalem", "Haifa", "Tel Aviv"], "he": ["בית לחם הגלילית", "ירושלים", "חיפה", "תל אביב"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_year_83", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Amnun founded?", "he": "באיזו שנה נוסד היישוב אמנון?" }, "options": { "en": ["1983", "1988", "1973", "2003"], "he": ["1983", "1988", "1973", "2003"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_exist_31", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haBroshim", "Bet Horon"], "he": ["גבעת הברושים", "בית חורון"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_31",
+"hint": { "en": "Which one is a real Israeli settlement?", "he": "איזה מהם הוא יישוב ישראלי אמיתי?" }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haBroshim", "Bet Horon"], "he": ["גבעת הברושים", "בית חורון"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_174", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Ben Zakkay founded?", "he": "באיזו שנה נוסד היישוב בן זכאי?" }, "options": { "en": ["1970", "1940", "1955", "1950"], "he": ["1970", "1940", "1955", "1950"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_17", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "🔬", "text": { "en": "In which city is the 'Weizmann Institute of Science'?", "he": "באיזו עיר נמצא 'מכון ויצמן למדע'?" }, "options": { "en": ["Rehovot", "Tel Aviv", "Herzliyya", "Haifa"], "he": ["רחובות", "תל אביב", "הרצלייה", "חיפה"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_17", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Arbel located?", "he": "באיזה מחוז נמצאת העיר ארבל?" }, "options": { "en": ["Jerusalem", "Haifa", "North", "South"], "he": ["ירושלים", "חיפה", "הצפון", "הדרום"] }, "correctAnswer": 2 },
@@ -193,16 +205,19 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_bool_68", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Ilaniyya located in the North district?", "he": "האם אילנייה נמצאת במחוז הצפון?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_66", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Elon located in the North district?", "he": "האם אילון נמצאת במחוז הצפון?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_25", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Even Shemu'el located in the South district?", "he": "האם אבן שמואל נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_fact_year_50", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 3, "emoji": "📅", "text": { "en": "In what year was the town of Ilaniyya founded?", "he": "באיזו שנה נוסד היישוב אילנייה?" }, "options": { "en": ["1907", "1892", "1922", "1902"], "he": ["1907", "1892", "1922", "1902"] }, "correctAnswer": 3 },
+{ "id": "israel_geo_fact_year_50",
+"hint": { "en": "This historic lower Galilee colony was founded in 1902.", "he": "המושבה ההיסטורית הזו בגליל התחתון נוסדה ב-1902." }, "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 3, "emoji": "📅", "text": { "en": "In what year was the town of Ilaniyya founded?", "he": "באיזו שנה נוסד היישוב אילנייה?" }, "options": { "en": ["1907", "1892", "1922", "1902"], "he": ["1907", "1892", "1922", "1902"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_year_161", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bet Arif founded?", "he": "באיזו שנה נוסד היישוב בית עריף?" }, "options": { "en": ["1956", "1971", "1941", "1951"], "he": ["1956", "1971", "1941", "1951"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_bool_69", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Elat located in the Jerusalem district?", "he": "האם אילת נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_dist_44", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Bustan HaGalil located?", "he": "באיזה מחוז נמצאת העיר בוסתן הגליל?" }, "options": { "en": ["North", "Jerusalem", "Haifa", "South"], "he": ["הצפון", "ירושלים", "חיפה", "הדרום"] }, "correctAnswer": 0 },
 { "id": "israel_geo_exist_25", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 2, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haBroshim", "Bet Hillel"], "he": ["גבעת הברושים", "בית הלל"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_6", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Hosen", "Mitzpe Ananim"], "he": ["חוסן", "מצפה עננים"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_6",
+"hint": { "en": "Look for the name of a real kibbutz or city.", "he": "חפשו את שמו של קיבוץ או עיר אמיתיים." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Hosen", "Mitzpe Ananim"], "he": ["חוסן", "מצפה עננים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_dist_52", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Bir Hadage located?", "he": "באיזה מחוז נמצאת העיר ביר הדאג'?" }, "options": { "en": ["Jerusalem", "Haifa", "South", "North"], "he": ["ירושלים", "חיפה", "הדרום", "הצפון"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_year_99", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Ashdot Ya'aqov(Ihud) founded?", "he": "באיזו שנה נוסד היישוב אשדות יעקב (איחוד)?" }, "options": { "en": ["1953", "1938", "1923", "1933"], "he": ["1953", "1938", "1923", "1933"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_bool_56", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Ahuzzam located in the Jerusalem district?", "he": "האם אחוזם נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_34", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["En Ziwan", "Ramat Yam"], "he": ["עין זיוון", "רמת ים"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_34",
+"hint": { "en": "One is real, the rest are fake names.", "he": "אחד אמיתי, השאר שמות מזויפים." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["En Ziwan", "Ramat Yam"], "he": ["עין זיוון", "רמת ים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_1", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 1, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Bet Berl", "Neve Ahva"], "he": ["בית ברל", "נווה אחווה"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_42", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Ofaqim located in the Jerusalem district?", "he": "האם אופקים נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_164", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Bet Qeshet founded?", "he": "באיזו שנה נוסד היישוב בית קשת?" }, "options": { "en": ["1944", "1964", "1934", "1949"], "he": ["1944", "1964", "1934", "1949"] }, "correctAnswer": 0 },
@@ -225,38 +240,45 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_bool_41", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Omez located in the South district?", "he": "האם אומץ נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_25", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Ofaqim founded?", "he": "באיזו שנה נוסד היישוב אופקים?" }, "options": { "en": ["1955", "1975", "1945", "1960"], "he": ["1955", "1975", "1945", "1960"] }, "correctAnswer": 0 },
 { "id": "israel_geo_exist_52", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 1, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Nof haSela", "Zavdi'el"], "he": ["נוף הסלע", "זבדיאל"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_fact_year_47", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 3, "emoji": "📅", "text": { "en": "In what year was the town of Ayyelet HaShahar founded?", "he": "באיזו שנה נוסד היישוב איילת השחר?" }, "options": { "en": ["1908", "1918", "1923", "1938"], "he": ["1908", "1918", "1923", "1938"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_fact_year_47",
+"hint": { "en": "This kibbutz in the Hula Valley was founded in 1917.", "he": "הקיבוץ הזה בעמק החולה נוסד ב-1917." }, "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 3, "emoji": "📅", "text": { "en": "In what year was the town of Ayyelet HaShahar founded?", "he": "באיזו שנה נוסד היישוב איילת השחר?" }, "options": { "en": ["1908", "1918", "1923", "1938"], "he": ["1908", "1918", "1923", "1938"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_37", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 1, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Ar'ara-BaNegev", "Avivim haChadasha"], "he": ["ערערה-בנגב", "אביבים החדשה"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_32", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Asherat located?", "he": "באיזה מחוז נמצאת העיר אשרת?" }, "options": { "en": ["Haifa", "Jerusalem", "North", "South"], "he": ["חיפה", "ירושלים", "הצפון", "הדרום"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_year_55", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Etanim founded?", "he": "באיזו שנה נוסד היישוב איתנים?" }, "options": { "en": ["1942", "1972", "1957", "1952"], "he": ["1942", "1972", "1957", "1952"] }, "correctAnswer": 3 },
-{ "id": "israel_geo_exist_48", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit haPardes", "Be'er Sheva"], "he": ["בית הפרדס", "באר שבע"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_48",
+"hint": { "en": "Which one do you recognize from the news or travel?", "he": "איזה מהם אתם מזהים מהחדשות או מטיול?" }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit haPardes", "Be'er Sheva"], "he": ["בית הפרדס", "באר שבע"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_141", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bet Hogla founded?", "he": "באיזו שנה נוסד היישוב בית חוגלה?" }, "options": { "en": ["2044", "2014", "2024", "2029"], "he": ["2044", "2014", "2024", "2029"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_year_53", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Itamar founded?", "he": "באיזו שנה נוסד היישוב איתמר?" }, "options": { "en": ["1984", "2004", "1989", "1974"], "he": ["1984", "2004", "1989", "1974"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_116", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Be'eri founded?", "he": "באיזו שנה נוסד היישוב בארי?" }, "options": { "en": ["1946", "1951", "1936", "1966"], "he": ["1946", "1951", "1936", "1966"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_51", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Bir El-Maksur located?", "he": "באיזה מחוז נמצאת העיר ביר אל-מכסור?" }, "options": { "en": ["Haifa", "North", "South", "Jerusalem"], "he": ["חיפה", "הצפון", "הדרום", "ירושלים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_127", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bet Arye-Ofarim founded?", "he": "באיזו שנה נוסד היישוב בית אריה-עופרים?" }, "options": { "en": ["1971", "1986", "2001", "1981"], "he": ["1971", "1986", "2001", "1981"] }, "correctAnswer": 3 },
-{ "id": "israel_geo_exist_58", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Kafar Yasif", "Beit haPardes"], "he": ["כפר יאסיף", "בית הפרדס"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_38", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Bezet", "Nof haSela"], "he": ["בצת", "נוף הסלע"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_58",
+"hint": { "en": "Pick the real town name.", "he": "בחרו בשם של היישוב האמיתי." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Kafar Yasif", "Beit haPardes"], "he": ["כפר יאסיף", "בית הפרדס"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_38",
+"hint": { "en": "Identify the genuine Israeli location.", "he": "זהו את המיקום הישראלי המקורי." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Bezet", "Nof haSela"], "he": ["בצת", "נוף הסלע"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_112", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Be'er Milka founded?", "he": "באיזו שנה נוסד היישוב באר מילכה?" }, "options": { "en": ["2026", "1996", "2006", "2011"], "he": ["2026", "1996", "2006", "2011"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_dist_31", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Ashqelon located?", "he": "באיזה מחוז נמצאת העיר אשקלון?" }, "options": { "en": ["Haifa", "South", "Jerusalem", "North"], "he": ["חיפה", "הדרום", "ירושלים", "הצפון"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_dist_7", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Ani'am located?", "he": "באיזה מחוז נמצאת העיר אניעם?" }, "options": { "en": ["Jerusalem", "Haifa", "North", "South"], "he": ["ירושלים", "חיפה", "הצפון", "הדרום"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_dist_15", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Afeq located?", "he": "באיזה מחוז נמצאת העיר אפק?" }, "options": { "en": ["South", "North", "Haifa", "Jerusalem"], "he": ["הדרום", "הצפון", "חיפה", "ירושלים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_77", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of El'azar founded?", "he": "באיזו שנה נוסד היישוב אלעזר?" }, "options": { "en": ["1975", "1995", "1965", "1980"], "he": ["1975", "1995", "1965", "1980"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_21", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Arsuf located?", "he": "באיזה מחוז נמצאת העיר ארסוף?" }, "options": { "en": ["Jerusalem", "Central", "South", "North"], "he": ["ירושלים", "המרכז", "הדרום", "הצפון"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_43", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit Habanim", "Ro'i"], "he": ["בית הבנים", "רועי"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_43",
+"hint": { "en": "Found the real name among the decoys.", "he": "מצאו את השם האמיתי בין השמות המסיחים." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit Habanim", "Ro'i"], "he": ["בית הבנים", "רועי"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_22", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Eshbol located?", "he": "באיזה מחוז נמצאת העיר אשבול?" }, "options": { "en": ["North", "Haifa", "South", "Jerusalem"], "he": ["הצפון", "חיפה", "הדרום", "ירושלים"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_bool_0", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Abu Juway'ad located in the South district?", "he": "האם אבו ג'ווייעד (שבט) נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_10", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Abu Rukayyek located in the South district?", "he": "האם אבו רוקייק (שבט) נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_29", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Or Aqiva founded?", "he": "באיזו שנה נוסד היישוב אור עקיבא?" }, "options": { "en": ["1941", "1956", "1951", "1971"], "he": ["1941", "1956", "1951", "1971"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_year_110", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Be'er Toviyya founded?", "he": "באיזו שנה נוסד היישוב באר טוביה?" }, "options": { "en": ["1930", "1950", "1935", "1920"], "he": ["1930", "1950", "1935", "1920"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_16", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Avigedor located in the Jerusalem district?", "he": "האם אביגדור נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_27", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Herut", "Nof haSela"], "he": ["חירות", "נוף הסלע"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_27",
+"hint": { "en": "Which city is actually in Israel?", "he": "איזו עיר נמצאת באמת בישראל?" }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Herut", "Nof haSela"], "he": ["חירות", "נוף הסלע"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_158", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Bet Oved founded?", "he": "באיזו שנה נוסד היישוב בית עובד?" }, "options": { "en": ["1938", "1923", "1933", "1953"], "he": ["1938", "1923", "1933", "1953"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_bool_63", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Ibbim located in the Jerusalem district?", "he": "האם איבים נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_124", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bet El founded?", "he": "באיזו שנה נוסד היישוב בית אל?" }, "options": { "en": ["1977", "1982", "1997", "1967"], "he": ["1977", "1982", "1997", "1967"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_36", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Be'er Gannim located?", "he": "באיזה מחוז נמצאת העיר באר גנים?" }, "options": { "en": ["Jerusalem", "Haifa", "South", "North"], "he": ["ירושלים", "חיפה", "הדרום", "הצפון"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_bool_1", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Abu Ghosh located in the Jerusalem district?", "he": "האם אבו גוש נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_exist_3", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Zerufa", "Beit Habanim"], "he": ["צרופה", "בית הבנים"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_3",
+"hint": { "en": "One of these is a real Israeli city.", "he": "אחת מהן היא עיר ישראלית אמיתית." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Zerufa", "Beit Habanim"], "he": ["צרופה", "בית הבנים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_3", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Avigedor founded?", "he": "באיזו שנה נוסד היישוב אביגדור?" }, "options": { "en": ["1950", "1940", "1970", "1955"], "he": ["1950", "1940", "1970", "1955"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_1", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Elqosh located?", "he": "באיזה מחוז נמצאת העיר אלקוש?" }, "options": { "en": ["Haifa", "Jerusalem", "South", "North"], "he": ["חיפה", "ירושלים", "הדרום", "הצפון"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_bool_67", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Elot located in the South district?", "he": "האם אילות נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
@@ -265,11 +287,14 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_year_20", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Udim founded?", "he": "באיזו שנה נוסד היישוב אודים?" }, "options": { "en": ["1953", "1968", "1938", "1948"], "he": ["1953", "1968", "1938", "1948"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_bool_58", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Ahihud located in the South district?", "he": "האם אחיהוד נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_74", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Almagor founded?", "he": "באיזו שנה נוסד היישוב אלמגור?" }, "options": { "en": ["1966", "1951", "1981", "1961"], "he": ["1966", "1951", "1981", "1961"] }, "correctAnswer": 3 },
-{ "id": "israel_geo_exist_50", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haOr", "Ramat Rahel"], "he": ["גבעת האור", "רמת רחל"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_50",
+"hint": { "en": "Look for a familiar Israeli place name.", "he": "חפשו שם של מקום ישראלי מוכר." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haOr", "Ramat Rahel"], "he": ["גבעת האור", "רמת רחל"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_35", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Be'er Ora located?", "he": "באיזה מחוז נמצאת העיר באר אורה?" }, "options": { "en": ["South", "North", "Haifa", "Jerusalem"], "he": ["הדרום", "הצפון", "חיפה", "ירושלים"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_48", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Bahan located?", "he": "באיזה מחוז נמצאת העיר בחן?" }, "options": { "en": ["Jerusalem", "Central", "North", "South"], "he": ["ירושלים", "המרכז", "הצפון", "הדרום"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_9", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haBroshim", "Al-'Atawina"], "he": ["גבעת הברושים", "עטאוונה (שבט)"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_exist_45", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haOr", "Mevo'ot Yeriho"], "he": ["גבעת האור", "מבואות יריחו"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_9",
+"hint": { "en": "Which one is a real town?", "he": "איזה מהם הוא יישוב אמיתי?" }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haBroshim", "Al-'Atawina"], "he": ["גבעת הברושים", "עטאוונה (שבט)"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_45",
+"hint": { "en": "Only one option is correct.", "he": "רק אפשרות אחת היא נכונה." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haOr", "Mevo'ot Yeriho"], "he": ["גבעת האור", "מבואות יריחו"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_40", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Omen located in the North district?", "he": "האם אומן נמצאת במחוז הצפון?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_6", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "🇮🇱", "text": { "en": "Which city saw the signing of the Declaration of Independence in 1948?", "he": "באיזו עיר נחתמה מגילת העצמאות בשנת 1948?" }, "options": { "en": ["Tel Aviv", "Rehovot", "Haifa", "Jerusalem"], "he": ["תל אביב", "רחובות", "חיפה", "ירושלים"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_81", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Emunim founded?", "he": "באיזו שנה נוסד היישוב אמונים?" }, "options": { "en": ["1955", "1970", "1940", "1950"], "he": ["1955", "1970", "1940", "1950"] }, "correctAnswer": 3 },
@@ -289,9 +314,11 @@ export const israelQuestions = [
 { "id": "israel_geo_exist_41", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 2, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Yas'ur", "Beit Habanim"], "he": ["יסעור", "בית הבנים"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_19", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Avital located in the South district?", "he": "האם אביטל נמצאת במחוז הדרום?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_43", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Ahisamakh founded?", "he": "באיזו שנה נוסד היישוב אחיסמך?" }, "options": { "en": ["1940", "1955", "1950", "1970"], "he": ["1940", "1955", "1950", "1970"] }, "correctAnswer": 2 },
-{ "id": "israel_geo_exist_47", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Nizzane Oz", "Ramat Yam"], "he": ["ניצני עוז", "רמת ים"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_47",
+"hint": { "en": "Pick the real Israeli community.", "he": "בחרו בקהילה הישראלית האמיתית." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Nizzane Oz", "Ramat Yam"], "he": ["ניצני עוז", "רמת ים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_15", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "⛪", "text": { "en": "Which city is known as the 'Capital of the Galilee'?", "he": "איזו עיר מכונה 'בירת הגליל'?" }, "options": { "en": ["Karmiel", "Nazareth", "Tiberias", "Safed"], "he": ["כרמיאל", "נצרת", "טבריה", "צפת"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_12", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Kfar Shekhakim", "Newe Ur"], "he": ["כפר שחקים", "נווה אור"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_12",
+"hint": { "en": "Identify the real town.", "he": "זהו את היישוב האמיתי." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Kfar Shekhakim", "Newe Ur"], "he": ["כפר שחקים", "נווה אור"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_bool_9", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Abu Rubay'a located in the Jerusalem district?", "he": "האם אבו רובייעה (שבט) נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_57", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 2, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Avivim haChadasha", "Nehusha"], "he": ["אביבים החדשה", "נחושה"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_131", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Bet Dagan founded?", "he": "באיזו שנה נוסד היישוב בית דגן?" }, "options": { "en": ["1948", "1938", "1953", "1968"], "he": ["1948", "1938", "1953", "1968"] }, "correctAnswer": 0 },
@@ -321,7 +348,8 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_year_175", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Ben Ammi founded?", "he": "באיזו שנה נוסד היישוב בן עמי?" }, "options": { "en": ["1954", "1939", "1949", "1969"], "he": ["1954", "1939", "1949", "1969"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_year_67", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Eliav founded?", "he": "באיזו שנה נוסד היישוב אליאב?" }, "options": { "en": ["2018", "2003", "2013", "2033"], "he": ["2018", "2003", "2013", "2033"] }, "correctAnswer": 2 },
 { "id": "israel_geo_fact_year_5", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Avital founded?", "he": "באיזו שנה נוסד היישוב אביטל?" }, "options": { "en": ["1953", "1973", "1958", "1943"], "he": ["1953", "1973", "1958", "1943"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_exist_29", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Efrat", "Beit Habanim"], "he": ["אפרת", "בית הבנים"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_29",
+"hint": { "en": "One is real, three are fake.", "he": "אחד אמיתי, שלושה מזויפים." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Efrat", "Beit Habanim"], "he": ["אפרת", "בית הבנים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_34", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Oranim founded?", "he": "באיזו שנה נוסד היישוב אורנים?" }, "options": { "en": ["1971", "1956", "1941", "1951"], "he": ["1971", "1956", "1941", "1951"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_dist_46", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Buq'ata located?", "he": "באיזה מחוז נמצאת העיר בוקעאתא?" }, "options": { "en": ["Jerusalem", "Haifa", "South", "North"], "he": ["ירושלים", "חיפה", "הדרום", "הצפון"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_dist_3", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Emunim located?", "he": "באיזה מחוז נמצאת העיר אמונים?" }, "options": { "en": ["Jerusalem", "North", "South", "Haifa"], "he": ["ירושלים", "הצפון", "הדרום", "חיפה"] }, "correctAnswer": 2 },
@@ -380,7 +408,8 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_bool_43", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Or HaGanuz located in the North district?", "he": "האם אור הגנוז נמצאת במחוז הצפון?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_88", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Afiqim founded?", "he": "באיזו שנה נוסד היישוב אפיקים?" }, "options": { "en": ["1937", "1952", "1922", "1932"], "he": ["1937", "1952", "1922", "1932"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_bool_32", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Adamit located in the North district?", "he": "האם אדמית נמצאת במחוז הצפון?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_exist_26", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit haPardes", "Regba"], "he": ["בית הפרדס", "רגבה"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_26",
+"hint": { "en": "Look for a name on the map of Israel.", "he": "חפשו שם שמופיע במפת ישראל." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit haPardes", "Regba"], "he": ["בית הפרדס", "רגבה"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_149", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 2, "emoji": "📅", "text": { "en": "In what year was the town of Bet Yosef founded?", "he": "באיזו שנה נוסד היישוב בית יוסף?" }, "options": { "en": ["1937", "1942", "1957", "1927"], "he": ["1937", "1942", "1957", "1927"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_40", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 2, "emoji": "🗺️", "text": { "en": "In which district is the city of Be'er Sheva located?", "he": "באיזה מחוז נמצאת העיר באר שבע?" }, "options": { "en": ["Jerusalem", "South", "Haifa", "North"], "he": ["ירושלים", "הדרום", "חיפה", "הצפון"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_0", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 2, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haBroshim", "Giv'at Yo'av"], "he": ["גבעת הברושים", "גבעת יואב"] }, "correctAnswer": 1 },
@@ -391,13 +420,16 @@ export const israelQuestions = [
 { "id": "israel_geo_fact_bool_36", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Ohad located in the Jerusalem district?", "he": "האם אוהד נמצאת במחוז ירושלים?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_54", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 1, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Shibbolim", "Neve Ahva"], "he": ["שיבולים", "נווה אחווה"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_dist_62", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-district", "level": 1, "emoji": "🗺️", "text": { "en": "In which district is the city of Bet Gamli'el located?", "he": "באיזה מחוז נמצאת העיר בית גמליאל?" }, "options": { "en": ["South", "Central", "Jerusalem", "North"], "he": ["הדרום", "המרכז", "ירושלים", "הצפון"] }, "correctAnswer": 1 },
-{ "id": "israel_geo_exist_7", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit haPardes", "Metav"], "he": ["בית הפרדס", "מיטב"] }, "correctAnswer": 0 },
+{ "id": "israel_geo_exist_7",
+"hint": { "en": "Which one is a real city?", "he": "איזו מהן היא עיר אמיתית?" }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Beit haPardes", "Metav"], "he": ["בית הפרדס", "מיטב"] }, "correctAnswer": 0 },
 { "id": "israel_geo_fact_year_92", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Argaman founded?", "he": "באיזו שנה נוסד היישוב ארגמן?" }, "options": { "en": ["1958", "1988", "1973", "1968"], "he": ["1958", "1988", "1973", "1968"] }, "correctAnswer": 3 },
-{ "id": "israel_geo_exist_18", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Geva'ot Bar", "Nof haSela"], "he": ["גבעות בר", "נוף הסלע"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_18",
+"hint": { "en": "Identify the real location.", "he": "זהו את המיקום האמיתי." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Geva'ot Bar", "Nof haSela"], "he": ["גבעות בר", "נוף הסלע"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_22", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Ohad founded?", "he": "באיזו שנה נוסד היישוב אוהד?" }, "options": { "en": ["1989", "1969", "1959", "1974"], "he": ["1989", "1969", "1959", "1974"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_17", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 1, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Givat haOr", "Qoranit"], "he": ["גבעת האור", "קורנית"] }, "correctAnswer": 1 },
 { "id": "israel_geo_exist_13", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 2, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Ma'ale Amos", "Mitzpe Ananim"], "he": ["מעלה עמוס", "מצפה עננים"] }, "correctAnswer": 0 },
-{ "id": "israel_geo_exist_35", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Bu'eine-Nujeidat", "Kfar Shekhakim"], "he": ["בועיינה-נוג'ידאת", "כפר שחקים"] }, "correctAnswer": 1 },
+{ "id": "israel_geo_exist_35",
+"hint": { "en": "Pick the actual city name.", "he": "בחרו בשם העיר הממשי." }, "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 3, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Bu'eine-Nujeidat", "Kfar Shekhakim"], "he": ["בועיינה-נוג'ידאת", "כפר שחקים"] }, "correctAnswer": 1 },
 { "id": "israel_geo_fact_year_142", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-fact", "level": 1, "emoji": "📅", "text": { "en": "In what year was the town of Bet Horon founded?", "he": "באיזו שנה נוסד היישוב בית חורון?" }, "options": { "en": ["1967", "1997", "1982", "1977"], "he": ["1967", "1997", "1982", "1977"] }, "correctAnswer": 3 },
 { "id": "israel_geo_fact_bool_49", "category": "israel_cities", "subCategory": "qualitative", "templateId": "israel-city-bool", "level": 1, "emoji": "🧐", "text": { "en": "Is Ortal located in the North district?", "he": "האם אורטל נמצאת במחוז הצפון?" }, "options": { "en": ["Yes", "No"], "he": ["כן", "לא"] }, "correctAnswer": 0 },
 { "id": "israel_geo_exist_46", "category": "israel_cities", "subCategory": "existence", "templateId": "israel-city-existence", "level": 1, "emoji": "🗺️", "text": { "en": "Which of these is a real city or town in Israel?", "he": "איזה מהבאים הוא שם של עיר או יישוב אמיתי בישראל?" }, "options": { "en": ["Giv'at Oz", "Givat haBroshim"], "he": ["גבעת עוז", "גבעת הברושים"] }, "correctAnswer": 0 },
@@ -3664,6 +3696,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-131",
+        "hint": { "en": "It's named after a biblical shell or a type of fruit/field.", "he": "מדובר בשם של מגרש היסטורי, 'כרם' הוא חלק מהשם." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3689,6 +3722,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-132",
+        "hint": { "en": "World War I was raging in the region at the time.", "he": "מלחמת העולם הראשונה השתוללה באזור באותו זמן." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3714,6 +3748,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-133",
+        "hint": { "en": "A British architect known for his work in the Mandate era.", "he": "אדריכל בריטי המוכר מעבודותיו בתקופת המנדט." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3739,6 +3774,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-134",
+        "hint": { "en": "A beautiful white building in the French style on Rothschild Blvd.", "he": "בניין לבן ויפהפה בסגנון צרפתי בשדרות רוטשילד." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3764,6 +3800,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-135",
+        "hint": { "en": "A major event for the World Zionist Organization.", "he": "אירוע מרכזי של ההסתדרות הציונית העולמית." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3839,6 +3876,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-138",
+        "hint": { "en": "A Scottish biologist and town planner.", "he": "ביולוג ומתכנן ערים סקוטי." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3864,6 +3902,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-139",
+        "hint": { "en": "A famous Irgun ship that was the center of a major conflict.", "he": "אוניית אצ\"ל מפורסמת שהייתה במוקד של עימות קשה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3889,6 +3928,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-140",
+        "hint": { "en": "It's the area now known as 'Sarona'.", "he": "זהו האזור המוכר היום כ'שרונה'." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3914,6 +3954,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-141",
+        "hint": { "en": "A Jewish architect who emigrated from Poland.", "he": "אדריכל יהודי שעלה מפולין (יהודה מגידוביץ')." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3939,6 +3980,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-142",
+        "hint": { "en": "It was a medium-sized hall for its time, around 600-800 seats.", "he": "זה היה אולם בינוני לזמנו, בסביבות 600-800 מושבים." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3964,6 +4006,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-143",
+        "hint": { "en": "Shlomo Lahat (Chich) succeeded him.", "he": "שלמה להט (צ'יץ') החליף אותו." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -3989,6 +4032,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-144",
+        "hint": { "en": "Named after a famous explorer or 'The Lighthouse'.", "he": "נקרא על שם מגלה ארצות מפורסם או 'המגדלור'." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4014,6 +4058,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-145",
+        "hint": { "en": "A famous poetess, often called 'Rachel' or something similar.", "he": "משוררת מפורסמת, לעתים נקראת 'רחל' או שם דומה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4039,6 +4084,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-146",
+        "hint": { "en": "The 'Thermometer House' is one such example.", "he": "הוא לעתים מכונה 'בית המדחום'." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4064,6 +4110,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-147",
+        "hint": { "en": "It was originally called 'Carmel Street'.", "he": "במקור הוא נקרא 'רחוב הכרמל'." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4089,6 +4136,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-148",
+        "hint": { "en": "A famous Israeli artist like Nahum Gutman.", "he": "אמן ישראלי מפורסם כמו נחום גוטמן." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4114,6 +4162,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-149",
+        "hint": { "en": "It was held in the mid-1930s (1934 or 1932).", "he": "זה נערך באמצע שנות ה-30 (1932 או 1934)." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4139,6 +4188,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-150",
+        "hint": { "en": "Israel Rokach or a later mayor like Rabinowitz.", "he": "היה זה ראש העיר שלמה להט (צ'יץ')." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4164,6 +4214,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-151",
+        "hint": { "en": "They mainly came from Germany after 1933.", "he": "הם הגיעו בעיקר מגרמניה לאחר שנת 1933." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4189,6 +4240,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-152",
+        "hint": { "en": "The Herzliya Gymnasium stood there.", "he": "הגימנסיה הרצליה עמדה שם." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4214,6 +4266,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-153",
+        "hint": { "en": "The master plan for the development of Tel Aviv.", "he": "תכנית המתאר הכוללת לפיתוחה של תל אביב." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4239,6 +4292,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-154",
+        "hint": { "en": "A legendary composer like Sasha Argov.", "he": "מלחין אגדי כמו סשה ארגוב." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -4264,6 +4318,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-155",
+        "hint": { "en": "A house on Kaplan street dedicated to journalists.", "he": "בית ברחוב קפלן המוקדש לעיתונאים." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5039,6 +5094,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-186",
+        "hint": { "en": "The 'Montefiore neighborhood' stands on this land today.", "he": "שכונת 'מונטיפיורי' עומדת על קרקע זו היום." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5064,6 +5120,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-187",
+        "hint": { "en": "A prominent architect of the era.", "he": "אדריכל בולט מאותה תקופה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5089,6 +5146,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-188",
+        "hint": { "en": "A committee of experts from the early 1920s.", "he": "ועדה של מומחים מראשית שנות ה-20." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5114,6 +5172,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-189",
+        "hint": { "en": "It was originally called 'The News' or something similar.", "he": "במקור הוא נקרא 'חדשות מהארץ' או משהו דומה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5139,6 +5198,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-190",
+        "hint": { "en": "The Altalena or a similar ship.", "he": "האלטלנה או ספינה דומה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5164,6 +5224,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-191",
+        "hint": { "en": "Yitzhak Rapaport or another famous name.", "he": "יצחק רפפורט או שם מפורסם אחר." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5189,6 +5250,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-192",
+        "hint": { "en": "The 'Lodzia House' or similar.", "he": "בית 'לודז'יה' או דומה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5214,6 +5276,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-193",
+        "hint": { "en": "It's the Rabin Square today.", "he": "היא נקראת היום כיכר רבין." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5239,6 +5302,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-194",
+        "hint": { "en": "Yosef Barsky was involved.", "he": "יוסף ברסקי היה מעורב." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5264,6 +5328,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-195",
+        "hint": { "en": "It created a 'Garden City' layout.", "he": "היא יצרה מתווה של 'עיר גנים'." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5289,6 +5354,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-196",
+        "hint": { "en": "The Cinema Hotel or something in the White City.", "he": "מלון סינמה או מבנה אחר בעיר הלבנה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5314,6 +5380,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-197",
+        "hint": { "en": "David Ben-Gurion.", "he": "דוד בן-גוריון." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5339,6 +5406,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-198",
+        "hint": { "en": "The decade of the 1930s.", "he": "העשור של שנות ה-30." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5364,6 +5432,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-199",
+        "hint": { "en": "Dov Karmi or someone from that group.", "he": "דב כרמי או מישהו מאותה קבוצה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5389,6 +5458,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-200",
+        "hint": { "en": "Scottish.", "he": "סקוטי." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5414,6 +5484,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-201",
+        "hint": { "en": "It's on Yehuda HaLevi street.", "he": "הוא נמצא ברחוב יהודה הלוי." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5439,6 +5510,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-202",
+        "hint": { "en": "Begin Road.", "he": "דרך בגין." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5464,6 +5536,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-203",
+        "hint": { "en": "Found on Rothschild boulevard.", "he": "נמצא בשדרות רוטשילד." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5489,6 +5562,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-204",
+        "hint": { "en": "Avi Lupa or a similar firm.", "he": "אבי לופה או משרד דומה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5514,6 +5588,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-205",
+        "hint": { "en": "A museum dedicated to the pre-state defense force.", "he": "מוזיאון המוקדש לכוח המגן שלפני המדינה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5539,6 +5614,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-206",
+        "hint": { "en": "Architect Shmuel Meshulam.", "he": "האדריכל שמואל משולם." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5564,6 +5640,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-207",
+        "hint": { "en": "UNESCO recognized it for its concentration of Bauhaus houses.", "he": "אונסק\"ו הכירה בה בשל ריכוז בתי הבאוהאוס." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5589,6 +5666,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-208",
+        "hint": { "en": "The Jaffa hill near the port.", "he": "הגבעה ביפו סמוך לנמל." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5614,6 +5692,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-209",
+        "hint": { "en": "Shlomo Lahat (Chich).", "he": "שלמה להט (צ'יץ')." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5639,6 +5718,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-210",
+        "hint": { "en": "A famous satirical theater in early TA.", "he": "תיאטרון סאטירי מפורסם בראשית תל אביב." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5664,6 +5744,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-211",
+        "hint": { "en": "An iconic modern building on Ibn Gabirol.", "he": "בניין מודרני אייקוני באבן גבירול." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5689,6 +5770,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-212",
+        "hint": { "en": "Yaski or a similar influential architect.", "he": "יסקי או אדריכל משפיע דומה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5714,6 +5796,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-213",
+        "hint": { "en": "The house of the national poet on Bialik street.", "he": "ביתו של המשורר הלאומי ברחוב ביאליק." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5789,6 +5872,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-216",
+        "hint": { "en": "A famous Zionist activist and writer.", "he": "פעיל ציוני וסופר מפורסם (נחום סוקולוב)." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -5914,6 +5998,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-221",
+        "hint": { "en": "It happened in 1949 or 1950.", "he": "זה קרה ב-1949 או 1950." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -6014,6 +6099,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-225",
+        "hint": { "en": "A movement of the hand near the face or mouth.", "he": "תנועת יד ליד הפנים או הפה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -6089,6 +6175,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-228",
+        "hint": { "en": "Rothschild Boulevard 16.", "he": "שדרות רוטשילד 16." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -6414,6 +6501,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-241",
+        "hint": { "en": "It's about 14 kilometers long.", "he": "אורכה כ-14 קילומטרים." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -6539,6 +6627,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-246",
+        "hint": { "en": "The first games were in 1932.", "he": "המשחקים הראשונים היו ב-1932." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -6764,6 +6853,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-255",
+        "hint": { "en": "King George or a central Jaffa street.", "he": "שדרות ירושלים." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -6814,6 +6904,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-257",
+        "hint": { "en": "Ahad Ha'am or Rothschild.", "he": "רחוב אחד העם (או רוטשילד)." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -6964,6 +7055,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-263",
+        "hint": { "en": "A famous capital city like Paris or Vienna.", "he": "עיר בירה מפורסמת כמו פריז או וינה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -7014,6 +7106,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-265",
+        "hint": { "en": "There are over 1,500 streets.", "he": "יש יותר מ-1,500 רחובות." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -7039,6 +7132,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-266",
+        "hint": { "en": "In the Abu Kabir neighborhood.", "he": "בשכונת אבו כביר." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
@@ -7164,6 +7258,7 @@ export const israelQuestions = [
     },
 {
         "id": "q-tel-aviv-271",
+        "hint": { "en": "Florentin or something similar.", "he": "פלורנטין או משהו דומה." },
         "category": "tel_aviv",
         "level": 3,
         "text": {
