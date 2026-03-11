@@ -5419,6 +5419,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1021",
+        "hint": { "en": "The dough will absorb too much oil at lower temperatures.", "he": "הבצק יספוג יותר מדי שמן בטמפרטורות נמוכות יותר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5444,6 +5445,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1022",
+        "hint": { "en": "To develop the gluten structure before adding the weight of the fat.", "he": "כדי לפתח את מבנה הגלוטן לפני הוספת כובד השומן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5519,6 +5521,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1025",
+        "hint": { "en": "The chocolate will be soft, dull, and won't 'snap'.", "he": "השוקולד יהיה רך, עמום ולא 'יישבר' בצורה חדה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5544,6 +5547,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1026",
+        "hint": { "en": "To keep the butter layers solid and distinct for flaky results.", "he": "כדי לשמור על שכבות החמאה מוצקות ונפרדות לתוצאה פריכה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5569,6 +5573,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1027",
+        "hint": { "en": "To maintain the airy volume created by the beaten eggs.", "he": "כדי לשמור על הנפח האווירי שנוצר מהקצפת הביצים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5644,6 +5649,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1030",
+        "hint": { "en": "To evaporate moisture so the pastry can expand and hold its shape in the oven.", "he": "לאידוי הלחות כדי שהבצק יוכל להתרחב ולשמור על צורתו בתנור." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5769,6 +5775,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1035",
+        "hint": { "en": "To prevent sugar crystallization during the boiling process.", "he": "כדי למנוע התגבשות סוכר בזמן תהליך ההרתחה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5794,6 +5801,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1036",
+        "hint": { "en": "The ideal temperature for a golden crust and cooked interior.", "he": "הטמפרטורה האידיאלית לקבלת קרום זהוב ופנים מבושל." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5869,6 +5877,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1039",
+        "hint": { "en": "To give the airy mousse a stable, sliceable structure.", "he": "כדי לתת למוס האווירי מבנה יציב שניתן לפרוס." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5894,6 +5903,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1040",
+        "hint": { "en": "To align the cocoa butter crystals for a shiny and firm finish.", "he": "כדי לסדר את גבישי חמאת הקקאו למרקם מבריק ומוצק." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5919,6 +5929,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1041",
+        "hint": { "en": "The butter will melt into the dough, ruining the flaky layers.", "he": "החמאה תימס לתוך הבצק ותהרוס את השכבות הדקיקות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -5969,6 +5980,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1043",
+        "hint": { "en": "To develop the gluten strands that give the bread its elasticity.", "he": "כדי לפתח את סיבי הגלוטן הנותנים ללחם את האלסטיות שלו." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6069,6 +6081,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1047",
+        "hint": { "en": "The fat will melt, and the crust will become tough instead of flaky.", "he": "השומן יימס והבצק יהיה קשה במקום פריך." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6119,6 +6132,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1049",
+        "hint": { "en": "The eggs will scramble from the sudden high heat.", "he": "הביצים ייקרשו (יהפכו לחביתה) מהחום הגבוה הפתאומי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6144,6 +6158,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1050",
+        "hint": { "en": "To interfere with the formation of large sugar crystals.", "he": "כדי להפריע להיווצרות גבישי סוכר גדולים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6169,6 +6184,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1051",
+        "hint": { "en": "It ensures the outside is crisp while the inside stays light.", "he": "זה מבטיח שהחוץ יהיה פריך בזמן שהפנים נשאר קליל." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6219,6 +6235,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1053",
+        "hint": { "en": "To provide a brilliant shine and prevent the fruit from drying out.", "he": "כדי לספק ברק מרהיב ולמנוע מהפירות להתייבש." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6244,6 +6261,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1054",
+        "hint": { "en": "It ensures the mousse maintains its shape at room temperature.", "he": "זה מבטיח שהמוס ישמור על צורתו בטמפרטורת החדר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6269,6 +6287,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1055",
+        "hint": { "en": "For a professional finish with a high sheen and a clean break.", "he": "לגימור מקצועי עם ברק גבוה ושבירה נקייה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6294,6 +6313,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1056",
+        "hint": { "en": "This creates 'lift' as the moisture in the cold butter turns to steam.", "he": "זה יוצר 'הרמה' כשהלחות בחמאה הקרה הופכת לאדים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6319,6 +6339,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1057",
+        "hint": { "en": "If you stir too hard, you'll lose the air that makes the cake rise.", "he": "אם תערבבו חזק מדי, תאבדו את האוויר שגורם לעוגה לתפוח." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6419,6 +6440,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1061",
+        "hint": { "en": "Even a tiny amount of fat will prevent the egg whites from foaming.", "he": "אפילו כמות קטנה של שומן תמנע מחלבוני הביצה להקציף." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6444,6 +6466,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1062",
+        "hint": { "en": "To keep the bits of fat solid until they hit the hot oven.", "he": "כדי לשמור על חתיכות השומן מוצקות עד שהן מגיעות לתנור החם." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6519,6 +6542,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1065",
+        "hint": { "en": "Glucose acts as a stabilizing agent against crystallization.", "he": "גלוקוז משמש כגורם מייצב נגד התגבשות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6594,6 +6618,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1068",
+        "hint": { "en": "The glaze creates a seal that protects the fruit's appearance.", "he": "הזיגוג יוצר אטימה המגינה על מראה הפרי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6644,6 +6669,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1070",
+        "hint": { "en": "Without it, the chocolate will lose its shape and bloom.", "he": "בלי זה, השוקולד יאבד את צורתו ויפתח כתמים לבנים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6694,6 +6720,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1072",
+        "hint": { "en": "To preserve the delicate structure of the beaten eggs.", "he": "כדי לשמר את המבנה העדין של הביצים המוקצפות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6819,6 +6846,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1077",
+        "hint": { "en": "The cold water keeps the fat from melting prematurely.", "he": "המים הקרים מונעים מהשומן להמיס בטרם עת." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6894,6 +6922,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1080",
+        "hint": { "en": "To create a smooth, clear syrup without crystals.", "he": "כדי ליצור סירופ חלק וצלול ללא גבישים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6919,6 +6948,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1081",
+        "hint": { "en": "The high heat creates a rapid rise and a thin crust.", "he": "החום הגבוה יוצר תפיחה מהירה וקרום דק." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6944,6 +6974,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1082",
+        "hint": { "en": "Adding fat slowly prevents it from breaking the gluten network.", "he": "הוספת שומן באטיות מונעת ממנו לשבור את רשת הגלוטן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -6969,6 +7000,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1083",
+        "hint": { "en": "The fruit will look dull and may turn brown quickly.", "he": "הפירות ייראו עמומים ועלולים להשחים במהירות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7094,6 +7126,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1088",
+        "hint": { "en": "Kneading aligns the proteins into a strong, stretchy web.", "he": "הלישה מסדרת את החלבונים לרשת חזקה וגמישה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7194,6 +7227,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1092",
+        "hint": { "en": "It's essential for achieving a flaky, 'short' texture.", "he": "זה חיוני להשגת מרקם פריך ומתפורר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7244,6 +7278,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1094",
+        "hint": { "en": "To gradually raise the temperature of the egg yolks.", "he": "כדי להעלות בהדרגה את טמפרטורת החלמונים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7269,6 +7304,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1095",
+        "hint": { "en": "The syrup will likely turn into a hard, grainy mass of sugar.", "he": "הסירופ ככל הנראה יהפוך למסה קשה וגרעינית של סוכר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7294,6 +7330,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1096",
+        "hint": { "en": "They will stay greasy and heavy instead of light and airy.", "he": "הן יישארו שומניות וכבדות במקום להיות קלילות ואווריריות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7319,6 +7356,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1097",
+        "hint": { "en": "The butter will leak out, and the bread will be oily and dense.", "he": "החמאה תדלוף החוצה, והלחם יהיה שומני ודחוס." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7344,6 +7382,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1098",
+        "hint": { "en": "The tart will lose its professional shine and fresh look.", "he": "הטארט יאבד את הברק המקצועי והמראה הטרי שלו." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7394,6 +7433,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1100",
+        "hint": { "en": "Allows it to be molded easily while maintaining a beautiful shine.", "he": "מאפשר לעצב אותו בקלות תוך שמירה על ברק יפה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7469,6 +7509,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1103",
+        "hint": { "en": "To ensure the bread can trap gas and rise properly.", "he": "כדי להבטיח שהלחם יוכל לכלוא גזים ולתפוח כראוי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7494,6 +7535,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1104",
+        "hint": { "en": "Allows a 'skin' to form, which creates the famous macaron 'feet'.", "he": "מאפשר היווצרות 'עור', שיוצר את ה'רגליים' המפורסמות של המקרון." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7569,6 +7611,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1107",
+        "hint": { "en": "To prevent the fat from coating the flour too thoroughly early on.", "he": "כדי למנוע מהשומן לצפות את הקמח בצורה יסודית מדי בשלב מוקדם." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7594,6 +7637,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1108",
+        "hint": { "en": "To create a stable bond between the fat in chocolate and the liquid cream.", "he": "כדי ליצור חיבור יציב בין השומן שבשוקולד לבין השמנת הנוזלית." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7669,6 +7713,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1111",
+        "hint": { "en": "Fat is a surfactant that destabilizes the protein film.", "he": "שומן הוא חומר פעיל שטח המערער את יציבות קרום החלבון." },
         "category": "patisserie",
         "level": 2,
         "text": {
@@ -7794,6 +7839,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1116",
+        "hint": { "en": "The pastry won't puff up, and it will be dense instead of layered.", "he": "הבצק לא יתנפח ויהיה דחוס במקום להיות מורכב משכבות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7819,6 +7865,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1117",
+        "hint": { "en": "Protecting the air bubbles is the key to a light sponge.", "he": "הגנה על בועות האוויר היא המפתח לעוגת ספוג קלה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7894,6 +7941,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1120",
+        "hint": { "en": "Evaporating water is what allows the steam to puff the pastry later.", "he": "אידוי המים הוא מה שמאפשר לאדים לנפח את הבצק מאוחר יותר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7919,6 +7967,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1121",
+        "hint": { "en": "The proteins cannot form a stable network around fat molecules.", "he": "החלבונים אינם יכולים ליצור רשת יציבה סביב מולקולות שומן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -7944,6 +7993,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1122",
+        "hint": { "en": "Warm water melts the butter, leading to a tough, greasy crust.", "he": "מים חמים ממיסים את החמאה, מה שמוביל לקרום קשה ושומני." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8019,6 +8069,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1125",
+        "hint": { "en": "You risk the entire batch crystallizing into a solid block.", "he": "אתם מסתכנים בכך שכל הכמות תתגבש לבלוק מוצק." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8094,6 +8145,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1128",
+        "hint": { "en": "The tart will go from 'professional' to 'home-made' in appearance.", "he": "הטארט יעבור ממראה 'מקצועי' למראה 'ביתי' בגלל חוסר הברק." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8119,6 +8171,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1129",
+        "hint": { "en": "Provides the structural integrity needed for a mousse to hold its shape.", "he": "מספק את השלמות המבנית הדרושה למוס כדי לשמור על צורתו." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8169,6 +8222,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1131",
+        "hint": { "en": "Vital for maintaining the distinct 'thousand layers' of the pastry.", "he": "חיוני לשמירה על אלף השכבות הנפרדות של הבצק." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8269,6 +8323,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1135",
+        "hint": { "en": "The double-cooking process (pan then oven) is unique to this dough.", "he": "תהליך הבישול הכפול (בסיר ואז בתנור) ייחודי לבצק זה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8294,6 +8349,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1136",
+        "hint": { "en": "Fat is the natural enemy of a stable egg white foam.", "he": "שומן הוא האויב הטבעי של קצף חלבונים יציב." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8344,6 +8400,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1138",
+        "hint": { "en": "The ganache will 'split', showing oily droplets on the surface.", "he": "הגנאש 'יישבר' ויופיעו טיפות שומניות על פני השטח." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8444,6 +8501,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1142",
+        "hint": { "en": "The dough will be heavy and won't develop those beautiful air pockets.", "he": "הבצק יהיה כבד ולא יפתח את כיסי האוויר היפים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8494,6 +8552,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1144",
+        "hint": { "en": "Gelatin creates a mesh that traps the air and liquid in place.", "he": "הג'לטין יוצר רשת הלוכדת את האוויר והנוזל במקומם." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8519,6 +8578,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1145",
+        "hint": { "en": "The finish will be greyish and the chocolate won't click when broken.", "he": "הגימור יהיה אפרפר והשוקולד לא 'יקליק' כשתשברו אותו." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8619,6 +8679,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1149",
+        "hint": { "en": "They will crack or fail to rise properly without a foot.", "he": "הם ייסדקו או ייכשלו בתפיחה נכונה ללא ה'רגליים'." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8644,6 +8705,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1150",
+        "hint": { "en": "The dough needs to be dry enough to absorb eggs later.", "he": "הבצק צריך להיות יבש מספיק כדי לספוג את הביצים מאוחר יותר." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8694,6 +8756,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1152",
+        "hint": { "en": "Heat equals melted fat, which equals a failed pie crust.", "he": "חום שווה לשומן מומס, מה שמוביל לבצק פאי שנכשל." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8744,6 +8807,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1154",
+        "hint": { "en": "A critical step in almost every professional custard-based dessert.", "he": "שלב קריטי בכמעט כל קינוח מקצועי המבוסס על קרם." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8869,6 +8933,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1159",
+        "hint": { "en": "Enables the mousse to be light and airy yet solid enough to slice.", "he": "מאפשר למוס להיות קל ואוורירי אך מוצק מספיק לפריסה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -8994,6 +9059,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1164",
+        "hint": { "en": "Resting helps the surface dry and stabilizes the internal structure.", "he": "המנוחה עוזרת לפני השטח להתייבש ומייצבת את המבנה הפנימי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9119,6 +9185,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1169",
+        "hint": { "en": "Prevents the eggs from 'shocking' and cooking on contact with hot milk.", "he": "מונע מהביצים לקבל 'שוק' ולהתבשל במגע עם חלב חם." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9144,6 +9211,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1170",
+        "hint": { "en": "You'll end up with a pan of sugar crystals instead of smooth syrup.", "he": "תסיימו עם סיר מלא בגבישי סוכר במקום סירופ חלק." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9219,6 +9287,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1173",
+        "hint": { "en": "It creates an edible 'varnish' that protects and beautifies.", "he": "זה יוצר 'לכה' אכילה המגינה ומיפה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9244,6 +9313,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1174",
+        "hint": { "en": "Without it, the mousse would just be a rich, runny cream.", "he": "בלי זה, המוס יהיה פשוט קרם עשיר ונוזלי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9294,6 +9364,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1176",
+        "hint": { "en": "If the layers merge, the pastry will be greasy and flat.", "he": "אם השכבות יתמזגו, הבצק יהיה שומני ושטוח." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9319,6 +9390,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1177",
+        "hint": { "en": "Treat the air bubbles like delicate glass; don't break them.", "he": "התייחסו לבועות האוויר כאל זכוכית עדינה; אל תשברו אותן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9344,6 +9416,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1178",
+        "hint": { "en": "Kneading is the only way to build the 'skeleton' of the bread.", "he": "לישה היא הדרך היחידה לבנות את ה'שלד' של הלחם." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9369,6 +9442,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1179",
+        "hint": { "en": "Essential for the high internal pressure that creates the 'feet'.", "he": "חיוני ללחץ הפנימי הגבוה שיוצר את ה'רגליים'." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9394,6 +9468,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1180",
+        "hint": { "en": "A moist dough won't have the strength to puff up in the oven.", "he": "בצק לח לא יהיה חזק מספיק כדי להתנפח בתנור." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9494,6 +9569,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1184",
+        "hint": { "en": "Ensures the final cream is silky smooth without any bits of cooked egg.", "he": "מבטיח שהקרם הסופי יהיה חלק כמשי ללא חתיכות ביצה מבושלת." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9519,6 +9595,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1185",
+        "hint": { "en": "Glucose provides a crystal-free journey to the desired sugar stage.", "he": "גלוקוז מבטיח תהליך ללא גבישים עד להגעה לשלב הסוכר הרצוי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9544,6 +9621,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1186",
+        "hint": { "en": "Ensures the dough cooks through before the outside gets too dark.", "he": "מבטיח שהבצק יתבשל מבפנים לפני שהחוץ נהיה כהה מדי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9619,6 +9697,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1189",
+        "hint": { "en": "Gelatin turns a flavored liquid into a stable, airy dream.", "he": "הג'לטין הופך נוזל בטעמים לחלום יציב ואוורירי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9669,6 +9748,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1191",
+        "hint": { "en": "Layered perfection requires cold temperatures and patience.", "he": "שלמות השכבות דורשת טמפרטורות קרות וסבלנות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9719,6 +9799,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1193",
+        "hint": { "en": "A well-kneaded dough can hold the CO2 produced by yeast.", "he": "בצק שלוש היטב יכול להחזיק את הפחמן הדו-חמצני שמייצר השמרים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9744,6 +9825,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1194",
+        "hint": { "en": "The dry surface is what forces the air out through the bottom.", "he": "המשטח היבש הוא מה שמאלץ את האוויר לצאת דרך התחתית." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9769,6 +9851,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1195",
+        "hint": { "en": "No steam escape means no interior hollow for filling.", "he": "חוסר בריחת אדים פירושו שאין חלל פנימי למילוי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9819,6 +9902,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1197",
+        "hint": { "en": "Keep the ingredients at a temperature that respects the fat.", "he": "שמרו על המרכיבים בטמפרטורה שמכבדת את השומן." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -9869,6 +9953,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1199",
+        "hint": { "en": "Rushing the heat will turn your custard into scrambled eggs.", "he": "מהירות יתר בחימום תהפוך את הקרם שלכם לחביתה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10094,6 +10179,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1208",
+        "hint": { "en": "A flat, dense, and unappetizing loaf of bread.", "he": "כיכר לחם שטוחה, דחוסה ולא מעוררת תיאבון." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10119,6 +10205,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1209",
+        "hint": { "en": "The macarons will spread and crack instead of rising elegantly.", "he": "המקרונים יתפשטו וייסדקו במקום לתפוח באלגנטיות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10169,6 +10256,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1211",
+        "hint": { "en": "Fat inhibits the coagulation of the egg white proteins.", "he": "שומן מעכב את קרישת חלבוני חלבון הביצה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10194,6 +10282,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1212",
+        "hint": { "en": "It leads to a 'mealy' crust rather than a flaky one.", "he": "זה מוביל לקרום 'קמחי' במקום קרום פריך דפי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10244,6 +10333,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1214",
+        "hint": { "en": "Protects the heat-sensitive proteins in the egg yolks.", "he": "מגן על החלבונים הרגישים לחום שבחלמוני הביצה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10269,6 +10359,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1215",
+        "hint": { "en": "Interruption of the sucrose crystals is key for texture.", "he": "הפרעת גבישי הסוכרוז היא המפתח למרקם." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10319,6 +10410,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1217",
+        "hint": { "en": "This builds the strength needed to support a high fat content.", "he": "זה בונה את החוזק הדרוש לתמיכה בתכולת שומן גבוהה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10394,6 +10486,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1220",
+        "hint": { "en": "Beta crystals are what give chocolate its desirable properties.", "he": "גבישי בטא הם שנותנים לשוקולד את תכונותיו הרצויות." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10469,6 +10562,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1223",
+        "hint": { "en": "You'll lack the gluten 'balloon' that traps fermentation gases.", "he": "יחסר לכם 'בלון' הגלוטן הלוכד את גזי התסיסה." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10594,6 +10688,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1228",
+        "hint": { "en": "Prevents the fat in the cream from separating from the cocoa mass.", "he": "מונע מהשומן שבשמנת להיפרד ממסת הקקאו." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10644,6 +10739,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1230",
+        "hint": { "en": "Expect a grainy, crystallized mess instead of silky syrup.", "he": "צפו לבלגן גרגירי ומגובש במקום סירופ משי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10719,6 +10815,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1233",
+        "hint": { "en": "The tart will lack the 'finished' look of quality patisserie.", "he": "לטארט יחסר המראה ה'מוגמר' של קונדיטוריה איכותית." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10769,6 +10866,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1235",
+        "hint": { "en": "Provides the necessary snapping point for gourmet chocolates.", "he": "מספק את נקודת השבירה (Snap) הדרושה לשוקולדים איכותיים." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10844,6 +10942,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1238",
+        "hint": { "en": "Without structure, bread cannot achieve lightness or crumb.", "he": "ללא מבנה, לחם אינו יכול להשיג קלילות או מרקם פנימי רצוי." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10919,6 +11018,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1241",
+        "hint": { "en": "You may end up with a syrup at the bottom and no foam.", "he": "אתם עלולים לסיים עם סירופ בתחתית וללא קצף." },
         "category": "patisserie",
         "level": 3,
         "text": {
@@ -10944,6 +11044,7 @@ export const sports_lifeQuestions = [
     },
 {
         "id": "q-patisserie-1242",
+        "hint": { "en": "Crucial for producing short and tender pastry items.", "he": "חיוני לייצור מאפים פריכים ורכים." },
         "category": "patisserie",
         "level": 3,
         "text": {
