@@ -3,6 +3,7 @@ import { israelQuestions } from './israel.js';
 import { judaismQuestions } from './judaism.js';
 import { natureQuestions } from './nature.js';
 import { scienceQuestions } from './science.js';
+import { riddlesQuestions } from './riddles.js';
 import { worldQuestions } from './world.js';
 import { culture_entQuestions } from './culture_ent.js';
 import { sports_lifeQuestions } from './sports_life.js';
@@ -129,6 +130,15 @@ export const topics = [
                     "he": "פסיכולוגיה"
                 },
                 "icon": "🧠"
+            },
+            {
+                "id": "riddles",
+                "name": {
+                    "en": "Riddles",
+                    "he": "חידות"
+                },
+                "icon": "🧩",
+                "newUntil": "2026-03-25"
             }
         ]
     },
@@ -297,7 +307,8 @@ export const questionCounts = {
     "general": 100,
     "sopranos": 100,
     "human_body": 100,
-    "psychology": 60
+    "psychology": 60,
+    "riddles": 150
 };
 
 export const questions = [
@@ -308,5 +319,6 @@ export const questions = [
     ...worldQuestions,
     ...culture_entQuestions,
     ...sports_lifeQuestions,
+    ...riddlesQuestions,
     ...generalQuestions
 ];
