@@ -262,8 +262,9 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         let className = "quiz-option-btn";
                         if (eliminatedOptions.includes(i)) className += " eliminated";
                         if (isAnswering) {
-                            if (i === card.correctAnswer) className += " correct";
-                            else if (i === selectedAnswer) className += " wrong";
+                            const showCorrect = (gameMode !== '1v1') || (selectedAnswer === card.correctAnswer);
+                            if (i === card.correctAnswer && showCorrect) className += " correct";
+                            else if (i === selectedAnswer && i !== card.correctAnswer) className += " wrong";
                         }
 
                         return (
