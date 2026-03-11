@@ -163,13 +163,8 @@ function App() {
         }
       } else {
         // 1v1: Pure point race. No heart deduction.
-        setDeck(prev => {
-          const newDeck = prev.map(card =>
-            card.id === cardId ? { ...card, isFailed: true } : card
-          );
-          checkWinCondition(newDeck, scores);
-          return newDeck;
-        });
+        // We DON'T set isFailed: true anymore, so the card stays up for grabs.
+        checkWinCondition(deck, scores);
 
         // Always switch turn on wrong answer in 1v1
         setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
