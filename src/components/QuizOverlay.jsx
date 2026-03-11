@@ -48,6 +48,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         setIsAnswering(false);
         setIsHintVisible(false);
         setIsReady(false);
+        setReboundCancelled(false);
         const readyTimeout = setTimeout(() => setIsReady(true), 500);
         return () => clearTimeout(readyTimeout);
     }, [card?.id]);
@@ -121,14 +122,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         playSound('buy');
         onCoinsChange(coins - 2);
         if (onPowerUpUsed) onPowerUpUsed(card.id);
-        if (gameMode === '1v1' && card.failedAttempts === 1) setReboundCancelled(true);
+        setReboundCancelled(true);
 
-        // Find all incorrect indices
         const wrongIndices = card.options.en
             .map((_, index) => index)
             .filter(index => index !== card.correctAnswer);
 
-        // Pick 2 random wrong answers to eliminate
         const shuffledWrong = wrongIndices.sort(() => Math.random() - 0.5);
         const toEliminate = shuffledWrong.slice(0, 2);
         setEliminatedOptions(toEliminate);
@@ -142,7 +141,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         playSound('buy');
         onCoinsChange(coins - 5);
         if (onPowerUpUsed) onPowerUpUsed(card.id);
-        if (gameMode === '1v1' && card.failedAttempts === 1) setReboundCancelled(true);
+        setReboundCancelled(true);
         if (timerRef.current) clearInterval(timerRef.current);
 
         setIsAnswering(true);
@@ -162,7 +161,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         playSound('buy');
         onCoinsChange(coins - 3);
         if (onPowerUpUsed) onPowerUpUsed(card.id);
-        if (gameMode === '1v1' && card.failedAttempts === 1) setReboundCancelled(true);
+        setReboundCancelled(true);
         setIsHintVisible(true);
     };
 
@@ -264,13 +263,13 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </div>
                     )}
 
-                    {gameMode === '1v1' && card.failedAttempts === 1 && !card.isTainted && card.options.he.length > 2 && !reboundCancelled && (
+                    {gameMode === '1v1' && card.failedAttempts === 1 && !card.isTainted && !reboundCancelled && card.options.he.length > 2 && (
                         <div className="super-answer-indicator">
                             🚀 {t.rebound}
                         </div>
                     )}
 
-                    {reboundCancelled && (
+                    {reboundCancelled && gameMode === '1v1' && card.failedAttempts === 1 && (
                         <div className="rebound-cancelled-notice">
                             ⚠️ {t.rebound_cancelled}
                         </div>
