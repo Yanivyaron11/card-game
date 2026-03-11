@@ -75,6 +75,7 @@ export const translations = {
         ],
         rebound: "Rebound! 2 Points!",
         rebound_badge: "REBOUND!",
+        rebound_cancelled: "Help used - Rebound cancelled (1 point)",
         rebound_feedback: "REBOUND, {name}! 🎯 You earned 2 points!"
     },
 
@@ -155,6 +156,7 @@ export const translations = {
         ],
         rebound: "ריבאונד! 2 נקודות!",
         rebound_badge: "ריבאונד!",
+        rebound_cancelled: "השתמשת בעזרה - הריבאונד בוטל (נקודה אחת)",
         rebound_feedback: "ריבאונד, {name}! 🎯 קיבלת 2 נקודות!"
     }
 };
