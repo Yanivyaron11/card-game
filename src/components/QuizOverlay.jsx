@@ -160,14 +160,15 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     <div className="stat-item level-display">
                         <div className="level-badge mini">{t.level} {card.level}</div>
                     </div>
-                    <div className="stat-item lives-display">
-
-                        <div className="hearts mini">
-                            {Array.from({ length: Math.max(0, lives + 1) }).map((_, i) => (
-                                <span key={i} className="heart-icon mini">❤️</span>
-                            ))}
+                    {gameMode !== '1v1' && (
+                        <div className="stat-item lives-display">
+                            <div className="hearts mini">
+                                {Array.from({ length: Math.max(0, lives + 1) }).map((_, i) => (
+                                    <span key={i} className="heart-icon mini">❤️</span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                    )}
                     <div className="stat-item coins-display">
 
                         <div key={coins} className="coins-value mini coin-pop">🪙 {coins}</div>

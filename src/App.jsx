@@ -120,10 +120,10 @@ function App() {
         setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
       }
     } else {
-      const newPlayerLives = lives[currentPlayer] - 1;
-      setLives(prev => ({ ...prev, [currentPlayer]: newPlayerLives }));
-
       if (gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack') {
+        const newPlayerLives = lives[currentPlayer] - 1;
+        setLives(prev => ({ ...prev, [currentPlayer]: newPlayerLives }));
+
         setDeck(prev => {
           const newDeck = prev.map(card =>
             card.id === cardId ? { ...card, isFailed: true } : card
@@ -132,14 +132,14 @@ function App() {
           return newDeck;
         });
 
-        if ((gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack') && newPlayerLives < 0) {
+        if (newPlayerLives < 0) {
           playSound('wrong');
           setGameState('game_over');
           navigate('/result');
           return;
         }
       } else {
-        // 1v1: Pass turn even on fail
+        // 1v1: Pure point race. No heart deduction.
         setDeck(prev => {
           const newDeck = prev.map(card =>
             card.id === cardId ? { ...card, isFailed: true } : card
@@ -148,15 +148,7 @@ function App() {
           return newDeck;
         });
 
-        // If one player runs out of hearts, the game ends
-        if (newPlayerLives < 0) {
-          // In 1v1, when someone runs out of hearts, we end the game and compare scores
-          playSound('victory');
-          setGameState('victory');
-          navigate('/result');
-          return;
-        }
-
+        // Always switch turn on wrong answer in 1v1
         setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
       }
     }
