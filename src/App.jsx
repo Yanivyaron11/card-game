@@ -79,9 +79,24 @@ function App() {
     navigate('/play');
   };
 
-  const checkWinCondition = (currentDeck) => {
-    if (currentDeck.length > 0 && currentDeck.every(card => card.isSolved || card.isFailed)) {
-      const solvedCount = currentDeck.filter(c => c.isSolved).length;
+  const checkWinCondition = (currentDeck, currentScores) => {
+    if (currentDeck.length === 0) return;
+
+    const allCardsProcessed = currentDeck.every(card => card.isSolved || card.isFailed);
+    const solvedCount = currentDeck.filter(c => c.isSolved).length;
+
+    // Early termination for 1v1
+    if (gameConfig?.gameMode === '1v1') {
+      const remainingCards = currentDeck.filter(c => !c.isSolved && !c.isFailed).length;
+      const scoreDiff = Math.abs(currentScores[1] - currentScores[2]);
+
+      if (scoreDiff > remainingCards || allCardsProcessed) {
+        playSound('victory');
+        setGameState('victory');
+        navigate('/result');
+        return;
+      }
+    } else if (allCardsProcessed) {
       if (solvedCount > currentDeck.length / 2) {
         playSound('victory');
         setGameState('victory');
@@ -111,14 +126,16 @@ function App() {
         const newDeck = prev.map(card =>
           card.id === cardId ? { ...card, isSolved: true, owner: currentPlayer } : card
         );
-        checkWinCondition(newDeck);
+
+        const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + 1 };
+        if (gameConfig.gameMode === '1v1') {
+          setScores(newScores);
+          setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+        }
+
+        checkWinCondition(newDeck, newScores);
         return newDeck;
       });
-
-      if (gameConfig.gameMode === '1v1') {
-        setScores(prev => ({ ...prev, [currentPlayer]: prev[currentPlayer] + 1 }));
-        setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
-      }
     } else {
       if (gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack') {
         const newPlayerLives = lives[currentPlayer] - 1;
@@ -144,7 +161,7 @@ function App() {
           const newDeck = prev.map(card =>
             card.id === cardId ? { ...card, isFailed: true } : card
           );
-          checkWinCondition(newDeck);
+          checkWinCondition(newDeck, scores);
           return newDeck;
         });
 
@@ -225,7 +242,15 @@ function App() {
             {gameState === 'game_over' && (
               <>
                 <h2>{t.game_over} 😢</h2>
-                <p>{t.ran_out_hearts}</p>
+                {gameConfig?.gameMode === '1v1' ? (
+                  <p>
+                    {scores[1] > scores[2] ? t.p1_wins : scores[2] > scores[1] ? t.p2_wins : t.draw}
+                    <br />
+                    {t.score}: {scores[1]} - {scores[2]}
+                  </p>
+                ) : (
+                  <p>{t.ran_out_hearts}</p>
+                )}
               </>
             )}
             {gameState === 'victory' && (
