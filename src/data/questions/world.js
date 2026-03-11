@@ -1021,6 +1021,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-1551",
+        "hint": { "en": "The spiritual home of the Catholic Church.", "he": "המרכז הרוחני של הכנסייה הקתולית." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -1046,6 +1047,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-1552",
+        "hint": { "en": "It starts with a C; not Sydney or Melbourne.", "he": "מתחילה ב-ק'; לא סידני או מלבורן." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -1071,6 +1073,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-1553",
+        "hint": { "en": "The second-largest continent in the world.", "he": "היבשת השנייה בגודלה בעולם." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -1096,6 +1099,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-1554",
+        "hint": { "en": "A city in Ontario.", "he": "עיר באונטריו." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -1121,6 +1125,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-1555",
+        "hint": { "en": "A Nordic island nation.", "he": "מדינת אי נורדית." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -1146,6 +1151,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-1556",
+        "hint": { "en": "A three-letter word rhymes with 'ten'.", "he": "מילה בת שלוש אותיות." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -2849,6 +2855,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1945",
+        "hint": { "en": "It has 'Metropolitan' in the name.", "he": "יש לה את המילה 'מטרופולין' בשם." },
         "category": "london",
         "level": 3,
         "text": {
@@ -2874,6 +2881,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1946",
+        "hint": { "en": "A king who had a very difficult relationship with Parliament.", "he": "מלך שהיה לו קשר קשה מאוד עם הפרלמנט." },
         "category": "london",
         "level": 3,
         "text": {
@@ -2899,6 +2907,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1947",
+        "hint": { "en": "Think of a famous architect who also designed a university in London.", "he": "חשבו על אדריכל מפורסם שעיצב גם אוניברסיטה בלונדון." },
         "category": "london",
         "level": 3,
         "text": {
@@ -2924,6 +2933,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1948",
+        "hint": { "en": "The oldest part of the fortress built by William the Conqueror.", "he": "החלק העתיק ביותר של המבצר שנבנה על ידי ויליאם הכובש." },
         "category": "london",
         "level": 3,
         "text": {
@@ -2949,6 +2959,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1949",
+        "hint": { "en": "It shares a name with a famous park.", "he": "הוא חולק שם עם פארק מפורסם." },
         "category": "london",
         "level": 3,
         "text": {
@@ -2974,6 +2985,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1950",
+        "hint": { "en": "White's is often cited.", "he": "מועדון 'וייטס' (White's) מוזכר לעיתים קרובות." },
         "category": "london",
         "level": 3,
         "text": {
@@ -2999,6 +3011,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1951",
+        "hint": { "en": "A major cathedral in London.", "he": "קתדרלה מרכזית בלונדון." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3024,6 +3037,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1952",
+        "hint": { "en": "Jonathan's Coffee House.", "he": "בית הקפה של ג'ונתן (Jonathan's)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3049,6 +3063,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1953",
+        "hint": { "en": "Samuel Johnson's famous observation.", "he": "התצפית המפורסמת של סמואל ג'ונסון." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3074,6 +3089,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1954",
+        "hint": { "en": "The early 1860s.", "he": "תחילת שנות ה-60 של המאה ה-19." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3203,6 +3219,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1959",
+        "hint": { "en": "Palace of Westminster.", "he": "ארמון וסטמינסטר." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3228,6 +3245,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1960",
+        "hint": { "en": "Think of the Prime Meridian.", "he": "חשבו על קו האורך אפס." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3253,6 +3271,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1961",
+        "hint": { "en": "It's in the West End.", "he": "זה בווסט אנד." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3278,6 +3297,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1962",
+        "hint": { "en": "Mary Donaldson in 2023 was the most recent, but who was the first in 1983?", "he": "מרי דונלדסון הייתה לאחרונה, אבל מי הייתה הראשונה ב-1983?" },
         "category": "london",
         "level": 3,
         "text": {
@@ -3303,6 +3323,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1963",
+        "hint": { "en": "Many professional offices are now there, but it was the heart of the press.", "he": "משרדים מקצועיים רבים נמצאים שם כיום, אך זה היה לב העיתונות." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3328,6 +3349,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1964",
+        "hint": { "en": "Temple Bar.", "he": "טמפל בר (Temple Bar)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3353,6 +3375,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1965",
+        "hint": { "en": "St. James's Park or Hyde Park?", "he": "סנט ג'יימס פארק או הייד פארק?" },
         "category": "london",
         "level": 3,
         "text": {
@@ -3378,6 +3401,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1966",
+        "hint": { "en": "A glass skyscraper designed by Renzo Piano.", "he": "גורד שחקים מזכוכית בעיצוב רנזו פיאנו." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3403,6 +3427,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1967",
+        "hint": { "en": "The Tate Modern.", "he": "הטייט מודרן." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3428,6 +3453,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1968",
+        "hint": { "en": "The Black Death's last major outbreak.", "he": "ההתפרצות הגדולה האחרונה של המוות השחור." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3453,6 +3479,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1969",
+        "hint": { "en": "A prominent Labour politician.", "he": "פוליטיקאי בכיר ממפלגת הלייבור." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3478,6 +3505,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1970",
+        "hint": { "en": "A green parsley sauce.", "he": "רוטב פטרוזיליה ירוק." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3503,6 +3531,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1971",
+        "hint": { "en": "J.M.W. Turner.", "he": "ג'.מ.וו. טרנר." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3528,6 +3557,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1972",
+        "hint": { "en": "Holland Park.", "he": "הולנד פארק." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3553,6 +3583,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1973",
+        "hint": { "en": "Highgate Cemetery.", "he": "בית הקברות הייגייט (Highgate)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3578,6 +3609,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1974",
+        "hint": { "en": "The Millennium Bridge, due to a specific issue.", "he": "גשר המילניום, בשל בעיה ספציפית." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3603,6 +3635,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1975",
+        "hint": { "en": "The Temple.", "he": "הטמפל." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3628,6 +3661,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1976",
+        "hint": { "en": "Hampton Court Palace.", "he": "ארמון המפטון קורט." },
         "category": "london",
         "level": 3,
         "text": {
@@ -3653,6 +3687,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-1977",
+        "hint": { "en": "London Bridge is falling down.", "he": "גשר לונדון מתמוטט." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4428,6 +4463,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2430",
+        "hint": { "en": "Officially, a very small number, but likely much higher.", "he": "באופן רשמי מספר קטן מאוד, אך כנראה גבוה בהרבה." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4453,6 +4489,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2431",
+        "hint": { "en": "Dieu et mon droit.", "he": "אלוהים וזכותי (Dieu et mon droit)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4478,6 +4515,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2432",
+        "hint": { "en": "Francis Fowke.", "he": "פרנסיס פוקה (Francis Fowke)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4503,6 +4541,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2433",
+        "hint": { "en": "A royal palace and fortress.", "he": "ארמון מלכותי ומבצר." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4528,6 +4567,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2434",
+        "hint": { "en": "Westminster Abbey.", "he": "מנזר וסטמינסטר." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4553,6 +4593,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2435",
+        "hint": { "en": "The same as the execute king year, reversed?", "he": "באותה מאה של השריפה הגדולה." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4578,6 +4619,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2436",
+        "hint": { "en": "Tower Bridge.", "he": "גשר טאוור." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4603,6 +4645,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2437",
+        "hint": { "en": "London Bridge.", "he": "גשר לונדון." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4628,6 +4671,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2438",
+        "hint": { "en": "Prince of Wales.", "he": "נסיך ויילס." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4653,6 +4697,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2439",
+        "hint": { "en": "The Earl Marshal.", "he": "הארל מרשל (Earl Marshal)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4678,6 +4723,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2440",
+        "hint": { "en": "Over 11,000.", "he": "מעל 11,000." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4703,6 +4749,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2441",
+        "hint": { "en": "The Tyburn.", "he": "הטייברן (Tyburn)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4728,6 +4775,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2442",
+        "hint": { "en": "A special tax or duty.", "he": "מס או היטל מיוחד." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4753,6 +4801,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2443",
+        "hint": { "en": "Charles Barry.", "he": "צ'ארלס בארי." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4778,6 +4827,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2444",
+        "hint": { "en": "Holyroodhouse.", "he": "הולירודהאוס (Holyroodhouse)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4803,6 +4853,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2445",
+        "hint": { "en": "The Northern Line.", "he": "קו נורת'רן (Northern)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4828,6 +4879,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2446",
+        "hint": { "en": "A ceremony involving the keys of the Tower.", "he": "טקס הכולל את מפתחות המצודה." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4853,6 +4905,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2447",
+        "hint": { "en": "Around 30.", "he": "בסביבות 30." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4878,6 +4931,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2448",
+        "hint": { "en": "Waterloo Bridge.", "he": "גשר ווטרלו." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4903,6 +4957,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2449",
+        "hint": { "en": "Baltic Exchange.", "he": "הבורסה הבלטית (Baltic Exchange)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -4928,6 +4983,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2450",
+        "hint": { "en": "Same place as the previous question.", "he": "אותו מקום כמו בשאלה הקודמת." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5703,6 +5759,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2481",
+        "hint": { "en": "All Hallows-by-the-Tower.", "he": "אול הלוז-על-יד-המצודה." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5728,6 +5785,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2482",
+        "hint": { "en": "Sir Christopher Wren.", "he": "סר כריסטופר רן." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5753,6 +5811,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2483",
+        "hint": { "en": "A garden or a sewer?", "he": "גן או תעלת ביוב?" },
         "category": "london",
         "level": 3,
         "text": {
@@ -5778,6 +5837,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2484",
+        "hint": { "en": "Queen Victoria.", "he": "המלכה ויקטוריה." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5803,6 +5863,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2485",
+        "hint": { "en": "122 Leadenhall Street.", "he": "רחוב לידנהול 122." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5828,6 +5889,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2486",
+        "hint": { "en": "1665.", "he": "1665." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5853,6 +5915,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2487",
+        "hint": { "en": "Lord Rogers.", "he": "לורד רוג'רס." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5878,6 +5941,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2488",
+        "hint": { "en": "Colonel Blood.", "he": "קולונל בלאד (Colonel Blood)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5903,6 +5967,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2489",
+        "hint": { "en": "A partisan or halberd.", "he": "פרטיזן או הלברד." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5928,6 +5993,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2490",
+        "hint": { "en": "One year.", "he": "שנה אחת." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5953,6 +6019,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2491",
+        "hint": { "en": "The Walkie-Talkie.", "he": "הווקי-טוקי." },
         "category": "london",
         "level": 3,
         "text": {
@@ -5978,6 +6045,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2492",
+        "hint": { "en": "Mount Pleasant.", "he": "מאונט פלזנט (Mount Pleasant)." },
         "category": "london",
         "level": 3,
         "text": {
@@ -6003,6 +6071,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2493",
+        "hint": { "en": "Queen Victoria.", "he": "המלכה ויקטוריה." },
         "category": "london",
         "level": 3,
         "text": {
@@ -6028,6 +6097,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2494",
+        "hint": { "en": "Ceremonial boundaries.", "he": "גבולות טקסיים." },
         "category": "london",
         "level": 3,
         "text": {
@@ -6053,6 +6123,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2495",
+        "hint": { "en": "Metropolitan Police Service.", "he": "שירות המשטרה המטרופוליטני." },
         "category": "london",
         "level": 3,
         "text": {
@@ -6078,6 +6149,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2496",
+        "hint": { "en": "1851.", "he": "1851." },
         "category": "london",
         "level": 3,
         "text": {
@@ -6103,6 +6175,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2497",
+        "hint": { "en": "Geoffrey Chaucer.", "he": "ג'ופרי צ'וסר." },
         "category": "london",
         "level": 3,
         "text": {
@@ -6128,6 +6201,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2498",
+        "hint": { "en": "It was used for sensitive communications.", "he": "הוא שימש לתקשורת רגישה." },
         "category": "london",
         "level": 3,
         "text": {
@@ -6153,6 +6227,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2499",
+        "hint": { "en": "The Gold State Coach.", "he": "מרכבת המדינה המוזהבת." },
         "category": "london",
         "level": 3,
         "text": {
@@ -6178,6 +6253,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-london-2500",
+        "hint": { "en": "Kensington Palace.", "he": "ארמון קנזינגטון." },
         "category": "london",
         "level": 3,
         "text": {
@@ -6703,6 +6779,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3081",
+        "hint": { "en": "Lima.", "he": "לימה." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -6728,6 +6805,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3082",
+        "hint": { "en": "Wellington.", "he": "וולינגטון." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -6753,6 +6831,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3083",
+        "hint": { "en": "Hanoi.", "he": "האנוי." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -6778,6 +6857,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3084",
+        "hint": { "en": "Nairobi.", "he": "ניירובי." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -6803,6 +6883,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3085",
+        "hint": { "en": "Stockholm.", "he": "שטוקהולם." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -6828,6 +6909,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3086",
+        "hint": { "en": "Oslo.", "he": "אוסלו." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -6853,6 +6935,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3087",
+        "hint": { "en": "Bogotá.", "he": "בוגוטה." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -6878,6 +6961,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3088",
+        "hint": { "en": "Lisbon.", "he": "ליסבון." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -6903,6 +6987,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3089",
+        "hint": { "en": "Rabat.", "he": "רבאט." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -6928,6 +7013,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3090",
+        "hint": { "en": "Seoul.", "he": "סיאול." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -8078,6 +8164,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3136",
+        "hint": { "en": "Peru.", "he": "פרו." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -8103,6 +8190,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3137",
+        "hint": { "en": "New Zealand.", "he": "ניו זילנד." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -8128,6 +8216,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3138",
+        "hint": { "en": "Vietnam.", "he": "וייטנאם." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -8153,6 +8242,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3139",
+        "hint": { "en": "Kenya.", "he": "קניה." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -8178,6 +8268,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3140",
+        "hint": { "en": "Sweden.", "he": "שוודיה." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9078,6 +9169,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3176",
+        "hint": { "en": "The Grand Canyon.", "he": "הגרנד קניון." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9103,6 +9195,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3177",
+        "hint": { "en": "Statue of Liberty.", "he": "פסל החירות." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9128,6 +9221,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3178",
+        "hint": { "en": "Mount Rushmore.", "he": "הר ראשמור." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9153,6 +9247,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3179",
+        "hint": { "en": "The Golden Gate Bridge.", "he": "גשר הזהב." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9178,6 +9273,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3180",
+        "hint": { "en": "Central Park.", "he": "סנטרל פארק." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9203,6 +9299,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3181",
+        "hint": { "en": "The White House.", "he": "הבית הלבן." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9228,6 +9325,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3182",
+        "hint": { "en": "Arlington National Cemetery.", "he": "בית הקברות הלאומי ארלינגטון." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9253,6 +9351,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3183",
+        "hint": { "en": "Yellowstone National Park.", "he": "הפארק הלאומי ילוסטון." },
         "category": "countries",
         "level": 3,
         "text": {
@@ -9278,6 +9377,7 @@ export const worldQuestions = [
     },
 {
         "id": "q-countries-3184",
+        "hint": { "en": "Yosemite National Park.", "he": "הפארק הלאומי יוסמיטי." },
         "category": "countries",
         "level": 3,
         "text": {
