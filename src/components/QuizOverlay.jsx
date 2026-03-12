@@ -35,24 +35,19 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const mountTimeRef = useRef(Date.now());
     const feedbackMessageRef = useRef("");
     const [isQuitModalOpen, setIsQuitModalOpen] = useState(false);
+    const [isPaused, setIsPaused] = useState(false);
 
     useEffect(() => {
         if (!card) return;
 
-        // 1. Reset card state
-        setTimeLeft(initialTime);
-        setSelectedAnswer(-1);
-        setIsAnswering(false);
-        setIsReady(false);
-        if (timerRef.current) clearInterval(timerRef.current);
-
         const readyTimeout = setTimeout(() => setIsReady(true), 500);
 
-        // 2. Setup interval
+        // Setup interval
         if (gameMode !== 'time_attack') {
             // Solo mode doesn't have a per-question timer, but survival does
             if (!(gameMode === 'solo' && !gameTimeLeft)) {
                 timerRef.current = setInterval(() => {
+                    if (isPaused) return;
                     setTimeLeft(prev => {
                         if (prev <= 1) {
                             if (timerRef.current) clearInterval(timerRef.current);
@@ -71,7 +66,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             clearTimeout(readyTimeout);
             if (timerRef.current) clearInterval(timerRef.current);
         };
-    }, [card?.id, initialTime, gameMode, gameTimeLeft]);
+    }, [card?.id, gameMode, gameTimeLeft, isPaused]);
 
     useEffect(() => {
         if (timeLeft === 0 && !isAnswering && isReady) {
@@ -262,8 +257,19 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     </div>
                     {gameMode !== 'time_attack' && (
                         <div className="timer-container">
-                            <div className="timer-label">
-                                ⏰ {timeLeft}{t.timer}
+                            <div className="timer-header">
+                                <div className="timer-label">
+                                    ⏰ {timeLeft}{t.timer}
+                                </div>
+                                {gameMode === 'survival' && (
+                                    <button
+                                        className="pause-btn"
+                                        onClick={() => setIsPaused(true)}
+                                        title={t.pause}
+                                    >
+                                        ⏸️
+                                    </button>
+                                )}
                             </div>
                             <div className="timer-bar-large">
                                 <div
@@ -383,6 +389,19 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     </div>
                 </div>
             </div>
+
+            {isPaused && (
+                <div className="pause-overlay">
+                    <div className="pause-modal card-pop">
+                        <h2>{t.paused}</h2>
+                        <div className="pause-icon">⏳</div>
+                        <button className="resume-btn" onClick={() => setIsPaused(false)}>
+                            {t.resume}
+                        </button>
+                    </div>
+                </div>
+            )}
+
             <QuitConfirmModal
                 isOpen={isQuitModalOpen}
                 onClose={() => setIsQuitModalOpen(false)}

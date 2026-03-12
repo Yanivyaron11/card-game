@@ -359,6 +359,7 @@ function App() {
             </div>
           ) : (
             <QuizOverlay
+              key={window.location.pathname}
               deck={deck || []}
               lives={lives[currentPlayer] || 0}
               coins={coins[currentPlayer] || 0}

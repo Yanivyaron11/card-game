@@ -85,7 +85,10 @@ export const translations = {
         rebound_feedback: "REBOUND, {name}! 🎯 You earned 2 points!",
         confirm_quit: "Are you sure you want to quit?",
         yes: "Yes",
-        no: "No"
+        no: "No",
+        pause: "Pause",
+        resume: "Resume",
+        paused: "Paused"
     },
 
 
@@ -175,6 +178,9 @@ export const translations = {
         rebound_feedback: "ריבאונד, {name}! 🎯 קיבלת 2 נקודות!",
         confirm_quit: "האם בטוח שברצונך לצאת?",
         yes: "כן",
-        no: "לא"
+        no: "לא",
+        pause: "השהיה",
+        resume: "המשך",
+        paused: "משחק מושהה"
     }
 };
