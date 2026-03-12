@@ -282,6 +282,14 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                         onClick={() => setGameMode('survival')}
                     >
                         🔥 {t.survival}
+                        {(() => {
+                            const hs = localStorage.getItem('survival_high_score');
+                            return hs ? (
+                                <span style={{ display: 'block', fontSize: '0.65rem', opacity: 0.8, marginTop: '2px' }}>
+                                    🏆 {language === 'he' ? `שיא: ${hs}` : `Best: ${hs}`}
+                                </span>
+                            ) : null;
+                        })()}
                     </button>
                 </div>
 
