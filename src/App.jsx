@@ -53,6 +53,7 @@ function App() {
   const [levelUpToast, setLevelUpToast] = useState(null);
   const [survivalCorrect, setSurvivalCorrect] = useState(0);
   const [usedSurvivalPowerups, setUsedSurvivalPowerups] = useState({ '5050': false, 'hint': false, 'solve': false });
+  const [newRecordToast, setNewRecordToast] = useState(null);
   const answeringRef = useRef(null);
 
   const t = translations[language];
@@ -178,7 +179,17 @@ function App() {
     answeringRef.current = cardId;
 
     if (gameConfig?.gameMode === 'survival' && isCorrect) {
-      setSurvivalCorrect(prev => prev + 1);
+      const newScore = survivalCorrect + 1;
+      setSurvivalCorrect(newScore);
+
+      // Check for new record toast
+      const HS_KEY = gameConfig.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
+      const prevBest = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
+      if (newScore > prevBest && newScore > 0) {
+        setNewRecordToast(newScore);
+        playSound('victory');
+        setTimeout(() => setNewRecordToast(null), 3000);
+      }
     }
 
     if (!silent) {
@@ -322,6 +333,11 @@ function App() {
       {levelUpToast && (
         <div className="level-up-toast card-pop">
           {language === 'he' ? `עברת לשלב ${levelUpToast}!` : `Level Up! Level ${levelUpToast}`}
+        </div>
+      )}
+      {newRecordToast && (
+        <div className="level-up-toast record-toast card-pop" style={{ border: '2px solid gold' }}>
+          {t.new_record_yay.replace('{n}', newRecordToast)} 🏆
         </div>
       )}
 
