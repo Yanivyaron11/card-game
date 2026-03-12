@@ -568,7 +568,7 @@ function App() {
           <div className="end-screen glass-panel">
             {(gameState === 'game_over' || gameState === 'quit') && (
               <>
-                <h2>{gameState === 'quit' ? t.game_interrupted : t.game_over} {gameState === 'quit' ? '🛑' : '😢'}</h2>
+                <h2>{gameState === 'quit' ? t.game_interrupted : t.game_over} {gameState === 'quit' ? '' : '😢'}</h2>
                 {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
                   <div className="result-avatar">
                     <span className="result-emoji">{gameConfig.avatars[1].emoji}</span>

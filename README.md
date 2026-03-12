@@ -22,7 +22,7 @@ A fun, interactive, and educational card game designed for children and trivia l
 - **Smart Record Tracking**: 
   - **Survival**: Saves the longest correct-answer streak.
   - **Time Attack**: Tracks and displays the best remaining time for each grid size.
-- **Improved Quit Logic**: Manual exits via the "X" button are treated as an "End of Run" in Survival and Time Attack, ensuring high scores are saved and a summary is displayed.
+- **Improved Quit Logic**: Manual exits via the "X" button are treated as an "End of Run" in Survival and Time Attack, ensuring high scores are saved and a friendly "See you next round!" summary is displayed.
 - **Dynamic Difficulty**: Three levels of challenge with **adaptive timers** (L1: 30s, L2: 25s, L3: 20s).
 - **Mobile Optimized**: Home screen shortcut support (PWA) with responsive and RTL-aware layouts.
 - **Bilingual Support**: Full support for both **English** and **Hebrew (RTL)**.
