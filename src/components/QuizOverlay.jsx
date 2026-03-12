@@ -224,30 +224,26 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </div>
                     )}
                     {gameMode === 'survival' && (
-                        <div className="stat-item survival-ladder">
-                            <div className="ladder-container">
-                                {Array.from({ length: 10 }).map((_, i) => {
-                                    // Map progress to 10 dots based on level size: L1=10, L2=20, L3=70
+                        <div className="stat-item survival-progress-section">
+                            <div className="survival-progress-container">
+                                {(() => {
                                     const cardLevel = card.level;
                                     const segmentSize = cardLevel === 1 ? 10 : cardLevel === 2 ? 20 : 70;
                                     const offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 10 : 30;
                                     const indexInLevel = survivalIndex - offset;
-
-                                    const questionsPerStep = segmentSize / 10;
-                                    const currentStep = Math.floor(indexInLevel / questionsPerStep);
-
-                                    const isCompleted = i < currentStep;
-                                    const isCurrent = i === currentStep;
+                                    const percentage = (indexInLevel / segmentSize) * 100;
                                     return (
-                                        <div
-                                            key={i}
-                                            className={`ladder-step ${isCompleted ? 'completed' : ''} ${isCurrent ? 'current' : ''}`}
-                                            title={isCurrent ? `${t.current_question} ${survivalIndex + 1}` : ''}
-                                        >
-                                            {isCompleted ? '⭐' : isCurrent ? '📍' : '○'}
+                                        <div className="survival-progress-bar-wrapper">
+                                            <div
+                                                className="survival-progress-fill"
+                                                style={{ width: `${percentage}%` }}
+                                            />
+                                            <span className="survival-progress-text">
+                                                {indexInLevel + 1} / {segmentSize}
+                                            </span>
                                         </div>
                                     );
-                                })}
+                                })()}
                             </div>
                             <div className="survival-level-indicator">
                                 {t.level} {card.level}
