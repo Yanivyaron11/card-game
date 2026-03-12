@@ -29,7 +29,7 @@ function SurvivalResult({ correct, language, survivalType }) {
         </p>
       )}
       <p style={{ opacity: 0.75, fontSize: '0.95rem' }}>
-        {language === 'he' ? `שיא אישי: ${best}` : `Best: ${best}`}
+        {survivalType === 'adult' ? translations[language].survival_record_adult : translations[language].survival_record_child}: {best}
       </p>
     </div>
   );

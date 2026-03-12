@@ -94,7 +94,9 @@ export const translations = {
         correct_count: "Score: {n}",
         survival_course: "Select Course",
         survival_child: "Child Course (30 Questions)",
-        survival_adult: "Adult Course (30 Questions)"
+        survival_adult: "Adult Course (30 Questions)",
+        survival_record_child: "Child Record",
+        survival_record_adult: "Adult Record"
     },
 
 
@@ -193,6 +195,8 @@ export const translations = {
         correct_count: "נקודות: {n}",
         survival_course: "בחרו מסלול",
         survival_child: "מסלול ילדים (30 שאלות)",
-        survival_adult: "מסלול מבוגרים (30 שאלות)"
+        survival_adult: "מסלול מבוגרים (30 שאלות)",
+        survival_record_child: "שיא ילדים",
+        survival_record_adult: "שיא מבוגרים"
     }
 };

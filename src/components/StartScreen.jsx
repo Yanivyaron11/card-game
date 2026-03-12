@@ -331,8 +331,8 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
                                     <span>👶 {t.survival_child}</span>
                                     {(() => {
-                                        const hs = localStorage.getItem('survival_high_score_child');
-                                        return hs ? <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {language === 'he' ? `שיא: ${hs}` : `Best: ${hs}`}</span> : null;
+                                        const hs = localStorage.getItem('survival_high_score_child') || '0';
+                                        return <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {t.survival_record_child}: {hs}</span>;
                                     })()}
                                 </div>
                             </button>
@@ -343,8 +343,8 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
                                     <span>🧔 {t.survival_adult}</span>
                                     {(() => {
-                                        const hs = localStorage.getItem('survival_high_score_adult');
-                                        return hs ? <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {language === 'he' ? `שיא: ${hs}` : `Best: ${hs}`}</span> : null;
+                                        const hs = localStorage.getItem('survival_high_score_adult') || '0';
+                                        return <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {t.survival_record_adult}: {hs}</span>;
                                     })()}
                                 </div>
                             </button>
