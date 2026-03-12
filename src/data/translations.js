@@ -91,7 +91,10 @@ export const translations = {
         paused: "Paused",
         select_avatar: "Please select an avatar",
         select_avatars_1v1: "Please select an avatar for each player",
-        correct_count: "Score: {n}"
+        correct_count: "Score: {n}",
+        survival_course: "Select Course",
+        survival_child: "Child Course (30 Questions)",
+        survival_adult: "Adult Course (30 Questions)"
     },
 
 
@@ -187,6 +190,9 @@ export const translations = {
         paused: "משחק מושהה",
         select_avatar: "אנא בחר אווטאר",
         select_avatars_1v1: "אנא בחר אווטאר לכל שחקן",
-        correct_count: "נקודות: {n}"
+        correct_count: "נקודות: {n}",
+        survival_course: "בחרו מסלול",
+        survival_child: "מסלול ילדים (30 שאלות)",
+        survival_adult: "מסלול מבוגרים (30 שאלות)"
     }
 };

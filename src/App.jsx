@@ -11,8 +11,8 @@ import './App.css'
 import InstallPrompt from './components/InstallPrompt'
 
 
-function SurvivalResult({ correct, language }) {
-  const HS_KEY = 'survival_high_score';
+function SurvivalResult({ correct, language, survivalType }) {
+  const HS_KEY = survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
   const prev = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
   const isNewRecord = correct > prev;
   if (isNewRecord) localStorage.setItem(HS_KEY, correct);
@@ -105,7 +105,7 @@ function App() {
     }
 
     if (config.gameMode === 'survival') {
-      const survivalDeck = generateSurvivalDeck(config.topics);
+      const survivalDeck = generateSurvivalDeck(config.topics, config.survivalType);
       setDeck(survivalDeck);
       setCurrentSurvivalIndex(0);
       setSurvivalCorrect(0);
@@ -368,6 +368,7 @@ function App() {
               coins={coins[currentPlayer] || 0}
               language={language}
               gameMode={gameConfig.gameMode}
+              gameConfig={gameConfig}
               timeLeft={timeLeft}
               avatar={gameConfig.avatars?.[currentPlayer]}
               streak={streaks[currentPlayer]}

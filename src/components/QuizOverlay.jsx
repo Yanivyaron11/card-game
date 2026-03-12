@@ -5,7 +5,7 @@ import { translations } from '../data/translations';
 import QuitConfirmModal from './QuitConfirmModal';
 import './QuizOverlay.css';
 
-function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, survivalCorrect, usedSurvivalPowerups = {}, onSurvivalPowerupUsed, onQuit }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, gameConfig, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, survivalCorrect, usedSurvivalPowerups = {}, onSurvivalPowerupUsed, onQuit }) {
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
@@ -227,8 +227,19 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <div className="stat-item survival-progress-section">
                             {(() => {
                                 const cardLevel = card.level;
-                                const segmentSize = cardLevel === 1 ? 10 : cardLevel === 2 ? 20 : 70;
-                                const offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 10 : 30;
+                                const isAdult = gameConfig?.survivalType === 'adult';
+
+                                // Child: 15 (L1), 10 (L2), 5 (L3)
+                                // Adult: 5 (L1), 15 (L2), 10 (L3)
+                                let segmentSize, offset;
+                                if (isAdult) {
+                                    segmentSize = cardLevel === 1 ? 5 : cardLevel === 2 ? 15 : 10;
+                                    offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 5 : 20;
+                                } else {
+                                    segmentSize = cardLevel === 1 ? 15 : cardLevel === 2 ? 10 : 5;
+                                    offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 15 : 25;
+                                }
+
                                 const indexInLevel = survivalIndex - offset;
                                 const percentage = segmentSize > 0 ? Math.max(5, ((indexInLevel + 1) / segmentSize) * 100) : 0;
                                 return (

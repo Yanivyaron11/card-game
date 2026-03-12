@@ -277,7 +277,7 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     });
 };
 
-export const generateSurvivalDeck = (selectedTopics = []) => {
+export const generateSurvivalDeck = (selectedTopics = [], survivalType = 'child') => {
     // Survival mode logic:
     // If no topics provided, use all available categories
     let categoriesToUse = selectedTopics;
@@ -290,11 +290,16 @@ export const generateSurvivalDeck = (selectedTopics = []) => {
     const level2 = questions.filter(q => categoriesToUse.includes(q.category) && q.level === 2);
     const level3 = questions.filter(q => categoriesToUse.includes(q.category) && q.level === 3);
 
-    // 2. Pick questions for each segment
+    // 2. Pick questions for each segment based on survivalType
+    let counts = { level1: 15, level2: 10, level3: 5 }; // Default to child
+    if (survivalType === 'adult') {
+        counts = { level1: 5, level2: 15, level3: 10 };
+    }
+
     const deck = [
-        ...shuffle(level1).slice(0, 10),
-        ...shuffle(level2).slice(0, 20),
-        ...shuffle(level3).slice(0, 70)
+        ...shuffle(level1).slice(0, counts.level1),
+        ...shuffle(level2).slice(0, counts.level2),
+        ...shuffle(level3).slice(0, counts.level3)
     ];
 
     // 3. Map topic info and card state

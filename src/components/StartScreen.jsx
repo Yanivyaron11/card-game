@@ -76,6 +76,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [difficulty, setDifficulty] = useState(() => parseInt(localStorage.getItem('last_difficulty') || '1', 10));
     const [selectedTopics, setSelectedTopics] = useState([]);
     const [gameMode, setGameMode] = useState(() => localStorage.getItem('last_gameMode') || 'solo');
+    const [survivalType, setSurvivalType] = useState(() => localStorage.getItem('last_survivalType') || 'child');
     const [newCategories, setNewCategories] = useState([]);
     const [isNewModalOpen, setIsNewModalOpen] = useState(false);
     const [newFeatures, setNewFeatures] = useState([]);
@@ -132,11 +133,12 @@ function StartScreen({ onStart, language, onLanguageChange }) {
         localStorage.setItem('last_gridSize', gridSize.toString());
         localStorage.setItem('last_difficulty', difficulty.toString());
         localStorage.setItem('last_gameMode', gameMode);
+        localStorage.setItem('last_survivalType', survivalType);
         localStorage.setItem('last_avatars', JSON.stringify({
             1: selectedAvatars[1]?.id || null,
             2: selectedAvatars[2]?.id || null
         }));
-    }, [gridSize, difficulty, gameMode, selectedAvatars]);
+    }, [gridSize, difficulty, gameMode, survivalType, selectedAvatars]);
 
     const handleDismissNew = () => {
         const seenNew = JSON.parse(localStorage.getItem('seenNewCategories') || '[]');
@@ -216,6 +218,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             topics: gameMode === 'survival' ? activePool : selectedTopics,
             difficulty,
             gameMode,
+            survivalType,
             avatars: configAvatars
         });
     };
@@ -314,16 +317,40 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                         onClick={() => setGameMode('survival')}
                     >
                         🔥 {t.survival}
-                        {(() => {
-                            const hs = localStorage.getItem('survival_high_score');
-                            return hs ? (
-                                <span style={{ display: 'block', fontSize: '0.65rem', opacity: 0.8, marginTop: '2px' }}>
-                                    🏆 {language === 'he' ? `שיא: ${hs}` : `Best: ${hs}`}
-                                </span>
-                            ) : null;
-                        })()}
                     </button>
                 </div>
+
+                {gameMode === 'survival' && (
+                    <div className="config-section survival-type-selection card-pop">
+                        <h3>{t.survival_course}</h3>
+                        <div className="mode-options">
+                            <button
+                                className={`mode-btn ${survivalType === 'child' ? 'active' : ''}`}
+                                onClick={() => setSurvivalType('child')}
+                            >
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
+                                    <span>👶 {t.survival_child}</span>
+                                    {(() => {
+                                        const hs = localStorage.getItem('survival_high_score_child');
+                                        return hs ? <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {language === 'he' ? `שיא: ${hs}` : `Best: ${hs}`}</span> : null;
+                                    })()}
+                                </div>
+                            </button>
+                            <button
+                                className={`mode-btn ${survivalType === 'adult' ? 'active' : ''}`}
+                                onClick={() => setSurvivalType('adult')}
+                            >
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
+                                    <span>🧔 {t.survival_adult}</span>
+                                    {(() => {
+                                        const hs = localStorage.getItem('survival_high_score_adult');
+                                        return hs ? <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {language === 'he' ? `שיא: ${hs}` : `Best: ${hs}`}</span> : null;
+                                    })()}
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                )}
 
                 {(gameMode === 'solo' || gameMode === '1v1' || gameMode === 'time_attack' || gameMode === 'survival') && (
                     <div className="avatar-selection-container card-pop">
