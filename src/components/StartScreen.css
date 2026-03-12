@@ -338,12 +338,100 @@
 .avatar-selection-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    gap: 1rem;
+    padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     width: 100%;
+}
+
+.section-header-with-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-invite-btn {
+    background: var(--accent);
+    color: var(--text-dark);
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.shop-invite-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.avatar-slider-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 5px 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.avatar-slider {
+    display: flex;
+    gap: 0.8rem;
+    width: max-content;
+}
+
+.avatar-btn-mini {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.avatar-emoji-mini {
+    font-size: 1.8rem;
+}
+
+.avatar-btn-mini:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.avatar-btn-mini.active {
+    background: var(--secondary);
+    border-color: white;
+    box-shadow: 0 4px 10px rgba(78, 205, 196, 0.4);
+    transform: scale(1.1);
+}
+
+.avatar-btn-mini.more-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.avatar-slider-wrapper::-webkit-scrollbar {
+    height: 4px;
+}
+
+.avatar-slider-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.avatar-slider-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
 }
 
 .avatar-player-section {

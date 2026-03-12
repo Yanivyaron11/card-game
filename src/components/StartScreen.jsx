@@ -8,10 +8,13 @@ import NewFeatureModal from './NewFeatureModal';
 import AlertModal from './AlertModal';
 import { features } from '../data/features';
 import { avatars } from '../data/avatars';
+import AvatarShopModal from './AvatarShopModal';
 import './StartScreen.css';
 
-function StartScreen({ onStart, language, onLanguageChange, totalCoins }) {
+function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlockedAvatars, onBuyAvatar }) {
     const t = translations[language];
+
+    // ... (logic remains same until return)
 
     const getLeafTopics = () => {
         if (!topics || !Array.isArray(topics)) return [];
@@ -95,6 +98,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins }) {
         }
     });
     const [alertConfig, setAlertConfig] = useState({ isOpen: false, message: '', icon: '⚠️' });
+    const [isShopOpen, setIsShopOpen] = useState(false);
 
     useEffect(() => {
         // Find categories that are marked new and hasn't been seen yet
@@ -289,6 +293,20 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins }) {
                 icon={alertConfig.icon}
             />
 
+            <AvatarShopModal
+                isOpen={isShopOpen}
+                onClose={() => setIsShopOpen(false)}
+                language={language}
+                totalCoins={totalCoins}
+                unlockedAvatars={unlockedAvatars}
+                onBuyAvatar={onBuyAvatar}
+                onSelectAvatar={(avatar) => {
+                    // Default to P1 if single player, otherwise user decides in shop (future)
+                    handleAvatarSelect(avatar, 1);
+                }}
+                selectedAvatars={selectedAvatars}
+            />
+
             <h2>{t.lets_play}</h2>
             <p className="total-questions-count">
                 {t.total_questions.replace('{n}', Object.values(questionCounts).reduce((a, b) => a + b, 0).toLocaleString())}
@@ -322,98 +340,88 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins }) {
                         🔥 {t.survival}
                     </button>
                 </div>
+            </div>
 
-                {gameMode === 'survival' && (
-                    <div className="config-section survival-type-selection card-pop">
-                        <h3>{t.survival_course}</h3>
-                        <div className="mode-options">
-                            <button
-                                className={`mode-btn ${survivalType === 'child' ? 'active' : ''}`}
-                                onClick={() => setSurvivalType('child')}
-                            >
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
-                                    <span>👶 {t.survival_child}</span>
-                                    {(() => {
-                                        const hs = localStorage.getItem('survival_high_score_child') || '0';
-                                        return <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {t.survival_record_child}: {hs}</span>;
-                                    })()}
-                                </div>
-                            </button>
-                            <button
-                                className={`mode-btn ${survivalType === 'adult' ? 'active' : ''}`}
-                                onClick={() => setSurvivalType('adult')}
-                            >
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
-                                    <span>🧔 {t.survival_adult}</span>
-                                    {(() => {
-                                        const hs = localStorage.getItem('survival_high_score_adult') || '0';
-                                        return <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {t.survival_record_adult}: {hs}</span>;
-                                    })()}
-                                </div>
-                            </button>
+            {gameMode === 'survival' && (
+                <div className="config-section survival-type-selection card-pop">
+                    <h3>{t.survival_course}</h3>
+                    <div className="mode-options">
+                        <button
+                            className={`mode-btn ${survivalType === 'child' ? 'active' : ''}`}
+                            onClick={() => setSurvivalType('child')}
+                        >
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
+                                <span>👶 {t.survival_child}</span>
+                                {(() => {
+                                    const hs = localStorage.getItem('survival_high_score_child') || '0';
+                                    return <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {t.survival_record_child}: {hs}</span>;
+                                })()}
+                            </div>
+                        </button>
+                        <button
+                            className={`mode-btn ${survivalType === 'adult' ? 'active' : ''}`}
+                            onClick={() => setSurvivalType('adult')}
+                        >
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
+                                <span>🧔 {t.survival_adult}</span>
+                                {(() => {
+                                    const hs = localStorage.getItem('survival_high_score_adult') || '0';
+                                    return <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {t.survival_record_adult}: {hs}</span>;
+                                })()}
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            )}
+
+            <div className="config-section">
+                <div className="section-header-with-btn">
+                    <h3>{language === 'he' ? '3. בחרו אווטאר' : '3. Choose Avatar'}</h3>
+                    <button className="shop-invite-btn" onClick={() => setIsShopOpen(true)}>
+                        🛒 {language === 'he' ? 'לחנות' : 'Shop'}
+                    </button>
+                </div>
+
+                <div className="avatar-selection-container card-pop">
+                    <div className="avatar-player-section">
+                        <h4>{language === 'he' ? 'שחקן 1' : 'Player 1'}</h4>
+                        <div className="avatar-slider-wrapper">
+                            <div className="avatar-slider">
+                                {avatars.filter(a => unlockedAvatars.includes(a.id)).map(avatar => (
+                                    <button
+                                        key={avatar.id}
+                                        className={`avatar-btn-mini ${selectedAvatars[1]?.id === avatar.id ? 'active' : ''}`}
+                                        onClick={() => handleAvatarSelect(avatar, 1)}
+                                    >
+                                        <span className="avatar-emoji-mini">{avatar.emoji}</span>
+                                    </button>
+                                ))}
+                                <button className="avatar-btn-mini more-btn" onClick={() => setIsShopOpen(true)}>+</button>
+                            </div>
                         </div>
                     </div>
-                )}
 
-                {(gameMode === 'solo' || gameMode === '1v1' || gameMode === 'time_attack' || gameMode === 'survival') && (
-                    <div className="avatar-selection-container card-pop">
-                        {gameMode === '1v1' ? (
-                            <>
-                                <div className="avatar-player-section">
-                                    <h4>{t.player1_name}</h4>
-                                    <div className="avatar-grid small">
-                                        {avatars.map(avatar => (
-                                            <button
-                                                key={`p1-${avatar.id}`}
-                                                className={`avatar-btn ${selectedAvatars[1]?.id === avatar.id ? 'active' : ''} ${selectedAvatars[2]?.id === avatar.id ? 'disabled' : ''}`}
-                                                onClick={() => handleAvatarSelect(avatar, 1)}
-                                                disabled={selectedAvatars[2]?.id === avatar.id}
-                                                title={avatar.name[language]}
-                                            >
-                                                <span className="avatar-emoji">{avatar.emoji}</span>
-                                                <span className="avatar-name">{avatar.name[language]}</span>
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className="avatar-player-section">
-                                    <h4>{t.player2_name}</h4>
-                                    <div className="avatar-grid small">
-                                        {avatars.map(avatar => (
-                                            <button
-                                                key={`p2-${avatar.id}`}
-                                                className={`avatar-btn ${selectedAvatars[2]?.id === avatar.id ? 'active' : ''} ${selectedAvatars[1]?.id === avatar.id ? 'disabled' : ''}`}
-                                                onClick={() => handleAvatarSelect(avatar, 2)}
-                                                disabled={selectedAvatars[1]?.id === avatar.id}
-                                                title={avatar.name[language]}
-                                            >
-                                                <span className="avatar-emoji">{avatar.emoji}</span>
-                                                <span className="avatar-name">{avatar.name[language]}</span>
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            </>
-                        ) : (
-                            <div className="avatar-player-section">
-                                <h4>{language === 'he' ? 'בחר את האוואטר שלך' : 'Choose your avatar'}</h4>
-                                <div className="avatar-grid">
-                                    {avatars.map(avatar => (
+                    {gameMode === '1v1' && (
+                        <div className="avatar-player-section">
+                            <h4>{language === 'he' ? 'שחקן 2' : 'Player 2'}</h4>
+                            <div className="avatar-slider-wrapper">
+                                <div className="avatar-slider">
+                                    {avatars.filter(a => unlockedAvatars.includes(a.id)).map(avatar => (
                                         <button
-                                            key={`solo-${avatar.id}`}
-                                            className={`avatar-btn ${selectedAvatars[1]?.id === avatar.id ? 'active' : ''}`}
-                                            onClick={() => handleAvatarSelect(avatar, 1)}
-                                            title={avatar.name[language]}
+                                            key={avatar.id}
+                                            className={`avatar-btn-mini ${selectedAvatars[2]?.id === avatar.id ? 'active' : ''} ${selectedAvatars[1]?.id === avatar.id ? 'disabled' : ''}`}
+                                            disabled={selectedAvatars[1]?.id === avatar.id}
+                                            onClick={() => handleAvatarSelect(avatar, 2)}
                                         >
-                                            <span className="avatar-emoji">{avatar.emoji}</span>
-                                            <span className="avatar-name">{avatar.name[language]}</span>
+                                            <span className="avatar-emoji-mini">{avatar.emoji}</span>
                                         </button>
                                     ))}
+                                    <button className="avatar-btn-mini more-btn" onClick={() => setIsShopOpen(true)}>+</button>
                                 </div>
                             </div>
-                        )}
-                    </div>
-                )}
+                        </div>
+                    )}
+                </div>
             </div>
 
             {gameMode !== 'survival' && (
@@ -450,30 +458,29 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins }) {
                 </div>
             )}
 
-            {(gameMode === 'solo' || gameMode === '1v1' || gameMode === 'time_attack' || gameMode === 'survival') && (
-                <div className="config-section">
-                    <h3>{gameMode === 'survival' ? t.participating_topics : t.choose_topics}</h3>
-                    <div className="topic-options">
-                        {visibleTopics.map(topic => (
-                            <div
-                                key={topic.id}
-                                className={`topic-card ${(gameMode === 'survival' || selectedTopics.includes(topic.id)) ? 'selected' : ''} ${gameMode === 'survival' ? 'read-only' : ''}`}
-                                onClick={gameMode === 'survival' ? null : () => handleTopicToggle(topic.id)}
-                            >
-                                <div className="topic-info-main">
-                                    <span className="topic-name">{topic.name[language]}</span>
-                                    <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
-                                </div>
+            <div className="config-section">
+                <h3>{gameMode === 'survival' ? t.participating_topics : t.choose_topics}</h3>
+                <div className="topic-options">
+                    {visibleTopics.map(topic => (
+                        <div
+                            key={topic.id}
+                            className={`topic-card ${(gameMode === 'survival' || selectedTopics.includes(topic.id)) ? 'selected' : ''} ${gameMode === 'survival' ? 'read-only' : ''}`}
+                            onClick={gameMode === 'survival' ? null : () => handleTopicToggle(topic.id)}
+                        >
+                            <div className="topic-info-main">
+                                <span className="topic-name">{topic.name[language]}</span>
+                                <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
-            )}
+            </div>
 
-            <button className="start-btn" onClick={handleStart}>{t.start_game} 🚀</button>
+            <button className="start-btn card-pop" onClick={handleStart}>
+                {gameMode === 'survival' ? (language === 'he' ? 'התחל הישרדות!' : 'Start Survival!') : t.start_game + ' 🚀'}
+            </button>
         </div>
     );
 }
 
 export default StartScreen;
-

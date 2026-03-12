@@ -5,7 +5,13 @@
 - [x] Tiered Earning: L1=1, L2=2, L3=3 coins.
 - [x] Bonus coins for streaks.
 
-### 2. Achievements & Medals System
+### 2. Avatar Shop (Completed) ✅
+- [x] Horizontal selection slider on Start Screen.
+- [x] 15+ Unique avatars with categories (Free, Premium, Legendary).
+- [x] Persistent unlocking mechanism.
+- [x] "Unlock" logic with coin deduction.
+
+### 3. Achievements & Medals System
 Create a visual "Trophy Room" where kids can earn medals for specific milestones:
 - **[ ] Israel Expert**: Answer 50 questions in the Israel category.
 - **[ ] Math Whiz**: Solve 10 math problems in a row without mistakes.

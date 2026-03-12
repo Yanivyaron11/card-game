@@ -1,12 +1,22 @@
 export const avatars = [
-    { id: 'leo', emoji: '🦁', name: { en: 'Leo', he: 'ליאו' } },
-    { id: 'bunny', emoji: '🐰', name: { en: 'Bunny', he: 'באני' } },
-    { id: 'foxy', emoji: '🦊', name: { en: 'Foxy', he: 'פוקסי' } },
-    { id: 'panda', emoji: '🐼', name: { en: 'PanPan', he: 'פן-פן' } },
-    { id: 'penguin', emoji: '🐧', name: { en: 'Pingu', he: 'פינגו' } },
-    { id: 'monkey', emoji: '🐵', name: { en: 'Bobo', he: 'בובו' } },
-    { id: 'unicorn', emoji: '🦄', name: { en: 'Lulu', he: 'לולו' } },
-    { id: 'dino', emoji: '🦖', name: { en: 'Rex', he: 'רקס' } },
-    { id: 'owl', emoji: '🦉', name: { en: 'Professor', he: 'פרופסור' } },
-    { id: 'kitty', emoji: '🐱', name: { en: 'Kitty', he: 'מיצי' } }
+    // Free Avatars
+    { id: 'leo', emoji: '🦁', name: { en: 'Leo', he: 'ליאו' }, price: 0, category: 'free' },
+    { id: 'bunny', emoji: '🐰', name: { en: 'Bunny', he: 'באני' }, price: 0, category: 'free' },
+    { id: 'foxy', emoji: '🦊', name: { en: 'Foxy', he: 'פוקסי' }, price: 0, category: 'free' },
+    { id: 'panda', emoji: '🐼', name: { en: 'PanPan', he: 'פן-פן' }, price: 0, category: 'free' },
+    { id: 'penguin', emoji: '🐧', name: { en: 'Pingu', he: 'פינגו' }, price: 0, category: 'free' },
+
+    // Premium (100-200)
+    { id: 'monkey', emoji: '🐵', name: { en: 'Bobo', he: 'בובו' }, price: 100, category: 'premium' },
+    { id: 'owl', emoji: '🦉', name: { en: 'Professor', he: 'פרופסור' }, price: 150, category: 'premium' },
+    { id: 'kitty', emoji: '🐱', name: { en: 'Kitty', he: 'מיצי' }, price: 150, category: 'premium' },
+    { id: 'robot', emoji: '🤖', name: { en: 'Robo', he: 'רובו' }, price: 200, category: 'premium' },
+    { id: 'alien', emoji: '👽', name: { en: 'Zork', he: 'זורק' }, price: 200, category: 'premium' },
+
+    // Legendary (300+)
+    { id: 'unicorn', emoji: '🦄', name: { en: 'Lulu', he: 'לולו' }, price: 300, category: 'legendary' },
+    { id: 'dino', emoji: '🦖', name: { en: 'Rex', he: 'רקס' }, price: 400, category: 'legendary' },
+    { id: 'dragon', emoji: '🐲', name: { en: 'Draco', he: 'דרקו' }, price: 500, category: 'legendary' },
+    { id: 'wizard', emoji: '🧙', name: { en: 'Merlin', he: 'מרלין' }, price: 600, category: 'legendary' },
+    { id: 'ghost', emoji: '👻', name: { en: 'Spooky', he: 'ספוקי' }, price: 350, category: 'legendary' }
 ];

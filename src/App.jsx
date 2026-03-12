@@ -84,11 +84,31 @@ function App() {
   const [newRecordToast, setNewRecordToast] = useState(null);
   const [hasNotifiedRecord, setHasNotifiedRecord] = useState(false);
   const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '10', 10));
+  const [unlockedAvatars, setUnlockedAvatars] = useState(() => {
+    const saved = localStorage.getItem('unlocked_avatars');
+    if (saved) return JSON.parse(saved);
+    // Default unlocked: Leo, Bunny, Foxy, Panda, Penguin
+    return ['leo', 'bunny', 'foxy', 'panda', 'penguin'];
+  });
   const answeringRef = useRef(null);
 
   useEffect(() => {
     localStorage.setItem('total_coins', totalCoins);
   }, [totalCoins]);
+
+  useEffect(() => {
+    localStorage.setItem('unlocked_avatars', JSON.stringify(unlockedAvatars));
+  }, [unlockedAvatars]);
+
+  const buyAvatar = (avatarId, price) => {
+    if (totalCoins >= price && !unlockedAvatars.includes(avatarId)) {
+      setTotalCoins(prev => prev - price);
+      setUnlockedAvatars(prev => [...prev, avatarId]);
+      playSound('victory');
+      return true;
+    }
+    return false;
+  };
 
   const t = translations[language];
 
@@ -398,6 +418,8 @@ function App() {
             language={language}
             onLanguageChange={setLanguage}
             totalCoins={totalCoins}
+            unlockedAvatars={unlockedAvatars}
+            onBuyAvatar={buyAvatar}
           />
         } />
 
