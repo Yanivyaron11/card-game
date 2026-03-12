@@ -54,6 +54,7 @@ function App() {
   const [survivalCorrect, setSurvivalCorrect] = useState(0);
   const [usedSurvivalPowerups, setUsedSurvivalPowerups] = useState({ '5050': false, 'hint': false, 'solve': false });
   const [newRecordToast, setNewRecordToast] = useState(null);
+  const [hasNotifiedRecord, setHasNotifiedRecord] = useState(false);
   const answeringRef = useRef(null);
 
   const t = translations[language];
@@ -113,6 +114,7 @@ function App() {
       setLives({ 1: 3 });
       setCoins({ 1: 5 });
       setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
+      setHasNotifiedRecord(false);
       setTimeLeft(30);
 
       if (survivalDeck.length > 0) {
@@ -185,8 +187,9 @@ function App() {
       // Check for new record toast
       const HS_KEY = gameConfig.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
       const prevBest = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
-      if (newScore > prevBest && newScore > 0) {
+      if (newScore > prevBest && newScore > 0 && !hasNotifiedRecord) {
         setNewRecordToast(newScore);
+        setHasNotifiedRecord(true);
         playSound('victory');
         setTimeout(() => setNewRecordToast(null), 3000);
       }
