@@ -439,21 +439,23 @@ function App() {
       <h1 className="title-glow" onClick={handleReturnToStart} style={{ cursor: 'pointer' }}>{t.title}</h1>
 
       <InstallPrompt language={language} />
-      {levelUpToast && (
-        <div className="level-up-toast card-pop">
-          {language === 'he' ? `עברת לשלב ${levelUpToast}!` : `Level Up! Level ${levelUpToast}`}
-        </div>
-      )}
-      {newRecordToast && (
-        <div className="level-up-toast record-toast card-pop" style={{ border: '2px solid gold' }}>
-          {t.new_record_yay.replace('{n}', newRecordToast)} 🏆
-        </div>
-      )}
-      {rewardToast && (
-        <div className="level-up-toast reward-toast card-pop" style={{ border: '2px solid gold', background: 'rgba(255, 215, 0, 0.2)' }}>
-          {t[rewardToast.messageKey].replace('{n}', rewardToast.amount)}
-        </div>
-      )}
+      <div className="toast-container">
+        {levelUpToast && (
+          <div className="level-up-toast card-pop">
+            {language === 'he' ? `עברת לשלב ${levelUpToast}!` : `Level Up! Level ${levelUpToast}`}
+          </div>
+        )}
+        {newRecordToast && (
+          <div className="level-up-toast record-toast card-pop" style={{ border: '2px solid gold' }}>
+            {t.new_record_yay.replace('{n}', newRecordToast)} 🏆
+          </div>
+        )}
+        {rewardToast && (
+          <div className="level-up-toast reward-toast card-pop" style={{ border: '2px solid gold', background: 'rgba(255, 215, 0, 0.2)' }}>
+            {t[rewardToast.messageKey].replace('{n}', rewardToast.amount)}
+          </div>
+        )}
+      </div>
 
       <Routes>
         <Route path="/" element={
