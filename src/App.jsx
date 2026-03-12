@@ -83,9 +83,9 @@ function App() {
   const [usedSurvivalPowerups, setUsedSurvivalPowerups] = useState({ '5050': false, 'hint': false, 'solve': false });
   const [newRecordToast, setNewRecordToast] = useState(null);
   const [bestScore, setBestScore] = useState(0);
-  const [hasNotifiedRecord, setHasNotifiedRecord] = useState(false);
   const [rewardToast, setRewardToast] = useState(null);
   const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '10', 10));
+  const recordNotifiedRef = useRef(false);
   const [unlockedAvatars, setUnlockedAvatars] = useState(() => {
     const saved = localStorage.getItem('unlocked_avatars');
     if (saved) return JSON.parse(saved);
@@ -170,7 +170,7 @@ function App() {
       setCurrentSurvivalIndex(0);
       setSurvivalCorrect(0);
       setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
-      setHasNotifiedRecord(false);
+      recordNotifiedRef.current = false;
       const HS_KEY = config.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
       setBestScore(parseInt(localStorage.getItem(HS_KEY) || '0', 10));
       setTimeLeft(30); // Note: QuizOverlay uses its own per-level timer if gameTimeLeft > 0
@@ -273,13 +273,16 @@ function App() {
       const prevBest = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
       if (newScore > prevBest && newScore > 0) {
         setBestScore(newScore); // Real-time update
-        if (!hasNotifiedRecord) {
-          setNewRecordToast(newScore);
-          setHasNotifiedRecord(true);
+        if (!recordNotifiedRef.current) {
+          recordNotifiedRef.current = true;
           setTotalCoins(prev => prev + 20); // Bonus for breaking record!
-          setRewardToast({ messageKey: 'record_bonus', amount: 20 });
+          setRewardToast({
+            messageKey: 'record_bonus',
+            amount: 20,
+            isRecord: true,
+            score: newScore
+          });
           playSound('victory');
-          setTimeout(() => setNewRecordToast(null), 3000);
         }
       }
 
@@ -445,14 +448,13 @@ function App() {
             {language === 'he' ? `עברת לשלב ${levelUpToast}!` : `Level Up! Level ${levelUpToast}`}
           </div>
         )}
-        {newRecordToast && (
-          <div className="level-up-toast record-toast card-pop" style={{ border: '2px solid gold' }}>
-            {t.new_record_yay.replace('{n}', newRecordToast)} 🏆
-          </div>
-        )}
         {rewardToast && (
-          <div className="level-up-toast reward-toast card-pop" style={{ border: '2px solid gold', background: 'rgba(255, 215, 0, 0.2)' }}>
-            {t[rewardToast.messageKey].replace('{n}', rewardToast.amount)}
+          <div className="level-up-toast reward-toast card-pop" style={{ border: '2px solid gold', background: rewardToast.isRecord ? 'rgba(255, 215, 0, 0.4)' : 'rgba(255, 215, 0, 0.2)' }}>
+            {rewardToast.isRecord ? (
+              <span>{t.new_record_yay.replace('{n}', rewardToast.score)} 🏆 <br /> {t.record_bonus.replace('{n}', rewardToast.amount)}</span>
+            ) : (
+              t[rewardToast.messageKey].replace('{n}', rewardToast.amount)
+            )}
           </div>
         )}
       </div>
