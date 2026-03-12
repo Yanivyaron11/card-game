@@ -11,6 +11,12 @@
 - [x] Persistent unlocking mechanism.
 - [x] "Unlock" logic with coin deduction.
 
+### 2.1 Future Shop Expansion 🏗️
+- [ ] **Categories**: Split the shop into tabs (Avatars, Power-ups, Skins, Topics).
+- [ ] **Power-ups Store**: Buy consumable items (Shields, Extra Time, 50/50 packs).
+- [ ] **Skins & Themes**: Custom card backs, board designs, and visual styles.
+- [ ] **Locked Topics**: Purchase access to special or seasonal question categories (e.g., Space, Superheroes).
+
 ### 3. Achievements & Medals System
 Create a visual "Trophy Room" where kids can earn medals for specific milestones:
 - **[ ] Israel Expert**: Answer 50 questions in the Israel category.
