@@ -98,7 +98,8 @@ export const translations = {
         survival_record_child: "Child Record",
         survival_record_adult: "Adult Record",
         new_record_yay: "Yay! New Record of {n} points!",
-        best: "Best"
+        best: "Best",
+        participating_topics: "Participating Topics"
     },
 
 
@@ -201,6 +202,7 @@ export const translations = {
         survival_record_child: "שיא ילדים",
         survival_record_adult: "שיא מבוגרים",
         new_record_yay: "יששש! שיא חדש של {n} נקודות!",
-        best: "שיא"
+        best: "שיא",
+        participating_topics: "נושאים משתתפים"
     }
 };

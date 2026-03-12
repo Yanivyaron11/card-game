@@ -447,15 +447,15 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                 </div>
             )}
 
-            {gameMode !== 'survival' && (
+            {(gameMode === 'solo' || gameMode === '1v1' || gameMode === 'time_attack' || gameMode === 'survival') && (
                 <div className="config-section">
-                    <h3>{t.choose_topics}</h3>
+                    <h3>{gameMode === 'survival' ? t.participating_topics : t.choose_topics}</h3>
                     <div className="topic-options">
                         {visibleTopics.map(topic => (
                             <div
                                 key={topic.id}
-                                className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`}
-                                onClick={() => handleTopicToggle(topic.id)}
+                                className={`topic-card ${(gameMode === 'survival' || selectedTopics.includes(topic.id)) ? 'selected' : ''} ${gameMode === 'survival' ? 'read-only' : ''}`}
+                                onClick={gameMode === 'survival' ? null : () => handleTopicToggle(topic.id)}
                             >
                                 <div className="topic-info-main">
                                     <span className="topic-name">{topic.name[language]}</span>
