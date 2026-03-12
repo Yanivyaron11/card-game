@@ -193,7 +193,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     {gameMode !== '1v1' && (
                         <div className="stat-item lives-display">
                             <div className="hearts mini">
-                                {Array.from({ length: Math.max(0, lives + 1) }).map((_, i) => (
+                                {Array.from({ length: Math.max(0, lives) }).map((_, i) => (
                                     <span key={i} className="heart-icon mini">❤️</span>
                                 ))}
                             </div>

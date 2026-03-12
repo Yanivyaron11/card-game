@@ -196,7 +196,7 @@ function App() {
           return newDeck;
         });
 
-        if (newPlayerLives < 0) {
+        if (newPlayerLives <= 0) {
           playSound('wrong');
           setGameState('game_over');
           navigate('/result');
@@ -232,15 +232,8 @@ function App() {
     // Unified Survival Advancement logic
     if (gameConfig.gameMode === 'survival') {
       const nextIdx = currentSurvivalIndex + 1;
-      const currentLives = isCorrect ? lives[1] : lives[1] - 1;
 
-      if (currentLives <= 0) {
-        playSound('wrong');
-        setGameState('game_over');
-        navigate('/result');
-        return;
-      }
-
+      // Continue to next question
       if (nextIdx < deck.length) {
         // Level up check
         const currentCard = deck[currentSurvivalIndex];
