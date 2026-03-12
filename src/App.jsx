@@ -449,7 +449,7 @@ function App() {
           </div>
         )}
         {rewardToast && (
-          <div className="level-up-toast reward-toast card-pop" style={{ border: '2px solid gold', background: rewardToast.isRecord ? 'rgba(255, 215, 0, 0.4)' : 'rgba(255, 215, 0, 0.2)' }}>
+          <div className={`level-up-toast reward-toast card-pop ${rewardToast.isRecord ? 'record-break' : ''}`}>
             {rewardToast.isRecord ? (
               <span>{t.new_record_yay.replace('{n}', rewardToast.score)} 🏆 <br /> {t.record_bonus.replace('{n}', rewardToast.amount)}</span>
             ) : (
