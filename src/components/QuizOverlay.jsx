@@ -16,9 +16,9 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const getInitialTime = () => {
         if (!card) return 30;
         if (gameMode === 'survival') {
-            if (card.level === 3) return 10;
-            if (card.level === 2) return 12;
-            return 15;
+            if (card.level === 3) return 20;
+            if (card.level === 2) return 25;
+            return 30;
         }
         if (card.level === 3) return 10;
         if (card.level === 2) return 20;
@@ -35,10 +35,6 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const mountTimeRef = useRef(Date.now());
     const feedbackMessageRef = useRef("");
     const [isQuitModalOpen, setIsQuitModalOpen] = useState(false);
-
-    useEffect(() => {
-        timeoutRef.current = onTimeout;
-    }, [onTimeout]);
 
     useEffect(() => {
         timeoutRef.current = onTimeout;
@@ -62,7 +58,6 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             setTimeLeft(prev => {
                 if (prev <= 1) {
                     clearInterval(timerRef.current);
-                    if (timeoutRef.current) timeoutRef.current();
                     return 0;
                 }
                 if (prev <= 6) {
@@ -76,6 +71,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             if (timerRef.current) clearInterval(timerRef.current);
         };
     }, [card?.id]);
+
+    useEffect(() => {
+        if (timeLeft === 0 && !isAnswering && isReady) {
+            if (timeoutRef.current) timeoutRef.current(cardId);
+        }
+    }, [timeLeft, isAnswering, isReady, cardId]);
 
     // Handle case where card is not found or user navigated directly
     useEffect(() => {

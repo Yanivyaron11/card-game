@@ -95,20 +95,20 @@ function App() {
     setGameState('playing');
   };
 
-  const checkWinCondition = (currentDeck, currentScores) => {
-    if (currentDeck.length === 0) return;
+  const checkWinCondition = () => {
+    if (deck.length === 0 || gameState !== 'playing') return;
 
-    const allCardsProcessed = currentDeck.every(card => card.isSolved || card.isFailed);
-    const solvedCount = currentDeck.filter(c => c.isSolved).length;
+    const allCardsProcessed = deck.every(card => card.isSolved || card.isFailed);
+    const solvedCount = deck.filter(c => c.isSolved).length;
 
     // Early termination for 1v1
     if (gameConfig?.gameMode === '1v1') {
-      const maxPossiblePoints = currentDeck.filter(c => !c.isSolved && !c.isFailed).reduce((acc, card) => {
+      const maxPossiblePoints = deck.filter(c => !c.isSolved && !c.isFailed).reduce((acc, card) => {
         const canEverBeRebound = !card.isTainted && card.options.he.length > 2 && card.failedAttempts === 0;
         // If it was already failed once and is eligible, it's worth 2 points NOW.
         return acc + (canEverBeRebound || card.failedAttempts === 1 ? 2 : 1);
       }, 0);
-      const scoreDiff = Math.abs(currentScores[1] - currentScores[2]);
+      const scoreDiff = Math.abs(scores[1] - scores[2]);
 
       if (scoreDiff > maxPossiblePoints || allCardsProcessed) {
         playSound('victory');
@@ -116,8 +116,8 @@ function App() {
         navigate('/result');
         return;
       }
-    } else if (allCardsProcessed) {
-      if (solvedCount > currentDeck.length / 2) {
+    } else if (allCardsProcessed && gameConfig?.gameMode !== 'survival') {
+      if (solvedCount > deck.length / 2) {
         playSound('victory');
         setGameState('victory');
         navigate('/result');
@@ -128,6 +128,12 @@ function App() {
       }
     }
   };
+
+  useEffect(() => {
+    if (gameState === 'playing') {
+      checkWinCondition();
+    }
+  }, [deck, scores, gameState]);
 
   const handleAnswer = (cardId, isCorrect, silent = false) => {
     if (gameConfig?.gameMode === 'survival' && answeringRef.current === cardId) return;
@@ -165,9 +171,6 @@ function App() {
           const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + points };
           setScores(newScores);
           setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
-          checkWinCondition(newDeck, newScores);
-        } else {
-          checkWinCondition(newDeck, scores);
         }
 
         return newDeck;
@@ -182,7 +185,6 @@ function App() {
           const newDeck = prev.map(card =>
             card.id === cardId ? { ...card, isFailed: true } : card
           );
-          checkWinCondition(newDeck);
           return newDeck;
         });
 
@@ -210,7 +212,6 @@ function App() {
             }
             return card;
           });
-          checkWinCondition(newDeck, scores);
           return newDeck;
         });
 
