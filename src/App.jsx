@@ -175,9 +175,16 @@ function App() {
         return;
       }
     } else if (config.gameMode === 'time_attack') {
-      const timeLimit = config.gridSize === 9 ? 75 : config.gridSize === 16 ? 120 : 180;
+      const gSize = Number(config.gridSize);
+      const baseTime = gSize === 9 ? 75 : gSize === 16 ? 120 : 180;
+
+      // Adjust by difficulty: Level 1 (+20%), Level 2 (No change), Level 3 (-20%)
+      const diff = Number(config.difficulty || 2);
+      const multiplier = diff === 1 ? 1.2 : diff === 3 ? 0.8 : 1.0;
+      const timeLimit = Math.floor(baseTime * multiplier);
+
       setTimeLeft(timeLimit);
-      setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
+      setDeck(generateDeck(gSize, config.topics, config.difficulty));
       setGameState('topic_selection');
       navigate('/play');
     } else if (config.gameMode === 'solo') {

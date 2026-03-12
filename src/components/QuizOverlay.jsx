@@ -294,7 +294,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             <div className="survival-score-item best-score">🏆 {t.best}: {bestScore || 0}</div>
                         </div>
                     )}
-                    {gameMode !== 'time_attack' && (
+                    {gameMode !== 'time_attack' && (gameMode !== 'solo' || gameTimeLeft > 0) && (
                         <div className="timer-container">
                             <div className="timer-header">
                                 <div className="timer-label">
