@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import StartScreen from './components/StartScreen'
 import GameBoard from './components/GameBoard'
@@ -24,6 +24,8 @@ function App() {
   const [timeLeft, setTimeLeft] = useState(0);
   const [streaks, setStreaks] = useState({ 1: 0, 2: 0 });
   const [currentSurvivalIndex, setCurrentSurvivalIndex] = useState(0);
+  const [levelUpToast, setLevelUpToast] = useState(null);
+  const answeringRef = useRef(null);
 
   const t = translations[language];
 
@@ -78,7 +80,7 @@ function App() {
       const survivalDeck = generateSurvivalDeck(config.topics);
       setDeck(survivalDeck);
       setCurrentSurvivalIndex(0);
-      setTimeLeft(15); // Start with 15s for Level 1
+      setTimeLeft(30); // Start with 30s for Level 1
       setLives({ 1: 3 }); // Survival starts with 3 lives
       setCoins({ 1: 5 });
       navigate(`/quiz/${survivalDeck[0].id}`);
@@ -128,6 +130,9 @@ function App() {
   };
 
   const handleAnswer = (cardId, isCorrect, silent = false) => {
+    if (gameConfig?.gameMode === 'survival' && answeringRef.current === cardId) return;
+    answeringRef.current = cardId;
+
     if (!silent) {
       if (isCorrect) {
         playSound('correct');
@@ -168,7 +173,7 @@ function App() {
         return newDeck;
       });
     } else {
-      if (gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack') {
+      if (gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack' || gameConfig.gameMode === 'survival') {
         const newPlayerLives = lives[currentPlayer] - 1;
         setLives(prev => ({ ...prev, [currentPlayer]: newPlayerLives }));
         setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
@@ -224,7 +229,7 @@ function App() {
           setCurrentSurvivalIndex(nextIdx);
           // Speed up timer as we progress
           const level = deck[nextIdx].level;
-          const newTime = level === 1 ? 15 : level === 2 ? 12 : 10;
+          const newTime = level === 1 ? 30 : level === 2 ? 25 : 20;
           setTimeLeft(newTime);
           navigate(`/quiz/${deck[nextIdx].id}`);
         } else {
@@ -238,7 +243,7 @@ function App() {
         if (nextIdx < deck.length && lives[1] > 0) {
           setCurrentSurvivalIndex(nextIdx);
           const level = deck[nextIdx].level;
-          const newTime = level === 1 ? 15 : level === 2 ? 12 : 10;
+          const newTime = level === 1 ? 30 : level === 2 ? 25 : 20;
           setTimeLeft(newTime);
           navigate(`/quiz/${deck[nextIdx].id}`);
         } else if (lives[1] <= 0) {
@@ -274,7 +279,11 @@ function App() {
       <h1 className="title-glow" onClick={handleReturnToStart} style={{ cursor: 'pointer' }}>{t.title}</h1>
 
       <InstallPrompt language={language} />
-
+      {levelUpToast && (
+        <div className="level-up-toast card-pop">
+          {language === 'he' ? `עברת לשלב ${levelUpToast}!` : `Level Up! Level ${levelUpToast}`}
+        </div>
+      )}
 
       <Routes>
         <Route path="/" element={

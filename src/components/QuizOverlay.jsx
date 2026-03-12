@@ -211,9 +211,17 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <div className="stat-item survival-ladder">
                             <div className="ladder-container">
                                 {Array.from({ length: 10 }).map((_, i) => {
-                                    const progressInLevel = survivalIndex % 10;
-                                    const isCompleted = i < progressInLevel;
-                                    const isCurrent = i === progressInLevel;
+                                    // Map progress to 10 dots based on level size: L1=10, L2=20, L3=70
+                                    const cardLevel = card.level;
+                                    const segmentSize = cardLevel === 1 ? 10 : cardLevel === 2 ? 20 : 70;
+                                    const offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 10 : 30;
+                                    const indexInLevel = survivalIndex - offset;
+
+                                    const questionsPerStep = segmentSize / 10;
+                                    const currentStep = Math.floor(indexInLevel / questionsPerStep);
+
+                                    const isCompleted = i < currentStep;
+                                    const isCurrent = i === currentStep;
                                     return (
                                         <div
                                             key={i}

@@ -288,11 +288,10 @@ export const generateSurvivalDeck = (selectedTopics = []) => {
     const level3 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 3);
 
     // 2. Pick questions for each segment
-    // Let's create a pool of 30 questions (10 per level) to start with
     const deck = [
         ...shuffle(level1).slice(0, 10),
-        ...shuffle(level2).slice(0, 10),
-        ...shuffle(level3).slice(0, 20) // More level 3 for the "endless" part
+        ...shuffle(level2).slice(0, 20),
+        ...shuffle(level3).slice(0, 70)
     ];
 
     // 3. Map topic info and card state
