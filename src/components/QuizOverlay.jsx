@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
+import QuitConfirmModal from './QuitConfirmModal';
 import './QuizOverlay.css';
 
 function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, onQuit }) {
@@ -33,6 +34,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const timeoutRef = useRef(onTimeout);
     const mountTimeRef = useRef(Date.now());
     const feedbackMessageRef = useRef("");
+    const [isQuitModalOpen, setIsQuitModalOpen] = useState(false);
 
     useEffect(() => {
         timeoutRef.current = onTimeout;
@@ -182,11 +184,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             <div className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''}`}>
                 <button
                     className="quiz-quit-btn"
-                    onClick={() => {
-                        if (window.confirm(language === 'he' ? 'האם אתה בטוח שברצונך לצאת?' : 'Are you sure you want to quit?')) {
-                            onQuit();
-                        }
-                    }}
+                    onClick={() => setIsQuitModalOpen(true)}
                     title={t.quit_game}
                 >
                     ✕
@@ -380,6 +378,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     </div>
                 </div>
             </div>
+            <QuitConfirmModal
+                isOpen={isQuitModalOpen}
+                onClose={() => setIsQuitModalOpen(false)}
+                onConfirm={onQuit}
+                language={language}
+            />
         </div>
     );
 }

@@ -4,12 +4,14 @@ import Card from './Card';
 import { playSound, getSoundEnabled, setSoundEnabled } from '../utils/sounds';
 import { translations } from '../data/translations';
 import { markQuestionAsSeen } from '../utils/deck';
+import QuitConfirmModal from './QuitConfirmModal';
 import './GameBoard.css';
 
 function GameBoard({ config, deck, lives, coins, language, onCardSelected, currentPlayer, scores, timeLeft, onQuit }) {
     const t = translations[language];
     const navigate = useNavigate();
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
+    const [isQuitModalOpen, setIsQuitModalOpen] = useState(false);
 
     const handleCardClick = (card) => {
         if (card.isSolved || card.isFailed) return;
@@ -36,9 +38,11 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
     };
 
     const handleQuit = () => {
-        if (window.confirm(language === 'he' ? 'האם אתה בטוח שברצונך לצאת?' : 'Are you sure you want to quit?')) {
-            onQuit ? onQuit() : navigate('/');
-        }
+        setIsQuitModalOpen(true);
+    };
+
+    const confirmQuit = () => {
+        onQuit ? onQuit() : navigate('/');
     };
 
     const gridCols = config.gridSize === 9 ? 3 : config.gridSize === 25 ? 5 : 4;
@@ -161,6 +165,12 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                     />
                 ))}
             </div>
+            <QuitConfirmModal
+                isOpen={isQuitModalOpen}
+                onClose={() => setIsQuitModalOpen(false)}
+                onConfirm={confirmQuit}
+                language={language}
+            />
         </div>
     );
 }

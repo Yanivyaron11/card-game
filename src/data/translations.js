@@ -82,7 +82,10 @@ export const translations = {
         rebound: "Rebound! 2 Points!",
         rebound_badge: "REBOUND!",
         rebound_cancelled: "Help used - Rebound cancelled (1 point)",
-        rebound_feedback: "REBOUND, {name}! 🎯 You earned 2 points!"
+        rebound_feedback: "REBOUND, {name}! 🎯 You earned 2 points!",
+        confirm_quit: "Are you sure you want to quit?",
+        yes: "Yes",
+        no: "No"
     },
 
 
@@ -169,6 +172,9 @@ export const translations = {
         rebound: "ריבאונד! 2 נקודות!",
         rebound_badge: "ריבאונד!",
         rebound_cancelled: "השתמשת בעזרה - הריבאונד בוטל (נקודה אחת)",
-        rebound_feedback: "ריבאונד, {name}! 🎯 קיבלת 2 נקודות!"
+        rebound_feedback: "ריבאונד, {name}! 🎯 קיבלת 2 נקודות!",
+        confirm_quit: "האם בטוח שברצונך לצאת?",
+        yes: "כן",
+        no: "לא"
     }
 };
