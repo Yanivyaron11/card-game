@@ -333,10 +333,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 <div className="quiz-content">
                     <div className="quiz-emoji">{card.emoji}</div>
 
-                    {card.isHintVisible && card.hint && (
+                    {card.isHintVisible && (
                         <div className="hint-box">
                             <span className="hint-icon">💡</span>
-                            <p className="hint-text">{card.hint[language] || card.hint}</p>
+                            <p className="hint-text">
+                                {card.hint ? (card.hint[language] || card.hint) : t.fallback_hint}
+                            </p>
                         </div>
                     )}
 

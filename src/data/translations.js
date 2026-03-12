@@ -99,7 +99,8 @@ export const translations = {
         survival_record_adult: "Adult Record",
         new_record_yay: "Yay! New Record of {n} points!",
         best: "Best",
-        participating_topics: "Participating Topics"
+        participating_topics: "Participating Topics",
+        fallback_hint: 'Think carefully about the options, one of them is correctly!'
     },
 
 
@@ -203,6 +204,7 @@ export const translations = {
         survival_record_adult: "שיא מבוגרים",
         new_record_yay: "יששש! שיא חדש של {n} נקודות!",
         best: "שיא",
-        participating_topics: "נושאים משתתפים"
+        participating_topics: "נושאים משתתפים",
+        fallback_hint: 'חשבו היטב על האפשרויות, אחת מהן היא התשובה הנכונה!'
     }
 };
