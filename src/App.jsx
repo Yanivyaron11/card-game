@@ -376,6 +376,7 @@ function App() {
               onTimeout={(cardId) => handleAnswer(cardId, false)}
               onPowerUpUsed={handlePowerUpUsed}
               survivalIndex={currentSurvivalIndex}
+              survivalCorrect={survivalCorrect}
               usedSurvivalPowerups={usedSurvivalPowerups}
               onSurvivalPowerupUsed={(type) => setUsedSurvivalPowerups(prev => ({ ...prev, [type]: true }))}
               onQuit={handleReturnToStart}

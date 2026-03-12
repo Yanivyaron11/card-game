@@ -90,7 +90,8 @@ export const translations = {
         resume: "Resume",
         paused: "Paused",
         select_avatar: "Please select an avatar",
-        select_avatars_1v1: "Please select an avatar for each player"
+        select_avatars_1v1: "Please select an avatar for each player",
+        correct_count: "Correct: {n}"
     },
 
 
@@ -185,6 +186,7 @@ export const translations = {
         resume: "המשך",
         paused: "משחק מושהה",
         select_avatar: "אנא בחר אווטאר",
-        select_avatars_1v1: "אנא בחר אווטאר לכל שחקן"
+        select_avatars_1v1: "אנא בחר אווטאר לכל שחקן",
+        correct_count: "נכונות: {n}"
     }
 };

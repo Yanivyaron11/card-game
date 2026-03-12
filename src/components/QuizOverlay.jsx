@@ -5,7 +5,7 @@ import { translations } from '../data/translations';
 import QuitConfirmModal from './QuitConfirmModal';
 import './QuizOverlay.css';
 
-function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, usedSurvivalPowerups = {}, onSurvivalPowerupUsed, onQuit }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, survivalCorrect, usedSurvivalPowerups = {}, onSurvivalPowerupUsed, onQuit }) {
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
@@ -281,6 +281,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </span>
                         <span className="topic-name">{card.topicName[language]}</span>
                     </div>
+                    {gameMode === 'survival' && (
+                        <div className="survival-score-header">
+                            🎯 {t.correct_count.replace('{n}', survivalCorrect || 0)}
+                        </div>
+                    )}
                     {gameMode !== 'time_attack' && (
                         <div className="timer-container">
                             <div className="timer-header">
