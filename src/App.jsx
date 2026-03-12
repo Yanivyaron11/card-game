@@ -82,6 +82,7 @@ function App() {
   const [survivalCorrect, setSurvivalCorrect] = useState(0);
   const [usedSurvivalPowerups, setUsedSurvivalPowerups] = useState({ '5050': false, 'hint': false, 'solve': false });
   const [newRecordToast, setNewRecordToast] = useState(null);
+  const [bestScore, setBestScore] = useState(0);
   const [hasNotifiedRecord, setHasNotifiedRecord] = useState(false);
   const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '10', 10));
   const [unlockedAvatars, setUnlockedAvatars] = useState(() => {
