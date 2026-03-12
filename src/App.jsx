@@ -443,7 +443,7 @@ function App() {
   };
 
   const handleReturnToStart = () => {
-    if (gameConfig?.gameMode === 'survival' || gameConfig?.gameMode === 'time_attack') {
+    if (gameState === 'playing' && (gameConfig?.gameMode === 'survival' || gameConfig?.gameMode === 'time_attack')) {
       // For these modes, manual quit counts as "End of Run" so progress is saved/shown
       setGameState('game_over');
       navigate('/result');
