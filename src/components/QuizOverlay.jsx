@@ -231,14 +231,14 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                     const segmentSize = cardLevel === 1 ? 10 : cardLevel === 2 ? 20 : 70;
                                     const offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 10 : 30;
                                     const indexInLevel = survivalIndex - offset;
-                                    const percentage = (indexInLevel / segmentSize) * 100;
+                                    const percentage = ((indexInLevel + 1) / segmentSize) * 100;
                                     return (
                                         <div className="survival-progress-bar-wrapper">
                                             <div
                                                 className="survival-progress-fill"
                                                 style={{ width: `${percentage}%` }}
                                             />
-                                            <span className="survival-progress-text">
+                                            <span className="survival-progress-text" dir="ltr">
                                                 {indexInLevel + 1} / {segmentSize}
                                             </span>
                                         </div>
