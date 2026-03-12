@@ -225,28 +225,26 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     )}
                     {gameMode === 'survival' && (
                         <div className="stat-item survival-progress-section">
-                            <div className="survival-progress-container">
-                                {(() => {
-                                    const cardLevel = card.level;
-                                    const segmentSize = cardLevel === 1 ? 10 : cardLevel === 2 ? 20 : 70;
-                                    const offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 10 : 30;
-                                    const indexInLevel = survivalIndex - offset;
-                                    const percentage = Math.max(5, ((indexInLevel + 1) / segmentSize) * 100);
-                                    return (
-                                        <div className="survival-progress-bar-wrapper">
-                                            <div
-                                                className="survival-progress-fill"
-                                                style={{ width: `${percentage}%` }}
-                                            />
-                                            <div className="survival-progress-text-overlay">
-                                                <span className="survival-progress-text" dir="ltr">
-                                                    {indexInLevel + 1} / {segmentSize}
-                                                </span>
-                                            </div>
+                            {(() => {
+                                const cardLevel = card.level;
+                                const segmentSize = cardLevel === 1 ? 10 : cardLevel === 2 ? 20 : 70;
+                                const offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 10 : 30;
+                                const indexInLevel = survivalIndex - offset;
+                                const percentage = segmentSize > 0 ? Math.max(5, ((indexInLevel + 1) / segmentSize) * 100) : 0;
+                                return (
+                                    <div className="survival-progress-bar-wrapper">
+                                        <div
+                                            className="survival-progress-fill"
+                                            style={{ width: `${percentage}%` }}
+                                        />
+                                        <div className="survival-progress-text-overlay">
+                                            <span className="survival-progress-text" dir="ltr">
+                                                {indexInLevel + 1} / {segmentSize}
+                                            </span>
                                         </div>
-                                    );
-                                })()}
-                            </div>
+                                    </div>
+                                );
+                            })()}
                             <div className="survival-level-indicator">
                                 {t.level} {card.level}
                             </div>

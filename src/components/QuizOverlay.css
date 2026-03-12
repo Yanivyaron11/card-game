@@ -158,27 +158,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.15rem;
-    padding: 0.2rem 0.6rem;
-    min-width: 130px;
-    background: rgba(255, 255, 255, 0.9);
+    gap: 0.2rem;
+    padding: 0.3rem 0.8rem;
+    width: 150px;
+    /* Fixed width to ensure it doesn't collapse */
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     border: 1px solid #cbd5e1;
 }
 
 .survival-progress-bar-wrapper {
     position: relative;
     width: 100%;
-    height: 20px;
-    /* Taller for better presence */
-    background: #475569;
-    /* Much darker background for the track */
-    border-radius: 12px;
+    /* Spans the full width of survival-progress-section */
+    height: 18px;
+    background: #1e293b;
+    /* Dark, solid track background */
+    border-radius: 10px;
     overflow: hidden;
-    /* Back to hidden, we'll fix the text */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-    border: 1px solid #1e293b;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid #0f172a;
 }
 
 .survival-progress-fill {

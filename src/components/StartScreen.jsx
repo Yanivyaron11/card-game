@@ -72,15 +72,27 @@ function StartScreen({ onStart, language, onLanguageChange }) {
 
     const [musicTrack, setMusicTrackState] = useState(getMusicTrack());
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-    const [gridSize, setGridSize] = useState(16);
-    const [difficulty, setDifficulty] = useState(1);
+    const [gridSize, setGridSize] = useState(() => parseInt(localStorage.getItem('last_gridSize') || '16', 10));
+    const [difficulty, setDifficulty] = useState(() => parseInt(localStorage.getItem('last_difficulty') || '1', 10));
     const [selectedTopics, setSelectedTopics] = useState([]);
-    const [gameMode, setGameMode] = useState('solo');
+    const [gameMode, setGameMode] = useState(() => localStorage.getItem('last_gameMode') || 'solo');
     const [newCategories, setNewCategories] = useState([]);
     const [isNewModalOpen, setIsNewModalOpen] = useState(false);
     const [newFeatures, setNewFeatures] = useState([]);
     const [isFeatureModalOpen, setIsFeatureModalOpen] = useState(false);
-    const [selectedAvatars, setSelectedAvatars] = useState({ 1: null, 2: null });
+    const [selectedAvatars, setSelectedAvatars] = useState(() => {
+        try {
+            const saved = localStorage.getItem('last_avatars');
+            if (!saved) return { 1: null, 2: null };
+            const parsed = JSON.parse(saved);
+            return {
+                1: avatars.find(a => a.id === parsed[1]) || null,
+                2: avatars.find(a => a.id === parsed[2]) || null
+            };
+        } catch (e) {
+            return { 1: null, 2: null };
+        }
+    });
     const [alertConfig, setAlertConfig] = useState({ isOpen: false, message: '', icon: '⚠️' });
 
     useEffect(() => {
@@ -114,6 +126,17 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             }
         }
     }, [activePool]);
+
+    // Persist settings
+    useEffect(() => {
+        localStorage.setItem('last_gridSize', gridSize.toString());
+        localStorage.setItem('last_difficulty', difficulty.toString());
+        localStorage.setItem('last_gameMode', gameMode);
+        localStorage.setItem('last_avatars', JSON.stringify({
+            1: selectedAvatars[1]?.id || null,
+            2: selectedAvatars[2]?.id || null
+        }));
+    }, [gridSize, difficulty, gameMode, selectedAvatars]);
 
     const handleDismissNew = () => {
         const seenNew = JSON.parse(localStorage.getItem('seenNewCategories') || '[]');
