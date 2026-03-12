@@ -77,7 +77,10 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const [gridSize, setGridSize] = useState(() => parseInt(localStorage.getItem('last_gridSize') || '16', 10));
     const [difficulty, setDifficulty] = useState(() => parseInt(localStorage.getItem('last_difficulty') || '1', 10));
-    const [selectedTopics, setSelectedTopics] = useState([]);
+    const [selectedTopics, setSelectedTopics] = useState(() => {
+        const saved = localStorage.getItem('last_selectedTopics');
+        return saved ? JSON.parse(saved) : [];
+    });
     const [gameMode, setGameMode] = useState(() => localStorage.getItem('last_gameMode') || 'solo');
     const [survivalType, setSurvivalType] = useState(() => localStorage.getItem('last_survivalType') || 'child');
     const [newCategories, setNewCategories] = useState([]);
@@ -138,11 +141,12 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
         localStorage.setItem('last_difficulty', difficulty.toString());
         localStorage.setItem('last_gameMode', gameMode);
         localStorage.setItem('last_survivalType', survivalType);
+        localStorage.setItem('last_selectedTopics', JSON.stringify(selectedTopics));
         localStorage.setItem('last_avatars', JSON.stringify({
             1: selectedAvatars[1]?.id || null,
             2: selectedAvatars[2]?.id || null
         }));
-    }, [gridSize, difficulty, gameMode, survivalType, selectedAvatars]);
+    }, [gridSize, difficulty, gameMode, survivalType, selectedAvatars, selectedTopics]);
 
     const handleDismissNew = () => {
         const seenNew = JSON.parse(localStorage.getItem('seenNewCategories') || '[]');
