@@ -290,7 +290,8 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     </div>
                     {gameMode === 'survival' && (
                         <div className="survival-score-header">
-                            🎯 {t.correct_count.replace('{n}', survivalCorrect || 0)}
+                            <div className="survival-score-item">🎯 {t.correct_count.replace('{n}', survivalCorrect || 0)}</div>
+                            <div className="survival-score-item best-score">🏆 {t.best}: {localStorage.getItem(gameConfig?.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child') || 0}</div>
                         </div>
                     )}
                     {gameMode !== 'time_attack' && (

@@ -280,16 +280,32 @@
 .survival-score-header {
     background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
     color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
     font-weight: 800;
     box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
-    margin: 0 0.5rem;
+    margin: 0 0.2rem;
     white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.survival-score-item {
     display: flex;
     align-items: center;
     gap: 0.3rem;
+}
+
+.best-score {
+    font-size: 0.75rem;
+    opacity: 0.95;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 2px;
+    width: 100%;
+    justify-content: center;
 }
 
 .topic-info {

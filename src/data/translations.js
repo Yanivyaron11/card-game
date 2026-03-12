@@ -97,7 +97,8 @@ export const translations = {
         survival_adult: "Adult Course (30 Questions)",
         survival_record_child: "Child Record",
         survival_record_adult: "Adult Record",
-        new_record_yay: "Yay! New Record of {n} points!"
+        new_record_yay: "Yay! New Record of {n} points!",
+        best: "Best"
     },
 
 
@@ -199,6 +200,7 @@ export const translations = {
         survival_adult: "מסלול מבוגרים (30 שאלות)",
         survival_record_child: "שיא ילדים",
         survival_record_adult: "שיא מבוגרים",
-        new_record_yay: "יששש! שיא חדש של {n} נקודות!"
+        new_record_yay: "יששש! שיא חדש של {n} נקודות!",
+        best: "שיא"
     }
 };
