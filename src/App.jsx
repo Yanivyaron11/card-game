@@ -436,9 +436,15 @@ function App() {
   };
 
   const handleReturnToStart = () => {
-    setGameState('start');
-    setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
-    navigate('/');
+    if (gameConfig?.gameMode === 'survival') {
+      // For Survival, manual quit counts as "End of Run" so progress is saved
+      setGameState('game_over');
+      navigate('/result');
+    } else {
+      setGameState('start');
+      setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
+      navigate('/');
+    }
   };
 
   return (
