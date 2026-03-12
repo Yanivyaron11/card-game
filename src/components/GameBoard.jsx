@@ -103,7 +103,6 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                     </>
                                 ) : (language === 'he' ? 'שחקן 1' : 'Player 1')}
                             </div>
-                            <div className="level-badge mini">{t.level} {config.difficulty}</div>
                             <div className="player-score-value">{t.score}: {scores[1]}</div>
                             {config.gameMode !== '1v1' && (
                                 <div className="p-hearts">
@@ -130,7 +129,6 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                     </>
                                 ) : (language === 'he' ? 'שחקן 2' : 'Player 2')}
                             </div>
-                            <div className="level-badge mini">{t.level} {config.difficulty}</div>
                             <div className="player-score-value">{t.score}: {scores[2]}</div>
                             {config.gameMode !== '1v1' && (
                                 <div className="p-hearts">

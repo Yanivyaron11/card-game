@@ -1,5 +1,5 @@
 export const culture_entQuestions = [
-{
+    {
         "id": "q-israeli_music-1365",
         "category": "israeli_music",
         "level": 1,
@@ -23,9 +23,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🐔🎤",
-        "hint": {"en":"This singer won Eurovision 2018 with a 'chicken dance' song.","he":"הזמרת הזו זכתה באירוויזיון 2018 עם שיר שכלל 'ריקוד תרנגולת'."}
+        "hint": { "en": "This singer won Eurovision 2018 with a 'chicken dance' song.", "he": "הזמרת הזו זכתה באירוויזיון 2018 עם שיר שכלל 'ריקוד תרנגולת'." }
     },
-{
+    {
         "id": "q-israeli_music-1366",
         "category": "israeli_music",
         "level": 1,
@@ -49,9 +49,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "👗❤️",
-        "hint": {"en":"'Simla Aduma veShtei Tsamaot' is a very famous children's song.","he":"'שמלה אדומה ושתי צמות' הוא שיר ילדים מאוד מפורסם."}
+        "hint": { "en": "'Simla Aduma veShtei Tsamaot' is a very famous children's song.", "he": "'שמלה אדומה ושתי צמות' הוא שיר ילדים מאוד מפורסם." }
     },
-{
+    {
         "id": "q-israeli_music-1367",
         "category": "israeli_music",
         "level": 1,
@@ -75,9 +75,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🦄✨",
-        "hint": {"en":"This superstar represented Israel at Eurovision 2023.","he":"הכוכבת הזו ייצגה את ישראל באירוויזיון 2023."}
+        "hint": { "en": "This superstar represented Israel at Eurovision 2023.", "he": "הכוכבת הזו ייצגה את ישראל באירוויזיון 2023." }
     },
-{
+    {
         "id": "q-israeli_music-1368",
         "category": "israeli_music",
         "level": 1,
@@ -101,9 +101,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🎂🔄",
-        "hint": {"en":"The song title means 'Cake, Cake', but we mostly rotate around.","he":"שם השיר הוא 'עוגה עוגה', אבל אנחנו בעיקר מסתובבים במעגל."}
+        "hint": { "en": "The song title means 'Cake, Cake', but we mostly rotate around.", "he": "שם השיר הוא 'עוגה עוגה', אבל אנחנו בעיקר מסתובבים במעגל." }
     },
-{
+    {
         "id": "q-israeli_music-1369",
         "category": "israeli_music",
         "level": 1,
@@ -127,9 +127,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "🎸🏙️",
-        "hint": {"en":"A famous 90s rock band from Tel Aviv.","he":"להקת רוק מפורסמת משנות ה-90 מתל אביב."}
+        "hint": { "en": "A famous 90s rock band from Tel Aviv.", "he": "להקת רוק מפורסמת משנות ה-90 מתל אביב." }
     },
-{
+    {
         "id": "q-israeli_music-1370",
         "category": "israeli_music",
         "level": 1,
@@ -153,9 +153,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "👧🎶",
-        "hint": {"en":"This young singer is famous for 'Achoti HaKtana'.","he":"הזמרת הצעירה הזו מפורסמת בשיר 'אחותי הקטנה'."}
+        "hint": { "en": "This young singer is famous for 'Achoti HaKtana'.", "he": "הזמרת הצעירה הזו מפורסמת בשיר 'אחותי הקטנה'." }
     },
-{
+    {
         "id": "q-israeli_music-1371",
         "category": "israeli_music",
         "level": 1,
@@ -179,9 +179,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 2,
         "emoji": "🙏🎵",
-        "hint": {"en":"The winning song of 1979 ends its main line with a word meaning 'Amen'.","he":"השיר הזוכה משנת 1979 מסיים את השורה הראשונה במילה 'אמן'."}
+        "hint": { "en": "The winning song of 1979 ends its main line with a word meaning 'Amen'.", "he": "השיר הזוכה משנת 1979 מסיים את השורה הראשונה במילה 'אמן'." }
     },
-{
+    {
         "id": "q-israeli_music-1372",
         "category": "israeli_music",
         "level": 1,
@@ -205,9 +205,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "💰💃",
-        "hint": {"en":"Another hit by the 'Unicorn' singer.","he":"להיט נוסף של הזמרת ששרה את 'Unicorn'."}
+        "hint": { "en": "Another hit by the 'Unicorn' singer.", "he": "להיט נוסף של הזמרת ששרה את 'Unicorn'." }
     },
-{
+    {
         "id": "q-israeli_music-1373",
         "category": "israeli_music",
         "level": 1,
@@ -231,9 +231,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 2,
         "emoji": "👦🌲",
-        "hint": {"en":"This is one of the most basic children's songs, not related to a specific holiday.","he":"זהו אחד משירי הילדים הבסיסיים ביותר, ולא קשור לחג ספציפי."}
+        "hint": { "en": "This is one of the most basic children's songs, not related to a specific holiday.", "he": "זהו אחד משירי הילדים הבסיסיים ביותר, ולא קשור לחג ספציפי." }
     },
-{
+    {
         "id": "q-israeli_music-1374",
         "category": "israeli_music",
         "level": 1,
@@ -257,9 +257,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 2,
         "emoji": "👵🎶",
-        "hint": {"en":"She was famous for her deep voice and 'Kalaniot' song.","he":"היא הייתה מפורסמת בקולה העמוק ובשיר ה'כלניות'."}
+        "hint": { "en": "She was famous for her deep voice and 'Kalaniot' song.", "he": "היא הייתה מפורסמת בקולה העמוק ובשיר ה'כלניות'." }
     },
-{
+    {
         "id": "q-israeli_music-1375",
         "category": "israeli_music",
         "level": 1,
@@ -283,9 +283,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🥇🇮🇱",
-        "hint": {"en":"This song won Eurovision in 1978 and uses the 'B' language.","he":"השיר הזה זכה באירוויזיון 1978 ומשתמש ב'שפת הבי'."}
+        "hint": { "en": "This song won Eurovision in 1978 and uses the 'B' language.", "he": "השיר הזה זכה באירוויזיון 1978 ומשתמש ב'שפת הבי'." }
     },
-{
+    {
         "id": "q-israeli_music-1376",
         "category": "israeli_music",
         "level": 1,
@@ -309,9 +309,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "👦🟡",
-        "hint": {"en":"'I'm a golden boy, come on and see me...'","he":"נדב גדג' שר את זה כשהיה רק בן 16."}
+        "hint": { "en": "'I'm a golden boy, come on and see me...'", "he": "נדב גדג' שר את זה כשהיה רק בן 16." }
     },
-{
+    {
         "id": "q-israeli_music-1377",
         "category": "israeli_music",
         "level": 1,
@@ -335,9 +335,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "👯‍♂️💥",
-        "hint": {"en":"The most famous pop duo in Israel for many years.","he":"צמד הפופ המפורסם ביותר בישראל במשך שנים רבות."}
+        "hint": { "en": "The most famous pop duo in Israel for many years.", "he": "צמד הפופ המפורסם ביותר בישראל במשך שנים רבות." }
     },
-{
+    {
         "id": "q-israeli_music-1378",
         "category": "israeli_music",
         "level": 1,
@@ -361,9 +361,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🧺🌿",
-        "hint": {"en":"A Shavuot song about the first fruits (Bikkurim).","he":"שיר לשבועות על הבאת הביכורים."}
+        "hint": { "en": "A Shavuot song about the first fruits (Bikkurim).", "he": "שיר לשבועות על הבאת הביכורים." }
     },
-{
+    {
         "id": "q-israeli_music-1379",
         "category": "israeli_music",
         "level": 1,
@@ -387,9 +387,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "💃✨",
-        "hint": {"en":"This singer is known for her social media presence and catchy pop hits.","he":"הזמרת הזו ידועה בנוכחותה ברשתות החברתיות ובלהיטי פופ קליטים."}
+        "hint": { "en": "This singer is known for her social media presence and catchy pop hits.", "he": "הזמרת הזו ידועה בנוכחותה ברשתות החברתיות ובלהיטי פופ קליטים." }
     },
-{
+    {
         "id": "q-israeli_music-1380",
         "category": "israeli_music",
         "level": 1,
@@ -413,9 +413,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "👑👠",
-        "hint": {"en":"This groundbreaking singer won Eurovision 1998.","he":"הזמרת פורצת הדרך הזו זכתה באירוויזיון 1998."}
+        "hint": { "en": "This groundbreaking singer won Eurovision 1998.", "he": "הזמרת פורצת הדרך הזו זכתה באירוויזיון 1998." }
     },
-{
+    {
         "id": "q-israeli_music-1381",
         "category": "israeli_music",
         "level": 1,
@@ -439,9 +439,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🍊✨",
-        "hint": {"en":"'Tammuz' band's song mentions a 'Golden Apple', which is a literal translation of this fruit's name.","he":"השם המילולי של הפרי הזה בעברית הוא 'תפוח זהב'."}
+        "hint": { "en": "'Tammuz' band's song mentions a 'Golden Apple', which is a literal translation of this fruit's name.", "he": "השם המילולי של הפרי הזה בעברית הוא 'תפוח זהב'." }
     },
-{
+    {
         "id": "q-israeli_music-1382",
         "category": "israeli_music",
         "level": 1,
@@ -465,9 +465,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "👧🌸",
-        "hint": {"en":"A classic song by Yehonatan Geffen about a very pretty girl.","he":"שיר קלאסי של יהונתן גפן על ילדה מאוד יפה."}
+        "hint": { "en": "A classic song by Yehonatan Geffen about a very pretty girl.", "he": "שיר קלאסי של יהונתן גפן על ילדה מאוד יפה." }
     },
-{
+    {
         "id": "q-israeli_music-1383",
         "category": "israeli_music",
         "level": 2,
@@ -491,9 +491,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "🤘🎸",
-        "hint": {"en":"These two singers are the founders and lead vocalists of the band.","he":"שני הזמרים האלו הם המייסדים והסולנים של הלהקה."}
+        "hint": { "en": "These two singers are the founders and lead vocalists of the band.", "he": "שני הזמרים האלו הם המייסדים והסולנים של הלהקה." }
     },
-{
+    {
         "id": "q-israeli_music-1384",
         "category": "israeli_music",
         "level": 2,
@@ -517,9 +517,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "🚂🇪🇬",
-        "hint": {"en":"A massive hit by Shlomi Bracha and Yuval Banay's band.","he":"להיט ענק של הלהקה של שלומי ברכה ויובל בנאי."}
+        "hint": { "en": "A massive hit by Shlomi Bracha and Yuval Banay's band.", "he": "להיט ענק של הלהקה של שלומי ברכה ויובל בנאי." }
     },
-{
+    {
         "id": "q-israeli_music-1385",
         "category": "israeli_music",
         "level": 2,
@@ -543,9 +543,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "🕍🟡",
-        "hint": {"en":"The most famous songwriter in Israeli history, known for national songs.","he":"הפזמונאית המפורסמת ביותר בתולדות ישראל, הידועה בשיריה הלאומיים."}
+        "hint": { "en": "The most famous songwriter in Israeli history, known for national songs.", "he": "הפזמונאית המפורסמת ביותר בתולדות ישראל, הידועה בשיריה הלאומיים." }
     },
-{
+    {
         "id": "q-israeli_music-1386",
         "category": "israeli_music",
         "level": 2,
@@ -569,9 +569,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "🎤🏆",
-        "hint": {"en":"Same as the 1978 winner!","he":"אותו שיר שזכה ב-1978!"}
+        "hint": { "en": "Same as the 1978 winner!", "he": "אותו שיר שזכה ב-1978!" }
     },
-{
+    {
         "id": "q-israeli_music-1387",
         "category": "israeli_music",
         "level": 2,
@@ -595,9 +595,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🍫🍬🌀",
-        "hint": {"en":"A girl group from the 70s named after three types of treats.","he":"שלישיית בנות משנות ה-70 שקרויה על שם שלושה סוגי ממתקים."}
+        "hint": { "en": "A girl group from the 70s named after three types of treats.", "he": "שלישיית בנות משנות ה-70 שקרויה על שם שלושה סוגי ממתקים." }
     },
-{
+    {
         "id": "q-israeli_music-1388",
         "category": "israeli_music",
         "level": 2,
@@ -621,9 +621,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 2,
         "emoji": "👑🎶",
-        "hint": {"en":"She had a very majestic stage presence and a deep voice.","he":"היה לה קול עמוק ונוכחות בימתית מלכותית."}
+        "hint": { "en": "She had a very majestic stage presence and a deep voice.", "he": "היה לה קול עמוק ונוכחות בימתית מלכותית." }
     },
-{
+    {
         "id": "q-israeli_music-1389",
         "category": "israeli_music",
         "level": 2,
@@ -647,9 +647,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "🎹🌍",
-        "hint": {"en":"The creator's name is in the title!","he":"שם היוצר מופיע בשם הפרויקט!"}
+        "hint": { "en": "The creator's name is in the title!", "he": "שם היוצר מופיע בשם הפרויקט!" }
     },
-{
+    {
         "id": "q-israeli_music-1390",
         "category": "israeli_music",
         "level": 2,
@@ -673,9 +673,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "🎸❤️",
-        "hint": {"en":"A famous rock ballad by the person often called the 'King of Israeli Rock'.","he":"בלדת רוק מפורסמת של מי שמכונה לעיתים 'מלך הרוק הישראלי'."}
+        "hint": { "en": "A famous rock ballad by the person often called the 'King of Israeli Rock'.", "he": "בלדת רוק מפורסמת של מי שמכונה לעיתים 'מלך הרוק הישראלי'." }
     },
-{
+    {
         "id": "q-israeli_music-1391",
         "category": "israeli_music",
         "level": 2,
@@ -699,9 +699,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🐝🎸",
-        "hint": {"en":"The band represented Israel at Eurovision 1974.","he":"הלהקה ייצגה את ישראל באירוויזיון 1974."}
+        "hint": { "en": "The band represented Israel at Eurovision 1974.", "he": "הלהקה ייצגה את ישראל באירוויזיון 1974." }
     },
-{
+    {
         "id": "q-israeli_music-1392",
         "category": "israeli_music",
         "level": 2,
@@ -725,9 +725,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "🐦🏜️",
-        "hint": {"en":"The band's name starts with 'Eth...'.","he":"שם הלהקה מתחיל ב-'אתנ...'."}
+        "hint": { "en": "The band's name starts with 'Eth...'.", "he": "שם הלהקה מתחיל ב-'אתנ...'." }
     },
-{
+    {
         "id": "q-israeli_music-1393",
         "category": "israeli_music",
         "level": 2,
@@ -751,9 +751,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🕯️😢",
-        "hint": {"en":"Aviv Geffen wrote this song about his friend, and it became a memorial song.","he":"אביב גפן כתב את השיר על חבר שלו, והוא הפך לשיר זיכרון."}
+        "hint": { "en": "Aviv Geffen wrote this song about his friend, and it became a memorial song.", "he": "אביב גפן כתב את השיר על חבר שלו, והוא הפך לשיר זיכרון." }
     },
-{
+    {
         "id": "q-israeli_music-1394",
         "category": "israeli_music",
         "level": 2,
@@ -777,9 +777,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "⭐🤰",
-        "hint": {"en":"She was the 'sweety from Kiryat Gat' who won the first ever season of the show.","he":"היא הייתה 'המאמי מקריית גת' שזכתה בעונה הראשונה של התוכנית."}
+        "hint": { "en": "She was the 'sweety from Kiryat Gat' who won the first ever season of the show.", "he": "היא הייתה 'המאמי מקריית גת' שזכתה בעונה הראשונה של התוכנית." }
     },
-{
+    {
         "id": "q-israeli_music-1395",
         "category": "israeli_music",
         "level": 2,
@@ -803,9 +803,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 1,
         "emoji": "🏠🌾",
-        "hint": {"en":"A song about bringing something from the fields.","he":"שיר על הבאת דברים מהשדה."}
+        "hint": { "en": "A song about bringing something from the fields.", "he": "שיר על הבאת דברים מהשדה." }
     },
-{
+    {
         "id": "q-israeli_music-1396",
         "category": "israeli_music",
         "level": 2,
@@ -829,9 +829,9 @@ export const culture_entQuestions = [
         },
         "correctAnswer": 0,
         "emoji": "🎻🎤",
-        "hint": {"en":"The lead singer of this indie-country band with the ginger hair.","he":"הסולנית של להקת האינדי-קאנטרי הזו עם השיער הג'ינג'י."}
+        "hint": { "en": "The lead singer of this indie-country band with the ginger hair.", "he": "הסולנית של להקת האינדי-קאנטרי הזו עם השיער הג'ינג'י." }
     },
-{
+    {
         "id": "q-israeli_music-1397",
         "hint": { "en": "A pioneer of Hebrew song and founder of the Israel Conservatory of Music.", "he": "חלוץ הזמר העברי ומייסד הקונסרבטוריון הישראלי למוזיקה." },
         "category": "israeli_music",
@@ -857,7 +857,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏅🎼"
     },
-{
+    {
         "id": "q-israeli_music-1398",
         "hint": { "en": "A legendary singer often called 'the voice of the nation'.", "he": "זמרת אגדית המכונה לעיתים 'קול המדינה'." },
         "category": "israeli_music",
@@ -883,7 +883,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸🧐"
     },
-{
+    {
         "id": "q-israeli_music-1399",
         "hint": { "en": "A famous show and band from the 1960s.", "he": "מופע ולהקה מפורסמת משנות ה-60." },
         "category": "israeli_music",
@@ -909,7 +909,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "📜✒️"
     },
-{
+    {
         "id": "q-israeli_music-1400",
         "hint": { "en": "He sang 'Aba Sheli' and 'HaYeled HaZe Hu Ani'.", "he": "הוא שר את 'אבא שלי' ו'הילד הזה הוא אני'." },
         "category": "israeli_music",
@@ -935,7 +935,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💿🍂"
     },
-{
+    {
         "id": "q-israeli_music-1401",
         "hint": { "en": "A rock band led by Berry Sakharof and Rami Fortis (sometimes).", "he": "להקת רוק שבראשה עמדו ברי סחרוף ורמי פורטיס." },
         "category": "israeli_music",
@@ -961,7 +961,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🧍‍♂️💥"
     },
-{
+    {
         "id": "q-israeli_music-1402",
         "hint": { "en": "Think about the Eurovision winner with 'Hallelujah'.", "he": "חשבו על זוכת האירוויזיון עם 'הללויה'." },
         "category": "israeli_music",
@@ -987,7 +987,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "⚓🎤"
     },
-{
+    {
         "id": "q-israeli_music-1403",
         "hint": { "en": "A very tall singer with a deep voice.", "he": "זמר גבוה מאוד עם קול עמוק." },
         "category": "israeli_music",
@@ -1013,7 +1013,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎻🎼"
     },
-{
+    {
         "id": "q-israeli_music-1404",
         "hint": { "en": "She won the Eurovision with 'Toy'.", "he": "היא זכתה באירוויזיון עם השיר 'Toy'." },
         "category": "israeli_music",
@@ -1039,7 +1039,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🌍📈"
     },
-{
+    {
         "id": "q-israeli_music-1405",
         "hint": { "en": "A band named after a Mediterranean city.", "he": "להקה הקרויה על שם עיר ים-תיכונית." },
         "category": "israeli_music",
@@ -1065,7 +1065,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🤘🎸"
     },
-{
+    {
         "id": "q-israeli_music-1406",
         "hint": { "en": "His first name means 'lion' in Hebrew.", "he": "שמו הפרטי פירושו 'אריה'." },
         "category": "israeli_music",
@@ -1091,7 +1091,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤🇮🇱"
     },
-{
+    {
         "id": "q-israeli_music-1407",
         "hint": { "en": "A famous duo consisting of a man and a woman.", "he": "צמד מפורסם המורכב מגבר ואישה." },
         "category": "israeli_music",
@@ -1117,7 +1117,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐚🎵"
     },
-{
+    {
         "id": "q-israeli_music-1408",
         "hint": { "en": "A rapper known for his patriotic songs.", "he": "ראפר הידוע בשיריו הפטריוטיים." },
         "category": "israeli_music",
@@ -1143,7 +1143,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸✨"
     },
-{
+    {
         "id": "q-israeli_music-1409",
         "hint": { "en": "The name of a band that includes Shlomo Artzi (early on).", "he": "שם של להקה שכללה את שלמה ארצי (בתחילת דרכו)." },
         "category": "israeli_music",
@@ -1169,7 +1169,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍎🍯🌅"
     },
-{
+    {
         "id": "q-israeli_music-1410",
         "hint": { "en": "A group of singers perform together.", "he": "קבוצת זמרים המופיעה יחד." },
         "category": "israeli_music",
@@ -1195,7 +1195,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎥🏆"
     },
-{
+    {
         "id": "q-israeli_music-1411",
         "hint": { "en": "She is known as the 'Queen of Hebrew Song'.", "he": "היא ידועה כ'מלכת הזמר העברי'." },
         "category": "israeli_music",
@@ -1221,7 +1221,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸📜"
     },
-{
+    {
         "id": "q-israeli_music-1412",
         "hint": { "en": "A band with a very 'sweet' name.", "he": "להקה עם שם 'מתוק' מאוד." },
         "category": "israeli_music",
@@ -1247,7 +1247,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸💃"
     },
-{
+    {
         "id": "q-israeli_music-1413",
         "hint": { "en": "He sang about 'The Small Prince'.", "he": "הוא שר על 'הנסיך הקטן'." },
         "category": "israeli_music",
@@ -1273,7 +1273,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌵🎶"
     },
-{
+    {
         "id": "q-israeli_music-1414",
         "category": "israeli_music",
         "level": 1,
@@ -1298,7 +1298,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏙️"
     },
-{
+    {
         "id": "q-israeli_music-1415",
         "category": "israeli_music",
         "level": 1,
@@ -1323,7 +1323,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🤝"
     },
-{
+    {
         "id": "q-israeli_music-1416",
         "category": "israeli_music",
         "level": 1,
@@ -1348,7 +1348,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-1417",
         "category": "israeli_music",
         "level": 1,
@@ -1373,7 +1373,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "✨"
     },
-{
+    {
         "id": "q-israeli_music-1418",
         "category": "israeli_music",
         "level": 1,
@@ -1398,7 +1398,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-1419",
         "category": "israeli_music",
         "level": 1,
@@ -1423,7 +1423,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🚚"
     },
-{
+    {
         "id": "q-israeli_music-1420",
         "category": "israeli_music",
         "level": 1,
@@ -1448,7 +1448,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🇬🇧"
     },
-{
+    {
         "id": "q-israeli_music-1421",
         "category": "israeli_music",
         "level": 1,
@@ -1473,7 +1473,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "⭐"
     },
-{
+    {
         "id": "q-israeli_music-1422",
         "category": "israeli_music",
         "level": 1,
@@ -1498,7 +1498,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🧹"
     },
-{
+    {
         "id": "q-israeli_music-1423",
         "category": "israeli_music",
         "level": 1,
@@ -1523,7 +1523,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🥁"
     },
-{
+    {
         "id": "q-israeli_music-1424",
         "category": "israeli_music",
         "level": 1,
@@ -1548,7 +1548,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐦"
     },
-{
+    {
         "id": "q-israeli_music-1425",
         "category": "israeli_music",
         "level": 2,
@@ -1573,7 +1573,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-1426",
         "category": "israeli_music",
         "level": 2,
@@ -1598,7 +1598,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🤘"
     },
-{
+    {
         "id": "q-israeli_music-1427",
         "category": "israeli_music",
         "level": 2,
@@ -1623,7 +1623,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🕯️"
     },
-{
+    {
         "id": "q-israeli_music-1428",
         "category": "israeli_music",
         "level": 2,
@@ -1648,7 +1648,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐰"
     },
-{
+    {
         "id": "q-israeli_music-1429",
         "category": "israeli_music",
         "level": 2,
@@ -1673,7 +1673,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🇮🇱"
     },
-{
+    {
         "id": "q-israeli_music-1430",
         "category": "israeli_music",
         "level": 2,
@@ -1698,7 +1698,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🖤"
     },
-{
+    {
         "id": "q-israeli_music-1431",
         "category": "israeli_music",
         "level": 2,
@@ -1723,7 +1723,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-1432",
         "category": "israeli_music",
         "level": 2,
@@ -1748,7 +1748,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🍭"
     },
-{
+    {
         "id": "q-israeli_music-1433",
         "category": "israeli_music",
         "level": 2,
@@ -1773,7 +1773,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💃"
     },
-{
+    {
         "id": "q-israeli_music-1434",
         "category": "israeli_music",
         "level": 2,
@@ -1798,7 +1798,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🌙"
     },
-{
+    {
         "id": "q-israeli_music-1435",
         "category": "israeli_music",
         "level": 2,
@@ -1823,7 +1823,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎹"
     },
-{
+    {
         "id": "q-israeli_music-1436",
         "category": "israeli_music",
         "level": 2,
@@ -1848,7 +1848,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐦"
     },
-{
+    {
         "id": "q-israeli_music-1437",
         "category": "israeli_music",
         "level": 2,
@@ -1873,7 +1873,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🛣️"
     },
-{
+    {
         "id": "q-israeli_music-1438",
         "category": "israeli_music",
         "level": 2,
@@ -1898,7 +1898,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎭"
     },
-{
+    {
         "id": "q-israeli_music-1439",
         "hint": { "en": "A song by Naomi Shemer.", "he": "שיר של נעמי שמר." },
         "category": "israeli_music",
@@ -1924,7 +1924,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "✒️"
     },
-{
+    {
         "id": "q-israeli_music-1440",
         "hint": { "en": "An iconic rock group from the 70s.", "he": "להקת רוק אייקונית משנות ה-70." },
         "category": "israeli_music",
@@ -1950,7 +1950,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "📻"
     },
-{
+    {
         "id": "q-israeli_music-1441",
         "hint": { "en": "Winner of an international music contest.", "he": "זוכה בתחרות מוזיקה בינלאומית." },
         "category": "israeli_music",
@@ -1976,7 +1976,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-1442",
         "hint": { "en": "A very successful pop star.", "he": "כוכב פופ מצליח מאוד." },
         "category": "israeli_music",
@@ -2002,7 +2002,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🍂"
     },
-{
+    {
         "id": "q-israeli_music-1443",
         "hint": { "en": "Related to the Kibbutz movement (often).", "he": "קשור לתנועה הקיבוצית (לרוב)." },
         "category": "israeli_music",
@@ -2028,7 +2028,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-1444",
         "hint": { "en": "A soul singer with a unique style.", "he": "זמר נשמה עם סגנון ייחודי." },
         "category": "israeli_music",
@@ -2054,7 +2054,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌍"
     },
-{
+    {
         "id": "q-israeli_music-1445",
         "hint": { "en": "A band of 'friends'.", "he": "להקה של 'חברים'." },
         "category": "israeli_music",
@@ -2080,7 +2080,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏎️"
     },
-{
+    {
         "id": "q-israeli_music-1446",
         "hint": { "en": "He has a very famous father in the music industry.", "he": "יש לו אבא מפורסם מאוד בתעשיית המוזיקה." },
         "category": "israeli_music",
@@ -2106,7 +2106,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐜"
     },
-{
+    {
         "id": "q-israeli_music-1447",
         "hint": { "en": "A group from the 80s.", "he": "להקה משנות ה-80." },
         "category": "israeli_music",
@@ -2132,7 +2132,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🥇"
     },
-{
+    {
         "id": "q-israeli_music-1448",
         "hint": { "en": "She sang for the troops.", "he": "היא שרה לחיילים." },
         "category": "israeli_music",
@@ -2158,7 +2158,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌎"
     },
-{
+    {
         "id": "q-israeli_music-1449",
         "hint": { "en": "A famous oriental music singer.", "he": "זמר מוזיקה מזרחית מפורסם." },
         "category": "israeli_music",
@@ -2184,7 +2184,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚶‍♂️"
     },
-{
+    {
         "id": "q-israeli_music-1450",
         "hint": { "en": "A winner of a TV reality show.", "he": "זוכה בתוכנית ריאליטי בטלוויזיה." },
         "category": "israeli_music",
@@ -2210,7 +2210,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "✨"
     },
-{
+    {
         "id": "q-movies-1557",
         "category": "movies",
         "level": 1,
@@ -2235,7 +2235,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🤠🧸"
     },
-{
+    {
         "id": "q-movies-1558",
         "category": "movies",
         "level": 1,
@@ -2260,7 +2260,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🦁🌅"
     },
-{
+    {
         "id": "q-movies-1559",
         "category": "movies",
         "level": 1,
@@ -2285,7 +2285,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐠🌊"
     },
-{
+    {
         "id": "q-movies-1560",
         "category": "movies",
         "level": 1,
@@ -2310,7 +2310,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "⛄❄️"
     },
-{
+    {
         "id": "q-movies-1561",
         "category": "movies",
         "level": 1,
@@ -2335,7 +2335,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🧜‍♀️🦀"
     },
-{
+    {
         "id": "q-movies-1562",
         "category": "movies",
         "level": 1,
@@ -2360,7 +2360,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🥿🕛"
     },
-{
+    {
         "id": "q-movies-1563",
         "category": "movies",
         "level": 1,
@@ -2385,7 +2385,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐼🥋"
     },
-{
+    {
         "id": "q-movies-1564",
         "category": "movies",
         "level": 1,
@@ -2410,7 +2410,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐭🎀"
     },
-{
+    {
         "id": "q-movies-1565",
         "category": "movies",
         "level": 1,
@@ -2435,7 +2435,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚗⚡"
     },
-{
+    {
         "id": "q-movies-1566",
         "category": "movies",
         "level": 1,
@@ -2460,7 +2460,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "👸👱‍♀️"
     },
-{
+    {
         "id": "q-movies-1567",
         "category": "movies",
         "level": 1,
@@ -2485,7 +2485,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🤖⚪"
     },
-{
+    {
         "id": "q-movies-1568",
         "category": "movies",
         "level": 1,
@@ -2510,7 +2510,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "❄️👑"
     },
-{
+    {
         "id": "q-movies-1569",
         "category": "movies",
         "level": 1,
@@ -2535,7 +2535,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🦌🌳"
     },
-{
+    {
         "id": "q-movies-1570",
         "category": "movies",
         "level": 1,
@@ -2560,7 +2560,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🥿👠"
     },
-{
+    {
         "id": "q-movies-1571",
         "category": "movies",
         "level": 1,
@@ -2585,7 +2585,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐦🎈"
     },
-{
+    {
         "id": "q-movies-1572",
         "category": "movies",
         "level": 1,
@@ -2610,7 +2610,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🍍🌊"
     },
-{
+    {
         "id": "q-movies-1573",
         "category": "movies",
         "level": 1,
@@ -2635,7 +2635,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏜️🐒"
     },
-{
+    {
         "id": "q-movies-1574",
         "category": "movies",
         "level": 1,
@@ -2660,7 +2660,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🧜‍♀️🦀"
     },
-{
+    {
         "id": "q-movies-1575",
         "category": "movies",
         "level": 1,
@@ -2685,7 +2685,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐕🧸"
     },
-{
+    {
         "id": "q-movies-1576",
         "category": "movies",
         "level": 1,
@@ -2710,7 +2710,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💪⚡"
     },
-{
+    {
         "id": "q-movies-1577",
         "category": "movies",
         "level": 2,
@@ -2735,7 +2735,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐀👨‍🍳"
     },
-{
+    {
         "id": "q-movies-1578",
         "category": "movies",
         "level": 2,
@@ -2760,7 +2760,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🧞‍♂️🪔"
     },
-{
+    {
         "id": "q-movies-1579",
         "category": "movies",
         "level": 2,
@@ -2785,7 +2785,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👁️🚪"
     },
-{
+    {
         "id": "q-movies-1580",
         "category": "movies",
         "level": 2,
@@ -2810,7 +2810,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎈🏠"
     },
-{
+    {
         "id": "q-movies-1581",
         "category": "movies",
         "level": 2,
@@ -2835,7 +2835,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🦁😈"
     },
-{
+    {
         "id": "q-movies-1582",
         "category": "movies",
         "level": 2,
@@ -2860,7 +2860,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐉🏮"
     },
-{
+    {
         "id": "q-movies-1583",
         "category": "movies",
         "level": 2,
@@ -2885,7 +2885,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚗🌵"
     },
-{
+    {
         "id": "q-movies-1584",
         "category": "movies",
         "level": 2,
@@ -2910,7 +2910,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🌊⛵"
     },
-{
+    {
         "id": "q-movies-1585",
         "category": "movies",
         "level": 2,
@@ -2935,7 +2935,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🧸🎞️"
     },
-{
+    {
         "id": "q-movies-1586",
         "category": "movies",
         "level": 2,
@@ -2960,7 +2960,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🦀🌊"
     },
-{
+    {
         "id": "q-movies-1587",
         "category": "movies",
         "level": 2,
@@ -2985,7 +2985,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🌹👸"
     },
-{
+    {
         "id": "q-movies-1588",
         "category": "movies",
         "level": 2,
@@ -3010,7 +3010,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🐗🍌"
     },
-{
+    {
         "id": "q-movies-1589",
         "category": "movies",
         "level": 2,
@@ -3035,7 +3035,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🦜💎"
     },
-{
+    {
         "id": "q-movies-1590",
         "category": "movies",
         "level": 2,
@@ -3060,7 +3060,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐻🌴"
     },
-{
+    {
         "id": "q-movies-1591",
         "category": "movies",
         "level": 2,
@@ -3085,7 +3085,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🦌❄️"
     },
-{
+    {
         "id": "q-movies-1592",
         "category": "movies",
         "level": 2,
@@ -3110,7 +3110,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💤👸"
     },
-{
+    {
         "id": "q-movies-1593",
         "category": "movies",
         "level": 2,
@@ -3135,7 +3135,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🐒🐒"
     },
-{
+    {
         "id": "q-movies-1594",
         "category": "movies",
         "level": 2,
@@ -3160,7 +3160,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🤖🌱"
     },
-{
+    {
         "id": "q-movies-1595",
         "category": "movies",
         "level": 2,
@@ -3185,7 +3185,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👧🚪"
     },
-{
+    {
         "id": "q-movies-1596",
         "category": "movies",
         "level": 2,
@@ -3210,7 +3210,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🌺👽"
     },
-{
+    {
         "id": "q-movies-1597",
         "category": "movies",
         "level": 2,
@@ -3235,7 +3235,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👸🐅"
     },
-{
+    {
         "id": "q-movies-1598",
         "category": "movies",
         "level": 2,
@@ -3260,7 +3260,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🐘🎪"
     },
-{
+    {
         "id": "q-movies-1599",
         "hint": { "en": "A movie about a giant ape.", "he": "סרט על קוף ענק." },
         "category": "movies",
@@ -3286,7 +3286,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💀🛹"
     },
-{
+    {
         "id": "q-movies-1600",
         "hint": { "en": "A film about a wizard boy.", "he": "סרט על ילד קוסם." },
         "category": "movies",
@@ -3312,7 +3312,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐟🐠"
     },
-{
+    {
         "id": "q-movies-1601",
         "hint": { "en": "A movie set in space with Jedis.", "he": "סרט שמתרחש בחלל עם ג'דיי." },
         "category": "movies",
@@ -3338,7 +3338,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🦊🐰"
     },
-{
+    {
         "id": "q-movies-1602",
         "hint": { "en": "A story about a lion cub.", "he": "סיפור על גור אריות." },
         "category": "movies",
@@ -3364,7 +3364,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸👞"
     },
-{
+    {
         "id": "q-movies-1603",
         "hint": { "en": "A superhero who dresses like a bat.", "he": "גיבור על שמתלבש כמו עטלף." },
         "category": "movies",
@@ -3390,7 +3390,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🧠🎭"
     },
-{
+    {
         "id": "q-movies-1604",
         "hint": { "en": "An archeologist with a whip.", "he": "ארכיאולוג עם שוט." },
         "category": "movies",
@@ -3416,7 +3416,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👦🎤"
     },
-{
+    {
         "id": "q-movies-1605",
         "hint": { "en": "A film about a sinking ship.", "he": "סרט על ספינה טובעת." },
         "category": "movies",
@@ -3442,7 +3442,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🧞‍♂️🎭"
     },
-{
+    {
         "id": "q-movies-1606",
         "hint": { "en": "A movie featuring a clownfish.", "he": "סרט שבו מופיע דג ליצן." },
         "category": "movies",
@@ -3468,7 +3468,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🦸‍♀️🧨"
     },
-{
+    {
         "id": "q-movies-1607",
         "hint": { "en": "A story about toys that come to life.", "he": "סיפור על צעצועים שקמים לתחייה." },
         "category": "movies",
@@ -3494,7 +3494,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏰👸"
     },
-{
+    {
         "id": "q-movies-1608",
         "hint": { "en": "A film about a group of superheroes from Marvel.", "he": "סרט על קבוצת גיבורי על ממארוול." },
         "category": "movies",
@@ -3520,7 +3520,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🍎👸"
     },
-{
+    {
         "id": "q-movies-1609",
         "hint": { "en": "An animated movie about sisters and snow.", "he": "סרט מצויר על אחיות ושלג." },
         "category": "movies",
@@ -3546,7 +3546,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏙️🌊"
     },
-{
+    {
         "id": "q-movies-1610",
         "hint": { "en": "A movie about a secret agent with the code 007.", "he": "סרט על סוכן חשאי עם הקוד 007." },
         "category": "movies",
@@ -3572,7 +3572,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🔥😈"
     },
-{
+    {
         "id": "q-movies-1611",
         "hint": { "en": "A movie featuring a young hero named Taran and a magic cauldron.", "he": "סרט הכולל גיבור צעיר בשם טרן וקדרה קסומה." },
         "category": "movies",
@@ -3598,7 +3598,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💻🎞️"
     },
-{
+    {
         "id": "q-movies-1612",
         "hint": { "en": "Her name starts with M and she has curly red hair.", "he": "שמה מתחיל ב-מ' ויש לה שיער אדום מתולתל." },
         "category": "movies",
@@ -3624,7 +3624,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏹🐻"
     },
-{
+    {
         "id": "q-movies-1613",
         "hint": { "en": "P. Sherman, 42 Wallaby Way, Sydney.", "he": "פ. שרמן, דרך וולבי 42, סידני." },
         "category": "movies",
@@ -3650,7 +3650,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🤿🌊"
     },
-{
+    {
         "id": "q-movies-1614",
         "hint": { "en": "His name rhymes with 'gusto'.", "he": "שמו מתחרז עם 'גוסטו'." },
         "category": "movies",
@@ -3676,7 +3676,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "👨‍🍳🕯️"
     },
-{
+    {
         "id": "q-movies-1615",
         "hint": { "en": "He just wants to stop being the bad guy.", "he": "הוא רק רוצה להפסיק להיות האיש הרע." },
         "category": "movies",
@@ -3702,7 +3702,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🕹️👾"
     },
-{
+    {
         "id": "q-movies-1616",
         "hint": { "en": "A famous actor whose first name is Tom.", "he": "שחקן מפורסם ששמו הפרטי הוא טום." },
         "category": "movies",
@@ -3728,7 +3728,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🤠🎙️"
     },
-{
+    {
         "id": "q-movies-1617",
         "hint": { "en": "A clumsy chicken who joins the voyage.", "he": "תרנגול מגושם שמצטרף למסע." },
         "category": "movies",
@@ -3754,7 +3754,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐔⛵"
     },
-{
+    {
         "id": "q-movies-1618",
         "hint": { "en": "Think of a very common English last name, often associated with a trade.", "he": "חשבו על שם משפחה אנגלי נפוץ מאוד." },
         "category": "movies",
@@ -3780,7 +3780,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏠🎈"
     },
-{
+    {
         "id": "q-art-1978",
         "category": "art",
         "level": 1,
@@ -3805,7 +3805,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🖼️"
     },
-{
+    {
         "id": "q-art-1979",
         "category": "art",
         "level": 1,
@@ -3830,7 +3830,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🖌️"
     },
-{
+    {
         "id": "q-art-1980",
         "category": "art",
         "level": 1,
@@ -3855,7 +3855,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎨"
     },
-{
+    {
         "id": "q-art-1981",
         "category": "art",
         "level": 1,
@@ -3880,7 +3880,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "✨🌉"
     },
-{
+    {
         "id": "q-art-1982",
         "category": "art",
         "level": 1,
@@ -3905,7 +3905,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "👤"
     },
-{
+    {
         "id": "q-art-1983",
         "category": "art",
         "level": 1,
@@ -3930,7 +3930,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🗿"
     },
-{
+    {
         "id": "q-art-1984",
         "category": "art",
         "level": 1,
@@ -3955,7 +3955,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🟠"
     },
-{
+    {
         "id": "q-art-1985",
         "category": "art",
         "level": 1,
@@ -3980,7 +3980,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🍎🏺"
     },
-{
+    {
         "id": "q-art-1986",
         "category": "art",
         "level": 1,
@@ -4005,7 +4005,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏛️"
     },
-{
+    {
         "id": "q-art-1987",
         "category": "art",
         "level": 1,
@@ -4030,7 +4030,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏞️"
     },
-{
+    {
         "id": "q-art-1988",
         "category": "art",
         "level": 1,
@@ -4055,7 +4055,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🟣"
     },
-{
+    {
         "id": "q-art-1989",
         "category": "art",
         "level": 1,
@@ -4080,7 +4080,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "✍️"
     },
-{
+    {
         "id": "q-art-1990",
         "category": "art",
         "level": 1,
@@ -4105,7 +4105,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎨"
     },
-{
+    {
         "id": "q-art-1991",
         "category": "art",
         "level": 1,
@@ -4130,7 +4130,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎨"
     },
-{
+    {
         "id": "q-art-1992",
         "category": "art",
         "level": 1,
@@ -4155,7 +4155,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🤳🖼️"
     },
-{
+    {
         "id": "q-art-1993",
         "category": "art",
         "level": 1,
@@ -4180,7 +4180,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👂"
     },
-{
+    {
         "id": "q-art-1994",
         "category": "art",
         "level": 1,
@@ -4205,7 +4205,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "📐"
     },
-{
+    {
         "id": "q-art-1995",
         "category": "art",
         "level": 1,
@@ -4230,7 +4230,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🧱🖼️"
     },
-{
+    {
         "id": "q-art-1996",
         "category": "art",
         "level": 1,
@@ -4255,7 +4255,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🟢"
     },
-{
+    {
         "id": "q-art-1997",
         "category": "art",
         "level": 1,
@@ -4280,7 +4280,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌻"
     },
-{
+    {
         "id": "q-art-1998",
         "category": "art",
         "level": 1,
@@ -4305,7 +4305,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🧩"
     },
-{
+    {
         "id": "q-art-1999",
         "category": "art",
         "level": 1,
@@ -4330,7 +4330,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🍷🥖"
     },
-{
+    {
         "id": "q-art-2000",
         "category": "art",
         "level": 1,
@@ -4355,7 +4355,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🦢📄"
     },
-{
+    {
         "id": "q-art-2001",
         "category": "art",
         "level": 1,
@@ -4380,7 +4380,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🤪✍️"
     },
-{
+    {
         "id": "q-art-2002",
         "category": "art",
         "level": 1,
@@ -4405,7 +4405,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎨"
     },
-{
+    {
         "id": "q-art-2003",
         "category": "art",
         "level": 1,
@@ -4430,7 +4430,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💦🎨"
     },
-{
+    {
         "id": "q-art-2004",
         "category": "art",
         "level": 1,
@@ -4455,7 +4455,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🖼️"
     },
-{
+    {
         "id": "q-art-2005",
         "category": "art",
         "level": 1,
@@ -4480,7 +4480,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🇫🇷"
     },
-{
+    {
         "id": "q-art-2006",
         "category": "art",
         "level": 1,
@@ -4505,7 +4505,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🗿"
     },
-{
+    {
         "id": "q-art-2007",
         "category": "art",
         "level": 1,
@@ -4530,7 +4530,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🛠️"
     },
-{
+    {
         "id": "q-art-2008",
         "category": "art",
         "level": 1,
@@ -4555,7 +4555,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🥤💥"
     },
-{
+    {
         "id": "q-art-2009",
         "category": "art",
         "level": 1,
@@ -4580,7 +4580,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🇲🇽👩"
     },
-{
+    {
         "id": "q-art-2010",
         "category": "art",
         "level": 1,
@@ -4605,7 +4605,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🔘"
     },
-{
+    {
         "id": "q-art-2011",
         "category": "art",
         "level": 1,
@@ -4630,7 +4630,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌅"
     },
-{
+    {
         "id": "q-art-2012",
         "category": "art",
         "level": 2,
@@ -4655,7 +4655,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "⛪"
     },
-{
+    {
         "id": "q-art-2013",
         "category": "art",
         "level": 2,
@@ -4680,7 +4680,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🫠🦌"
     },
-{
+    {
         "id": "q-art-2014",
         "category": "art",
         "level": 2,
@@ -4705,7 +4705,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🏰🇫🇷"
     },
-{
+    {
         "id": "q-art-2015",
         "category": "art",
         "level": 2,
@@ -4730,7 +4730,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌊🎨"
     },
-{
+    {
         "id": "q-art-2016",
         "category": "art",
         "level": 2,
@@ -4755,7 +4755,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🧱🖼️"
     },
-{
+    {
         "id": "q-art-2017",
         "category": "art",
         "level": 2,
@@ -4780,7 +4780,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌑🌕"
     },
-{
+    {
         "id": "q-art-2018",
         "category": "art",
         "level": 2,
@@ -4805,7 +4805,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🫠🕰️"
     },
-{
+    {
         "id": "q-art-2019",
         "category": "art",
         "level": 2,
@@ -4830,7 +4830,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🟦"
     },
-{
+    {
         "id": "q-art-2020",
         "category": "art",
         "level": 2,
@@ -4855,7 +4855,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "😱"
     },
-{
+    {
         "id": "q-art-2021",
         "category": "art",
         "level": 2,
@@ -4880,7 +4880,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🇪🇸🏛️"
     },
-{
+    {
         "id": "q-art-2022",
         "category": "art",
         "level": 2,
@@ -4905,7 +4905,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌓"
     },
-{
+    {
         "id": "q-art-2023",
         "category": "art",
         "level": 2,
@@ -4930,7 +4930,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🥫🥤"
     },
-{
+    {
         "id": "q-art-2024",
         "category": "art",
         "level": 2,
@@ -4955,7 +4955,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🗿👤"
     },
-{
+    {
         "id": "q-art-2025",
         "category": "art",
         "level": 2,
@@ -4980,7 +4980,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏛️🗽"
     },
-{
+    {
         "id": "q-art-2026",
         "category": "art",
         "level": 2,
@@ -5005,7 +5005,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🖼️✨"
     },
-{
+    {
         "id": "q-art-2027",
         "category": "art",
         "level": 2,
@@ -5030,7 +5030,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🍳🎨"
     },
-{
+    {
         "id": "q-art-2028",
         "category": "art",
         "level": 2,
@@ -5055,7 +5055,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💥🥤"
     },
-{
+    {
         "id": "q-art-2029",
         "category": "art",
         "level": 2,
@@ -5080,7 +5080,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🗿✝️"
     },
-{
+    {
         "id": "q-art-2030",
         "category": "art",
         "level": 2,
@@ -5105,7 +5105,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏛️🎨"
     },
-{
+    {
         "id": "q-art-2031",
         "category": "art",
         "level": 2,
@@ -5130,7 +5130,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎃🟡"
     },
-{
+    {
         "id": "q-art-2032",
         "category": "art",
         "level": 2,
@@ -5155,7 +5155,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🏺🍶"
     },
-{
+    {
         "id": "q-art-2033",
         "category": "art",
         "level": 2,
@@ -5180,7 +5180,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍏🤵"
     },
-{
+    {
         "id": "q-art-2034",
         "category": "art",
         "level": 2,
@@ -5205,7 +5205,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "📖🖊️"
     },
-{
+    {
         "id": "q-art-2035",
         "category": "art",
         "level": 2,
@@ -5230,7 +5230,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏞️👨‍🎨"
     },
-{
+    {
         "id": "q-art-2036",
         "category": "art",
         "level": 2,
@@ -5255,7 +5255,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐯🎨"
     },
-{
+    {
         "id": "q-art-2037",
         "category": "art",
         "level": 2,
@@ -5280,7 +5280,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🪷💧"
     },
-{
+    {
         "id": "q-art-2038",
         "category": "art",
         "level": 2,
@@ -5305,7 +5305,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💄🌈"
     },
-{
+    {
         "id": "q-art-2039",
         "category": "art",
         "level": 2,
@@ -5330,7 +5330,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "✂️📜"
     },
-{
+    {
         "id": "q-art-2040",
         "category": "art",
         "level": 2,
@@ -5355,7 +5355,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌀🏢"
     },
-{
+    {
         "id": "q-art-2041",
         "category": "art",
         "level": 2,
@@ -5380,7 +5380,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌈🖌️"
     },
-{
+    {
         "id": "q-art-2042",
         "category": "art",
         "level": 2,
@@ -5405,7 +5405,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🔱🏚️"
     },
-{
+    {
         "id": "q-art-2043",
         "category": "art",
         "level": 2,
@@ -5430,7 +5430,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💧🖌️"
     },
-{
+    {
         "id": "q-art-2044",
         "category": "art",
         "level": 2,
@@ -5455,7 +5455,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🤔🗿"
     },
-{
+    {
         "id": "q-art-2045",
         "hint": { "en": "A movement that challenged the definition of art itself.", "he": "תנועה שקראה תיגר על הגדרת האמנות עצמה." },
         "category": "art",
@@ -5481,7 +5481,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🚽🎨"
     },
-{
+    {
         "id": "q-art-2046",
         "hint": { "en": "A way of creating depth on a flat surface.", "he": "דרך ליצירת עומק על משטח שטוח." },
         "category": "art",
@@ -5507,7 +5507,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌫️🖼️"
     },
-{
+    {
         "id": "q-art-2047",
         "hint": { "en": "A Dutch master known for his handle of light and shadow.", "he": "אמן הולנדי הידוע בטיפולו באור וצל." },
         "category": "art",
@@ -5533,7 +5533,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍎🐍"
     },
-{
+    {
         "id": "q-art-2048",
         "hint": { "en": "A technique using tiny dots of color.", "he": "טכניקה המשתמשת בנקודות קטנות של צבע." },
         "category": "art",
@@ -5559,7 +5559,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "📐🏢"
     },
-{
+    {
         "id": "q-art-2049",
         "hint": { "en": "A rare purple dye.", "he": "צבע סגול נדיר." },
         "category": "art",
@@ -5585,7 +5585,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐚🟣"
     },
-{
+    {
         "id": "q-art-2050",
         "hint": { "en": "He made sculptures that move with the wind.", "he": "הוא יצר פסלים שזזים עם הרוח." },
         "category": "art",
@@ -5611,7 +5611,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "⚖️🌀"
     },
-{
+    {
         "id": "q-art-2051",
         "hint": { "en": "Think of the word prefix 'litho' meaning stone.", "he": "חשבו על המילה 'ליתו' שמשמעותה אבן." },
         "category": "art",
@@ -5637,7 +5637,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🖨️🪨"
     },
-{
+    {
         "id": "q-art-2052",
         "hint": { "en": "A Dutch artist who painted many portraits and group scenes.", "he": "אמן הולנדי שצייר פורטרטים רבים וסצנות קבוצתיות." },
         "category": "art",
@@ -5663,7 +5663,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🟦🎨"
     },
-{
+    {
         "id": "q-art-2053",
         "hint": { "en": "A famous museum in Florence, Italy.", "he": "מוזיאון מפורסם בפירנצה, איטליה." },
         "category": "art",
@@ -5689,7 +5689,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🇮🇹🏟️"
     },
-{
+    {
         "id": "q-art-2054",
         "hint": { "en": "Painting scenes of everyday life.", "he": "ציור סצנות מחיי היומיום." },
         "category": "art",
@@ -5715,7 +5715,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🕯️🎨"
     },
-{
+    {
         "id": "q-art-2055",
         "hint": { "en": "The mastermind behind the dome of the Florence Cathedral.", "he": "המוח מאחורי כיפת הקתדרלה של פירנצה." },
         "category": "art",
@@ -5741,7 +5741,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏰🇪🇸"
     },
-{
+    {
         "id": "q-art-2056",
         "hint": { "en": "A movement that looked towards the future.", "he": "תנועה שהביטה לעבר העתיד." },
         "category": "art",
@@ -5767,7 +5767,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏎️⚙️"
     },
-{
+    {
         "id": "q-art-2057",
         "hint": { "en": "A tool for supporting a canvas while painting.", "he": "כלי לתמיכה בקנבס בזמן הציור." },
         "category": "art",
@@ -5793,7 +5793,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "⬜🎨"
     },
-{
+    {
         "id": "q-art-2058",
         "hint": { "en": "The museum in Madrid that houses works by Velasquez and Goya.", "he": "המוזיאון במדריד המאכלס את יצירותיהם של ולסקז וגויה." },
         "category": "art",
@@ -5819,7 +5819,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏛️🇪🇸"
     },
-{
+    {
         "id": "q-art-2059",
         "hint": { "en": "A mathematical ratio found in nature and art.", "he": "יחס מתמטי שנמצא בטבע ובאמנות." },
         "category": "art",
@@ -5845,7 +5845,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "📐✨"
     },
-{
+    {
         "id": "q-art-2060",
         "hint": { "en": "He painted melting clocks.", "he": "הוא צייר שעונים נמסים." },
         "category": "art",
@@ -5871,7 +5871,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "✂️🔵"
     },
-{
+    {
         "id": "q-art-2061",
         "hint": { "en": "A high honor in the Japanese art world.", "he": "כבוד גדול בעולם האמנות היפני." },
         "category": "art",
@@ -5897,7 +5897,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏺✨"
     },
-{
+    {
         "id": "q-art-2062",
         "hint": { "en": "A Renaissance polymath who also designed flying machines.", "he": "איש רנסנס רב-תחומי שעיצב גם מכונות תעופה." },
         "category": "art",
@@ -5923,7 +5923,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "📖🏛️"
     },
-{
+    {
         "id": "q-art-2063",
         "hint": { "en": "The name of this technique starts with an S.", "he": "שם הטכניקה מתחיל ב-S." },
         "category": "art",
@@ -5949,7 +5949,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "✍️🪄"
     },
-{
+    {
         "id": "q-art-2064",
         "hint": { "en": "The decade of the 'Roaring Twenties'.", "he": "העשור של 'שנות העשרים הסוערות'." },
         "category": "art",
@@ -5975,7 +5975,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "📅"
     },
-{
+    {
         "id": "q-art-2065",
         "hint": { "en": "A style focused on color fields and large canvases.", "he": "סגנון המתמקד בשדות צבע ובקנבסים גדולים." },
         "category": "art",
@@ -6001,7 +6001,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🟧🟥"
     },
-{
+    {
         "id": "q-art-2066",
         "hint": { "en": "Using objects to represent ideas or qualities.", "he": "שימוש בחפצים כדי לייצג רעיונות או איכויות." },
         "category": "art",
@@ -6027,7 +6027,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌑🕯️"
     },
-{
+    {
         "id": "q-art-2067",
         "hint": { "en": "He was famous for his large murals in Mexico and the US.", "he": "הוא היה מפורסם בציורי הקיר הגדולים שלו במקסיקו ובארה״ב." },
         "category": "art",
@@ -6053,7 +6053,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🇲🇽🎨"
     },
-{
+    {
         "id": "q-art-2068",
         "hint": { "en": "A French artist known for 'The Thinker'.", "he": "אמן צרפתי הידוע בזכות 'האדם החושב'." },
         "category": "art",
@@ -6079,7 +6079,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "⛪🎨"
     },
-{
+    {
         "id": "q-art-2069",
         "hint": { "en": "Printing using a mesh or screen.", "he": "הדפסה באמצעות רשת." },
         "category": "art",
@@ -6105,7 +6105,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🟦☀️"
     },
-{
+    {
         "id": "q-art-2070",
         "hint": { "en": "The impressionist who focused on the effects of light.", "he": "האימפרסיוניסט שהתמקד בהשפעות האור." },
         "category": "art",
@@ -6131,7 +6131,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌑🛡️"
     },
-{
+    {
         "id": "q-art-2071",
         "hint": { "en": "A quick drawing that captures the main features.", "he": "ציור מהיר שתופס את המאפיינים העיקריים." },
         "category": "art",
@@ -6157,7 +6157,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🖼️👻"
     },
-{
+    {
         "id": "q-art-2072",
         "hint": { "en": "A Bulgarian-born artist who worked with Jeanne-Claude.", "he": "אמן יליד בולגריה שעבד עם ז'אן-קלוד." },
         "category": "art",
@@ -6183,7 +6183,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🧧🏢"
     },
-{
+    {
         "id": "q-art-2073",
         "hint": { "en": "The lightness or darkness of a color.", "he": "הבהירות או הכהות של צבע." },
         "category": "art",
@@ -6209,7 +6209,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "✍️🧶"
     },
-{
+    {
         "id": "q-art-2074",
         "hint": { "en": "An Italian movement from the early 20th century.", "he": "תנועה איטלקית מתחילת המאה ה-20." },
         "category": "art",
@@ -6235,7 +6235,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏎️🏙️"
     },
-{
+    {
         "id": "q-art-2075",
         "hint": { "en": "A Chinese-American architect.", "he": "אדריכל סיני-אמריקאי." },
         "category": "art",
@@ -6261,7 +6261,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "📐💎"
     },
-{
+    {
         "id": "q-art-2076",
         "hint": { "en": "A printing process where the image is incised into a surface.", "he": "תהליך הדפסה שבו התמונה נחרטת לתוך משטח." },
         "category": "art",
@@ -6287,7 +6287,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "✍️💿"
     },
-{
+    {
         "id": "q-art-2077",
         "hint": { "en": "A style that uses very simple shapes and forms.", "he": "סגנון המשתמש בצורות פשוטות מאוד." },
         "category": "art",
@@ -6313,7 +6313,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "⬛"
     },
-{
+    {
         "id": "q-art-2078",
         "hint": { "en": "A classic Disney story about a girl and seven small friends.", "he": "סיפור דיסני קלאסי על ילדה ושבעה חברים קטנים." },
         "category": "art",
@@ -6339,7 +6339,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍎📽️"
     },
-{
+    {
         "id": "q-sopranos-2501",
         "category": "sopranos",
         "level": 1,
@@ -6364,7 +6364,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👔🔫"
     },
-{
+    {
         "id": "q-sopranos-2502",
         "category": "sopranos",
         "level": 1,
@@ -6389,7 +6389,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💍🍝"
     },
-{
+    {
         "id": "q-sopranos-2503",
         "category": "sopranos",
         "level": 1,
@@ -6414,7 +6414,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏘️🌉"
     },
-{
+    {
         "id": "q-sopranos-2504",
         "category": "sopranos",
         "level": 1,
@@ -6439,7 +6439,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💃🎶"
     },
-{
+    {
         "id": "q-sopranos-2505",
         "category": "sopranos",
         "level": 1,
@@ -6464,7 +6464,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "♻️🚛"
     },
-{
+    {
         "id": "q-sopranos-2506",
         "category": "sopranos",
         "level": 1,
@@ -6489,7 +6489,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🛋️🗣️"
     },
-{
+    {
         "id": "q-sopranos-2507",
         "category": "sopranos",
         "level": 1,
@@ -6514,7 +6514,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🦆🌊"
     },
-{
+    {
         "id": "q-sopranos-2508",
         "category": "sopranos",
         "level": 1,
@@ -6539,7 +6539,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🥋☕"
     },
-{
+    {
         "id": "q-sopranos-2509",
         "category": "sopranos",
         "level": 1,
@@ -6564,7 +6564,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👦🎮"
     },
-{
+    {
         "id": "q-sopranos-2510",
         "category": "sopranos",
         "level": 1,
@@ -6589,7 +6589,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👩🏫"
     },
-{
+    {
         "id": "q-sopranos-2511",
         "category": "sopranos",
         "level": 1,
@@ -6614,7 +6614,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🥩🐷"
     },
-{
+    {
         "id": "q-sopranos-2512",
         "category": "sopranos",
         "level": 1,
@@ -6639,7 +6639,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚬🔫"
     },
-{
+    {
         "id": "q-sopranos-2513",
         "category": "sopranos",
         "level": 1,
@@ -6664,7 +6664,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👓👴"
     },
-{
+    {
         "id": "q-sopranos-2514",
         "category": "sopranos",
         "level": 1,
@@ -6689,7 +6689,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🧅🥯"
     },
-{
+    {
         "id": "q-sopranos-2515",
         "category": "sopranos",
         "level": 1,
@@ -6714,7 +6714,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "📺🎬"
     },
-{
+    {
         "id": "q-sopranos-2516",
         "category": "sopranos",
         "level": 2,
@@ -6739,7 +6739,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🥜🤘"
     },
-{
+    {
         "id": "q-sopranos-2517",
         "category": "sopranos",
         "level": 2,
@@ -6764,7 +6764,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🍝🎁"
     },
-{
+    {
         "id": "q-sopranos-2518",
         "category": "sopranos",
         "level": 2,
@@ -6789,7 +6789,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐟🛥️"
     },
-{
+    {
         "id": "q-sopranos-2519",
         "category": "sopranos",
         "level": 2,
@@ -6814,7 +6814,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👴🦳"
     },
-{
+    {
         "id": "q-sopranos-2520",
         "category": "sopranos",
         "level": 2,
@@ -6839,7 +6839,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍽️🌋"
     },
-{
+    {
         "id": "q-sopranos-2521",
         "category": "sopranos",
         "level": 2,
@@ -6864,7 +6864,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "📝🎥"
     },
-{
+    {
         "id": "q-sopranos-2522",
         "category": "sopranos",
         "level": 2,
@@ -6889,7 +6889,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎙️💃"
     },
-{
+    {
         "id": "q-sopranos-2523",
         "category": "sopranos",
         "level": 2,
@@ -6914,7 +6914,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🛥️⚓"
     },
-{
+    {
         "id": "q-sopranos-2524",
         "category": "sopranos",
         "level": 2,
@@ -6939,7 +6939,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🇮🇹🍝"
     },
-{
+    {
         "id": "q-sopranos-2525",
         "category": "sopranos",
         "level": 2,
@@ -6964,7 +6964,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👨‍👩‍👧‍👦🔫"
     },
-{
+    {
         "id": "q-sopranos-2526",
         "category": "sopranos",
         "level": 2,
@@ -6989,7 +6989,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏙️👔"
     },
-{
+    {
         "id": "q-sopranos-2527",
         "category": "sopranos",
         "level": 2,
@@ -7014,7 +7014,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "📝🎬"
     },
-{
+    {
         "id": "q-sopranos-2528",
         "category": "sopranos",
         "level": 2,
@@ -7039,7 +7039,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🤕🔫"
     },
-{
+    {
         "id": "q-sopranos-2529",
         "category": "sopranos",
         "level": 2,
@@ -7064,7 +7064,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐎💖"
     },
-{
+    {
         "id": "q-sopranos-2530",
         "category": "sopranos",
         "level": 2,
@@ -7089,7 +7089,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌋🇮🇹"
     },
-{
+    {
         "id": "q-sopranos-2531",
         "hint": { "en": "The name of a state in the US known for its forests.", "he": "שם של מדינה בארה״ב הידועה ביערותיה." },
         "category": "sopranos",
@@ -7115,7 +7115,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌲❄️"
     },
-{
+    {
         "id": "q-sopranos-2532",
         "hint": { "en": "He was a member of the Russian Mob.", "he": "הוא היה חבר במאפיה הרוסית." },
         "category": "sopranos",
@@ -7141,7 +7141,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🧥🏃‍♂️"
     },
-{
+    {
         "id": "q-sopranos-2533",
         "hint": { "en": "An actor who passed away in 2013.", "he": "שחקן שנפטר בשנת 2013." },
         "category": "sopranos",
@@ -7167,7 +7167,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎭🌟"
     },
-{
+    {
         "id": "q-sopranos-2534",
         "hint": { "en": "A classic hit by the band Journey.", "he": "להיט קלאסי של להקת Journey." },
         "category": "sopranos",
@@ -7193,7 +7193,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎶🥯"
     },
-{
+    {
         "id": "q-sopranos-2535",
         "hint": { "en": "A character who owned a fish market.", "he": "דמות שהיה לה שוק דגים." },
         "category": "sopranos",
@@ -7219,7 +7219,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🐀📞"
     },
-{
+    {
         "id": "q-sopranos-2536",
         "hint": { "en": "She took a long 'ride' with Silvio.", "he": "היא יצאה ל'נסיעה' ארוכה עם סילביו." },
         "category": "sopranos",
@@ -7245,7 +7245,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐆🌲"
     },
-{
+    {
         "id": "q-sopranos-2537",
         "hint": { "en": "A religious figure appearing in an unexpected place.", "he": "דמות דתית המופיעה במקום לא צפוי." },
         "category": "sopranos",
@@ -7271,7 +7271,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🪞🙏"
     },
-{
+    {
         "id": "q-sopranos-2538",
         "hint": { "en": "A horror movie with a very 'clever' name.", "he": "סרט אימה עם שם 'חכם' מאוד." },
         "category": "sopranos",
@@ -7297,7 +7297,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎬🪓"
     },
-{
+    {
         "id": "q-sopranos-2539",
         "hint": { "en": "Tony kills him after a fight about a horse.", "he": "טוני הורג אותו אחרי ריב על סוס." },
         "category": "sopranos",
@@ -7323,7 +7323,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🥘👊"
     },
-{
+    {
         "id": "q-sopranos-2540",
         "hint": { "en": "Her name starts with L.", "he": "שמה מתחיל ב-L." },
         "category": "sopranos",
@@ -7349,7 +7349,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👵😠"
     },
-{
+    {
         "id": "q-sopranos-2541",
         "hint": { "en": "Inside a bird feeder.", "he": "בתוך מתקן להאכיל ציפורים." },
         "category": "sopranos",
@@ -7375,7 +7375,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐦💰"
     },
-{
+    {
         "id": "q-sopranos-2542",
         "hint": { "en": "A blend of slasher and mob genres.", "he": "שילוב של ז'אנר האימה וז'אנר הפשע." },
         "category": "sopranos",
@@ -7401,7 +7401,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎞️🪓"
     },
-{
+    {
         "id": "q-sopranos-2543",
         "hint": { "en": "She went by the name 'Danielle' while undercover.", "he": "היא השתמשה בשם 'דניאל' בזמן שהייתה סמויה." },
         "category": "sopranos",
@@ -7427,7 +7427,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🕶️📞"
     },
-{
+    {
         "id": "q-sopranos-2544",
         "hint": { "en": "Her name starts with K.", "he": "שמה מתחיל ב-K." },
         "category": "sopranos",
@@ -7453,7 +7453,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌹💔"
     },
-{
+    {
         "id": "q-sopranos-2545",
         "hint": { "en": "A popular lunch meat also known as ham.", "he": "נקניק פופולרי הידוע גם כשינקן." },
         "category": "sopranos",
@@ -7479,7 +7479,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🥣🦆"
     },
-{
+    {
         "id": "q-sopranos-2546",
         "hint": { "en": "He is a close friend of Tony and very concerned about his hair.", "he": "הוא חבר קרוב של טוני ודואג מאוד לשיער שלו." },
         "category": "sopranos",
@@ -7505,7 +7505,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍕🌎"
     },
-{
+    {
         "id": "q-sopranos-2547",
         "hint": { "en": "The strip club where they often meet.", "he": "מועדון החשפנות שבו הם נפגשים לעיתים קרובות." },
         "category": "sopranos",
@@ -7531,7 +7531,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐟💭"
     },
-{
+    {
         "id": "q-sopranos-2548",
         "hint": { "en": "Tony finds him at his farm.", "he": "טוני מוצא אותו בחווה שלו." },
         "category": "sopranos",
@@ -7557,7 +7557,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🔫🚜"
     },
-{
+    {
         "id": "q-sopranos-2549",
         "hint": { "en": "Related to one of the five families.", "he": "קשור לאחת מחמש המשפחות." },
         "category": "sopranos",
@@ -7583,7 +7583,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏙️👔"
     },
-{
+    {
         "id": "q-sopranos-2550",
         "hint": { "en": "He loses his briefcase in this place.", "he": "הוא מאבד את מזוודתו במקום הזה." },
         "category": "sopranos",
@@ -7609,7 +7609,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🏜️🛌"
     },
-{
+    {
         "id": "q-sopranos-2551",
         "category": "sopranos",
         "level": 1,
@@ -7634,7 +7634,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸🕶️"
     },
-{
+    {
         "id": "q-sopranos-2552",
         "category": "sopranos",
         "level": 1,
@@ -7659,7 +7659,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🧼👐"
     },
-{
+    {
         "id": "q-sopranos-2553",
         "category": "sopranos",
         "level": 1,
@@ -7684,7 +7684,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👔🔫"
     },
-{
+    {
         "id": "q-sopranos-2554",
         "category": "sopranos",
         "level": 1,
@@ -7709,7 +7709,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐎🎶"
     },
-{
+    {
         "id": "q-sopranos-2555",
         "category": "sopranos",
         "level": 1,
@@ -7734,7 +7734,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "⚽🏃‍♀️"
     },
-{
+    {
         "id": "q-sopranos-2556",
         "category": "sopranos",
         "level": 1,
@@ -7759,7 +7759,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👱‍♀️📢"
     },
-{
+    {
         "id": "q-sopranos-2557",
         "category": "sopranos",
         "level": 1,
@@ -7784,7 +7784,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👱‍♀️💅"
     },
-{
+    {
         "id": "q-sopranos-2558",
         "category": "sopranos",
         "level": 1,
@@ -7809,7 +7809,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👓👴"
     },
-{
+    {
         "id": "q-sopranos-2559",
         "category": "sopranos",
         "level": 1,
@@ -7834,7 +7834,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👨‍⚕️🏘️"
     },
-{
+    {
         "id": "q-sopranos-2560",
         "category": "sopranos",
         "level": 1,
@@ -7859,7 +7859,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🥐🔫"
     },
-{
+    {
         "id": "q-sopranos-2561",
         "category": "sopranos",
         "level": 1,
@@ -7884,7 +7884,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👨‍🍳🍕"
     },
-{
+    {
         "id": "q-sopranos-2562",
         "category": "sopranos",
         "level": 1,
@@ -7909,7 +7909,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🧹🏠"
     },
-{
+    {
         "id": "q-sopranos-2563",
         "category": "sopranos",
         "level": 1,
@@ -7934,7 +7934,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚂🛤️"
     },
-{
+    {
         "id": "q-sopranos-2564",
         "category": "sopranos",
         "level": 1,
@@ -7959,7 +7959,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👨🔫"
     },
-{
+    {
         "id": "q-sopranos-2565",
         "category": "sopranos",
         "level": 1,
@@ -7984,7 +7984,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚘🚬"
     },
-{
+    {
         "id": "q-sopranos-2566",
         "category": "sopranos",
         "level": 2,
@@ -8009,7 +8009,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍽️👩"
     },
-{
+    {
         "id": "q-sopranos-2567",
         "category": "sopranos",
         "level": 2,
@@ -8034,7 +8034,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🥘🔪"
     },
-{
+    {
         "id": "q-sopranos-2568",
         "category": "sopranos",
         "level": 2,
@@ -8059,7 +8059,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💃🎙️"
     },
-{
+    {
         "id": "q-sopranos-2569",
         "category": "sopranos",
         "level": 2,
@@ -8084,7 +8084,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🦜💭"
     },
-{
+    {
         "id": "q-sopranos-2570",
         "category": "sopranos",
         "level": 2,
@@ -8109,7 +8109,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌆👔"
     },
-{
+    {
         "id": "q-sopranos-2571",
         "category": "sopranos",
         "level": 2,
@@ -8134,7 +8134,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍕🥤"
     },
-{
+    {
         "id": "q-sopranos-2572",
         "category": "sopranos",
         "level": 2,
@@ -8159,7 +8159,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👫🏽🎓"
     },
-{
+    {
         "id": "q-sopranos-2573",
         "category": "sopranos",
         "level": 2,
@@ -8184,7 +8184,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🚛🤕"
     },
-{
+    {
         "id": "q-sopranos-2574",
         "category": "sopranos",
         "level": 2,
@@ -8209,7 +8209,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🔫🏠"
     },
-{
+    {
         "id": "q-sopranos-2575",
         "category": "sopranos",
         "level": 2,
@@ -8234,7 +8234,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚂🎎"
     },
-{
+    {
         "id": "q-sopranos-2576",
         "category": "sopranos",
         "level": 2,
@@ -8259,7 +8259,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "⚓🛥️"
     },
-{
+    {
         "id": "q-sopranos-2577",
         "category": "sopranos",
         "level": 2,
@@ -8284,7 +8284,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎓🐀"
     },
-{
+    {
         "id": "q-sopranos-2578",
         "category": "sopranos",
         "level": 2,
@@ -8309,7 +8309,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌳👵"
     },
-{
+    {
         "id": "q-sopranos-2579",
         "category": "sopranos",
         "level": 2,
@@ -8334,7 +8334,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎼🎤"
     },
-{
+    {
         "id": "q-sopranos-2580",
         "category": "sopranos",
         "level": 2,
@@ -8359,7 +8359,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "📺⚔️"
     },
-{
+    {
         "id": "q-sopranos-2581",
         "hint": { "en": "A biker gang.", "he": "כנופיית אופנוענים." },
         "category": "sopranos",
@@ -8385,7 +8385,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐍🔫"
     },
-{
+    {
         "id": "q-sopranos-2582",
         "hint": { "en": "Tony didn't want anyone else to do it.", "he": "טוני לא רצה שאף אחד אחר יעשה את זה." },
         "category": "sopranos",
@@ -8411,7 +8411,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🔫🚜"
     },
-{
+    {
         "id": "q-sopranos-2583",
         "hint": { "en": "A number higher than five but less than ten.", "he": "מספר גבוה מחמש אך נמוך מעשר." },
         "category": "sopranos",
@@ -8437,7 +8437,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🔫🩸"
     },
-{
+    {
         "id": "q-sopranos-2584",
         "hint": { "en": "A reference to a location in Italy.", "he": "התייחסות למיקום באיטליה." },
         "category": "sopranos",
@@ -8463,7 +8463,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💭🛌"
     },
-{
+    {
         "id": "q-sopranos-2585",
         "hint": { "en": "A major bridge connecting New Jersey and New York.", "he": "גשר מרכזי המחבר בין ניו ג'רזי לניו יורק." },
         "category": "sopranos",
@@ -8489,7 +8489,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🌉🚘"
     },
-{
+    {
         "id": "q-sopranos-2586",
         "hint": { "en": "A box of a certain brand of candy.", "he": "קופסה של מותג מסוים של ממתקים." },
         "category": "sopranos",
@@ -8515,7 +8515,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🍬🏥"
     },
-{
+    {
         "id": "q-sopranos-2587",
         "hint": { "en": "Related to his facial expression.", "he": "קשור להבעת פניו." },
         "category": "sopranos",
@@ -8541,7 +8541,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "📝🤨"
     },
-{
+    {
         "id": "q-sopranos-2588",
         "hint": { "en": "A dispute over a racing horse named Pie-O-My.", "he": "מחלוקת על סוס מרוצים בשם פאי-או-מאי." },
         "category": "sopranos",
@@ -8567,7 +8567,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐎🥘"
     },
-{
+    {
         "id": "q-sopranos-2589",
         "hint": { "en": "A waste management business.", "he": "עסק לניהול פסולת." },
         "category": "sopranos",
@@ -8593,7 +8593,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💻📈"
     },
-{
+    {
         "id": "q-sopranos-2590",
         "hint": { "en": "He spent a long time in prison.", "he": "הוא בילה זמן רב בכלא." },
         "category": "sopranos",
@@ -8619,7 +8619,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🧀🏢"
     },
-{
+    {
         "id": "q-sopranos-2591",
         "hint": { "en": "The cat stares at a picture on the wall.", "he": "החתול בוהה בתמונה שעל הקיר." },
         "category": "sopranos",
@@ -8645,7 +8645,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐱👻"
     },
-{
+    {
         "id": "q-sopranos-2592",
         "hint": { "en": "He died in the middle of a very private moment.", "he": "הוא מת באמצע רגע פרטי מאוד." },
         "category": "sopranos",
@@ -8671,7 +8671,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚽💔"
     },
-{
+    {
         "id": "q-sopranos-2593",
         "hint": { "en": "A classic movie starring James Cagney.", "he": "סרט קלאסי בכיכובו של ג'יימס קאגני." },
         "category": "sopranos",
@@ -8697,7 +8697,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎬🛡️"
     },
-{
+    {
         "id": "q-sopranos-2594",
         "hint": { "en": "Tony's uncle and father figure.", "he": "דודו של טוני ודמות אב." },
         "category": "sopranos",
@@ -8723,7 +8723,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🤕🛌"
     },
-{
+    {
         "id": "q-sopranos-2595",
         "hint": { "en": "A disease that affects the lungs.", "he": "מחלה הפוגעת בריאות." },
         "category": "sopranos",
@@ -8749,7 +8749,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚬🏥"
     },
-{
+    {
         "id": "q-sopranos-2596",
         "hint": { "en": "The name of Tony's boat.", "he": "שם הסירה של טוני." },
         "category": "sopranos",
@@ -8775,7 +8775,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🛥️🐟"
     },
-{
+    {
         "id": "q-sopranos-2597",
         "hint": { "en": "The same as the name of a famous apostle.", "he": "זהה לשמו של שליח מפורסם." },
         "category": "sopranos",
@@ -8801,7 +8801,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎶💰"
     },
-{
+    {
         "id": "q-sopranos-2598",
         "hint": { "en": "He is often very surprised or frustrated.", "he": "הוא לרוב מופתע מאוד או מתוסכל." },
         "category": "sopranos",
@@ -8827,7 +8827,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🤷‍♂️🔫"
     },
-{
+    {
         "id": "q-sopranos-2599",
         "hint": { "en": "The show ends before we find out for sure.", "he": "הסדרה מסתיימת לפני שאנחנו מגלים בוודאות." },
         "category": "sopranos",
@@ -8853,7 +8853,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👴🏰"
     },
-{
+    {
         "id": "q-sopranos-2600",
         "hint": { "en": "The same one that plays at Holsten's.", "he": "אותו אחד שמתנגן אצל הולסטנס." },
         "category": "sopranos",
@@ -8879,7 +8879,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎶🎬"
     },
-{
+    {
         "id": "q-israeli_music-2861",
         "category": "israeli_music",
         "level": 2,
@@ -8904,7 +8904,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2862",
         "category": "israeli_music",
         "level": 2,
@@ -8929,7 +8929,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2863",
         "category": "israeli_music",
         "level": 2,
@@ -8954,7 +8954,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2864",
         "category": "israeli_music",
         "level": 2,
@@ -8979,7 +8979,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2865",
         "category": "israeli_music",
         "level": 2,
@@ -9004,7 +9004,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2866",
         "category": "israeli_music",
         "level": 2,
@@ -9029,7 +9029,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2867",
         "category": "israeli_music",
         "level": 2,
@@ -9054,7 +9054,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2868",
         "category": "israeli_music",
         "level": 2,
@@ -9079,7 +9079,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2869",
         "category": "israeli_music",
         "level": 2,
@@ -9104,7 +9104,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2870",
         "category": "israeli_music",
         "level": 2,
@@ -9129,7 +9129,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2871",
         "category": "israeli_music",
         "level": 2,
@@ -9154,7 +9154,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2872",
         "category": "israeli_music",
         "level": 2,
@@ -9179,7 +9179,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2873",
         "category": "israeli_music",
         "level": 2,
@@ -9204,7 +9204,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2874",
         "category": "israeli_music",
         "level": 2,
@@ -9229,7 +9229,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2875",
         "category": "israeli_music",
         "level": 2,
@@ -9254,7 +9254,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2876",
         "category": "israeli_music",
         "level": 2,
@@ -9279,7 +9279,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2877",
         "category": "israeli_music",
         "level": 2,
@@ -9304,7 +9304,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2878",
         "category": "israeli_music",
         "level": 2,
@@ -9329,7 +9329,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2879",
         "category": "israeli_music",
         "level": 2,
@@ -9354,7 +9354,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2880",
         "category": "israeli_music",
         "level": 2,
@@ -9379,7 +9379,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2881",
         "category": "israeli_music",
         "level": 2,
@@ -9404,7 +9404,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2882",
         "category": "israeli_music",
         "level": 2,
@@ -9429,7 +9429,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2883",
         "category": "israeli_music",
         "level": 2,
@@ -9454,7 +9454,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2884",
         "category": "israeli_music",
         "level": 2,
@@ -9479,7 +9479,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2885",
         "category": "israeli_music",
         "level": 2,
@@ -9504,7 +9504,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2886",
         "category": "israeli_music",
         "level": 2,
@@ -9529,7 +9529,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2887",
         "category": "israeli_music",
         "level": 2,
@@ -9554,7 +9554,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2888",
         "category": "israeli_music",
         "level": 2,
@@ -9579,7 +9579,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2889",
         "category": "israeli_music",
         "level": 2,
@@ -9604,7 +9604,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2890",
         "category": "israeli_music",
         "level": 2,
@@ -9629,7 +9629,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2891",
         "category": "israeli_music",
         "level": 2,
@@ -9654,7 +9654,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2892",
         "category": "israeli_music",
         "level": 2,
@@ -9679,7 +9679,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2893",
         "category": "israeli_music",
         "level": 2,
@@ -9704,7 +9704,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2894",
         "category": "israeli_music",
         "level": 2,
@@ -9729,7 +9729,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2895",
         "category": "israeli_music",
         "level": 2,
@@ -9754,7 +9754,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2896",
         "category": "israeli_music",
         "level": 2,
@@ -9779,7 +9779,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2897",
         "category": "israeli_music",
         "level": 2,
@@ -9804,7 +9804,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🍊"
     },
-{
+    {
         "id": "q-israeli_music-2898",
         "category": "israeli_music",
         "level": 2,
@@ -9829,7 +9829,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍊"
     },
-{
+    {
         "id": "q-israeli_music-2899",
         "category": "israeli_music",
         "level": 2,
@@ -9854,7 +9854,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🍊"
     },
-{
+    {
         "id": "q-israeli_music-2900",
         "category": "israeli_music",
         "level": 2,
@@ -9879,7 +9879,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🍊"
     },
-{
+    {
         "id": "q-israeli_music-2901",
         "category": "israeli_music",
         "level": 2,
@@ -9904,7 +9904,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-israeli_music-2902",
         "category": "israeli_music",
         "level": 2,
@@ -9929,7 +9929,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-israeli_music-2903",
         "category": "israeli_music",
         "level": 2,
@@ -9954,7 +9954,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-israeli_music-2904",
         "category": "israeli_music",
         "level": 2,
@@ -9979,7 +9979,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-israeli_music-2905",
         "category": "israeli_music",
         "level": 2,
@@ -10004,7 +10004,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2906",
         "category": "israeli_music",
         "level": 2,
@@ -10029,7 +10029,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2907",
         "category": "israeli_music",
         "level": 2,
@@ -10054,7 +10054,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2908",
         "category": "israeli_music",
         "level": 2,
@@ -10079,7 +10079,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2909",
         "category": "israeli_music",
         "level": 2,
@@ -10104,7 +10104,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2910",
         "category": "israeli_music",
         "level": 2,
@@ -10129,7 +10129,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🤘"
     },
-{
+    {
         "id": "q-israeli_music-2911",
         "category": "israeli_music",
         "level": 2,
@@ -10154,7 +10154,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🤘"
     },
-{
+    {
         "id": "q-israeli_music-2912",
         "category": "israeli_music",
         "level": 2,
@@ -10179,7 +10179,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🤘"
     },
-{
+    {
         "id": "q-israeli_music-2913",
         "category": "israeli_music",
         "level": 2,
@@ -10204,7 +10204,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🤘"
     },
-{
+    {
         "id": "q-israeli_music-2914",
         "category": "israeli_music",
         "level": 2,
@@ -10229,7 +10229,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🤘"
     },
-{
+    {
         "id": "q-israeli_music-2915",
         "category": "israeli_music",
         "level": 2,
@@ -10254,7 +10254,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2916",
         "category": "israeli_music",
         "level": 2,
@@ -10279,7 +10279,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2917",
         "category": "israeli_music",
         "level": 2,
@@ -10304,7 +10304,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2918",
         "category": "israeli_music",
         "level": 2,
@@ -10329,7 +10329,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2919",
         "category": "israeli_music",
         "level": 2,
@@ -10354,7 +10354,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2920",
         "category": "israeli_music",
         "level": 2,
@@ -10379,7 +10379,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🌕"
     },
-{
+    {
         "id": "q-israeli_music-2921",
         "hint": { "en": "A famous Israeli rock star.", "he": "כוכב רוק ישראלי מפורסם." },
         "category": "israeli_music",
@@ -10405,7 +10405,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2922",
         "hint": { "en": "He is known for his poetic and soulful music.", "he": "הוא ידוע במוזיקה הפואטית והנשמתית שלו." },
         "category": "israeli_music",
@@ -10431,7 +10431,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2923",
         "hint": { "en": "A popular female singer with a powerful voice.", "he": "זמרת פופולרית עם קול עוצמתי." },
         "category": "israeli_music",
@@ -10457,7 +10457,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2924",
         "hint": { "en": "A band known for their unique sound and hits.", "he": "להקת עבר ידועה עם להיטים רבים." },
         "category": "israeli_music",
@@ -10483,7 +10483,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🕊️"
     },
-{
+    {
         "id": "q-israeli_music-2925",
         "hint": { "en": "He sang about the 'Land of Israel'.", "he": "הוא שר על 'ארץ ישראל'." },
         "category": "israeli_music",
@@ -10509,7 +10509,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2926",
         "hint": { "en": "A soulful performer.", "he": "מבצע בעל נשמה." },
         "category": "israeli_music",
@@ -10535,7 +10535,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2927",
         "hint": { "en": "A duo of talented musicians.", "he": "צמד מוזיקאים מוכשרים." },
         "category": "israeli_music",
@@ -10561,7 +10561,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐝"
     },
-{
+    {
         "id": "q-israeli_music-2928",
         "hint": { "en": "A veteran of the Israeli music scene.", "he": "ותיק בסצנת המוזיקה הישראלית." },
         "category": "israeli_music",
@@ -10587,7 +10587,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2929",
         "hint": { "en": "Known for emotional ballads.", "he": "ידוע בבלדות מרגשות." },
         "category": "israeli_music",
@@ -10613,7 +10613,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2930",
         "hint": { "en": "A modern pop icon.", "he": "אייקון פופ מודרני." },
         "category": "israeli_music",
@@ -10639,7 +10639,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2931",
         "hint": { "en": "A band with a Mediterranean flair.", "he": "להקה עם ניחוח ים-תיכוני." },
         "category": "israeli_music",
@@ -10665,7 +10665,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2932",
         "hint": { "en": "He has a very distinct vocal style.", "he": "יש לו סגנון ווקאלי ייחודי מאוד." },
         "category": "israeli_music",
@@ -10691,7 +10691,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2933",
         "hint": { "en": "A female artist with many chart-topping hits.", "he": "זמרת עם להיטים רבים בראש המצעדים." },
         "category": "israeli_music",
@@ -10717,7 +10717,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2934",
         "hint": { "en": "A collaboration of diverse artists.", "he": "שיתוף פעולה של אמנים מגוונים." },
         "category": "israeli_music",
@@ -10743,7 +10743,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2935",
         "hint": { "en": "He is a master of the guitar.", "he": "הוא אמן בגיטרה." },
         "category": "israeli_music",
@@ -10769,7 +10769,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🍊"
     },
-{
+    {
         "id": "q-israeli_music-2936",
         "hint": { "en": "A band that defined a decade.", "he": "להקה שהגדירה עשור." },
         "category": "israeli_music",
@@ -10795,7 +10795,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-israeli_music-2937",
         "hint": { "en": "A singer-songwriter with deep lyrics.", "he": "זמר-יוצר עם מילים עמוקות." },
         "category": "israeli_music",
@@ -10821,7 +10821,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "❓"
     },
-{
+    {
         "id": "q-israeli_music-2938",
         "hint": { "en": "Think of a legendary artist who also happens to be a great actor.", "he": "חשבו על אמן אגדי שהוא גם שחקן מצוין." },
         "category": "israeli_music",
@@ -10847,7 +10847,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2939",
         "hint": { "en": "This artist is known for soulful ballads and a deep voice.", "he": "אמן זה מוכר בזכות בלדות מלאות נשמה וקול עמוק." },
         "category": "israeli_music",
@@ -10873,7 +10873,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2940",
         "hint": { "en": "A pioneer of Israeli rock 'n' roll.", "he": "מחלוצי הרוקנרול הישראלי." },
         "category": "israeli_music",
@@ -10899,7 +10899,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🤘"
     },
-{
+    {
         "id": "q-israeli_music-2941",
         "hint": { "en": "One of the members of the 'Kaveret' group.", "he": "אחד מחברי להקת 'כוורת'." },
         "category": "israeli_music",
@@ -10925,7 +10925,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🤘"
     },
-{
+    {
         "id": "q-israeli_music-2942",
         "hint": { "en": "He frequently collaborated with Shalom Hanoch.", "he": "הוא שיתף פעולה לעתים קרובות עם שלום חנוך." },
         "category": "israeli_music",
@@ -10951,7 +10951,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2943",
         "hint": { "en": "Look for the voice behind 'Sof HaOna'.", "he": "חפשו את הקול שמאחורי 'סוף העונה'." },
         "category": "israeli_music",
@@ -10977,7 +10977,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2944",
         "hint": { "en": "This artist's first name means 'lion'.", "he": "שמו הפרטי של האמן הזה פירושו 'אריה'." },
         "category": "israeli_music",
@@ -11003,7 +11003,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌕"
     },
-{
+    {
         "id": "q-israeli_music-2945",
         "hint": { "en": "A very influential singer-songwriter from the 70s.", "he": "זמר-יוצר משפיע מאוד משנות ה-70." },
         "category": "israeli_music",
@@ -11029,7 +11029,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🌕"
     },
-{
+    {
         "id": "q-israeli_music-2946",
         "hint": { "en": "Think of a song about 'Ushik' or 'Sufat Chul'.", "he": "חשבו על שיר על 'עושיק' או 'סופת חול'." },
         "category": "israeli_music",
@@ -11055,7 +11055,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2947",
         "hint": { "en": "This band is famous for their humor and complex harmonies.", "he": "הלהקה הזו מפורסמת בהומור ובהרמוניות המורכבות שלה." },
         "category": "israeli_music",
@@ -11081,7 +11081,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2948",
         "hint": { "en": "Look for hits like 'Rakevet Laila' or 'Az Lama Li Politika'.", "he": "חפשו להיטים כמו 'רכבת לילה' או 'אז למה לי פוליטיקה'." },
         "category": "israeli_music",
@@ -11107,7 +11107,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2949",
         "hint": { "en": "The artist often called 'The King of Israeli Rock'.", "he": "האמן המכונה לעתים 'מלך הרוק הישראלי'." },
         "category": "israeli_music",
@@ -11133,7 +11133,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2950",
         "hint": { "en": "The band that gave us 'Sof HaOna'.", "he": "הלהקה שנתנה לנו את 'סוף העונה'." },
         "category": "israeli_music",
@@ -11159,7 +11159,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2951",
         "hint": { "en": "A leading alt-rock band from the 90s.", "he": "להקת רוק אלטרנטיבי מובילה משנות ה-90." },
         "category": "israeli_music",
@@ -11185,7 +11185,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2952",
         "hint": { "en": "Think of 'Paca Paca' or 'Maka Afora'.", "he": "חשבו על 'פקה פקה' או 'מכה אפורה'." },
         "category": "israeli_music",
@@ -11211,7 +11211,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2953",
         "hint": { "en": "A heavy rock band known for high energy and deep lyrics.", "he": "להקת רוק כבד המוכרת באנרגיה גבוהה ומילים עמוקות." },
         "category": "israeli_music",
@@ -11237,7 +11237,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2954",
         "hint": { "en": "A versatile performer known for TV and music.", "he": "אמן רב-תחומי המוכר מהטלוויזיה ומהמוזיקה." },
         "category": "israeli_music",
@@ -11263,7 +11263,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2955",
         "hint": { "en": "Associated with 'Simanim Shel Ohavim' and 'Inyan Shel Zman'.", "he": "מזוהה עם 'סימנים של אוהבים' ו'עניין של זמן'." },
         "category": "israeli_music",
@@ -11289,7 +11289,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2956",
         "hint": { "en": "Think of a song about a 'San Remo' or a child's toy.", "he": "חשבו על שיר על 'סן רמו' או צעצוע של ילד." },
         "category": "israeli_music",
@@ -11315,7 +11315,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2957",
         "hint": { "en": "Often performs with an acoustic guitar.", "he": "מופיע לעתים קרובות עם גיטרה אקוסטית." },
         "category": "israeli_music",
@@ -11341,7 +11341,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2958",
         "hint": { "en": "A band associated with the Florentin neighborhood.", "he": "להקה המזוהה עם שכונת פלורנטין." },
         "category": "israeli_music",
@@ -11367,7 +11367,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2959",
         "hint": { "en": "Check for 'Holat Ahava' or similar titles.", "he": "חפשו את 'חולת אהבה' או שמות דומים." },
         "category": "israeli_music",
@@ -11393,7 +11393,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2960",
         "hint": { "en": "Songs from the album 'Sippurei Poogy'.", "he": "שירים מהאלבום 'סיפורי פוגי'." },
         "category": "israeli_music",
@@ -11419,7 +11419,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-2961",
         "category": "israeli_music",
         "level": 2,
@@ -11444,7 +11444,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2962",
         "category": "israeli_music",
         "level": 2,
@@ -11469,7 +11469,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2963",
         "category": "israeli_music",
         "level": 2,
@@ -11494,7 +11494,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2964",
         "category": "israeli_music",
         "level": 2,
@@ -11519,7 +11519,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2965",
         "category": "israeli_music",
         "level": 2,
@@ -11544,7 +11544,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-2966",
         "hint": { "en": "This album title mentions a type of monster or a big animal.", "he": "שם האלבום הזה מזכיר סוג של מפלצת או חיה גדולה." },
         "category": "israeli_music",
@@ -11570,7 +11570,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2967",
         "hint": { "en": "Look for an album from the mid-80s.", "he": "חפשו אלבום מאמצע שנות ה-80." },
         "category": "israeli_music",
@@ -11596,7 +11596,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2968",
         "hint": { "en": "The band's breakout album.", "he": "אלבום הפריצה של הלהקה." },
         "category": "israeli_music",
@@ -11622,7 +11622,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2969",
         "hint": { "en": "Their third studio album.", "he": "אלבום האולפן השלישי שלהם." },
         "category": "israeli_music",
@@ -11648,7 +11648,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2970",
         "hint": { "en": "Named after a famous movie character or machine.", "he": "נקרא על שם דמות קולנועית מפורסמת או מכונה." },
         "category": "israeli_music",
@@ -11674,7 +11674,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2971",
         "hint": { "en": "A title related to a 'big monster'.", "he": "שם הקשור ל'מפלצת גדולה'." },
         "category": "israeli_music",
@@ -11700,7 +11700,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2972",
         "hint": { "en": "Released in 1988.", "he": "שוחרר בשנת 1988." },
         "category": "israeli_music",
@@ -11726,7 +11726,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2973",
         "hint": { "en": "Think of 'Ladies and Gentlemen'.", "he": "חשבו על 'גבירותיי ורבותיי'." },
         "category": "israeli_music",
@@ -11752,7 +11752,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2974",
         "hint": { "en": "An album with 'Monster' in the name.", "he": "אלבום עם 'מפלצת' בשם." },
         "category": "israeli_music",
@@ -11778,7 +11778,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2975",
         "hint": { "en": "Their 1990 release.", "he": "האלבום שלהם משנת 1990." },
         "category": "israeli_music",
@@ -11804,7 +11804,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2976",
         "hint": { "en": "Look for 'Miflatzot HaTehila'.", "he": "חפשו את 'מפלצות התהילה'." },
         "category": "israeli_music",
@@ -11830,7 +11830,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2977",
         "hint": { "en": "Released in the mid-90s.", "he": "שוחרר באמצע שנות ה-90." },
         "category": "israeli_music",
@@ -11856,7 +11856,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2978",
         "hint": { "en": "The album 'Peak' in Hebrew.", "he": "האלבום 'שיא' בעברית." },
         "category": "israeli_music",
@@ -11882,7 +11882,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2979",
         "hint": { "en": "Something about 'Goodbye'.", "he": "משהו על 'להתראות'." },
         "category": "israeli_music",
@@ -11908,7 +11908,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2980",
         "hint": { "en": "Their last studio album before the first breakup.", "he": "אלבום האולפן האחרון שלהם לפני הפירוק הראשון." },
         "category": "israeli_music",
@@ -11934,7 +11934,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2981",
         "hint": { "en": "A 1995 release.", "he": "שוחרר בשנת 1995." },
         "category": "israeli_music",
@@ -11960,7 +11960,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2982",
         "hint": { "en": "A live performance recording.", "he": "הקלטה של הופעה חיה." },
         "category": "israeli_music",
@@ -11986,7 +11986,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2983",
         "hint": { "en": "Their unplugged session.", "he": "הסשן האנפלאגד שלהם." },
         "category": "israeli_music",
@@ -12012,7 +12012,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2984",
         "hint": { "en": "A return to rock in 2003.", "he": "חזרה לרוק בשנת 2003." },
         "category": "israeli_music",
@@ -12038,7 +12038,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2985",
         "hint": { "en": "Released during their second reunion.", "he": "שוחרר במהלך האיחוד השני שלהם." },
         "category": "israeli_music",
@@ -12064,7 +12064,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2986",
         "hint": { "en": "Their newest studio work.", "he": "עבודת האולפן החדשה ביותר שלהם." },
         "category": "israeli_music",
@@ -12090,7 +12090,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2987",
         "hint": { "en": "The 2000s era.", "he": "תקופת שנות ה-2000." },
         "category": "israeli_music",
@@ -12116,7 +12116,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2988",
         "hint": { "en": "Look for 'Romantika Atidit'.", "he": "חפשו את 'רומנטיקה עתידנית'." },
         "category": "israeli_music",
@@ -12142,7 +12142,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2989",
         "hint": { "en": "Albums released after 2010.", "he": "אלבומים ששוחררו אחרי 2010." },
         "category": "israeli_music",
@@ -12168,7 +12168,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2990",
         "hint": { "en": "The current decade.", "he": "העשור הנוכחי." },
         "category": "israeli_music",
@@ -12194,7 +12194,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-2991",
         "category": "israeli_music",
         "level": 2,
@@ -12219,7 +12219,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2992",
         "category": "israeli_music",
         "level": 2,
@@ -12244,7 +12244,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2993",
         "category": "israeli_music",
         "level": 2,
@@ -12269,7 +12269,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2994",
         "category": "israeli_music",
         "level": 2,
@@ -12294,7 +12294,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2995",
         "category": "israeli_music",
         "level": 2,
@@ -12319,7 +12319,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2996",
         "category": "israeli_music",
         "level": 2,
@@ -12344,7 +12344,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2997",
         "category": "israeli_music",
         "level": 2,
@@ -12369,7 +12369,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2998",
         "category": "israeli_music",
         "level": 2,
@@ -12394,7 +12394,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-2999",
         "category": "israeli_music",
         "level": 2,
@@ -12419,7 +12419,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3000",
         "category": "israeli_music",
         "level": 2,
@@ -12444,7 +12444,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3001",
         "category": "israeli_music",
         "level": 2,
@@ -12469,7 +12469,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3002",
         "category": "israeli_music",
         "level": 2,
@@ -12494,7 +12494,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3003",
         "category": "israeli_music",
         "level": 2,
@@ -12519,7 +12519,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3004",
         "category": "israeli_music",
         "level": 2,
@@ -12544,7 +12544,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3005",
         "category": "israeli_music",
         "level": 2,
@@ -12569,7 +12569,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3006",
         "category": "israeli_music",
         "level": 2,
@@ -12594,7 +12594,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3007",
         "category": "israeli_music",
         "level": 2,
@@ -12619,7 +12619,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3008",
         "category": "israeli_music",
         "level": 2,
@@ -12644,7 +12644,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3009",
         "category": "israeli_music",
         "level": 2,
@@ -12669,7 +12669,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3010",
         "category": "israeli_music",
         "level": 2,
@@ -12694,7 +12694,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🚂"
     },
-{
+    {
         "id": "q-israeli_music-3011",
         "category": "israeli_music",
         "level": 2,
@@ -12719,7 +12719,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3012",
         "category": "israeli_music",
         "level": 2,
@@ -12744,7 +12744,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3013",
         "category": "israeli_music",
         "level": 2,
@@ -12769,7 +12769,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3014",
         "category": "israeli_music",
         "level": 2,
@@ -12794,7 +12794,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3015",
         "category": "israeli_music",
         "level": 2,
@@ -12819,7 +12819,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3016",
         "category": "israeli_music",
         "level": 2,
@@ -12844,7 +12844,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3017",
         "category": "israeli_music",
         "level": 2,
@@ -12869,7 +12869,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3018",
         "category": "israeli_music",
         "level": 2,
@@ -12894,7 +12894,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3019",
         "category": "israeli_music",
         "level": 2,
@@ -12919,7 +12919,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3020",
         "category": "israeli_music",
         "level": 2,
@@ -12944,7 +12944,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3021",
         "category": "israeli_music",
         "level": 2,
@@ -12969,7 +12969,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3022",
         "category": "israeli_music",
         "level": 2,
@@ -12994,7 +12994,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3023",
         "category": "israeli_music",
         "level": 2,
@@ -13019,7 +13019,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3024",
         "category": "israeli_music",
         "level": 2,
@@ -13044,7 +13044,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3025",
         "category": "israeli_music",
         "level": 2,
@@ -13069,7 +13069,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎸"
     },
-{
+    {
         "id": "q-israeli_music-3026",
         "category": "israeli_music",
         "level": 2,
@@ -13094,7 +13094,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3027",
         "category": "israeli_music",
         "level": 2,
@@ -13119,7 +13119,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3028",
         "category": "israeli_music",
         "level": 2,
@@ -13144,7 +13144,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3029",
         "category": "israeli_music",
         "level": 2,
@@ -13169,7 +13169,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3030",
         "category": "israeli_music",
         "level": 2,
@@ -13194,7 +13194,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3031",
         "category": "israeli_music",
         "level": 2,
@@ -13219,7 +13219,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3032",
         "category": "israeli_music",
         "level": 2,
@@ -13244,7 +13244,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3033",
         "category": "israeli_music",
         "level": 2,
@@ -13269,7 +13269,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3034",
         "category": "israeli_music",
         "level": 2,
@@ -13294,7 +13294,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3035",
         "category": "israeli_music",
         "level": 2,
@@ -13319,7 +13319,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3036",
         "category": "israeli_music",
         "level": 2,
@@ -13344,7 +13344,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3037",
         "category": "israeli_music",
         "level": 2,
@@ -13369,7 +13369,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3038",
         "category": "israeli_music",
         "level": 2,
@@ -13394,7 +13394,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3039",
         "category": "israeli_music",
         "level": 2,
@@ -13419,7 +13419,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3040",
         "category": "israeli_music",
         "level": 2,
@@ -13444,7 +13444,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🎤"
     },
-{
+    {
         "id": "q-israeli_music-3041",
         "hint": { "en": "Associated with 'Waiting for Messi' or similar vibes.", "he": "מזוהה עם 'לחכות למשיח' או אווירה דומה." },
         "category": "israeli_music",
@@ -13470,7 +13470,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3042",
         "hint": { "en": "A giant of Israeli culture, often wore a simple T-shirt.", "he": "ענק של התרבות הישראלית, לבש לעתים קרובות חולצת טי פשוטה." },
         "category": "israeli_music",
@@ -13496,7 +13496,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3043",
         "hint": { "en": "A band that broke all records in the 70s.", "he": "להקה ששברה את כל השיאים בשנות ה-70." },
         "category": "israeli_music",
@@ -13522,7 +13522,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3044",
         "hint": { "en": "Look for the album 'Radio Hazak'.", "he": "חפשו את האלבום 'רדיו חזק'." },
         "category": "israeli_music",
@@ -13548,7 +13548,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3045",
         "hint": { "en": "A female artist with a powerful voice.", "he": "אמנית בעלת קול עוצמתי." },
         "category": "israeli_music",
@@ -13574,7 +13574,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3046",
         "hint": { "en": "The 'Queen of Israeli Pop' in the 80s.", "he": "מלכת הפופ הישראלי בשנות ה-80." },
         "category": "israeli_music",
@@ -13600,7 +13600,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3047",
         "hint": { "en": "Associated with Mediterranean rock.", "he": "מזוהה עם רוק ים-תיכוני." },
         "category": "israeli_music",
@@ -13626,7 +13626,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3048",
         "hint": { "en": "A rapper who changed the game in the 2000s.", "he": "ראפר ששינה את חוקי המשחק בשנות ה-2000." },
         "category": "israeli_music",
@@ -13652,7 +13652,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3049",
         "hint": { "en": "Think of 'Efer VeAvak'.", "he": "חשבו על 'אפר ואבק'." },
         "category": "israeli_music",
@@ -13678,7 +13678,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3050",
         "hint": { "en": "A soulful singer from the Black Hebrew community.", "he": "זמרת נשמה מקהילת העבריים מדימונה." },
         "category": "israeli_music",
@@ -13704,7 +13704,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3051",
         "hint": { "en": "The artist who sang 'Olat Chozeret'.", "he": "האמן ששר את 'עולה חוזרת'." },
         "category": "israeli_music",
@@ -13730,7 +13730,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3052",
         "hint": { "en": "A world-renowned electronic duo.", "he": "צמד אלקטרוני בעל שם עולמי." },
         "category": "israeli_music",
@@ -13756,7 +13756,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "💿"
     },
-{
+    {
         "id": "q-israeli_music-3053",
         "hint": { "en": "A classic about a 'Red Sweater'.", "he": "קלאסיקה על 'סוודר אדום'." },
         "category": "israeli_music",
@@ -13782,7 +13782,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎼"
     },
-{
+    {
         "id": "q-israeli_music-3054",
         "hint": { "en": "Think of 'Ani VeAta'.", "he": "חשבו על 'אני ואתה'." },
         "category": "israeli_music",
@@ -13808,7 +13808,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎼"
     },
-{
+    {
         "id": "q-israeli_music-3055",
         "hint": { "en": "She sang 'Hallelujah'.", "he": "היא שרה את 'הללויה'." },
         "category": "israeli_music",
@@ -13834,7 +13834,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎼"
     },
-{
+    {
         "id": "q-israeli_music-3056",
         "hint": { "en": "A song about 'Jerusalem of Gold'.", "he": "שיר על 'ירושלים של זהב'." },
         "category": "israeli_music",
@@ -13860,7 +13860,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎼"
     },
-{
+    {
         "id": "q-israeli_music-3057",
         "hint": { "en": "Think of the 'Balkan' sound.", "he": "חשבו על הצליל ה'בלקני'." },
         "category": "israeli_music",
@@ -13886,7 +13886,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎼"
     },
-{
+    {
         "id": "q-israeli_music-3058",
         "hint": { "en": "A very famous Eurovision winner.", "he": "זוכה אירוויזיון מפורסם מאוד." },
         "category": "israeli_music",
@@ -13912,7 +13912,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎼"
     },
-{
+    {
         "id": "q-israeli_music-3059",
         "hint": { "en": "The diva of the 80s and 90s.", "he": "הדיווה של שנות ה-80 וה-90." },
         "category": "israeli_music",
@@ -13938,7 +13938,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🎼"
     },
-{
+    {
         "id": "q-israeli_music-3060",
         "hint": { "en": "His first name means 'hope'.", "he": "שמו הפרטי פירושו 'תקווה'." },
         "category": "israeli_music",
@@ -13964,7 +13964,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🎼"
     },
-{
+    {
         "id": "q-movies-3261",
         "hint": { "en": "He's big, green, and lives in a swamp.", "he": "הוא גדול, ירוק וחי בביצה." },
         "category": "movies",
@@ -13990,7 +13990,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🧅"
     },
-{
+    {
         "id": "q-movies-3262",
         "category": "movies",
         "level": 2,
@@ -14015,7 +14015,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👑"
     },
-{
+    {
         "id": "q-movies-3263",
         "hint": { "en": "A loud animal that never stops talking.", "he": "חיה רעשנית שלעולם לא מפסיקה לדבר." },
         "category": "movies",
@@ -14041,7 +14041,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐴"
     },
-{
+    {
         "id": "q-movies-3264",
         "hint": { "en": "He has a pointy nose and wants to steal the moon.", "he": "יש לו אף מחודד והוא רוצה לגנוב את הירח (גרו)." },
         "category": "movies",
@@ -14067,7 +14067,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🦹‍♂️"
     },
-{
+    {
         "id": "q-movies-3265",
         "hint": { "en": "Think of the color of a banana.", "he": "חשבו על הצבע של בננה." },
         "category": "movies",
@@ -14093,7 +14093,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍌"
     },
-{
+    {
         "id": "q-movies-3266",
         "category": "movies",
         "level": 2,
@@ -14118,7 +14118,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👧🦄"
     },
-{
+    {
         "id": "q-movies-3267",
         "hint": { "en": "The King of the Jungle (in Central Park).", "he": "מלך הג'ונגל (בסנטרל פארק)." },
         "category": "movies",
@@ -14144,7 +14144,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🦁"
     },
-{
+    {
         "id": "q-movies-3268",
         "hint": { "en": "His name is Marty.", "he": "קוראים לו מרטי." },
         "category": "movies",
@@ -14170,7 +14170,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🦓"
     },
-{
+    {
         "id": "q-movies-3269",
         "category": "movies",
         "level": 2,
@@ -14195,7 +14195,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👑🐒"
     },
-{
+    {
         "id": "q-movies-3270",
         "category": "movies",
         "level": 2,
@@ -14220,7 +14220,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🦣"
     },
-{
+    {
         "id": "q-movies-3271",
         "hint": { "en": "An acorn is his only goal.", "he": "בלוט הוא המטרה היחידה שלו." },
         "category": "movies",
@@ -14246,7 +14246,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🐿️🌰"
     },
-{
+    {
         "id": "q-movies-3272",
         "hint": { "en": "His name is Sid.", "he": "קוראים לו סיד." },
         "category": "movies",
@@ -14272,7 +14272,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🦥"
     },
-{
+    {
         "id": "q-movies-3273",
         "hint": { "en": "It's a Night Fury.", "he": "זה 'זעם לילי' (Night Fury)." },
         "category": "movies",
@@ -14298,7 +14298,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐉"
     },
-{
+    {
         "id": "q-movies-3274",
         "category": "movies",
         "level": 2,
@@ -14323,7 +14323,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🌌"
     },
-{
+    {
         "id": "q-movies-3275",
         "category": "movies",
         "level": 2,
@@ -14348,7 +14348,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🦸‍♂️"
     },
-{
+    {
         "id": "q-movies-3276",
         "category": "movies",
         "level": 2,
@@ -14373,7 +14373,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "👗👓"
     },
-{
+    {
         "id": "q-movies-3277",
         "category": "movies",
         "level": 2,
@@ -14398,7 +14398,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "⚡🏃‍♂️"
     },
-{
+    {
         "id": "q-movies-3278",
         "category": "movies",
         "level": 2,
@@ -14423,7 +14423,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🦋"
     },
-{
+    {
         "id": "q-movies-3279",
         "hint": { "en": "His name starts with B.", "he": "השם שלו מתחיל ב-ב' (ברונו)." },
         "category": "movies",
@@ -14449,7 +14449,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🤫⌛"
     },
-{
+    {
         "id": "q-movies-3280",
         "hint": { "en": "It's a golden flower with a sun in the middle.", "he": "זהו פרח זהוב עם שמש במרכזו." },
         "category": "movies",
@@ -14475,7 +14475,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "☀️"
     },
-{
+    {
         "id": "q-movies-3281",
         "hint": { "en": "His name is Pascal.", "he": "קוראים לו פסקל." },
         "category": "movies",
@@ -14501,7 +14501,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🦎"
     },
-{
+    {
         "id": "q-movies-3282",
         "hint": { "en": "She's a small police officer with long ears.", "he": "היא שוטרת קטנה עם אוזניים ארוכות (ארנבת)." },
         "category": "movies",
@@ -14527,7 +14527,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐰👮‍♀️"
     },
-{
+    {
         "id": "q-movies-3283",
         "hint": { "en": "The slowest animal you can imagine.", "he": "החיה הכי איטית שאתם יכולים לדמיין (עצלנים)." },
         "category": "movies",
@@ -14553,7 +14553,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🦥🏢"
     },
-{
+    {
         "id": "q-movies-3284",
         "category": "movies",
         "level": 2,
@@ -14578,7 +14578,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐘🍬"
     },
-{
+    {
         "id": "q-movies-3285",
         "category": "movies",
         "level": 2,
@@ -14603,7 +14603,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "😨🟪"
     },
-{
+    {
         "id": "q-movies-3286",
         "category": "movies",
         "level": 2,
@@ -14628,7 +14628,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🐻🍓"
     },
-{
+    {
         "id": "q-movies-3287",
         "category": "movies",
         "level": 2,
@@ -14653,7 +14653,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "👧🧸"
     },
-{
+    {
         "id": "q-movies-3288",
         "hint": { "en": "A place with massive waterfalls in South America.", "he": "מקום עם מפלים אדירים בדרום אמריקה (מפלי גן עדן)." },
         "category": "movies",
@@ -14679,7 +14679,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎈🏠"
     },
-{
+    {
         "id": "q-movies-3289",
         "hint": { "en": "A very tall, colorful, and flightless bird.", "he": "ציפור גדולה מאוד, צבעונית ולא עפה." },
         "category": "movies",
@@ -14705,7 +14705,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🦤"
     },
-{
+    {
         "id": "q-movies-3290",
         "hint": { "en": "He cleans up all the garbage on Earth.", "he": "הוא מנקה את כל האשפה על כדור הארץ (רובוט)." },
         "category": "movies",
@@ -14731,7 +14731,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🤖🗑️"
     },
-{
+    {
         "id": "q-movies-3291",
         "category": "movies",
         "level": 2,
@@ -14756,7 +14756,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🌱"
     },
-{
+    {
         "id": "q-movies-3292",
         "category": "movies",
         "level": 2,
@@ -14781,7 +14781,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🍷👨‍🍳"
     },
-{
+    {
         "id": "q-movies-3293",
         "category": "movies",
         "level": 2,
@@ -14806,7 +14806,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "👧🚪"
     },
-{
+    {
         "id": "q-movies-3294",
         "category": "movies",
         "level": 2,
@@ -14831,7 +14831,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "😱⚡"
     },
-{
+    {
         "id": "q-movies-3295",
         "hint": { "en": "P. Sherman, 42 Wallaby Way, Sydney.", "he": "פי שרמן, וולאבי 42, סידני." },
         "category": "movies",
@@ -14857,7 +14857,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🥽🇦🇺"
     },
-{
+    {
         "id": "q-movies-3296",
         "category": "movies",
         "level": 2,
@@ -14882,7 +14882,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐢🌊"
     },
-{
+    {
         "id": "q-movies-3297",
         "hint": { "en": "His name is Miles.", "he": "קוראים לו מיילס (מיילס מוראלס)." },
         "category": "movies",
@@ -14908,7 +14908,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🕷️🕸️"
     },
-{
+    {
         "id": "q-movies-3298",
         "category": "movies",
         "level": 2,
@@ -14933,7 +14933,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🎨🎧"
     },
-{
+    {
         "id": "q-movies-3299",
         "category": "movies",
         "level": 2,
@@ -14958,7 +14958,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🔱🌺"
     },
-{
+    {
         "id": "q-movies-3300",
         "hint": { "en": "A giant fish hook.", "he": "קרס דייג ענק." },
         "category": "movies",
@@ -14984,7 +14984,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🪝"
     },
-{
+    {
         "id": "q-movies-3301",
         "hint": { "en": "A colorful celebration of ancestors.", "he": "חגיגה צבעונית של זיכרון אבות (יום המתים)." },
         "category": "movies",
@@ -15010,7 +15010,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "💀🌼"
     },
-{
+    {
         "id": "q-movies-3302",
         "hint": { "en": "The movie is named after her.", "he": "הסרט קרוי על שמה (קוקו)." },
         "category": "movies",
@@ -15036,7 +15036,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "👵🎸"
     },
-{
+    {
         "id": "q-movies-3303",
         "category": "movies",
         "level": 2,
@@ -15061,7 +15061,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🍜🐼"
     },
-{
+    {
         "id": "q-movies-3304",
         "category": "movies",
         "level": 2,
@@ -15086,7 +15086,7 @@ export const culture_entQuestions = [
         "correctAnswer": 0,
         "emoji": "🐾🥋"
     },
-{
+    {
         "id": "q-movies-3305",
         "hint": { "en": "Her name starts with S (Sarabi).", "he": "השם שלה מתחיל ב-ס' (סאראבי)." },
         "category": "movies",
@@ -15112,7 +15112,7 @@ export const culture_entQuestions = [
         "correctAnswer": 3,
         "emoji": "🦁"
     },
-{
+    {
         "id": "q-movies-3306",
         "hint": { "en": "No worries for the rest of your days.", "he": "אל דאגה לכל יתר הימים." },
         "category": "movies",
@@ -15138,7 +15138,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🐗🐒"
     },
-{
+    {
         "id": "q-movies-3307",
         "hint": { "en": "His name is Chip.", "he": "קוראים לו צ'יפ (צ'יפ)." },
         "category": "movies",
@@ -15164,7 +15164,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "☕🌹"
     },
-{
+    {
         "id": "q-movies-3308",
         "hint": { "en": "A place that is 'Far Far Away'.", "he": "מקום שהוא 'הרחק הרחק מכאן'." },
         "category": "movies",
@@ -15190,7 +15190,7 @@ export const culture_entQuestions = [
         "correctAnswer": 1,
         "emoji": "🏰"
     },
-{
+    {
         "id": "q-movies-3309",
         "hint": { "en": "A very ordinary guy named Emmet.", "he": "בחור רגיל מאוד בשם אמט." },
         "category": "movies",
@@ -15216,7 +15216,7 @@ export const culture_entQuestions = [
         "correctAnswer": 2,
         "emoji": "🧱👷"
     },
-{
+    {
         "id": "q-movies-3310",
         "category": "movies",
         "level": 2,
