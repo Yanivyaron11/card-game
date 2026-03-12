@@ -115,6 +115,22 @@ function App() {
     }
   }, [rewardToast]);
 
+  useEffect(() => {
+    // Daily login bonus logic
+    const lastLogin = localStorage.getItem('last_login_date');
+    const today = new Date().toDateString();
+
+    if (lastLogin !== today) {
+      // Award 20 coins for first login of the day
+      setTotalCoins(prev => prev + 20);
+      setRewardToast({
+        messageKey: 'daily_login_bonus',
+        amount: 20
+      });
+      localStorage.setItem('last_login_date', today);
+    }
+  }, []);
+
   const buyAvatar = (avatarId, price) => {
     if (totalCoins >= price && !unlockedAvatars.includes(avatarId)) {
       setTotalCoins(prev => prev - price);

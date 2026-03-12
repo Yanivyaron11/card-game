@@ -14,7 +14,8 @@ function EarningGuideModal({ isOpen, onClose, language }) {
         { icon: '🔥', text: t.rule_streak },
         { icon: '⏱️', text: t.rule_time_attack },
         { icon: '🏆', text: t.rule_survival_record },
-        { icon: '🎉', text: t.rule_survival_completion }
+        { icon: '🎉', text: t.rule_survival_completion },
+        { icon: '🎁', text: t.rule_daily_bonus }
     ];
 
     return (
