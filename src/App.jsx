@@ -145,44 +145,52 @@ function App() {
     const initialLives = config.gridSize === 9 ? 1 : config.gridSize === 16 ? 2 : 3;
     const initialCoins = config.gridSize === 9 ? 5 : config.gridSize === 16 ? 10 : 15;
 
+    // 1. Lives & Coins
     if (config.gameMode === '1v1') {
       setLives({ 1: initialLives, 2: initialLives });
+    } else if (config.gameMode === 'survival') {
+      setLives({ 1: 3 });
     } else {
       setLives({ 1: initialLives });
     }
-
-    // Add a small session grant to the total bank
     setTotalCoins(prev => prev + initialCoins);
 
-    if (config.gameMode === 'time_attack') {
-      const timeLimit = config.gridSize === 9 ? 75 : config.gridSize === 16 ? 120 : 180;
-      setTimeLeft(timeLimit);
-    } else {
-      setTimeLeft(0);
-    }
-
+    // 2. Mode Specific Setup (Timer, Deck, etc.)
     if (config.gameMode === 'survival') {
       const survivalDeck = generateSurvivalDeck(config.topics, config.survivalType);
       setDeck(survivalDeck);
       setCurrentSurvivalIndex(0);
       setSurvivalCorrect(0);
-      setLives({ 1: 3 });
       setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
       setHasNotifiedRecord(false);
       const HS_KEY = config.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
       setBestScore(parseInt(localStorage.getItem(HS_KEY) || '0', 10));
-      setTimeLeft(30);
+      setTimeLeft(30); // Note: QuizOverlay uses its own per-level timer if gameTimeLeft > 0
 
       if (survivalDeck.length > 0) {
         navigate(`/quiz/${survivalDeck[0].id}`);
       } else {
         setGameState('topic_selection');
         navigate('/play');
+        return;
       }
-    } else {
-      setTimeLeft(config.gameMode === 'time_attack' ? 60 : 30);
-      setGameState('topic_selection');
+    } else if (config.gameMode === 'time_attack') {
+      const timeLimit = config.gridSize === 9 ? 75 : config.gridSize === 16 ? 120 : 180;
+      setTimeLeft(timeLimit);
       setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
+      setGameState('topic_selection');
+      navigate('/play');
+    } else if (config.gameMode === 'solo') {
+      // Relaxed mode: no per-question timer
+      setTimeLeft(0);
+      setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
+      setGameState('topic_selection');
+      navigate('/play');
+    } else if (config.gameMode === '1v1') {
+      // 1v1 has per-question timer
+      setTimeLeft(30);
+      setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
+      setGameState('topic_selection');
       navigate('/play');
     }
 
