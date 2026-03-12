@@ -273,17 +273,21 @@ function App() {
       const prevBest = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
       if (newScore > prevBest && newScore > 0) {
         setBestScore(newScore); // Real-time update
+
+        let bonusToAward = 0;
         if (!recordNotifiedRef.current) {
           recordNotifiedRef.current = true;
-          setTotalCoins(prev => prev + 20); // Bonus for breaking record!
-          setRewardToast({
-            messageKey: 'record_bonus',
-            amount: 20,
-            isRecord: true,
-            score: newScore
-          });
+          setTotalCoins(prev => prev + 20); // Bonus only once per session
+          bonusToAward = 20;
           playSound('victory');
         }
+
+        setRewardToast({
+          messageKey: 'record_bonus',
+          amount: bonusToAward,
+          isRecord: true,
+          score: newScore
+        });
       }
 
       // Check for Course Completion
@@ -451,7 +455,10 @@ function App() {
         {rewardToast && (
           <div className={`level-up-toast reward-toast card-pop ${rewardToast.isRecord ? 'record-break' : ''}`}>
             {rewardToast.isRecord ? (
-              <span>{t.new_record_yay.replace('{n}', rewardToast.score)} 🏆 <br /> {t.record_bonus.replace('{n}', rewardToast.amount)}</span>
+              <span>
+                {t.new_record_yay.replace('{n}', rewardToast.score)} 🏆
+                {rewardToast.amount > 0 && <><br /> {t.record_bonus.replace('{n}', rewardToast.amount)}</>}
+              </span>
             ) : (
               t[rewardToast.messageKey].replace('{n}', rewardToast.amount)
             )}
