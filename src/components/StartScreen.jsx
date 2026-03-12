@@ -170,7 +170,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             alert(t.select_at_least_one);
             return;
         }
-        if (gameMode === 'solo' && !selectedAvatars[1]) {
+        if ((gameMode === 'solo' || gameMode === 'survival') && !selectedAvatars[1]) {
             alert(language === 'he' ? 'אנא בחר אווטאר' : 'Please select an avatar');
             return;
         }
@@ -285,7 +285,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                     </button>
                 </div>
 
-                {(gameMode === 'solo' || gameMode === '1v1' || gameMode === 'time_attack') && (
+                {(gameMode === 'solo' || gameMode === '1v1' || gameMode === 'time_attack' || gameMode === 'survival') && (
                     <div className="avatar-selection-container card-pop">
                         {gameMode === '1v1' ? (
                             <>
