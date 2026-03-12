@@ -10,7 +10,33 @@ import './App.css'
 
 import InstallPrompt from './components/InstallPrompt'
 
+
+function SurvivalResult({ correct, language }) {
+  const HS_KEY = 'survival_high_score';
+  const prev = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
+  const isNewRecord = correct > prev;
+  if (isNewRecord) localStorage.setItem(HS_KEY, correct);
+  const best = isNewRecord ? correct : prev;
+
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <p style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>
+        {language === 'he' ? `✅ ענית נכון על ${correct} שאלות` : `✅ ${correct} correct answers`}
+      </p>
+      {isNewRecord && correct > 0 && (
+        <p style={{ color: 'gold', fontSize: '1.2rem', fontWeight: 'bold' }}>
+          🏆 {language === 'he' ? 'שיא חדש!' : 'New Record!'}
+        </p>
+      )}
+      <p style={{ opacity: 0.75, fontSize: '0.95rem' }}>
+        {language === 'he' ? `שיא אישי: ${best}` : `Best: ${best}`}
+      </p>
+    </div>
+  );
+}
+
 function App() {
+
   const navigate = useNavigate();
   const location = useLocation();
   const [gameState, setGameState] = useState('start') // start, playing, game_over, victory
@@ -25,6 +51,7 @@ function App() {
   const [streaks, setStreaks] = useState({ 1: 0, 2: 0 });
   const [currentSurvivalIndex, setCurrentSurvivalIndex] = useState(0);
   const [levelUpToast, setLevelUpToast] = useState(null);
+  const [survivalCorrect, setSurvivalCorrect] = useState(0);
   const answeringRef = useRef(null);
 
   const t = translations[language];
@@ -80,6 +107,7 @@ function App() {
       const survivalDeck = generateSurvivalDeck();
       setDeck(survivalDeck);
       setCurrentSurvivalIndex(0);
+      setSurvivalCorrect(0);
       setLives({ 1: 3 });
       setCoins({ 1: 5 });
       setTimeLeft(30);
@@ -146,6 +174,10 @@ function App() {
   const handleAnswer = (cardId, isCorrect, silent = false) => {
     if (gameConfig?.gameMode === 'survival' && answeringRef.current === cardId) return;
     answeringRef.current = cardId;
+
+    if (gameConfig?.gameMode === 'survival' && isCorrect) {
+      setSurvivalCorrect(prev => prev + 1);
+    }
 
     if (!silent) {
       if (isCorrect) {
@@ -368,9 +400,7 @@ function App() {
                     {t.score}: {scores[1]} - {scores[2]}
                   </p>
                 ) : gameConfig?.gameMode === 'survival' ? (
-                  <p>
-                    {language === 'he' ? 'הגעת לשאלה' : 'You reached question'} {currentSurvivalIndex + 1}
-                  </p>
+                  <SurvivalResult correct={survivalCorrect} language={language} />
                 ) : (
                   <p>{t.ran_out_hearts}</p>
                 )}
@@ -397,9 +427,7 @@ function App() {
                     {t.score}: {scores[1]} - {scores[2]}
                   </p>
                 ) : gameConfig?.gameMode === 'survival' ? (
-                  <p>
-                    {language === 'he' ? 'השלמת את מסע ההישרדות!' : 'You completed the survival journey!'}
-                  </p>
+                  <SurvivalResult correct={survivalCorrect} language={language} />
                 ) : (
                   <p>{t.matched_all}</p>
                 )}
