@@ -117,6 +117,7 @@ export const translations = {
         rule_time_attack: "Time Attack: Remaining time = coins",
         rule_survival_record: "New Survival Record: +20 coins",
         rule_survival_completion: "Survival Completion: +50 coins",
+        time_attack_record: "Best Time",
     },
 
 
@@ -237,5 +238,6 @@ export const translations = {
         rule_time_attack: "ניצחון בנגד השעון: זמן נותר = מטבעות",
         rule_survival_record: "שיא חדש בהישרדות: בונוס 20 מטבעות",
         rule_survival_completion: "סיום מסלול הישרדות: בונוס 50 מטבעות",
+        time_attack_record: "שיא זמן",
     }
 };

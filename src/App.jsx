@@ -243,6 +243,13 @@ function App() {
         if (gameConfig.gameMode === 'time_attack' && timeLeft > 0) {
           setTotalCoins(prev => prev + timeLeft);
           setRewardToast({ messageKey: 'time_bonus', amount: timeLeft });
+
+          const gSize = gameConfig.gridSize;
+          const TA_KEY = `time_attack_best_${gSize}`;
+          const currentBest = parseInt(localStorage.getItem(TA_KEY) || '0', 10);
+          if (timeLeft > currentBest) {
+            localStorage.setItem(TA_KEY, timeLeft);
+          }
         }
         setGameState('victory');
         navigate('/result');
@@ -436,8 +443,8 @@ function App() {
   };
 
   const handleReturnToStart = () => {
-    if (gameConfig?.gameMode === 'survival') {
-      // For Survival, manual quit counts as "End of Run" so progress is saved
+    if (gameConfig?.gameMode === 'survival' || gameConfig?.gameMode === 'time_attack') {
+      // For these modes, manual quit counts as "End of Run" so progress is saved/shown
       setGameState('game_over');
       navigate('/result');
     } else {
@@ -560,6 +567,11 @@ function App() {
                   </p>
                 ) : gameConfig?.gameMode === 'survival' ? (
                   <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
+                ) : gameConfig?.gameMode === 'time_attack' ? (
+                  <div className="time-attack-result">
+                    <p>{t.time_attack_record}: {localStorage.getItem(`time_attack_best_${gameConfig.gridSize}`) || 0}{t.timer}</p>
+                    <p>{t.ran_out_hearts}</p>
+                  </div>
                 ) : (
                   <p>{t.ran_out_hearts}</p>
                 )}
