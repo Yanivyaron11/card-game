@@ -363,15 +363,17 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                 <span className="cost">🪙 2</span>
                             </button>
 
-                            <button
-                                className={`powerup-btn hint ${coins < 1 || card.isHintVisible || isAnswering ? 'locked' : ''}`}
-                                onClick={handleHint}
-                                disabled={coins < 1 || card.isHintVisible || isAnswering}
-                            >
-                                <span className="icon">💡</span>
-                                <span className="name">{t.powerup_hint}</span>
-                                <span className="cost">🪙 1</span>
-                            </button>
+                            {card.level >= 3 && (
+                                <button
+                                    className={`powerup-btn hint ${coins < 1 || card.isHintVisible || isAnswering ? 'locked' : ''}`}
+                                    onClick={handleHint}
+                                    disabled={coins < 1 || card.isHintVisible || isAnswering}
+                                >
+                                    <span className="icon">💡</span>
+                                    <span className="name">{t.powerup_hint}</span>
+                                    <span className="cost">🪙 1</span>
+                                </button>
+                            )}
 
                             <button
                                 className={`powerup-btn solve ${coins < 5 || isAnswering ? 'locked' : ''}`}
