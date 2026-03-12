@@ -566,67 +566,55 @@ function App() {
 
         <Route path="/result" element={
           <div className="end-screen glass-panel">
-            {(gameState === 'game_over' || gameState === 'quit') && (
-              <>
-                <h2>{gameState === 'quit' ? t.game_interrupted : t.game_over} {gameState === 'quit' ? '' : '😢'}</h2>
-                {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
-                  <div className="result-avatar">
-                    <span className="result-emoji">{gameConfig.avatars[1].emoji}</span>
-                    <p>{gameConfig.avatars[1].name[language]}</p>
-                  </div>
-                )}
-                {gameConfig?.gameMode === '1v1' ? (
-                  <p>
-                    {scores[1] > scores[2]
-                      ? t.player_wins.replace('{name}', gameConfig.avatars?.[1] ? `${gameConfig.avatars[1].emoji} ${gameConfig.avatars[1].name[language]}` : (language === 'he' ? 'שחקן 1' : 'Player 1'))
-                      : scores[2] > scores[1]
-                        ? t.player_wins.replace('{name}', gameConfig.avatars?.[2] ? `${gameConfig.avatars[2].emoji} ${gameConfig.avatars[2].name[language]}` : (language === 'he' ? 'שחקן 2' : 'Player 2'))
-                        : t.draw
-                    }
-                    <br />
-                    {t.score}: {scores[1]} - {scores[2]}
-                  </p>
-                ) : gameConfig?.gameMode === 'survival' ? (
-                  <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
-                ) : gameConfig?.gameMode === 'time_attack' ? (
-                  <div className="time-attack-result">
-                    {localStorage.getItem(`time_attack_best_${gameConfig.gridSize}`) !== '0' && (
-                      <p>{t.time_attack_record}: {localStorage.getItem(`time_attack_best_${gameConfig.gridSize}`) || 0}{t.timer}</p>
-                    )}
-                    <p>{gameState === 'quit' ? t.game_interrupted : t.ran_out_hearts}</p>
-                  </div>
-                ) : (
-                  <p>{gameState === 'quit' ? t.game_interrupted : t.ran_out_hearts}</p>
-                )}
-              </>
+            {/* Header section */}
+            {gameState === 'victory' ? (
+              <h2>{t.you_win} 🎉</h2>
+            ) : (
+              <h2>{gameState === 'quit' ? t.game_interrupted : t.game_over} {gameState === 'quit' ? '' : '😢'}</h2>
             )}
-            {gameState === 'victory' && (
-              <>
-                <h2>{t.you_win} 🎉</h2>
-                {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
-                  <div className="result-avatar">
-                    <span className="result-emoji">{gameConfig.avatars[1].emoji}</span>
-                    <p>{gameConfig.avatars[1].name[language]}</p>
-                  </div>
-                )}
-                {gameConfig?.gameMode === '1v1' ? (
-                  <p>
-                    {scores[1] > scores[2]
-                      ? t.player_wins.replace('{name}', gameConfig.avatars?.[1] ? `${gameConfig.avatars[1].emoji} ${gameConfig.avatars[1].name[language]}` : (language === 'he' ? 'שחקן 1' : 'Player 1'))
-                      : scores[2] > scores[1]
-                        ? t.player_wins.replace('{name}', gameConfig.avatars?.[2] ? `${gameConfig.avatars[2].emoji} ${gameConfig.avatars[2].name[language]}` : (language === 'he' ? 'שחקן 2' : 'Player 2'))
-                        : t.draw
-                    }
-                    <br />
-                    {t.score}: {scores[1]} - {scores[2]}
-                  </p>
-                ) : gameConfig?.gameMode === 'survival' ? (
-                  <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
-                ) : (
-                  <p>{t.matched_all}</p>
-                )}
-              </>
+
+            {/* Avatar display (only for single player modes) */}
+            {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
+              <div className="result-avatar">
+                <span className="result-emoji">{gameConfig.avatars[1].emoji}</span>
+                <p>{gameConfig.avatars[1].name[language]}</p>
+              </div>
             )}
+
+            {/* Mode-specific content */}
+            <div className="result-content">
+              {gameConfig?.gameMode === '1v1' ? (
+                <p>
+                  {scores[1] > scores[2]
+                    ? t.player_wins.replace('{name}', gameConfig.avatars?.[1] ? `${gameConfig.avatars[1].emoji} ${gameConfig.avatars[1].name[language]}` : (language === 'he' ? 'שחקן 1' : 'Player 1'))
+                    : scores[2] > scores[1]
+                      ? t.player_wins.replace('{name}', gameConfig.avatars?.[2] ? `${gameConfig.avatars[2].emoji} ${gameConfig.avatars[2].name[language]}` : (language === 'he' ? 'שחקן 2' : 'Player 2'))
+                      : t.draw
+                  }
+                  <br />
+                  {t.score}: {scores[1]} - {scores[2]}
+                </p>
+              ) : gameConfig?.gameMode === 'survival' ? (
+                <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
+              ) : gameConfig?.gameMode === 'time_attack' ? (
+                <div className="time-attack-result">
+                  {(() => {
+                    const best = localStorage.getItem(`time_attack_best_${gameConfig.gridSize}`);
+                    if (best && best !== '0') {
+                      return <p>{t.time_attack_record}: {best}{t.timer}</p>;
+                    }
+                    return null;
+                  })()}
+                  {gameState === 'game_over' && <p>{t.ran_out_hearts}</p>}
+                </div>
+              ) : (
+                // Solo mode
+                <>
+                  {gameState === 'game_over' && <p>{t.ran_out_hearts}</p>}
+                  {gameState === 'victory' && <p>{t.matched_all}</p>}
+                </>
+              )}
+            </div>
             {/* Coin Summary Section */}
             <div className="coin-summary-card glass-panel card-pop">
               <h3>{t.earned_this_game} 🪙</h3>
