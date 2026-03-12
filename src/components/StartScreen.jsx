@@ -166,7 +166,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     };
 
     const handleStart = () => {
-        if (selectedTopics.length === 0) {
+        if (gameMode !== 'survival' && selectedTopics.length === 0) {
             alert(t.select_at_least_one);
             return;
         }
@@ -186,7 +186,13 @@ function StartScreen({ onStart, language, onLanguageChange }) {
             2: selectedAvatars[2]
         };
 
-        onStart({ gridSize, topics: selectedTopics, difficulty, gameMode, avatars: configAvatars });
+        onStart({
+            gridSize,
+            topics: gameMode === 'survival' ? activePool : selectedTopics,
+            difficulty,
+            gameMode,
+            avatars: configAvatars
+        });
     };
 
     const handleAvatarSelect = (avatar, playerNum) => {
@@ -374,23 +380,25 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                 </div>
             )}
 
-            <div className="config-section">
-                <h3>{t.choose_topics}</h3>
-                <div className="topic-options">
-                    {visibleTopics.map(topic => (
-                        <div
-                            key={topic.id}
-                            className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`}
-                            onClick={() => handleTopicToggle(topic.id)}
-                        >
-                            <div className="topic-info-main">
-                                <span className="topic-name">{topic.name[language]}</span>
-                                <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
+            {gameMode !== 'survival' && (
+                <div className="config-section">
+                    <h3>{t.choose_topics}</h3>
+                    <div className="topic-options">
+                        {visibleTopics.map(topic => (
+                            <div
+                                key={topic.id}
+                                className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`}
+                                onClick={() => handleTopicToggle(topic.id)}
+                            >
+                                <div className="topic-info-main">
+                                    <span className="topic-name">{topic.name[language]}</span>
+                                    <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
+            )}
 
             <button className="start-btn" onClick={handleStart}>{t.start_game} 🚀</button>
         </div>
