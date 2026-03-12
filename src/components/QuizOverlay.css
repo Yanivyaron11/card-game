@@ -120,15 +120,14 @@
     gap: 3px;
 }
 
-.heart-icon.mini {
-    font-size: 1.5rem;
+.hearts.mini .heart-icon {
+    font-size: 1.1rem;
 }
 
-
-.coins-value.mini {
-    font-size: 1.6rem;
+.stat-item.coins-display {
+    font-size: 1.1rem;
     font-weight: 800;
-    color: #b45309;
+    color: #f59e0b;
 }
 
 .avatar-display-mini {
