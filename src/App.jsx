@@ -408,7 +408,7 @@ function App() {
                     {t.score}: {scores[1]} - {scores[2]}
                   </p>
                 ) : gameConfig?.gameMode === 'survival' ? (
-                  <SurvivalResult correct={survivalCorrect} language={language} />
+                  <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
                 ) : (
                   <p>{t.ran_out_hearts}</p>
                 )}
@@ -435,7 +435,7 @@ function App() {
                     {t.score}: {scores[1]} - {scores[2]}
                   </p>
                 ) : gameConfig?.gameMode === 'survival' ? (
-                  <SurvivalResult correct={survivalCorrect} language={language} />
+                  <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
                 ) : (
                   <p>{t.matched_all}</p>
                 )}
