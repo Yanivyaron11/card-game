@@ -47,6 +47,7 @@ Provide insights into the child's learning journey:
 ### 5. Enhanced 1v1 Mode
 Make the competitive mode more dynamic:
 - **[ ] Attack Power-ups**: Introduce power-ups that affect the opponent (e.g., "Fog" to hide their options for 3 seconds, or a "Time Squeeze" to shorten their timer).
+- **[ ] Online Multiplayer (Cross-device)**: ⚔️ Play against friends from different devices using WebSockets (Socket.io) or a real-time database (Firebase).
 
 ### 6. Polish & Immersion
 - **[ ] Richer Soundscapes**: Add more distinct sound effects for streaks, coin collection, and leveling up.
