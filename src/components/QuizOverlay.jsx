@@ -4,7 +4,7 @@ import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './QuizOverlay.css';
 
-function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, gameMode, timeLeft: gameTimeLeft, avatar, streak }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, timeLeft: gameTimeLeft, avatar, streak }) {
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
@@ -21,11 +21,9 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
     const initialTime = getInitialTime();
     const [timeLeft, setTimeLeft] = useState(initialTime);
-    const [eliminatedOptions, setEliminatedOptions] = useState([]);
     const [isReady, setIsReady] = useState(false);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [isAnswering, setIsAnswering] = useState(false);
-    const [isHintVisible, setIsHintVisible] = useState(false);
     const timerRef = useRef(null);
     const timeoutRef = useRef(onTimeout);
     const mountTimeRef = useRef(Date.now());
@@ -42,10 +40,8 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     useEffect(() => {
         if (!card) return; // Prevent crashes if card is not found yet
         setTimeLeft(initialTime);
-        setEliminatedOptions([]);
         setSelectedAnswer(-1);
         setIsAnswering(false);
-        setIsHintVisible(false);
         setIsReady(false);
         const readyTimeout = setTimeout(() => setIsReady(true), 500);
         return () => clearTimeout(readyTimeout);
@@ -82,7 +78,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     if (!card) return null;
 
     const handleOptionClick = (index) => {
-        if (!isReady || isAnswering || eliminatedOptions.includes(index)) return;
+        if (!isReady || isAnswering || (card.eliminatedIndices || []).includes(index)) return;
         if (timerRef.current) clearInterval(timerRef.current);
 
         setIsAnswering(true);
@@ -93,7 +89,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             const currentStreak = streak + 1;
             let randomMsg = "";
 
-            if (gameMode === '1v1' && card.failedAttempts >= 1 && !card.isTainted && card.options.length > 2) {
+            if (gameMode === '1v1' && card.failedAttempts >= 1 && !card.isTainted && card.options.he.length > 2) {
                 randomMsg = t.rebound_feedback;
             } else {
                 const feedbackPool = currentStreak >= 3 ? t.streak_feedbacks : t.correct_feedbacks;
@@ -113,13 +109,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     };
 
     const handle5050 = () => {
-        if (!isReady || isAnswering || coins < 2 || eliminatedOptions.length > 0) {
+        if (!isReady || isAnswering || coins < 2 || (card.eliminatedIndices?.length > 0)) {
             playSound('error');
             return;
         }
         playSound('buy');
         onCoinsChange(coins - 2);
-        if (onPowerUpUsed) onPowerUpUsed(card.id);
 
         const wrongIndices = card.options.en
             .map((_, index) => index)
@@ -127,7 +122,8 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
         const shuffledWrong = wrongIndices.sort(() => Math.random() - 0.5);
         const toEliminate = shuffledWrong.slice(0, 2);
-        setEliminatedOptions(toEliminate);
+
+        if (onPowerUpUsed) onPowerUpUsed(card.id, '5050', toEliminate);
     };
 
     const handleSolve = () => {
@@ -137,8 +133,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         }
         playSound('buy');
         onCoinsChange(coins - 5);
-        if (onPowerUpUsed) onPowerUpUsed(card.id);
+        if (onPowerUpUsed) onPowerUpUsed(card.id, 'solve');
         if (timerRef.current) clearInterval(timerRef.current);
+
+        if (avatar) {
+            feedbackMessageRef.current = t.solved_powerup;
+        }
 
         setIsAnswering(true);
         setSelectedAnswer(card.correctAnswer);
@@ -150,14 +150,13 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     };
 
     const handleHint = () => {
-        if (!isReady || isAnswering || coins < 3 || isHintVisible) {
+        if (!isReady || isAnswering || coins < 1 || card.isHintVisible) {
             playSound('error');
             return;
         }
         playSound('buy');
-        onCoinsChange(coins - 3);
-        if (onPowerUpUsed) onPowerUpUsed(card.id);
-        setIsHintVisible(true);
+        onCoinsChange(coins - 1);
+        if (onPowerUpUsed) onPowerUpUsed(card.id, 'hint');
     };
 
     const optionLabelsEn = ['A', 'B', 'C', 'D'];
@@ -245,7 +244,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 <div className="quiz-content">
                     <div className="quiz-emoji">{card.emoji}</div>
 
-                    {isHintVisible && card.hint && (
+                    {card.isHintVisible && card.hint && (
                         <div className="hint-box">
                             <span className="hint-icon">💡</span>
                             <p className="hint-text">{card.hint[language] || card.hint}</p>
@@ -279,24 +278,20 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
                 <div className="quiz-options">
                     {card.options[language].map((opt, i) => {
-                        let className = "quiz-option-btn";
-                        if (eliminatedOptions.includes(i)) className += " eliminated";
-                        if (isAnswering) {
-                            const showCorrect = (gameMode !== '1v1') || (selectedAnswer === card.correctAnswer) || (card.failedAttempts >= 1);
-                            if (i === card.correctAnswer && showCorrect) className += " correct";
-                            else if (i === selectedAnswer && i !== card.correctAnswer) className += " wrong";
-                        }
+                        const showCorrect = (gameMode !== '1v1') || (selectedAnswer === card.correctAnswer) || (card.failedAttempts >= 1);
+                        const className = [
+                            "quiz-option-btn",
+                            isAnswering && Number(i) === Number(card.correctAnswer) && showCorrect ? 'correct' : '',
+                            isAnswering && Number(i) === Number(selectedAnswer) && Number(i) !== Number(card.correctAnswer) ? 'wrong' : '',
+                            (card.eliminatedIndices || []).includes(i) ? 'eliminated' : ''
+                        ].filter(Boolean).join(' ');
 
                         return (
                             <button
                                 key={i}
                                 className={className}
-                                onPointerDown={(e) => {
-                                    e.preventDefault();
-                                    handleOptionClick(i);
-                                }}
-                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-                                disabled={!isReady || isAnswering || eliminatedOptions.includes(i)}
+                                onClick={() => handleOptionClick(i)}
+                                disabled={isAnswering || (card.eliminatedIndices || []).includes(i)}
                             >
                                 <span className="option-label">{labels[i]}</span>
                                 <span className="option-text">{opt}</span>
@@ -310,42 +305,33 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <h4>{t.powerups}</h4>
                         <div className="powerup-buttons">
                             <button
-                                className={`powerup-btn ${coins < 2 || eliminatedOptions.length > 0 || isAnswering ? 'locked' : ''}`}
-                                onPointerDown={(e) => {
-                                    e.preventDefault();
-                                    handle5050();
-                                }}
-                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-                                disabled={!isReady || isAnswering}
+                                className={`powerup-btn half ${coins < 2 || (card.eliminatedIndices?.length > 0) || isAnswering ? 'locked' : ''}`}
+                                onClick={handle5050}
+                                disabled={coins < 2 || (card.eliminatedIndices?.length > 0) || isAnswering}
                             >
+                                <span className="icon">🌓</span>
+                                <span className="name">{t.powerup_5050}</span>
                                 <span className="cost">🪙 2</span>
-                                <div>½ 50/50</div>
                             </button>
-                            {card.hint && (
-                                <button
-                                    className={`powerup-btn ${coins < 3 || isHintVisible || isAnswering ? 'locked' : ''}`}
-                                    onPointerDown={(e) => {
-                                        e.preventDefault();
-                                        handleHint();
-                                    }}
-                                    onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-                                    disabled={!isReady || isAnswering}
-                                >
-                                    <span className="cost">🪙 3</span>
-                                    <div>🔍 {t.hint}</div>
-                                </button>
-                            )}
+
                             <button
-                                className={`powerup-btn ${coins < 5 || isAnswering ? 'locked' : ''}`}
-                                onPointerDown={(e) => {
-                                    e.preventDefault();
-                                    handleSolve();
-                                }}
-                                onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-                                disabled={!isReady || isAnswering}
+                                className={`powerup-btn hint ${coins < 1 || card.isHintVisible || isAnswering ? 'locked' : ''}`}
+                                onClick={handleHint}
+                                disabled={coins < 1 || card.isHintVisible || isAnswering}
                             >
+                                <span className="icon">💡</span>
+                                <span className="name">{t.powerup_hint}</span>
+                                <span className="cost">🪙 1</span>
+                            </button>
+
+                            <button
+                                className={`powerup-btn solve ${coins < 5 || isAnswering ? 'locked' : ''}`}
+                                onClick={handleSolve}
+                                disabled={coins < 5 || isAnswering}
+                            >
+                                <span className="icon">⚡</span>
+                                <span className="name">{t.powerup_solve}</span>
                                 <span className="cost">🪙 5</span>
-                                <div>💡 {t.solve}</div>
                             </button>
                         </div>
                     </div>

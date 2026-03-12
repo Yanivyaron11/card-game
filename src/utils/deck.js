@@ -225,8 +225,32 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     // Map topic details to each question
     const deckWithTopicInfo = deckSelection.map(q => {
         const topic = findTopicRecursively(topics, q.category);
+
+        // Shuffle options if they exist and are correctly structured
+        let shuffledOptions = q.options ? { ...q.options } : null;
+        let newCorrectAnswer = q.correctAnswer;
+
+        if (q.options?.en && q.options.en.length > 0) {
+            const originalEn = q.options.en;
+            const originalHe = q.options.he || originalEn;
+
+            // Create a mapped array of indices to shuffle consistently across languages
+            const indices = Array.from({ length: originalEn.length }, (_, i) => i);
+            const shuffledIndices = shuffle(indices);
+
+            shuffledOptions = {
+                en: shuffledIndices.map(i => originalEn[i]),
+                he: shuffledIndices.map(i => originalHe[i] || originalEn[i])
+            };
+
+            // Calculate new correct answer index by finding where the old index moved
+            newCorrectAnswer = shuffledIndices.indexOf(Number(q.correctAnswer));
+        }
+
         return {
             ...q,
+            options: shuffledOptions,
+            correctAnswer: newCorrectAnswer,
             topicName: topic ? topic.name : { en: q.category, he: q.category },
             topicIcon: topic ? topic.icon : '',
             topicColor: topic ? topic.color : null
@@ -236,18 +260,19 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     // Shuffle the final deck
     const finalDeck = shuffle(deckWithTopicInfo);
 
-    // Add unique IDs to each card for React keys while preserving the original questionId
+    // Add unique IDs and initial card state
     return finalDeck.map((card, index) => {
-        const questionId = card.id; // The unique ID from questions.js (e.g. q-math-1)
         return {
             ...card,
-            questionId,
+            questionId: card.id,
             id: `card-${index}-${Math.random().toString(36).substr(2, 9)}`,
             isFlipped: false,
             isSolved: false,
             failedAttempts: 0,
             isTainted: false,
-            lastFailedPlayer: null
+            lastFailedPlayer: null,
+            eliminatedIndices: [],
+            isHintVisible: false
         };
     });
 };

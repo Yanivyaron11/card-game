@@ -209,10 +209,16 @@ function App() {
     }
   };
 
-  const handlePowerUpUsed = (cardId) => {
-    setDeck(prev => prev.map(card =>
-      card.id === cardId ? { ...card, isTainted: true } : card
-    ));
+  const handlePowerUpUsed = (cardId, type, data) => {
+    setDeck(prev => prev.map(card => {
+      if (card.id === cardId) {
+        const updates = { ...card, isTainted: true };
+        if (type === '5050') updates.eliminatedIndices = data;
+        if (type === 'hint') updates.isHintVisible = true;
+        return updates;
+      }
+      return card;
+    }));
   };
 
   const handleReturnToStart = () => {

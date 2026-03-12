@@ -405,11 +405,13 @@
 }
 
 .quiz-option-btn.eliminated {
-    opacity: 0.3;
+    opacity: 0.15;
     pointer-events: none;
     text-decoration: line-through;
-    filter: grayscale(1);
+    filter: grayscale(1) blur(1px);
     background: #f1f5f9;
+    border-color: #cbd5e0;
+    transform: scale(0.95);
 }
 
 .quiz-footer {
@@ -450,6 +452,32 @@
     font-size: 1.1rem;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.powerup-btn:hover:not(:disabled):not(.locked) {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.powerup-btn:active:not(:disabled):not(.locked) {
+    transform: scale(0.95);
+}
+
+.powerup-btn.half {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+.powerup-btn.hint {
+    background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+}
+
+.powerup-btn.solve {
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
 }
 
 .powerup-btn .cost {
