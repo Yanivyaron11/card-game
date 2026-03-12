@@ -2,7 +2,7 @@
 
 ### 1. Global Coin Economy (Completed) ✅
 - [x] Persistent Family Bank (local storage).
-- [x] Earning coins for correct answers.
+- [x] Tiered Earning: L1=1, L2=2, L3=3 coins.
 - [x] Bonus coins for streaks.
 
 ### 2. Achievements & Medals System

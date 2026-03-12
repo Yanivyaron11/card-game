@@ -242,8 +242,10 @@ function App() {
     }
 
     if (isCorrect) {
-      // Award 1 coin for every correct answer
-      setTotalCoins(prev => prev + 1);
+      // Award coins based on question level (1, 2, or 3)
+      const answeredCard = deck.find(c => c.id === cardId);
+      const coinAward = answeredCard?.level || 1;
+      setTotalCoins(prev => prev + coinAward);
 
       setDeck(prev => {
         const newDeck = prev.map(card =>
