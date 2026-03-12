@@ -24,5 +24,18 @@ export const features = [
         },
         icon: '🦁',
         newUntil: '2026-04-11'
+    },
+    {
+        id: 'survival_mode',
+        title: {
+            en: 'Survival Mode is LIVE!',
+            he: 'מצב הישרדות הגיע!'
+        },
+        description: {
+            en: 'Test your knowledge with endless questions that get faster and harder. How long can you survive?',
+            he: 'בחנו את הידע שלכם עם שאלות אינסופיות שהופכות למהירות וקשות יותר. כמה זמן תשרדו?'
+        },
+        icon: '🔥',
+        newUntil: '2026-04-12'
     }
 ];
