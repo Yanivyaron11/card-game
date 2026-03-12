@@ -14,6 +14,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
     const getInitialTime = () => {
         if (!card) return 30;
+        if (gameMode === 'survival') {
+            if (card.level === 3) return 10;
+            if (card.level === 2) return 12;
+            return 15;
+        }
         if (card.level === 3) return 10;
         if (card.level === 2) return 20;
         return 30;
@@ -48,7 +53,9 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     }, [card?.id]);
 
     useEffect(() => {
-        if (!card || gameMode === 'time_attack' || gameMode === 'solo') return;
+        if (!card || gameMode === 'time_attack') return;
+        // Solo mode doesn't have a per-question timer, but survival does
+        if (gameMode === 'solo' && !gameTimeLeft) return;
         timerRef.current = setInterval(() => {
             setTimeLeft(prev => {
                 if (prev <= 1) {
@@ -189,6 +196,13 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     <div className="stat-item coins-display">
                         <div key={coins} className="coins-value mini coin-pop">🪙 {coins}</div>
                     </div>
+                    {gameMode === 'survival' && (
+                        <div className="stat-item survival-progress">
+                            <div className="progress-badge">
+                                🏆 {t.current_question || (language === 'he' ? 'שאלה' : 'Question')} {deck.indexOf(card) + 1}
+                            </div>
+                        </div>
+                    )}
                     {avatar && (
                         <div className="stat-item avatar-display-mini">
                             <span className="quiz-avatar-emoji">{avatar.emoji}</span>
@@ -216,7 +230,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </span>
                         <span className="topic-name">{card.topicName[language]}</span>
                     </div>
-                    {(gameMode !== 'time_attack' && gameMode !== 'solo') && (
+                    {gameMode !== 'time_attack' && (
                         <div className="timer-container">
                             <div className="timer-label">
                                 ⏰ {timeLeft}{t.timer}

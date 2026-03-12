@@ -271,6 +271,12 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                     >
                         ⏱️ {t.time_attack}
                     </button>
+                    <button
+                        className={`mode-btn ${gameMode === 'survival' ? 'active' : ''}`}
+                        onClick={() => setGameMode('survival')}
+                    >
+                        🔥 {t.survival}
+                    </button>
                 </div>
 
                 {(gameMode === 'solo' || gameMode === '1v1' || gameMode === 'time_attack') && (
@@ -334,35 +340,39 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                 )}
             </div>
 
-            <div className="config-section">
-                <h3>{t.choose_size}</h3>
-                <div className="grid-options">
-                    <button className={`grid-btn ${gridSize === 9 ? 'active' : ''}`} onClick={() => setGridSize(9)}>
-                        <span dir="ltr">3 x 3</span>
-                    </button>
-                    <button className={`grid-btn ${gridSize === 16 ? 'active' : ''}`} onClick={() => setGridSize(16)}>
-                        <span dir="ltr">4 x 4</span>
-                    </button>
-                    <button className={`grid-btn ${gridSize === 25 ? 'active' : ''}`} onClick={() => setGridSize(25)}>
-                        <span dir="ltr">5 x 5</span>
-                    </button>
-                </div>
-            </div>
-
-            <div className="config-section">
-                <h3>{t.choose_difficulty}</h3>
-                <div className="diff-options">
-                    {[1, 2, 3].map(level => (
-                        <button
-                            key={level}
-                            className={`diff-btn level-${level} ${difficulty === level ? 'active' : ''}`}
-                            onClick={() => setDifficulty(level)}
-                        >
-                            {t.level} {level}
+            {gameMode !== 'survival' && (
+                <div className="config-section">
+                    <h3>{t.choose_size}</h3>
+                    <div className="grid-options">
+                        <button className={`grid-btn ${gridSize === 9 ? 'active' : ''}`} onClick={() => setGridSize(9)}>
+                            <span dir="ltr">3 x 3</span>
                         </button>
-                    ))}
+                        <button className={`grid-btn ${gridSize === 16 ? 'active' : ''}`} onClick={() => setGridSize(16)}>
+                            <span dir="ltr">4 x 4</span>
+                        </button>
+                        <button className={`grid-btn ${gridSize === 25 ? 'active' : ''}`} onClick={() => setGridSize(25)}>
+                            <span dir="ltr">5 x 5</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            )}
+
+            {gameMode !== 'survival' && (
+                <div className="config-section">
+                    <h3>{t.choose_difficulty}</h3>
+                    <div className="diff-options">
+                        {[1, 2, 3].map(level => (
+                            <button
+                                key={level}
+                                className={`diff-btn level-${level} ${difficulty === level ? 'active' : ''}`}
+                                onClick={() => setDifficulty(level)}
+                            >
+                                {t.level} {level}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
 
             <div className="config-section">
                 <h3>{t.choose_topics}</h3>

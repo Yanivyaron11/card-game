@@ -4,7 +4,7 @@ import StartScreen from './components/StartScreen'
 import GameBoard from './components/GameBoard'
 import QuizOverlay from './components/QuizOverlay'
 import { translations } from './data/translations'
-import { generateDeck } from './utils/deck'
+import { generateDeck, generateSurvivalDeck } from './utils/deck'
 import { playSound, playMusic, stopMusic } from './utils/sounds'
 import './App.css'
 
@@ -23,6 +23,7 @@ function App() {
   const [scores, setScores] = useState({ 1: 0, 2: 0 });
   const [timeLeft, setTimeLeft] = useState(0);
   const [streaks, setStreaks] = useState({ 1: 0, 2: 0 });
+  const [currentSurvivalIndex, setCurrentSurvivalIndex] = useState(0);
 
   const t = translations[language];
 
@@ -73,12 +74,23 @@ function App() {
       setTimeLeft(0);
     }
 
-    setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
+    if (config.gameMode === 'survival') {
+      const survivalDeck = generateSurvivalDeck(config.topics);
+      setDeck(survivalDeck);
+      setCurrentSurvivalIndex(0);
+      setTimeLeft(15); // Start with 15s for Level 1
+      setLives({ 1: 3 }); // Survival starts with 3 lives
+      setCoins({ 1: 5 });
+      navigate(`/quiz/${survivalDeck[0].id}`);
+    } else {
+      setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
+      navigate('/play');
+    }
+
     setCurrentPlayer(1);
     setScores({ 1: 0, 2: 0 });
     setStreaks({ 1: 0, 2: 0 });
     setGameState('playing');
-    navigate('/play');
   };
 
   const checkWinCondition = (currentDeck, currentScores) => {
@@ -205,7 +217,38 @@ function App() {
 
     // If we didn't navigate to /result, go back to /play
     if (location.pathname.startsWith('/quiz')) {
-      navigate('/play');
+      if (gameConfig.gameMode === 'survival' && isCorrect) {
+        // Move to next question immediately
+        const nextIdx = currentSurvivalIndex + 1;
+        if (nextIdx < deck.length) {
+          setCurrentSurvivalIndex(nextIdx);
+          // Speed up timer as we progress
+          const level = deck[nextIdx].level;
+          const newTime = level === 1 ? 15 : level === 2 ? 12 : 10;
+          setTimeLeft(newTime);
+          navigate(`/quiz/${deck[nextIdx].id}`);
+        } else {
+          playSound('victory');
+          setGameState('victory');
+          navigate('/result');
+        }
+      } else if (gameConfig.gameMode === 'survival' && !isCorrect) {
+        // Even on wrong answer, survival moves forward but loses life
+        const nextIdx = currentSurvivalIndex + 1;
+        if (nextIdx < deck.length && lives[1] > 0) {
+          setCurrentSurvivalIndex(nextIdx);
+          const level = deck[nextIdx].level;
+          const newTime = level === 1 ? 15 : level === 2 ? 12 : 10;
+          setTimeLeft(newTime);
+          navigate(`/quiz/${deck[nextIdx].id}`);
+        } else if (lives[1] <= 0) {
+          // Already handled in lives check above, but for safety
+          setGameState('game_over');
+          navigate('/result');
+        }
+      } else {
+        navigate('/play');
+      }
     }
   };
 
@@ -307,6 +350,10 @@ function App() {
                     <br />
                     {t.score}: {scores[1]} - {scores[2]}
                   </p>
+                ) : gameConfig?.gameMode === 'survival' ? (
+                  <p>
+                    {language === 'he' ? 'הגעת לשאלה' : 'You reached question'} {currentSurvivalIndex + 1}
+                  </p>
                 ) : (
                   <p>{t.ran_out_hearts}</p>
                 )}
@@ -331,6 +378,10 @@ function App() {
                     }
                     <br />
                     {t.score}: {scores[1]} - {scores[2]}
+                  </p>
+                ) : gameConfig?.gameMode === 'survival' ? (
+                  <p>
+                    {language === 'he' ? 'השלמת את מסע ההישרדות!' : 'You completed the survival journey!'}
                   </p>
                 ) : (
                   <p>{t.matched_all}</p>

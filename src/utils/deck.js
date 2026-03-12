@@ -277,3 +277,74 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     });
 };
 
+export const generateSurvivalDeck = (selectedTopics = []) => {
+    // Survival mode logic:
+    // We want a sequence of questions from all selected areas.
+    // 5 questions Level 1, then Level 2, then Level 3 indefinitely (or up to a large number)
+
+    // 1. Group questions by level
+    const level1 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 1);
+    const level2 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 2);
+    const level3 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 3);
+
+    // 2. Pick questions for each segment
+    // Let's create a pool of 30 questions (10 per level) to start with
+    const deck = [
+        ...shuffle(level1).slice(0, 10),
+        ...shuffle(level2).slice(0, 10),
+        ...shuffle(level3).slice(0, 20) // More level 3 for the "endless" part
+    ];
+
+    // 3. Map topic info and card state
+    return deck.map((q, index) => {
+        // Mocking the findTopicRecursively logic since it's local to generateDeck in original code
+        // I should probably move findTopicRecursively out or duplicate it.
+        // Actually, I'll move it out in the next step or just use it here if I can.
+
+        // For survival, we don't need "cards" in a grid, just a sequence.
+        // But QuizOverlay expects the card structure.
+
+        const findTopicRecursively = (topicList, targetId) => {
+            for (const t of topicList) {
+                if (t.id === targetId) return t;
+                if (t.subTopics) {
+                    const found = findTopicRecursively(t.subTopics, targetId);
+                    if (found) return found;
+                }
+            }
+            return null;
+        };
+
+        const topic = findTopicRecursively(topics, q.category);
+
+        // Consistent shuffling of options
+        const originalEn = q.options?.en || [];
+        const originalHe = q.options?.he || originalEn;
+        const indices = Array.from({ length: originalEn.length }, (_, i) => i);
+        const shuffledIndices = shuffle(indices);
+
+        const shuffledOptions = {
+            en: shuffledIndices.map(i => originalEn[i]),
+            he: shuffledIndices.map(i => originalHe[i])
+        };
+        const newCorrectAnswer = shuffledIndices.indexOf(Number(q.correctAnswer));
+
+        return {
+            ...q,
+            options: shuffledOptions,
+            correctAnswer: newCorrectAnswer,
+            topicName: topic ? topic.name : { en: q.category, he: q.category },
+            topicIcon: topic ? topic.icon : '',
+            topicColor: topic ? topic.color : null,
+            questionId: q.id,
+            id: `survival-q-${index}-${Math.random().toString(36).substr(2, 9)}`,
+            isFlipped: false,
+            isSolved: false,
+            failedAttempts: 0,
+            isTainted: false,
+            eliminatedIndices: [],
+            isHintVisible: false
+        };
+    });
+};
+
