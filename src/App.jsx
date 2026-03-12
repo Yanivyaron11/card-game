@@ -231,6 +231,10 @@ function App() {
     } else if (allCardsProcessed && gameConfig?.gameMode !== 'survival') {
       if (solvedCount > deck.length / 2) {
         playSound('victory');
+        // Bonus for Time Attack: remaining time as coins
+        if (gameConfig.gameMode === 'time_attack' && timeLeft > 0) {
+          setTotalCoins(prev => prev + timeLeft);
+        }
         setGameState('victory');
         navigate('/result');
       } else {
@@ -263,9 +267,19 @@ function App() {
         if (!hasNotifiedRecord) {
           setNewRecordToast(newScore);
           setHasNotifiedRecord(true);
+          setTotalCoins(prev => prev + 20); // Bonus for breaking record!
           playSound('victory');
           setTimeout(() => setNewRecordToast(null), 3000);
         }
+      }
+
+      // Check for Course Completion
+      if (newScore >= deck.length && deck.length > 0) {
+        setTotalCoins(prev => prev + 50); // Big bonus for completion!
+        playSound('victory');
+        setGameState('victory');
+        navigate('/result');
+        return;
       }
     }
 
