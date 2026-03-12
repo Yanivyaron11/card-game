@@ -109,6 +109,14 @@ export const translations = {
         time_bonus: "Time Bonus: +{n} coins! ⏱️",
         record_bonus: "Record Bonus: +{n} coins! 🏆",
         completion_bonus: "Course Completion: +{n} coins! 🎉",
+        earning_guide_title: "How to Earn Coins? 🪙",
+        rule_level_1: "Correct answer (Level 1): 1 coin",
+        rule_level_2: "Correct answer (Level 2): 2 coins",
+        rule_level_3: "Correct answer (Level 3): 3 coins",
+        rule_streak: "Streak of 3: +5 coins bonus",
+        rule_time_attack: "Time Attack: Remaining time = coins",
+        rule_survival_record: "New Survival Record: +20 coins",
+        rule_survival_completion: "Survival Completion: +50 coins",
     },
 
 
@@ -221,5 +229,13 @@ export const translations = {
         time_bonus: "בונוס זמן: {n}+ מטבעות! ⏱️",
         record_bonus: "בונוס שיא: {n}+ מטבעות! 🏆",
         completion_bonus: "סיום מסלול: {n}+ מטבעות! 🎉",
+        earning_guide_title: "איך צוברים מטבעות? 🪙",
+        rule_level_1: "תשובה נכונה (רמה 1): מטבע 1",
+        rule_level_2: "תשובה נכונה (רמה 2): 2 מטבעות",
+        rule_level_3: "תשובה נכונה (רמה 3): 3 מטבעות",
+        rule_streak: "רצף של 3 תשובות: בונוס 5 מטבעות",
+        rule_time_attack: "ניצחון בנגד השעון: זמן נותר = מטבעות",
+        rule_survival_record: "שיא חדש בהישרדות: בונוס 20 מטבעות",
+        rule_survival_completion: "סיום מסלול הישרדות: בונוס 50 מטבעות",
     }
 };

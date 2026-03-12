@@ -129,6 +129,19 @@
     border-color: white;
 }
 
+.earning-guide-btn {
+    border: 2px solid gold !important;
+    font-weight: bold !important;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease !important;
+}
+
+.earning-guide-btn:hover {
+    background: rgba(255, 215, 0, 0.3) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
 .category-pool {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
