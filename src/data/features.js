@@ -37,5 +37,18 @@ export const features = [
         },
         icon: '🔥',
         newUntil: '2026-04-12'
+    },
+    {
+        id: 'avatar_shop',
+        title: {
+            en: 'Avatar Shop is OPEN!',
+            he: 'חנות האוואטרים פתוחה!'
+        },
+        description: {
+            en: 'Earn coins by answering correctly and use them to unlock rare and legendary avatars like Dragons and Wizards!',
+            he: 'צברו מטבעות על תשובות נכונות ופתחו אוואטרים נדירים ואגדיים כמו דרקונים וקוסמים!'
+        },
+        icon: '🛍️',
+        newUntil: '2026-04-13'
     }
 ];
