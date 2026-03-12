@@ -88,7 +88,9 @@ export const translations = {
         no: "No",
         pause: "Pause",
         resume: "Resume",
-        paused: "Paused"
+        paused: "Paused",
+        select_avatar: "Please select an avatar",
+        select_avatars_1v1: "Please select an avatar for each player"
     },
 
 
@@ -181,6 +183,8 @@ export const translations = {
         no: "לא",
         pause: "השהיה",
         resume: "המשך",
-        paused: "משחק מושהה"
+        paused: "משחק מושהה",
+        select_avatar: "אנא בחר אווטאר",
+        select_avatars_1v1: "אנא בחר אווטאר לכל שחקן"
     }
 };

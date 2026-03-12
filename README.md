@@ -4,22 +4,22 @@ A fun, interactive, and educational card game designed for children and trivia l
 
 ## 🚀 Features
 
-- **Massive Question Library**: Now featuring over **3,600 questions** across diverse pedagogical categories!
-- **Multi-topic Experience**: Choose from **Israel Geography**, **Animals**, **Countries**, **Movies**, **Math**, **Food**, **Art**, **Nature**, **London**, **Judaism**, **Sports (Chelsea & Maccabi Haifa)**, and more.
-- **Dynamic Difficulty**: Three levels of challenge with **adaptive timers**:
-  - **Level 1**: 30 seconds
-  - **Level 2**: 20 seconds
-  - **Level 3**: 10 seconds
-- **Clock Mode (Time Attack)**: Race against the clock with a global game timer visible even during quiz questions.
-- **Mobile Optimized**:
-  - Save as a home screen shortcut with the name **Smarty** (Android & iOS).
-  - Responsive layout with language-aware title alignment.
-  - Smooth scrolling for all device sizes.
-- **Adaptive Deck Generation**: Ensures a full board every time by intelligently falling back to other difficulty levels or allowing repetitions as a last resort.
+- **Massive Question Library**: Over **3,600 questions** across categories like **Israel Geography**, **Animals**, **Countries**, **Movies**, **Math**, **Food**, **Art**, **Nature**, **London**, **Judaism**, **Sports**, and more.
+- **Survival Mode**: A high-stakes endurance mode with **level-up progression** (Level 1-3), **progress ladder**, and a **Pause** functionality to safely take a break.
+- **Multi-Game Modes**:
+  - **Solo**: Relaxed play at your own pace.
+  - **Time Attack**: Race against a global countdown.
+  - **1v1 Mastery**: Battle a friend with a **Rebound** system—if they fail, you can swoop in for double points!
+- **Power-up System**: Spend coins for high-stakes help:
+  - **🌓 50/50**: Eliminates two wrong answers.
+  - **💡 Hint**: Provides a contextual clue (for Level 3 questions).
+  - **⚡ Solve**: Automatically identifies the correct answer.
+- **Dynamic Feedback**: Vibrant on-screen feedback messages and **Win Streaks** (3+ in a row triggers special visual effects).
+- **Premium UI Components**: Custom-designed **Alert Modals** and **Quit Confirmations** with glassmorphism, blur effects, and smooth animations.
+- **Dynamic Difficulty**: Three levels of challenge with **adaptive timers** (L1: 30s, L2: 25s, L3: 20s).
+- **Mobile Optimized**: Home screen shortcut support (PWA) with responsive and RTL-aware layouts.
 - **Bilingual Support**: Full support for both **English** and **Hebrew (RTL)**.
-- **Interactive Audio**: Choose between three calming background music tracks or play in silence.
-- **Power-ups**: Use earned coins for "50/50" eliminations or "Solve" hints.
-- **Sleek Design**: Modern glassmorphism UI with vibrant colors and smooth animations.
+- **Sleek Design**: Modern glassmorphism UI with curated color palettes, vibrant gradients, and micro-animations.
 
 ## 🛠️ Technology Stack
 

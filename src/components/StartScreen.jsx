@@ -5,6 +5,7 @@ import { translations } from '../data/translations';
 import SettingsModal from './SettingsModal';
 import NewCategoryModal from './NewCategoryModal';
 import NewFeatureModal from './NewFeatureModal';
+import AlertModal from './AlertModal';
 import { features } from '../data/features';
 import { avatars } from '../data/avatars';
 import './StartScreen.css';
@@ -80,6 +81,7 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     const [newFeatures, setNewFeatures] = useState([]);
     const [isFeatureModalOpen, setIsFeatureModalOpen] = useState(false);
     const [selectedAvatars, setSelectedAvatars] = useState({ 1: null, 2: null });
+    const [alertConfig, setAlertConfig] = useState({ isOpen: false, message: '', icon: '⚠️' });
 
     useEffect(() => {
         // Find categories that are marked new and hasn't been seen yet
@@ -167,15 +169,15 @@ function StartScreen({ onStart, language, onLanguageChange }) {
 
     const handleStart = () => {
         if (gameMode !== 'survival' && selectedTopics.length === 0) {
-            alert(t.select_at_least_one);
+            setAlertConfig({ isOpen: true, message: t.select_at_least_one, icon: '📚' });
             return;
         }
         if ((gameMode === 'solo' || gameMode === 'survival') && !selectedAvatars[1]) {
-            alert(language === 'he' ? 'אנא בחר אווטאר' : 'Please select an avatar');
+            setAlertConfig({ isOpen: true, message: t.select_avatar, icon: '👤' });
             return;
         }
         if (gameMode === '1v1' && (!selectedAvatars[1] || !selectedAvatars[2])) {
-            alert(language === 'he' ? 'אנא בחר אווטאר לכל שחקן' : 'Please select an avatar for each player');
+            setAlertConfig({ isOpen: true, message: t.select_avatars_1v1, icon: '👥' });
             return;
         }
 
@@ -249,6 +251,13 @@ function StartScreen({ onStart, language, onLanguageChange }) {
                 features={newFeatures}
                 language={language}
                 t={t}
+            />
+
+            <AlertModal
+                isOpen={alertConfig.isOpen}
+                onClose={() => setAlertConfig({ ...alertConfig, isOpen: false })}
+                message={alertConfig.message}
+                icon={alertConfig.icon}
             />
 
             <h2>{t.lets_play}</h2>
