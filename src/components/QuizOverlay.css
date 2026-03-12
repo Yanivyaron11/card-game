@@ -95,11 +95,19 @@
     align-items: center;
     gap: 1.2rem;
     padding: 0.3rem 0.8rem;
+    padding-right: 3rem;
+    /* Leave room for X button in LTR */
     background: #f8fafc;
     border-radius: 30px;
     margin-bottom: 0.3rem;
     border: 1px solid #e2e8f0;
     min-height: 45px;
+}
+
+[dir="rtl"] .quiz-stats-header {
+    padding-right: 0.8rem;
+    padding-left: 3rem;
+    /* Leave room for X button in RTL */
 }
 
 .quiz-stats-header .stat-item {
