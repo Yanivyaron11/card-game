@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import StartScreen from './components/StartScreen'
 import GameBoard from './components/GameBoard'
@@ -12,11 +12,31 @@ import InstallPrompt from './components/InstallPrompt'
 
 
 function SurvivalResult({ correct, language, survivalType }) {
-  const HS_KEY = survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
-  const prev = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
-  const isNewRecord = correct > prev;
-  if (isNewRecord) localStorage.setItem(HS_KEY, correct);
-  const best = isNewRecord ? correct : prev;
+  const { isNewRecord, best } = useMemo(() => {
+    const HS_KEY = survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
+    const prev = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
+    const isNew = correct > prev;
+    if (isNew) localStorage.setItem(HS_KEY, correct);
+    return { isNewRecord: isNew, best: isNew ? correct : prev };
+  }, [correct, survivalType]);
+
+  const t = translations[language];
+
+  const handleShare = async () => {
+    const message = t.share_message.replace('{score}', correct);
+    const shareData = {
+      title: 'Smarty',
+      text: message,
+      url: window.location.origin + window.location.pathname.replace(/\/result$/, '')
+    };
+    try {
+      await navigator.share(shareData);
+    } catch (err) {
+      console.log('Share failed:', err);
+    }
+  };
+
+  const canShare = !!navigator.share && isNewRecord && correct > 0;
 
   return (
     <div style={{ textAlign: 'center' }}>
@@ -25,12 +45,21 @@ function SurvivalResult({ correct, language, survivalType }) {
       </p>
       {isNewRecord && correct > 0 && (
         <p style={{ color: 'gold', fontSize: '1.2rem', fontWeight: 'bold' }}>
-          🏆 {language === 'he' ? 'שיא חדש!' : 'New Record!'}
+          🏆 {t.new_record}
         </p>
       )}
-      <p style={{ opacity: 0.75, fontSize: '0.95rem' }}>
-        {survivalType === 'adult' ? translations[language].survival_record_adult : translations[language].survival_record_child}: {best}
+      <p style={{ opacity: 0.75, fontSize: '0.95rem', marginBottom: '1rem' }}>
+        {survivalType === 'adult' ? t.survival_record_adult : t.survival_record_child}: {best}
       </p>
+
+      {canShare && (
+        <button
+          className="share-button"
+          onClick={handleShare}
+        >
+          <span>📤</span> {t.share_score}
+        </button>
+      )}
     </div>
   );
 }
