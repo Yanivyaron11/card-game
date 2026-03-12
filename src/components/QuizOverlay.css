@@ -92,12 +92,14 @@
 .quiz-stats-header {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.3rem 0.8rem;
     background: #f8fafc;
     border-radius: 30px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     border: 1px solid #e2e8f0;
+    min-height: 45px;
 }
 
 .quiz-stats-header .stat-item {
@@ -149,11 +151,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0.4rem 1rem;
-    background: white;
-    border-radius: 20px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    gap: 0.2rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
     border: 1px solid #e2e8f0;
 }
 
@@ -163,13 +165,13 @@
 }
 
 .ladder-step {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 8px;
+    font-size: 7px;
     background: #e2e8f0;
     color: transparent;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -191,10 +193,11 @@
 }
 
 .survival-level-indicator {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 800;
     color: var(--background);
     text-transform: uppercase;
+    line-height: 1;
 }
 
 @keyframes pulseStep {

@@ -192,9 +192,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     ✕
                 </button>
                 <div className="quiz-stats-header">
-                    <div className="stat-item level-display">
-                        <div className="level-badge mini">{t.level} {card.level}</div>
-                    </div>
+                    {gameMode !== 'survival' && (
+                        <div className="stat-item level-display">
+                            <div className="level-badge mini">{t.level} {card.level}</div>
+                        </div>
+                    )}
                     {gameMode !== '1v1' && (
                         <div className="stat-item lives-display">
                             <div className="hearts mini">
