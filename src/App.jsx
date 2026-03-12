@@ -167,7 +167,7 @@ function App() {
     } else {
       setLives({ 1: initialLives });
     }
-    setTotalCoins(prev => prev + initialCoins);
+    // Removed unintended initial coins award
 
     // 2. Mode Specific Setup (Timer, Deck, etc.)
     if (config.gameMode === 'survival') {
