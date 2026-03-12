@@ -6,7 +6,7 @@ import { translations } from '../data/translations';
 import { markQuestionAsSeen } from '../utils/deck';
 import './GameBoard.css';
 
-function GameBoard({ config, deck, lives, coins, language, onCardSelected, currentPlayer, scores, timeLeft }) {
+function GameBoard({ config, deck, lives, coins, language, onCardSelected, currentPlayer, scores, timeLeft, onQuit }) {
     const t = translations[language];
     const navigate = useNavigate();
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
@@ -36,7 +36,9 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
     };
 
     const handleQuit = () => {
-        navigate('/');
+        if (window.confirm(language === 'he' ? 'האם אתה בטוח שברצונך לצאת?' : 'Are you sure you want to quit?')) {
+            onQuit ? onQuit() : navigate('/');
+        }
     };
 
     const gridCols = config.gridSize === 9 ? 3 : config.gridSize === 25 ? 5 : 4;

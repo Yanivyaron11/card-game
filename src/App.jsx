@@ -301,6 +301,7 @@ function App() {
               scores={scores}
               timeLeft={timeLeft}
               onCardSelected={(id) => navigate(`/quiz/${id}`)}
+              onQuit={handleReturnToStart}
             />
           )
         } />
@@ -324,6 +325,8 @@ function App() {
               onAnswer={handleAnswer}
               onTimeout={(cardId) => handleAnswer(cardId, false)}
               onPowerUpUsed={handlePowerUpUsed}
+              survivalIndex={currentSurvivalIndex}
+              onQuit={handleReturnToStart}
             />
           )
         } />

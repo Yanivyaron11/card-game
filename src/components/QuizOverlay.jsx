@@ -4,7 +4,7 @@ import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './QuizOverlay.css';
 
-function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, timeLeft: gameTimeLeft, avatar, streak }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, onQuit }) {
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
@@ -180,6 +180,17 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 />
             )}
             <div className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''}`}>
+                <button
+                    className="quiz-quit-btn"
+                    onClick={() => {
+                        if (window.confirm(language === 'he' ? 'האם אתה בטוח שברצונך לצאת?' : 'Are you sure you want to quit?')) {
+                            onQuit();
+                        }
+                    }}
+                    title={t.quit_game}
+                >
+                    ✕
+                </button>
                 <div className="quiz-stats-header">
                     <div className="stat-item level-display">
                         <div className="level-badge mini">{t.level} {card.level}</div>
@@ -197,9 +208,25 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         <div key={coins} className="coins-value mini coin-pop">🪙 {coins}</div>
                     </div>
                     {gameMode === 'survival' && (
-                        <div className="stat-item survival-progress">
-                            <div className="progress-badge">
-                                🏆 {t.current_question || (language === 'he' ? 'שאלה' : 'Question')} {deck.indexOf(card) + 1}
+                        <div className="stat-item survival-ladder">
+                            <div className="ladder-container">
+                                {Array.from({ length: 10 }).map((_, i) => {
+                                    const progressInLevel = survivalIndex % 10;
+                                    const isCompleted = i < progressInLevel;
+                                    const isCurrent = i === progressInLevel;
+                                    return (
+                                        <div
+                                            key={i}
+                                            className={`ladder-step ${isCompleted ? 'completed' : ''} ${isCurrent ? 'current' : ''}`}
+                                            title={isCurrent ? `${t.current_question} ${survivalIndex + 1}` : ''}
+                                        >
+                                            {isCompleted ? '⭐' : isCurrent ? '📍' : '○'}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                            <div className="survival-level-indicator">
+                                {t.level} {card.level}
                             </div>
                         </div>
                     )}
