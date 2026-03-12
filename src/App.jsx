@@ -105,7 +105,7 @@ function App() {
     }
 
     if (config.gameMode === 'survival') {
-      const survivalDeck = generateSurvivalDeck();
+      const survivalDeck = generateSurvivalDeck(config.topics);
       setDeck(survivalDeck);
       setCurrentSurvivalIndex(0);
       setSurvivalCorrect(0);
