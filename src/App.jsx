@@ -52,6 +52,7 @@ function App() {
   const [currentSurvivalIndex, setCurrentSurvivalIndex] = useState(0);
   const [levelUpToast, setLevelUpToast] = useState(null);
   const [survivalCorrect, setSurvivalCorrect] = useState(0);
+  const [usedSurvivalPowerups, setUsedSurvivalPowerups] = useState({ '5050': false, 'hint': false, 'solve': false });
   const answeringRef = useRef(null);
 
   const t = translations[language];
@@ -110,6 +111,7 @@ function App() {
       setSurvivalCorrect(0);
       setLives({ 1: 3 });
       setCoins({ 1: 5 });
+      setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
       setTimeLeft(30);
 
       if (survivalDeck.length > 0) {
@@ -308,6 +310,7 @@ function App() {
 
   const handleReturnToStart = () => {
     setGameState('start');
+    setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
     navigate('/');
   };
 
@@ -373,6 +376,8 @@ function App() {
               onTimeout={(cardId) => handleAnswer(cardId, false)}
               onPowerUpUsed={handlePowerUpUsed}
               survivalIndex={currentSurvivalIndex}
+              usedSurvivalPowerups={usedSurvivalPowerups}
+              onSurvivalPowerupUsed={(type) => setUsedSurvivalPowerups(prev => ({ ...prev, [type]: true }))}
               onQuit={handleReturnToStart}
             />
           )
