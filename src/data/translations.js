@@ -122,6 +122,7 @@ export const translations = {
         regular_points: "Regular Points",
         streak_bonus: "Streak Bonus",
         special_bonus: "Special Bonus",
+        spent_on_powerups: "Spent on Power-ups",
     },
 
 
@@ -247,5 +248,6 @@ export const translations = {
         regular_points: "נקודות רגילות",
         streak_bonus: "בונוס רצף",
         special_bonus: "בונוס מיוחד",
+        spent_on_powerups: "הוצאה על כוחות על",
     }
 };

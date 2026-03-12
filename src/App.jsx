@@ -95,7 +95,8 @@ function App() {
   const [sessionCoinBreakdown, setSessionCoinBreakdown] = useState({
     base: 0,
     streak: 0,
-    bonus: 0
+    bonus: 0,
+    spent: 0
   });
   const answeringRef = useRef(null);
 
@@ -217,7 +218,7 @@ function App() {
     setCurrentPlayer(1);
     setScores({ 1: 0, 2: 0 });
     setStreaks({ 1: 0, 2: 0 });
-    setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0 });
+    setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0, spent: 0 });
     setGameState('playing');
   };
 
@@ -543,7 +544,13 @@ function App() {
               timeLeft={timeLeft}
               avatar={gameConfig.avatars?.[currentPlayer]}
               streak={streaks[currentPlayer]}
-              onCoinsChange={(newAmount) => setTotalCoins(newAmount)}
+              onCoinsChange={(newAmount) => {
+                const diff = totalCoins - newAmount;
+                if (diff > 0) {
+                  setSessionCoinBreakdown(prev => ({ ...prev, spent: prev.spent + diff }));
+                }
+                setTotalCoins(newAmount);
+              }}
               onAnswer={handleAnswer}
               onTimeout={(cardId) => handleAnswer(cardId, false)}
               onPowerUpUsed={handlePowerUpUsed}
@@ -638,9 +645,15 @@ function App() {
                     <span>+{sessionCoinBreakdown.bonus}</span>
                   </div>
                 )}
+                {sessionCoinBreakdown.spent > 0 && (
+                  <div className="breakdown-item spent">
+                    <span>{t.spent_on_powerups} 🛒</span>
+                    <span>-{sessionCoinBreakdown.spent}</span>
+                  </div>
+                )}
                 <div className="breakdown-total">
                   <span>{t.total_coins}</span>
-                  <span>{sessionCoinBreakdown.base + sessionCoinBreakdown.streak + sessionCoinBreakdown.bonus} 🪙</span>
+                  <span>{sessionCoinBreakdown.base + sessionCoinBreakdown.streak + sessionCoinBreakdown.bonus - sessionCoinBreakdown.spent} 🪙</span>
                 </div>
               </div>
             </div>

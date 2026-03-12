@@ -144,6 +144,11 @@ h1 {
   font-weight: bold;
 }
 
+.breakdown-item.spent {
+  color: #FFA500;
+  font-weight: bold;
+}
+
 .breakdown-total {
   margin-top: 0.5rem;
   padding-top: 0.8rem;
