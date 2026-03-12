@@ -574,15 +574,18 @@
     gap: 0.4rem;
     background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 0.5rem;
     border-radius: 12px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 100px;
+    max-width: 140px;
 }
 
 .powerup-btn:hover:not(:disabled):not(.locked) {
