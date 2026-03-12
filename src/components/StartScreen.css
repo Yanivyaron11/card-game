@@ -266,16 +266,33 @@
     }
 
     .grid-options,
-    .diff-options,
-    .mode-options {
+    .diff-options {
         gap: 0.6rem;
     }
 
+    .mode-options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        width: 100%;
+    }
+
     .grid-btn,
-    .diff-btn,
-    .mode-btn {
+    .diff-btn {
         padding: 0.6rem;
         font-size: 0.85rem;
+    }
+
+    .mode-btn {
+        padding: 0.8rem 0.4rem;
+        font-size: 0.85rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 80px;
+        /* Ensure all buttons in same row have same height */
+        height: 100%;
     }
 
     .start-btn {
