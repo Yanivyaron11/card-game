@@ -266,22 +266,20 @@ function App() {
       // Award coins based on question level (1, 2, or 3)
       const answeredCard = deck.find(c => c.id === cardId);
       const coinAward = answeredCard?.level || 1;
-      setTotalCoins(prev => prev + coinAward);
+
+      const newStreaks = { ...streaks, [currentPlayer]: (streaks[currentPlayer] || 0) + 1 };
+      let extraBonus = 0;
+      if (newStreaks[currentPlayer] > 0 && newStreaks[currentPlayer] % 3 === 0) {
+        extraBonus = 5;
+      }
+
+      setTotalCoins(prev => prev + coinAward + extraBonus);
+      setStreaks(newStreaks);
 
       setDeck(prev => {
         const newDeck = prev.map(card =>
           card.id === cardId ? { ...card, isSolved: true, owner: currentPlayer } : card
         );
-
-        const newStreaks = { ...streaks, [currentPlayer]: (streaks[currentPlayer] || 0) + 1 };
-
-        // Bonus 5 coins for every streak of 3
-        if (newStreaks[currentPlayer] > 0 && newStreaks[currentPlayer] % 3 === 0) {
-          setTotalCoins(prev => prev + 5);
-          // We could also show a small celebration here
-        }
-
-        setStreaks(newStreaks);
 
         if (gameConfig.gameMode === '1v1') {
           const card = prev.find(c => c.id === cardId);
