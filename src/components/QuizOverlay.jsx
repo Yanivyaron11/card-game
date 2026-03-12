@@ -37,53 +37,47 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const [isQuitModalOpen, setIsQuitModalOpen] = useState(false);
 
     useEffect(() => {
-        timeoutRef.current = onTimeout;
-    }, [onTimeout]);
+        if (!card) return;
 
-    useEffect(() => {
-        if (!card) return; // Prevent crashes if card is not found yet
+        // 1. Reset card state
         setTimeLeft(initialTime);
         setSelectedAnswer(-1);
         setIsAnswering(false);
         setIsReady(false);
-        const readyTimeout = setTimeout(() => setIsReady(true), 500);
-        return () => clearTimeout(readyTimeout);
-    }, [card?.id]);
+        if (timerRef.current) clearInterval(timerRef.current);
 
-    useEffect(() => {
-        if (!card || gameMode === 'time_attack') return;
-        // Solo mode doesn't have a per-question timer, but survival does
-        if (gameMode === 'solo' && !gameTimeLeft) return;
-        timerRef.current = setInterval(() => {
-            setTimeLeft(prev => {
-                if (prev <= 1) {
-                    clearInterval(timerRef.current);
-                    return 0;
-                }
-                if (prev <= 6) {
-                    playSound('timer');
-                }
-                return prev - 1;
-            });
-        }, 1000);
+        const readyTimeout = setTimeout(() => setIsReady(true), 500);
+
+        // 2. Setup interval
+        if (gameMode !== 'time_attack') {
+            // Solo mode doesn't have a per-question timer, but survival does
+            if (!(gameMode === 'solo' && !gameTimeLeft)) {
+                timerRef.current = setInterval(() => {
+                    setTimeLeft(prev => {
+                        if (prev <= 1) {
+                            if (timerRef.current) clearInterval(timerRef.current);
+                            return 0;
+                        }
+                        if (prev <= 6) {
+                            playSound('timer');
+                        }
+                        return prev - 1;
+                    });
+                }, 1000);
+            }
+        }
 
         return () => {
+            clearTimeout(readyTimeout);
             if (timerRef.current) clearInterval(timerRef.current);
         };
-    }, [card?.id]);
+    }, [card?.id, initialTime, gameMode, gameTimeLeft]);
 
     useEffect(() => {
         if (timeLeft === 0 && !isAnswering && isReady) {
             if (timeoutRef.current) timeoutRef.current(cardId);
         }
     }, [timeLeft, isAnswering, isReady, cardId]);
-
-    // Handle case where card is not found or user navigated directly
-    useEffect(() => {
-        if (deck.length > 0 && !card) {
-            navigate('/play');
-        }
-    }, [deck, card, navigate]);
 
     if (!card) return null;
 

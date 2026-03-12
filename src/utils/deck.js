@@ -279,13 +279,16 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
 
 export const generateSurvivalDeck = (selectedTopics = []) => {
     // Survival mode logic:
-    // We want a sequence of questions from all selected areas.
-    // 5 questions Level 1, then Level 2, then Level 3 indefinitely (or up to a large number)
+    // If no topics provided, use all available categories
+    let categoriesToUse = selectedTopics;
+    if (!selectedTopics || selectedTopics.length === 0) {
+        categoriesToUse = Array.from(new Set(questions.map(q => q.category)));
+    }
 
     // 1. Group questions by level
-    const level1 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 1);
-    const level2 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 2);
-    const level3 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 3);
+    const level1 = questions.filter(q => categoriesToUse.includes(q.category) && q.level === 1);
+    const level2 = questions.filter(q => categoriesToUse.includes(q.category) && q.level === 2);
+    const level3 = questions.filter(q => categoriesToUse.includes(q.category) && q.level === 3);
 
     // 2. Pick questions for each segment
     const deck = [

@@ -77,14 +77,22 @@ function App() {
     }
 
     if (config.gameMode === 'survival') {
-      const survivalDeck = generateSurvivalDeck(config.topics);
+      const survivalDeck = generateSurvivalDeck();
       setDeck(survivalDeck);
       setCurrentSurvivalIndex(0);
-      setTimeLeft(30); // Start with 30s for Level 1
-      setLives({ 1: 3 }); // Survival starts with 3 lives
+      setLives({ 1: 3 });
       setCoins({ 1: 5 });
-      navigate(`/quiz/${survivalDeck[0].id}`);
+      setTimeLeft(30);
+
+      if (survivalDeck.length > 0) {
+        navigate(`/quiz/${survivalDeck[0].id}`);
+      } else {
+        setGameState('topic_selection');
+        navigate('/play');
+      }
     } else {
+      setTimeLeft(config.gameMode === 'time_attack' ? 60 : 30);
+      setGameState('topic_selection');
       setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
       navigate('/play');
     }
@@ -221,40 +229,43 @@ function App() {
       }
     }
 
+    // Unified Survival Advancement logic
+    if (gameConfig.gameMode === 'survival') {
+      const nextIdx = currentSurvivalIndex + 1;
+      const currentLives = isCorrect ? lives[1] : lives[1] - 1;
+
+      if (currentLives <= 0) {
+        playSound('wrong');
+        setGameState('game_over');
+        navigate('/result');
+        return;
+      }
+
+      if (nextIdx < deck.length) {
+        // Level up check
+        const currentCard = deck[currentSurvivalIndex];
+        const nextCard = deck[nextIdx];
+        if (nextCard.level > currentCard.level) {
+          setLevelUpToast(nextCard.level);
+          setTimeout(() => setLevelUpToast(null), 3000);
+        }
+
+        setCurrentSurvivalIndex(nextIdx);
+        const level = nextCard.level;
+        const newTime = level === 1 ? 30 : level === 2 ? 25 : 20;
+        setTimeLeft(newTime);
+        navigate(`/quiz/${nextCard.id}`);
+      } else {
+        playSound('victory');
+        setGameState('victory');
+        navigate('/result');
+      }
+      return;
+    }
+
     // If we didn't navigate to /result, go back to /play
     if (location.pathname.startsWith('/quiz')) {
-      if (gameConfig.gameMode === 'survival' && isCorrect) {
-        // Move to next question immediately
-        const nextIdx = currentSurvivalIndex + 1;
-        if (nextIdx < deck.length) {
-          setCurrentSurvivalIndex(nextIdx);
-          // Speed up timer as we progress
-          const level = deck[nextIdx].level;
-          const newTime = level === 1 ? 30 : level === 2 ? 25 : 20;
-          setTimeLeft(newTime);
-          navigate(`/quiz/${deck[nextIdx].id}`);
-        } else {
-          playSound('victory');
-          setGameState('victory');
-          navigate('/result');
-        }
-      } else if (gameConfig.gameMode === 'survival' && !isCorrect) {
-        // Even on wrong answer, survival moves forward but loses life
-        const nextIdx = currentSurvivalIndex + 1;
-        if (nextIdx < deck.length && lives[1] > 0) {
-          setCurrentSurvivalIndex(nextIdx);
-          const level = deck[nextIdx].level;
-          const newTime = level === 1 ? 30 : level === 2 ? 25 : 20;
-          setTimeLeft(newTime);
-          navigate(`/quiz/${deck[nextIdx].id}`);
-        } else if (lives[1] <= 0) {
-          // Already handled in lives check above, but for safety
-          setGameState('game_over');
-          navigate('/result');
-        }
-      } else {
-        navigate('/play');
-      }
+      navigate('/play');
     }
   };
 
