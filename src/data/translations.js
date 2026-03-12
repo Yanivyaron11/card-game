@@ -102,6 +102,8 @@ export const translations = {
         share_message: '🏆 New Record on Smarty! I answered {score} questions correctly in a row in Survival. Who can beat me?',
         new_record_yay: "Yay! New Record of {n} points!",
         best: "Best",
+        total_questions: "{n} questions are waiting for you!",
+        total_coins: "Total Coins",
         participating_topics: "Participating Topics",
         fallback_hint: 'Think carefully about the options, one of them is correctly!'
     },
@@ -209,7 +211,8 @@ export const translations = {
         share_score: 'שתפו הישג',
         share_message: '🏆 שיא חדש ב-Smarty! עניתי נכון על {score} שאלות ברצף בהישרדות. מי מצליח לעקוף אותי?',
         new_record_yay: "יששש! שיא חדש של {n} נקודות!",
-        best: "שיא",
+        total_questions: "{n} שאלות מחכות לך!",
+        total_coins: "סך הכל מטבעות",
         participating_topics: "נושאים משתתפים",
         fallback_hint: 'חשבו היטב על האפשרויות, אחת מהן היא התשובה הנכונה!'
     }

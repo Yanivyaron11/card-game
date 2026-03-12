@@ -72,7 +72,6 @@ function App() {
   const [gameConfig, setGameConfig] = useState(null)
   const [deck, setDeck] = useState([])
   const [lives, setLives] = useState({ 1: 1, 2: 1 })
-  const [coins, setCoins] = useState({ 1: 0, 2: 0 })
   const [language, setLanguage] = useState('he') // en, he
   const [currentPlayer, setCurrentPlayer] = useState(1); // 1 or 2
   const [scores, setScores] = useState({ 1: 0, 2: 0 });
@@ -84,8 +83,12 @@ function App() {
   const [usedSurvivalPowerups, setUsedSurvivalPowerups] = useState({ '5050': false, 'hint': false, 'solve': false });
   const [newRecordToast, setNewRecordToast] = useState(null);
   const [hasNotifiedRecord, setHasNotifiedRecord] = useState(false);
-  const [bestScore, setBestScore] = useState(0);
+  const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '10', 10));
   const answeringRef = useRef(null);
+
+  useEffect(() => {
+    localStorage.setItem('total_coins', totalCoins);
+  }, [totalCoins]);
 
   const t = translations[language];
 
@@ -123,11 +126,12 @@ function App() {
 
     if (config.gameMode === '1v1') {
       setLives({ 1: initialLives, 2: initialLives });
-      setCoins({ 1: initialCoins, 2: initialCoins });
     } else {
       setLives({ 1: initialLives });
-      setCoins({ 1: initialCoins });
     }
+
+    // Add a small session grant to the total bank
+    setTotalCoins(prev => prev + initialCoins);
 
     if (config.gameMode === 'time_attack') {
       const timeLimit = config.gridSize === 9 ? 75 : config.gridSize === 16 ? 120 : 180;
@@ -142,7 +146,6 @@ function App() {
       setCurrentSurvivalIndex(0);
       setSurvivalCorrect(0);
       setLives({ 1: 3 });
-      setCoins({ 1: 5 });
       setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
       setHasNotifiedRecord(false);
       const HS_KEY = config.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
@@ -239,15 +242,22 @@ function App() {
     }
 
     if (isCorrect) {
-      // Coins no longer increase on correct answer
-      // setCoins(prev => ({ ...prev, [currentPlayer]: prev[currentPlayer] + 2 }));
+      // Award 1 coin for every correct answer
+      setTotalCoins(prev => prev + 1);
 
       setDeck(prev => {
         const newDeck = prev.map(card =>
           card.id === cardId ? { ...card, isSolved: true, owner: currentPlayer } : card
         );
 
-        const newStreaks = { ...streaks, [currentPlayer]: streaks[currentPlayer] + 1 };
+        const newStreaks = { ...streaks, [currentPlayer]: (streaks[currentPlayer] || 0) + 1 };
+
+        // Bonus 5 coins for every streak of 3
+        if (newStreaks[currentPlayer] > 0 && newStreaks[currentPlayer] % 3 === 0) {
+          setTotalCoins(prev => prev + 5);
+          // We could also show a small celebration here
+        }
+
         setStreaks(newStreaks);
 
         if (gameConfig.gameMode === '1v1') {
@@ -385,6 +395,7 @@ function App() {
             onStart={handleStartGame}
             language={language}
             onLanguageChange={setLanguage}
+            totalCoins={totalCoins}
           />
         } />
 
@@ -398,7 +409,7 @@ function App() {
               config={gameConfig}
               deck={deck || []}
               lives={lives}
-              coins={coins}
+              coins={totalCoins}
               language={language}
               currentPlayer={currentPlayer}
               scores={scores}
@@ -419,14 +430,14 @@ function App() {
               key={window.location.pathname}
               deck={deck || []}
               lives={lives[currentPlayer] || 0}
-              coins={coins[currentPlayer] || 0}
+              coins={totalCoins}
               language={language}
               gameMode={gameConfig.gameMode}
               gameConfig={gameConfig}
               timeLeft={timeLeft}
               avatar={gameConfig.avatars?.[currentPlayer]}
               streak={streaks[currentPlayer]}
-              onCoinsChange={(newAmount) => setCoins(prev => ({ ...prev, [currentPlayer]: newAmount }))}
+              onCoinsChange={(newAmount) => setTotalCoins(newAmount)}
               onAnswer={handleAnswer}
               onTimeout={(cardId) => handleAnswer(cardId, false)}
               onPowerUpUsed={handlePowerUpUsed}

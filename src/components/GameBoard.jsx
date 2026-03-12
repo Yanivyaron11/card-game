@@ -117,7 +117,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                     ))}
                                 </div>
                             )}
-                            <div className="p-coins">🪙 {coins[1]}</div>
+                            <div className="p-coins">🪙 {coins}</div>
                         </div>
 
                         <div className="vs-center">
@@ -143,7 +143,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                     ))}
                                 </div>
                             )}
-                            <div className="p-coins">🪙 {coins[2]}</div>
+                            <div className="p-coins">🪙 {coins}</div>
                         </div>
                     </div>
                 )}

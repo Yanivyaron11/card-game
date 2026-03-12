@@ -10,7 +10,7 @@ import { features } from '../data/features';
 import { avatars } from '../data/avatars';
 import './StartScreen.css';
 
-function StartScreen({ onStart, language, onLanguageChange }) {
+function StartScreen({ onStart, language, onLanguageChange, totalCoins }) {
     const t = translations[language];
 
     const getLeafTopics = () => {
@@ -237,6 +237,9 @@ function StartScreen({ onStart, language, onLanguageChange }) {
     return (
         <div className="start-screen glass-panel">
             <div className="top-controls">
+                <div className="total-coins-display">
+                    🪙 <span className="coin-count">{totalCoins}</span>
+                </div>
                 <button
                     onClick={() => setIsSettingsOpen(true)}
                     className="icon-toggle-btn settings-gear"
