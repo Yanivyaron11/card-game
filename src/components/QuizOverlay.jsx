@@ -218,9 +218,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             </div>
                         </div>
                     )}
-                    <div className="stat-item coins-display">
-                        <div key={coins} className="coins-value mini coin-pop">🪙 {coins}</div>
-                    </div>
+                    {gameMode !== 'survival' && (
+                        <div className="stat-item coins-display">
+                            <div key={coins} className="coins-value mini coin-pop">🪙 {coins}</div>
+                        </div>
+                    )}
                     {gameMode === 'survival' && (
                         <div className="stat-item survival-ladder">
                             <div className="ladder-container">
