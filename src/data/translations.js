@@ -123,6 +123,7 @@ export const translations = {
         streak_bonus: "Streak Bonus",
         special_bonus: "Special Bonus",
         spent_on_powerups: "Spent on Power-ups",
+        game_interrupted: "Game Stopped",
     },
 
 
@@ -249,5 +250,6 @@ export const translations = {
         streak_bonus: "בונוס רצף",
         special_bonus: "בונוס מיוחד",
         spent_on_powerups: "הוצאה על כוחות על",
+        game_interrupted: "המשחק הופסק",
     }
 };

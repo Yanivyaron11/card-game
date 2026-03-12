@@ -460,7 +460,7 @@ function App() {
   const handleReturnToStart = () => {
     if (gameState === 'playing') {
       // For all modes, manual quit counts as "End of Run" so progress is saved/shown
-      setGameState('game_over');
+      setGameState('quit');
       navigate('/result');
     } else {
       setGameState('start');
@@ -566,9 +566,9 @@ function App() {
 
         <Route path="/result" element={
           <div className="end-screen glass-panel">
-            {gameState === 'game_over' && (
+            {(gameState === 'game_over' || gameState === 'quit') && (
               <>
-                <h2>{t.game_over} 😢</h2>
+                <h2>{gameState === 'quit' ? t.game_interrupted : t.game_over} {gameState === 'quit' ? '🛑' : '😢'}</h2>
                 {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
                   <div className="result-avatar">
                     <span className="result-emoji">{gameConfig.avatars[1].emoji}</span>
@@ -590,11 +590,13 @@ function App() {
                   <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
                 ) : gameConfig?.gameMode === 'time_attack' ? (
                   <div className="time-attack-result">
-                    <p>{t.time_attack_record}: {localStorage.getItem(`time_attack_best_${gameConfig.gridSize}`) || 0}{t.timer}</p>
-                    <p>{t.ran_out_hearts}</p>
+                    {localStorage.getItem(`time_attack_best_${gameConfig.gridSize}`) !== '0' && (
+                      <p>{t.time_attack_record}: {localStorage.getItem(`time_attack_best_${gameConfig.gridSize}`) || 0}{t.timer}</p>
+                    )}
+                    <p>{gameState === 'quit' ? t.game_interrupted : t.ran_out_hearts}</p>
                   </div>
                 ) : (
-                  <p>{t.ran_out_hearts}</p>
+                  <p>{gameState === 'quit' ? t.game_interrupted : t.ran_out_hearts}</p>
                 )}
               </>
             )}
