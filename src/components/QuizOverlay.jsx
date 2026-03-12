@@ -5,7 +5,7 @@ import { translations } from '../data/translations';
 import QuitConfirmModal from './QuitConfirmModal';
 import './QuizOverlay.css';
 
-function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, gameConfig, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, survivalCorrect, usedSurvivalPowerups = {}, onSurvivalPowerupUsed, onQuit }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, gameConfig, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, survivalCorrect, usedSurvivalPowerups = {}, onSurvivalPowerupUsed, bestScore, onQuit }) {
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
@@ -291,7 +291,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     {gameMode === 'survival' && (
                         <div className="survival-score-header">
                             <div className="survival-score-item">🎯 {t.correct_count.replace('{n}', survivalCorrect || 0)}</div>
-                            <div className="survival-score-item best-score">🏆 {t.best}: {localStorage.getItem(gameConfig?.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child') || 0}</div>
+                            <div className="survival-score-item best-score">🏆 {t.best}: {bestScore || 0}</div>
                         </div>
                     )}
                     {gameMode !== 'time_attack' && (

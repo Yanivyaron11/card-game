@@ -55,6 +55,7 @@ function App() {
   const [usedSurvivalPowerups, setUsedSurvivalPowerups] = useState({ '5050': false, 'hint': false, 'solve': false });
   const [newRecordToast, setNewRecordToast] = useState(null);
   const [hasNotifiedRecord, setHasNotifiedRecord] = useState(false);
+  const [bestScore, setBestScore] = useState(0);
   const answeringRef = useRef(null);
 
   const t = translations[language];
@@ -115,6 +116,8 @@ function App() {
       setCoins({ 1: 5 });
       setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
       setHasNotifiedRecord(false);
+      const HS_KEY = config.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
+      setBestScore(parseInt(localStorage.getItem(HS_KEY) || '0', 10));
       setTimeLeft(30);
 
       if (survivalDeck.length > 0) {
@@ -187,11 +190,14 @@ function App() {
       // Check for new record toast
       const HS_KEY = gameConfig.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
       const prevBest = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
-      if (newScore > prevBest && newScore > 0 && !hasNotifiedRecord) {
-        setNewRecordToast(newScore);
-        setHasNotifiedRecord(true);
-        playSound('victory');
-        setTimeout(() => setNewRecordToast(null), 3000);
+      if (newScore > prevBest && newScore > 0) {
+        setBestScore(newScore); // Real-time update
+        if (!hasNotifiedRecord) {
+          setNewRecordToast(newScore);
+          setHasNotifiedRecord(true);
+          playSound('victory');
+          setTimeout(() => setNewRecordToast(null), 3000);
+        }
       }
     }
 
@@ -399,6 +405,7 @@ function App() {
               survivalCorrect={survivalCorrect}
               usedSurvivalPowerups={usedSurvivalPowerups}
               onSurvivalPowerupUsed={(type) => setUsedSurvivalPowerups(prev => ({ ...prev, [type]: true }))}
+              bestScore={bestScore}
               onQuit={handleReturnToStart}
             />
           )
