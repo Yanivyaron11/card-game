@@ -105,7 +105,10 @@ export const translations = {
         total_questions: "{n} questions are waiting for you!",
         total_coins: "Total Coins",
         participating_topics: "Participating Topics",
-        fallback_hint: 'Think carefully about the options, one of them is correctly!'
+        fallback_hint: 'Think carefully about the options, one of them is correctly!',
+        time_bonus: "Time Bonus: +{n} coins! ⏱️",
+        record_bonus: "Record Bonus: +{n} coins! 🏆",
+        completion_bonus: "Course Completion: +{n} coins! 🎉",
     },
 
 
@@ -214,6 +217,9 @@ export const translations = {
         total_questions: "{n} שאלות מחכות לך!",
         total_coins: "סך הכל מטבעות",
         participating_topics: "נושאים משתתפים",
-        fallback_hint: 'חשבו היטב על האפשרויות, אחת מהן היא התשובה הנכונה!'
+        fallback_hint: 'חשבו היטב על האפשרויות, אחת מהן היא התשובה הנכונה!',
+        time_bonus: "בונוס זמן: {n}+ מטבעות! ⏱️",
+        record_bonus: "בונוס שיא: {n}+ מטבעות! 🏆",
+        completion_bonus: "סיום מסלול: {n}+ מטבעות! 🎉",
     }
 };

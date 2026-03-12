@@ -84,6 +84,7 @@ function App() {
   const [newRecordToast, setNewRecordToast] = useState(null);
   const [bestScore, setBestScore] = useState(0);
   const [hasNotifiedRecord, setHasNotifiedRecord] = useState(false);
+  const [rewardToast, setRewardToast] = useState(null);
   const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '10', 10));
   const [unlockedAvatars, setUnlockedAvatars] = useState(() => {
     const saved = localStorage.getItem('unlocked_avatars');
@@ -100,6 +101,13 @@ function App() {
   useEffect(() => {
     localStorage.setItem('unlocked_avatars', JSON.stringify(unlockedAvatars));
   }, [unlockedAvatars]);
+
+  useEffect(() => {
+    if (rewardToast) {
+      const timer = setTimeout(() => setRewardToast(null), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [rewardToast]);
 
   const buyAvatar = (avatarId, price) => {
     if (totalCoins >= price && !unlockedAvatars.includes(avatarId)) {
@@ -234,6 +242,7 @@ function App() {
         // Bonus for Time Attack: remaining time as coins
         if (gameConfig.gameMode === 'time_attack' && timeLeft > 0) {
           setTotalCoins(prev => prev + timeLeft);
+          setRewardToast({ messageKey: 'time_bonus', amount: timeLeft });
         }
         setGameState('victory');
         navigate('/result');
@@ -268,6 +277,7 @@ function App() {
           setNewRecordToast(newScore);
           setHasNotifiedRecord(true);
           setTotalCoins(prev => prev + 20); // Bonus for breaking record!
+          setRewardToast({ messageKey: 'record_bonus', amount: 20 });
           playSound('victory');
           setTimeout(() => setNewRecordToast(null), 3000);
         }
@@ -276,6 +286,7 @@ function App() {
       // Check for Course Completion
       if (newScore >= deck.length && deck.length > 0) {
         setTotalCoins(prev => prev + 50); // Big bonus for completion!
+        setRewardToast({ messageKey: 'completion_bonus', amount: 50 });
         playSound('victory');
         setGameState('victory');
         navigate('/result');
@@ -436,6 +447,11 @@ function App() {
       {newRecordToast && (
         <div className="level-up-toast record-toast card-pop" style={{ border: '2px solid gold' }}>
           {t.new_record_yay.replace('{n}', newRecordToast)} 🏆
+        </div>
+      )}
+      {rewardToast && (
+        <div className="level-up-toast reward-toast card-pop" style={{ border: '2px solid gold', background: 'rgba(255, 215, 0, 0.2)' }}>
+          {t[rewardToast.messageKey].replace('{n}', rewardToast.amount)}
         </div>
       )}
 
