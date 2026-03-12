@@ -118,6 +118,10 @@ export const translations = {
         rule_survival_record: "New Survival Record: +20 coins",
         rule_survival_completion: "Survival Completion: +50 coins",
         time_attack_record: "Best Time",
+        earned_this_game: "Coins earned this game",
+        regular_points: "Regular Points",
+        streak_bonus: "Streak Bonus",
+        special_bonus: "Special Bonus",
     },
 
 
@@ -239,5 +243,9 @@ export const translations = {
         rule_survival_record: "שיא חדש בהישרדות: בונוס 20 מטבעות",
         rule_survival_completion: "סיום מסלול הישרדות: בונוס 50 מטבעות",
         time_attack_record: "שיא זמן",
+        earned_this_game: "מטבעות שהרווחת במשחק",
+        regular_points: "נקודות רגילות",
+        streak_bonus: "בונוס רצף",
+        special_bonus: "בונוס מיוחד",
     }
 };

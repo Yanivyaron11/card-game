@@ -104,3 +104,53 @@ h1 {
 .share-button span {
   font-size: 1.2rem;
 }
+
+.coin-summary-card {
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.coin-summary-card h3 {
+  margin-top: 0;
+  color: #FFD700;
+  font-size: 1.4rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.coin-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+.breakdown-item.streak {
+  color: #FF6B6B;
+  font-weight: bold;
+}
+
+.breakdown-item.bonus {
+  color: #FFD93D;
+  font-weight: bold;
+}
+
+.breakdown-total {
+  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+  border-top: 2px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #FFD700;
+}

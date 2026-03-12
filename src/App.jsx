@@ -92,6 +92,11 @@ function App() {
     // Default unlocked: Leo, Bunny, Foxy, Panda, Penguin
     return ['leo', 'bunny', 'foxy', 'panda', 'penguin'];
   });
+  const [sessionCoinBreakdown, setSessionCoinBreakdown] = useState({
+    base: 0,
+    streak: 0,
+    bonus: 0
+  });
   const answeringRef = useRef(null);
 
   useEffect(() => {
@@ -212,6 +217,7 @@ function App() {
     setCurrentPlayer(1);
     setScores({ 1: 0, 2: 0 });
     setStreaks({ 1: 0, 2: 0 });
+    setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0 });
     setGameState('playing');
   };
 
@@ -243,6 +249,7 @@ function App() {
         if (gameConfig.gameMode === 'time_attack' && timeLeft > 0) {
           setTotalCoins(prev => prev + timeLeft);
           setRewardToast({ messageKey: 'time_bonus', amount: timeLeft });
+          setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + timeLeft }));
 
           const gSize = gameConfig.gridSize;
           const TA_KEY = `time_attack_best_${gSize}`;
@@ -285,6 +292,7 @@ function App() {
         if (!recordNotifiedRef.current) {
           recordNotifiedRef.current = true;
           setTotalCoins(prev => prev + 20); // Bonus only once per session
+          setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + 20 }));
           bonusToAward = 20;
           playSound('victory');
         }
@@ -300,6 +308,7 @@ function App() {
       // Check for Course Completion
       if (newScore >= deck.length && deck.length > 0) {
         setTotalCoins(prev => prev + 50); // Big bonus for completion!
+        setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + 50 }));
         setRewardToast({ messageKey: 'completion_bonus', amount: 50 });
         playSound('victory');
         setGameState('victory');
@@ -328,6 +337,11 @@ function App() {
       }
 
       setTotalCoins(prev => prev + coinAward + extraBonus);
+      setSessionCoinBreakdown(prev => ({
+        ...prev,
+        base: prev.base + coinAward,
+        streak: prev.streak + extraBonus
+      }));
       setStreaks(newStreaks);
 
       setDeck(prev => {
@@ -443,8 +457,8 @@ function App() {
   };
 
   const handleReturnToStart = () => {
-    if (gameState === 'playing' && (gameConfig?.gameMode === 'survival' || gameConfig?.gameMode === 'time_attack')) {
-      // For these modes, manual quit counts as "End of Run" so progress is saved/shown
+    if (gameState === 'playing') {
+      // For all modes, manual quit counts as "End of Run" so progress is saved/shown
       setGameState('game_over');
       navigate('/result');
     } else {
@@ -604,6 +618,33 @@ function App() {
                 )}
               </>
             )}
+            {/* Coin Summary Section */}
+            <div className="coin-summary-card glass-panel card-pop">
+              <h3>{t.earned_this_game} 🪙</h3>
+              <div className="coin-breakdown">
+                <div className="breakdown-item">
+                  <span>{t.regular_points}</span>
+                  <span>+{sessionCoinBreakdown.base}</span>
+                </div>
+                {sessionCoinBreakdown.streak > 0 && (
+                  <div className="breakdown-item streak">
+                    <span>{t.streak_bonus} 🔥</span>
+                    <span>+{sessionCoinBreakdown.streak}</span>
+                  </div>
+                )}
+                {sessionCoinBreakdown.bonus > 0 && (
+                  <div className="breakdown-item bonus">
+                    <span>{t.special_bonus} ✨</span>
+                    <span>+{sessionCoinBreakdown.bonus}</span>
+                  </div>
+                )}
+                <div className="breakdown-total">
+                  <span>{t.total_coins}</span>
+                  <span>{sessionCoinBreakdown.base + sessionCoinBreakdown.streak + sessionCoinBreakdown.bonus} 🪙</span>
+                </div>
+              </div>
+            </div>
+
             <button onClick={handleReturnToStart}>
               {gameState === 'victory' ? t.play_again : t.try_again}
             </button>
