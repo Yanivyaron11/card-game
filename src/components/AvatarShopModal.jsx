@@ -196,7 +196,7 @@ function AvatarShopModal({
                                                     })}
                                                 >
                                                     <div className="shop-item-emoji">
-                                                        <div className="premium-avatar-box" style={{ width: '70px' }}>
+                                                        <div className="premium-avatar-box" style={{ width: '55px' }}>
                                                             <img src={skin.image} alt={skin.name[language]} className="avatar-img-premium" />
                                                         </div>
                                                     </div>
