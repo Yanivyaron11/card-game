@@ -6,11 +6,14 @@
     width: 100%;
     max-width: 550px;
     padding: 1.5rem;
+    position: relative;
+    padding-top: 3.5rem;
+    /* Space for absolute controls */
 }
 
 .start-screen h2 {
     font-size: 1.5rem;
-    margin: 0.5rem 0 0.2rem 0;
+    margin: 0 0 0.2rem 0;
 }
 
 .total-questions-count {
@@ -186,23 +189,24 @@
 .top-controls {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1.2rem;
     display: flex;
     gap: 0.8rem;
 }
 
 .icon-toggle-btn {
-    padding: 0;
-    width: 45px;
-    height: 45px;
-    font-size: 1.5rem;
-    border-radius: 50%;
+    padding: 0 2px 0 0;
+    /* Optical centering nudge */
+    width: 26px;
+    height: 26px;
+    font-size: 1.1rem;
+    border-radius: 6px;
     background: var(--glass-bg);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
@@ -213,13 +217,14 @@
 }
 
 .total-coins-display {
+    height: 26px;
     background: rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    padding: 0 0.8rem;
+    border-radius: 13px;
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -237,7 +242,7 @@
 }
 
 .coin-count {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -268,6 +273,32 @@
 
     [dir="rtl"] .start-screen h2 {
         text-align: right;
+    }
+
+    .top-controls {
+        top: 0.8rem;
+        gap: 0.4rem;
+    }
+
+    .start-screen {
+        padding-top: 3.2rem;
+    }
+
+    .total-coins-display {
+        height: 24px;
+        padding: 0 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .coin-count {
+        font-size: 0.8rem;
+    }
+
+    .icon-toggle-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 0.9rem;
+        border-radius: 6px;
     }
 
     .topic-options {
