@@ -24,7 +24,18 @@ export const avatars = [
             { id: 'queen', name: { en: 'Queen Bunny', he: 'באני המלכה' }, image: '/assets/avatars/bunny/queen.png', price: 450 }
         ]
     },
-    { id: 'foxy', emoji: '🦊', name: { en: 'Foxy', he: 'פוקסי' }, price: 0, category: 'free' },
+    {
+        id: 'foxy',
+        emoji: '🦊',
+        name: { en: 'Foxy', he: 'פוקסי' },
+        price: 0,
+        category: 'free',
+        skins: [
+            { id: 'sweet', name: { en: 'Sweet Foxy', he: 'פוקסי המתוק' }, image: '/assets/avatars/foxy/default.png', price: 200 },
+            { id: 'detective', name: { en: 'Detective Foxy', he: 'פוקסי הבלש' }, image: '/assets/avatars/foxy/detective.png', price: 300 },
+            { id: 'dancer', name: { en: 'Dancer Foxy', he: 'פוקסי הרקדן' }, image: '/assets/avatars/foxy/dancer.png', price: 400 }
+        ]
+    },
     { id: 'panda', emoji: '🐼', name: { en: 'PanPan', he: 'פן-פן' }, price: 0, category: 'free' },
     { id: 'penguin', emoji: '🐧', name: { en: 'Pingu', he: 'פינגו' }, price: 0, category: 'free' },
 
