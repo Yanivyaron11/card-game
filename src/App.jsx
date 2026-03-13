@@ -48,7 +48,7 @@ function SurvivalResult({ correct, language, survivalType }) {
           🏆 {t.new_record}
         </p>
       )}
-      <p style={{ opacity: 0.75, fontSize: '0.95rem', marginBottom: '1rem' }}>
+      <p style={{ opacity: 0.75, fontSize: '0.95rem', marginBottom: '0.5rem' }}>
         {survivalType === 'adult' ? t.survival_record_adult : t.survival_record_child}: {best}
       </p>
 
@@ -693,7 +693,7 @@ function App() {
             {/* Avatar display (only for single player modes) */}
             {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
               <div className="result-avatar">
-                <div className="premium-avatar-box" style={{ width: '150px', margin: '0 auto 1rem auto' }}>
+                <div className="premium-avatar-box" style={{ width: '100px', margin: '0 auto 0.5rem auto' }}>
                   {gameConfig.avatars[1].image ? (
                     <img src={gameConfig.avatars[1].image} alt={gameConfig.avatars[1].name[language]} className="avatar-img-premium" />
                   ) : (

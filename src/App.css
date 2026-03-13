@@ -105,9 +105,28 @@ h1 {
   font-size: 1.2rem;
 }
 
+.end-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  width: 95%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.end-screen h2 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.end-screen p {
+  margin: 0.2rem 0;
+}
+
 .coin-summary-card {
-  margin: 1.5rem auto;
-  padding: 1.5rem;
+  margin: 0.5rem auto;
+  padding: 1rem;
   width: 90%;
   max-width: 400px;
   background: rgba(255, 255, 255, 0.15);
