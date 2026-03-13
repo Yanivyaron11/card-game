@@ -40,12 +40,25 @@
     background: rgba(0, 0, 0, 0.2);
     padding: 0.3rem;
     border-radius: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.shop-tabs::-webkit-scrollbar {
+    display: none;
+    /* Blink, Webkit, Safari */
 }
 
 .shop-tab-btn {
     flex: 1;
     width: 0;
-    /* Ensures all tabs have identical width */
+    /* Ensures all tabs have identical width on desktop */
+    min-width: 100px;
+    /* Minimum width for mobile scroll readability */
+    white-space: nowrap;
     padding: 0.8rem 0.2rem;
     border: none;
     background: transparent;
