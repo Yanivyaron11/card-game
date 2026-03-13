@@ -1,15 +1,47 @@
+/* Full Screen Shop Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    backdrop-filter: blur(8px);
+    padding: 0;
+    /* Remove padding to allow modal to hit screen edges */
+}
+
 .shop-modal {
     max-width: 550px;
     /* Matches .start-screen for visual consistency */
-    width: 95%;
-    height: 92vh;
+    width: 100%;
+    height: 100vh;
+    /* All the way down */
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
-    background: rgba(45, 27, 105, 0.95);
-    border: 3px solid var(--accent);
+    padding: 2rem;
+    /* Matches .glass-panel */
+    background: var(--glass-bg);
+    /* Use shared glass background */
+    backdrop-filter: blur(20px);
+    border: none;
+    /* Let glass-panel handle borders or use subtle one */
+    border-radius: 0;
+    /* Full height looks better with 0 radius */
     box-sizing: border-box;
-    /* Ensure padding doesn't affect width */
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 601px) {
+    .shop-modal {
+        border-left: 1px solid var(--glass-border);
+        border-right: 1px solid var(--glass-border);
+    }
 }
 
 .shop-header {
