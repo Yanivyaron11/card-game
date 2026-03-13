@@ -25,8 +25,8 @@ export const avatars = [
     { id: 'alien', emoji: '👽', name: { en: 'Zork', he: 'זורק' }, price: 450, category: 'premium' },
 
     // Legendary (500-1000)
-    { id: 'unicorn', emoji: '🦄', name: { en: 'Lulu', he: 'לולו' }, price: 500, category: 'legendary' },
-    { id: 'dino', emoji: '🦖', name: { en: 'Rex', he: 'רקס' }, price: 550, category: 'legendary' },
+    { id: 'unicorn', emoji: '🦄', name: { en: 'Luca', he: 'לוקה' }, price: 500, category: 'legendary' },
+    { id: 'dog', emoji: '🐶', name: { en: 'Lulu', he: 'לולו' }, price: 550, category: 'legendary' },
     { id: 'dragon', emoji: '🐲', name: { en: 'Draco', he: 'דרקו' }, price: 750, category: 'legendary' },
     { id: 'wizard', emoji: '🧙', name: { en: 'Merlin', he: 'מרלין' }, price: 950, category: 'legendary' },
     { id: 'ghost', emoji: '👻', name: { en: 'Spooky', he: 'ספוקי' }, price: 1000, category: 'legendary' }
