@@ -92,6 +92,12 @@ function App() {
     // Default unlocked: Leo, Bunny, Foxy, Panda, Penguin
     return ['leo', 'bunny', 'foxy', 'panda', 'penguin'];
   });
+  const [unlockedTopics, setUnlockedTopics] = useState(() => {
+    const saved = localStorage.getItem('unlocked_topics');
+    if (saved) return JSON.parse(saved);
+    // All current group IDs except judaism_group
+    return ['israel_group', 'nature_group', 'science_group', 'world_group', 'culture_group', 'entertainment_group', 'sports_group', 'lifestyle_group', 'general'];
+  });
   const [sessionCoinBreakdown, setSessionCoinBreakdown] = useState({
     base: 0,
     streak: 0,
@@ -107,6 +113,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem('unlocked_avatars', JSON.stringify(unlockedAvatars));
   }, [unlockedAvatars]);
+
+  useEffect(() => {
+    localStorage.setItem('unlocked_topics', JSON.stringify(unlockedTopics));
+  }, [unlockedTopics]);
 
   useEffect(() => {
     if (rewardToast) {
@@ -135,6 +145,16 @@ function App() {
     if (totalCoins >= price && !unlockedAvatars.includes(avatarId)) {
       setTotalCoins(prev => prev - price);
       setUnlockedAvatars(prev => [...prev, avatarId]);
+      playSound('victory');
+      return true;
+    }
+    return false;
+  };
+
+  const buyTopic = (topicId, price) => {
+    if (totalCoins >= price && !unlockedTopics.includes(topicId)) {
+      setTotalCoins(prev => prev - price);
+      setUnlockedTopics(prev => [...prev, topicId]);
       playSound('victory');
       return true;
     }
@@ -519,6 +539,8 @@ function App() {
             totalCoins={totalCoins}
             unlockedAvatars={unlockedAvatars}
             onBuyAvatar={buyAvatar}
+            unlockedTopics={unlockedTopics}
+            onBuyTopic={buyTopic}
           />
         } />
 

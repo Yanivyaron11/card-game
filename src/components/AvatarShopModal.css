@@ -33,6 +33,38 @@
     border: 1px solid var(--accent);
 }
 
+.shop-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.3rem;
+    border-radius: 12px;
+}
+
+.shop-tab-btn {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.shop-tab-btn.active {
+    background: var(--accent);
+    color: var(--text-dark);
+    box-shadow: 0 4px 10px rgba(255, 196, 61, 0.3);
+}
+
+.shop-tab-btn:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .shop-body {
     overflow-y: auto;
     padding-right: 0.5rem;
@@ -136,6 +168,24 @@
 .shop-modal::-webkit-scrollbar-thumb {
     background: var(--accent);
     border-radius: 4px;
+}
+
+.topic-item {
+    background: rgba(45, 27, 105, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.topic-item.unlocked {
+    border-color: var(--secondary);
+    background: rgba(78, 205, 196, 0.15);
+}
+
+.owned-label {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: bold;
+    margin-top: auto;
+    padding: 0.5rem;
 }
 
 @media (max-width: 500px) {

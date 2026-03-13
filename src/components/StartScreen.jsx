@@ -11,7 +11,7 @@ import { avatars } from '../data/avatars';
 import AvatarShopModal from './AvatarShopModal';
 import './StartScreen.css';
 
-function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlockedAvatars, onBuyAvatar }) {
+function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlockedAvatars, onBuyAvatar, unlockedTopics, onBuyTopic }) {
     const t = translations[language];
 
     // ... (logic remains same until return)
@@ -20,8 +20,12 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
         if (!topics || !Array.isArray(topics)) return [];
         let leaves = [];
         topics.forEach(t => {
-            if (t.subTopics) leaves.push(...t.subTopics);
-            else leaves.push(t);
+            // Check if either the group itself is unlocked, or if it's a topic not in a group
+            const isGroupUnlocked = unlockedTopics.includes(t.id);
+            if (isGroupUnlocked) {
+                if (t.subTopics) leaves.push(...t.subTopics);
+                else leaves.push(t);
+            }
         });
         return leaves;
     };
@@ -272,6 +276,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                 }}
                 activeCategories={activePool}
                 onCategoryToggle={handleCategoryPoolToggle}
+                unlockedTopics={unlockedTopics}
             />
 
             <NewCategoryModal
@@ -309,6 +314,8 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                     handleAvatarSelect(avatar, 1);
                 }}
                 selectedAvatars={selectedAvatars}
+                unlockedTopics={unlockedTopics}
+                onBuyTopic={onBuyTopic}
             />
 
             <h2>{t.lets_play}</h2>

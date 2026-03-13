@@ -14,7 +14,8 @@ function SettingsModal({
     activeCategories,
     onCategoryToggle,
     musicTrack,
-    onMusicChange
+    onMusicChange,
+    unlockedTopics
 }) {
     const [expandedTopics, setExpandedTopics] = useState([]);
     const [isEarningGuideOpen, setIsEarningGuideOpen] = useState(false);
@@ -130,27 +131,34 @@ function SettingsModal({
                                         return (
                                             <div
                                                 key={topic.id}
-                                                className={`pool-item ${activeCategories.includes(topic.id) ? 'selected' : ''}`}
-                                                onClick={() => onCategoryToggle(topic.id)}
+                                                className={`pool-item ${activeCategories.includes(topic.id) ? 'selected' : ''} ${!unlockedTopics.includes(topic.id) ? 'locked' : ''}`}
+                                                onClick={() => unlockedTopics.includes(topic.id) && onCategoryToggle(topic.id)}
                                             >
-                                                <span className="pool-name">{topic.name[language]}</span>
+                                                <span className="pool-name">
+                                                    {!unlockedTopics.includes(topic.id) && <span className="lock-icon">🔒 </span>}
+                                                    {topic.name[language]}
+                                                </span>
                                             </div>
                                         );
                                     }
 
+                                    const isUnlocked = unlockedTopics.includes(topic.id);
                                     const isExpanded = expandedTopics.includes(topic.id);
                                     const selectedSubTopics = topic.subTopics.filter(sub => activeCategories.includes(sub.id));
                                     const isPartiallySelected = selectedSubTopics.length > 0 && selectedSubTopics.length < topic.subTopics.length;
                                     const isFullySelected = selectedSubTopics.length === topic.subTopics.length && topic.subTopics.length > 0;
 
                                     return (
-                                        <div key={topic.id} className="settings-topic-group">
+                                        <div key={topic.id} className={`settings-topic-group ${!isUnlocked ? 'locked' : ''}`}>
                                             <div
                                                 className={`pool-item folder-item ${isFullySelected ? 'selected' : isPartiallySelected ? 'partially-selected' : ''}`}
-                                                onClick={() => toggleTopicExpand(topic.id)}
+                                                onClick={() => isUnlocked && toggleTopicExpand(topic.id)}
                                             >
-                                                <span className="pool-name">{topic.name[language]}</span>
-                                                <div className={`folder-chevron ${isExpanded ? 'expanded' : ''}`}>▼</div>
+                                                <span className="pool-name">
+                                                    {!isUnlocked && <span className="lock-icon">🔒 </span>}
+                                                    {topic.name[language]}
+                                                </span>
+                                                {isUnlocked && <div className={`folder-chevron ${isExpanded ? 'expanded' : ''}`}>▼</div>}
                                             </div>
                                             {isExpanded && (
                                                 <div className="settings-subtopics-container">

@@ -5,18 +5,26 @@ A fun, interactive, and educational card game designed for children and trivia l
 ## 🚀 Features
 
 - **Persistent Global Economy**: A shared "Family Bank" that saves coins across game sessions using local storage.
-- **Avatar Shop**: A dedicated storefront to unlock **15+ unique avatars** classified into Free, Premium, and Legendary categories using earned coins.
-- **Tiered Earning System**: Higher difficulty questions reward more coins (L1: 1, L2: 2, L3: 3) with a **5-coin bonus** for a streak of 3 correct answers.
-- **Survival Mode**: A high-stakes endurance mode with **level-up progression** (Level 1-3), **progress ladder**, and a **Pause** functionality to safely take a break.
+- **Advanced Shop System**:
+  - **Tabs**: Organized into **Avatars** and **Themes**.
+  - **Purchasable Topics**: Unlock entire question categories (like **Judaism**) for a premium coin price.
+  - **Persistent Unlocks**: Everything you buy is saved to your local storage.
+- **Survival Mode (Junior & Master)**:
+  - Two distinct tracks: **Junior** (🟢) and **Master** (🔴) to cater to different age groups and skill levels.
+  - Separate high-score records for each track.
 - **Multi-Game Modes**:
   - **Solo**: Relaxed play at your own pace.
-  - **Time Attack**: Race against a global countdown.
+  - **Time Attack**: Race against a global countdown with a dedicated time-centered UI.
   - **1v1 Mastery**: Battle a friend with a shared coin bank and a **Rebound** system—if they fail, you can swoop in for double points!
 - **Power-up System**: Spend your hard-earned coins for high-stakes help:
   - **🌓 50/50**: Eliminates two wrong answers.
   - **💡 Hint**: Provides a contextual clue.
   - **⚡ Solve**: Automatically identifies the correct answer.
 - **Dynamic Feedback**: Vibrant on-screen feedback messages and **Win Streaks** (3+ in a row triggers special visual effects).
+- **Settings & Control**: 
+  - Toggle sound, music, and language.
+  - **Fine-grained Category Control**: Choose exactly which topics appear in your game.
+  - **Locked Content Visibility**: Locked themes appear with a 🔒 icon in settings until purchased.
 - **Premium UI Components**: Custom-designed **Alert Modals** and **Quit Confirmations** with glassmorphism, blur effects, and smooth animations.
 - **Detailed Session Summary**: A comprehensive post-game breakdown showing base coins, streak bonuses, and special rewards (records, completion, time). It also tracks and deducts coins spent on power-ups.
 - **Smart Record Tracking**: 

@@ -126,6 +126,11 @@ export const translations = {
         special_bonus: "Special Bonus",
         spent_on_powerups: "Spent on Power-ups",
         game_interrupted: "See you next round! 👋",
+        shop_tab_avatars: "Avatars",
+        shop_tab_themes: "Themes",
+        buy: "Buy",
+        owned: "Owned",
+        topic_shop_title: "Theme Shop",
     },
 
 
@@ -255,5 +260,10 @@ export const translations = {
         special_bonus: "בונוס מיוחד",
         spent_on_powerups: "הוצאה על כוחות על",
         game_interrupted: "נתראה בסיבוב הבא! 👋",
+        shop_tab_avatars: "אווטארים",
+        shop_tab_themes: "ערכות נושא",
+        buy: "קנה",
+        owned: "בבעלותך",
+        topic_shop_title: "חנות ערכות נושא",
     }
 };
