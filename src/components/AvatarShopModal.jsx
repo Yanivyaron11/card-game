@@ -164,65 +164,72 @@ function AvatarShopModal({
                             </div>
                         ))
                     ) : activeTab === 'skins' ? (
-                        <div className="shop-category-section">
-                            <h3>{t.shop_tab_skins}</h3>
-                            <div className="shop-grid">
-                                {avatars.filter(a => a.skins).flatMap(avatar =>
-                                    avatar.skins.map(skin => {
-                                        const skinFullId = `${avatar.id}_${skin.id}`;
-                                        const isUnlocked = unlockedSkins.includes(skinFullId);
-                                        const isSelected = selectedAvatars[1]?.currentSkin === skin.id && selectedAvatars[1]?.id === avatar.id;
-                                        const isBaseUnlocked = unlockedAvatars.includes(avatar.id);
+                        <div className="shop-skins-container">
+                            {avatars.filter(a => a.skins).map(avatar => (
+                                <div key={avatar.id} className="character-skins-group">
+                                    <div className="character-info-row">
+                                        <div className="premium-avatar-box mini-box">
+                                            <span style={{ fontSize: '1.2rem' }}>{avatar.emoji}</span>
+                                        </div>
+                                        <h3 className="character-skins-title">{avatar.name[language]}</h3>
+                                    </div>
+                                    <div className="character-skins-row">
+                                        {avatar.skins.map(skin => {
+                                            const skinFullId = `${avatar.id}_${skin.id}`;
+                                            const isUnlocked = unlockedSkins.includes(skinFullId);
+                                            const isSelected = selectedAvatars[1]?.currentSkin === skin.id && selectedAvatars[1]?.id === avatar.id;
+                                            const isBaseUnlocked = unlockedAvatars.includes(avatar.id);
 
-                                        return (
-                                            <div
-                                                key={skinFullId}
-                                                className={`shop-item skin-item ${isUnlocked ? 'unlocked' : 'locked'} ${isSelected ? 'selected' : ''}`}
-                                                onClick={() => setPreviewItem({
-                                                    ...skin,
-                                                    id: skinFullId,
-                                                    baseId: avatar.id,
-                                                    isUnlocked,
-                                                    isActive: activeSkins.includes(skinFullId),
-                                                    onToggle: onToggleSkin,
-                                                    onBuy: handleBuySkin,
-                                                    type: 'skin'
-                                                })}
-                                            >
-                                                <div className="shop-item-emoji">
-                                                    <div className="premium-avatar-box" style={{ width: '70px' }}>
-                                                        <img src={skin.image} alt={skin.name[language]} className="avatar-img-premium" />
+                                            return (
+                                                <div
+                                                    key={skinFullId}
+                                                    className={`shop-item skin-item ${isUnlocked ? 'unlocked' : 'locked'} ${isSelected ? 'selected' : ''}`}
+                                                    onClick={() => setPreviewItem({
+                                                        ...skin,
+                                                        id: skinFullId,
+                                                        baseId: avatar.id,
+                                                        isUnlocked,
+                                                        isActive: activeSkins.includes(skinFullId),
+                                                        onToggle: onToggleSkin,
+                                                        onBuy: handleBuySkin,
+                                                        type: 'skin'
+                                                    })}
+                                                >
+                                                    <div className="shop-item-emoji">
+                                                        <div className="premium-avatar-box" style={{ width: '70px' }}>
+                                                            <img src={skin.image} alt={skin.name[language]} className="avatar-img-premium" />
+                                                        </div>
                                                     </div>
+                                                    <div className="shop-item-name">{skin.name[language]}</div>
+                                                    {isUnlocked ? (
+                                                        <div
+                                                            className={`toggle-switch ${activeSkins.includes(skinFullId) ? 'active' : ''}`}
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                onToggleSkin(skinFullId);
+                                                            }}
+                                                        >
+                                                            <div className="toggle-knob"></div>
+                                                        </div>
+                                                    ) : (
+                                                        <button
+                                                            className="shop-btn buy-btn"
+                                                            disabled={totalCoins < skin.price || !isBaseUnlocked}
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                handleBuySkin({ ...skin, id: skinFullId });
+                                                            }}
+                                                        >
+                                                            🪙 {skin.price}
+                                                        </button>
+                                                    )}
+                                                    {!isBaseUnlocked && <div style={{ fontSize: '0.6rem', color: '#ff6b6b' }}>{language === 'he' ? 'נעל דמות בסיס תחילה' : 'Unlock base avatar first'}</div>}
                                                 </div>
-                                                <div className="shop-item-name">{skin.name[language]}</div>
-                                                {isUnlocked ? (
-                                                    <div
-                                                        className={`toggle-switch ${activeSkins.includes(skinFullId) ? 'active' : ''}`}
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            onToggleSkin(skinFullId);
-                                                        }}
-                                                    >
-                                                        <div className="toggle-knob"></div>
-                                                    </div>
-                                                ) : (
-                                                    <button
-                                                        className="shop-btn buy-btn"
-                                                        disabled={totalCoins < skin.price || !isBaseUnlocked}
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            handleBuySkin({ ...skin, id: skinFullId });
-                                                        }}
-                                                    >
-                                                        🪙 {skin.price}
-                                                    </button>
-                                                )}
-                                                {!isBaseUnlocked && <div style={{ fontSize: '0.6rem', color: '#ff6b6b' }}>{language === 'he' ? 'נעל דמות בסיס תחילה' : 'Unlock base avatar first'}</div>}
-                                            </div>
-                                        );
-                                    })
-                                )}
-                            </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     ) : (
                         <div className="shop-category-section">
