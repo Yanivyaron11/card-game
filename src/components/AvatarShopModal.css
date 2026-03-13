@@ -203,15 +203,28 @@
 
 @media (max-width: 500px) {
     .shop-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.6rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
     }
 
     .shop-item {
-        padding: 0.6rem;
+        padding: 0.8rem;
+    }
+
+    .topic-item {
+        min-height: 160px;
     }
 
     .shop-item-emoji {
         font-size: 2rem;
+    }
+
+    .shop-item-name {
+        font-size: 0.8rem;
+    }
+
+    .shop-btn {
+        padding: 0.4rem;
+        font-size: 0.8rem;
     }
 }
