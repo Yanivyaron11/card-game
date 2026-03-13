@@ -59,28 +59,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
             </div>
 
             <div className="stats-header glass-panel">
-                {config.gameMode === 'time_attack' ? (
-                    <div className="stat-item timer-display-global">
-                        <div className="level-badge mini">{t.level} {config.difficulty}</div>
-                        <h3>{t.time_left.replace('{n}', timeLeft)}</h3>
-                        {config.avatars?.[1] && (
-                            <div className="avatar-display-timeattack">
-                                <span className="player-avatar-emoji mini">{config.avatars[1].emoji}</span>
-                                <span className="player-avatar-name mini">{config.avatars[1].name[language]}</span>
-                            </div>
-                        )}
-                        <div className="hearts-coins-row">
-                            <div className="hearts mini">
-                                {Array.from({ length: Math.max(0, (lives[1] || 0) + 1) }).map((_, i) => (
-                                    <span key={i} className="heart-icon mini">❤️</span>
-                                ))}
-                            </div>
-                            <div className="stat-item coins-display">
-                                <div key={coins[1]} className="coins-value coin-pop">🪙 {coins[1]}</div>
-                            </div>
-                        </div>
-                    </div>
-                ) : config.gameMode === 'solo' ? (
+                {config.gameMode === 'solo' || config.gameMode === 'time_attack' ? (
                     <>
                         <div className="stat-item level-display">
                             <div className="level-badge">{t.level} {config.difficulty}</div>
@@ -92,11 +71,9 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                 ))}
                             </div>
                         </div>
-                        {config.gameMode !== 'survival' && (
-                            <div className="stat-item coins-display">
-                                <div key={coins[1]} className="coins-value coin-pop">🪙 {coins[1]}</div>
-                            </div>
-                        )}
+                        <div className="stat-item coins-display">
+                            <div key={coins[1]} className="coins-value coin-pop">🪙 {coins[1]}</div>
+                        </div>
                     </>
                 ) : (
                     <div className="multiplayer-stats">
@@ -148,6 +125,15 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                     </div>
                 )}
             </div>
+
+            {config.gameMode === 'time_attack' && (
+                <div className="timer-row card-pop">
+                    <div className="global-countdown">
+                        <span className="timer-icon">⏰</span>
+                        <span className="timer-text">{t.time_left.replace('{n}', timeLeft)}</span>
+                    </div>
+                </div>
+            )}
 
             <div
                 className={`card-grid size-${gridCols}`}

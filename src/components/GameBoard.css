@@ -8,32 +8,49 @@
 
 .stats-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 0.50rem 1rem;
-    border-radius: 50px;
-    width: 100%;
-    max-width: 500px;
-}
-
-.timer-display-global {
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.15);
+    gap: 1.5rem;
     padding: 0.5rem 1.5rem;
-    border-radius: 25px;
-    border: 2px solid var(--secondary);
-    box-shadow: 0 0 15px rgba(78, 205, 196, 0.2);
+    border-radius: 50px;
+    width: 95%;
+    max-width: 600px;
+    margin: 0 auto 0.5rem auto;
 }
 
-.timer-display-global h3 {
-    margin: 0;
+.stats-header.glass-panel {
+    padding: 0.6rem 1.5rem;
+}
+
+.timer-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.global-countdown {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    border: 2px solid var(--secondary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timer-icon {
+    font-size: 1.5rem;
+    animation: pulse 1s infinite;
+}
+
+.timer-text {
     font-size: 1.4rem;
-    color: #4ecdc4;
-    text-shadow: 0 0 5px rgba(78, 205, 196, 0.5);
+    font-weight: 900;
+    color: var(--secondary);
+    text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+    font-variant-numeric: tabular-nums;
 }
 
 .hearts-coins-row {
