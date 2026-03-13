@@ -118,6 +118,19 @@ function App() {
     localStorage.setItem('unlocked_topics', JSON.stringify(unlockedTopics));
   }, [unlockedTopics]);
 
+  // Migration: If user had old topics unlocked, re-lock the ones that are now premium
+  useEffect(() => {
+    const premiumGroups = ['judaism_group', 'sports_group', 'entertainment_group', 'lifestyle_group', 'world_group'];
+    const hasToRelock = unlockedTopics.some(id => premiumGroups.includes(id)) && !localStorage.getItem('premium_migration_done');
+
+    if (hasToRelock) {
+      // Keep only really basic ones
+      const coreOnly = ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general'];
+      setUnlockedTopics(coreOnly);
+      localStorage.setItem('premium_migration_done', 'true');
+    }
+  }, []);
+
   useEffect(() => {
     if (rewardToast) {
       const timer = setTimeout(() => setRewardToast(null), 3000);
