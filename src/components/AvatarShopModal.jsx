@@ -22,8 +22,7 @@ function AvatarShopModal({
     const avatarCategories = [
         { id: 'free', label: language === 'he' ? 'חינם' : 'Free' },
         { id: 'premium', label: language === 'he' ? 'פרימיום' : 'Premium' },
-        { id: 'legendary', label: language === 'he' ? 'אגדי' : 'Legendary' },
-        { id: 'skins', label: language === 'he' ? 'סקינים' : 'Skins' }
+        { id: 'legendary', label: language === 'he' ? 'אגדי' : 'Legendary' }
     ];
 
     // Define purchasable topics
