@@ -3,12 +3,19 @@
 }
 
 .earning-guide-content {
-    max-width: 400px;
+    max-width: 450px;
     width: 90%;
-    max-height: 80vh;
+    height: auto;
+    max-height: 90vh;
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    background: rgba(30, 20, 80, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
 }
 
 .earning-rules-list {
