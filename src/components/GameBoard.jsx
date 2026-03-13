@@ -81,7 +81,13 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                             <div className="player-label">
                                 {config.avatars?.[1] ? (
                                     <>
-                                        <span className="player-avatar-emoji">{config.avatars[1].emoji}</span>
+                                        <div className="premium-avatar-box" style={{ width: '50px', borderRadius: '10px', borderWidth: '2px' }}>
+                                            {config.avatars[1].image ? (
+                                                <img src={config.avatars[1].image} alt={config.avatars[1].name[language]} className="avatar-img-premium" />
+                                            ) : (
+                                                <span className="player-avatar-emoji" style={{ fontSize: '2rem' }}>{config.avatars[1].emoji}</span>
+                                            )}
+                                        </div>
                                         <span className="player-avatar-name">{config.avatars[1].name[language]}</span>
                                     </>
                                 ) : (language === 'he' ? 'שחקן 1' : 'Player 1')}
@@ -107,7 +113,13 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                             <div className="player-label">
                                 {config.avatars?.[2] ? (
                                     <>
-                                        <span className="player-avatar-emoji">{config.avatars[2].emoji}</span>
+                                        <div className="premium-avatar-box" style={{ width: '50px', borderRadius: '10px', borderWidth: '2px' }}>
+                                            {config.avatars[2].image ? (
+                                                <img src={config.avatars[2].image} alt={config.avatars[2].name[language]} className="avatar-img-premium" />
+                                            ) : (
+                                                <span className="player-avatar-emoji" style={{ fontSize: '2rem' }}>{config.avatars[2].emoji}</span>
+                                            )}
+                                        </div>
                                         <span className="player-avatar-name">{config.avatars[2].name[language]}</span>
                                     </>
                                 ) : (language === 'he' ? 'שחקן 2' : 'Player 2')}

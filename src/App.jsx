@@ -98,6 +98,23 @@ function App() {
     // Core categories unlocked by default
     return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general'];
   });
+  const [unlockedSkins, setUnlockedSkins] = useState(() => {
+    const saved = localStorage.getItem('unlocked_skins');
+    if (saved) return JSON.parse(saved);
+    // Default unlocked: Leo's default skin
+    return ['leo_default'];
+  });
+  const [activeAvatars, setActiveAvatars] = useState(() => {
+    const saved = localStorage.getItem('active_avatars');
+    if (saved) return JSON.parse(saved);
+    // Default active: All initial unlocked ones
+    return ['leo', 'bunny', 'foxy', 'panda', 'penguin'];
+  });
+  const [activeSkins, setActiveSkins] = useState(() => {
+    const saved = localStorage.getItem('active_skins');
+    if (saved) return JSON.parse(saved);
+    return ['leo_default'];
+  });
   const [sessionCoinBreakdown, setSessionCoinBreakdown] = useState({
     base: 0,
     streak: 0,
@@ -117,6 +134,18 @@ function App() {
   useEffect(() => {
     localStorage.setItem('unlocked_topics', JSON.stringify(unlockedTopics));
   }, [unlockedTopics]);
+
+  useEffect(() => {
+    localStorage.setItem('unlocked_skins', JSON.stringify(unlockedSkins));
+  }, [unlockedSkins]);
+
+  useEffect(() => {
+    localStorage.setItem('active_avatars', JSON.stringify(activeAvatars));
+  }, [activeAvatars]);
+
+  useEffect(() => {
+    localStorage.setItem('active_skins', JSON.stringify(activeSkins));
+  }, [activeSkins]);
 
   // Migration: If user had old topics/avatars unlocked, ensure consistency with new economy
   useEffect(() => {
@@ -170,6 +199,35 @@ function App() {
       return true;
     }
     return false;
+  };
+
+  const buySkin = (skinId, price) => {
+    if (totalCoins >= price && !unlockedSkins.includes(skinId)) {
+      setTotalCoins(prev => prev - price);
+      setUnlockedSkins(prev => [...prev, skinId]);
+      setActiveSkins(prev => [...prev, skinId]); // Activate by default on purchase
+      playSound('victory');
+      return true;
+    }
+    return false;
+  };
+
+  const toggleAvatarActivation = (avatarId) => {
+    setActiveAvatars(prev => {
+      if (prev.includes(avatarId)) {
+        return prev.filter(id => id !== avatarId);
+      }
+      return [...prev, avatarId];
+    });
+  };
+
+  const toggleSkinActivation = (skinId) => {
+    setActiveSkins(prev => {
+      if (prev.includes(skinId)) {
+        return prev.filter(id => id !== skinId);
+      }
+      return [...prev, skinId];
+    });
   };
 
   const buyTopic = (topicId, price) => {
@@ -559,9 +617,15 @@ function App() {
             onLanguageChange={setLanguage}
             totalCoins={totalCoins}
             unlockedAvatars={unlockedAvatars}
+            activeAvatars={activeAvatars}
             onBuyAvatar={buyAvatar}
             unlockedTopics={unlockedTopics}
             onBuyTopic={buyTopic}
+            unlockedSkins={unlockedSkins}
+            activeSkins={activeSkins}
+            onBuySkin={buySkin}
+            onToggleAvatar={toggleAvatarActivation}
+            onToggleSkin={toggleSkinActivation}
           />
         } />
 
@@ -635,7 +699,13 @@ function App() {
             {/* Avatar display (only for single player modes) */}
             {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
               <div className="result-avatar">
-                <span className="result-emoji">{gameConfig.avatars[1].emoji}</span>
+                <div className="premium-avatar-box" style={{ width: '150px', margin: '0 auto 1rem auto' }}>
+                  {gameConfig.avatars[1].image ? (
+                    <img src={gameConfig.avatars[1].image} alt={gameConfig.avatars[1].name[language]} className="avatar-img-premium" />
+                  ) : (
+                    <span className="result-emoji" style={{ fontSize: '4rem' }}>{gameConfig.avatars[1].emoji}</span>
+                  )}
+                </div>
                 <p>{gameConfig.avatars[1].name[language]}</p>
               </div>
             )}

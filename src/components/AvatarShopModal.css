@@ -1,7 +1,7 @@
 .shop-modal {
     max-width: 700px;
     width: 95%;
-    max-height: 85vh;
+    height: 92vh;
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
@@ -66,6 +66,8 @@
 }
 
 .shop-body {
+    flex: 1;
+    min-height: 0;
     overflow-y: auto;
     padding-right: 0.5rem;
 }
@@ -215,6 +217,10 @@
         min-height: 160px;
     }
 
+    .shop-body {
+        height: 60vh;
+    }
+
     .shop-item-emoji {
         font-size: 2rem;
     }
@@ -226,5 +232,198 @@
     .shop-btn {
         padding: 0.4rem;
         font-size: 0.8rem;
+    }
+}
+
+
+.shop-skin-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.shop-item.selected {
+    border-color: var(--secondary);
+    background: rgba(78, 205, 196, 0.1);
+}
+
+.select-btn {
+    background: var(--secondary) !important;
+}
+
+.selected-btn {
+    background: #4ade80 !important;
+    cursor: default;
+}
+
+/* Premium Toggle Switch */
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    cursor: pointer;
+    background: #2c3e50;
+    /* Darker off state */
+    border-radius: 26px;
+    transition: background 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 0.8rem auto 0;
+    display: block;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-switch.active {
+    background: #f1c40f;
+    /* Vibrant Gold/Yellow */
+    border-color: #fff;
+    box-shadow: 0 0 12px rgba(241, 196, 15, 0.4);
+}
+
+.toggle-knob {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch.active .toggle-knob {
+    transform: translateX(24px);
+}
+
+/* Big Show Preview System */
+.big-show-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 12px;
+    animation: fadeIn 0.3s ease;
+}
+
+.big-show-content {
+    background: linear-gradient(135deg, #2d1b69 0%, #1a1a2e 100%);
+    width: 95%;
+    max-width: 600px;
+    padding: 3rem 2rem;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0 0 70px rgba(255, 215, 0, 0.3);
+}
+
+.big-show-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+}
+
+[dir="rtl"] .big-show-close {
+    right: auto;
+    left: 25px;
+}
+
+.big-show-close:hover {
+    background: #ef4444;
+    transform: rotate(90deg);
+}
+
+.big-show-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+}
+
+.premium-avatar-box.big-view {
+    width: 320px;
+    height: 320px;
+    border-radius: 40px;
+    border: 3px solid var(--accent);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.7) 0%, rgba(45, 27, 105, 0.9) 100%);
+}
+
+.big-emoji {
+    font-size: 10rem;
+}
+
+.big-show-category {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    letter-spacing: 3px;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.big-show-details h2 {
+    font-size: 2.2rem;
+    color: white;
+    margin: 0;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.big-show-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.big-show-owned-badge {
+    color: #4ade80;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.3);
+    background: rgba(74, 222, 128, 0.1);
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    border: 2px solid rgba(74, 222, 128, 0.3);
+}
+
+.big-buy {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(255, 196, 61, 0.2);
+}
+
+.base-lock-warning {
+    margin-top: 1rem;
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

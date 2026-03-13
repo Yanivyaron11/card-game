@@ -159,3 +159,11 @@ h1 {
   font-weight: 900;
   color: #FFD700;
 }
+
+.result-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 10px rgba(255, 230, 109, 0.3));
+}

@@ -5,8 +5,15 @@ import { translations } from '../data/translations';
 import { playSound } from '../utils/sounds';
 import './AvatarShopModal.css';
 
-function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatars, onBuyAvatar, onSelectAvatar, selectedAvatars, unlockedTopics, onBuyTopic }) {
+function AvatarShopModal({
+    isOpen, onClose, language, totalCoins,
+    unlockedAvatars, activeAvatars, onBuyAvatar, onToggleAvatar,
+    onSelectAvatar, selectedAvatars,
+    unlockedTopics, onBuyTopic,
+    unlockedSkins, activeSkins, onToggleSkin, onBuySkin
+}) {
     const [activeTab, setActiveTab] = useState('avatars');
+    const [previewItem, setPreviewItem] = useState(null);
 
     if (!isOpen) return null;
 
@@ -15,7 +22,8 @@ function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatar
     const avatarCategories = [
         { id: 'free', label: language === 'he' ? 'חינם' : 'Free' },
         { id: 'premium', label: language === 'he' ? 'פרימיום' : 'Premium' },
-        { id: 'legendary', label: language === 'he' ? 'אגדי' : 'Legendary' }
+        { id: 'legendary', label: language === 'he' ? 'אגדי' : 'Legendary' },
+        { id: 'skins', label: language === 'he' ? 'סקינים' : 'Skins' }
     ];
 
     // Define purchasable topics
@@ -50,6 +58,18 @@ function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatar
         }
     };
 
+    const handleBuySkin = (skin) => {
+        if (totalCoins >= skin.price) {
+            onBuySkin(skin.id, skin.price);
+        } else {
+            playSound('error');
+        }
+    };
+
+    const handleSelectSkin = (avatar, skin) => {
+        onSelectAvatar({ ...avatar, image: skin.image, currentSkin: skin.id }, 1); // Simple P1 selection for now
+    };
+
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content shop-modal glass-panel card-pop" onClick={e => e.stopPropagation()}>
@@ -72,6 +92,12 @@ function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatar
                     >
                         {t.shop_tab_themes}
                     </button>
+                    <button
+                        className={`shop-tab-btn ${activeTab === 'skins' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('skins')}
+                    >
+                        {t.shop_tab_skins}
+                    </button>
                 </div>
 
                 <div className="shop-body">
@@ -85,22 +111,47 @@ function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatar
                                         const isSelected = selectedAvatars[1]?.id === avatar.id || selectedAvatars[2]?.id === avatar.id;
 
                                         return (
-                                            <div key={avatar.id} className={`shop-item ${isUnlocked ? 'unlocked' : 'locked'}`}>
-                                                <div className="shop-item-emoji">{avatar.emoji}</div>
+                                            <div
+                                                key={avatar.id}
+                                                className={`shop-item ${isUnlocked ? 'unlocked' : 'locked'}`}
+                                                onClick={() => setPreviewItem({
+                                                    ...avatar,
+                                                    isUnlocked,
+                                                    isActive: activeAvatars.includes(avatar.id),
+                                                    onToggle: onToggleAvatar,
+                                                    onBuy: handleBuyAvatar,
+                                                    type: 'avatar'
+                                                })}
+                                            >
+                                                <div className="shop-item-emoji">
+                                                    <div className="premium-avatar-box" style={{ width: '70px' }}>
+                                                        {avatar.image ? (
+                                                            <img src={avatar.image} alt={avatar.name[language]} className="avatar-img-premium" />
+                                                        ) : (
+                                                            <span style={{ fontSize: '2.5rem' }}>{avatar.emoji}</span>
+                                                        )}
+                                                    </div>
+                                                </div>
                                                 <div className="shop-item-name">{avatar.name[language]}</div>
 
                                                 {isUnlocked ? (
-                                                    <button
-                                                        className={`shop-btn select-btn ${isSelected ? 'active' : ''}`}
-                                                        onClick={() => !isSelected && onSelectAvatar(avatar)}
+                                                    <div
+                                                        className={`toggle-switch ${activeAvatars.includes(avatar.id) ? 'active' : ''}`}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            onToggleAvatar(avatar.id);
+                                                        }}
                                                     >
-                                                        {isSelected ? (language === 'he' ? 'נבחר' : 'Selected') : (language === 'he' ? 'בחר' : 'Select')}
-                                                    </button>
+                                                        <div className="toggle-knob"></div>
+                                                    </div>
                                                 ) : (
                                                     <button
                                                         className="shop-btn buy-btn"
                                                         disabled={totalCoins < avatar.price}
-                                                        onClick={() => handleBuyAvatar(avatar)}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            handleBuyAvatar(avatar);
+                                                        }}
                                                     >
                                                         🪙 {avatar.price}
                                                     </button>
@@ -111,6 +162,67 @@ function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatar
                                 </div>
                             </div>
                         ))
+                    ) : activeTab === 'skins' ? (
+                        <div className="shop-category-section">
+                            <h3>{t.shop_tab_skins}</h3>
+                            <div className="shop-grid">
+                                {avatars.filter(a => a.skins).flatMap(avatar =>
+                                    avatar.skins.map(skin => {
+                                        const skinFullId = `${avatar.id}_${skin.id}`;
+                                        const isUnlocked = unlockedSkins.includes(skinFullId);
+                                        const isSelected = selectedAvatars[1]?.currentSkin === skin.id && selectedAvatars[1]?.id === avatar.id;
+                                        const isBaseUnlocked = unlockedAvatars.includes(avatar.id);
+
+                                        return (
+                                            <div
+                                                key={skinFullId}
+                                                className={`shop-item skin-item ${isUnlocked ? 'unlocked' : 'locked'} ${isSelected ? 'selected' : ''}`}
+                                                onClick={() => setPreviewItem({
+                                                    ...skin,
+                                                    id: skinFullId,
+                                                    baseId: avatar.id,
+                                                    isUnlocked,
+                                                    isActive: activeSkins.includes(skinFullId),
+                                                    onToggle: onToggleSkin,
+                                                    onBuy: handleBuySkin,
+                                                    type: 'skin'
+                                                })}
+                                            >
+                                                <div className="shop-item-emoji">
+                                                    <div className="premium-avatar-box" style={{ width: '70px' }}>
+                                                        <img src={skin.image} alt={skin.name[language]} className="avatar-img-premium" />
+                                                    </div>
+                                                </div>
+                                                <div className="shop-item-name">{skin.name[language]}</div>
+                                                {isUnlocked ? (
+                                                    <div
+                                                        className={`toggle-switch ${activeSkins.includes(skinFullId) ? 'active' : ''}`}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            onToggleSkin(skinFullId);
+                                                        }}
+                                                    >
+                                                        <div className="toggle-knob"></div>
+                                                    </div>
+                                                ) : (
+                                                    <button
+                                                        className="shop-btn buy-btn"
+                                                        disabled={totalCoins < skin.price || !isBaseUnlocked}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            handleBuySkin({ ...skin, id: skinFullId });
+                                                        }}
+                                                    >
+                                                        🪙 {skin.price}
+                                                    </button>
+                                                )}
+                                                {!isBaseUnlocked && <div style={{ fontSize: '0.6rem', color: '#ff6b6b' }}>{language === 'he' ? 'נעל דמות בסיס תחילה' : 'Unlock base avatar first'}</div>}
+                                            </div>
+                                        );
+                                    })
+                                )}
+                            </div>
+                        </div>
                     ) : (
                         <div className="shop-category-section">
                             <h3>{t.shop_tab_themes}</h3>
@@ -127,7 +239,10 @@ function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatar
                                                 <button
                                                     className="shop-btn buy-btn"
                                                     disabled={totalCoins < group.price}
-                                                    onClick={() => handleBuyTopic(group)}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        handleBuyTopic(group);
+                                                    }}
                                                 >
                                                     🪙 {group.price}
                                                 </button>
@@ -139,6 +254,26 @@ function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatar
                         </div>
                     )}
                 </div>
+
+                {previewItem && (
+                    <div className="big-show-overlay" onClick={() => setPreviewItem(null)}>
+                        <div className="big-show-content card-pop" onClick={e => e.stopPropagation()}>
+                            <button className="big-show-close" onClick={() => setPreviewItem(null)}>✕</button>
+                            <div className="big-show-main">
+                                <div className="premium-avatar-box big-view">
+                                    {previewItem.image ? (
+                                        <img src={previewItem.image} alt={previewItem.name[language]} className="avatar-img-premium" />
+                                    ) : (
+                                        <span className="big-emoji">{previewItem.emoji}</span>
+                                    )}
+                                </div>
+                                <div className="big-show-details">
+                                    <h2 className="big-show-name">{previewItem.name[language]}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

@@ -142,9 +142,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
-    padding-left: 1rem;
-    border-left: 1px solid #e2e8f0;
+    gap: 0.8rem;
+    padding-left: 1.2rem;
+    border-left: 2px solid #e2e8f0;
+}
+
+.avatar-img-mini {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 [dir="rtl"] .avatar-display-mini {

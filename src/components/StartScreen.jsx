@@ -11,7 +11,7 @@ import { avatars } from '../data/avatars';
 import AvatarShopModal from './AvatarShopModal';
 import './StartScreen.css';
 
-function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlockedAvatars, onBuyAvatar, unlockedTopics, onBuyTopic }) {
+function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlockedAvatars, activeAvatars, onBuyAvatar, unlockedTopics, onBuyTopic, unlockedSkins, activeSkins, onBuySkin, onToggleAvatar, onToggleSkin }) {
     const t = translations[language];
 
     // ... (logic remains same until return)
@@ -308,14 +308,19 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                 language={language}
                 totalCoins={totalCoins}
                 unlockedAvatars={unlockedAvatars}
+                activeAvatars={activeAvatars}
                 onBuyAvatar={onBuyAvatar}
+                onToggleAvatar={onToggleAvatar}
                 onSelectAvatar={(avatar) => {
-                    // Default to P1 if single player, otherwise user decides in shop (future)
                     handleAvatarSelect(avatar, 1);
                 }}
                 selectedAvatars={selectedAvatars}
                 unlockedTopics={unlockedTopics}
                 onBuyTopic={onBuyTopic}
+                unlockedSkins={unlockedSkins}
+                activeSkins={activeSkins}
+                onToggleSkin={onToggleSkin}
+                onBuySkin={onBuySkin}
             />
 
             <h2>{t.lets_play}</h2>
@@ -398,13 +403,19 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                         <h4>{language === 'he' ? 'שחקן 1' : 'Player 1'}</h4>
                         <div className="avatar-slider-wrapper">
                             <div className="avatar-slider">
-                                {avatars.filter(a => unlockedAvatars.includes(a.id)).map(avatar => (
+                                {avatars.filter(a => activeAvatars.includes(a.id)).map(avatar => (
                                     <button
                                         key={avatar.id}
-                                        className={`avatar-btn-mini ${selectedAvatars[1]?.id === avatar.id ? 'active' : ''}`}
+                                        className={`avatar-btn-mini ${selectedAvatars[1]?.id === avatar.id ? 'active' : ''} premium-mode`}
                                         onClick={() => handleAvatarSelect(avatar, 1)}
                                     >
-                                        <span className="avatar-emoji-mini">{avatar.emoji}</span>
+                                        <div className="premium-avatar-box">
+                                            {avatar.image ? (
+                                                <img src={avatar.image} alt={avatar.name[language]} className="avatar-img-premium" />
+                                            ) : (
+                                                <span className="avatar-emoji-mini">{avatar.emoji}</span>
+                                            )}
+                                        </div>
                                     </button>
                                 ))}
                                 <button className="avatar-btn-mini more-btn" onClick={() => setIsShopOpen(true)}>+</button>
@@ -417,14 +428,20 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                             <h4>{language === 'he' ? 'שחקן 2' : 'Player 2'}</h4>
                             <div className="avatar-slider-wrapper">
                                 <div className="avatar-slider">
-                                    {avatars.filter(a => unlockedAvatars.includes(a.id)).map(avatar => (
+                                    {avatars.filter(a => activeAvatars.includes(a.id)).map(avatar => (
                                         <button
                                             key={avatar.id}
-                                            className={`avatar-btn-mini ${selectedAvatars[2]?.id === avatar.id ? 'active' : ''} ${selectedAvatars[1]?.id === avatar.id ? 'disabled' : ''}`}
+                                            className={`avatar-btn-mini ${selectedAvatars[2]?.id === avatar.id ? 'active' : ''} ${selectedAvatars[1]?.id === avatar.id ? 'disabled' : ''} premium-mode`}
                                             disabled={selectedAvatars[1]?.id === avatar.id}
                                             onClick={() => handleAvatarSelect(avatar, 2)}
                                         >
-                                            <span className="avatar-emoji-mini">{avatar.emoji}</span>
+                                            <div className="premium-avatar-box">
+                                                {avatar.image ? (
+                                                    <img src={avatar.image} alt={avatar.name[language]} className="avatar-img-premium" />
+                                                ) : (
+                                                    <span className="avatar-emoji-mini">{avatar.emoji}</span>
+                                                )}
+                                            </div>
                                         </button>
                                     ))}
                                     <button className="avatar-btn-mini more-btn" onClick={() => setIsShopOpen(true)}>+</button>

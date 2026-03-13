@@ -1,6 +1,17 @@
 export const avatars = [
     // Free Avatars
-    { id: 'leo', emoji: '🦁', name: { en: 'Leo', he: 'ליאו' }, price: 0, category: 'free' },
+    {
+        id: 'leo',
+        emoji: '🦁',
+        name: { en: 'Leo', he: 'ליאו' },
+        price: 0,
+        category: 'free',
+        image: '/assets/avatars/leo/default.png',
+        skins: [
+            { id: 'default', name: { en: 'Leo', he: 'ליאו' }, image: '/assets/avatars/leo/default.png', price: 0 },
+            { id: 'king', name: { en: 'King Leo', he: 'ליאו המלך' }, image: '/assets/avatars/leo/king.png', price: 350 }
+        ]
+    },
     { id: 'bunny', emoji: '🐰', name: { en: 'Bunny', he: 'באני' }, price: 0, category: 'free' },
     { id: 'foxy', emoji: '🦊', name: { en: 'Foxy', he: 'פוקסי' }, price: 0, category: 'free' },
     { id: 'panda', emoji: '🐼', name: { en: 'PanPan', he: 'פן-פן' }, price: 0, category: 'free' },
