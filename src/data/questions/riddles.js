@@ -1,4 +1,5 @@
 export const riddlesQuestions = [
+// --- GENERATED_QUESTIONS_START ---
     // LEVEL 1 - Simple logic riddles
     { id: "q-riddles-1", category: "riddles", level: 1, text: { en: "If Yossi has 4 daughters and each has one brother, how many children does Yossi have?", he: "אם ליוסי יש 4 בנות ולכל אחת אח אחד, כמה ילדים יש ליוסי?" }, options: { en: ["4", "8", "5", "6"], he: ["4", "8", "5", "6"] }, correctAnswer: 2 },
     { id: "q-riddles-2", category: "riddles", level: 1, text: { en: "A rooster lays an egg on top of a barn. Which way does the egg fall?", he: "תרנגול גבר מטיל ביצה על גג הרפת. לאיזה כיוון הביצה נופלת?" }, options: { en: ["Left", "Right", "Roosters don't lay eggs", "Down"], he: ["שמאל", "ימין", "לתרנגול גבר אין ביצים להטיל", "למטה"] }, correctAnswer: 2 },

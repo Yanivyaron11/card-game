@@ -1,4 +1,5 @@
 export const worldQuestions = [
+// --- GENERATED_QUESTIONS_START ---
 {
         "id": "q-countries-1511",
         "category": "countries",

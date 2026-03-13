@@ -1,4 +1,5 @@
 export const sports_lifeQuestions = [
+// --- GENERATED_QUESTIONS_START ---
 {
         "id": "q-maccabi_haifa-310",
         "category": "maccabi_haifa",
@@ -699,8 +700,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🕰️",
-        "hint": {"en":"In the early 20th century.","he":"בתחילת המאה ה-20."}
+        "emoji": "🕰️"
     },
 {
         "id": "q-maccabi_haifa-337",
@@ -726,8 +726,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🇮🇹",
-        "hint": {"en":"Known as 'The Old Lady'.","he":"מכונה 'הגברת הזקנה'."}
+        "emoji": "🇮🇹"
     },
 {
         "id": "q-maccabi_haifa-338",
@@ -753,8 +752,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "⚽",
-        "hint": {"en":"The star who wore number 7 at the time.","he":"הכוכב שלבש את חולצה מספר 7 באותו זמן."}
+        "emoji": "⚽"
     },
 {
         "id": "q-maccabi_haifa-339",
@@ -780,8 +778,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🇳🇬",
-        "hint": {"en":"A young Nigerian who later became a star in England.","he":"ניגרי צעיר שהפך מאוחר יותר לכוכב באנגליה."}
+        "emoji": "🇳🇬"
     },
 {
         "id": "q-maccabi_haifa-340",
@@ -807,8 +804,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🤯",
-        "hint": {"en":"A very high score for the winning side (5 goals).","he":"תוצאה גבוהה מאוד לצד המנצח (5 שערים)."}
+        "emoji": "🤯"
     },
 {
         "id": "q-maccabi_haifa-341",
@@ -834,8 +830,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🛡️",
-        "hint": {"en":"A right-back who holds the record for most appearances.","he":"מגן ימני המחזיק בשיא ההופעות."}
+        "emoji": "🛡️"
     },
 {
         "id": "q-maccabi_haifa-342",
@@ -3998,8 +3993,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🧂",
-        "hint": {"en":"It helps with the dough's strength and controls how fast it rises.","he":"הוא עוזר לחוזק הבצק ומבקר את מהירות התפיחה."}
+        "emoji": "🧂"
     },
 {
         "id": "q-patisserie-966",
@@ -4025,8 +4019,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🥚",
-        "hint": {"en":"It's an acid that helps keep the foam stable.","he":"זוהי חומצה שעוזרת לשמור על יציבות הקצף."}
+        "emoji": "🥚"
     },
 {
         "id": "q-patisserie-967",
@@ -4052,8 +4045,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🌡️",
-        "hint": {"en":"Think about what happens to the heat once you take the dish off the stove.","he":"חשבו על מה שקורה לחום לאחר שמורידים את התבליל מהאש."}
+        "emoji": "🌡️"
     },
 {
         "id": "q-patisserie-968",
@@ -4079,8 +4071,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🥣",
-        "hint": {"en":"It's the process where starch absorbs liquid and thickens.","he":"זהו התהליך שבו עמילן סופג נוזל ומסמיך."}
+        "emoji": "🥣"
     },
 {
         "id": "q-patisserie-969",
@@ -4106,8 +4097,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🍰",
-        "hint": {"en":"It helps the batter hold more liquid and sugar than usual.","he":"זה עוזר לבלילה להחזיק יותר נוזלים וסוכר מהרגיל."}
+        "emoji": "🍰"
     },
 {
         "id": "q-patisserie-970",
@@ -4159,8 +4149,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🍴",
-        "hint": {"en":"Poking small holes to let steam escape.","he":"ניקוב חורים קטנים כדי לאפשר לאדים לצאת."}
+        "emoji": "🍴"
     },
 {
         "id": "q-patisserie-972",
@@ -4186,8 +4175,7 @@ export const sports_lifeQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🥣",
-        "hint": {"en":"Mixing fat and flour until it looks like small crumbs.","he":"ערבוב שומן וקמח עד שזה נראה כמו פירורים קטנים."}
+        "emoji": "🥣"
     },
 {
         "id": "q-patisserie-973",

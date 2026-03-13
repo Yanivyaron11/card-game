@@ -1,4 +1,5 @@
 export const culture_entQuestions = [
+// --- GENERATED_QUESTIONS_START ---
     {
         "id": "q-israeli_music-1365",
         "category": "israeli_music",

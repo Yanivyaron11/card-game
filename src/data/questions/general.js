@@ -1,5 +1,5 @@
 export const generalQuestions = [
-// --- GENERATED_QUESTIONS_END ---
+// --- GENERATED_QUESTIONS_START ---
     { id: 'q-chelsea-1', category: 'chelsea', level: 1, text: { en: "What is the primary nickname of Chelsea FC?", he: "מהו הכינוי העיקרי של צ'לסי?" }, options: { en: ["The Gunners", "The Reds", "The Blues", "The Lions"], he: ["התותחנים", "האדומים", "הבלוז (הכחולים)", "האריות"] }, correctAnswer: 2, emoji: '🔵' },
 { id: 'q-chelsea-2', category: 'chelsea', level: 1, text: { en: "What is the name of Chelsea's home stadium?", he: "מה שם אצטדיון הבית של צ'לסי?" }, options: { en: ["Old Trafford", "Stamford Bridge", "Anfield", "Emirates Stadium"], he: ["אולד טראפורד", "סטמפורד ברידג'", "אנפילד", "אצטדיון האמירויות"] }, correctAnswer: 1, emoji: '🏟️' },
 { id: 'q-chelsea-3', category: 'chelsea', level: 1, text: { en: "Which legendary Chelsea captain is known as 'Captain, Leader, Legend'?", he: "איזה קפטן אגדי של צ'לסי מכונה 'Captain, Leader, Legend'?" }, options: { en: ["Frank Lampard", "Didier Drogba", "Ashley Cole", "John Terry"], he: ["פרנק למפארד", "דידייה דרוגבה", "אשלי קול", "ג'ון טרי"] }, correctAnswer: 3, emoji: '👨‍✈️' },

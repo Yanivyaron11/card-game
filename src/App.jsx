@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import StartScreen from './components/StartScreen'
 import GameBoard from './components/GameBoard'
 import QuizOverlay from './components/QuizOverlay'
+import CleaningMode from './components/CleaningMode'
 import { translations } from './data/translations'
 import { generateDeck, generateSurvivalDeck } from './utils/deck'
 import { playSound, playMusic, stopMusic } from './utils/sounds'
@@ -86,6 +87,7 @@ function App() {
   const [rewardToast, setRewardToast] = useState(null);
   const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '10', 10));
   const recordNotifiedRef = useRef(false);
+  const titleClickRef = useRef(0);
   const [unlockedAvatars, setUnlockedAvatars] = useState(() => {
     const saved = localStorage.getItem('unlocked_avatars');
     if (saved) return JSON.parse(saved);
@@ -580,7 +582,15 @@ function App() {
 
   return (
     <div className={`app-container ${language === 'he' ? 'rtl-mode' : ''}`} dir={language === 'he' ? 'rtl' : 'ltr'}>
-      <h1 className="title-glow" onClick={handleReturnToStart} style={{ cursor: 'pointer' }}>{t.title}</h1>
+      <h1 className="title-glow" onClick={() => {
+        titleClickRef.current += 1;
+        if (titleClickRef.current >= 5) {
+          titleClickRef.current = 0;
+          navigate('/admin/clean');
+        } else {
+          handleReturnToStart();
+        }
+      }} style={{ cursor: 'pointer' }}>{t.title}</h1>
 
       <InstallPrompt language={language} />
       <div className="toast-container">
@@ -775,6 +785,12 @@ function App() {
               {gameState === 'victory' ? t.play_again : t.try_again}
             </button>
           </div>
+        } />
+        <Route path="/admin/clean" element={
+          <CleaningMode
+            language={language}
+            onQuit={() => navigate('/')}
+          />
         } />
       </Routes>
     </div >

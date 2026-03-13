@@ -1,4 +1,5 @@
 export const physicsQuestions = [
+// --- GENERATED_QUESTIONS_START ---
     {
         "id": "q-phys-l1-1",
         "category": "physics",

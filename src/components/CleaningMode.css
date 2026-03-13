@@ -1,0 +1,156 @@
+.cleaning-mode {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.cleaning-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.cleaning-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filters select {
+    padding: 0.5rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.question-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.question-editor.marked-deleted {
+    opacity: 0.5;
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.editor-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.editor-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.editor-group label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.editor-group textarea,
+.editor-group input {
+    padding: 0.8rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+}
+
+.editor-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.correct-answer {
+    border: 2px solid #4ade80 !important;
+}
+
+.meta-row {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    align-items: center;
+}
+
+.level-editor {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.level-editor select {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    padding: 2px 4px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.action-buttons button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-undo {
+    background: #4ade80;
+    color: white;
+}
+
+.exit-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.export-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+.action-buttons button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}

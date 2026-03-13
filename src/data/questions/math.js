@@ -1,4 +1,5 @@
 export const mathQuestions = [
+// --- GENERATED_QUESTIONS_START ---
 {
         "id": "q-math-l1-1",
         "category": "math",
@@ -81,8 +82,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🖊️",
-        "hint": {"en":"Multiply the number of pens in a box by the number of boxes.","he":"הכפילו את מספר העטים בקופסה במספר הקופסאות."}
+        "emoji": "🖊️"
     },
 {
         "id": "q-math-l1-4",
@@ -166,8 +166,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🚂",
-        "hint": {"en":"Add 19 to 134. Think: 134 + 20 - 1.","he":"חברו 19 ל-134. טיפ: אפשר לחבר 20 ואז להחסיר 1."}
+        "emoji": "🚂"
     },
 {
         "id": "q-math-l1-7",
@@ -251,8 +250,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🌻",
-        "hint": {"en":"Subtract 34 from 115.","he":"חסרו 34 מ-115."}
+        "emoji": "🌻"
     },
 {
         "id": "q-math-l1-10",
@@ -336,8 +334,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "✨",
-        "hint": {"en":"Subtract 20, then subtract 5.","he":"חסרו 20, ואז חסרו עוד 5."}
+        "emoji": "✨"
     },
 {
         "id": "q-math-l1-13",
@@ -421,8 +418,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🎈",
-        "hint": {"en":"Subtract 1 from the tens digit.","he":"חסרו 1 ספרת העשרות."}
+        "emoji": "🎈"
     },
 {
         "id": "q-math-l1-16",
@@ -506,8 +502,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🖊️",
-        "hint": {"en":"Double 8.","he":"הכפילו את 8 ב-2."}
+        "emoji": "🖊️"
     },
 {
         "id": "q-math-l1-19",
@@ -591,8 +586,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🚂",
-        "hint": {"en":"Add 10 to 100.","he":"חברו 10 ל-100."}
+        "emoji": "🚂"
     },
 {
         "id": "q-math-l1-22",
@@ -676,8 +670,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🌻",
-        "hint": {"en":"Subtract 33 from 115.","he":"חסרו 33 מ-115."}
+        "emoji": "🌻"
     },
 {
         "id": "q-math-l1-25",
@@ -761,8 +754,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "✨",
-        "hint": {"en":"Subtract 2 from the tens digit.","he":"חסרו 2 מספרת העשרות."}
+        "emoji": "✨"
     },
 {
         "id": "q-math-l1-28",
@@ -846,8 +838,7 @@ export const mathQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🎈",
-        "hint": {"en":"Subtract the tens (50-30) and then the ones (7-4).","he":"חסרו את העשרות (50 פחות 30) ואז את היחידות (7 פחות 4)."}
+        "emoji": "🎈"
     },
 {
         "id": "q-math-l1-31",

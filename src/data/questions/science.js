@@ -1,4 +1,5 @@
 export const scienceQuestions = [
+// --- GENERATED_QUESTIONS_START ---
 {
         "id": "q-psychology-2701",
         "category": "psychology",

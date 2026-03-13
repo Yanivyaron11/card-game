@@ -1,4 +1,5 @@
 export const natureQuestions = [
+// --- GENERATED_QUESTIONS_START ---
 {
         "id": "q-records-new-1",
         "category": "records",

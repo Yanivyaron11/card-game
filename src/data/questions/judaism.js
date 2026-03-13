@@ -1,4 +1,5 @@
 export const judaismQuestions = [
+// --- GENERATED_QUESTIONS_START ---
     {
         "id": "q-judaism-1",
         "category": "bible_stories",
@@ -75,8 +76,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 3,
-        "emoji": "🌈",
-        "hint": { "en": "A beautiful multicolored arc in the sky after the rain.", "he": "קשת יפה ורב-צבעונית בשמיים לאחר הגשם." }
+        "emoji": "🌈"
     },
     {
         "id": "q-judaism-4",
@@ -258,8 +258,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "⏳",
-        "hint": { "en": "It's the number of completion, repeated twice later.", "he": "זהו מספר שלמות, שחזר על עצמו פעמיים במצטבר." }
+        "emoji": "⏳"
     },
     {
         "id": "q-judaism-11",
@@ -337,8 +336,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐫",
-        "hint": { "en": "They were traveling traders going down to Egypt.", "he": "הם היו סוחרים נודדים שירדו למצרים." }
+        "emoji": "🐫"
     },
     {
         "id": "q-judaism-14",
@@ -364,8 +362,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🐄🐄",
-        "hint": { "en": "The hungry, skinny ones did something shocking to the healthy ones.", "he": "הרזות והרעבות עשו דבר מזעזע לבריאות והשמנות." }
+        "emoji": "🐄🐄"
     },
     {
         "id": "q-judaism-15",
@@ -469,8 +466,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🩸",
-        "hint": { "en": "The Nile river turned this color.", "he": "נהר הנילוס הפך לצבע הזה." }
+        "emoji": "🩸"
     },
     {
         "id": "q-judaism-19",
@@ -626,8 +622,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🕵️",
-        "hint": { "en": "One for each tribe of Israel.", "he": "אחד לכל שבט משבטי ישראל." }
+        "emoji": "🕵️"
     },
     {
         "id": "q-judaism-25",
@@ -653,8 +648,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 1,
-        "emoji": "🤝",
-        "hint": { "en": "They were the only ones who believed the Israelites could conquer the land.", "he": "הם היו היחידים שהאמינו שבני ישראל יכולים לכבוש את הארץ." }
+        "emoji": "🤝"
     },
     {
         "id": "q-judaism-26",
@@ -680,8 +674,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "🔥",
-        "hint": { "en": "The earth opened up and swallowed him and his followers.", "he": "האדמה פערה את פיה ובלעה אותו ואת עדתו." }
+        "emoji": "🔥"
     },
     {
         "id": "q-judaism-27",
@@ -707,8 +700,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 2,
-        "emoji": "🪨",
-        "hint": { "en": "Moses was supposed to speak to it, but he hit it instead.", "he": "משה היה אמור לדבר אליו, אך הוא הכה בו במקום זאת." }
+        "emoji": "🪨"
     },
     {
         "id": "q-judaism-28",
@@ -838,8 +830,7 @@ export const judaismQuestions = [
             ]
         },
         "correctAnswer": 0,
-        "emoji": "⚖️",
-        "hint": { "en": "She sat under a palm tree and gave judgments.", "he": "היא ישבה תחת התומר ושפטה את העם." }
+        "emoji": "⚖️"
     },
     {
         "id": "q-judaism-33",
