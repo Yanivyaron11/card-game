@@ -19,10 +19,20 @@ function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatar
     ];
 
     // Define purchasable topics
-    const purchasableTopicGroups = topics.filter(group => group.id === 'judaism_group').map(group => ({
-        ...group,
-        price: 555
-    }));
+    const themePrices = {
+        'judaism_group': 555,
+        'sports_group': 450,
+        'entertainment_group': 400,
+        'lifestyle_group': 300,
+        'world_group': 350
+    };
+
+    const purchasableTopicGroups = topics
+        .filter(group => themePrices[group.id])
+        .map(group => ({
+            ...group,
+            price: themePrices[group.id]
+        }));
 
     const handleBuyAvatar = (avatar) => {
         if (totalCoins >= avatar.price) {

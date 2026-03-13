@@ -95,8 +95,8 @@ function App() {
   const [unlockedTopics, setUnlockedTopics] = useState(() => {
     const saved = localStorage.getItem('unlocked_topics');
     if (saved) return JSON.parse(saved);
-    // All current group IDs except judaism_group
-    return ['israel_group', 'nature_group', 'science_group', 'world_group', 'culture_group', 'entertainment_group', 'sports_group', 'lifestyle_group', 'general'];
+    // Core categories unlocked by default
+    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general'];
   });
   const [sessionCoinBreakdown, setSessionCoinBreakdown] = useState({
     base: 0,
