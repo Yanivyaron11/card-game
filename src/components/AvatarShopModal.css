@@ -474,40 +474,40 @@
 
 .character-skins-row {
     display: flex;
-    gap: 1rem;
-    /* Reduced from 1.5rem */
-    overflow-x: auto;
-    /* Uses scroll when needed */
-    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    gap: 1.2rem;
+    overflow-x: scroll;
+    /* Force scroll mechanism */
+    padding: 0.5rem 0.5rem 1.2rem 0.5rem;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 
-    /* Visual hint: ensures items don't perfectly align to the container width, 
-       so the last one is often cut off, hinting at more content */
-    scroll-snap-type: x proximity;
+    /* Visual Hint: Gradient mask that fades out on the right 
+       to show there is more content to scroll to */
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
 }
 
-/* Character skins scrollbar - Made more prominent */
+/* Character skins scrollbar - High Visibility */
 .character-skins-row::-webkit-scrollbar {
-    height: 8px;
-    /* Slightly thicker */
-    display: block;
-    /* Force display */
+    height: 10px;
+    /* Thicker for easier interaction */
+    display: block !important;
 }
 
 .character-skins-row::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    /* More visible track */
+    background: rgba(45, 27, 105, 0.5);
+    /* Deep purple track */
     border-radius: 10px;
     margin: 0 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .character-skins-row::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    /* Constant bright color */
+    background: linear-gradient(to bottom, var(--accent), #e67e22);
+    /* Gold gradient */
     border-radius: 10px;
-    border: 2px solid transparent;
-    background-clip: padding-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 196, 61, 0.4);
 }
 
 .character-skins-row::-webkit-scrollbar-thumb:hover {
