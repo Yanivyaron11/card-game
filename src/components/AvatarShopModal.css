@@ -1,5 +1,6 @@
 .shop-modal {
-    max-width: 700px;
+    max-width: 550px;
+    /* Matches .start-screen for visual consistency */
     width: 95%;
     height: 92vh;
     display: flex;
