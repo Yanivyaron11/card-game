@@ -220,11 +220,18 @@
     text-align: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .shop-modal {
-        width: 98%;
-        padding: 1rem 0.5rem;
-        border-width: 2px;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        /* Full screen on very small devices */
+        border-radius: 0;
+        padding: 1rem;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        /* Already at top? usually modals are centered, but let's make it feel native */
     }
 
     .shop-grid {
@@ -259,14 +266,17 @@
 
     /* Big Show refinements for small screens */
     .big-show-content {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
         border-radius: 25px;
-        width: 90%;
+        width: 85%;
+        /* Give even more room for shop borders */
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
     }
 
     .premium-avatar-box.big-view {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        /* Further reduction to guarantee clearance */
+        height: 180px;
         border-radius: 25px;
     }
 
