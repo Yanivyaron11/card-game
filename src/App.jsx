@@ -118,16 +118,24 @@ function App() {
     localStorage.setItem('unlocked_topics', JSON.stringify(unlockedTopics));
   }, [unlockedTopics]);
 
-  // Migration: If user had old topics unlocked, re-lock the ones that are now premium
+  // Migration: If user had old topics/avatars unlocked, ensure consistency with new economy
   useEffect(() => {
+    // 1. Relock topics that became premium
     const premiumGroups = ['judaism_group', 'sports_group', 'entertainment_group', 'lifestyle_group', 'world_group'];
     const hasToRelock = unlockedTopics.some(id => premiumGroups.includes(id)) && !localStorage.getItem('premium_migration_done');
 
     if (hasToRelock) {
-      // Keep only really basic ones
+      // Keep only strictly basic ones
       const coreOnly = ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general'];
       setUnlockedTopics(coreOnly);
       localStorage.setItem('premium_migration_done', 'true');
+    }
+
+    // 2. Ensure all current "Free" avatars are unlocked (like Foxy)
+    const freeAvatars = ['leo', 'bunny', 'foxy', 'panda', 'penguin'];
+    const missingFree = freeAvatars.some(id => !unlockedAvatars.includes(id));
+    if (missingFree) {
+      setUnlockedAvatars(prev => [...new Set([...prev, ...freeAvatars])]);
     }
   }, []);
 
