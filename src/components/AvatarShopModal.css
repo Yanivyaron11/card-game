@@ -452,8 +452,8 @@
 }
 
 .premium-avatar-box.big-view {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     border-radius: 40px;
     border: 3px solid var(--accent);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
