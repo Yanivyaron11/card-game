@@ -256,13 +256,21 @@
 }
 
 @media (max-width: 600px) {
+    .modal-overlay {
+        padding: 0.5rem;
+        /* Reduced padding to expand modal on mobile */
+    }
+
     .shop-modal {
         width: 100%;
         max-width: 100%;
-        height: 94vh;
-        height: 94dvh;
-        border-radius: 24px;
-        padding: 1rem;
+        height: 96vh;
+        /* slightly taller on mobile */
+        height: 96dvh;
+        border-radius: 20px;
+        /* slightly smaller radius for better fit */
+        padding: 0.8rem;
+        /* even tighter padding inside */
     }
 
     .shop-grid {
