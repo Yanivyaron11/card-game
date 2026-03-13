@@ -410,15 +410,9 @@ function App() {
           setTotalCoins(prev => prev + 20); // Bonus only once per session
           setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + 20 }));
           bonusToAward = 20;
-          playSound('victory');
         }
-
-        setRewardToast({
-          messageKey: 'record_bonus',
-          amount: bonusToAward,
-          isRecord: true,
-          score: newScore
-        });
+        // Removed real-time reward toast for high record during survival gameplay.
+        // It will now only be shown on the results screen.
       }
 
       // Check for Course Completion
