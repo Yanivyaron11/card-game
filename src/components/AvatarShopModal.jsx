@@ -54,7 +54,7 @@ function AvatarShopModal({ isOpen, onClose, language, totalCoins, unlockedAvatar
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content shop-modal glass-panel card-pop" onClick={e => e.stopPropagation()}>
                 <div className="shop-header">
-                    <h2>🛒 {t.title} - {t.topic_shop_title}</h2>
+                    <h2>🛒 {t.shop}</h2>
                     <div className="shop-coins">🪙 {totalCoins}</div>
                     <button className="close-btn" onClick={onClose}>✕</button>
                 </div>

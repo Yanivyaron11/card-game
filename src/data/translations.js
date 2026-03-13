@@ -131,6 +131,7 @@ export const translations = {
         buy: "Buy",
         owned: "Owned",
         topic_shop_title: "Theme Shop",
+        shop: "Shop",
     },
 
 
@@ -265,5 +266,6 @@ export const translations = {
         buy: "קנה",
         owned: "בבעלותך",
         topic_shop_title: "חנות ערכות נושא",
+        shop: "חנות",
     }
 };
