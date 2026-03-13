@@ -44,7 +44,9 @@
 
 .shop-tab-btn {
     flex: 1;
-    padding: 0.8rem;
+    width: 0;
+    /* Ensures all tabs have identical width */
+    padding: 0.8rem 0.2rem;
     border: none;
     background: transparent;
     color: white;
@@ -459,7 +461,8 @@
 
 .character-skins-row {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
+    /* Reduced from 1.5rem */
     overflow-x: auto;
     padding: 0.5rem 0.5rem 1rem 0.5rem;
     scroll-behavior: smooth;
@@ -486,9 +489,14 @@
 }
 
 .skin-item {
-    flex: 0 0 140px;
-    /* Fixed width for horizontal scrolling */
-    min-width: 140px;
+    flex: 0 0 110px;
+    /* Reduced from 140px */
+    min-width: 110px;
+    padding: 0.8rem 0.5rem;
+}
+
+.skin-item .shop-item-name {
+    font-size: 0.75rem;
 }
 
 @keyframes fadeIn {
