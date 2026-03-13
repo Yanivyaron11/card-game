@@ -12,7 +12,18 @@ export const avatars = [
             { id: 'superleo', name: { en: 'Super Leo', he: 'סופר ליאו' }, image: '/assets/avatars/leo/superhero.png', price: 500 }
         ]
     },
-    { id: 'bunny', emoji: '🐰', name: { en: 'Bunny', he: 'באני' }, price: 0, category: 'free' },
+    {
+        id: 'bunny',
+        emoji: '🐰',
+        name: { en: 'Bunny', he: 'באני' },
+        price: 0,
+        category: 'free',
+        skins: [
+            { id: 'hero', name: { en: 'Hero Bunny', he: 'באני הגיבורה' }, image: '/assets/avatars/bunny/hero.png', price: 250 },
+            { id: 'london', name: { en: 'Bunny in London', he: 'באני בלונדון' }, image: '/assets/avatars/bunny/london.png', price: 300 },
+            { id: 'queen', name: { en: 'Queen Bunny', he: 'באני המלכה' }, image: '/assets/avatars/bunny/queen.png', price: 450 }
+        ]
+    },
     { id: 'foxy', emoji: '🦊', name: { en: 'Foxy', he: 'פוקסי' }, price: 0, category: 'free' },
     { id: 'panda', emoji: '🐼', name: { en: 'PanPan', he: 'פן-פן' }, price: 0, category: 'free' },
     { id: 'penguin', emoji: '🐧', name: { en: 'Pingu', he: 'פינגו' }, price: 0, category: 'free' },
