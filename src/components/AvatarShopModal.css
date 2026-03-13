@@ -24,17 +24,17 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    /* Matches .glass-panel */
-    background: var(--glass-bg);
-    /* Use shared glass background */
-    backdrop-filter: blur(20px);
+    background: rgba(30, 20, 80, 0.92);
+    /* Darker, more solid for shop readability */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border: none;
     /* Let glass-panel handle borders or use subtle one */
     border-radius: 0;
     /* Full height looks better with 0 radius */
     box-sizing: border-box;
     position: relative;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 601px) {
