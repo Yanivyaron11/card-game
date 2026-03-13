@@ -238,10 +238,10 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
     const handleAvatarSelect = (avatar, playerNum) => {
         playSound('pop');
         setSelectedAvatars(prev => {
-            // If picking for P1, and it's already P2's choice, swap or prevent? 
-            // Let's prevent picking the same one.
-            if (playerNum === 1 && prev[2]?.id === avatar.id) return prev;
-            if (playerNum === 2 && prev[1]?.id === avatar.id) return prev;
+            if (gameMode === '1v1') {
+                if (playerNum === 1 && prev[2]?.id === avatar.id) return prev;
+                if (playerNum === 2 && prev[1]?.id === avatar.id) return prev;
+            }
             return { ...prev, [playerNum]: avatar };
         });
     };
