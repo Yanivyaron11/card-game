@@ -403,21 +403,31 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                         <h4>{language === 'he' ? 'שחקן 1' : 'Player 1'}</h4>
                         <div className="avatar-slider-wrapper">
                             <div className="avatar-slider">
-                                {avatars.filter(a => activeAvatars.includes(a.id)).map(avatar => (
-                                    <button
-                                        key={avatar.id}
-                                        className={`avatar-btn-mini ${selectedAvatars[1]?.id === avatar.id ? 'active' : ''} premium-mode`}
-                                        onClick={() => handleAvatarSelect(avatar, 1)}
-                                    >
-                                        <div className="premium-avatar-box">
-                                            {avatar.image ? (
-                                                <img src={avatar.image} alt={avatar.name[language]} className="avatar-img-premium" />
-                                            ) : (
-                                                <span className="avatar-emoji-mini">{avatar.emoji}</span>
-                                            )}
-                                        </div>
-                                    </button>
-                                ))}
+                                {avatars.filter(a => activeAvatars.includes(a.id)).map(avatar => {
+                                    // Find if there's an active skin with an image
+                                    const activeSkin = avatar.skins?.find(s => s.id !== 'default' && activeSkins.includes(`${avatar.id}_${s.id}`));
+                                    const displayAvatar = {
+                                        ...avatar,
+                                        image: activeSkin?.image || avatar.image, // avatar.image is now undefined for base
+                                        currentSkin: activeSkin?.id || 'default'
+                                    };
+
+                                    return (
+                                        <button
+                                            key={avatar.id}
+                                            className={`avatar-btn-mini ${selectedAvatars[1]?.id === avatar.id ? 'active' : ''} premium-mode`}
+                                            onClick={() => handleAvatarSelect(displayAvatar, 1)}
+                                        >
+                                            <div className="premium-avatar-box">
+                                                {displayAvatar.image ? (
+                                                    <img src={displayAvatar.image} alt={displayAvatar.name[language]} className="avatar-img-premium" />
+                                                ) : (
+                                                    <span className="avatar-emoji-mini">{displayAvatar.emoji}</span>
+                                                )}
+                                            </div>
+                                        </button>
+                                    );
+                                })}
                                 <button className="avatar-btn-mini more-btn" onClick={() => setIsShopOpen(true)}>+</button>
                             </div>
                         </div>
@@ -428,22 +438,31 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                             <h4>{language === 'he' ? 'שחקן 2' : 'Player 2'}</h4>
                             <div className="avatar-slider-wrapper">
                                 <div className="avatar-slider">
-                                    {avatars.filter(a => activeAvatars.includes(a.id)).map(avatar => (
-                                        <button
-                                            key={avatar.id}
-                                            className={`avatar-btn-mini ${selectedAvatars[2]?.id === avatar.id ? 'active' : ''} ${selectedAvatars[1]?.id === avatar.id ? 'disabled' : ''} premium-mode`}
-                                            disabled={selectedAvatars[1]?.id === avatar.id}
-                                            onClick={() => handleAvatarSelect(avatar, 2)}
-                                        >
-                                            <div className="premium-avatar-box">
-                                                {avatar.image ? (
-                                                    <img src={avatar.image} alt={avatar.name[language]} className="avatar-img-premium" />
-                                                ) : (
-                                                    <span className="avatar-emoji-mini">{avatar.emoji}</span>
-                                                )}
-                                            </div>
-                                        </button>
-                                    ))}
+                                    {avatars.filter(a => activeAvatars.includes(a.id)).map(avatar => {
+                                        const activeSkin = avatar.skins?.find(s => s.id !== 'default' && activeSkins.includes(`${avatar.id}_${s.id}`));
+                                        const displayAvatar = {
+                                            ...avatar,
+                                            image: activeSkin?.image || avatar.image,
+                                            currentSkin: activeSkin?.id || 'default'
+                                        };
+
+                                        return (
+                                            <button
+                                                key={avatar.id}
+                                                className={`avatar-btn-mini ${selectedAvatars[2]?.id === avatar.id ? 'active' : ''} ${selectedAvatars[1]?.id === avatar.id ? 'disabled' : ''} premium-mode`}
+                                                disabled={selectedAvatars[1]?.id === avatar.id}
+                                                onClick={() => handleAvatarSelect(displayAvatar, 2)}
+                                            >
+                                                <div className="premium-avatar-box">
+                                                    {displayAvatar.image ? (
+                                                        <img src={displayAvatar.image} alt={displayAvatar.name[language]} className="avatar-img-premium" />
+                                                    ) : (
+                                                        <span className="avatar-emoji-mini">{displayAvatar.emoji}</span>
+                                                    )}
+                                                </div>
+                                            </button>
+                                        );
+                                    })}
                                     <button className="avatar-btn-mini more-btn" onClick={() => setIsShopOpen(true)}>+</button>
                                 </div>
                             </div>

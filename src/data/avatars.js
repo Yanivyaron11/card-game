@@ -6,10 +6,10 @@ export const avatars = [
         name: { en: 'Leo', he: 'ליאו' },
         price: 0,
         category: 'free',
-        image: '/assets/avatars/leo/default.png',
         skins: [
-            { id: 'default', name: { en: 'Leo', he: 'ליאו' }, image: '/assets/avatars/leo/default.png', price: 0 },
-            { id: 'king', name: { en: 'King Leo', he: 'ליאו המלך' }, image: '/assets/avatars/leo/king.png', price: 350 }
+            { id: 'special', name: { en: 'Brave Leo', he: 'ליאו האמיץ' }, image: '/assets/avatars/leo/default.png', price: 200 },
+            { id: 'king', name: { en: 'King Leo', he: 'ליאו המלך' }, image: '/assets/avatars/leo/king.png', price: 350 },
+            { id: 'superleo', name: { en: 'Super Leo', he: 'סופר ליאו' }, image: '/assets/avatars/leo/superhero.png', price: 500 }
         ]
     },
     { id: 'bunny', emoji: '🐰', name: { en: 'Bunny', he: 'באני' }, price: 0, category: 'free' },

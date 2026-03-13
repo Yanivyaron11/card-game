@@ -116,6 +116,7 @@ function AvatarShopModal({
                                                 className={`shop-item ${isUnlocked ? 'unlocked' : 'locked'}`}
                                                 onClick={() => setPreviewItem({
                                                     ...avatar,
+                                                    image: avatar.image, // will be undefined for emoji-base
                                                     isUnlocked,
                                                     isActive: activeAvatars.includes(avatar.id),
                                                     onToggle: onToggleAvatar,
