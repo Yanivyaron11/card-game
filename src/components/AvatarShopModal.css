@@ -7,6 +7,8 @@
     padding: 1.5rem;
     background: rgba(45, 27, 105, 0.95);
     border: 3px solid var(--accent);
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
 }
 
 .shop-header {
@@ -219,6 +221,12 @@
 }
 
 @media (max-width: 500px) {
+    .shop-modal {
+        width: 98%;
+        padding: 1rem 0.5rem;
+        border-width: 2px;
+    }
+
     .shop-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
@@ -247,6 +255,27 @@
     .shop-btn {
         padding: 0.4rem;
         font-size: 0.8rem;
+    }
+
+    /* Big Show refinements for small screens */
+    .big-show-content {
+        padding: 2rem 1rem;
+        border-radius: 25px;
+        width: 90%;
+    }
+
+    .premium-avatar-box.big-view {
+        width: 200px;
+        height: 200px;
+        border-radius: 25px;
+    }
+
+    .big-emoji {
+        font-size: 6rem;
+    }
+
+    .big-show-details h2 {
+        font-size: 1.5rem;
     }
 }
 
