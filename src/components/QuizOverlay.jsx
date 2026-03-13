@@ -9,6 +9,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
+    const displayImage = avatar?.image;
 
     // Find the correct card from the deck based on the URL parameter
     const card = deck.find(c => c.id === cardId);
