@@ -355,7 +355,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                             onClick={() => setSurvivalType('child')}
                         >
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
-                                <span>👶 {t.survival_child}</span>
+                                <span>🟢 {t.survival_child}</span>
                                 {(() => {
                                     const hs = localStorage.getItem('survival_high_score_child') || '0';
                                     return <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {t.survival_record_child}: {hs}</span>;
@@ -367,7 +367,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                             onClick={() => setSurvivalType('adult')}
                         >
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'center' }}>
-                                <span>🧔 {t.survival_adult}</span>
+                                <span>🔴 {t.survival_adult}</span>
                                 {(() => {
                                     const hs = localStorage.getItem('survival_high_score_adult') || '0';
                                     return <span style={{ fontSize: '0.7rem', opacity: 0.8 }}>🏆 {t.survival_record_adult}: {hs}</span>;
