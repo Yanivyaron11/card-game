@@ -66,7 +66,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                         </div>
                         <div className="stat-item lives-display">
                             <div className="hearts">
-                                {Array.from({ length: Math.max(0, (lives[1] || 0) + 1) }).map((_, i) => (
+                                {Array.from({ length: Math.max(0, (lives[1] || 0)) }).map((_, i) => (
                                     <span key={i} className="heart-icon">❤️</span>
                                 ))}
                             </div>
@@ -95,7 +95,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                             <div className="player-score-value">{t.score}: {scores[1]}</div>
                             {config.gameMode !== '1v1' && (
                                 <div className="p-hearts">
-                                    {Array.from({ length: Math.max(0, (lives[1] || 0) + 1) }).map((_, i) => (
+                                    {Array.from({ length: Math.max(0, (lives[1] || 0)) }).map((_, i) => (
                                         <span key={i} className="heart-mini">❤️</span>
                                     ))}
                                 </div>
@@ -127,7 +127,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                             <div className="player-score-value">{t.score}: {scores[2]}</div>
                             {config.gameMode !== '1v1' && (
                                 <div className="p-hearts">
-                                    {Array.from({ length: Math.max(0, (lives[2] || 0) + 1) }).map((_, i) => (
+                                    {Array.from({ length: Math.max(0, (lives[2] || 0)) }).map((_, i) => (
                                         <span key={i} className="heart-mini">❤️</span>
                                     ))}
                                 </div>
