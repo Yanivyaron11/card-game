@@ -274,17 +274,24 @@
         /* tighter internal space */
     }
 
+    .shop-tab-btn {
+        padding: 0.6rem 0.2rem;
+        font-size: 0.8rem;
+        min-width: 80px;
+    }
+
     .shop-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
     }
 
     .shop-item {
-        padding: 0.8rem;
+        padding: 0.5rem;
+        gap: 0.3rem;
     }
 
     .topic-item {
-        min-height: 160px;
+        min-height: 140px;
     }
 
     .shop-body {
@@ -292,41 +299,52 @@
     }
 
     .shop-item-emoji {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    /* Compact icons in the grid */
+    .premium-avatar-box {
+        width: 55px !important;
+        height: 55px !important;
     }
 
     .shop-item-name {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .shop-btn {
-        padding: 0.4rem;
-        font-size: 0.8rem;
+        padding: 0.3rem;
+        font-size: 0.75rem;
     }
 
-    /* Big Show refinements for small screens */
+    /* Big Show refinements - Much wider and more prominent on small screens */
     .big-show-content {
-        padding: 1.5rem 1rem;
-        border-radius: 25px;
-        width: 85%;
-        /* Give even more room for shop borders */
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+        padding: 2rem 1rem;
+        border-radius: 32px;
+        width: 94%;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
     }
 
     .premium-avatar-box.big-view {
-        width: 180px;
-        /* Further reduction to guarantee clearance */
-        height: 180px;
-        border-radius: 25px;
+        width: 280px !important;
+        /* Force override to prevent tiny square */
+        height: 280px !important;
+        border-radius: 32px;
     }
 
+    /* Ensure emoji in big view also scales nicely */
     .big-emoji {
-        font-size: 6rem;
+        font-size: 8rem;
     }
+}
 
-    .big-show-details h2 {
-        font-size: 1.5rem;
-    }
+/* Global Avatar Image Scaling Fix */
+.avatar-img-premium {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: inherit;
 }
 
 
@@ -603,7 +621,7 @@
 
 .skin-item {
     flex: 0 0 110px;
-    /* Reduced from 140px */
+    /* Compact for 3-column feel */
     min-width: 110px;
     padding: 0.8rem 0.5rem;
 }
