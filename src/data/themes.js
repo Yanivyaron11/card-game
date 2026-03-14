@@ -5,7 +5,7 @@ export const themes = [
             he: "קלאסי (סגול)",
             en: "Classic Purple"
         },
-        emoji: "🌌",
+        color: "#1e1450",
         price: 0,
         type: 'theme',
         category: 'free'

@@ -299,9 +299,9 @@ function AvatarShopModal({
                                                 <div className="premium-avatar-box">
                                                     {theme.image ? (
                                                         <img src={theme.image} alt={theme.name[language]} className="avatar-img-premium" />
-                                                    ) : (
-                                                        <span style={{ fontSize: '2.5rem' }}>{theme.emoji}</span>
-                                                    )}
+                                                    ) : theme.color ? (
+                                                        <div style={{ width: '100%', height: '100%', backgroundColor: theme.color, borderRadius: 'inherit' }}></div>
+                                                    ) : null}
                                                 </div>
                                             </div>
                                             <div className="shop-item-name">{theme.name[language]}</div>
@@ -344,6 +344,8 @@ function AvatarShopModal({
                                 <div className="premium-avatar-box big-view">
                                     {previewItem.image ? (
                                         <img src={previewItem.image} alt={previewItem.name[language]} className="avatar-img-premium" />
+                                    ) : previewItem.color ? (
+                                        <div style={{ width: '100%', height: '100%', backgroundColor: previewItem.color, borderRadius: 'inherit' }}></div>
                                     ) : (
                                         <span className="big-emoji">{previewItem.emoji}</span>
                                     )}
