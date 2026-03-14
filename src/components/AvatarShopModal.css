@@ -23,8 +23,8 @@
     flex-direction: column;
     padding: 1.5rem;
     /* Exactly matches .start-screen padding */
-    background: rgba(30, 20, 80, 0.98);
-    /* Even more opaque to cover completely */
+    background: rgba(30, 20, 80, 0.70);
+    /* Reduced opacity to show the theme background */
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border: 2px solid rgba(255, 255, 255, 0.1);
