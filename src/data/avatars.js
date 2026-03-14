@@ -36,8 +36,30 @@ export const avatars = [
             { id: 'dancer', name: { en: 'Dancer Foxy', he: 'פוקסי הרקדן' }, image: '/assets/avatars/foxy/dancer.png', price: 400 }
         ]
     },
-    { id: 'panda', emoji: '🐼', name: { en: 'PanPan', he: 'פן-פן' }, price: 0, category: 'free' },
-    { id: 'penguin', emoji: '🐧', name: { en: 'Pingu', he: 'פינגו' }, price: 0, category: 'free' },
+    {
+        id: 'panda',
+        emoji: '🐼',
+        name: { en: 'PanPan', he: 'פן-פן' },
+        price: 0,
+        category: 'free',
+        skins: [
+            { id: 'poppins', name: { en: 'Mary Poppins Panda', he: 'פנדה מארי פופינס' }, image: '/assets/avatars/panda/poppins.png', price: 200 },
+            { id: 'rainbow', name: { en: 'Rainbow Panda', he: 'פנדה קשת בענן' }, image: '/assets/avatars/panda/rainbow.png', price: 300 },
+            { id: 'flamenco', name: { en: 'Flamenco Panda', he: 'פנדה פלמנקו' }, image: '/assets/avatars/panda/flamenco.png', price: 400 }
+        ]
+    },
+    {
+        id: 'penguin',
+        emoji: '🐧',
+        name: { en: 'Pingu', he: 'פינגו' },
+        price: 0,
+        category: 'free',
+        skins: [
+            { id: 'soccer', name: { en: 'Soccer Pingu', he: 'פינגו כדורגלן' }, image: '/assets/avatars/penguin/soccer.png', price: 200 },
+            { id: 'tennis', name: { en: 'Tennis Pingu', he: 'פינגו טניסאי' }, image: '/assets/avatars/penguin/tennis.png', price: 300 },
+            { id: 'basketball', name: { en: 'Basketball Pingu', he: 'פינגו כדורסלן' }, image: '/assets/avatars/penguin/basketball.png', price: 400 }
+        ]
+    },
 
     // Premium (100-450)
     { id: 'monkey', emoji: '🐵', name: { en: 'Bobo', he: 'בובו' }, price: 100, category: 'premium' },
