@@ -24,6 +24,26 @@
   --app-bg-color: transparent;
 }
 
+.theme-ocean {
+  --app-bg-image: url('/themes/ocean_theme_bg.png');
+  --app-bg-color: transparent;
+}
+
+.theme-forest {
+  --app-bg-image: url('/themes/forest_theme_bg.png');
+  --app-bg-color: transparent;
+}
+
+.theme-cloud {
+  --app-bg-image: url('/themes/cloud_theme_bg.png');
+  --app-bg-color: transparent;
+}
+
+.theme-icecream {
+  --app-bg-image: url('/themes/icecream_theme_bg.png');
+  --app-bg-color: transparent;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

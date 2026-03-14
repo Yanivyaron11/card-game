@@ -33,5 +33,53 @@ export const themes = [
         type: 'theme',
         category: 'free',
         className: 'theme-space'
+    },
+    {
+        id: 'ocean',
+        name: {
+            he: "מעמקי הים 🌊",
+            en: "Deep Ocean 🌊"
+        },
+        image: "/themes/ocean_theme_bg.png",
+        price: 250,
+        type: 'theme',
+        category: 'premium',
+        className: 'theme-ocean'
+    },
+    {
+        id: 'forest',
+        name: {
+            he: "יער הקסמים 🌳",
+            en: "Enchanted Forest 🌳"
+        },
+        image: "/themes/forest_theme_bg.png",
+        price: 250,
+        type: 'theme',
+        category: 'premium',
+        className: 'theme-forest'
+    },
+    {
+        id: 'cloud',
+        name: {
+            he: "ממלכת העננים ☁️",
+            en: "Cloud Kingdom ☁️"
+        },
+        image: "/themes/cloud_theme_bg.png",
+        price: 250,
+        type: 'theme',
+        category: 'premium',
+        className: 'theme-cloud'
+    },
+    {
+        id: 'icecream',
+        name: {
+            he: "ארץ הגלידות 🍦",
+            en: "Ice Cream Land 🍦"
+        },
+        image: "/themes/icecream_theme_bg.png",
+        price: 250,
+        type: 'theme',
+        category: 'premium',
+        className: 'theme-icecream'
     }
 ];
