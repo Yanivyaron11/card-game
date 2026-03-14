@@ -297,15 +297,15 @@ export const topics = [
 
 export const questionCounts = {
     // --- GENERATED_COUNTS_START ---
-    "israel_cities": 400,
+    "israel_cities": 56,
     // --- GENERATED_COUNTS_END ---
     "bible_stories": 377,
     "holidays": 100,
     "tradition": 82,
     "maccabi_haifa": 155,
-    "chelsea": 100,
-    "math": 300,
-    "tel_aviv": 273,
+    "chelsea": 99,
+    "math": 293,
+    "tel_aviv": 0,
     "patisserie": 400,
     "israeli_music": 286,
     "animals": 154,
