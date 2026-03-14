@@ -833,6 +833,7 @@ function App() {
               onSurvivalPowerupUsed={(type) => setUsedSurvivalPowerups(prev => ({ ...prev, [type]: true }))}
               bestScore={bestScore}
               onQuit={handleReturnToStart}
+              activeTheme={activeTheme}
             />
           )
         } />

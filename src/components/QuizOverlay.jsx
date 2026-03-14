@@ -3,9 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
 import QuitConfirmModal from './QuitConfirmModal';
+import { themes } from '../data/themes';
 import './QuizOverlay.css';
 
-function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, gameConfig, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, survivalCorrect, usedSurvivalPowerups = {}, onSurvivalPowerupUsed, bestScore, onQuit }) {
+function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, onTimeout, onPowerUpUsed, gameMode, gameConfig, timeLeft: gameTimeLeft, avatar, streak, survivalIndex, survivalCorrect, usedSurvivalPowerups = {}, onSurvivalPowerupUsed, bestScore, onQuit, activeTheme }) {
     const { cardId } = useParams();
     const navigate = useNavigate();
     const t = translations[language];
