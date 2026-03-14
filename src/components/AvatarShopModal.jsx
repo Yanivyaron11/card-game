@@ -296,7 +296,7 @@ function AvatarShopModal({
                                             })}
                                         >
                                             <div className="shop-item-emoji">
-                                                <div className="premium-avatar-box" style={{ width: '65px', height: '65px' }}>
+                                                <div className="premium-avatar-box" style={{ width: '85px', height: '85px' }}>
                                                     {theme.image ? (
                                                         <img src={theme.image} alt={theme.name[language]} className="avatar-img-premium" />
                                                     ) : theme.color ? (
