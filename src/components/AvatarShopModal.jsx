@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { avatars } from '../data/avatars';
 import { topics } from '../data/questions/index';
+import { themes } from '../data/themes';
 import { translations } from '../data/translations';
 import { playSound } from '../utils/sounds';
 import './AvatarShopModal.css';
@@ -10,7 +11,8 @@ function AvatarShopModal({
     unlockedAvatars, activeAvatars, onBuyAvatar, onToggleAvatar,
     onSelectAvatar, selectedAvatars,
     unlockedTopics, onBuyTopic,
-    unlockedSkins, activeSkins, onToggleSkin, onBuySkin
+    unlockedSkins, activeSkins, onToggleSkin, onBuySkin,
+    unlockedThemes, activeTheme, onBuyTheme, onEquipTheme
 }) {
     const [activeTab, setActiveTab] = useState('avatars');
     const [previewItem, setPreviewItem] = useState(null);
@@ -69,6 +71,14 @@ function AvatarShopModal({
         onSelectAvatar({ ...avatar, image: skin.image, currentSkin: skin.id }, 1); // Simple P1 selection for now
     };
 
+    const handleBuyTheme = (theme) => {
+        if (totalCoins >= theme.price) {
+            onBuyTheme(theme.id, theme.price);
+        } else {
+            playSound('error');
+        }
+    };
+
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content shop-modal glass-panel card-pop" onClick={e => e.stopPropagation()}>
@@ -86,10 +96,16 @@ function AvatarShopModal({
                         {t.shop_tab_avatars}
                     </button>
                     <button
-                        className={`shop-tab-btn ${activeTab === 'themes' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('themes')}
+                        className={`shop-tab-btn ${activeTab === 'topics' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('topics')}
                     >
-                        {t.shop_tab_themes}
+                        {t.shop_tab_topics}
+                    </button>
+                    <button
+                        className={`shop-tab-btn ${activeTab === 'backgrounds' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('backgrounds')}
+                    >
+                        {t.shop_tab_backgrounds}
                     </button>
                     <button
                         className={`shop-tab-btn ${activeTab === 'skins' ? 'active' : ''}`}
@@ -230,9 +246,9 @@ function AvatarShopModal({
                                 </div>
                             ))}
                         </div>
-                    ) : (
+                    ) : activeTab === 'topics' ? (
                         <div className="shop-category-section">
-                            <h3>{t.shop_tab_themes}</h3>
+                            <h3>{t.shop_tab_topics}</h3>
                             <div className="shop-grid">
                                 {purchasableTopicGroups.map(group => {
                                     const isUnlocked = unlockedTopics.includes(group.id);
@@ -252,6 +268,64 @@ function AvatarShopModal({
                                                     }}
                                                 >
                                                     🪙 {group.price}
+                                                </button>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="shop-category-section">
+                            <h3>{t.shop_tab_backgrounds}</h3>
+                            <div className="shop-grid">
+                                {themes.map(theme => {
+                                    const isUnlocked = unlockedThemes.includes(theme.id);
+                                    const isEquipped = activeTheme === theme.id;
+                                    return (
+                                        <div
+                                            key={theme.id}
+                                            className={`shop-item topic-item ${isUnlocked ? 'unlocked' : 'locked'} ${isEquipped ? 'selected' : ''}`}
+                                            onClick={() => setPreviewItem({
+                                                ...theme,
+                                                isUnlocked,
+                                                isActive: isEquipped,
+                                                onToggle: () => onEquipTheme(theme.id),
+                                                onBuy: handleBuyTheme,
+                                                type: 'theme'
+                                            })}
+                                        >
+                                            <div className="shop-item-emoji">
+                                                <div className="premium-avatar-box">
+                                                    {theme.image ? (
+                                                        <img src={theme.image} alt={theme.name[language]} className="avatar-img-premium" />
+                                                    ) : (
+                                                        <span style={{ fontSize: '2.5rem' }}>{theme.emoji}</span>
+                                                    )}
+                                                </div>
+                                            </div>
+                                            <div className="shop-item-name">{theme.name[language]}</div>
+
+                                            {isUnlocked ? (
+                                                <div
+                                                    className={`toggle-switch ${isEquipped ? 'active' : ''}`}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        onEquipTheme(theme.id);
+                                                    }}
+                                                >
+                                                    <div className="toggle-knob"></div>
+                                                </div>
+                                            ) : (
+                                                <button
+                                                    className="shop-btn buy-btn"
+                                                    disabled={totalCoins < theme.price}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        handleBuyTheme(theme);
+                                                    }}
+                                                >
+                                                    🪙 {theme.price}
                                                 </button>
                                             )}
                                         </div>

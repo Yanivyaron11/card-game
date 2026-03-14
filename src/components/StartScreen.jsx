@@ -11,7 +11,7 @@ import { avatars } from '../data/avatars';
 import AvatarShopModal from './AvatarShopModal';
 import './StartScreen.css';
 
-function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlockedAvatars, activeAvatars, onBuyAvatar, unlockedTopics, onBuyTopic, unlockedSkins, activeSkins, onBuySkin, onToggleAvatar, onToggleSkin }) {
+function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlockedAvatars, activeAvatars, onBuyAvatar, unlockedTopics, onBuyTopic, unlockedSkins, activeSkins, onBuySkin, onToggleAvatar, onToggleSkin, unlockedThemes, activeTheme, onBuyTheme, onEquipTheme }) {
     const t = translations[language];
 
     const getLeafTopics = () => {
@@ -252,7 +252,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             <NewCategoryModal isOpen={isNewModalOpen} onClose={handleDismissNew} newCategories={newCategories} language={language} t={t} />
             <NewFeatureModal isOpen={isFeatureModalOpen} onClose={handleDismissFeatures} features={newFeatures} language={language} t={t} />
             <AlertModal isOpen={alertConfig.isOpen} onClose={() => setAlertConfig({ ...alertConfig, isOpen: false })} message={alertConfig.message} icon={alertConfig.icon} />
-            <AvatarShopModal isOpen={isShopOpen} onClose={() => setIsShopOpen(false)} language={language} totalCoins={totalCoins} unlockedAvatars={unlockedAvatars} activeAvatars={activeAvatars} onBuyAvatar={onBuyAvatar} onToggleAvatar={onToggleAvatar} onSelectAvatar={(avatar) => handleAvatarSelect(avatar, 1)} selectedAvatars={selectedAvatars} unlockedTopics={unlockedTopics} onBuyTopic={onBuyTopic} unlockedSkins={unlockedSkins} activeSkins={activeSkins} onToggleSkin={onToggleSkin} onBuySkin={onBuySkin} />
+            <AvatarShopModal isOpen={isShopOpen} onClose={() => setIsShopOpen(false)} language={language} totalCoins={totalCoins} unlockedAvatars={unlockedAvatars} activeAvatars={activeAvatars} onBuyAvatar={onBuyAvatar} onToggleAvatar={onToggleAvatar} onSelectAvatar={(avatar) => handleAvatarSelect(avatar, 1)} selectedAvatars={selectedAvatars} unlockedTopics={unlockedTopics} onBuyTopic={onBuyTopic} unlockedSkins={unlockedSkins} activeSkins={activeSkins} onToggleSkin={onToggleSkin} onBuySkin={onBuySkin} unlockedThemes={unlockedThemes} activeTheme={activeTheme} onBuyTheme={onBuyTheme} onEquipTheme={onEquipTheme} />
 
             <h2>{t.lets_play}</h2>
             <p className="total-questions-count">

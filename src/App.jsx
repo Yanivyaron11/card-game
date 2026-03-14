@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage'
 import CleaningMode from './components/CleaningMode'
 import { translations } from './data/translations'
 import { generateDeck, generateSurvivalDeck } from './utils/deck'
+import { themes } from './data/themes'
 import { playSound, playMusic, stopMusic } from './utils/sounds'
 import './App.css'
 
@@ -120,6 +121,14 @@ function App() {
     if (saved) return JSON.parse(saved);
     return ['leo_default'];
   });
+  const [unlockedThemes, setUnlockedThemes] = useState(() => {
+    const saved = localStorage.getItem('unlocked_themes');
+    if (saved) return JSON.parse(saved);
+    return ['default'];
+  });
+  const [activeTheme, setActiveTheme] = useState(() => {
+    return localStorage.getItem('active_theme') || 'default';
+  });
   const [sessionCoinBreakdown, setSessionCoinBreakdown] = useState({
     base: 0,
     streak: 0,
@@ -147,6 +156,16 @@ function App() {
   useEffect(() => {
     localStorage.setItem('unlocked_skins', JSON.stringify(unlockedSkins));
   }, [unlockedSkins]);
+
+  useEffect(() => {
+    localStorage.setItem('unlocked_themes', JSON.stringify(unlockedThemes));
+  }, [unlockedThemes]);
+
+  useEffect(() => {
+    localStorage.setItem('active_theme', activeTheme);
+    const themeObj = themes.find(t => t.id === activeTheme);
+    document.body.className = themeObj?.className || '';
+  }, [activeTheme]);
 
   useEffect(() => {
     localStorage.setItem('active_avatars', JSON.stringify(activeAvatars));
@@ -247,6 +266,24 @@ function App() {
       return true;
     }
     return false;
+  };
+
+  const buyTheme = (themeId, price) => {
+    if (totalCoins >= price && !unlockedThemes.includes(themeId)) {
+      setTotalCoins(prev => prev - price);
+      setUnlockedThemes(prev => [...prev, themeId]);
+      setActiveTheme(themeId);
+      playSound('victory');
+      return true;
+    }
+    return false;
+  };
+
+  const equipTheme = (themeId) => {
+    if (unlockedThemes.includes(themeId)) {
+      setActiveTheme(themeId);
+      playSound('pop');
+    }
   };
 
   const t = translations[language];
@@ -735,6 +772,10 @@ function App() {
             onBuySkin={buySkin}
             onToggleAvatar={toggleAvatarActivation}
             onToggleSkin={toggleSkinActivation}
+            unlockedThemes={unlockedThemes}
+            activeTheme={activeTheme}
+            onBuyTheme={buyTheme}
+            onEquipTheme={equipTheme}
           />
         } />
 
