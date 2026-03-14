@@ -24,7 +24,7 @@ export const israelQuestions = [
                 "רינתיה"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_59",
@@ -224,7 +224,7 @@ export const israelQuestions = [
                 "גבעת סביון"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_8",
@@ -274,7 +274,7 @@ export const israelQuestions = [
                 "רמת ים"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_36",
@@ -370,7 +370,7 @@ export const israelQuestions = [
                 "שלומית"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_14",
@@ -397,7 +397,7 @@ export const israelQuestions = [
                 "נווה מיכאל"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_2",
@@ -447,7 +447,7 @@ export const israelQuestions = [
                 "בית חורון"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_25",
@@ -497,7 +497,7 @@ export const israelQuestions = [
                 "מצפה עננים"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_34",
@@ -524,7 +524,7 @@ export const israelQuestions = [
                 "רמת ים"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_1",
@@ -620,7 +620,7 @@ export const israelQuestions = [
                 "באר שבע"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_58",
@@ -647,7 +647,7 @@ export const israelQuestions = [
                 "בית הפרדס"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_38",
@@ -674,7 +674,7 @@ export const israelQuestions = [
                 "נוף הסלע"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_43",
@@ -701,7 +701,7 @@ export const israelQuestions = [
                 "רועי"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_27",
@@ -728,7 +728,7 @@ export const israelQuestions = [
                 "נוף הסלע"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_3",
@@ -755,7 +755,7 @@ export const israelQuestions = [
                 "בית הבנים"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_50",
@@ -782,7 +782,7 @@ export const israelQuestions = [
                 "רמת רחל"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_9",
@@ -809,7 +809,7 @@ export const israelQuestions = [
                 "עטאוונה (שבט)"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_45",
@@ -836,7 +836,7 @@ export const israelQuestions = [
                 "מבואות יריחו"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_42",
@@ -909,7 +909,7 @@ export const israelQuestions = [
                 "רמת ים"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_12",
@@ -936,7 +936,7 @@ export const israelQuestions = [
                 "נווה אור"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_57",
@@ -1055,7 +1055,7 @@ export const israelQuestions = [
                 "בית הבנים"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_55",
@@ -1174,7 +1174,7 @@ export const israelQuestions = [
                 "רגבה"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_0",
@@ -1247,7 +1247,7 @@ export const israelQuestions = [
                 "מיטב"
             ]
         },
-        "correctAnswer": 0
+        "correctAnswer": 1
     },
     {
         "id": "israel_geo_exist_18",
@@ -1274,7 +1274,7 @@ export const israelQuestions = [
                 "נוף הסלע"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_17",
@@ -1347,7 +1347,7 @@ export const israelQuestions = [
                 "כפר שחקים"
             ]
         },
-        "correctAnswer": 1
+        "correctAnswer": 0
     },
     {
         "id": "israel_geo_exist_46",
