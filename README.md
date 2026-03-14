@@ -11,7 +11,11 @@ A fun, interactive, and educational card game designed for children and trivia l
   - **Persistent Unlocks**: Everything you buy is saved to your local storage.
 - **Survival Mode (Junior & Master)**:
   - Two distinct tracks: **Junior** (🟢) and **Master** (🔴) to cater to different age groups and skill levels.
+  - **Topic Selection**: Choose specific categories even in Survival mode for a tailored challenge.
   - Separate high-score records for each track.
+- **Enhanced Avatars & Skins**:
+  - **Professor Owl (3D)**: High-quality 3D animations for University Professor, Researcher, and Friendly Inventor skins.
+  - **Dynamic Shop**: Unlock premium skins and avatars using your earned coins.
 - **Multi-Game Modes**:
   - **Solo**: Relaxed play at your own pace.
   - **Time Attack**: Race against a global countdown with a dedicated time-centered UI.
@@ -20,7 +24,7 @@ A fun, interactive, and educational card game designed for children and trivia l
   - **🌓 50/50**: Eliminates two wrong answers.
   - **💡 Hint**: Provides a contextual clue.
   - **⚡ Solve**: Automatically identifies the correct answer.
-- **Dynamic Feedback**: Vibrant on-screen feedback messages and **Win Streaks** (3+ in a row triggers special visual effects).
+- **Dynamic Feedback**: Vibrant on-screen feedback messages and **Win Streaks** (Special bonuses awarded at exactly 3 and 5 correct answers in a row, once per game per player).
 - **Settings & Control**: 
   - Toggle sound, music, and language.
   - **Fine-grained Category Control**: Choose exactly which topics appear in your game.
@@ -40,17 +44,23 @@ A fun, interactive, and educational card game designed for children and trivia l
 
 Smarty features a robust rewarding system to keep children engaged:
 - **Base Earnings**: Higher difficulty = Higher reward (Level 1: 1🪙, Level 2: 2🪙, Level 3: 3🪙).
-- **Streak Bonus**: Answer 3 questions correctly in a row to earn an extra **5🪙**.
+- **Streak Bonus**: Awarded at exactly **3** and **5** correct answers in a row (once each per game) to earn an extra **5🪙**.
 - **Survival Bonuses**: 
   - New High Score: **+20🪙**.
-  - Course Completion: **+50🪙**.
+  - Course Completion: Junior (**+30🪙**) / Master (**+50🪙**).
+- **Completion Bonuses**:
+  - Grid 3x3: **+10🪙**
+  - Grid 4x4: **+20🪙**
+  - Grid 5x5: **+30🪙**
 - **Time Attack Bonus**: Remaining time is converted into coins upon victory (1s = 1🪙).
+- **Daily Bonus**: Log in daily to receive a **+20🪙** login gift.
 
 ## 🛠️ Technology Stack
 
 - **React**: Core UI framework.
 - **Vite**: Ultra-fast build tool and dev server.
 - **Vanilla CSS**: Custom design system for visual excellence.
+- **Vitest & React Testing Library**: Robust integration testing for core game logic and UI components.
 
 ## 🌍 Hebrew Localization Fixes
 
