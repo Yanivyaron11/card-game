@@ -21,5 +21,17 @@ export const themes = [
         type: 'theme',
         category: 'premium',
         className: 'theme-candy'
+    },
+    {
+        id: 'space',
+        name: {
+            he: "החלל החיצון 🪐",
+            en: "Outer Space 🪐"
+        },
+        image: "/themes/space_theme_bg.png",
+        price: 0,
+        type: 'theme',
+        category: 'free',
+        className: 'theme-space'
     }
 ];

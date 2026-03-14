@@ -19,6 +19,11 @@
   --app-bg-color: transparent;
 }
 
+.theme-space {
+  --app-bg-image: url('/themes/space_theme_bg.png');
+  --app-bg-color: transparent;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
