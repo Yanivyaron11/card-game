@@ -8,7 +8,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -31,7 +31,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -58,7 +58,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -81,7 +81,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -108,7 +108,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -131,7 +131,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -158,7 +158,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -181,7 +181,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -208,7 +208,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -231,7 +231,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -258,7 +258,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -281,7 +281,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -304,7 +304,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -327,7 +327,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -354,7 +354,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -381,7 +381,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -404,7 +404,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -431,7 +431,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -454,7 +454,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -481,7 +481,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -508,7 +508,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -531,7 +531,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -554,7 +554,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -604,7 +604,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 1,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -658,7 +658,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -685,7 +685,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -712,7 +712,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -739,7 +739,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -766,7 +766,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -793,7 +793,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -820,7 +820,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -843,7 +843,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -866,7 +866,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -893,7 +893,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -920,7 +920,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -943,7 +943,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -966,7 +966,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1012,7 +1012,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1062,7 +1062,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1108,7 +1108,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1131,7 +1131,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 1,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1158,7 +1158,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1181,7 +1181,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1204,7 +1204,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1231,7 +1231,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1258,7 +1258,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1281,7 +1281,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1304,7 +1304,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
@@ -1354,7 +1354,7 @@ export const israelQuestions = [
         "category": "israel_cities",
         "subCategory": "existence",
         "templateId": "israel-city-existence",
-        "level": 2,
+        "level": 3,
         "emoji": "🗺️",
         "text": {
             "en": "Which of these is a real city or town in Israel?",
