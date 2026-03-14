@@ -62,7 +62,18 @@ export const avatars = [
     },
 
     // Premium (100-450)
-    { id: 'monkey', emoji: '🐵', name: { en: 'Bobo', he: 'בובו' }, price: 100, category: 'premium' },
+    {
+        id: 'monkey',
+        emoji: '🐵',
+        name: { en: 'Bobo', he: 'בובו' },
+        price: 100,
+        category: 'premium',
+        skins: [
+            { id: 'hipster', name: { en: 'Hipster Bobo', he: 'בובו היפסטר' }, image: '/assets/avatars/monkey/hipster.png', price: 200 },
+            { id: 'barista', name: { en: 'Barista Bobo', he: 'בובו בריסטה' }, image: '/assets/avatars/monkey/barista.png', price: 300 },
+            { id: 'businessman', name: { en: 'Businessman Bobo', he: 'בובו איש עסקים' }, image: '/assets/avatars/monkey/businessman.png', price: 500 }
+        ]
+    },
     { id: 'owl', emoji: '🦉', name: { en: 'Professor', he: 'פרופסור' }, price: 250, category: 'premium' },
     { id: 'kitty', emoji: '🐱', name: { en: 'Kitty', he: 'מיצי' }, price: 250, category: 'premium' },
     { id: 'robot', emoji: '🤖', name: { en: 'Robo', he: 'רובו' }, price: 400, category: 'premium' },
