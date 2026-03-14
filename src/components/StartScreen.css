@@ -163,7 +163,8 @@
     flex: 1;
     background: var(--glass-bg);
     border: 2px solid transparent;
-    font-size: 0.9rem;
+    font-size: 1.15rem;
+    font-weight: 600;
     padding: 0.8rem;
 }
 
@@ -355,7 +356,8 @@
 
     .mode-btn {
         padding: 0.6rem 0.4rem;
-        font-size: 0.8rem;
+        font-size: 1.1rem;
+        font-weight: 600;
         display: flex;
         flex-direction: column;
         align-items: center;
