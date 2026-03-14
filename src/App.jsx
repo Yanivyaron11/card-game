@@ -490,6 +490,7 @@ function App() {
 
     if (gameConfig?.gameMode === 'survival' && isCorrect) {
       const newScore = survivalCorrect + 1;
+      setSurvivalCorrect(newScore);
 
       // Check for new record toast
       const HS_KEY = gameConfig.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';

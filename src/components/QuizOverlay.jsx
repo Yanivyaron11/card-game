@@ -226,11 +226,9 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             </div>
                         </div>
                     )}
-                    {gameMode !== 'survival' && (
-                        <div className="stat-item coins-display">
-                            <div key={coins} className="coins-value mini coin-pop" data-testid="quiz-coins">🪙 {coins}</div>
-                        </div>
-                    )}
+                    <div className="stat-item coins-display">
+                        <div key={coins} className="coins-value mini coin-pop" data-testid="quiz-coins">🪙 {coins}</div>
+                    </div>
                     {gameMode === 'survival' && (
                         <div className="stat-item survival-progress-section">
                             {(() => {
