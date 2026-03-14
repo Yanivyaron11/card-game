@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import StartScreen from './components/StartScreen'
 import GameBoard from './components/GameBoard'
 import QuizOverlay from './components/QuizOverlay'
+import LandingPage from './components/LandingPage'
 import CleaningMode from './components/CleaningMode'
 import { translations } from './data/translations'
 import { generateDeck, generateSurvivalDeck } from './utils/deck'
@@ -66,14 +67,14 @@ function SurvivalResult({ correct, language, survivalType }) {
 }
 
 function App() {
-
   const navigate = useNavigate();
   const location = useLocation();
-  const [gameState, setGameState] = useState('start') // start, playing, game_over, victory
+  const [gameState, setGameState] = useState('start')
+  const [showLanding, setShowLanding] = useState(false);
   const [gameConfig, setGameConfig] = useState(null)
   const [deck, setDeck] = useState([])
   const [lives, setLives] = useState({ 1: 1, 2: 1 })
-  const [language, setLanguage] = useState('he') // en, he
+  const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'he') // en, he
   const [currentPlayer, setCurrentPlayer] = useState(1); // 1 or 2
   const [scores, setScores] = useState({ 1: 0, 2: 0 });
   const [timeLeft, setTimeLeft] = useState(0);
@@ -128,6 +129,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem('total_coins', totalCoins);
   }, [totalCoins]);
+
+  useEffect(() => {
+    localStorage.setItem('language', language);
+  }, [language]);
 
   useEffect(() => {
     localStorage.setItem('unlocked_avatars', JSON.stringify(unlockedAvatars));
@@ -246,6 +251,58 @@ function App() {
 
   useEffect(() => {
     playMusic();
+
+    // -- Update Landing Page / Inactivity Logic --
+    const CHECK_INTERVAL = 30 * 60 * 1000; // 30 minutes timeout for landing page
+    const storedTime = localStorage.getItem('last_active_time');
+    const now = Date.now();
+
+    console.log("[PWA Pilot] Current time:", now);
+    console.log("[PWA Pilot] Stored activity time:", storedTime);
+
+    if (storedTime) {
+      const diff = now - parseInt(storedTime, 10);
+      console.log("[PWA Pilot] Time since last activity (ms):", diff);
+      if (diff > CHECK_INTERVAL) {
+        console.log("[PWA Pilot] Timeout reached! Showing landing page.");
+        setShowLanding(true);
+      }
+    } else {
+      console.log("[PWA Pilot] No stored time. Setting initial time to now.");
+      localStorage.setItem('last_active_time', now.toString());
+    }
+
+    // Update last active on every interaction (throttled)
+    let lastSaved = 0;
+    const updateActivity = () => {
+      const currentTime = Date.now();
+      if (currentTime - lastSaved > 60000) { // Throttle updates to local storage to 1 minute
+        localStorage.setItem('last_active_time', currentTime.toString());
+        lastSaved = currentTime;
+      }
+    };
+
+    window.addEventListener('pointerdown', updateActivity);
+
+    // Also check when coming back from background
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        const time = localStorage.getItem('last_active_time');
+        if (time) {
+          const diff = Date.now() - parseInt(time, 10);
+          console.log("[PWA Pilot] Back to visible. Diff:", diff);
+          if (diff > CHECK_INTERVAL) {
+            setShowLanding(true);
+          }
+        }
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      window.removeEventListener('pointerdown', updateActivity);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, []);
 
   useEffect(() => {
@@ -582,6 +639,10 @@ function App() {
       navigate('/');
     }
   };
+
+  if (showLanding) {
+    return <LandingPage language={language} />;
+  }
 
   return (
     <div className={`app-container ${language === 'he' ? 'rtl-mode' : ''}`} dir={language === 'he' ? 'rtl' : 'ltr'}>

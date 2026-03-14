@@ -1,0 +1,127 @@
+.landing-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.landing-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.landing-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.start-button-big {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 1.5rem 4rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    animation: pulsate 2s infinite;
+}
+
+.start-button-big:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(255, 71, 87, 0.6);
+}
+
+.floating-emojis {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-emoji {
+    position: absolute;
+    font-size: 3rem;
+    animation: floatAround 15s infinite linear;
+    opacity: 0.3;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(255, 71, 87, 0.6);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 10px 20px rgba(255, 71, 87, 0.4);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatAround {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(100px, 100px) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(0, 200px) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(-100px, 100px) rotate(270deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+/* RTL Specifics */
+.rtl-mode .landing-title {
+    font-family: inherit;
+}
