@@ -17,7 +17,7 @@ export const themes = [
             en: "Candy Land 🍭"
         },
         image: "/themes/candy_theme_bg.png",
-        price: 600,
+        price: 0,
         type: 'theme',
         category: 'premium',
         className: 'theme-candy'
