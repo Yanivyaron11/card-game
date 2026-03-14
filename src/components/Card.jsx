@@ -23,7 +23,7 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars }) {
         <div
             className={`card ${card.isSolved ? 'solved' : ''} ${card.isFailed ? 'failed' : ''} ${isBlocked ? 'blocked' : ''} ${ownerClass}`}
             onPointerDown={isBlocked ? null : onClick}
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+            {...((!card.isSolved && !card.isFailed && !isBlocked) ? { 'data-testid': 'click-card' } : {})}
         >
             <div className="card-inner">
                 {/* Card Back (Default state) */}

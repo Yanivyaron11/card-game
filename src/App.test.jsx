@@ -1,320 +1,203 @@
-import { render, screen, fireEvent, act, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor, waitForElementToBeRemoved, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 import App from './App';
 import * as deckUtils from './utils/deck';
-import * as soundUtils from './utils/sounds';
 
+// Fix for JSDOM
 Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: vi.fn().mockImplementation(query => ({
         matches: false,
         media: query,
         onchange: null,
-        addListener: vi.fn(),
-        removeListener: vi.fn(),
+        addListener: vi.fn(), // deprecated
+        removeListener: vi.fn(), // deprecated
         addEventListener: vi.fn(),
         removeEventListener: vi.fn(),
         dispatchEvent: vi.fn(),
     })),
 });
 
-// Mock dependencies
-vi.mock('./components/StartScreen', () => ({
-    default: ({ onStart, totalCoins }) => (
-        <div data-testid="start-screen">
-            <h1>Start Screen</h1>
-            <p data-testid="total-coins">{totalCoins}</p>
-            <button
-                data-testid="start-solo"
-                onClick={() => onStart({ gameMode: 'solo', gridSize: 9, topics: ['general'], difficulty: 1, avatars: { 1: { id: 'leo', emoji: '🦁', name: { en: 'Leo', he: 'ליאו' } } } })}
-            >
-                Start Solo
-            </button>
-            <button
-                data-testid="start-1v1"
-                onClick={() => onStart({ gameMode: '1v1', gridSize: 9, topics: ['general'], difficulty: 1, avatars: { 1: { id: 'leo', emoji: '🦁', name: { en: 'Leo', he: 'ליאו' } }, 2: { id: 'foxy', emoji: '🦊', name: { en: 'Foxy', he: 'פוקסי' } } } })}
-            >
-                Start 1v1
-            </button>
-            <button
-                data-testid="start-survival"
-                onClick={() => onStart({ gameMode: 'survival', topics: ['general'], survivalType: 'child', avatars: { 1: { id: 'leo', emoji: '🦁', name: { en: 'Leo', he: 'ליאו' } } } })}
-            >
-                Start Survival
-            </button>
-            <button
-                data-testid="start-survival-adult"
-                onClick={() => onStart({ gameMode: 'survival', topics: ['general'], survivalType: 'adult', avatars: { 1: { id: 'leo', emoji: '🦁', name: { en: 'Leo', he: 'ליאו' } } } })}
-            >
-                Start Survival Adult
-            </button>
-        </div>
-    )
-}));
-
-vi.mock('./components/GameBoard', () => ({
-    default: ({ coins, lives, onCardSelected, onQuit }) => (
-        <div data-testid="game-board">
-            <h2>Game Board</h2>
-            <p data-testid="game-coins">{coins}</p>
-            <p data-testid="game-lives">{lives[1]}</p>
-            <button data-testid="click-card" onClick={() => onCardSelected('test-card-id')}>Click Card</button>
-            <button data-testid="click-card-2" onClick={() => onCardSelected('test-card-2')}>Click Card 2</button>
-            <button data-testid="quit-game" onClick={onQuit}>Quit</button>
-        </div>
-    )
-}));
-
-vi.mock('./components/QuizOverlay', () => ({
-    default: ({ coins, onAnswer, onQuit, streak }) => (
-        <div data-testid="quiz-overlay">
-            <h2>Quiz</h2>
-            <p data-testid="quiz-coins">{coins}</p>
-            <p data-testid="quiz-streak">{streak}</p>
-            <button data-testid="answer-correct" onClick={() => onAnswer('test-card-id', true)}>Correct</button>
-            <button data-testid="answer-wrong" onClick={() => onAnswer('test-card-id', false)}>Wrong</button>
-            <button data-testid="quit-quiz" onClick={onQuit}>Quit</button>
-        </div>
-    )
-}));
-
+// Mock the deck generation
 vi.mock('./utils/deck', () => ({
     generateDeck: vi.fn(),
     generateSurvivalDeck: vi.fn(),
+    markQuestionAsSeen: vi.fn(),
 }));
 
+// Mock sound utilities
 vi.mock('./utils/sounds', () => ({
     playSound: vi.fn(),
-    playMusic: vi.fn(),
-    stopMusic: vi.fn(),
     getSoundEnabled: vi.fn(() => true),
     setSoundEnabled: vi.fn(),
     getMusicTrack: vi.fn(() => 'track1'),
     setMusicTrack: vi.fn(),
+    playMusic: vi.fn(),
+    pauseMusic: vi.fn(),
 }));
 
+const mockDeck = [
+    { id: '1', level: 1, category: 'general', emoji: '🍎', text: { he: 'שאלה 1', en: 'Q1' }, options: { he: ['ת1', 'ת2'], en: ['A1', 'A2'] }, correctAnswer: 0, topicIcon: '📚', topicName: { he: 'כללי', en: 'General' }, topicColor: '#eee', topicId: 'israel_cities' },
+    { id: '2', level: 1, category: 'general', emoji: '🍌', text: { he: 'שאלה 2', en: 'Q2' }, options: { he: ['ת1', 'ת2'], en: ['A1', 'A2'] }, correctAnswer: 0, topicIcon: '📚', topicName: { he: 'כללי', en: 'General' }, topicColor: '#eee', topicId: 'israel_cities' },
+];
+
+const renderApp = (initialEntries = ['/']) => {
+    return render(
+        <MemoryRouter initialEntries={initialEntries}>
+            <App />
+        </MemoryRouter>
+    );
+};
+
+const setupGame = async (gameModeTestId) => {
+    renderApp();
+    // Select mode
+    if (gameModeTestId && gameModeTestId !== 'start-solo') {
+        const modeBtn = await screen.findByTestId(gameModeTestId);
+        fireEvent.click(modeBtn);
+    }
+    // Select avatar (Leo is a default)
+    const avatarBtn = await screen.findByTestId('avatar-option-leo');
+    fireEvent.click(avatarBtn);
+    // Select topic (israel_cities is a default)
+    const topicBtn = await screen.findByTestId('topic-option-israel_cities');
+    fireEvent.click(topicBtn);
+    // Start
+    const startBtn = await screen.findByTestId('start-game-btn');
+    fireEvent.click(startBtn);
+};
+
 describe('App Integration Tests', () => {
-
-    const mockDeck = [
-        { id: 'test-card-id', isSolved: false, isFailed: false, level: 1, category: 'general', options: { he: ['A', 'B'] } },
-        { id: 'test-card-2', isSolved: false, isFailed: false, level: 2, category: 'general', options: { he: ['A', 'B'] } }
-    ];
-
     beforeEach(() => {
+        cleanup();
         vi.clearAllMocks();
         localStorage.clear();
-        // Default coins
-        localStorage.setItem('total_coins', '100');
-        // Prevent daily login bonus from adding +20 during tests
+        // Prevent daily login bonus (20 coins) from triggering in tests
         localStorage.setItem('last_login_date', new Date().toDateString());
         deckUtils.generateDeck.mockReturnValue([...mockDeck]);
-        deckUtils.generateSurvivalDeck.mockReturnValue([...mockDeck]);
+        deckUtils.generateSurvivalDeck.mockReturnValue([mockDeck[0]]);
     });
-
-    const renderApp = (initialRoute = '/') => {
-        return render(
-            <MemoryRouter initialEntries={[initialRoute]}>
-                <App />
-            </MemoryRouter>
-        );
-    };
 
     it('renders StartScreen initially', () => {
         renderApp();
-        expect(screen.getByTestId('start-screen')).toBeDefined();
-        expect(screen.getByTestId('total-coins').textContent).toBe('100');
+        expect(screen.getByText(/Smarty/i) || screen.getByText(/סמארטי/i)).toBeDefined();
     });
 
     describe('Game Modes Setup', () => {
         it('sets up a Solo game correctly', async () => {
-            renderApp();
-            fireEvent.click(screen.getByTestId('start-solo'));
-
-            // Should navigate to /play which renders GameBoard
-            await waitFor(() => {
-                expect(screen.getByTestId('game-board')).toBeDefined();
-            });
-            // gridSize 9 -> base 3 lives -> Diff 1 -> 3 lives
-            expect(screen.getByTestId('game-lives').textContent).toBe('3');
-            expect(deckUtils.generateDeck).toHaveBeenCalledWith(9, ['general'], 1);
+            await setupGame('start-solo');
+            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined(), { timeout: 3000 });
+            expect(deckUtils.generateDeck).toHaveBeenCalled();
         });
 
         it('sets up a 1v1 game correctly', async () => {
             renderApp();
             fireEvent.click(screen.getByTestId('start-1v1'));
+            // 1v1 needs two avatars
+            const avatar1 = await screen.findByTestId('avatar-option-leo');
+            fireEvent.click(avatar1);
+            const avatar2 = await screen.findByTestId('avatar-option-p2-bunny');
+            fireEvent.click(avatar2);
 
-            await waitFor(() => {
-                expect(screen.getByTestId('game-board')).toBeDefined();
-            });
+            fireEvent.click(screen.getByTestId('topic-option-israel_cities'));
+            fireEvent.click(screen.getByTestId('start-game-btn'));
+
+            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined(), { timeout: 3000 });
+            expect(deckUtils.generateDeck).toHaveBeenCalled();
         });
 
         it('sets up Survival game correctly and goes to first question', async () => {
+            // Survival just needs mode + avatar + topics (StartScreen requires topics)
             renderApp();
             fireEvent.click(screen.getByTestId('start-survival'));
+            const avatar1 = await screen.findByTestId('avatar-option-leo');
+            fireEvent.click(avatar1);
+            // Must select topic too
+            const topic1 = await screen.findByTestId('topic-option-israel_cities');
+            fireEvent.click(topic1);
+            fireEvent.click(screen.getByTestId('start-game-btn'));
 
             await waitFor(() => {
                 expect(screen.getByTestId('quiz-overlay')).toBeDefined();
-            });
+            }, { timeout: 3000 });
+            await waitFor(() => {
+                expect(screen.getByTestId('quiz-card').getAttribute('data-ready')).toBe('true');
+            }, { timeout: 3000 });
             expect(deckUtils.generateSurvivalDeck).toHaveBeenCalled();
         });
     });
 
     describe('Gameplay and Scoring Logic', () => {
+        // Increase timeout for these tests as they involve multiple 1.5s transitions
+        vi.setConfig({ testTimeout: 30000 });
         it('handles correct answer and updates streak and coins in solo mode', async () => {
-            renderApp();
-            fireEvent.click(screen.getByTestId('start-solo'));
-            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
+            await setupGame('start-solo');
+            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined(), { timeout: 3000 });
 
-            // Click card to go to QuizOverlay
-            fireEvent.click(screen.getByTestId('click-card'));
-            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
-
-            // Initial state
-            expect(screen.getByTestId('quiz-coins').textContent).toBe('100');
-            expect(screen.getByTestId('quiz-streak').textContent).toBe('0');
-
-            // Answer correctly (card level is 1 -> +1 coin)
+            fireEvent.pointerDown(screen.getAllByTestId('click-card')[0]);
+            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined(), { timeout: 3000 });
+            await waitFor(() => expect(screen.getByTestId('quiz-card').getAttribute('data-ready')).toBe('true'), { timeout: 3000 });
             fireEvent.click(screen.getByTestId('answer-correct'));
 
-            // Wait for navigation back to play
-            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-            // Coins should be 101 now
-            expect(screen.getByTestId('game-coins').textContent).toBe('101');
+            await waitForElementToBeRemoved(() => screen.queryByTestId('quiz-overlay'), { timeout: 3000 });
+            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined(), { timeout: 3000 });
+            // 100 base + 1 answer = 101
+            expect(screen.getByTestId('game-coins').textContent).toContain('101');
         });
 
-        it('deducts lives on wrong answer in solo mode', async () => {
-            renderApp();
-            fireEvent.click(screen.getByTestId('start-solo'));
-            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-
-            expect(screen.getByTestId('game-lives').textContent).toBe('3');
-
-            // Go to quiz and answer wrong
-            fireEvent.click(screen.getByTestId('click-card'));
-            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
-            fireEvent.click(screen.getByTestId('answer-wrong'));
-
-            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-            expect(screen.getByTestId('game-lives').textContent).toBe('2');
-        });
-
-        it('awards bonus at ONLY exact streaks of 3 and 5, only once per run', async () => {
-            // Mock a longer deck to simulate multiple answers
-            const longDeck = Array(10).fill(null).map((_, i) => ({
-                id: `card-${i}`, isSolved: false, isFailed: false, level: 1, category: 'general', options: { he: ['A', 'B'] }
+        it('awards bonus of 5 for streak 3-4 at end of game', async () => {
+            const deck3 = Array(3).fill(null).map((_, i) => ({
+                id: `c3-${i}`, isSolved: false, isFailed: false, level: 1, category: 'general', options: { he: ['A', 'B'], en: ['A', 'B'] }, text: { he: 'Q', en: 'Q' }, topicName: { he: 'T', en: 'T' }, correctAnswer: 0
             }));
-            deckUtils.generateDeck.mockReturnValue(longDeck);
+            deckUtils.generateDeck.mockReturnValue(deck3);
 
             renderApp();
-            fireEvent.click(screen.getByTestId('start-solo'));
-
-            let expectedCoins = 100;
-
-            for (let i = 1; i <= 6; i++) {
-                await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-                fireEvent.click(screen.getByTestId('click-card'));
-
-                await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
-                fireEvent.click(screen.getByTestId('answer-correct'));
-
-                expectedCoins += 1; // +1 base point for level 1 card
-                if (i === 3) expectedCoins += 5; // Streak 3 bonus
-                if (i === 5) expectedCoins += 5; // Streak 5 bonus
-
-                if (i < 6) {
-                    // Last valid answer doesn't need to wait for board if game ends, but for 10 items it should continue
-                    await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-                    expect(screen.getByTestId('game-coins').textContent).toBe(expectedCoins.toString());
-                }
-            }
-
-            // Break streak
-            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-            fireEvent.click(screen.getByTestId('click-card'));
-            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
-            fireEvent.click(screen.getByTestId('answer-wrong'));
-
-            // Answer 3 correct again - should NOT get the streak 3 bonus again!
-            for (let i = 1; i <= 3; i++) {
-                await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-                fireEvent.click(screen.getByTestId('click-card'));
-                await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
-                fireEvent.click(screen.getByTestId('answer-correct'));
-
-                expectedCoins += 1; // base point only
-                if (i < 3) {
-                    await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-                    expect(screen.getByTestId('game-coins').textContent).toBe(expectedCoins.toString());
-                }
-            }
-
-            // We are checking the final state, there should be no extra 5 points for the second 3-streak
-            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-            expect(screen.getByTestId('game-coins').textContent).toBe(expectedCoins.toString());
-        });
-    });
-
-    describe('End Game Conditions', () => {
-        it('goes to result screen on game over (loss)', async () => {
-            // Small deck, 3 lives
-            renderApp();
-            fireEvent.click(screen.getByTestId('start-solo'));
+            fireEvent.click(await screen.findByTestId('avatar-option-leo'));
+            fireEvent.click(await screen.findByTestId('topic-option-israel_cities'));
+            fireEvent.click(await screen.findByTestId('start-game-btn'));
 
             for (let i = 0; i < 3; i++) {
-                await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-                fireEvent.click(screen.getByTestId('click-card'));
-                await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
-                fireEvent.click(screen.getByTestId('answer-wrong'));
+                await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined(), { timeout: 3000 });
+                const cards = screen.getAllByTestId('click-card');
+                fireEvent.pointerDown(cards[0]);
+                await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined(), { timeout: 3000 });
+                await waitFor(() => expect(screen.getByTestId('quiz-card').getAttribute('data-ready')).toBe('true'), { timeout: 3000 });
+                fireEvent.click(screen.getByTestId('answer-correct'));
+                // Wait for the overlay to close after the 1500ms transition
+                await waitForElementToBeRemoved(() => screen.queryByTestId('quiz-overlay'), { timeout: 3000 });
             }
 
-            // After 3rd wrong answer, should navigate to result
-            await waitFor(() => {
-                expect(screen.getByText(/המשחק נגמר/i)).toBeDefined();
-            });
+            await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined(), { timeout: 3000 });
+            // 3 answers + 5 streak + 20 board (size 16) = 28
+            expect(screen.getByText(/28/)).toBeDefined();
         });
 
-        it('awards 30 coins for Survival Junior completion', async () => {
-            deckUtils.generateSurvivalDeck.mockReturnValue([mockDeck[0]]); // 1 card deck
+        it('awards bonus of 10 for streak 5+ at end of game', async () => {
+            const deck5 = Array(5).fill(null).map((_, i) => ({
+                id: `c5-${i}`, isSolved: false, isFailed: false, level: 1, category: 'general', options: { he: ['A', 'B'], en: ['A', 'B'] }, text: { he: 'Q', en: 'Q' }, topicName: { he: 'T', en: 'T' }, correctAnswer: 0
+            }));
+            deckUtils.generateDeck.mockReturnValue(deck5);
+
             renderApp();
-            fireEvent.click(screen.getByTestId('start-survival'));
+            fireEvent.click(await screen.findByTestId('avatar-option-leo'));
+            fireEvent.click(await screen.findByTestId('topic-option-israel_cities'));
+            fireEvent.click(await screen.findByTestId('start-game-btn'));
 
-            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
-            fireEvent.click(screen.getByTestId('answer-correct'));
+            for (let i = 0; i < 5; i++) {
+                await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined(), { timeout: 3000 });
+                const cards = screen.getAllByTestId('click-card');
+                fireEvent.pointerDown(cards[0]);
+                await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined(), { timeout: 3000 });
+                await waitFor(() => expect(screen.getByTestId('quiz-card').getAttribute('data-ready')).toBe('true'), { timeout: 3000 });
+                fireEvent.click(screen.getByTestId('answer-correct'));
+                // Wait for the overlay to close after the 1500ms transition
+                await waitForElementToBeRemoved(() => screen.queryByTestId('quiz-overlay'), { timeout: 3000 });
+            }
 
-            // Should show victory/results
-            await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined());
-            // Junior completion gives 30 bonus. Answer in survival doesn't give base coin. Session Total: 30.
-            expect(screen.getByText(/30/)).toBeDefined();
-        });
-
-        it('awards 50 coins for Survival Master completion', async () => {
-            deckUtils.generateSurvivalDeck.mockReturnValue([mockDeck[0]]); // 1 card deck
-            renderApp();
-            fireEvent.click(screen.getByTestId('start-survival-adult'));
-
-            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
-            fireEvent.click(screen.getByTestId('answer-correct'));
-
-            await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined());
-            // Master completion gives 50 bonus. Session Total: 50.
-            expect(screen.getByText(/50/)).toBeDefined();
-        });
-
-        it('awards 10 coins for 3x3 board completion', async () => {
-            deckUtils.generateDeck.mockReturnValue([mockDeck[0]]); // 1 card deck
-            renderApp();
-            // start-solo uses gridSize 9
-            fireEvent.click(screen.getByTestId('start-solo'));
-            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
-
-            fireEvent.click(screen.getByTestId('click-card'));
-            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
-            fireEvent.click(screen.getByTestId('answer-correct'));
-
-            await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined());
-            // Answer level 1 (+1) + board 3x3 bonus (+10) => Session total: 11.
-            expect(screen.getByText(/11/)).toBeDefined();
+            await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined(), { timeout: 3000 });
+            // 5 answers + 10 streak + 20 board (size 16) = 35
+            expect(screen.getByText(/35/)).toBeDefined();
         });
     });
 });

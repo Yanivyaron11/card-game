@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import StartScreen from './components/StartScreen'
 import GameBoard from './components/GameBoard'
@@ -79,6 +79,7 @@ function App() {
   const [scores, setScores] = useState({ 1: 0, 2: 0 });
   const [timeLeft, setTimeLeft] = useState(0);
   const [streaks, setStreaks] = useState({ 1: 0, 2: 0 });
+  const [maxStreaks, setMaxStreaks] = useState({ 1: 0, 2: 0 });
   const [awardedStreaks, setAwardedStreaks] = useState({ 1: [], 2: [] });
   const [currentSurvivalIndex, setCurrentSurvivalIndex] = useState(0);
   const [levelUpToast, setLevelUpToast] = useState(null);
@@ -87,7 +88,7 @@ function App() {
   const [newRecordToast, setNewRecordToast] = useState(null);
   const [bestScore, setBestScore] = useState(0);
   const [rewardToast, setRewardToast] = useState(null);
-  const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '10', 10));
+  const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '100', 10));
   const recordNotifiedRef = useRef(false);
   const titleClickRef = useRef(0);
   const [unlockedAvatars, setUnlockedAvatars] = useState(() => {
@@ -125,7 +126,7 @@ function App() {
     bonus: 0,
     spent: 0
   });
-  const answeringRef = useRef(null);
+  const answeringRef = useRef(new Set());
 
   useEffect(() => {
     localStorage.setItem('total_coins', totalCoins);
@@ -329,6 +330,7 @@ function App() {
   // But for this simple app, we'll keep state at App level.
 
   const handleStartGame = (config) => {
+    answeringRef.current.clear();
     playMusic(); // Ensure music is playing/unlocked on interaction
     setGameConfig(config);
     const gridSize = Number(config.gridSize);
@@ -396,33 +398,54 @@ function App() {
     setCurrentPlayer(1);
     setScores({ 1: 0, 2: 0 });
     setStreaks({ 1: 0, 2: 0 });
+    setMaxStreaks({ 1: 0, 2: 0 });
     setAwardedStreaks({ 1: [], 2: [] });
     setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0, spent: 0 });
     setGameState('playing');
   };
 
-  const checkWinCondition = () => {
+  const applyStreakBonuses = useCallback(() => {
+    const players = gameConfig?.gameMode === '1v1' ? [1, 2] : [1];
+    let totalStreakBonus = 0;
+
+    players.forEach(p => {
+      const mStreak = maxStreaks[p];
+      let bonus = 0;
+      if (mStreak >= 5) bonus = 10;
+      else if (mStreak >= 3) bonus = 5;
+
+      if (bonus > 0) {
+        totalStreakBonus += bonus;
+        setTotalCoins(prev => prev + bonus);
+      }
+    });
+
+    if (totalStreakBonus > 0) {
+      setSessionCoinBreakdown(prev => ({ ...prev, streak: prev.streak + totalStreakBonus }));
+    }
+  }, [gameConfig, maxStreaks]);
+
+  const checkWinCondition = useCallback(() => {
     if (deck.length === 0 || gameState !== 'playing') return;
 
-    const allCardsProcessed = deck.every(card => card.isSolved || card.isFailed);
+    const allCardsProcessed = deck.length > 0 && deck.every(card => card.isSolved || card.isFailed);
     const solvedCount = deck.filter(c => c.isSolved).length;
 
     // Early termination for 1v1
-    if (gameConfig?.gameMode === '1v1') {
-      const maxPossiblePoints = deck.filter(c => !c.isSolved && !c.isFailed).reduce((acc, card) => {
-        const canEverBeRebound = !card.isTainted && card.options.he.length > 2 && card.failedAttempts === 0;
-        // If it was already failed once and is eligible, it's worth 2 points NOW.
-        return acc + (canEverBeRebound || card.failedAttempts === 1 ? 2 : 1);
-      }, 0);
-      const scoreDiff = Math.abs(scores[1] - scores[2]);
-
-      if (scoreDiff > maxPossiblePoints || allCardsProcessed) {
-        playSound('victory');
+    if (gameConfig.gameMode === '1v1') {
+      const p1Solved = deck.filter(c => c.owner === 1).length;
+      const p2Solved = deck.filter(c => c.owner === 2).length;
+      const totalPossible = deck.length;
+      if (p1Solved > totalPossible / 2 || p2Solved > totalPossible / 2 || allCardsProcessed) {
+        applyStreakBonuses();
         setGameState('victory');
         navigate('/result');
-        return;
       }
-    } else if (allCardsProcessed && gameConfig?.gameMode !== 'survival') {
+      return;
+    }
+
+    if (allCardsProcessed) {
+      applyStreakBonuses();
       if (solvedCount > deck.length / 2) {
         playSound('victory');
         // Bonus for Time Attack: remaining time as coins
@@ -430,7 +453,6 @@ function App() {
           setTotalCoins(prev => prev + timeLeft);
           setRewardToast({ messageKey: 'time_bonus', amount: timeLeft });
           setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + timeLeft }));
-
         }
 
         // Board Completion Bonus
@@ -454,21 +476,20 @@ function App() {
         navigate('/result');
       }
     }
-  };
+  }, [deck, gameState, gameConfig, applyStreakBonuses, navigate, timeLeft]);
 
   useEffect(() => {
     if (gameState === 'playing') {
       checkWinCondition();
     }
-  }, [deck, scores, gameState]);
+  }, [deck, scores, gameState, checkWinCondition]);
 
-  const handleAnswer = (cardId, isCorrect, silent = false) => {
-    if (gameConfig?.gameMode === 'survival' && answeringRef.current === cardId) return;
-    answeringRef.current = cardId;
+  const handleAnswer = useCallback((cardId, isCorrect, fromQuiz = false) => {
+    if (answeringRef.current.has(cardId)) return;
+    answeringRef.current.add(cardId);
 
     if (gameConfig?.gameMode === 'survival' && isCorrect) {
       const newScore = survivalCorrect + 1;
-      setSurvivalCorrect(newScore);
 
       // Check for new record toast
       const HS_KEY = gameConfig.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
@@ -489,6 +510,7 @@ function App() {
 
       // Check for Course Completion
       if (newScore >= deck.length && deck.length > 0) {
+        applyStreakBonuses();
         const completionAmount = gameConfig.survivalType === 'adult' ? 50 : 30;
         setTotalCoins(prev => prev + completionAmount);
         setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + completionAmount }));
@@ -500,36 +522,23 @@ function App() {
       }
     }
 
-    if (!silent) {
-      if (isCorrect) {
-        playSound('correct');
-      } else {
-        playSound('wrong');
-      }
-    }
-
     if (isCorrect) {
       // Award coins based on question level (1, 2, or 3)
       const answeredCard = deck.find(c => c.id === cardId);
       const coinAward = answeredCard?.level || 1;
 
       const newStreaks = { ...streaks, [currentPlayer]: (streaks[currentPlayer] || 0) + 1 };
-      let extraBonus = 0;
       const currentStreak = newStreaks[currentPlayer];
 
-      if ((currentStreak === 3 || currentStreak === 5) && !awardedStreaks[currentPlayer].includes(currentStreak)) {
-        extraBonus = 5; // Streak bonus
-        setAwardedStreaks(prev => ({
-          ...prev,
-          [currentPlayer]: [...prev[currentPlayer], currentStreak]
-        }));
+      // Track Max Streak
+      if (currentStreak > (maxStreaks[currentPlayer] || 0)) {
+        setMaxStreaks(prev => ({ ...prev, [currentPlayer]: currentStreak }));
       }
 
-      setTotalCoins(prev => prev + coinAward + extraBonus);
+      setTotalCoins(prev => prev + coinAward);
       setSessionCoinBreakdown(prev => ({
         ...prev,
-        base: prev.base + coinAward,
-        streak: prev.streak + extraBonus
+        base: prev.base + coinAward
       }));
       setStreaks(newStreaks);
 
@@ -568,6 +577,7 @@ function App() {
         });
 
         if (newPlayerLives <= 0) {
+          applyStreakBonuses();
           playSound('wrong');
           setGameState('game_over');
           navigate('/result');
@@ -631,7 +641,7 @@ function App() {
     if (location.pathname.startsWith('/quiz')) {
       navigate('/play');
     }
-  };
+  }, [gameConfig, survivalCorrect, deck, applyStreakBonuses, navigate, streaks, currentPlayer, maxStreaks, scores, location.pathname, currentSurvivalIndex]);
 
   const handlePowerUpUsed = (cardId, type, data) => {
     setDeck(prev => prev.map(card => {
@@ -645,9 +655,14 @@ function App() {
     }));
   };
 
+  // Helper to apply streak bonuses at end of game
+
+
   const handleReturnToStart = () => {
+    answeringRef.current.clear();
+    // If quitting during a game, treat as end of run for stats/scoring
     if (gameState === 'playing') {
-      // For all modes, manual quit counts as "End of Run" so progress is saved/shown
+      applyStreakBonuses();
       setGameState('quit');
       navigate('/result');
     } else {
@@ -742,7 +757,7 @@ function App() {
             </div>
           ) : (
             <QuizOverlay
-              key={window.location.pathname}
+              key={location.pathname}
               deck={deck || []}
               lives={lives[currentPlayer] || 0}
               coins={totalCoins}

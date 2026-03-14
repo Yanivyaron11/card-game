@@ -71,6 +71,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
     useEffect(() => {
         if (timeLeft === 0 && !isAnswering && isReady) {
+            playSound('wrong');
             if (timeoutRef.current) timeoutRef.current(cardId);
         }
     }, [timeLeft, isAnswering, isReady, cardId]);
@@ -89,16 +90,18 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             const currentStreak = streak + 1;
             let randomMsg = "";
 
-            if (gameMode === '1v1' && card.failedAttempts >= 1 && !card.isTainted && card.options.he.length > 2) {
-                randomMsg = t.rebound_feedback;
-            } else {
-                const feedbackPool = currentStreak >= 3 ? t.streak_feedbacks : t.correct_feedbacks;
+            if (currentStreak === 3 || currentStreak === 5) {
+                const feedbackPool = t.streak_feedbacks;
                 randomMsg = feedbackPool[Math.floor(Math.random() * feedbackPool.length)];
             }
 
-            feedbackMessageRef.current = randomMsg
-                .replace('{name}', avatar?.name[language] || "")
-                .replace('{n}', currentStreak);
+            if (randomMsg) {
+                feedbackMessageRef.current = randomMsg
+                    .replace('{name}', avatar?.name[language] || "")
+                    .replace('{n}', currentStreak);
+            } else {
+                feedbackMessageRef.current = "";
+            }
         }
 
         playSound(isCorrect ? 'correct' : 'wrong');
@@ -188,7 +191,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const labels = language === 'he' ? optionLabelsHe : optionLabelsEn;
 
     return (
-        <div className="quiz-overlay-backdrop">
+        <div className="quiz-overlay-backdrop" data-testid="quiz-overlay">
             {!isReady && (
                 <div
                     style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999, touchAction: 'none' }}
@@ -196,7 +199,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
                 />
             )}
-            <div className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''}`}>
+            <div
+                className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''}`}
+                data-testid="quiz-card"
+                data-ready={isReady}
+            >
                 <button
                     className="quiz-quit-btn"
                     onClick={() => setIsQuitModalOpen(true)}
@@ -221,7 +228,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     )}
                     {gameMode !== 'survival' && (
                         <div className="stat-item coins-display">
-                            <div key={coins} className="coins-value mini coin-pop">🪙 {coins}</div>
+                            <div key={coins} className="coins-value mini coin-pop" data-testid="quiz-coins">🪙 {coins}</div>
                         </div>
                     )}
                     {gameMode === 'survival' && (
@@ -348,12 +355,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             </p>
                         </div>
                     )}
-
-                    {isAnswering && selectedAnswer === card.correctAnswer && avatar && (
+                    {isAnswering && selectedAnswer === card.correctAnswer && avatar && feedbackMessageRef.current && (
                         <div className={`feedback-toast ${(streak + 1) >= 3 ? 'streak-active' : ''}`}>
                             {feedbackMessageRef.current}
                         </div>
                     )}
+
 
                     {gameMode === '1v1' && card.failedAttempts === 1 && !card.isTainted && card.options.he.length > 2 && (
                         <div className="super-answer-indicator">
@@ -390,6 +397,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                 className={className}
                                 onClick={() => handleOptionClick(i)}
                                 disabled={isAnswering || (card.eliminatedIndices || []).includes(i)}
+                                data-testid={i === card.correctAnswer ? "answer-correct" : `answer-option-${i}`}
                             >
                                 <span className="option-label">{labels[i]}</span>
                                 <span className="option-text">{opt}</span>

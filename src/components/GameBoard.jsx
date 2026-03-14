@@ -48,7 +48,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
     const gridCols = config.gridSize === 9 ? 3 : config.gridSize === 25 ? 5 : 4;
 
     return (
-        <div className="game-board-container">
+        <div className="game-board-container" data-testid="game-board">
             <div className="game-controls">
                 <button className="control-btn" onClick={toggleSound}>
                     {soundOn ? '🔊' : '🔇'}
@@ -72,7 +72,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                             </div>
                         </div>
                         <div className="stat-item coins-display">
-                            <div key={coins} className="coins-value coin-pop">🪙 {coins}</div>
+                            <div key={coins} className="coins-value coin-pop" data-testid="game-coins">🪙 {coins}</div>
                         </div>
                     </>
                 ) : (
