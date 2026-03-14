@@ -24,7 +24,7 @@ A fun, interactive, and educational card game designed for children and trivia l
   - **🌓 50/50**: Eliminates two wrong answers.
   - **💡 Hint**: Provides a contextual clue.
   - **⚡ Solve**: Automatically identifies the correct answer.
-- **Dynamic Feedback**: Vibrant on-screen feedback messages and **Win Streaks** (Special bonuses awarded at exactly 3 and 5 correct answers in a row, once per game per player).
+- **Dynamic Feedback**: Vibrant on-screen feedback messages and **Win Streaks** (Special bonuses awarded at hits of exactly 3 and 5 correct answers in a row, once per game per player).
 - **Settings & Control**: 
   - Toggle sound, music, and language.
   - **Fine-grained Category Control**: Choose exactly which topics appear in your game.
@@ -44,7 +44,7 @@ A fun, interactive, and educational card game designed for children and trivia l
 
 Smarty features a robust rewarding system to keep children engaged:
 - **Base Earnings**: Higher difficulty = Higher reward (Level 1: 1🪙, Level 2: 2🪙, Level 3: 3🪙).
-- **Streak Bonus**: Awarded at exactly **3** and **5** correct answers in a row (once each per game) to earn an extra **5🪙**.
+- **Streak Bonus**: Awarded at exactly **3** and **5** correct answers in a row (once each per game, total 10🪙 if you reach 5) to earn extra rewards.
 - **Survival Bonuses**: 
   - New High Score: **+20🪙**.
   - Course Completion: Junior (**+30🪙**) / Master (**+50🪙**).
