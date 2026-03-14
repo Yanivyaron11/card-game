@@ -79,6 +79,7 @@ function App() {
   const [scores, setScores] = useState({ 1: 0, 2: 0 });
   const [timeLeft, setTimeLeft] = useState(0);
   const [streaks, setStreaks] = useState({ 1: 0, 2: 0 });
+  const [awardedStreaks, setAwardedStreaks] = useState({ 1: [], 2: [] });
   const [currentSurvivalIndex, setCurrentSurvivalIndex] = useState(0);
   const [levelUpToast, setLevelUpToast] = useState(null);
   const [survivalCorrect, setSurvivalCorrect] = useState(0);
@@ -395,6 +396,7 @@ function App() {
     setCurrentPlayer(1);
     setScores({ 1: 0, 2: 0 });
     setStreaks({ 1: 0, 2: 0 });
+    setAwardedStreaks({ 1: [], 2: [] });
     setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0, spent: 0 });
     setGameState('playing');
   };
@@ -504,8 +506,14 @@ function App() {
 
       const newStreaks = { ...streaks, [currentPlayer]: (streaks[currentPlayer] || 0) + 1 };
       let extraBonus = 0;
-      if (newStreaks[currentPlayer] > 0 && newStreaks[currentPlayer] % 3 === 0) {
-        extraBonus = 5;
+      const currentStreak = newStreaks[currentPlayer];
+
+      if ((currentStreak === 3 || currentStreak === 5) && !awardedStreaks[currentPlayer].includes(currentStreak)) {
+        extraBonus = 5; // Streak bonus
+        setAwardedStreaks(prev => ({
+          ...prev,
+          [currentPlayer]: [...prev[currentPlayer], currentStreak]
+        }));
       }
 
       setTotalCoins(prev => prev + coinAward + extraBonus);
