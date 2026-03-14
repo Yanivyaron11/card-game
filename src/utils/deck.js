@@ -31,7 +31,7 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
 
     // If we have fewer unseen than gridSize, we still take whatever unseen we HAVE,
     // and then fill the rest from the seen pool (without clearing it entirely).
-    // This ensures we don't repeat the SAME 16 questions immediately every time.
+    // This ensures we don't repeat the SAME questions immediately every time.
     let currentPool = [];
     if (unseenEligible.length >= gridSize) {
         currentPool = unseenEligible;
@@ -39,6 +39,12 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         // Take all unseen + shuffle the rest of eligible
         const seenPool = shuffle(eligibleQuestions.filter(q => sessionSeenQuestions.has(q.id)));
         currentPool = [...unseenEligible, ...seenPool];
+
+        // If currentPool is STILL smaller than gridSize (small pool at this level),
+        // we allow repetition of the ENTIRE pool to fill up to gridSize.
+        while (currentPool.length > 0 && currentPool.length < gridSize) {
+            currentPool = [...currentPool, ...shuffle(currentPool)];
+        }
     }
 
     let filteredEligibleQuestions = currentPool;
@@ -127,75 +133,7 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
         groupIdx++;
     }
 
-    // 4. Combine with other difficulty levels if STILL needed
-    if (allUniqueQuestions.length < gridSize) {
-        let backupEligible = questions.filter(q =>
-            selectedTopics.includes(q.category) &&
-            q.level !== difficulty &&
-            !allUniqueQuestions.some(aq => aq.id === q.id)
-        );
-
-        let unseenBackup = backupEligible.filter(q => !sessionSeenQuestions.has(q.id));
-
-        // If backup pool is exhausted, clear history for the backups
-        if (allUniqueQuestions.length + unseenBackup.length < gridSize) {
-            backupEligible.forEach(q => sessionSeenQuestions.delete(q.id));
-            unseenBackup = backupEligible;
-        }
-
-        backupEligible = unseenBackup;
-
-        const backupGroups = {};
-        backupEligible.forEach(q => {
-            const key = `${q.category}-${q.subCategory || 'default'}`;
-            if (!backupGroups[key]) backupGroups[key] = [];
-            backupGroups[key].push(q);
-        });
-
-        const bKeys = Object.keys(backupGroups);
-        let bIdx = 0;
-        while (allUniqueQuestions.length < gridSize) {
-            const validKeys = bKeys.filter(k => {
-                if (!backupGroups[k] || backupGroups[k].length === 0) return false;
-                if (k === 'math-arithmetic' && (subCategoryCounts[k] || 0) >= 3) return false;
-                return true;
-            });
-
-            if (validKeys.length === 0) break; // No more backup questions
-
-            const key = validKeys[bIdx % validKeys.length];
-            const pullsThisCycle = getGroupWeight(key);
-
-            for (let p = 0; p < pullsThisCycle && allUniqueQuestions.length < gridSize; p++) {
-                if (!backupGroups[key] || backupGroups[key].length === 0) break;
-                if (key === 'math-arithmetic' && (subCategoryCounts[key] || 0) >= 3) break;
-
-                const offset = Math.floor(Math.random() * backupGroups[key].length);
-                let qIdx = -1;
-
-                for (let i = 0; i < backupGroups[key].length; i++) {
-                    const checkIdx = (offset + i) % backupGroups[key].length;
-                    if (!backupGroups[key][checkIdx].templateId || !pickedTemplateIds.has(backupGroups[key][checkIdx].templateId)) {
-                        qIdx = checkIdx;
-                        break;
-                    }
-                }
-
-                if (qIdx !== -1) {
-                    const q = backupGroups[key].splice(qIdx, 1)[0];
-                    allUniqueQuestions.push(q);
-                    if (q.templateId) pickedTemplateIds.add(q.templateId);
-                    subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
-                } else {
-                    const randomPopIdx = Math.floor(Math.random() * backupGroups[key].length);
-                    const q = backupGroups[key].splice(randomPopIdx, 1)[0];
-                    allUniqueQuestions.push(q);
-                    subCategoryCounts[key] = (subCategoryCounts[key] || 0) + 1;
-                }
-            }
-            bIdx++;
-        }
-    }
+    // 4. Removed level fallback - we prefer repetition at the requested level now.
 
     // Final selection
     let deckSelection = allUniqueQuestions.slice(0, gridSize);

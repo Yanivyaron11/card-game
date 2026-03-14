@@ -40,15 +40,18 @@ describe('deck.js utilities', () => {
             expect(deck.length).toBe(2);
         });
 
-        it('should filter questions by selected topics', () => {
+        it('should filter questions by selected topics and STRICTLY by difficulty', () => {
             const deck = generateDeck(10, ['math'], 1);
             // All cards should be 'math' topic
             expect(deck.every(card => card.category === 'math')).toBe(true);
 
             // Verify that it included level 1 questions
-            expect(deck.some(card => card.level === 1)).toBe(true);
-            // Verify that it included level 2 questions as fallback since we asked for 10 but only have 3 level 1s
-            expect(deck.some(card => card.level === 2)).toBe(true);
+            expect(deck.every(card => card.level === 1)).toBe(true);
+            // Verify that it DID NOT include level 2 questions (no fallback)
+            expect(deck.some(card => card.level === 2)).toBe(false);
+
+            // Grid size is 10, pool size is 3, so we expect repetition
+            expect(deck.length).toBe(10);
         });
 
         it('should include topic information on each card', () => {

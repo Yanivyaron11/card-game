@@ -297,7 +297,7 @@ export const topics = [
 
 export const questionCounts = {
     // --- GENERATED_COUNTS_START ---
-    "israel_cities": 56,
+    "israel_cities": 150,
     // --- GENERATED_COUNTS_END ---
     "bible_stories": 377,
     "holidays": 100,
