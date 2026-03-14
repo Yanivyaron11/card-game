@@ -43,6 +43,12 @@ vi.mock('./components/StartScreen', () => ({
             >
                 Start Survival
             </button>
+            <button
+                data-testid="start-survival-adult"
+                onClick={() => onStart({ gameMode: 'survival', topics: ['general'], survivalType: 'adult', avatars: { 1: { id: 'leo', emoji: '🦁', name: { en: 'Leo', he: 'ליאו' } } } })}
+            >
+                Start Survival Adult
+            </button>
         </div>
     )
 }));
@@ -54,6 +60,7 @@ vi.mock('./components/GameBoard', () => ({
             <p data-testid="game-coins">{coins}</p>
             <p data-testid="game-lives">{lives[1]}</p>
             <button data-testid="click-card" onClick={() => onCardSelected('test-card-id')}>Click Card</button>
+            <button data-testid="click-card-2" onClick={() => onCardSelected('test-card-2')}>Click Card 2</button>
             <button data-testid="quit-game" onClick={onQuit}>Quit</button>
         </div>
     )
@@ -265,6 +272,49 @@ describe('App Integration Tests', () => {
             await waitFor(() => {
                 expect(screen.getByText(/המשחק נגמר/i)).toBeDefined();
             });
+        });
+
+        it('awards 30 coins for Survival Junior completion', async () => {
+            deckUtils.generateSurvivalDeck.mockReturnValue([mockDeck[0]]); // 1 card deck
+            renderApp();
+            fireEvent.click(screen.getByTestId('start-survival'));
+
+            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
+            fireEvent.click(screen.getByTestId('answer-correct'));
+
+            // Should show victory/results
+            await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined());
+            // Junior completion gives 30 bonus. Answer in survival doesn't give base coin. Session Total: 30.
+            expect(screen.getByText(/30/)).toBeDefined();
+        });
+
+        it('awards 50 coins for Survival Master completion', async () => {
+            deckUtils.generateSurvivalDeck.mockReturnValue([mockDeck[0]]); // 1 card deck
+            renderApp();
+            fireEvent.click(screen.getByTestId('start-survival-adult'));
+
+            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
+            fireEvent.click(screen.getByTestId('answer-correct'));
+
+            await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined());
+            // Master completion gives 50 bonus. Session Total: 50.
+            expect(screen.getByText(/50/)).toBeDefined();
+        });
+
+        it('awards 10 coins for 3x3 board completion', async () => {
+            deckUtils.generateDeck.mockReturnValue([mockDeck[0]]); // 1 card deck
+            renderApp();
+            // start-solo uses gridSize 9
+            fireEvent.click(screen.getByTestId('start-solo'));
+            await waitFor(() => expect(screen.getByTestId('game-board')).toBeDefined());
+
+            fireEvent.click(screen.getByTestId('click-card'));
+            await waitFor(() => expect(screen.getByTestId('quiz-overlay')).toBeDefined());
+            fireEvent.click(screen.getByTestId('answer-correct'));
+
+            await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined());
+            // Answer level 1 (+1) + board 3x3 bonus (+10) => Session total: 11.
+            expect(screen.getByText(/11/)).toBeDefined();
         });
     });
 });

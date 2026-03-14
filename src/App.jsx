@@ -431,13 +431,21 @@ function App() {
           setRewardToast({ messageKey: 'time_bonus', amount: timeLeft });
           setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + timeLeft }));
 
-          const gSize = gameConfig.gridSize;
-          const TA_KEY = `time_attack_best_${gSize}`;
-          const currentBest = parseInt(localStorage.getItem(TA_KEY) || '0', 10);
-          if (timeLeft > currentBest) {
-            localStorage.setItem(TA_KEY, timeLeft);
-          }
         }
+
+        // Board Completion Bonus
+        let boardBonus = 0;
+        const gSize = gameConfig.gridSize;
+        if (gSize === 9) boardBonus = 10;      // 3x3
+        else if (gSize === 16) boardBonus = 20; // 4x4
+        else if (gSize === 25) boardBonus = 30; // 5x5
+
+        if (boardBonus > 0) {
+          setTotalCoins(prev => prev + boardBonus);
+          setRewardToast({ messageKey: 'completion_bonus', amount: boardBonus });
+          setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + boardBonus }));
+        }
+
         setGameState('victory');
         navigate('/result');
       } else {
@@ -481,9 +489,10 @@ function App() {
 
       // Check for Course Completion
       if (newScore >= deck.length && deck.length > 0) {
-        setTotalCoins(prev => prev + 50); // Big bonus for completion!
-        setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + 50 }));
-        setRewardToast({ messageKey: 'completion_bonus', amount: 50 });
+        const completionAmount = gameConfig.survivalType === 'adult' ? 50 : 30;
+        setTotalCoins(prev => prev + completionAmount);
+        setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + completionAmount }));
+        setRewardToast({ messageKey: 'completion_bonus', amount: completionAmount });
         playSound('victory');
         setGameState('victory');
         navigate('/result');
