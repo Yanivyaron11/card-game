@@ -219,6 +219,9 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                 <div className="total-coins-display">
                     🪙 <span className="coin-count">{totalCoins}</span>
                 </div>
+                <button className="shop-invite-btn" onClick={() => setIsShopOpen(true)}>
+                    🛒 {language === 'he' ? 'חנות' : 'Shop'}
+                </button>
                 <button
                     onClick={() => setIsSettingsOpen(true)}
                     className="icon-toggle-btn settings-gear"
@@ -279,7 +282,6 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             <div className="config-section">
                 <div className="section-header-with-btn">
                     <h3>{language === 'he' ? '3. בחרו אווטאר' : '3. Choose Avatar'}</h3>
-                    <button className="shop-invite-btn" onClick={() => setIsShopOpen(true)}>🛒 {language === 'he' ? 'לחנות' : 'Shop'}</button>
                 </div>
                 <div className="avatar-selection-container card-pop">
                     <div className="avatar-player-section">
