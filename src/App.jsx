@@ -584,18 +584,28 @@ function App() {
         }
       } else {
         // 1v1: Pure point race. No heart deduction.
+        const cardRef = deck.find(c => c.id === cardId);
+        const newFailedCount = (cardRef?.failedAttempts || 0) + 1;
+        const isBinary = cardRef?.options?.he?.length <= 2;
+        const shouldLockImmediately = isBinary || cardRef?.isTainted;
+        const willFail = shouldLockImmediately || newFailedCount >= 2;
+
+        if (!willFail) {
+          answeringRef.current.delete(cardId);
+        }
+
         setDeck(prev => {
           const newDeck = prev.map(card => {
             if (card.id === cardId) {
-              const newFailedCount = (card.failedAttempts || 0) + 1;
-              const isBinary = card.options.he.length <= 2;
-              const shouldLockImmediately = isBinary || card.isTainted;
+              const currentFailedCount = (card.failedAttempts || 0) + 1;
+              const currentIsBinary = card.options.he.length <= 2;
+              const currentShouldLock = currentIsBinary || card.isTainted;
 
               return {
                 ...card,
-                failedAttempts: newFailedCount,
+                failedAttempts: currentFailedCount,
                 lastFailedPlayer: currentPlayer,
-                isFailed: shouldLockImmediately || newFailedCount >= 2
+                isFailed: currentShouldLock || currentFailedCount >= 2
               };
             }
             return card;
