@@ -464,7 +464,6 @@ function App() {
 
         if (boardBonus > 0) {
           setTotalCoins(prev => prev + boardBonus);
-          setRewardToast({ messageKey: 'completion_bonus', amount: boardBonus });
           setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + boardBonus }));
         }
 
@@ -515,7 +514,6 @@ function App() {
         const completionAmount = gameConfig.survivalType === 'adult' ? 50 : 30;
         setTotalCoins(prev => prev + completionAmount);
         setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + completionAmount }));
-        setRewardToast({ messageKey: 'completion_bonus', amount: completionAmount });
         playSound('victory');
         setGameState('victory');
         navigate('/result');
