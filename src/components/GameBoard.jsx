@@ -58,7 +58,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                 </button>
             </div>
 
-            <div className="stats-header glass-panel">
+            <div className={`stats-header glass-panel ${config.gameMode === 'solo' || config.gameMode === 'time_attack' ? 'solo-mode' : 'multi-mode'}`}>
                 {config.gameMode === 'solo' || config.gameMode === 'time_attack' ? (
                     <>
                         <div className="stat-item level-display">
