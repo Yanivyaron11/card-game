@@ -273,7 +273,10 @@ function App() {
   const handleStartGame = (config) => {
     playMusic(); // Ensure music is playing/unlocked on interaction
     setGameConfig(config);
-    const initialLives = config.gridSize === 9 ? 1 : config.gridSize === 16 ? 2 : 3;
+    const gridSize = Number(config.gridSize);
+    const difficulty = Number(config.difficulty || 1);
+    const sizeBase = gridSize === 9 ? 3 : gridSize === 16 ? 4 : 5;
+    const initialLives = sizeBase - (difficulty - 1);
     const initialCoins = config.gridSize === 9 ? 5 : config.gridSize === 16 ? 10 : 15;
 
     // 1. Lives & Coins
