@@ -74,7 +74,18 @@ export const avatars = [
             { id: 'businessman', name: { en: 'Businessman Bobo', he: 'בובו איש עסקים' }, image: '/assets/avatars/monkey/businessman.png', price: 500 }
         ]
     },
-    { id: 'owl', emoji: '🦉', name: { en: 'Professor', he: 'פרופסור' }, price: 250, category: 'premium' },
+    {
+        id: 'owl',
+        emoji: '🦉',
+        name: { en: 'Professor', he: 'פרופסור' },
+        price: 250,
+        category: 'premium',
+        skins: [
+            { id: 'university', name: { en: 'University Prof', he: 'פרופסור באוניברסיטה' }, image: '/assets/avatars/owl/university.png', price: 250 },
+            { id: 'researcher', name: { en: 'Researcher Prof', he: 'חוקר' }, image: '/assets/avatars/owl/researcher.png', price: 350 },
+            { id: 'inventor', name: { en: 'Friendly Inventor', he: 'ממציא ידידותי' }, image: '/assets/avatars/owl/inventor.png', price: 500 }
+        ]
+    },
     { id: 'kitty', emoji: '🐱', name: { en: 'Kitty', he: 'מיצי' }, price: 250, category: 'premium' },
     { id: 'robot', emoji: '🤖', name: { en: 'Robo', he: 'רובו' }, price: 400, category: 'premium' },
     { id: 'alien', emoji: '👽', name: { en: 'Zork', he: 'זורק' }, price: 450, category: 'premium' },
