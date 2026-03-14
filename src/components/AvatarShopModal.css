@@ -176,6 +176,15 @@
     font-size: 0.85rem;
     font-weight: bold;
     text-align: center;
+    /* allow up to 2 lines */
+    min-height: 2.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.1rem;
+    word-break: break-word;
 }
 
 .shop-btn {
@@ -310,6 +319,8 @@
 
     .shop-item-name {
         font-size: 0.75rem;
+        min-height: 2rem;
+        line-height: 1rem;
     }
 
     .shop-btn {
