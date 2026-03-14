@@ -222,7 +222,7 @@ function AvatarShopModal({
                                                             🪙 {skin.price}
                                                         </button>
                                                     )}
-                                                    {!isBaseUnlocked && <div style={{ fontSize: '0.6rem', color: '#ff6b6b' }}>{language === 'he' ? 'נעל דמות בסיס תחילה' : 'Unlock base avatar first'}</div>}
+                                                    {!isBaseUnlocked && <div className="base-lock-warning">{language === 'he' ? 'צריך להשיג את הדמות קודם! ✨' : 'Get the character first! ✨'}</div>}
                                                 </div>
                                             );
                                         })}

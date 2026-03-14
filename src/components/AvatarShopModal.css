@@ -506,10 +506,18 @@
 }
 
 .base-lock-warning {
-    margin-top: 1rem;
-    color: #ff6b6b;
-    font-size: 0.8rem;
+    margin-top: 0.8rem;
+    color: #fff;
+    font-size: 0.7rem;
     font-weight: bold;
+    background: rgba(255, 107, 107, 0.2);
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 107, 107, 0.4);
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
+    width: 100%;
+    text-align: center;
+    line-height: 1.2;
 }
 
 /* Skins Tab Horizontal Scroll */
