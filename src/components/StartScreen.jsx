@@ -190,10 +190,14 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
     };
 
     const handleStart = () => {
-        if (selectedTopics.length === 0) {
+        // Ensure we only pass topics that are actually visible in the current active pool
+        const validSelectedTopics = selectedTopics.filter(id => visibleTopics.some(t => t.id === id));
+
+        if (validSelectedTopics.length === 0 && gameMode !== 'survival') {
             setAlertConfig({ isOpen: true, message: t.select_at_least_one, icon: '📚' });
             return;
         }
+
         if ((gameMode === 'solo' || gameMode === 'survival') && !selectedAvatars[1]) {
             setAlertConfig({ isOpen: true, message: t.select_avatar, icon: '👤' });
             return;
@@ -202,10 +206,11 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             setAlertConfig({ isOpen: true, message: t.select_avatars_1v1, icon: '👥' });
             return;
         }
+
         const configAvatars = { 1: selectedAvatars[1], 2: selectedAvatars[2] };
         onStart({
             gridSize,
-            topics: selectedTopics,
+            topics: validSelectedTopics,
             difficulty,
             gameMode,
             survivalType,
