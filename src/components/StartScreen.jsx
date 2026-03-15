@@ -20,7 +20,10 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
         topics.forEach(t => {
             const isGroupUnlocked = unlockedTopics.includes(t.id);
             if (isGroupUnlocked) {
-                if (t.subTopics) leaves.push(...t.subTopics);
+                if (t.subTopics) {
+                    const visibleSubTopics = t.subTopics.filter(sub => sub.hiddenIf !== language);
+                    leaves.push(...visibleSubTopics);
+                }
                 else leaves.push(t);
             }
         });

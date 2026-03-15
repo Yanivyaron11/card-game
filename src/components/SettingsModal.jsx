@@ -144,9 +144,13 @@ function SettingsModal({
 
                                     const isUnlocked = unlockedTopics.includes(topic.id);
                                     const isExpanded = expandedTopics.includes(topic.id);
-                                    const selectedSubTopics = topic.subTopics.filter(sub => activeCategories.includes(sub.id));
-                                    const isPartiallySelected = selectedSubTopics.length > 0 && selectedSubTopics.length < topic.subTopics.length;
-                                    const isFullySelected = selectedSubTopics.length === topic.subTopics.length && topic.subTopics.length > 0;
+                                    const visibleSubTopics = topic.subTopics.filter(sub => sub.hiddenIf !== language);
+
+                                    if (visibleSubTopics.length === 0) return null;
+
+                                    const selectedSubTopics = visibleSubTopics.filter(sub => activeCategories.includes(sub.id));
+                                    const isPartiallySelected = selectedSubTopics.length > 0 && selectedSubTopics.length < visibleSubTopics.length;
+                                    const isFullySelected = selectedSubTopics.length === visibleSubTopics.length && visibleSubTopics.length > 0;
 
                                     return (
                                         <div key={topic.id} className={`settings-topic-group ${!isUnlocked ? 'locked' : ''}`}>
@@ -162,7 +166,7 @@ function SettingsModal({
                                             </div>
                                             {isExpanded && (
                                                 <div className="settings-subtopics-container">
-                                                    {topic.subTopics.map(sub => (
+                                                    {visibleSubTopics.map(sub => (
                                                         <div
                                                             key={sub.id}
                                                             className={`pool-item sub-item ${activeCategories.includes(sub.id) ? 'selected' : ''}`}
