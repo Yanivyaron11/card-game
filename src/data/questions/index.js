@@ -12,6 +12,7 @@ import { mathQuestions } from './math.js';
 import { physicsQuestions } from './physics.js';
 import { englishQuestions } from './english.js';
 import { spaceQuestions } from './space.js';
+import { flagsQuestions } from './flags.js';
 
 export const topics = [
     // --- GENERATED_TOPICS_START ---
@@ -180,6 +181,15 @@ export const topics = [
                     "he": "לונדון"
                 },
                 "icon": "💂"
+            },
+            {
+                "id": "flags",
+                "name": {
+                    "en": "Flags",
+                    "he": "דגלים"
+                },
+                "icon": "🏳️",
+                "newUntil": "2026-03-25"
             }
         ]
     },
@@ -363,7 +373,8 @@ export const questionCounts = {
     "riddles": 250,
     "physics": 150,
     "english": 150,
-    "space": 150
+    "space": 150,
+    "flags": 150
 };
 
 export const questions = [
@@ -379,5 +390,6 @@ export const questions = [
     ...physicsQuestions,
     ...generalQuestions,
     ...englishQuestions,
-    ...spaceQuestions
+    ...spaceQuestions,
+    ...flagsQuestions
 ];

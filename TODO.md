@@ -61,7 +61,7 @@ Make the competitive mode more dynamic:
 ### 7. Global Categories
 Expose kids to more worldwide knowledge:
 - **[ ] Art & Music**: Famous painters, instruments, and classical composers.
-- **[ ] Geography (World)**: Flags, capitals, and landmarks beyond Israel.
+- **[x] Geography (World)**: Flags, capitals, and landmarks beyond Israel.
 - **[x] Language Learning**: Basic vocabulary in multiple languages.
 
 ### 8. Multi-language Support
