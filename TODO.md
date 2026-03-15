@@ -15,7 +15,7 @@
 - [x] **Categories**: Split the shop into tabs (Avatars, Power-ups, Skins, Topics).
 - [ ] **Power-ups Store**: Buy consumable items (Shields, Extra Time, 50/50 packs).
 - [x] **Skins & Themes**: Custom card backs, board designs, and visual styles.
-- [ ] **Locked Topics**: Purchase access to special or seasonal question categories (e.g., Space, Superheroes).
+- [x] **Locked Topics**: Purchase access to special or seasonal question categories (e.g., Space, Superheroes).
 
 ### 3. Achievements & Medals System
 Create a visual "Trophy Room" where kids can earn medals for specific milestones:
@@ -62,7 +62,7 @@ Make the competitive mode more dynamic:
 Expose kids to more worldwide knowledge:
 - **[ ] Art & Music**: Famous painters, instruments, and classical composers.
 - **[ ] Geography (World)**: Flags, capitals, and landmarks beyond Israel.
-- **[ ] Language Learning**: Basic vocabulary in multiple languages.
+- **[x] Language Learning**: Basic vocabulary in multiple languages.
 
 ### 8. Multi-language Support
 Reach a wider audience by adding more languages:

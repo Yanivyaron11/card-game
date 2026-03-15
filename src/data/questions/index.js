@@ -10,6 +10,8 @@ import { sports_lifeQuestions } from './sports_life.js';
 import { generalQuestions } from './general.js';
 import { mathQuestions } from './math.js';
 import { physicsQuestions } from './physics.js';
+import { englishQuestions } from './english.js';
+import { spaceQuestions } from './space.js';
 
 export const topics = [
     // --- GENERATED_TOPICS_START ---
@@ -150,6 +152,15 @@ export const topics = [
                 },
                 "icon": "⚛️",
                 "newUntil": "2026-03-25"
+            },
+            {
+                "id": "space",
+                "name": {
+                    "en": "Space & Solar System",
+                    "he": "חלל ומערכת השמש"
+                },
+                "icon": "🪐",
+                "newUntil": "2026-03-25"
             }
         ]
     },
@@ -176,6 +187,25 @@ export const topics = [
                     "he": "לונדון"
                 },
                 "icon": "💂"
+            }
+        ]
+    },
+    {
+        "id": "language_group",
+        "name": {
+            "en": "Languages",
+            "he": "שפות"
+        },
+        "icon": "🗣️",
+        "subTopics": [
+            {
+                "id": "english",
+                "name": {
+                    "en": "English Basics",
+                    "he": "אנגלית בסיסית"
+                },
+                "icon": "🇺🇸",
+                "hiddenIf": "en"
             }
         ]
     },
@@ -320,7 +350,9 @@ export const questionCounts = {
     "human_body": 100,
     "psychology": 60,
     "riddles": 250,
-    "physics": 150
+    "physics": 150,
+    "english": 150,
+    "space": 150
 };
 
 export const questions = [
@@ -334,5 +366,7 @@ export const questions = [
     ...riddlesQuestions,
     ...mathQuestions,
     ...physicsQuestions,
-    ...generalQuestions
+    ...generalQuestions,
+    ...englishQuestions,
+    ...spaceQuestions
 ];
