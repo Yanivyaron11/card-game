@@ -11,10 +11,10 @@
 - [x] Persistent unlocking mechanism.
 - [x] "Unlock" logic with coin deduction.
 
-### 2.1 Future Shop Expansion 🏗️
-- [ ] **Categories**: Split the shop into tabs (Avatars, Power-ups, Skins, Topics).
+### 2.1 Future Shop Expansion 🏗️ (In Progress)
+- [x] **Categories**: Split the shop into tabs (Avatars, Power-ups, Skins, Topics).
 - [ ] **Power-ups Store**: Buy consumable items (Shields, Extra Time, 50/50 packs).
-- [ ] **Skins & Themes**: Custom card backs, board designs, and visual styles.
+- [x] **Skins & Themes**: Custom card backs, board designs, and visual styles.
 - [ ] **Locked Topics**: Purchase access to special or seasonal question categories (e.g., Space, Superheroes).
 
 ### 3. Achievements & Medals System
@@ -25,10 +25,10 @@ Create a visual "Trophy Room" where kids can earn medals for specific milestones
 - **[ ] Social Player**: Complete 10 matches in 1v1 mode.
 - **[ ] Streak Master**: Achieve a 5-question streak in any mode.
 
-### 2. Avatar Progression Store
+### 2. Avatar Progression Store (Completed) ✅
 Give meaning to the coins collected during gameplay:
-- **[ ] Locked Avatars**: Group premium avatars (e.g., Dragon, Astronaut, Robot) and make them purchasable with in-game coins.
-- **[ ] Unlock Animations**: Add a celebratory "Unlocking" animation when a player buys a new avatar.
+- [x] **Locked Avatars**: Group premium avatars (e.g., Dragon, Astronaut, Robot) and make them purchasable with in-game coins.
+- [x] **Unlock Animations**: Add a celebratory "Unlocking" animation when a player buys a new avatar.
 
 ### 3. Daily Challenges
 Keep users coming back every day:
@@ -52,7 +52,7 @@ Make the competitive mode more dynamic:
 ### 6. Polish & Immersion
 - **[ ] Richer Soundscapes**: Add more distinct sound effects for streaks, coin collection, and leveling up.
 - **[ ] Responsive Animations**: Use Lottie or more advanced CSS transitions for "Card Flip" and "Level Up" moments.
-- **[ ] PWA Optimizations**: Improve offline caching to ensure 100% functionality without a network.
+- **[x] PWA Optimizations**: Improve offline caching to ensure 100% functionality without a network.
 
 ---
 
