@@ -86,7 +86,18 @@ export const avatars = [
             { id: 'inventor', name: { en: 'Friendly Inventor', he: 'ממציא ידידותי' }, image: '/assets/avatars/owl/inventor.png', price: 500 }
         ]
     },
-    { id: 'kitty', emoji: '🐱', name: { en: 'Kitty', he: 'מיצי' }, price: 250, category: 'premium' },
+    {
+        id: 'kitty',
+        emoji: '🐱',
+        name: { en: 'Mitzi', he: 'מיצי' },
+        price: 250,
+        category: 'premium',
+        skins: [
+            { id: 'painter', name: { en: 'Painter Mitzi', he: 'מיצי ציירת' }, image: '/assets/avatars/kitty/painter.png', price: 300 },
+            { id: 'paris', name: { en: 'Mitzi in Paris', he: 'מיצי בפריז' }, image: '/assets/avatars/kitty/paris.png', price: 400 },
+            { id: 'singer', name: { en: 'Singer Mitzi', he: 'מיצי זמרת' }, image: '/assets/avatars/kitty/singer.png', price: 500 }
+        ]
+    },
     { id: 'robot', emoji: '🤖', name: { en: 'Robo', he: 'רובו' }, price: 400, category: 'premium' },
     { id: 'alien', emoji: '👽', name: { en: 'Zork', he: 'זורק' }, price: 450, category: 'premium' },
 
