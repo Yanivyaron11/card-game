@@ -217,11 +217,8 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
 
 export const generateSurvivalDeck = (selectedTopics = [], survivalType = 'child') => {
     // Survival mode logic:
-    // If no topics provided, use all available categories
-    let categoriesToUse = selectedTopics;
-    if (!selectedTopics || selectedTopics.length === 0) {
-        categoriesToUse = Array.from(new Set(questions.map(q => q.category)));
-    }
+    // Always use all available categories for survival mode, ignoring user selection.
+    const categoriesToUse = Array.from(new Set(questions.map(q => q.category)));
 
     // 1. Group questions by level
     const level1 = questions.filter(q => categoriesToUse.includes(q.category) && q.level === 1);
