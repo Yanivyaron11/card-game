@@ -127,14 +127,7 @@ export const topics = [
                 },
                 "icon": "🔢"
             },
-            {
-                "id": "psychology",
-                "name": {
-                    "en": "Psychology",
-                    "he": "פסיכולוגיה"
-                },
-                "icon": "🧠"
-            },
+
             {
                 "id": "riddles",
                 "name": {
@@ -312,6 +305,24 @@ export const topics = [
                     "he": "קונדיטוריה"
                 },
                 "icon": "🥐"
+            }
+        ]
+    },
+    {
+        "id": "mind_group",
+        "name": {
+            "en": "Mind & Development",
+            "he": "נפש והתפתחות"
+        },
+        "icon": "🧘",
+        "subTopics": [
+            {
+                "id": "psychology",
+                "name": {
+                    "en": "Psychology",
+                    "he": "פסיכולוגיה"
+                },
+                "icon": "🧠"
             }
         ]
     },
