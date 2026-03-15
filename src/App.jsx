@@ -102,7 +102,7 @@ function App() {
     const saved = localStorage.getItem('unlocked_topics');
     if (saved) return JSON.parse(saved);
     // Core categories unlocked by default
-    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group'];
+    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'world_group'];
   });
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     const saved = localStorage.getItem('unlocked_skins');
@@ -148,10 +148,10 @@ function App() {
   // Ensure returning players get newly added free groups automatically
   useEffect(() => {
     setUnlockedTopics(prev => {
-      if (!prev.includes('language_group')) {
-        return [...prev, 'language_group'];
-      }
-      return prev;
+      let next = [...prev];
+      if (!next.includes('language_group')) next.push('language_group');
+      if (!next.includes('world_group')) next.push('world_group');
+      return next;
     });
   }, []);
 
