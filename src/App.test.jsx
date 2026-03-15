@@ -169,8 +169,8 @@ describe('App Integration Tests', () => {
             }
 
             await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined(), { timeout: 3000 });
-            // 3 answers + 5 streak + 20 board (size 16) = 28
-            expect(screen.getByText(/28/)).toBeDefined();
+            // 3 answers + 5 streak + 20 board (size 16) + 20 perfect board = 48
+            expect(screen.getByText(/48/)).toBeDefined();
         });
 
         it('awards bonus of 10 for streak 5+ at end of game', async () => {
@@ -196,8 +196,8 @@ describe('App Integration Tests', () => {
             }
 
             await waitFor(() => expect(screen.getByText(/ניצחת/i)).toBeDefined(), { timeout: 3000 });
-            // 5 answers + 10 streak + 20 board (size 16) = 35
-            expect(screen.getByText(/35/)).toBeDefined();
+            // 5 answers + 10 streak + 20 board (size 16) + 20 perfect = 55
+            expect(screen.getByText(/55/)).toBeDefined();
         });
     });
 });

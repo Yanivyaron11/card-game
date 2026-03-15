@@ -504,6 +504,14 @@ function App() {
           setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + boardBonus }));
         }
 
+        // Perfect Board Bonus
+        const isPerfect = deck.every(card => !card.isFailed);
+        if (isPerfect && boardBonus > 0 && (gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack')) {
+          setTotalCoins(prev => prev + boardBonus);
+          setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + boardBonus }));
+          setRewardToast({ messageKey: 'perfect_board_bonus', amount: boardBonus });
+        }
+
         setGameState('victory');
         navigate('/result');
       } else {
@@ -911,7 +919,7 @@ function App() {
                 )}
                 {sessionCoinBreakdown.bonus > 0 && (
                   <div className="breakdown-item bonus">
-                    <span>{t.special_bonus} ✨</span>
+                    <span>{sessionCoinBreakdown.bonus >= 50 ? t.special_bonus + ' 🌟' : t.special_bonus + ' ✨'}</span>
                     <span>+{sessionCoinBreakdown.bonus}</span>
                   </div>
                 )}
