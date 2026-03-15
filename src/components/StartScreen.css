@@ -195,12 +195,22 @@
     gap: 0.8rem;
 }
 
+.shop-invite-btn {
+    height: 32px;
+    padding: 0 1rem;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
 .icon-toggle-btn {
     padding: 0 2px 0 0;
     /* Optical centering nudge */
-    width: 26px;
-    height: 24px;
-    font-size: 1.1rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1.3rem;
     border-radius: 6px;
     background: var(--glass-bg);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -218,9 +228,9 @@
 }
 
 .total-coins-display {
-    height: 24px;
+    height: 32px;
     background: rgba(255, 255, 255, 0.2);
-    padding: 0 0.8rem;
+    padding: 0 1rem;
     border-radius: 13px;
     font-weight: bold;
     display: flex;
@@ -243,7 +253,7 @@
 }
 
 .coin-count {
-    font-size: 0.95rem;
+    font-size: 15px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -282,9 +292,9 @@
     }
 
     .shop-invite-btn {
-        height: 24px;
-        padding: 0 0.6rem;
-        font-size: 0.75rem;
+        height: 32px;
+        padding: 0 0.8rem;
+        font-size: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -296,19 +306,19 @@
     }
 
     .total-coins-display {
-        height: 24px;
-        padding: 0 0.6rem;
+        height: 32px;
+        padding: 0 0.8rem;
         font-size: 0.8rem;
     }
 
     .coin-count {
-        font-size: 0.8rem;
+        font-size: 15px;
     }
 
     .icon-toggle-btn {
-        width: 24px;
-        height: 24px;
-        font-size: 0.9rem;
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
         border-radius: 6px;
     }
 
@@ -400,11 +410,11 @@
     color: var(--text-dark);
     border: none;
     padding: 0 0.8rem;
-    height: 24px;
+    height: 32px;
     display: flex;
     align-items: center;
     border-radius: 13px;
-    font-size: 0.8rem;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
