@@ -305,7 +305,7 @@ export const questionCounts = {
     "maccabi_haifa": 155,
     "chelsea": 99,
     "math": 293,
-    "tel_aviv": 0,
+    "tel_aviv": 273,
     "patisserie": 400,
     "israeli_music": 286,
     "animals": 154,
