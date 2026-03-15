@@ -152,7 +152,15 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
 
     const visibleTopics = getLeafTopics().filter(t => activePool.includes(t.id));
 
+    const handleModeChange = (mode) => {
+        setGameMode(mode);
+        if (mode === 'survival') {
+            setSelectedTopics(visibleTopics.map(t => t.id));
+        }
+    };
+
     const handleTopicToggle = (topicId) => {
+        if (gameMode === 'survival') return; // Cannot toggle in survival
         setSelectedTopics(prev =>
             prev.includes(topicId)
                 ? prev.filter(id => id !== topicId)
@@ -265,10 +273,10 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             <div className="config-section">
                 <h3>{t.game_mode}</h3>
                 <div className="mode-options">
-                    <button className={`mode-btn ${gameMode === 'solo' ? 'active' : ''}`} onClick={() => setGameMode('solo')} data-testid="start-solo">👤 {t.solo}</button>
-                    <button className={`mode-btn ${gameMode === '1v1' ? 'active' : ''}`} onClick={() => setGameMode('1v1')} data-testid="start-1v1">⚔️ {t.v1}</button>
-                    <button className={`mode-btn ${gameMode === 'time_attack' ? 'active' : ''}`} onClick={() => setGameMode('time_attack')} data-testid="start-time-attack">⏱️ {t.time_attack}</button>
-                    <button className={`mode-btn ${gameMode === 'survival' ? 'active' : ''}`} onClick={() => setGameMode('survival')} data-testid="start-survival">🔥 {t.survival}</button>
+                    <button className={`mode-btn ${gameMode === 'solo' ? 'active' : ''}`} onClick={() => handleModeChange('solo')} data-testid="start-solo">👤 {t.solo}</button>
+                    <button className={`mode-btn ${gameMode === '1v1' ? 'active' : ''}`} onClick={() => handleModeChange('1v1')} data-testid="start-1v1">⚔️ {t.v1}</button>
+                    <button className={`mode-btn ${gameMode === 'time_attack' ? 'active' : ''}`} onClick={() => handleModeChange('time_attack')} data-testid="start-time-attack">⏱️ {t.time_attack}</button>
+                    <button className={`mode-btn ${gameMode === 'survival' ? 'active' : ''}`} onClick={() => handleModeChange('survival')} data-testid="start-survival">🔥 {t.survival}</button>
                 </div>
             </div>
 
@@ -350,7 +358,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                 <h3>{t.choose_topics}</h3>
                 <div className="topic-options">
                     {visibleTopics.map(topic => (
-                        <div key={topic.id} className={`topic-card ${selectedTopics.includes(topic.id) ? 'selected' : ''}`} onClick={() => handleTopicToggle(topic.id)} data-testid={`topic-option-${topic.id}`}>
+                        <div key={topic.id} className={`topic-card ${selectedTopics.includes(topic.id) || gameMode === 'survival' ? 'selected' : ''}`} onClick={() => handleTopicToggle(topic.id)} data-testid={`topic-option-${topic.id}`}>
                             <div className="topic-info-main">
                                 <span className="topic-name">{topic.name[language]}</span>
                                 <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
