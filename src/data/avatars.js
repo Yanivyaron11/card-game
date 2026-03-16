@@ -110,7 +110,18 @@ export const avatars = [
             { id: 'chef', name: { en: 'Chef Robo', he: 'רובו שף' }, image: '/assets/avatars/robot/chef.png', price: 600 }
         ]
     },
-    { id: 'alien', emoji: '👽', name: { en: 'Zork', he: 'זורק' }, price: 450, category: 'premium' },
+    {
+        id: 'alien',
+        emoji: '👽',
+        name: { en: 'Zork', he: 'זורק' },
+        price: 450,
+        category: 'premium',
+        skins: [
+            { id: 'thrasher', name: { en: 'Galactic Thrasher', he: 'חייזר הגרפיטי' }, image: '/assets/avatars/alien/thrasher.png', price: 450 },
+            { id: 'cloud', name: { en: 'The Fluffy Cloud', he: 'חייזר המרשמלו' }, image: '/assets/avatars/alien/cloud.png', price: 550 },
+            { id: 'pizza', name: { en: 'Pizza Eater', he: 'חייזר הפיצה' }, image: '/assets/avatars/alien/pizza.png', price: 650 }
+        ]
+    },
 
     // Legendary (500-1000)
     { id: 'unicorn', emoji: '🦄', name: { en: 'Luca', he: 'לוקה' }, price: 500, category: 'legendary' },
