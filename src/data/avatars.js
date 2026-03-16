@@ -98,7 +98,18 @@ export const avatars = [
             { id: 'singer', name: { en: 'Singer Mitzi', he: 'מיצי זמרת' }, image: '/assets/avatars/kitty/singer.png', price: 500 }
         ]
     },
-    { id: 'robot', emoji: '🤖', name: { en: 'Robo', he: 'רובו' }, price: 400, category: 'premium' },
+    {
+        id: 'robot',
+        emoji: '🤖',
+        name: { en: 'Robo', he: 'רובו' },
+        price: 400,
+        category: 'premium',
+        skins: [
+            { id: 'delivery', name: { en: 'Delivery Robo', he: 'רובו שליח' }, image: '/assets/avatars/robot/delivery.png', price: 400 },
+            { id: 'hoverboard', name: { en: 'Hoverboard Robo', he: 'רובו סקייטבורד מרחף' }, image: '/assets/avatars/robot/hoverboard.png', price: 500 },
+            { id: 'chef', name: { en: 'Chef Robo', he: 'רובו שף' }, image: '/assets/avatars/robot/chef.png', price: 600 }
+        ]
+    },
     { id: 'alien', emoji: '👽', name: { en: 'Zork', he: 'זורק' }, price: 450, category: 'premium' },
 
     // Legendary (500-1000)
