@@ -61,6 +61,17 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
             <div className={`stats-header glass-panel ${config.gameMode === 'solo' || config.gameMode === 'time_attack' ? 'solo-mode' : 'multi-mode'}`}>
                 {config.gameMode === 'solo' || config.gameMode === 'time_attack' ? (
                     <>
+                        {config.avatars?.[1] && (
+                            <div className="stat-item avatar-display" data-testid="game-avatar">
+                                <div className="premium-avatar-box" style={{ width: '60px', borderRadius: '8px', borderWidth: '2px', background: 'rgba(255, 255, 255, 0.4)' }}>
+                                    {config.avatars[1].image ? (
+                                        <img src={config.avatars[1].image} alt={config.avatars[1].name[language]} className="avatar-img-premium" />
+                                    ) : (
+                                        <span className="player-avatar-emoji" style={{ fontSize: '2.1rem', lineHeight: '60px' }}>{config.avatars[1].emoji}</span>
+                                    )}
+                                </div>
+                            </div>
+                        )}
                         <div className="stat-item level-display">
                             <div className="level-badge">{t.level} {config.difficulty}</div>
                         </div>
