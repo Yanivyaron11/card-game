@@ -55,7 +55,14 @@ export const avatars = [
         price: 0,
         category: 'free',
         skins: [
-            { id: 'soccer', name: { en: 'Soccer Pingu', he: 'פינגו כדורגלן' }, image: '/assets/avatars/penguin/soccer.png', price: 200 },
+            {
+                id: 'soccer',
+                name: { en: 'Soccer Pingu', he: 'פינגו כדורגלן' },
+                image: '/assets/avatars/penguin/soccer.png',
+                image_happy: '/assets/avatars/penguin/soccer_happy.png',
+                image_sad: '/assets/avatars/penguin/soccer_sad.png',
+                price: 200
+            },
             { id: 'tennis', name: { en: 'Tennis Pingu', he: 'פינגו טניסאי' }, image: '/assets/avatars/penguin/tennis.png', price: 300 },
             { id: 'basketball', name: { en: 'Basketball Pingu', he: 'פינגו כדורסלן' }, image: '/assets/avatars/penguin/basketball.png', price: 400 }
         ]

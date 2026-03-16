@@ -84,9 +84,23 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             const saved = localStorage.getItem('last_avatars');
             if (!saved) return { 1: null, 2: null };
             const parsed = JSON.parse(saved);
+
+            const getAvatarWithSkin = (id) => {
+                const baseAvatar = avatars.find(a => a.id === id);
+                if (!baseAvatar) return null;
+                const activeSkin = baseAvatar.skins?.find(s => s.id !== 'default' && activeSkins.includes(`${baseAvatar.id}_${s.id}`));
+                return {
+                    ...baseAvatar,
+                    image: activeSkin?.image || baseAvatar.image,
+                    image_happy: activeSkin?.image_happy || null,
+                    image_sad: activeSkin?.image_sad || null,
+                    currentSkin: activeSkin?.id || 'default'
+                };
+            };
+
             return {
-                1: avatars.find(a => a.id === parsed[1]) || null,
-                2: avatars.find(a => a.id === parsed[2]) || null
+                1: getAvatarWithSkin(parsed[1]),
+                2: getAvatarWithSkin(parsed[2])
             };
         } catch (e) {
             return { 1: null, 2: null };
@@ -132,6 +146,38 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             2: selectedAvatars[2]?.id || null
         }));
     }, [gridSize, difficulty, gameMode, survivalType, selectedAvatars, selectedTopics]);
+
+    // Update selected avatars if activeSkins changes (e.g., from ShopModal)
+    useEffect(() => {
+        setSelectedAvatars(prev => {
+            let changed = false;
+            const updated = { ...prev };
+            [1, 2].forEach(playerNum => {
+                if (updated[playerNum]) {
+                    const baseAvatar = avatars.find(a => a.id === updated[playerNum].id);
+                    if (baseAvatar) {
+                        const activeSkin = baseAvatar.skins?.find(s => s.id !== 'default' && activeSkins.includes(`${baseAvatar.id}_${s.id}`));
+                        const newImage = activeSkin?.image || baseAvatar.image;
+                        const newImageHappy = activeSkin?.image_happy || null;
+                        const newImageSad = activeSkin?.image_sad || null;
+                        const newSkinId = activeSkin?.id || 'default';
+
+                        if (updated[playerNum].image !== newImage || updated[playerNum].currentSkin !== newSkinId) {
+                            updated[playerNum] = {
+                                ...baseAvatar,
+                                image: newImage,
+                                image_happy: newImageHappy,
+                                image_sad: newImageSad,
+                                currentSkin: newSkinId
+                            };
+                            changed = true;
+                        }
+                    }
+                }
+            });
+            return changed ? updated : prev;
+        });
+    }, [activeSkins]);
 
     const handleDismissNew = () => {
         const seenNew = JSON.parse(localStorage.getItem('seenNewCategories') || '[]');

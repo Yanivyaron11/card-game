@@ -149,3 +149,66 @@ button:active {
   height: 100%;
   object-fit: cover;
 }
+
+/* Avatar Animations */
+@keyframes avatarHappy {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  75% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes avatarSad {
+  0% {
+    transform: scale(1) rotate(0);
+    filter: grayscale(0%);
+  }
+
+  25% {
+    transform: scale(1) rotate(-2deg);
+    filter: grayscale(30%);
+  }
+
+  50% {
+    transform: scale(1) rotate(2deg);
+    filter: grayscale(60%);
+  }
+
+  75% {
+    transform: scale(1) rotate(-2deg);
+    filter: grayscale(30%);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+    filter: grayscale(0%);
+  }
+}
+
+.avatar-happy {
+  animation: avatarHappy 2s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.avatar-sad {
+  animation: avatarSad 3s ease-in-out infinite;
+  transform-origin: center center;
+  opacity: 0.8;
+}

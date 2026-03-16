@@ -9,6 +9,8 @@ import { translations } from './data/translations'
 import { generateDeck, generateSurvivalDeck } from './utils/deck'
 import { themes } from './data/themes'
 import { playSound, playMusic, stopMusic } from './utils/sounds'
+import Confetti from './components/Confetti'
+import Rain from './components/Rain'
 import './App.css'
 
 import InstallPrompt from './components/InstallPrompt'
@@ -858,6 +860,8 @@ function App() {
 
         <Route path="/result" element={
           <div className="end-screen glass-panel">
+            {gameState === 'victory' && <Confetti />}
+            {gameState === 'game_over' && <Rain />}
             {/* Header section */}
             {gameState === 'victory' ? (
               <h2>{t.you_win} 🎉</h2>
@@ -870,9 +874,17 @@ function App() {
               <div className="result-avatar">
                 <div className="premium-avatar-box" style={{ width: '100px', margin: '0 auto 0.5rem auto' }}>
                   {gameConfig.avatars[1].image ? (
-                    <img src={gameConfig.avatars[1].image} alt={gameConfig.avatars[1].name[language]} className="avatar-img-premium" />
+                    <img
+                      src={
+                        gameState === 'victory' && gameConfig.avatars[1].image_happy ? gameConfig.avatars[1].image_happy :
+                          gameState === 'game_over' && gameConfig.avatars[1].image_sad ? gameConfig.avatars[1].image_sad :
+                            gameConfig.avatars[1].image
+                      }
+                      alt={gameConfig.avatars[1].name[language]}
+                      className={`avatar-img-premium ${gameState === 'victory' ? 'avatar-happy' : 'avatar-sad'}`}
+                    />
                   ) : (
-                    <span className="result-emoji" style={{ fontSize: '4rem' }}>{gameConfig.avatars[1].emoji}</span>
+                    <span className={`result-emoji ${gameState === 'victory' ? 'avatar-happy' : 'avatar-sad'}`} style={{ fontSize: '4rem', display: 'inline-block' }}>{gameConfig.avatars[1].emoji}</span>
                   )}
                 </div>
                 <p>{gameConfig.avatars[1].name[language]}</p>
