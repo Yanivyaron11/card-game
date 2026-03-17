@@ -922,7 +922,7 @@ function App() {
 
                 return (
                   <div className="result-avatar">
-                    <div className="premium-avatar-box" style={{ width: '100px', margin: '0 auto 0.5rem auto' }}>
+                    <div className={`premium-avatar-box ${isWinner || isQuit ? 'result-winner-box' : 'result-loser-box'}`}>
                       {displayAvatar.image ? (
                         <img
                           src={
@@ -934,7 +934,7 @@ function App() {
                           className={`avatar-img-premium ${isWinner ? 'avatar-happy' : !isQuit ? 'avatar-sad' : ''}`}
                         />
                       ) : (
-                        <span className={`result-emoji ${isWinner ? 'avatar-happy' : !isQuit ? 'avatar-sad' : ''}`} style={{ fontSize: '4rem', display: 'inline-block' }}>{displayAvatar.emoji}</span>
+                        <span className={`result-emoji ${isWinner ? 'avatar-happy' : !isQuit ? 'avatar-sad' : ''}`} style={{ fontSize: isWinner || isQuit ? '8rem' : '6rem', display: 'inline-block' }}>{displayAvatar.emoji}</span>
                       )}
                     </div>
                     <p>{displayAvatar.name[language]}</p>
@@ -950,7 +950,7 @@ function App() {
                         if (!avatar) return null;
                         return (
                           <div key={p} style={{ textAlign: 'center' }}>
-                            <div className="premium-avatar-box" style={{ width: '80px', margin: '0 auto 0.5rem auto' }}>
+                            <div className="premium-avatar-box result-draw-box">
                               {avatar.image ? (
                                 <img
                                   src={avatar.image}
@@ -958,7 +958,7 @@ function App() {
                                   className="avatar-img-premium"
                                 />
                               ) : (
-                                <span className="result-emoji" style={{ fontSize: '3rem', display: 'inline-block' }}>{avatar.emoji}</span>
+                                <span className="result-emoji" style={{ fontSize: '5rem', display: 'inline-block' }}>{avatar.emoji}</span>
                               )}
                             </div>
                             <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>{avatar.name[language]}</p>
@@ -972,7 +972,7 @@ function App() {
                   isWinner = true;
                   return (
                     <div className="result-avatar">
-                      <div className="premium-avatar-box" style={{ width: '100px', margin: '0 auto 0.5rem auto' }}>
+                      <div className="premium-avatar-box result-winner-box">
                         {displayAvatar.image ? (
                           <img
                             src={displayAvatar.image_happy || displayAvatar.image}
@@ -980,7 +980,7 @@ function App() {
                             className="avatar-img-premium avatar-happy"
                           />
                         ) : (
-                          <span className="result-emoji avatar-happy" style={{ fontSize: '4rem', display: 'inline-block' }}>{displayAvatar.emoji}</span>
+                          <span className="result-emoji avatar-happy" style={{ fontSize: '8rem', display: 'inline-block' }}>{displayAvatar.emoji}</span>
                         )}
                       </div>
                       <p>{displayAvatar.name[language]}</p>
@@ -991,7 +991,7 @@ function App() {
                   isWinner = true;
                   return (
                     <div className="result-avatar">
-                      <div className="premium-avatar-box" style={{ width: '100px', margin: '0 auto 0.5rem auto' }}>
+                      <div className="premium-avatar-box result-winner-box">
                         {displayAvatar.image ? (
                           <img
                             src={displayAvatar.image_happy || displayAvatar.image}
@@ -999,7 +999,7 @@ function App() {
                             className="avatar-img-premium avatar-happy"
                           />
                         ) : (
-                          <span className="result-emoji avatar-happy" style={{ fontSize: '4rem', display: 'inline-block' }}>{displayAvatar.emoji}</span>
+                          <span className="result-emoji avatar-happy" style={{ fontSize: '8rem', display: 'inline-block' }}>{displayAvatar.emoji}</span>
                         )}
                       </div>
                       <p>{displayAvatar.name[language]}</p>
@@ -1014,7 +1014,7 @@ function App() {
                         if (!avatar) return null;
                         return (
                           <div key={p} style={{ textAlign: 'center' }}>
-                            <div className="premium-avatar-box player-1v1-draw" style={{ width: '80px', margin: '0 auto 0.5rem auto', animation: 'sway 3s ease-in-out infinite alternate', animationDelay: p === 1 ? '0s' : '1.5s' }}>
+                            <div className="premium-avatar-box result-draw-box player-1v1-draw" style={{ animation: 'sway 3s ease-in-out infinite alternate', animationDelay: p === 1 ? '0s' : '1.5s' }}>
                               {avatar.image ? (
                                 <img
                                   src={avatar.image}
@@ -1022,7 +1022,7 @@ function App() {
                                   className="avatar-img-premium"
                                 />
                               ) : (
-                                <span className="result-emoji" style={{ fontSize: '3rem', display: 'inline-block' }}>{avatar.emoji}</span>
+                                <span className="result-emoji" style={{ fontSize: '4.5rem', display: 'inline-block' }}>{avatar.emoji}</span>
                               )}
                             </div>
                             <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>{avatar.name[language]}</p>

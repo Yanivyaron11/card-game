@@ -131,8 +131,6 @@ button:active {
 
 /* Global Premium Avatar Styles */
 .premium-avatar-box {
-  width: 100%;
-  height: 100%;
   aspect-ratio: 1 / 1;
   border: 1.5px solid var(--accent);
   border-radius: 12px;
