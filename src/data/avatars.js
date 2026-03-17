@@ -7,7 +7,14 @@ export const avatars = [
         price: 0,
         category: 'free',
         skins: [
-            { id: 'special', name: { en: 'Brave Leo', he: 'ליאו האמיץ' }, image: '/assets/avatars/leo/default.png', price: 200 },
+            {
+                id: 'special',
+                name: { en: 'Brave Leo', he: 'ליאו האמיץ' },
+                image: '/assets/avatars/leo/default.png',
+                image_happy: '/assets/avatars/leo/default_happy.png',
+                image_sad: '/assets/avatars/leo/default_sad.png',
+                price: 50
+            },
             { id: 'king', name: { en: 'King Leo', he: 'ליאו המלך' }, image: '/assets/avatars/leo/king.png', price: 350 },
             { id: 'superleo', name: { en: 'Super Leo', he: 'סופר ליאו' }, image: '/assets/avatars/leo/superhero.png', price: 500 }
         ]
@@ -19,7 +26,14 @@ export const avatars = [
         price: 0,
         category: 'free',
         skins: [
-            { id: 'hero', name: { en: 'Hero Bunny', he: 'באני הגיבורה' }, image: '/assets/avatars/bunny/hero.png', price: 250 },
+            {
+                id: 'hero',
+                name: { en: 'Hero Bunny', he: 'באני הגיבורה' },
+                image: '/assets/avatars/bunny/hero.png',
+                image_happy: '/assets/avatars/bunny/hero_happy.png',
+                image_sad: '/assets/avatars/bunny/hero_sad.png',
+                price: 50
+            },
             { id: 'london', name: { en: 'Bunny in London', he: 'באני בלונדון' }, image: '/assets/avatars/bunny/london.png', price: 300 },
             { id: 'queen', name: { en: 'Queen Bunny', he: 'באני המלכה' }, image: '/assets/avatars/bunny/queen.png', price: 450 }
         ]
