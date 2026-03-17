@@ -1037,22 +1037,16 @@ function App() {
 
             {/* Mode-specific content */}
             <div className="result-content">
-              {gameConfig?.gameMode === '1v1' ? (
+              {gameState === 'quit' ? null : gameConfig?.gameMode === '1v1' ? (
                 <p>
-                  {gameState === 'quit'
-                    ? t.game_interrupted
-                    : scores[1] > scores[2]
+                  {scores[1] > scores[2]
+                    ? t.player_wins.replace('{name}', '') // Name is shown under avatar now
+                    : scores[2] > scores[1]
                       ? t.player_wins.replace('{name}', '') // Name is shown under avatar now
-                      : scores[2] > scores[1]
-                        ? t.player_wins.replace('{name}', '') // Name is shown under avatar now
-                        : t.draw
+                      : t.draw
                   }
-                  {gameState !== 'quit' && (
-                    <>
-                      <br />
-                      {t.score}: {scores[1]} - {scores[2]}
-                    </>
-                  )}
+                  <br />
+                  {t.score}: {scores[1]} - {scores[2]}
                 </p>
               ) : gameConfig?.gameMode === 'survival' ? (
                 <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
