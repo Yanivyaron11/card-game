@@ -169,6 +169,8 @@
     align-items: center;
     justify-content: center;
     gap: 0.3rem;
+    min-height: 80px;
+    height: 100%;
 }
 
 .mode-title {
