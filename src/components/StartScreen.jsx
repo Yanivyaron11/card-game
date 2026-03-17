@@ -324,10 +324,22 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             <div className="config-section">
                 <h3>{t.game_mode}</h3>
                 <div className="mode-options">
-                    <button className={`mode-btn ${gameMode === 'solo' ? 'active' : ''}`} onClick={() => handleModeChange('solo')} data-testid="start-solo">👤 {t.solo}</button>
-                    <button className={`mode-btn ${gameMode === '1v1' ? 'active' : ''}`} onClick={() => handleModeChange('1v1')} data-testid="start-1v1">⚔️ {t.v1}</button>
-                    <button className={`mode-btn ${gameMode === 'time_attack' ? 'active' : ''}`} onClick={() => handleModeChange('time_attack')} data-testid="start-time-attack">⏱️ {t.time_attack}</button>
-                    <button className={`mode-btn ${gameMode === 'survival' ? 'active' : ''}`} onClick={() => handleModeChange('survival')} data-testid="start-survival">🔥 {t.survival}</button>
+                    <button className={`mode-btn ${gameMode === 'solo' ? 'active' : ''}`} onClick={() => handleModeChange('solo')} data-testid="start-solo">
+                        <span className="mode-title">👤 {t.solo}</span>
+                        <span className="mode-reward-badge">🪙 {t.reward_solo}</span>
+                    </button>
+                    <button className={`mode-btn ${gameMode === '1v1' ? 'active' : ''}`} onClick={() => handleModeChange('1v1')} data-testid="start-1v1">
+                        <span className="mode-title">⚔️ {t.v1}</span>
+                        <span className="mode-reward-badge">🪙 {t.reward_1v1}</span>
+                    </button>
+                    <button className={`mode-btn ${gameMode === 'time_attack' ? 'active' : ''}`} onClick={() => handleModeChange('time_attack')} data-testid="start-time-attack">
+                        <span className="mode-title">⏱️ {t.time_attack}</span>
+                        <span className="mode-reward-badge">🪙 {t.reward_time_attack}</span>
+                    </button>
+                    <button className={`mode-btn ${gameMode === 'survival' ? 'active' : ''}`} onClick={() => handleModeChange('survival')} data-testid="start-survival">
+                        <span className="mode-title">🔥 {t.survival}</span>
+                        <span className="mode-reward-badge">🪙 {t.reward_survival}</span>
+                    </button>
                 </div>
             </div>
 
