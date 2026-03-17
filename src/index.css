@@ -176,27 +176,27 @@ button:active {
 @keyframes avatarSad {
   0% {
     transform: scale(1) rotate(0);
-    filter: grayscale(0%);
+    filter: grayscale(100%) brightness(0.9);
   }
 
   25% {
     transform: scale(1) rotate(-2deg);
-    filter: grayscale(30%);
+    filter: grayscale(100%) brightness(0.8);
   }
 
   50% {
     transform: scale(1) rotate(2deg);
-    filter: grayscale(60%);
+    filter: grayscale(100%) brightness(0.7);
   }
 
   75% {
     transform: scale(1) rotate(-2deg);
-    filter: grayscale(30%);
+    filter: grayscale(100%) brightness(0.8);
   }
 
   100% {
     transform: scale(1) rotate(0);
-    filter: grayscale(0%);
+    filter: grayscale(100%) brightness(0.9);
   }
 }
 
@@ -209,6 +209,7 @@ button:active {
   animation: avatarSad 3s ease-in-out infinite;
   transform-origin: center center;
   opacity: 0.8;
+  filter: grayscale(100%);
 }
 
 @keyframes sway {
