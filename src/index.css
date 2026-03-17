@@ -212,3 +212,13 @@ button:active {
   transform-origin: center center;
   opacity: 0.8;
 }
+
+@keyframes sway {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}

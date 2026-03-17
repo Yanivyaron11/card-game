@@ -53,7 +53,7 @@ function SettingsModal({
                                 style={{ width: '100%', padding: '1rem', background: 'rgba(255, 215, 0, 0.2)', marginBottom: '1rem' }}
                                 onClick={() => setIsEarningGuideOpen(true)}
                             >
-                                🎁 {t.earning_guide_title}
+                                📜 {t.earning_guide_title}
                             </button>
                         </section>
 

@@ -487,7 +487,11 @@ function App() {
       const totalPossible = deck.length;
       if (p1Solved > totalPossible / 2 || p2Solved > totalPossible / 2 || allCardsProcessed) {
         applyStreakBonuses();
-        setGameState('victory');
+        if (allCardsProcessed && p1Solved === p2Solved) {
+          setGameState('game_over');
+        } else {
+          setGameState('victory');
+        }
         navigate('/result');
       }
       return;
@@ -533,6 +537,32 @@ function App() {
       }
     }
   }, [deck, gameState, gameConfig, applyStreakBonuses, navigate, timeLeft]);
+
+  // 1v1 Sticky Turn Logic: Skip turn if current player has no valid moves
+  useEffect(() => {
+    if (gameState === 'playing' && gameConfig?.gameMode === '1v1') {
+      const allCardsProcessed = deck.length > 0 && deck.every(c => c.isSolved || c.isFailed);
+      if (allCardsProcessed) return;
+
+      const currentPlayerHasMoves = deck.some(c =>
+        !c.isSolved &&
+        !c.isFailed &&
+        !(c.failedAttempts === 1 && c.lastFailedPlayer === currentPlayer)
+      );
+
+      if (!currentPlayerHasMoves) {
+        const otherPlayer = currentPlayer === 1 ? 2 : 1;
+        const otherPlayerHasMoves = deck.some(c =>
+          !c.isSolved &&
+          !c.isFailed &&
+          !(c.failedAttempts === 1 && c.lastFailedPlayer === otherPlayer)
+        );
+        if (otherPlayerHasMoves) {
+          setCurrentPlayer(otherPlayer);
+        }
+      }
+    }
+  }, [deck, currentPlayer, gameState, gameConfig]);
 
   useEffect(() => {
     if (gameState === 'playing') {
@@ -728,7 +758,13 @@ function App() {
     answeringRef.current.clear();
     // If quitting during a game, treat as end of run for stats/scoring
     if (gameState === 'playing') {
-      applyStreakBonuses();
+      // Intentionally do NOT apply streak bonuses when quitting
+      // Reset any base coins earned during this incomplete session
+      const coinsToRevert = sessionCoinBreakdown.base;
+      if (coinsToRevert > 0) {
+        setTotalCoins(prev => prev - coinsToRevert);
+      }
+      setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0, spent: sessionCoinBreakdown.spent });
       setGameState('quit');
       navigate('/result');
     } else {
@@ -866,43 +902,157 @@ function App() {
             {gameState === 'victory' ? (
               <h2>{t.you_win} 🎉</h2>
             ) : (
-              <h2>{gameState === 'quit' ? t.game_interrupted : t.game_over} {gameState === 'quit' ? '' : '😢'}</h2>
+              <h2>
+                {gameState === 'quit' ? t.game_interrupted :
+                  (gameConfig?.gameMode === '1v1' && scores[1] === scores[2]) ? t.game_over : t.game_over + ' 😢'}
+              </h2>
             )}
 
-            {/* Avatar display (only for single player modes) */}
-            {gameConfig?.avatars?.[1] && gameConfig.gameMode !== '1v1' && (
-              <div className="result-avatar">
-                <div className="premium-avatar-box" style={{ width: '100px', margin: '0 auto 0.5rem auto' }}>
-                  {gameConfig.avatars[1].image ? (
-                    <img
-                      src={
-                        gameState === 'victory' && gameConfig.avatars[1].image_happy ? gameConfig.avatars[1].image_happy :
-                          gameState === 'game_over' && gameConfig.avatars[1].image_sad ? gameConfig.avatars[1].image_sad :
-                            gameConfig.avatars[1].image
-                      }
-                      alt={gameConfig.avatars[1].name[language]}
-                      className={`avatar-img-premium ${gameState === 'victory' ? 'avatar-happy' : 'avatar-sad'}`}
-                    />
-                  ) : (
-                    <span className={`result-emoji ${gameState === 'victory' ? 'avatar-happy' : 'avatar-sad'}`} style={{ fontSize: '4rem', display: 'inline-block' }}>{gameConfig.avatars[1].emoji}</span>
-                  )}
-                </div>
-                <p>{gameConfig.avatars[1].name[language]}</p>
-              </div>
-            )}
+            {/* Avatar display */}
+            {(() => {
+              if (!gameConfig?.avatars) return null;
+
+              let displayAvatar = null;
+              let isWinner = gameState === 'victory';
+              let isQuit = gameState === 'quit';
+
+              if (gameConfig.gameMode !== '1v1') {
+                displayAvatar = gameConfig.avatars[1];
+                if (!displayAvatar) return null;
+
+                return (
+                  <div className="result-avatar">
+                    <div className="premium-avatar-box" style={{ width: '100px', margin: '0 auto 0.5rem auto' }}>
+                      {displayAvatar.image ? (
+                        <img
+                          src={
+                            isWinner && displayAvatar.image_happy ? displayAvatar.image_happy :
+                              !isWinner && !isQuit && displayAvatar.image_sad ? displayAvatar.image_sad :
+                                displayAvatar.image
+                          }
+                          alt={displayAvatar.name[language]}
+                          className={`avatar-img-premium ${isWinner ? 'avatar-happy' : !isQuit ? 'avatar-sad' : ''}`}
+                        />
+                      ) : (
+                        <span className={`result-emoji ${isWinner ? 'avatar-happy' : !isQuit ? 'avatar-sad' : ''}`} style={{ fontSize: '4rem', display: 'inline-block' }}>{displayAvatar.emoji}</span>
+                      )}
+                    </div>
+                    <p>{displayAvatar.name[language]}</p>
+                  </div>
+                );
+              } else {
+                // 1v1 mode
+                if (isQuit) {
+                  return (
+                    <div className="result-avatar" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
+                      {[1, 2].map(p => {
+                        const avatar = gameConfig.avatars[p];
+                        if (!avatar) return null;
+                        return (
+                          <div key={p} style={{ textAlign: 'center' }}>
+                            <div className="premium-avatar-box" style={{ width: '80px', margin: '0 auto 0.5rem auto' }}>
+                              {avatar.image ? (
+                                <img
+                                  src={avatar.image}
+                                  alt={avatar.name[language]}
+                                  className="avatar-img-premium"
+                                />
+                              ) : (
+                                <span className="result-emoji" style={{ fontSize: '3rem', display: 'inline-block' }}>{avatar.emoji}</span>
+                              )}
+                            </div>
+                            <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>{avatar.name[language]}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                } else if (scores[1] > scores[2]) {
+                  displayAvatar = gameConfig.avatars[1];
+                  isWinner = true;
+                  return (
+                    <div className="result-avatar">
+                      <div className="premium-avatar-box" style={{ width: '100px', margin: '0 auto 0.5rem auto' }}>
+                        {displayAvatar.image ? (
+                          <img
+                            src={displayAvatar.image_happy || displayAvatar.image}
+                            alt={displayAvatar.name[language]}
+                            className="avatar-img-premium avatar-happy"
+                          />
+                        ) : (
+                          <span className="result-emoji avatar-happy" style={{ fontSize: '4rem', display: 'inline-block' }}>{displayAvatar.emoji}</span>
+                        )}
+                      </div>
+                      <p>{displayAvatar.name[language]}</p>
+                    </div>
+                  );
+                } else if (scores[2] > scores[1]) {
+                  displayAvatar = gameConfig.avatars[2];
+                  isWinner = true;
+                  return (
+                    <div className="result-avatar">
+                      <div className="premium-avatar-box" style={{ width: '100px', margin: '0 auto 0.5rem auto' }}>
+                        {displayAvatar.image ? (
+                          <img
+                            src={displayAvatar.image_happy || displayAvatar.image}
+                            alt={displayAvatar.name[language]}
+                            className="avatar-img-premium avatar-happy"
+                          />
+                        ) : (
+                          <span className="result-emoji avatar-happy" style={{ fontSize: '4rem', display: 'inline-block' }}>{displayAvatar.emoji}</span>
+                        )}
+                      </div>
+                      <p>{displayAvatar.name[language]}</p>
+                    </div>
+                  );
+                } else {
+                  // Draw
+                  return (
+                    <div className="result-avatar" style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
+                      {[1, 2].map(p => {
+                        const avatar = gameConfig.avatars[p];
+                        if (!avatar) return null;
+                        return (
+                          <div key={p} style={{ textAlign: 'center' }}>
+                            <div className="premium-avatar-box player-1v1-draw" style={{ width: '80px', margin: '0 auto 0.5rem auto', animation: 'sway 3s ease-in-out infinite alternate', animationDelay: p === 1 ? '0s' : '1.5s' }}>
+                              {avatar.image ? (
+                                <img
+                                  src={avatar.image}
+                                  alt={avatar.name[language]}
+                                  className="avatar-img-premium"
+                                />
+                              ) : (
+                                <span className="result-emoji" style={{ fontSize: '3rem', display: 'inline-block' }}>{avatar.emoji}</span>
+                              )}
+                            </div>
+                            <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>{avatar.name[language]}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                }
+              }
+            })()}
 
             {/* Mode-specific content */}
             <div className="result-content">
               {gameConfig?.gameMode === '1v1' ? (
                 <p>
-                  {scores[1] > scores[2]
-                    ? t.player_wins.replace('{name}', gameConfig.avatars?.[1] ? `${gameConfig.avatars[1].emoji} ${gameConfig.avatars[1].name[language]}` : (language === 'he' ? 'שחקן 1' : 'Player 1'))
-                    : scores[2] > scores[1]
-                      ? t.player_wins.replace('{name}', gameConfig.avatars?.[2] ? `${gameConfig.avatars[2].emoji} ${gameConfig.avatars[2].name[language]}` : (language === 'he' ? 'שחקן 2' : 'Player 2'))
-                      : t.draw
+                  {gameState === 'quit'
+                    ? t.game_interrupted
+                    : scores[1] > scores[2]
+                      ? t.player_wins.replace('{name}', '') // Name is shown under avatar now
+                      : scores[2] > scores[1]
+                        ? t.player_wins.replace('{name}', '') // Name is shown under avatar now
+                        : t.draw
                   }
-                  <br />
-                  {t.score}: {scores[1]} - {scores[2]}
+                  {gameState !== 'quit' && (
+                    <>
+                      <br />
+                      {t.score}: {scores[1]} - {scores[2]}
+                    </>
+                  )}
                 </p>
               ) : gameConfig?.gameMode === 'survival' ? (
                 <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
