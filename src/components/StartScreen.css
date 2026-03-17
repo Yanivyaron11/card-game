@@ -154,17 +154,18 @@
 }
 
 .mode-options {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.8rem;
     justify-content: center;
+    width: 100%;
 }
 
 .mode-btn {
-    flex: 1 1 0;
     width: 100%;
     background: var(--glass-bg);
     border: 2px solid transparent;
-    padding: 0.8rem;
+    padding: 0.8rem 0.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
