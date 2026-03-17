@@ -45,7 +45,14 @@ export const avatars = [
         price: 0,
         category: 'free',
         skins: [
-            { id: 'sweet', name: { en: 'Sweet Foxy', he: 'פוקסי המתוק' }, image: '/assets/avatars/foxy/default.png', price: 200 },
+            {
+                id: 'sweet',
+                name: { en: 'Sweet Foxy', he: 'פוקסי המתוק' },
+                image: '/assets/avatars/foxy/default.png',
+                image_happy: '/assets/avatars/foxy/default_happy.png',
+                image_sad: '/assets/avatars/foxy/default_sad.png',
+                price: 50
+            },
             { id: 'detective', name: { en: 'Detective Foxy', he: 'פוקסי הבלש' }, image: '/assets/avatars/foxy/detective.png', price: 300 },
             { id: 'dancer', name: { en: 'Dancer Foxy', he: 'פוקסי הרקדן' }, image: '/assets/avatars/foxy/dancer.png', price: 400 }
         ]
@@ -57,7 +64,14 @@ export const avatars = [
         price: 0,
         category: 'free',
         skins: [
-            { id: 'poppins', name: { en: 'Mary Poppins Panda', he: 'פנדה מארי פופינס' }, image: '/assets/avatars/panda/poppins.png', price: 200 },
+            {
+                id: 'poppins',
+                name: { en: 'Mary Poppins Panda', he: 'פנדה מארי פופינס' },
+                image: '/assets/avatars/panda/poppins.png',
+                image_happy: '/assets/avatars/panda/poppins_happy.png',
+                image_sad: '/assets/avatars/panda/poppins_sad.png',
+                price: 50
+            },
             { id: 'rainbow', name: { en: 'Rainbow Panda', he: 'פנדה קשת בענן' }, image: '/assets/avatars/panda/rainbow.png', price: 300 },
             { id: 'flamenco', name: { en: 'Flamenco Panda', he: 'פנדה פלמנקו' }, image: '/assets/avatars/panda/flamenco.png', price: 400 }
         ]
