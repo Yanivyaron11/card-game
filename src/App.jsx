@@ -489,14 +489,40 @@ function App() {
     const allCardsProcessed = deck.length > 0 && deck.every(card => card.isSolved || card.isFailed);
     const solvedCount = deck.filter(c => c.isSolved).length;
 
-    // Early termination for 1v1
+    // Early termination for 1v1 mathematically determined
     if (gameConfig.gameMode === '1v1') {
-      const p1Solved = deck.filter(c => c.owner === 1).length;
-      const p2Solved = deck.filter(c => c.owner === 2).length;
-      const totalPossible = deck.length;
-      if (p1Solved > totalPossible / 2 || p2Solved > totalPossible / 2 || allCardsProcessed) {
+      const getRemainingMaxPointsFor = (playerIdx) => {
+        let maxTheoreticalAdded = 0;
+        deck.forEach(c => {
+          if (c.isSolved || c.isFailed) return;
+          const isEligibleForRebound = !c.isTainted && c.options?.he?.length > 2;
+          const pointsValue = isEligibleForRebound ? 2 : 1;
+
+          if (c.failedAttempts === 1) {
+            if (c.lastFailedPlayer !== playerIdx) {
+              maxTheoreticalAdded += pointsValue;
+            }
+          } else {
+            maxTheoreticalAdded += pointsValue;
+          }
+        });
+        return maxTheoreticalAdded;
+      };
+
+      const p1Current = scores[1] || 0;
+      const p2Current = scores[2] || 0;
+
+      const p1MaxPotential = p1Current + getRemainingMaxPointsFor(1);
+      const p2MaxPotential = p2Current + getRemainingMaxPointsFor(2);
+
+      const p1HasWon = p1Current > p2MaxPotential;
+      const p2HasWon = p2Current > p1MaxPotential;
+
+      const earlyWinTriggered = p1HasWon || p2HasWon;
+
+      if (earlyWinTriggered || allCardsProcessed) {
         applyStreakBonuses();
-        if (allCardsProcessed && p1Solved === p2Solved) {
+        if (p1Current === p2Current) {
           setGameState('game_over');
         } else {
           setGameState('victory');
