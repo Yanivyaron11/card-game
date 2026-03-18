@@ -88,6 +88,7 @@ export const themes = [
             he: "כחול חצות 🌌",
             en: "Midnight Blue 🌌"
         },
+        color: "#0f172a",
         price: 0,
         type: 'theme',
         category: 'free',
@@ -99,6 +100,7 @@ export const themes = [
             he: "יער אפל 🌲",
             en: "Dark Forest 🌲"
         },
+        color: "#064e3b",
         price: 0,
         type: 'theme',
         category: 'free',
@@ -110,6 +112,7 @@ export const themes = [
             he: "בורדו עמוק 🍷",
             en: "Deep Burgundy 🍷"
         },
+        color: "#4c0519",
         price: 0,
         type: 'theme',
         category: 'free',
@@ -121,6 +124,7 @@ export const themes = [
             he: "פחם 🖤",
             en: "Charcoal 🖤"
         },
+        color: "#171717",
         price: 0,
         type: 'theme',
         category: 'free',
