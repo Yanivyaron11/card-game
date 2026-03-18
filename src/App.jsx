@@ -155,6 +155,15 @@ function App() {
       if (!next.includes('world_group')) next.push('world_group');
       return next;
     });
+
+    setUnlockedThemes(prev => {
+      let next = [...prev];
+      const freeThemes = ['space', 'midnight', 'forest_dark', 'burgundy', 'charcoal'];
+      freeThemes.forEach(themeId => {
+        if (!next.includes(themeId)) next.push(themeId);
+      });
+      return next;
+    });
   }, []);
 
   useEffect(() => {
