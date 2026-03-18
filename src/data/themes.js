@@ -81,5 +81,49 @@ export const themes = [
         type: 'theme',
         category: 'premium',
         className: 'theme-icecream'
+    },
+    {
+        id: 'midnight',
+        name: {
+            he: "כחול חצות 🌌",
+            en: "Midnight Blue 🌌"
+        },
+        price: 0,
+        type: 'theme',
+        category: 'free',
+        className: 'theme-midnight'
+    },
+    {
+        id: 'forest_dark',
+        name: {
+            he: "יער אפל 🌲",
+            en: "Dark Forest 🌲"
+        },
+        price: 0,
+        type: 'theme',
+        category: 'free',
+        className: 'theme-forest-dark'
+    },
+    {
+        id: 'burgundy',
+        name: {
+            he: "בורדו עמוק 🍷",
+            en: "Deep Burgundy 🍷"
+        },
+        price: 0,
+        type: 'theme',
+        category: 'free',
+        className: 'theme-burgundy'
+    },
+    {
+        id: 'charcoal',
+        name: {
+            he: "פחם 🖤",
+            en: "Charcoal 🖤"
+        },
+        price: 0,
+        type: 'theme',
+        category: 'free',
+        className: 'theme-charcoal'
     }
 ];

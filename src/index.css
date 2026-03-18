@@ -14,6 +14,26 @@
   --app-bg-color: linear-gradient(135deg, #2e1065 0%, #7c3aed 100%);
 }
 
+.theme-midnight {
+  --app-bg-image: none;
+  --app-bg-color: #0f172a;
+}
+
+.theme-forest-dark {
+  --app-bg-image: none;
+  --app-bg-color: #064e3b;
+}
+
+.theme-burgundy {
+  --app-bg-image: none;
+  --app-bg-color: #4c0519;
+}
+
+.theme-charcoal {
+  --app-bg-image: none;
+  --app-bg-color: #171717;
+}
+
 .theme-candy {
   --app-bg-image: url('/themes/candy_theme_bg.png');
   --app-bg-color: transparent;
