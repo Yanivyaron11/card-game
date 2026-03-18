@@ -649,12 +649,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
+    gap: 0.3rem;
     background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
     color: white;
-    padding: 0.8rem 0.5rem;
+    padding: 0.6rem 0.4rem;
     border-radius: 12px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -662,8 +662,8 @@
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     flex: 1;
-    min-width: 100px;
-    max-width: 140px;
+    min-width: 90px;
+    max-width: 125px;
 }
 
 .powerup-btn:hover:not(:disabled):not(.locked) {
