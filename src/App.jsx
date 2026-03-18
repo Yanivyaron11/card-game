@@ -1080,7 +1080,9 @@ function App() {
             </div>
             {/* Coin Summary Section */}
             <div className="coin-summary-card glass-panel card-pop">
-              <h3>{t.earned_this_game} 🪙</h3>
+              <h3>
+                {t.earned_this_game} <img src="/icons/gold_coin.png" alt="coin" className="global-coin" />
+              </h3>
               <div className="coin-breakdown">
                 <div className="breakdown-item">
                   <span>{t.regular_points}</span>
@@ -1106,7 +1108,9 @@ function App() {
                 )}
                 <div className="breakdown-total">
                   <span>{t.total_coins}</span>
-                  <span>{sessionCoinBreakdown.base + sessionCoinBreakdown.streak + sessionCoinBreakdown.bonus - sessionCoinBreakdown.spent} 🪙</span>
+                  <span>
+                    {sessionCoinBreakdown.base + sessionCoinBreakdown.streak + sessionCoinBreakdown.bonus - sessionCoinBreakdown.spent} <img src="/icons/gold_coin.png" alt="coin" className="global-coin" />
+                  </span>
                 </div>
               </div>
             </div>

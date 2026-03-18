@@ -278,8 +278,8 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
     return (
         <div className="start-screen glass-panel">
             <div className="top-controls">
-                <div className="total-coins-display">
-                    🪙 <span className="coin-count">{totalCoins}</span>
+                <div className="start-coins card-pop" data-testid="start-coins">
+                    <img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> <span className="coin-count">{totalCoins}</span>
                 </div>
                 <button className="shop-invite-btn" onClick={() => setIsShopOpen(true)}>
                     🛒 {language === 'he' ? 'חנות' : 'Shop'}
@@ -326,19 +326,27 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                 <div className="mode-options">
                     <button className={`mode-btn ${gameMode === 'solo' ? 'active' : ''}`} onClick={() => handleModeChange('solo')} data-testid="start-solo">
                         <span className="mode-title">👤 {t.solo}</span>
-                        <span className="mode-reward-badge">🪙 {t.reward_solo}</span>
+                        <div className="mode-info">
+                            <span className="mode-reward-badge"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {t.reward_solo}</span>
+                        </div>
                     </button>
                     <button className={`mode-btn ${gameMode === '1v1' ? 'active' : ''}`} onClick={() => handleModeChange('1v1')} data-testid="start-1v1">
                         <span className="mode-title">⚔️ {t.v1}</span>
-                        <span className="mode-reward-badge">🪙 {t.reward_1v1}</span>
+                        <div className="mode-info">
+                            <span className="mode-reward-badge"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {t.reward_1v1}</span>
+                        </div>
                     </button>
                     <button className={`mode-btn ${gameMode === 'time_attack' ? 'active' : ''}`} onClick={() => handleModeChange('time_attack')} data-testid="start-time-attack">
                         <span className="mode-title">⏱️ {t.time_attack}</span>
-                        <span className="mode-reward-badge">🪙 {t.reward_time_attack}</span>
+                        <div className="mode-info">
+                            <span className="mode-reward-badge"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {t.reward_time_attack}</span>
+                        </div>
                     </button>
                     <button className={`mode-btn ${gameMode === 'survival' ? 'active' : ''}`} onClick={() => handleModeChange('survival')} data-testid="start-survival">
                         <span className="mode-title">🔥 {t.survival}</span>
-                        <span className="mode-reward-badge">🪙 {t.reward_survival}</span>
+                        <div className="mode-info">
+                            <span className="mode-reward-badge"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {t.reward_survival}</span>
+                        </div>
                     </button>
                 </div>
             </div>

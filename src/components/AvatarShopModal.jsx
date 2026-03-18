@@ -84,7 +84,9 @@ function AvatarShopModal({
             <div className="modal-content shop-modal glass-panel card-pop" onClick={e => e.stopPropagation()}>
                 <div className="shop-header">
                     <h2>🛒 {t.shop}</h2>
-                    <div className="shop-coins">🪙 {totalCoins}</div>
+                    <div className="shop-stats">
+                        <div className="shop-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {totalCoins}</div>
+                    </div>
                     <button className="close-btn" onClick={onClose}>✕</button>
                 </div>
 
@@ -169,7 +171,9 @@ function AvatarShopModal({
                                                             handleBuyAvatar(avatar);
                                                         }}
                                                     >
-                                                        🪙 {avatar.price}
+                                                        <div className="item-price">
+                                                            <img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {avatar.price}
+                                                        </div>
                                                     </button>
                                                 )}
                                             </div>
@@ -235,7 +239,9 @@ function AvatarShopModal({
                                                                 handleBuySkin({ ...skin, id: skinFullId });
                                                             }}
                                                         >
-                                                            🪙 {skin.price}
+                                                            <div className="item-price">
+                                                                <img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {skin.price}
+                                                            </div>
                                                         </button>
                                                     )}
                                                     {!isBaseUnlocked && <div className="base-lock-warning">{language === 'he' ? 'צריך להשיג את הדמות קודם! ✨' : 'Get the character first! ✨'}</div>}
@@ -267,7 +273,9 @@ function AvatarShopModal({
                                                         handleBuyTopic(group);
                                                     }}
                                                 >
-                                                    🪙 {group.price}
+                                                    <div className="item-price">
+                                                        <img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {group.price}
+                                                    </div>
                                                 </button>
                                             )}
                                         </div>

@@ -227,8 +227,8 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             </div>
                         </div>
                     )}
-                    <div className="stat-item coins-display">
-                        <div key={coins} className="coins-value mini coin-pop" data-testid="quiz-coins">🪙 {coins}</div>
+                    <div className="stat-item coins-display" title={t.coins}>
+                        <div key={coins} className="coins-value mini coin-pop" data-testid="quiz-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
                     </div>
                     {gameMode === 'survival' && (
                         <div className="stat-item survival-progress-section">
@@ -419,7 +419,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                 <span className="cost">
                                     {gameMode === 'survival'
                                         ? (usedSurvivalPowerups['5050'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
-                                        : '🪙 2'}
+                                        : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 2</>}
                                 </span>
                             </button>
 
@@ -434,7 +434,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                     <span className="cost">
                                         {gameMode === 'survival'
                                             ? (usedSurvivalPowerups['hint'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
-                                            : '🪙 1'}
+                                            : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 1</>}
                                     </span>
                                 </button>
                             )}
@@ -449,7 +449,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                 <span className="cost">
                                     {gameMode === 'survival'
                                         ? (usedSurvivalPowerups['solve'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
-                                        : '🪙 5'}
+                                        : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 5</>}
                                 </span>
                             </button>
                         </div>

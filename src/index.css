@@ -14,6 +14,16 @@
   --app-bg-color: linear-gradient(135deg, #2e1065 0%, #7c3aed 100%);
 }
 
+.global-coin {
+  width: 1.1em !important;
+  height: 1.1em !important;
+  vertical-align: middle !important;
+  margin: 0 0.2em !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  display: inline-block;
+  object-fit: contain;
+}
+
 .theme-midnight {
   --app-bg-image: none;
   --app-bg-color: #0f172a;

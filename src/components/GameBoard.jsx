@@ -83,7 +83,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                             </div>
                         </div>
                         <div className="stat-item coins-display">
-                            <div key={coins} className="coins-value coin-pop" data-testid="game-coins">🪙 {coins}</div>
+                            <div key={coins} className="coins-value coin-pop" data-testid="game-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
                         </div>
                     </>
                 ) : (
@@ -111,7 +111,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                     ))}
                                 </div>
                             )}
-                            <div className="p-coins">🪙 {coins}</div>
+                            <div className="p-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
                         </div>
 
                         <div className="vs-center">
