@@ -185,6 +185,7 @@
     overflow: hidden;
     line-height: 1.1rem;
     word-break: break-word;
+    margin-bottom: auto;
 }
 
 .shop-btn {
