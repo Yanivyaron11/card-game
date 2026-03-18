@@ -276,63 +276,123 @@ function AvatarShopModal({
                             </div>
                         </div>
                     ) : (
-                        <div className="shop-category-section">
-                            <h3>{t.shop_tab_backgrounds}</h3>
-                            <div className="shop-grid">
-                                {themes.map(theme => {
-                                    const isUnlocked = unlockedThemes.includes(theme.id);
-                                    const isEquipped = activeTheme === theme.id;
-                                    return (
-                                        <div
-                                            key={theme.id}
-                                            className={`shop-item topic-item ${isUnlocked ? 'unlocked' : 'locked'} ${isEquipped ? 'selected' : ''}`}
-                                            onClick={() => setPreviewItem({
-                                                ...theme,
-                                                isUnlocked,
-                                                isActive: isEquipped,
-                                                onToggle: () => onEquipTheme(theme.id),
-                                                onBuy: handleBuyTheme,
-                                                type: 'theme'
-                                            })}
-                                        >
-                                            <div className="shop-item-emoji">
-                                                <div className="premium-avatar-box" style={{ width: '85px', height: '85px' }}>
-                                                    {theme.image ? (
-                                                        <img src={theme.image} alt={theme.name[language]} className="avatar-img-premium" />
-                                                    ) : theme.color ? (
-                                                        <div style={{ width: '100%', height: '100%', backgroundColor: theme.color, borderRadius: 'inherit' }}></div>
-                                                    ) : null}
+                        <>
+                            <div className="shop-category-section">
+                                <h3>{language === 'he' ? 'רקעים סולידיים' : 'Solid Backgrounds'}</h3>
+                                <div className="shop-grid">
+                                    {themes.filter(t => t.category === 'free').map(theme => {
+                                        const isUnlocked = unlockedThemes.includes(theme.id);
+                                        const isEquipped = activeTheme === theme.id;
+                                        return (
+                                            <div
+                                                key={theme.id}
+                                                className={`shop-item topic-item ${isUnlocked ? 'unlocked' : 'locked'} ${isEquipped ? 'selected' : ''}`}
+                                                onClick={() => setPreviewItem({
+                                                    ...theme,
+                                                    isUnlocked,
+                                                    isActive: isEquipped,
+                                                    onToggle: () => onEquipTheme(theme.id),
+                                                    onBuy: handleBuyTheme,
+                                                    type: 'theme'
+                                                })}
+                                            >
+                                                <div className="shop-item-emoji">
+                                                    <div className="premium-avatar-box" style={{ width: '85px', height: '85px' }}>
+                                                        {theme.image ? (
+                                                            <img src={theme.image} alt={theme.name[language]} className="avatar-img-premium" />
+                                                        ) : theme.color ? (
+                                                            <div style={{ width: '100%', height: '100%', backgroundColor: theme.color, borderRadius: 'inherit' }}></div>
+                                                        ) : null}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="shop-item-name">{theme.name[language]}</div>
+                                                <div className="shop-item-name">{theme.name[language]}</div>
 
-                                            {isUnlocked ? (
-                                                <div
-                                                    className={`toggle-switch ${isEquipped ? 'active' : ''}`}
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        onEquipTheme(theme.id);
-                                                    }}
-                                                >
-                                                    <div className="toggle-knob"></div>
-                                                </div>
-                                            ) : (
-                                                <button
-                                                    className="shop-btn buy-btn"
-                                                    disabled={totalCoins < theme.price}
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        handleBuyTheme(theme);
-                                                    }}
-                                                >
-                                                    🪙 {theme.price}
-                                                </button>
-                                            )}
-                                        </div>
-                                    );
-                                })}
+                                                {isUnlocked ? (
+                                                    <div
+                                                        className={`toggle-switch ${isEquipped ? 'active' : ''}`}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            onEquipTheme(theme.id);
+                                                        }}
+                                                    >
+                                                        <div className="toggle-knob"></div>
+                                                    </div>
+                                                ) : (
+                                                    <button
+                                                        className="shop-btn buy-btn"
+                                                        disabled={totalCoins < theme.price}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            handleBuyTheme(theme);
+                                                        }}
+                                                    >
+                                                        🪙 {theme.price}
+                                                    </button>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
                             </div>
-                        </div>
+
+                            <div className="shop-category-section">
+                                <h3>{language === 'he' ? 'רקעים מיוחדים' : 'Special Backgrounds'}</h3>
+                                <div className="shop-grid">
+                                    {themes.filter(t => t.category === 'premium').map(theme => {
+                                        const isUnlocked = unlockedThemes.includes(theme.id);
+                                        const isEquipped = activeTheme === theme.id;
+                                        return (
+                                            <div
+                                                key={theme.id}
+                                                className={`shop-item topic-item ${isUnlocked ? 'unlocked' : 'locked'} ${isEquipped ? 'selected' : ''}`}
+                                                onClick={() => setPreviewItem({
+                                                    ...theme,
+                                                    isUnlocked,
+                                                    isActive: isEquipped,
+                                                    onToggle: () => onEquipTheme(theme.id),
+                                                    onBuy: handleBuyTheme,
+                                                    type: 'theme'
+                                                })}
+                                            >
+                                                <div className="shop-item-emoji">
+                                                    <div className="premium-avatar-box" style={{ width: '85px', height: '85px' }}>
+                                                        {theme.image ? (
+                                                            <img src={theme.image} alt={theme.name[language]} className="avatar-img-premium" />
+                                                        ) : theme.color ? (
+                                                            <div style={{ width: '100%', height: '100%', backgroundColor: theme.color, borderRadius: 'inherit' }}></div>
+                                                        ) : null}
+                                                    </div>
+                                                </div>
+                                                <div className="shop-item-name">{theme.name[language]}</div>
+
+                                                {isUnlocked ? (
+                                                    <div
+                                                        className={`toggle-switch ${isEquipped ? 'active' : ''}`}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            onEquipTheme(theme.id);
+                                                        }}
+                                                    >
+                                                        <div className="toggle-knob"></div>
+                                                    </div>
+                                                ) : (
+                                                    <button
+                                                        className="shop-btn buy-btn"
+                                                        disabled={totalCoins < theme.price}
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            handleBuyTheme(theme);
+                                                        }}
+                                                    >
+                                                        🪙 {theme.price}
+                                                    </button>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </>
                     )}
                 </div>
 
