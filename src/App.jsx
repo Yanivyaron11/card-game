@@ -493,6 +493,10 @@ function App() {
     if (gameConfig.gameMode === '1v1') {
       const getRemainingMaxPointsFor = (playerIdx) => {
         let maxTheoreticalAdded = 0;
+        let R_count = 0;
+        let F1_count = 0;
+        let F2_count = 0;
+
         deck.forEach(c => {
           if (c.isSolved || c.isFailed) return;
           const isEligibleForRebound = !c.isTainted && c.options?.he?.length > 2;
@@ -501,11 +505,24 @@ function App() {
           if (c.failedAttempts === 1) {
             if (c.lastFailedPlayer !== playerIdx) {
               maxTheoreticalAdded += pointsValue;
+              R_count++;
             }
           } else {
             maxTheoreticalAdded += pointsValue;
+            if (isEligibleForRebound) F2_count++;
+            else F1_count++;
           }
         });
+
+        // Turn-based mathematical invariant:
+        // If it is THIS player's turn, they MUST consume a turn. 
+        // If they have no existing Rebounds and no 1-point fresh cards, 
+        // they are forced to answer a 2-point fresh card correctly 
+        // to prevent outright locking it on a fail, thus yielding only 1 point.
+        if (currentPlayer === playerIdx && R_count === 0 && F1_count === 0 && F2_count > 0) {
+          maxTheoreticalAdded -= 1;
+        }
+
         return maxTheoreticalAdded;
       };
 
