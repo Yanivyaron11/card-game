@@ -280,7 +280,7 @@ function AvatarShopModal({
                             <div className="shop-category-section">
                                 <h3>{language === 'he' ? 'רקעים סולידיים' : 'Solid Backgrounds'}</h3>
                                 <div className="shop-grid">
-                                    {themes.filter(t => t.category === 'free').map(theme => {
+                                    {themes.filter(t => !t.image).map(theme => {
                                         const isUnlocked = unlockedThemes.includes(theme.id);
                                         const isEquipped = activeTheme === theme.id;
                                         return (
@@ -338,7 +338,7 @@ function AvatarShopModal({
                             <div className="shop-category-section">
                                 <h3>{language === 'he' ? 'רקעים מיוחדים' : 'Special Backgrounds'}</h3>
                                 <div className="shop-grid">
-                                    {themes.filter(t => t.category === 'premium').map(theme => {
+                                    {themes.filter(t => t.image).map(theme => {
                                         const isUnlocked = unlockedThemes.includes(theme.id);
                                         const isEquipped = activeTheme === theme.id;
                                         return (
