@@ -270,11 +270,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     )}
                     {avatar && (
                         <div className="stat-item avatar-display-mini">
-                            <div className="premium-avatar-box" style={{ width: '60px', borderRadius: '10px', borderWidth: '1.5px' }}>
+                            <div className="premium-avatar-box mini-avatar-box">
                                 {displayImage ? (
                                     <img src={displayImage} alt={avatar.name[language]} className="avatar-img-premium" />
                                 ) : (
-                                    <span className="quiz-avatar-emoji" style={{ fontSize: '2.2rem' }}>{avatar.emoji}</span>
+                                    <span className="quiz-avatar-emoji">{avatar.emoji}</span>
                                 )}
                             </div>
                             <span className="quiz-avatar-name">{avatar.name[language]}</span>

@@ -150,6 +150,17 @@
     border-left: 2px solid #e2e8f0;
 }
 
+.mini-avatar-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border-width: 1.5px;
+}
+
+.quiz-avatar-emoji {
+    font-size: 2.2rem;
+}
+
 .avatar-img-mini {
     width: 32px;
     height: 32px;
@@ -779,9 +790,35 @@
     }
 
     .quiz-stats-header {
-        gap: 0.8rem;
+        gap: 0.4rem;
         padding: 0.3rem 0.6rem;
         margin-bottom: 0.3rem;
+        min-height: 38px;
+    }
+
+    .avatar-display-mini {
+        gap: 0.3rem;
+        padding-left: 0.6rem;
+    }
+
+    [dir="rtl"] .avatar-display-mini {
+        padding-right: 0.6rem;
+        padding-left: 0;
+    }
+
+    .quiz-avatar-name {
+        display: none;
+    }
+
+    .mini-avatar-box {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 8px;
+        border-width: 1px;
+    }
+
+    .quiz-avatar-emoji {
+        font-size: 1.2rem !important;
     }
 
     .powerup-section h4 {
