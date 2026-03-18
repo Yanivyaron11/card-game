@@ -344,7 +344,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 </div>
 
                 <div className="quiz-content">
-                    <div className="quiz-emoji">{card.emoji}</div>
+                    <div className={`quiz-emoji ${card.category === 'flags' ? 'flag-emoji' : ''}`}>{card.emoji}</div>
 
                     {card.isHintVisible && (
                         <div className="hint-box">

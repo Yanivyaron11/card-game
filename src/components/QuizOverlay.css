@@ -394,6 +394,14 @@
 .quiz-emoji {
     font-size: 3.2rem;
     margin-bottom: 0.3rem;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.quiz-emoji.flag-emoji {
+    font-size: 8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
 
@@ -751,6 +759,11 @@
     .quiz-emoji {
         font-size: 2.8rem;
         margin-bottom: 0.2rem;
+    }
+
+    .quiz-emoji.flag-emoji {
+        font-size: 6rem;
+        margin-bottom: 0.4rem;
     }
 
     .quiz-header {
