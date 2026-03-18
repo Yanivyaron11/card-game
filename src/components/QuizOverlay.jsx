@@ -227,8 +227,8 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             </div>
                         </div>
                     )}
-                    <div className="stat-item coins-display" title={t.coins}>
-                        <div key={coins} className="coins-value mini coin-pop" data-testid="quiz-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
+                    <div className="stat-item" title={t.coins}>
+                        <div key={coins} className="coin-pill dark-mode coin-pop" data-testid="quiz-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
                     </div>
                     {gameMode === 'survival' && (
                         <div className="stat-item survival-progress-section">

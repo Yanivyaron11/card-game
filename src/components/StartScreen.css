@@ -248,25 +248,14 @@
     transform: scale(1.1);
 }
 
-.total-coins-display {
-    height: 32px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0 1rem;
-    border-radius: 13px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: coinPulse 2s infinite alternate;
-}
-
 .main-screen-coin {
     width: 28px !important;
     height: 28px !important;
     margin: 0 !important;
+}
+
+.coin-pulse {
+    animation: coinPulse 2s infinite alternate;
 }
 
 @keyframes coinPulse {

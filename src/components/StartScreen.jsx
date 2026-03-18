@@ -278,7 +278,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
     return (
         <div className="start-screen glass-panel">
             <div className="top-controls">
-                <div className="total-coins-display" data-testid="start-coins">
+                <div className="coin-pill coin-pulse" data-testid="start-coins">
                     <img src="/icons/gold_coin.png" alt="coin" className="global-coin main-screen-coin" /> <span className="coin-count">{totalCoins}</span>
                 </div>
                 <button className="shop-invite-btn" onClick={() => setIsShopOpen(true)}>
