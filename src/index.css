@@ -15,8 +15,8 @@
 }
 
 .global-coin {
-  width: 1.1em !important;
-  height: 1.1em !important;
+  width: 1.3em !important;
+  height: 1.3em !important;
   vertical-align: middle !important;
   margin: 0 0.2em !important;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
