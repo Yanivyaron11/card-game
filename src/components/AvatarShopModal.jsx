@@ -300,8 +300,15 @@ function AvatarShopModal({
                                                     <div className="premium-avatar-box" style={{ width: '85px', height: '85px' }}>
                                                         {theme.image ? (
                                                             <img src={theme.image} alt={theme.name[language]} className="avatar-img-premium" />
-                                                        ) : theme.color ? (
-                                                            <div style={{ width: '100%', height: '100%', backgroundColor: theme.color, borderRadius: 'inherit' }}></div>
+                                                        ) : theme.color || theme.className ? (
+                                                            <div className={theme.className} style={{
+                                                                width: '100%',
+                                                                height: '100%',
+                                                                background: 'var(--app-bg-image, none), var(--app-bg-color, ' + (theme.color || 'transparent') + ')',
+                                                                backgroundSize: 'var(--app-bg-size, cover)',
+                                                                backgroundPosition: 'var(--app-bg-pos, center)',
+                                                                borderRadius: 'inherit'
+                                                            }}></div>
                                                         ) : null}
                                                     </div>
                                                 </div>
@@ -358,8 +365,15 @@ function AvatarShopModal({
                                                     <div className="premium-avatar-box" style={{ width: '85px', height: '85px' }}>
                                                         {theme.image ? (
                                                             <img src={theme.image} alt={theme.name[language]} className="avatar-img-premium" />
-                                                        ) : theme.color ? (
-                                                            <div style={{ width: '100%', height: '100%', backgroundColor: theme.color, borderRadius: 'inherit' }}></div>
+                                                        ) : theme.color || theme.className ? (
+                                                            <div className={theme.className} style={{
+                                                                width: '100%',
+                                                                height: '100%',
+                                                                background: 'var(--app-bg-image, none), var(--app-bg-color, ' + (theme.color || 'transparent') + ')',
+                                                                backgroundSize: 'var(--app-bg-size, cover)',
+                                                                backgroundPosition: 'var(--app-bg-pos, center)',
+                                                                borderRadius: 'inherit'
+                                                            }}></div>
                                                         ) : null}
                                                     </div>
                                                 </div>
@@ -404,8 +418,15 @@ function AvatarShopModal({
                                 <div className="premium-avatar-box big-view">
                                     {previewItem.image ? (
                                         <img src={previewItem.image} alt={previewItem.name[language]} className="avatar-img-premium" />
-                                    ) : previewItem.color ? (
-                                        <div style={{ width: '100%', height: '100%', backgroundColor: previewItem.color, borderRadius: 'inherit' }}></div>
+                                    ) : previewItem.color || previewItem.className ? (
+                                        <div className={previewItem.className} style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            background: 'var(--app-bg-image, none), var(--app-bg-color, ' + previewItem.color + ')',
+                                            backgroundSize: 'var(--app-bg-size, cover)',
+                                            backgroundPosition: 'var(--app-bg-pos, center)',
+                                            borderRadius: 'inherit'
+                                        }}></div>
                                     ) : (
                                         <span className="big-emoji">{previewItem.emoji}</span>
                                     )}

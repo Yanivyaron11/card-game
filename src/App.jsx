@@ -158,7 +158,7 @@ function App() {
 
     setUnlockedThemes(prev => {
       let next = [...prev];
-      const freeThemes = ['space', 'midnight', 'forest_dark', 'burgundy', 'charcoal'];
+      const freeThemes = ['space', 'midnight', 'forest_dark', 'burgundy', 'charcoal', 'charcoal_bubbles', 'midnight_grid', 'burgundy_stripes'];
       freeThemes.forEach(themeId => {
         if (!next.includes(themeId)) next.push(themeId);
       });

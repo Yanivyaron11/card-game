@@ -129,5 +129,41 @@ export const themes = [
         type: 'theme',
         category: 'free',
         className: 'theme-charcoal'
+    },
+    {
+        id: 'charcoal_bubbles',
+        name: {
+            he: "פחם מבעבע 🫧",
+            en: "Charcoal Bubbles 🫧"
+        },
+        color: "#171717",
+        price: 0,
+        type: 'theme',
+        category: 'free',
+        className: 'theme-charcoal-bubbles'
+    },
+    {
+        id: 'midnight_grid',
+        name: {
+            he: "רשת חצות 🌌",
+            en: "Midnight Grid 🌌"
+        },
+        color: "#0f172a",
+        price: 0,
+        type: 'theme',
+        category: 'free',
+        className: 'theme-midnight-grid'
+    },
+    {
+        id: 'burgundy_stripes',
+        name: {
+            he: "פסים בורדו 🍷",
+            en: "Burgundy Stripes 🍷"
+        },
+        color: "#4c0519",
+        price: 0,
+        type: 'theme',
+        category: 'free',
+        className: 'theme-burgundy-stripes'
     }
 ];
