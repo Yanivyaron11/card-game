@@ -852,7 +852,13 @@
     }
 
     .lives-coins-group {
-        gap: 0.4rem;
+        gap: 0.1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lives-coins-group .stat-item {
+        transform: scale(0.85);
     }
 
     .mode-survival .lives-coins-group {

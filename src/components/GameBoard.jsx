@@ -75,15 +75,17 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                         <div className="stat-item level-display">
                             <div className="level-badge">{t.level} {config.difficulty}</div>
                         </div>
-                        <div className="stat-item lives-display">
-                            <div className="hearts">
-                                {Array.from({ length: Math.max(0, (lives[1] || 0)) }).map((_, i) => (
-                                    <span key={i} className="heart-icon">❤️</span>
-                                ))}
+                        <div className="lives-coins-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                            <div className="stat-item lives-display">
+                                <div className="hearts">
+                                    {Array.from({ length: Math.max(0, (lives[1] || 0)) }).map((_, i) => (
+                                        <span key={i} className="heart-icon">❤️</span>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                        <div className="stat-item">
-                            <div key={coins} className="coin-pill coin-pop" data-testid="game-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
+                            <div className="stat-item">
+                                <div key={coins} className="coin-pill coin-pop" data-testid="game-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
+                            </div>
                         </div>
                     </>
                 ) : (

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
+import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import StartScreen from './components/StartScreen'
 import GameBoard from './components/GameBoard'
 import QuizOverlay from './components/QuizOverlay'
@@ -888,10 +888,8 @@ function App() {
         } />
 
         <Route path="/play" element={
-          (!gameConfig || !gameConfig.gameMode || gameState !== 'playing') ? (
-            <div className="end-screen glass-panel">
-              <button onClick={handleReturnToStart}>{t.try_again}</button>
-            </div>
+          (!gameConfig || !gameConfig.gameMode) ? (
+            <Navigate to="/" replace />
           ) : (
             <GameBoard
               config={gameConfig}
@@ -909,10 +907,8 @@ function App() {
         } />
 
         <Route path="/quiz/:cardId" element={
-          (!gameConfig || !gameConfig.gameMode || gameState !== 'playing') ? (
-            <div className="end-screen glass-panel">
-              <button onClick={handleReturnToStart}>{t.try_again}</button>
-            </div>
+          (!gameConfig || !gameConfig.gameMode) ? (
+            <Navigate to="/" replace />
           ) : (
             <QuizOverlay
               key={location.pathname}

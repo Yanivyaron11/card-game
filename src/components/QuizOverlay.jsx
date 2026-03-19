@@ -232,42 +232,53 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             <div key={coins} className="coin-pill dark-mode coin-pop" data-testid="quiz-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
                         </div>
                     </div>
-                    {gameMode === 'survival' && (
+                    {(gameMode === 'survival' || gameMode === 'time_attack') && (
                         <div className="stat-item survival-progress-section">
                             {(() => {
-                                const cardLevel = card.level;
-                                const isAdult = gameConfig?.survivalType === 'adult';
+                                let segmentSize, indexInLevel, percentage, levelLabel;
 
-                                // Child: 15 (L1), 10 (L2), 5 (L3)
-                                // Adult: 5 (L1), 15 (L2), 10 (L3)
-                                let segmentSize, offset;
-                                if (isAdult) {
-                                    segmentSize = cardLevel === 1 ? 5 : cardLevel === 2 ? 15 : 10;
-                                    offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 5 : 20;
+                                if (gameMode === 'survival') {
+                                    const cardLevel = card.level;
+                                    const isAdult = gameConfig?.survivalType === 'adult';
+                                    let offset;
+
+                                    if (isAdult) {
+                                        segmentSize = cardLevel === 1 ? 5 : cardLevel === 2 ? 15 : 10;
+                                        offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 5 : 20;
+                                    } else {
+                                        segmentSize = cardLevel === 1 ? 15 : cardLevel === 2 ? 10 : 5;
+                                        offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 15 : 25;
+                                    }
+
+                                    indexInLevel = survivalIndex - offset;
+                                    percentage = segmentSize > 0 ? Math.max(5, ((indexInLevel + 1) / segmentSize) * 100) : 0;
+                                    levelLabel = `${t.level} ${card.level}`;
                                 } else {
-                                    segmentSize = cardLevel === 1 ? 15 : cardLevel === 2 ? 10 : 5;
-                                    offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 15 : 25;
+                                    segmentSize = deck.length;
+                                    indexInLevel = deck.filter(c => c.isSolved || c.isFailed).length;
+                                    percentage = segmentSize > 0 ? Math.max(5, ((indexInLevel + 1) / segmentSize) * 100) : 0;
+                                    levelLabel = '⏱️';
                                 }
 
-                                const indexInLevel = survivalIndex - offset;
-                                const percentage = segmentSize > 0 ? Math.max(5, ((indexInLevel + 1) / segmentSize) * 100) : 0;
                                 return (
-                                    <div className="survival-progress-bar-wrapper">
-                                        <div
-                                            className="survival-progress-fill"
-                                            style={{ width: `${percentage}%` }}
-                                        />
-                                        <div className="survival-progress-text-overlay">
-                                            <span className="survival-progress-text" dir="ltr">
-                                                {indexInLevel + 1} / {segmentSize}
-                                            </span>
+                                    <>
+                                        <div className="survival-progress-bar-wrapper">
+                                            <div
+                                                className="survival-progress-fill"
+                                                style={{ width: `${percentage}%` }}
+                                            />
+                                            <div className="survival-progress-text-overlay">
+                                                <span className="survival-progress-text" dir="ltr">
+                                                    {indexInLevel + 1} / {segmentSize}
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div className="survival-level-indicator">
+                                            {levelLabel}
+                                        </div>
+                                    </>
                                 );
                             })()}
-                            <div className="survival-level-indicator">
-                                {t.level} {card.level}
-                            </div>
                         </div>
                     )}
                 </div>
@@ -338,13 +349,25 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             </div>
                         </div>
                     )}
-                    {gameMode === 'time_attack' && (
-                        <div className="timer-container">
-                            <div className="timer-label">
-                                ⏰ {gameTimeLeft}{t.timer}
+                    {gameMode === 'time_attack' && (() => {
+                        const solved = deck.filter(c => c.isSolved || c.isFailed).length;
+                        const total = deck.length;
+                        const pct = total > 0 ? (solved / total) * 100 : 0;
+                        return (
+                            <div className="timer-container">
+                                <div className="timer-header">
+                                    <div className="timer-label">⏰ {gameTimeLeft}{t.timer}</div>
+                                    <div className="timer-label" dir="ltr" style={{ fontSize: '0.8rem', opacity: 0.7 }}>{solved}/{total} 🃏</div>
+                                </div>
+                                <div className="timer-bar-large">
+                                    <div
+                                        className="timer-fill-large"
+                                        style={{ width: `${pct}%`, backgroundColor: 'var(--secondary)' }}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    )}
+                        );
+                    })()}
                 </div>
 
                 <div className="quiz-content">

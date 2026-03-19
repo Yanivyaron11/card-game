@@ -459,6 +459,12 @@
         gap: 1rem;
     }
 
+    .lives-coins-wrapper {
+        flex-direction: column;
+        gap: 0.1rem;
+        align-items: center;
+    }
+
     .multiplayer-stats {
         justify-content: space-between;
         gap: 0.5rem;
