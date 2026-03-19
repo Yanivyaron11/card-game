@@ -142,14 +142,22 @@
     font-weight: 600;
     font-size: 0.8rem;
     line-height: 1.1;
-    color: inherit;
+}
+
+.topic-card:not(.selected) .topic-name,
+.topic-card:not(.selected) .topic-count {
+    color: #ffffff !important;
+}
+
+.topic-card.selected .topic-name,
+.topic-card.selected .topic-count {
+    color: #0f172a !important;
 }
 
 .topic-count {
     font-size: 0.65rem;
     opacity: 0.8;
     font-weight: normal;
-    color: inherit;
 }
 
 .topic-info-main {

@@ -233,6 +233,8 @@ export const generateSurvivalDeck = (selectedTopics = [], survivalType = 'child'
     let counts = { level1: 15, level2: 10, level3: 5 }; // Default to child
     if (survivalType === 'adult') {
         counts = { level1: 5, level2: 15, level3: 10 };
+    } else if (survivalType === 'focused') {
+        counts = { level1: 10, level2: 10, level3: 10 };
     }
 
     const deck = [
