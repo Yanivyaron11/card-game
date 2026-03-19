@@ -52,7 +52,7 @@
 }
 
 .grid-btn.active {
-    background: var(--secondary);
+    background: #10b981;
     border-color: white;
     transform: scale(1.05);
 }
@@ -102,7 +102,7 @@
 }
 
 .topic-card {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(16, 185, 129, 0.25);
     border: 2px solid transparent;
     border-radius: 12px;
     padding: 0.6rem;
@@ -121,18 +121,18 @@
 }
 
 .topic-card:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(16, 185, 129, 0.4);
     transform: translateY(-2px);
     opacity: 1;
 }
 
 .topic-card.selected {
-    background: var(--secondary);
+    background: #10b981;
     border-color: white;
     color: white;
     opacity: 1;
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5);
 }
 
 .topic-name {
@@ -190,7 +190,7 @@
 }
 
 .mode-btn.active {
-    background: var(--secondary);
+    background: #10b981;
     border-color: white;
     transform: scale(1.05);
 }
