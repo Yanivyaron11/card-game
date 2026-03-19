@@ -380,9 +380,6 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                         </button>
                         <button className={`mode-btn ${survivalType === 'focused' ? 'active' : ''}`} onClick={() => setSurvivalType('focused')} data-testid="start-survival-focused">
                             <span className="mode-title" style={{ fontSize: '0.8rem' }}>🎯 {t.survival_focused}</span>
-                            <div className="mode-info" style={{ marginTop: '2px' }}>
-                                <span className="mode-reward-badge">½ {language === 'he' ? 'מטבעות' : 'coins'}</span>
-                            </div>
                         </button>
                     </div>
                 </div>
