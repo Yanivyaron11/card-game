@@ -104,6 +104,13 @@
     padding: 0 1rem;
 }
 
+@media (min-width: 601px) {
+    .game-controls {
+        max-width: 450px;
+        padding: 0 1rem;
+    }
+}
+
 .control-btn {
     background: var(--glass-bg);
     border: 2px solid rgba(255, 255, 255, 0.2);
