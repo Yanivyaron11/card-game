@@ -111,7 +111,9 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                     ))}
                                 </div>
                             )}
-                            <div className="coin-pill mini"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
+                            {config.gameMode !== '1v1' && (
+                                <div className="coin-pill mini"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
+                            )}
                         </div>
 
                         <div className="vs-center">
@@ -143,7 +145,9 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                     ))}
                                 </div>
                             )}
-                            <div className="coin-pill mini"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
+                            {config.gameMode !== '1v1' && (
+                                <div className="coin-pill mini"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
+                            )}
                         </div>
                     </div>
                 )}
