@@ -23,7 +23,7 @@
 }
 
 @media (min-width: 601px) {
-    .stats-header.solo-mode {
+    .stats-header {
         width: fit-content;
         min-width: 450px;
         padding: 0.6rem 2.5rem;
