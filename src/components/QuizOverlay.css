@@ -165,14 +165,14 @@
 }
 
 .mini-avatar-box {
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
     border-radius: 10px;
     border-width: 1.5px;
 }
 
 .quiz-avatar-emoji {
-    font-size: 3rem;
+    font-size: 2.2rem;
 }
 
 .avatar-img-mini {
@@ -888,14 +888,14 @@
     }
 
     .mini-avatar-box {
-        width: 50px !important;
-        height: 50px !important;
+        width: 40px !important;
+        height: 40px !important;
         border-radius: 8px;
         border-width: 1px;
     }
 
     .quiz-avatar-emoji {
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important;
     }
 
     .powerup-section h4 {
