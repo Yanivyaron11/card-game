@@ -142,12 +142,14 @@
     font-weight: 600;
     font-size: 0.8rem;
     line-height: 1.1;
+    color: inherit;
 }
 
 .topic-count {
     font-size: 0.65rem;
     opacity: 0.8;
     font-weight: normal;
+    color: inherit;
 }
 
 .topic-info-main {
