@@ -24,11 +24,11 @@
     flex-direction: column;
     padding: 1.5rem;
     /* More spacious padding */
-    background: rgba(15, 23, 42, 0.65);
-    /* Elegant dark milky/frosted tint */
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.45);
+    /* Thick, less transparent milky white */
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 32px;
     box-sizing: border-box;
     position: relative;
@@ -50,16 +50,20 @@
 .modal-header h2 {
     margin: 0;
     font-size: 1.4rem;
+    color: var(--background);
+    /* Dark text for contrast */
 }
 
 .close-btn {
     position: absolute;
     top: 0.8rem;
     left: 0.8rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.05);
+    /* Darker button base */
+    border: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 1.4rem;
-    color: white;
+    color: var(--text-dark);
+    /* Dark text */
     cursor: pointer;
     line-height: 1;
     padding: 0;
@@ -80,7 +84,7 @@
 }
 
 .close-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.1);
     transform: rotate(90deg);
 }
 
@@ -97,9 +101,10 @@
 
 .settings-section h3 {
     font-size: 1rem;
-    color: var(--accent);
+    color: var(--primary);
+    /* Vibrant and visible */
     margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 0.5rem;
 }
 
@@ -114,20 +119,24 @@
 .music-track-btn {
     flex: 1;
     min-width: 80px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.6);
+    /* Solid white */
+    border: 2px solid rgba(0, 0, 0, 0.1);
     padding: 0.8rem;
     font-size: 1rem;
     border-radius: 12px;
-    color: white;
+    color: var(--text-dark);
     cursor: pointer;
     transition: all 0.2s;
+    font-weight: 600;
 }
 
 .settings-btn.active,
 .music-track-btn.active {
     background: var(--secondary);
-    border-color: white;
+    border-color: var(--primary);
+    color: white;
+    /* Only white when active */
 }
 
 .earning-guide-btn {
@@ -150,7 +159,8 @@
 }
 
 .pool-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+    /* Whiter item */
     border-radius: 12px;
     padding: 10px;
     display: flex;
@@ -158,15 +168,17 @@
     gap: 10px;
     cursor: pointer;
     transition: all 0.2s;
-    border: 2px solid transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1);
     min-width: 0;
     /* Prevent flex items from overflowing grid */
     flex: 1;
     /* Allow stretching to fill grid cell smoothly */
+    color: var(--text-dark);
+    /* Dark text */
 }
 
 .pool-item:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .pool-item.selected {
@@ -176,9 +188,10 @@
 }
 
 .pool-item.locked {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
+    /* Greyed out on light mode */
     cursor: default;
-    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border: 1px dashed rgba(0, 0, 0, 0.2);
     opacity: 0.7;
 }
 
@@ -259,7 +272,7 @@
 
 .folder-item {
     position: relative;
-    border: 1px dashed rgba(255, 255, 255, 0.4);
+    border: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
 .folder-item.partially-selected {
@@ -288,7 +301,7 @@
     flex-direction: column;
     gap: 0.2rem;
     padding-left: 1.5rem;
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
     animation: slideDown 0.3s ease-out;
 }
 
@@ -296,17 +309,23 @@
     padding-left: 0;
     padding-right: 1.5rem;
     border-left: none;
-    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-right: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .sub-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+    /* Light mode item */
     transform: scale(0.95);
     padding: 0.4rem;
+    color: var(--text-dark);
+    /* Dark text */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Soft border */
 }
 
 .sub-item:hover {
     transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .sub-item.selected {
