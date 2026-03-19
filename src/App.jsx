@@ -668,7 +668,7 @@ function App() {
       if (newScore >= deck.length && deck.length > 0) {
         applyStreakBonuses();
         const isFocused = gameConfig.survivalType === 'focused';
-        const completionAmount = isFocused ? 15 : (gameConfig.survivalType === 'adult' ? 50 : 30);
+        const completionAmount = isFocused ? 40 : (gameConfig.survivalType === 'adult' ? 50 : 30);
         setTotalCoins(prev => prev + completionAmount);
         setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + completionAmount }));
         playSound('victory');
