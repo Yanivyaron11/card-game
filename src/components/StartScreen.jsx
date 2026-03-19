@@ -75,8 +75,10 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
     });
     const [gameMode, setGameMode] = useState(() => localStorage.getItem('last_gameMode') || 'solo');
     const [survivalType, setSurvivalType] = useState(() => localStorage.getItem('last_survivalType') || 'child');
+    const [focusedTopicId, setFocusedTopicId] = useState(() => localStorage.getItem('last_focusedTopicId') || null);
     const childRecord = parseInt(localStorage.getItem('survival_high_score_child') || '0', 10);
     const adultRecord = parseInt(localStorage.getItem('survival_high_score_adult') || '0', 10);
+    const focusedRecord = focusedTopicId ? parseInt(localStorage.getItem(`survival_high_score_focused_${focusedTopicId}`) || '0', 10) : 0;
     const [newCategories, setNewCategories] = useState([]);
     const [isNewModalOpen, setIsNewModalOpen] = useState(false);
     const [newFeatures, setNewFeatures] = useState([]);
@@ -142,12 +144,13 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
         localStorage.setItem('last_difficulty', difficulty.toString());
         localStorage.setItem('last_gameMode', gameMode);
         localStorage.setItem('last_survivalType', survivalType);
+        if (focusedTopicId) localStorage.setItem('last_focusedTopicId', focusedTopicId);
         localStorage.setItem('last_selectedTopics', JSON.stringify(selectedTopics));
         localStorage.setItem('last_avatars', JSON.stringify({
             1: selectedAvatars[1]?.id || null,
             2: selectedAvatars[2]?.id || null
         }));
-    }, [gridSize, difficulty, gameMode, survivalType, selectedAvatars, selectedTopics]);
+    }, [gridSize, difficulty, gameMode, survivalType, focusedTopicId, selectedAvatars, selectedTopics]);
 
     // Update selected avatars if activeSkins changes (e.g., from ShopModal)
     useEffect(() => {
@@ -246,6 +249,11 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             return;
         }
 
+        if (gameMode === 'survival' && survivalType === 'focused' && !focusedTopicId) {
+            setAlertConfig({ isOpen: true, message: t.survival_focused_pick, icon: '🎯' });
+            return;
+        }
+
         if ((gameMode === 'solo' || gameMode === 'survival') && !selectedAvatars[1]) {
             setAlertConfig({ isOpen: true, message: t.select_avatar, icon: '👤' });
             return;
@@ -262,6 +270,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             difficulty,
             gameMode,
             survivalType,
+            focusedTopicId: survivalType === 'focused' ? focusedTopicId : null,
             avatars: configAvatars
         });
     };
@@ -369,7 +378,37 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                                 <span className="mode-reward-badge">🏆 {t.best}: {adultRecord}</span>
                             </div>
                         </button>
+                        <button className={`mode-btn ${survivalType === 'focused' ? 'active' : ''}`} onClick={() => setSurvivalType('focused')} data-testid="start-survival-focused">
+                            <span className="mode-title" style={{ fontSize: '0.8rem' }}>🎯 {t.survival_focused}</span>
+                            <div className="mode-info" style={{ marginTop: '2px' }}>
+                                <span className="mode-reward-badge">½ {language === 'he' ? 'מטבעות' : 'coins'}</span>
+                            </div>
+                        </button>
                     </div>
+                    {survivalType === 'focused' && (
+                        <div style={{ marginTop: '0.8rem' }}>
+                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary, #94a3b8)', marginBottom: '0.4rem', textAlign: 'center' }}>{t.survival_focused_pick}</p>
+                            <div className="topic-options" style={{ maxHeight: '200px', overflowY: 'auto' }}>
+                                {getLeafTopics().map(topic => {
+                                    const topicFocusedRecord = parseInt(localStorage.getItem(`survival_high_score_focused_${topic.id}`) || '0', 10);
+                                    return (
+                                        <div
+                                            key={topic.id}
+                                            className={`topic-card ${focusedTopicId === topic.id ? 'selected' : ''}`}
+                                            onClick={() => { setFocusedTopicId(topic.id); playSound('pop'); }}
+                                        >
+                                            <div className="topic-info-main">
+                                                <span className="topic-name">{topic.name[language]}</span>
+                                                {topicFocusedRecord > 0 && (
+                                                    <span className="topic-count">🏆 {topicFocusedRecord}</span>
+                                                )}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    )}
                 </div>
             )}
 

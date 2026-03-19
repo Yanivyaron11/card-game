@@ -215,10 +215,14 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     });
 };
 
-export const generateSurvivalDeck = (selectedTopics = [], survivalType = 'child') => {
+export const generateSurvivalDeck = (selectedTopics = [], survivalType = 'child', focusedTopicId = null) => {
     // Survival mode logic:
-    // Always use all available categories for survival mode, ignoring user selection.
-    const categoriesToUse = Array.from(new Set(questions.map(q => q.category)));
+    // For 'focused' mode, only use questions from the chosen topic.
+    // For all other modes, use all available categories.
+    const allCategories = Array.from(new Set(questions.map(q => q.category)));
+    const categoriesToUse = (survivalType === 'focused' && focusedTopicId)
+        ? [focusedTopicId]
+        : allCategories;
 
     // 1. Group questions by level
     const level1 = questions.filter(q => categoriesToUse.includes(q.category) && q.level === 1);

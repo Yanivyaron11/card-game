@@ -414,15 +414,18 @@ function App() {
 
     // 2. Mode Specific Setup (Timer, Deck, etc.)
     if (config.gameMode === 'survival') {
-      const survivalDeck = generateSurvivalDeck(config.topics, config.survivalType);
+      const survivalDeck = generateSurvivalDeck(config.topics, config.survivalType, config.focusedTopicId || null);
       setDeck(survivalDeck);
       setCurrentSurvivalIndex(0);
       setSurvivalCorrect(0);
       setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
       recordNotifiedRef.current = false;
-      const HS_KEY = config.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
+      let HS_KEY;
+      if (config.survivalType === 'adult') HS_KEY = 'survival_high_score_adult';
+      else if (config.survivalType === 'focused') HS_KEY = `survival_high_score_focused_${config.focusedTopicId}`;
+      else HS_KEY = 'survival_high_score_child';
       setBestScore(parseInt(localStorage.getItem(HS_KEY) || '0', 10));
-      setTimeLeft(30); // Note: QuizOverlay uses its own per-level timer if gameTimeLeft > 0
+      setTimeLeft(30);
 
       if (survivalDeck.length > 0) {
         navigate(`/quiz/${survivalDeck[0].id}`);
@@ -635,27 +638,37 @@ function App() {
       const newScore = survivalCorrect + 1;
       setSurvivalCorrect(newScore);
 
-      // Check for new record toast
-      const HS_KEY = gameConfig.survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
+      const isFocused = gameConfig.survivalType === 'focused';
+      let HS_KEY;
+      if (gameConfig.survivalType === 'adult') HS_KEY = 'survival_high_score_adult';
+      else if (isFocused) HS_KEY = `survival_high_score_focused_${gameConfig.focusedTopicId}`;
+      else HS_KEY = 'survival_high_score_child';
+
       const prevBest = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
       if (newScore > prevBest && newScore > 0) {
-        setBestScore(newScore); // Real-time update
+        setBestScore(newScore);
 
-        let bonusToAward = 0;
         if (!recordNotifiedRef.current) {
           recordNotifiedRef.current = true;
-          setTotalCoins(prev => prev + 20); // Bonus only once per session
-          setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + 20 }));
-          bonusToAward = 20;
+          const recordBonus = isFocused ? 10 : 20;
+          setTotalCoins(prev => prev + recordBonus);
+          setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + recordBonus }));
         }
-        // Removed real-time reward toast for high record during survival gameplay.
-        // It will now only be shown on the results screen.
+      }
+
+      // Award base coins: focused gets 1 coin per 2 correct (halved)
+      if (isFocused) {
+        if (newScore % 2 === 0) {
+          setTotalCoins(prev => prev + 1);
+          setSessionCoinBreakdown(prev => ({ ...prev, base: prev.base + 1 }));
+        }
       }
 
       // Check for Course Completion
       if (newScore >= deck.length && deck.length > 0) {
         applyStreakBonuses();
-        const completionAmount = gameConfig.survivalType === 'adult' ? 50 : 30;
+        const isFocused = gameConfig.survivalType === 'focused';
+        const completionAmount = isFocused ? 15 : (gameConfig.survivalType === 'adult' ? 50 : 30);
         setTotalCoins(prev => prev + completionAmount);
         setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + completionAmount }));
         playSound('victory');
