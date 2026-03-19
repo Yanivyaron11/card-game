@@ -201,7 +201,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 />
             )}
             <div
-                className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''}`}
+                className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''} mode-${gameMode}`}
                 data-testid="quiz-card"
                 data-ready={isReady}
             >
@@ -218,17 +218,19 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             <div className="level-badge mini">{t.level} {card.level}</div>
                         </div>
                     )}
-                    {gameMode !== '1v1' && (
-                        <div className="stat-item lives-display">
-                            <div className="hearts mini">
-                                {Array.from({ length: Math.max(0, lives) }).map((_, i) => (
-                                    <span key={i} className="heart-icon mini">❤️</span>
-                                ))}
+                    <div className="lives-coins-group">
+                        {gameMode !== '1v1' && (
+                            <div className="stat-item lives-display">
+                                <div className="hearts mini">
+                                    {Array.from({ length: Math.max(0, lives) }).map((_, i) => (
+                                        <span key={i} className="heart-icon mini">❤️</span>
+                                    ))}
+                                </div>
                             </div>
+                        )}
+                        <div className="stat-item" title={t.coins}>
+                            <div key={coins} className="coin-pill dark-mode coin-pop" data-testid="quiz-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
                         </div>
-                    )}
-                    <div className="stat-item" title={t.coins}>
-                        <div key={coins} className="coin-pill dark-mode coin-pop" data-testid="quiz-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
                     </div>
                     {gameMode === 'survival' && (
                         <div className="stat-item survival-progress-section">
@@ -268,18 +270,6 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             </div>
                         </div>
                     )}
-                    {avatar && (
-                        <div className="stat-item avatar-display-mini">
-                            <div className="premium-avatar-box mini-avatar-box">
-                                {displayImage ? (
-                                    <img src={displayImage} alt={avatar.name[language]} className="avatar-img-premium" />
-                                ) : (
-                                    <span className="quiz-avatar-emoji">{avatar.emoji}</span>
-                                )}
-                            </div>
-                            <span className="quiz-avatar-name">{avatar.name[language]}</span>
-                        </div>
-                    )}
                 </div>
 
                 <div className="quiz-header">
@@ -301,12 +291,26 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </span>
                         <span className="topic-name">{card.topicName[language]}</span>
                     </div>
-                    {gameMode === 'survival' && (
-                        <div className="survival-score-header">
-                            <div className="survival-score-item">🎯 {t.correct_count.replace('{n}', survivalCorrect || 0)}</div>
-                            <div className="survival-score-item best-score">🏆 {t.best}: {bestScore || 0}</div>
-                        </div>
-                    )}
+                    <div className="header-right-group">
+                        {avatar && (
+                            <div className="stat-item avatar-display-mini">
+                                <div className="premium-avatar-box mini-avatar-box">
+                                    {displayImage ? (
+                                        <img src={displayImage} alt={avatar.name[language]} className="avatar-img-premium" />
+                                    ) : (
+                                        <span className="quiz-avatar-emoji">{avatar.emoji}</span>
+                                    )}
+                                </div>
+                                <span className="quiz-avatar-name">{avatar.name[language]}</span>
+                            </div>
+                        )}
+                        {gameMode === 'survival' && (
+                            <div className="survival-score-header">
+                                <div className="survival-score-item">🎯 {t.correct_count.replace('{n}', survivalCorrect || 0)}</div>
+                                <div className="survival-score-item best-score">🏆 {t.best}: {bestScore || 0}</div>
+                            </div>
+                        )}
+                    </div>
                     {gameMode !== 'time_attack' && (gameMode !== 'solo' || gameTimeLeft > 0) && (
                         <div className="timer-container">
                             <div className="timer-header">

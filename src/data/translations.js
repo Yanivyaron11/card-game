@@ -253,6 +253,7 @@ export const translations = {
         share_score: 'שתפו הישג',
         share_message: '🏆 שיא חדש ב-Smarty! עניתי נכון על {score} שאלות ברצף בהישרדות. מי מצליח לעקוף אותי?',
         new_record_yay: "יששש! שיא חדש של {n} נקודות!",
+        best: "שיא",
         total_coins: "סך הכל מטבעות",
         participating_topics: "נושאים משתתפים",
         fallback_hint: 'חשבו היטב על האפשרויות, אחת מהן היא התשובה הנכונה!',
