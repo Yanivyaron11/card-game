@@ -240,11 +240,15 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                                 if (gameMode === 'survival') {
                                     const cardLevel = card.level;
                                     const isAdult = gameConfig?.survivalType === 'adult';
+                                    const isFocused = gameConfig?.survivalType === 'focused';
                                     let offset;
 
                                     if (isAdult) {
                                         segmentSize = cardLevel === 1 ? 5 : cardLevel === 2 ? 15 : 10;
                                         offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 5 : 20;
+                                    } else if (isFocused) {
+                                        segmentSize = cardLevel === 1 ? 10 : cardLevel === 2 ? 10 : 10;
+                                        offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 10 : 20;
                                     } else {
                                         segmentSize = cardLevel === 1 ? 15 : cardLevel === 2 ? 10 : 5;
                                         offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 15 : 25;
