@@ -385,30 +385,6 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                             </div>
                         </button>
                     </div>
-                    {survivalType === 'focused' && (
-                        <div style={{ marginTop: '0.8rem' }}>
-                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary, #94a3b8)', marginBottom: '0.4rem', textAlign: 'center' }}>{t.survival_focused_pick}</p>
-                            <div className="topic-options" style={{ maxHeight: '200px', overflowY: 'auto' }}>
-                                {getLeafTopics().map(topic => {
-                                    const topicFocusedRecord = parseInt(localStorage.getItem(`survival_high_score_focused_${topic.id}`) || '0', 10);
-                                    return (
-                                        <div
-                                            key={topic.id}
-                                            className={`topic-card ${focusedTopicId === topic.id ? 'selected' : ''}`}
-                                            onClick={() => { setFocusedTopicId(topic.id); playSound('pop'); }}
-                                        >
-                                            <div className="topic-info-main">
-                                                <span className="topic-name">{topic.name[language]}</span>
-                                                {topicFocusedRecord > 0 && (
-                                                    <span className="topic-count">🏆 {topicFocusedRecord}</span>
-                                                )}
-                                            </div>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    )}
                 </div>
             )}
 
@@ -477,16 +453,45 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             )}
 
             <div className="config-section">
-                <h3>{t.choose_topics}</h3>
+                <h3>{gameMode === 'survival' && survivalType === 'focused' ? t.survival_focused_pick : t.choose_topics}</h3>
                 <div className="topic-options">
-                    {visibleTopics.map(topic => (
-                        <div key={topic.id} className={`topic-card ${selectedTopics.includes(topic.id) || gameMode === 'survival' ? 'selected' : ''}`} onClick={() => handleTopicToggle(topic.id)} data-testid={`topic-option-${topic.id}`}>
-                            <div className="topic-info-main">
-                                <span className="topic-name">{topic.name[language]}</span>
-                                <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
+                    {visibleTopics.map(topic => {
+                        const isFocusedSurvival = gameMode === 'survival' && survivalType === 'focused';
+                        const isSelected = isFocusedSurvival
+                            ? focusedTopicId === topic.id
+                            : (gameMode === 'survival' ? true : selectedTopics.includes(topic.id));
+
+                        const topicFocusedRecord = isFocusedSurvival
+                            ? parseInt(localStorage.getItem(`survival_high_score_focused_${topic.id}`) || '0', 10)
+                            : 0;
+
+                        return (
+                            <div
+                                key={topic.id}
+                                className={`topic-card ${isSelected ? 'selected' : ''}`}
+                                onClick={() => {
+                                    if (isFocusedSurvival) {
+                                        setFocusedTopicId(topic.id);
+                                        playSound('pop');
+                                    } else if (gameMode !== 'survival') {
+                                        handleTopicToggle(topic.id);
+                                    } else if (gameMode === 'survival' && survivalType !== 'focused') {
+                                        // Do nothing for normal survival
+                                    }
+                                }}
+                                data-testid={`topic-option-${topic.id}`}
+                            >
+                                <div className="topic-info-main">
+                                    <span className="topic-name">{topic.name[language]}</span>
+                                    {isFocusedSurvival && topicFocusedRecord > 0 ? (
+                                        <span className="topic-count">🏆 {topicFocusedRecord}</span>
+                                    ) : (
+                                        <span className="topic-count">{questionCounts[topic.id] || 0} {t.questions_count}</span>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
 
