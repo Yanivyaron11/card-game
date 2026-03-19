@@ -163,7 +163,7 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
             )}
 
             <div
-                className={`card-grid size-${gridCols}`}
+                className={`card-grid size-${gridCols} glass-panel`}
                 style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)` }}
             >
                 {deck.map(card => (
