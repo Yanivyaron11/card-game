@@ -104,7 +104,7 @@ function App() {
     const saved = localStorage.getItem('unlocked_topics');
     if (saved) return JSON.parse(saved);
     // Core categories unlocked by default
-    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'world_group'];
+    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'world_group', 'sports_group'];
   });
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     const saved = localStorage.getItem('unlocked_skins');
@@ -199,7 +199,7 @@ function App() {
   // Migration: If user had old topics/avatars unlocked, ensure consistency with new economy
   useEffect(() => {
     // 1. Relock topics that became premium
-    const premiumGroups = ['judaism_group', 'sports_group', 'entertainment_group', 'lifestyle_group', 'world_group'];
+    const premiumGroups = ['judaism_group', 'entertainment_group', 'lifestyle_group', 'world_group'];
     const hasToRelock = unlockedTopics.some(id => premiumGroups.includes(id)) && !localStorage.getItem('premium_migration_done');
 
     if (hasToRelock) {
@@ -207,6 +207,11 @@ function App() {
       const coreOnly = ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general'];
       setUnlockedTopics(coreOnly);
       localStorage.setItem('premium_migration_done', 'true');
+    }
+
+    // Ensure sports_group is unlocked for all users (newly free)
+    if (!unlockedTopics.includes('sports_group')) {
+      setUnlockedTopics(prev => [...prev, 'sports_group']);
     }
 
     // 2. Ensure all current "Free" avatars are unlocked (like Foxy)
