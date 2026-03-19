@@ -25,16 +25,30 @@
     flex-direction: column;
     padding: 1.5rem;
     /* More spacious padding */
-    background: rgba(255, 255, 255, 0.45);
-    /* Thick, less transparent milky white */
-    backdrop-filter: blur(35px);
-    -webkit-backdrop-filter: blur(35px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    background-color: var(--app-bg-color, var(--background));
+    background-image: var(--app-bg-image, none);
+    background-size: var(--app-bg-size, cover);
+    background-position: var(--app-bg-pos, center);
+    background-attachment: fixed;
+    background-repeat: var(--app-bg-repeat, no-repeat);
+    border: 2px solid rgba(255, 255, 255, 0.15);
     border-radius: 32px;
     box-sizing: border-box;
     position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
     overflow: hidden;
+    z-index: 1;
+}
+
+.modal-content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    /* Less dark tint */
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
 }
 
 .modal-header {
@@ -51,7 +65,7 @@
 .modal-header h2 {
     margin: 0;
     font-size: 1.4rem;
-    color: var(--background);
+    color: white;
     /* Dark text for contrast */
 }
 
@@ -59,12 +73,10 @@
     position: absolute;
     top: 0.8rem;
     left: 0.8rem;
-    background: rgba(0, 0, 0, 0.05);
-    /* Darker button base */
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 1.4rem;
-    color: var(--text-dark);
-    /* Dark text */
+    color: white;
     cursor: pointer;
     line-height: 1;
     padding: 0;
@@ -85,7 +97,7 @@
 }
 
 .close-btn:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     transform: rotate(90deg);
 }
 
@@ -102,10 +114,10 @@
 
 .settings-section h3 {
     font-size: 1rem;
-    color: var(--primary);
+    color: var(--accent);
     /* Vibrant and visible */
     margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 0.5rem;
 }
 
@@ -120,23 +132,21 @@
 .music-track-btn {
     flex: 1;
     min-width: 80px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
     /* Solid white */
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
     padding: 0.8rem;
     font-size: 1rem;
     border-radius: 12px;
-    color: var(--text-dark);
+    color: white;
     cursor: pointer;
     transition: all 0.2s;
-    font-weight: 600;
 }
 
 .settings-btn.active,
 .music-track-btn.active {
     background: var(--secondary);
-    border-color: var(--primary);
-    color: white;
+    border-color: white;
     /* Only white when active */
 }
 
@@ -160,7 +170,7 @@
 }
 
 .pool-item {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
     /* Whiter item */
     border-radius: 12px;
     padding: 10px;
@@ -169,17 +179,17 @@
     gap: 10px;
     cursor: pointer;
     transition: all 0.2s;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
     min-width: 0;
     /* Prevent flex items from overflowing grid */
     flex: 1;
     /* Allow stretching to fill grid cell smoothly */
-    color: var(--text-dark);
+    color: white;
     /* Dark text */
 }
 
 .pool-item:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .pool-item.selected {
@@ -189,10 +199,10 @@
 }
 
 .pool-item.locked {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
     /* Greyed out on light mode */
     cursor: default;
-    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
     opacity: 0.7;
 }
 
@@ -273,7 +283,7 @@
 
 .folder-item {
     position: relative;
-    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border: 1px dashed rgba(255, 255, 255, 0.4);
 }
 
 .folder-item.partially-selected {
@@ -302,7 +312,7 @@
     flex-direction: column;
     gap: 0.2rem;
     padding-left: 1.5rem;
-    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
     animation: slideDown 0.3s ease-out;
 }
 
@@ -310,23 +320,23 @@
     padding-left: 0;
     padding-right: 1.5rem;
     border-left: none;
-    border-right: 2px solid rgba(0, 0, 0, 0.1);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .sub-item {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
     /* Light mode item */
     transform: scale(0.95);
     padding: 0.4rem;
-    color: var(--text-dark);
+    color: white;
     /* Dark text */
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     /* Soft border */
 }
 
 .sub-item:hover {
     transform: scale(0.98);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .sub-item.selected {
