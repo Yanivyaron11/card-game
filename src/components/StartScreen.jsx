@@ -75,6 +75,8 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
     });
     const [gameMode, setGameMode] = useState(() => localStorage.getItem('last_gameMode') || 'solo');
     const [survivalType, setSurvivalType] = useState(() => localStorage.getItem('last_survivalType') || 'child');
+    const childRecord = parseInt(localStorage.getItem('survival_high_score_child') || '0', 10);
+    const adultRecord = parseInt(localStorage.getItem('survival_high_score_adult') || '0', 10);
     const [newCategories, setNewCategories] = useState([]);
     const [isNewModalOpen, setIsNewModalOpen] = useState(false);
     const [newFeatures, setNewFeatures] = useState([]);
@@ -355,8 +357,18 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                 <div className="config-section survival-type-selection card-pop">
                     <h3>{t.survival_course}</h3>
                     <div className="mode-options">
-                        <button className={`mode-btn ${survivalType === 'child' ? 'active' : ''}`} onClick={() => setSurvivalType('child')} data-testid="start-survival-child">🟢 {t.survival_child}</button>
-                        <button className={`mode-btn ${survivalType === 'adult' ? 'active' : ''}`} onClick={() => setSurvivalType('adult')} data-testid="start-survival-adult">🔴 {t.survival_adult}</button>
+                        <button className={`mode-btn ${survivalType === 'child' ? 'active' : ''}`} onClick={() => setSurvivalType('child')} data-testid="start-survival-child">
+                            <span className="mode-title" style={{ fontSize: '0.8rem' }}>🟢 {t.survival_child}</span>
+                            <div className="mode-info" style={{ marginTop: '2px' }}>
+                                <span className="mode-reward-badge">🏆 {t.best}: {childRecord}</span>
+                            </div>
+                        </button>
+                        <button className={`mode-btn ${survivalType === 'adult' ? 'active' : ''}`} onClick={() => setSurvivalType('adult')} data-testid="start-survival-adult">
+                            <span className="mode-title" style={{ fontSize: '0.8rem' }}>🔴 {t.survival_adult}</span>
+                            <div className="mode-info" style={{ marginTop: '2px' }}>
+                                <span className="mode-reward-badge">🏆 {t.best}: {adultRecord}</span>
+                            </div>
+                        </button>
                     </div>
                 </div>
             )}
