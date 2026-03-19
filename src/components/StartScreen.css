@@ -118,6 +118,8 @@
     aspect-ratio: 3 / 1;
     /* Slatter shape for desktop */
     min-height: 35px;
+    color: #ffffff;
+    /* Bright white by default */
 }
 
 .topic-card:hover {
@@ -129,7 +131,8 @@
 .topic-card.selected {
     background: #10b981;
     border-color: white;
-    color: white;
+    color: #0f172a;
+    /* Dark text when selected */
     opacity: 1;
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5);
