@@ -5,10 +5,11 @@ export const themes = [
             he: "קלאסי (סגול)",
             en: "Classic Purple"
         },
-        color: "#1e1450",
+        color: "#7c3aed",
         price: 0,
         type: 'theme',
-        category: 'free'
+        category: 'free',
+        className: 'theme-default'
     },
     {
         id: 'candy',

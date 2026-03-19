@@ -8,10 +8,15 @@
   --text-dark: #2D3142;
   --text-light: #F7FFF7;
   --card-bg: rgba(255, 255, 255, 0.9);
-  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
   --glass-border: rgba(255, 255, 255, 0.3);
-  --app-bg-image: none;
-  --app-bg-color: linear-gradient(135deg, #2e1065 0%, #7c3aed 100%);
+  --app-bg-image: linear-gradient(135deg, #2e1065 0%, #7c3aed 100%);
+  --app-bg-color: #2e1065;
+}
+
+.theme-default {
+  --app-bg-image: linear-gradient(135deg, #2e1065 0%, #7c3aed 100%);
+  --app-bg-color: #2e1065;
 }
 
 .global-coin {
@@ -69,13 +74,13 @@
 }
 
 .theme-charcoal {
-  --app-bg-image: none;
   --app-bg-color: #171717;
+  --app-bg-image: none;
 }
 
 .theme-graphite {
-  --app-bg-image: none;
   --app-bg-color: #333333;
+  --app-bg-image: none;
 }
 
 .theme-charcoal-bubbles {
@@ -143,12 +148,6 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  background-color: transparent;
-  background: var(--app-bg-image, none), var(--app-bg-color);
-  background-size: var(--app-bg-size, cover);
-  background-position: var(--app-bg-pos, center);
-  background-attachment: fixed;
-  background-repeat: var(--app-bg-repeat, no-repeat);
   color: var(--text-light);
   min-height: 100vh;
   margin: 0;
@@ -158,6 +157,24 @@ body {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: var(--app-bg-color, var(--background));
+  background-image: var(--app-bg-image, none);
+  background-size: var(--app-bg-size, cover);
+  background-position: var(--app-bg-pos, center);
+  background-attachment: fixed;
+  background-repeat: var(--app-bg-repeat, no-repeat);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 #root {
