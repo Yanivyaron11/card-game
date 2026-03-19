@@ -226,14 +226,17 @@
 
 .multiplayer-stats {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    /* keep tight to the center */
     align-items: center;
     width: 100%;
-    gap: 1rem;
+    gap: 2.5rem;
+    /* nice spacing around VS */
 }
 
 .player-box {
-    flex: 1;
+    flex: 0 1 120px;
+    /* Limit width significantly */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -441,6 +444,15 @@
     .stats-header {
         padding: 0.5rem 1rem;
         gap: 1rem;
+    }
+
+    .multiplayer-stats {
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    .player-box {
+        flex: 1;
     }
 
     .stat-item h3 {
