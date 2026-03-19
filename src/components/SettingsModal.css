@@ -24,10 +24,10 @@
     flex-direction: column;
     padding: 1.5rem;
     /* More spacious padding */
-    background: rgba(30, 20, 80, 0.78);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
     border-radius: 32px;
     box-sizing: border-box;
     position: relative;
