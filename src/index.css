@@ -73,6 +73,11 @@
   --app-bg-color: #171717;
 }
 
+.theme-graphite {
+  --app-bg-image: none;
+  --app-bg-color: #333333;
+}
+
 .theme-charcoal-bubbles {
   --app-bg-color: #1a1a1a;
   --app-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Ccircle cx='40' cy='40' r='25' fill='none' stroke='white' stroke-width='2' stroke-opacity='0.2'/%3E%3Ccircle cx='48' cy='32' r='4' fill='white' fill-opacity='0.3'/%3E%3Ccircle cx='120' cy='100' r='35' fill='none' stroke='white' stroke-width='3' stroke-opacity='0.15'/%3E%3Ccircle cx='132' cy='88' r='6' fill='white' fill-opacity='0.25'/%3E%3Ccircle cx='90' cy='30' r='10' fill='none' stroke='white' stroke-width='1.5' stroke-opacity='0.25'/%3E%3Ccircle cx='93' cy='27' r='2' fill='white' fill-opacity='0.4'/%3E%3Ccircle cx='30' cy='120' r='15' fill='none' stroke='white' stroke-width='2' stroke-opacity='0.1'/%3E%3C/svg%3E");

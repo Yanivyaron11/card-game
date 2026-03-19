@@ -131,6 +131,18 @@ export const themes = [
         className: 'theme-charcoal'
     },
     {
+        id: 'graphite',
+        name: {
+            he: "גרפיט 🩶",
+            en: "Graphite 🩶"
+        },
+        color: "#333333",
+        price: 0,
+        type: 'theme',
+        category: 'free',
+        className: 'theme-graphite'
+    },
+    {
         id: 'charcoal_bubbles',
         name: {
             he: "פחם מבעבע 🫧",

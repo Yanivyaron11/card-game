@@ -126,10 +126,10 @@ function App() {
   const [unlockedThemes, setUnlockedThemes] = useState(() => {
     const saved = localStorage.getItem('unlocked_themes');
     if (saved) return JSON.parse(saved);
-    return ['default'];
+    return ['graphite', 'default'];
   });
   const [activeTheme, setActiveTheme] = useState(() => {
-    return localStorage.getItem('active_theme') || 'default';
+    return localStorage.getItem('active_theme') || 'graphite';
   });
   const [sessionCoinBreakdown, setSessionCoinBreakdown] = useState({
     base: 0,
@@ -158,7 +158,7 @@ function App() {
 
     setUnlockedThemes(prev => {
       let next = [...prev];
-      const freeThemes = ['space', 'midnight', 'forest_dark', 'burgundy', 'charcoal', 'charcoal_bubbles', 'midnight_grid', 'burgundy_stripes'];
+      const freeThemes = ['graphite', 'space', 'midnight', 'forest_dark', 'burgundy', 'charcoal', 'charcoal_bubbles', 'midnight_grid', 'burgundy_stripes'];
       freeThemes.forEach(themeId => {
         if (!next.includes(themeId)) next.push(themeId);
       });
