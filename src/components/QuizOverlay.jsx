@@ -219,7 +219,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                         </div>
                     )}
                     <div className="lives-coins-group">
-                        {gameMode !== '1v1' && (
+                        {gameMode !== '1v1' && gameMode !== 'endless' && (
                             <div className="stat-item lives-display">
                                 <div className="hearts mini">
                                     {Array.from({ length: Math.max(0, lives) }).map((_, i) => (

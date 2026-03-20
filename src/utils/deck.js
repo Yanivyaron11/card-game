@@ -296,3 +296,59 @@ export const generateSurvivalDeck = (selectedTopics = [], survivalType = 'child'
     });
 };
 
+export const generateEndlessDeck = (selectedTopics = []) => {
+    const level1 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 1);
+    const level2 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 2);
+    const level3 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 3);
+
+    // Compile everything into a massive sequential array
+    const deck = [
+        ...shuffle(level1),
+        ...shuffle(level2),
+        ...shuffle(level3)
+    ];
+
+    return deck.map((q, index) => {
+        const findTopicRecursively = (topicList, targetId) => {
+            for (const t of topicList) {
+                if (t.id === targetId) return t;
+                if (t.subTopics) {
+                    const found = findTopicRecursively(t.subTopics, targetId);
+                    if (found) return found;
+                }
+            }
+            return null;
+        };
+
+        const topic = findTopicRecursively(topics, q.category);
+
+        const originalEn = q.options?.en || [];
+        const originalHe = q.options?.he || originalEn;
+        const indices = Array.from({ length: originalEn.length }, (_, i) => i);
+        const shuffledIndices = shuffle(indices);
+
+        const shuffledOptions = {
+            en: shuffledIndices.map(i => originalEn[i]),
+            he: shuffledIndices.map(i => originalHe[i])
+        };
+        const newCorrectAnswer = shuffledIndices.indexOf(Number(q.correctAnswer));
+
+        return {
+            ...q,
+            options: shuffledOptions,
+            correctAnswer: newCorrectAnswer,
+            topicName: topic ? topic.name : { en: q.category, he: q.category },
+            topicIcon: topic ? topic.icon : '',
+            topicColor: topic ? topic.color : null,
+            questionId: q.id,
+            id: `endless-q-${index}-${Math.random().toString(36).substr(2, 9)}`,
+            isFlipped: false,
+            isSolved: false,
+            failedAttempts: 0,
+            isTainted: false,
+            eliminatedIndices: [],
+            isHintVisible: false
+        };
+    });
+};
+

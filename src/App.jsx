@@ -5,8 +5,9 @@ import GameBoard from './components/GameBoard'
 import QuizOverlay from './components/QuizOverlay'
 import LandingPage from './components/LandingPage'
 import CleaningMode from './components/CleaningMode'
+import LevelWarningOverlay from './components/LevelWarningOverlay'
 import { translations } from './data/translations'
-import { generateDeck, generateSurvivalDeck } from './utils/deck'
+import { generateDeck, generateSurvivalDeck, generateEndlessDeck } from './utils/deck'
 import { themes } from './data/themes'
 import { playSound, playMusic, stopMusic } from './utils/sounds'
 import Confetti from './components/Confetti'
@@ -79,6 +80,8 @@ function App() {
   const [deck, setDeck] = useState([])
   const [endlessColumns, setEndlessColumns] = useState([]);
   const endlessTargetRef = useRef(null);
+  const endlessLevelRef = useRef(1);
+  const [showLevelWarning, setShowLevelWarning] = useState(null);
 
   const getRandomPowerUp = () => {
     const r = Math.random();
@@ -463,14 +466,16 @@ function App() {
       const cols = isMobile ? 4 : 5;
       const rows = isMobile ? 10 : 5;
 
-      // Use the survival deck generator to inherently scale difficulty from Level 1 -> 2 -> 3
-      const newDeck = generateSurvivalDeck(config.topics, 'adult', null);
+      // Unpack the massive endless deck algorithm mapping all questions database
+      const newDeck = generateEndlessDeck(config.topics);
 
       const initialCols = Array.from({ length: cols }, () => []);
       let cardIndex = 0;
+      let highestInitLvl = 1;
       for (let c = 0; c < cols; c++) {
         for (let r = 0; r < rows; r++) {
           const deckCard = newDeck[cardIndex % newDeck.length];
+          if (deckCard.level > highestInitLvl) highestInitLvl = deckCard.level;
           initialCols[c].push({
             id: `init_${c}_${r}_${Math.random().toString(36).substr(2, 9)}`,
             questionId: deckCard.id,
@@ -486,6 +491,8 @@ function App() {
       }
       setEndlessColumns(initialCols);
       endlessTargetRef.current = { col: 0, row: 0, nextDeckIndex: cardIndex };
+      endlessLevelRef.current = highestInitLvl;
+      setShowLevelWarning(1);
       setDeck(newDeck);
       setSurvivalCorrect(0);
       setTimeLeft(0);
@@ -710,8 +717,10 @@ function App() {
           let earnedCoins = target.level || 1;
           if (target.powerUp === 'row' || target.powerUp === 'col') {
             earnedCoins += 10;
+            playSound('explosion_small');
           } else if (target.powerUp === 'cross') {
             earnedCoins += 25;
+            playSound('explosion_large');
           }
 
           endlessTargetRef.current.pendingCoins = earnedCoins;
@@ -753,6 +762,18 @@ function App() {
             setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + coinsToGive }));
           }
           playSound('drop');
+
+          let maxDrawnLevel = 1;
+          newCols.forEach(colCards => {
+            colCards.forEach(c => {
+              if (c.level > maxDrawnLevel) maxDrawnLevel = c.level;
+            });
+          });
+
+          if (maxDrawnLevel > endlessLevelRef.current) {
+            endlessLevelRef.current = maxDrawnLevel;
+            setShowLevelWarning(maxDrawnLevel);
+          }
         }, 800);
 
         setGameState('playing');
@@ -999,6 +1020,13 @@ function App() {
 
   return (
     <div className={`app-container ${language === 'he' ? 'rtl-mode' : ''}`} dir={language === 'he' ? 'rtl' : 'ltr'}>
+      {showLevelWarning && (
+        <LevelWarningOverlay
+          level={showLevelWarning}
+          language={language}
+          onComplete={() => setShowLevelWarning(null)}
+        />
+      )}
       <h1 className="title-glow" onClick={() => {
         titleClickRef.current += 1;
         if (titleClickRef.current >= 5) {
