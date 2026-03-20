@@ -353,6 +353,12 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                             <span className="mode-reward-badge"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {t.reward_time_attack}</span>
                         </div>
                     </button>
+                    <button className={`mode-btn ${gameMode === 'endless' ? 'active' : ''}`} onClick={() => handleModeChange('endless')} data-testid="start-endless">
+                        <span className="mode-title">☄️ {t.endless || 'Avalanche'}</span>
+                        <div className="mode-info">
+                            <span className="mode-reward-badge"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {t.reward_endless || 'Endless Score'}</span>
+                        </div>
+                    </button>
                     <button className={`mode-btn ${gameMode === 'survival' ? 'active' : ''}`} onClick={() => handleModeChange('survival')} data-testid="start-survival">
                         <span className="mode-title">🔥 {t.survival}</span>
                         <div className="mode-info">
@@ -432,7 +438,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                 </div>
             </div>
 
-            {gameMode !== 'survival' && (
+            {gameMode !== 'survival' && gameMode !== 'endless' && (
                 <>
                     <div className="config-section">
                         <h3>{t.choose_size}</h3>

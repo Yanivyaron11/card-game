@@ -1,4 +1,5 @@
 let isSoundEnabled = localStorage.getItem('soundEnabled') !== 'false';
+let globalAudioCtx = null;
 
 export const setSoundEnabled = (enabled) => {
     isSoundEnabled = enabled;
@@ -7,12 +8,25 @@ export const setSoundEnabled = (enabled) => {
 
 export const getSoundEnabled = () => isSoundEnabled;
 
+const getAudioContext = () => {
+    if (!globalAudioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) {
+            globalAudioCtx = new AudioContext();
+        }
+    }
+    // Resume context if suspended (common on iOS when created asynchronously)
+    if (globalAudioCtx && globalAudioCtx.state === 'suspended') {
+        globalAudioCtx.resume();
+    }
+    return globalAudioCtx;
+};
+
 export const playSound = (type) => {
     if (!isSoundEnabled) return;
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContext) return;
+    const ctx = getAudioContext();
+    if (!ctx) return;
 
-    const ctx = new AudioContext();
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
 
@@ -30,6 +44,16 @@ export const playSound = (type) => {
             gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
             osc.start(now);
             osc.stop(now + 0.1);
+            break;
+
+        case 'drop':
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(400, now);
+            osc.frequency.exponentialRampToValueAtTime(100, now + 0.2);
+            gain.gain.setValueAtTime(0.3, now);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+            osc.start(now);
+            osc.stop(now + 0.2);
             break;
 
         case 'correct':

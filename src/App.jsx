@@ -11,6 +11,7 @@ import { themes } from './data/themes'
 import { playSound, playMusic, stopMusic } from './utils/sounds'
 import Confetti from './components/Confetti'
 import Rain from './components/Rain'
+import GravityBoard from './components/GravityBoard'
 import './App.css'
 
 import InstallPrompt from './components/InstallPrompt'
@@ -76,6 +77,16 @@ function App() {
   const [showLanding, setShowLanding] = useState(false);
   const [gameConfig, setGameConfig] = useState(null)
   const [deck, setDeck] = useState([])
+  const [endlessColumns, setEndlessColumns] = useState([]);
+  const endlessTargetRef = useRef(null);
+
+  const getRandomPowerUp = () => {
+    const r = Math.random();
+    if (r < 0.02) return 'cross'; // 2% chance
+    if (r < 0.06) return 'row';   // 4% chance
+    if (r < 0.10) return 'col';   // 4% chance
+    return null;
+  };
   const [lives, setLives] = useState({ 1: 1, 2: 1 })
   const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'he') // en, he
   const [currentPlayer, setCurrentPlayer] = useState(1); // 1 or 2
@@ -447,6 +458,37 @@ function App() {
       setDeck(generateDeck(gSize, config.topics, config.difficulty));
       setGameState('topic_selection');
       navigate('/play');
+    } else if (config.gameMode === 'endless') {
+      const isMobile = window.innerWidth <= 768;
+      const cols = isMobile ? 4 : 5;
+      const rows = isMobile ? 10 : 5;
+
+      const newDeck = generateDeck(cols * rows + 100, config.topics, config.difficulty);
+
+      const initialCols = Array.from({ length: cols }, () => []);
+      let cardIndex = 0;
+      for (let c = 0; c < cols; c++) {
+        for (let r = 0; r < rows; r++) {
+          const deckCard = newDeck[cardIndex % newDeck.length];
+          initialCols[c].push({
+            id: `init_${c}_${r}_${Math.random().toString(36).substr(2, 9)}`,
+            questionId: deckCard.id,
+            text: deckCard.he || '?',
+            topicIcon: deckCard.topicIcon,
+            topicColor: deckCard.topicColor,
+            powerUp: getRandomPowerUp(),
+            status: 'active'
+          });
+          cardIndex++;
+        }
+      }
+      setEndlessColumns(initialCols);
+      endlessTargetRef.current = { col: 0, row: 0, nextDeckIndex: cardIndex };
+      setDeck(newDeck);
+      setSurvivalCorrect(0);
+      setTimeLeft(0);
+      setGameState('playing');
+      navigate('/play');
     } else if (config.gameMode === 'solo') {
       // Relaxed mode: no per-question timer
       setTimeLeft(0);
@@ -523,9 +565,9 @@ function App() {
         });
 
         // Turn-based mathematical invariant:
-        // If it is THIS player's turn, they MUST consume a turn. 
-        // If they have no existing Rebounds and no 1-point fresh cards, 
-        // they are forced to answer a 2-point fresh card correctly 
+        // If it is THIS player's turn, they MUST consume a turn.
+        // If they have no existing Rebounds and no 1-point fresh cards,
+        // they are forced to answer a 2-point fresh card correctly
         // to prevent outright locking it on a fail, thus yielding only 1 point.
         if (currentPlayer === playerIdx && R_count === 0 && F1_count === 0 && F2_count > 0) {
           maxTheoreticalAdded -= 1;
@@ -637,6 +679,101 @@ function App() {
   const handleAnswer = useCallback((cardId, isCorrect, fromQuiz = false) => {
     if (answeringRef.current.has(cardId)) return;
     answeringRef.current.add(cardId);
+
+    if (gameConfig?.gameMode === 'endless') {
+      const { col, row, nextDeckIndex } = endlessTargetRef.current || {};
+      let isGameOver = false;
+
+      if (isCorrect) {
+        let popCount = 0;
+        setEndlessColumns(prev => {
+          const newCols = prev.map(c => [...c]);
+          const target = newCols[col][row];
+
+          const popCard = (cIdx, rIdx) => {
+            if (newCols[cIdx] && newCols[cIdx][rIdx] && newCols[cIdx][rIdx].status !== 'popping' && newCols[cIdx][rIdx].status !== 'stone') {
+              newCols[cIdx][rIdx].status = 'popping';
+              popCount++;
+            }
+          };
+
+          popCard(col, row);
+          if (target.powerUp === 'row' || target.powerUp === 'cross') {
+            for (let c = 0; c < newCols.length; c++) popCard(c, row);
+          }
+          if (target.powerUp === 'col' || target.powerUp === 'cross') {
+            for (let r = 0; r < newCols[col].length; r++) popCard(col, r);
+          }
+
+          endlessTargetRef.current.pendingScore = popCount;
+          return newCols;
+        });
+
+        setTimeout(() => {
+          setEndlessColumns(current => {
+            const newCols = current.map(c => [...c]);
+            for (let iCol = 0; iCol < newCols.length; iCol++) {
+              const originalLength = newCols[iCol].length;
+              newCols[iCol] = newCols[iCol].filter(card => card.status !== 'popping');
+              const poppedInCol = originalLength - newCols[iCol].length;
+
+              for (let i = 0; i < poppedInCol; i++) {
+                const nextCard = deck[endlessTargetRef.current.nextDeckIndex % deck.length];
+                newCols[iCol].push({
+                  id: `new_${endlessTargetRef.current.nextDeckIndex}_${Math.random().toString(36).substr(2, 9)}`,
+                  questionId: nextCard.id,
+                  text: nextCard.he || '?',
+                  topicIcon: nextCard.topicIcon,
+                  topicColor: nextCard.topicColor,
+                  powerUp: getRandomPowerUp(),
+                  status: 'active'
+                });
+                endlessTargetRef.current.nextDeckIndex++;
+              }
+            }
+            return newCols;
+          });
+
+          const pointsEarned = endlessTargetRef.current.pendingScore || 1;
+          setSurvivalCorrect(s => {
+            const newScore = s + pointsEarned;
+            const coinsToGive = Math.floor(pointsEarned / 2);
+            if (coinsToGive > 0) {
+              setTotalCoins(c => c + coinsToGive);
+              setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + coinsToGive }));
+            }
+            return newScore;
+          });
+          playSound('drop');
+        }, 800);
+
+        setGameState('playing');
+        navigate('/play');
+        answeringRef.current.delete(cardId);
+        return;
+      } else {
+        setEndlessColumns(prev => {
+          const newCols = [...prev];
+          const colToUpdate = [...newCols[col]];
+          colToUpdate[row] = { ...colToUpdate[row], status: 'stone' };
+          newCols[col] = colToUpdate;
+
+          isGameOver = newCols.some(c => c.every(card => card.status === 'stone'));
+          return newCols;
+        });
+
+        if (isGameOver) {
+          setGameState('game_over');
+          navigate('/result');
+        } else {
+          setGameState('playing');
+          navigate('/play');
+        }
+
+        answeringRef.current.delete(cardId);
+        return;
+      }
+    }
 
     if (gameConfig?.gameMode === 'survival' && isCorrect) {
       const newScore = survivalCorrect + 1;
@@ -912,6 +1049,16 @@ function App() {
         <Route path="/play" element={
           (!gameConfig || !gameConfig.gameMode) ? (
             <Navigate to="/" replace />
+          ) : gameConfig.gameMode === 'endless' ? (
+            <GravityBoard
+              columns={endlessColumns}
+              config={gameConfig}
+              onCardSelected={(qId, cIndex, rIndex) => {
+                endlessTargetRef.current = { ...endlessTargetRef.current, col: cIndex, row: rIndex };
+                navigate(`/quiz/${qId}`);
+              }}
+              onQuit={handleReturnToStart}
+            />
           ) : (
             <GameBoard
               config={gameConfig}
@@ -1118,8 +1265,12 @@ function App() {
                   <br />
                   {t.score}: {scores[1]} - {scores[2]}
                 </p>
-              ) : gameConfig?.gameMode === 'survival' ? (
-                <SurvivalResult correct={survivalCorrect} language={language} survivalType={gameConfig?.survivalType} />
+              ) : gameConfig?.gameMode === 'survival' || gameConfig?.gameMode === 'endless' ? (
+                <SurvivalResult
+                  correct={survivalCorrect}
+                  language={language}
+                  survivalType={gameConfig?.gameMode === 'endless' ? 'child' : gameConfig.survivalType}
+                />
               ) : gameConfig?.gameMode === 'time_attack' ? (
                 <div className="time-attack-result">
                   {(() => {
