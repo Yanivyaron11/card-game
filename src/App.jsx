@@ -691,7 +691,7 @@ function App() {
           const target = newCols[col][row];
 
           const popCard = (cIdx, rIdx) => {
-            if (newCols[cIdx] && newCols[cIdx][rIdx] && newCols[cIdx][rIdx].status !== 'popping' && newCols[cIdx][rIdx].status !== 'stone') {
+            if (newCols[cIdx] && newCols[cIdx][rIdx] && newCols[cIdx][rIdx].status !== 'popping') {
               newCols[cIdx][rIdx].status = 'popping';
               popCount++;
             }
