@@ -571,11 +571,15 @@ function App() {
         // Board Completion Bonus
         let boardBonus = 0;
         const gSize = gameConfig.gridSize;
+        const diffMultiplier = Number(gameConfig.difficulty || 1);
+
         if (gSize === 9) boardBonus = 10;      // 3x3
         else if (gSize === 16) boardBonus = 20; // 4x4
         else if (gSize === 25) boardBonus = 30; // 5x5
 
-        if (boardBonus > 0) {
+        boardBonus = boardBonus * diffMultiplier;
+
+        if (boardBonus > 0 && gameConfig.gameMode === 'solo') {
           setTotalCoins(prev => prev + boardBonus);
           setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + boardBonus }));
         }
