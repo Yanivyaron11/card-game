@@ -463,7 +463,8 @@ function App() {
       const cols = isMobile ? 4 : 5;
       const rows = isMobile ? 10 : 5;
 
-      const newDeck = generateDeck(cols * rows + 100, config.topics, config.difficulty);
+      // Use the survival deck generator to inherently scale difficulty from Level 1 -> 2 -> 3
+      const newDeck = generateSurvivalDeck(config.topics, 'adult', null);
 
       const initialCols = Array.from({ length: cols }, () => []);
       let cardIndex = 0;
@@ -476,6 +477,7 @@ function App() {
             text: deckCard.he || '?',
             topicIcon: deckCard.topicIcon,
             topicColor: deckCard.topicColor,
+            level: deckCard.level,
             powerUp: getRandomPowerUp(),
             status: 'active'
           });
@@ -705,7 +707,15 @@ function App() {
             for (let r = 0; r < newCols[col].length; r++) popCard(col, r);
           }
 
-          endlessTargetRef.current.pendingScore = popCount;
+          let earnedCoins = target.level || 1;
+          if (target.powerUp === 'row' || target.powerUp === 'col') {
+            earnedCoins += 10;
+          } else if (target.powerUp === 'cross') {
+            earnedCoins += 25;
+          }
+
+          endlessTargetRef.current.pendingCoins = earnedCoins;
+
           return newCols;
         });
 
@@ -725,6 +735,7 @@ function App() {
                   text: nextCard.he || '?',
                   topicIcon: nextCard.topicIcon,
                   topicColor: nextCard.topicColor,
+                  level: nextCard.level,
                   powerUp: getRandomPowerUp(),
                   status: 'active'
                 });
@@ -734,16 +745,13 @@ function App() {
             return newCols;
           });
 
-          const pointsEarned = endlessTargetRef.current.pendingScore || 1;
-          setSurvivalCorrect(s => {
-            const newScore = s + pointsEarned;
-            const coinsToGive = Math.floor(pointsEarned / 2);
-            if (coinsToGive > 0) {
-              setTotalCoins(c => c + coinsToGive);
-              setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + coinsToGive }));
-            }
-            return newScore;
-          });
+          const coinsToGive = endlessTargetRef.current.pendingCoins || 1;
+          setSurvivalCorrect(s => s + coinsToGive);
+
+          if (coinsToGive > 0) {
+            setTotalCoins(c => c + coinsToGive);
+            setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + coinsToGive }));
+          }
           playSound('drop');
         }, 800);
 

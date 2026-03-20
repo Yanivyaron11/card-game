@@ -14,12 +14,15 @@ function EarningGuideModal({ isOpen, onClose, language }) {
                 { icon: '🎯', text: t.rule_level_1 },
                 { icon: '🎯', text: t.rule_level_2 },
                 { icon: '🎯', text: t.rule_level_3 },
-                { icon: '⏱️', text: t.rule_time_attack }
+                { icon: '⏱️', text: t.rule_time_attack },
+                { icon: '☄️', text: t.rule_endless_1 }
             ]
         },
         {
             title: t.rules_section_bonuses,
             rules: [
+                { icon: '💥', text: t.rule_endless_2 },
+                { icon: '✨', text: t.rule_endless_3 },
                 { icon: '🔥', text: t.rule_streak },
                 { icon: '🏆', text: t.rule_survival_record },
                 { icon: '🎉', text: t.rule_survival_completion },
