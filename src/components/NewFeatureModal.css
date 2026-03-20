@@ -16,6 +16,9 @@
 .new-feature-modal {
     width: 90%;
     max-width: 500px;
+    max-height: 90dvh;
+    display: flex;
+    flex-direction: column;
     padding: 2.5rem;
     text-align: center;
     position: relative;
@@ -27,6 +30,7 @@
 .new-feature-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    flex-shrink: 0;
     filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
 }
 
@@ -35,6 +39,10 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-right: 5px;
+    /* space for scrollbar */
 }
 
 .new-feature-item {
@@ -82,6 +90,7 @@
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
     margin-top: 1rem;
+    flex-shrink: 0;
 }
 
 .got-it-btn:hover {
