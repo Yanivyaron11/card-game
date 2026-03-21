@@ -833,17 +833,19 @@ function App() {
           const coinsToGive = endlessTargetRef.current.pendingCoins || 1;
           let stageBonusToGive = 0;
 
+          // IMPORTANT: Stage progression is strictly 1 point per manual correct answer!
+          // Powerups save you from dying and give huge coins, but don't fast-track the Boss.
           setSurvivalCorrect(s => {
-            const newTotal = s + coinsToGive;
-            if (s < 20 && newTotal >= 20) {
+            const newTotal = s + 1;
+            if (s < 15 && newTotal >= 15) {
               setShowLevelWarning(2);
               isGravityPausedRef.current = true;
               stageBonusToGive = 50;
-            } else if (s < 50 && newTotal >= 50) {
+            } else if (s < 30 && newTotal >= 30) {
               setShowLevelWarning(3);
               isGravityPausedRef.current = true;
               stageBonusToGive = 100;
-            } else if (s < 90 && newTotal >= 90) {
+            } else if (s < 50 && newTotal >= 50) {
               setShowLevelWarning('WIN');
               isGravityPausedRef.current = true;
               stageBonusToGive = 200;
