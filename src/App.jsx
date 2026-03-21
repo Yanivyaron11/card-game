@@ -82,7 +82,9 @@ function App() {
   const [gameConfig, setGameConfig] = useState(null)
   const [deck, setDeck] = useState([])
   const [endlessColumns, setEndlessColumns] = useState([]);
+  const dropAnimationTimeRef = useRef(null);
   const endlessTargetRef = useRef(null);
+  const isGravityPausedRef = useRef(false);
   const endlessLevelRef = useRef(1);
   const [showLevelWarning, setShowLevelWarning] = useState(null);
 
@@ -679,13 +681,67 @@ function App() {
         }
       }
     }
-  }, [deck, currentPlayer, gameState, gameConfig]);
+  }, [deck, currentPlayer, gameConfig, gameState]);
+
+  // Gravity Loop logic
+  const gravityTick = useCallback(() => {
+    if (gameState !== 'playing' || isGravityPausedRef.current) return;
+    const now = Date.now();
+    const lastDropTime = dropAnimationTimeRef.current || now;
+    const timeSinceLastDrop = now - lastDropTime;
+    const dropInterval = 1000; // 1 second for now
+
+    if (timeSinceLastDrop >= dropInterval) {
+      setEndlessColumns(prev => {
+        const newCols = prev.map(c => [...c]);
+        let hasDropped = false;
+
+        for (let c = 0; c < newCols.length; c++) {
+          for (let r = newCols[c].length - 1; r >= 0; r--) {
+            if (newCols[c][r].status === 'active') {
+              // Check if card below is 'stone' or if it's the last row
+              if (r + 1 < newCols[c].length && newCols[c][r + 1].status === 'stone') {
+                newCols[c][r].status = 'stone'; // This card becomes stone
+                hasDropped = true;
+              } else if (r === newCols[c].length - 1) {
+                newCols[c][r].status = 'stone'; // Last row card becomes stone
+                hasDropped = true;
+              }
+            }
+          }
+        }
+
+        if (hasDropped) {
+          dropAnimationTimeRef.current = now;
+          playSound('thud');
+        } else {
+          // If no cards dropped, it means the board is full of stones or solved cards
+          // This is a game over condition for endless mode
+          const allStones = newCols.every(col => col.every(card => card.status === 'stone'));
+          if (allStones) {
+            setGameState('game_over');
+            navigate('/result');
+          }
+        }
+        return newCols;
+      });
+    }
+  }, [gameState, navigate]);
 
   useEffect(() => {
     if (gameState === 'playing') {
       checkWinCondition();
     }
   }, [deck, scores, gameState, checkWinCondition]);
+
+  const handleEndlessWin = useCallback(() => {
+    setGameState('victory');
+    navigate('/result');
+  }, [navigate]);
+
+  const handleGravityPauseStateChange = useCallback((isPaused) => {
+    isGravityPausedRef.current = isPaused;
+  }, []);
 
   const handleAnswer = useCallback((cardId, isCorrect, fromQuiz = false) => {
     if (answeringRef.current.has(cardId)) return;
@@ -757,35 +813,26 @@ function App() {
           });
 
           const coinsToGive = endlessTargetRef.current.pendingCoins || 1;
-          setSurvivalCorrect(s => s + coinsToGive);
+          setSurvivalCorrect(s => {
+            const newTotal = s + coinsToGive;
+            if (s < 3 && newTotal >= 3) {
+              setShowLevelWarning(2);
+              isGravityPausedRef.current = true;
+            } else if (s < 6 && newTotal >= 6) {
+              setShowLevelWarning(3);
+              isGravityPausedRef.current = true;
+            } else if (s < 10 && newTotal >= 10) {
+              setShowLevelWarning('WIN');
+              isGravityPausedRef.current = true;
+            }
+            return newTotal;
+          });
 
           if (coinsToGive > 0) {
             setTotalCoins(c => c + coinsToGive);
             setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + coinsToGive }));
           }
           playSound('drop');
-
-          let maxDrawnLevel = 1;
-          newCols.forEach(colCards => {
-            colCards.forEach(c => {
-              if (c.level > maxDrawnLevel) maxDrawnLevel = c.level;
-            });
-          });
-
-          if (maxDrawnLevel > endlessLevelRef.current) {
-            endlessLevelRef.current = maxDrawnLevel;
-            setShowLevelWarning(maxDrawnLevel);
-
-            const levelBonus = maxDrawnLevel === 2 ? 50 : (maxDrawnLevel >= 3 ? 100 : 0);
-            if (levelBonus > 0) {
-              setTimeout(() => {
-                setSurvivalCorrect(s => s + levelBonus);
-                setTotalCoins(c => c + levelBonus);
-                setSessionCoinBreakdown(cb => ({ ...cb, bonus: cb.bonus + levelBonus }));
-                playSound('victory');
-              }, 1000); // Delay slightly so they see the warning first, then the score EXPLODES
-            }
-          }
         }, 800);
 
         setGameState('playing');
@@ -1036,7 +1083,20 @@ function App() {
         <LevelWarningOverlay
           level={showLevelWarning}
           language={language}
-          onComplete={() => setShowLevelWarning(null)}
+          onComplete={() => {
+            if (showLevelWarning === 'WIN') {
+              const bonusCoins = 300;
+              setTotalCoins(c => c + bonusCoins);
+              setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + bonusCoins }));
+              applyStreakBonuses();
+              setShowLevelWarning(null);
+              setGameState('victory');
+              navigate('/result');
+            } else {
+              setShowLevelWarning(null);
+              isGravityPausedRef.current = false;
+            }
+          }}
         />
       )}
       <h1 className="title-glow" onClick={() => {
@@ -1103,6 +1163,9 @@ function App() {
               config={gameConfig}
               coins={survivalCorrect}
               language={language}
+              onPauseStateChange={(isPaused) => {
+                isGravityPausedRef.current = isPaused;
+              }}
               onCardSelected={(qId, cIndex, rIndex) => {
                 endlessTargetRef.current = { ...endlessTargetRef.current, col: cIndex, row: rIndex };
                 navigate(`/quiz/${qId}`);
@@ -1110,6 +1173,15 @@ function App() {
               onQuit={() => {
                 applyStreakBonuses();
                 setGameState('quit');
+                navigate('/result');
+              }}
+              onWin={() => {
+                // Champion! Beat all bosses. Max Coin Reward.
+                const bonusCoins = 300;
+                setTotalCoins(c => c + bonusCoins);
+                setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + bonusCoins }));
+                applyStreakBonuses();
+                setGameState('victory');
                 navigate('/result');
               }}
             />

@@ -31,6 +31,20 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
         onQuit();
     };
 
+    const getStageInfo = (currentPops) => {
+        if (currentPops < 20) {
+            return { stage: 1, current: currentPops, target: 20, label: t.stage_1 || 'שלב 1 (חימום)' };
+        } else if (currentPops < 50) {
+            return { stage: 2, current: currentPops - 20, target: 30, label: t.stage_2 || 'שלב 2 (הגלדיאטור)' };
+        } else if (currentPops < 90) {
+            return { stage: 3, current: currentPops - 50, target: 40, label: t.stage_3 || 'שלב 3 (בוס האבן)' };
+        } else {
+            return { stage: 'WIN', current: 1, target: 1, label: t.stage_win || 'אלופים!' };
+        }
+    };
+
+    const stageInfo = getStageInfo(coins);
+
     return (
         <div className="gravity-board-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', height: '100%', overflow: 'hidden' }}>
 
@@ -45,7 +59,7 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
             </div>
 
             {/* Pill Header */}
-            <div className="stats-header glass-panel solo-mode" style={{ zIndex: 10, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div className="stats-header glass-panel solo-mode" style={{ zIndex: 10, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '1rem', width: '95%', maxWidth: '600px' }}>
                 {config.avatars?.[1] && (
                     <div className="stat-item gravity-avatar-display" data-testid="game-avatar">
                         <div className="premium-avatar-box gravity-avatar-box" style={{ borderRadius: '12px', borderWidth: '2px', background: 'rgba(255, 255, 255, 0.4)', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
@@ -58,15 +72,27 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                     </div>
                 )}
 
-                <div className="lives-coins-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <div className="stat-item level-display">
-                        <div className="level-badge" style={{ background: 'linear-gradient(135deg, #FF4B2B, #FF416C)', color: 'white', padding: '0.2rem 0.8rem', borderRadius: '13px', fontSize: '0.9rem', fontWeight: 'bold' }}>
-                            {t.endless || 'מפולת'}
+                <div className="lives-coins-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flex: 1 }}>
+                    <div className="progress-container" style={{ flex: 1, background: 'rgba(0,0,0,0.4)', borderRadius: '15px', height: '26px', position: 'relative', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.4)', boxShadow: 'inset 0 2px 5px rgba(0,0,0,0.5)' }}>
+                        <motion.div
+                            className="progress-fill"
+                            initial={{ width: 0 }}
+                            animate={{ width: `${Math.min(100, (stageInfo.current / stageInfo.target) * 100)}%` }}
+                            transition={{ type: 'spring', bounce: 0.2 }}
+                            style={{
+                                background: stageInfo.stage === 3 ? 'linear-gradient(90deg, #ff416c, #ff4b2b)' : 'linear-gradient(90deg, #00b4db, #0083b0)',
+                                height: '100%',
+                                borderRadius: '15px'
+                            }}
+                        />
+                        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white', fontSize: '0.85rem', fontWeight: 'bold', textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
+                            {stageInfo.stage === 'WIN' ? 'האלוף המושלם!' : `${stageInfo.current} / ${stageInfo.target}`}
                         </div>
                     </div>
-                    <div className="stat-item">
-                        <div key={coins} className="coin-pill coin-pop" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '1.2rem', fontWeight: 'bold', color: '#ffd700', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
-                            <img src="/icons/gold_coin.png" alt="coin" className="global-coin" style={{ width: '28px', filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.3))' }} /> {coins}
+
+                    <div className="stat-item level-display">
+                        <div className="level-badge" style={{ background: stageInfo.stage === 3 ? '#ff4b2b' : '#0083b0', color: 'white', padding: '0.2rem 0.6rem', borderRadius: '10px', fontSize: '0.8rem', fontWeight: 'bold', whiteSpace: 'nowrap' }}>
+                            {stageInfo.label}
                         </div>
                     </div>
                 </div>

@@ -46,6 +46,43 @@ export const playSound = (type) => {
             osc.stop(now + 0.1);
             break;
 
+        case 'siren':
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(600, now);
+            osc.frequency.linearRampToValueAtTime(300, now + 0.8);
+            osc.frequency.linearRampToValueAtTime(600, now + 1.6);
+            gain.gain.setValueAtTime(0, now);
+            gain.gain.linearRampToValueAtTime(0.3, now + 0.1);
+            gain.gain.linearRampToValueAtTime(0.3, now + 1.5);
+            gain.gain.linearRampToValueAtTime(0, now + 1.6);
+            osc.start(now);
+            osc.stop(now + 1.6);
+            break;
+
+        case 'boss_drum':
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(100, now);
+            osc.frequency.exponentialRampToValueAtTime(10, now + 0.5);
+            gain.gain.setValueAtTime(0.8, now);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.5);
+            osc.start(now);
+            osc.stop(now + 0.5);
+            break;
+
+        case 'win_fanfare':
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(523.25, now);     // C5
+            // Use precise scheduled scheduling
+            osc.frequency.setValueAtTime(659.25, now + 0.15); // E5
+            osc.frequency.setValueAtTime(783.99, now + 0.3);  // G5
+            osc.frequency.setValueAtTime(1046.50, now + 0.45); // C6
+            gain.gain.setValueAtTime(0.4, now);
+            gain.gain.linearRampToValueAtTime(0.4, now + 0.6);
+            gain.gain.linearRampToValueAtTime(0, now + 1.2);
+            osc.start(now);
+            osc.stop(now + 1.2);
+            break;
+
         case 'drop':
             osc.type = 'triangle';
             osc.frequency.setValueAtTime(400, now);

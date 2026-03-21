@@ -15,9 +15,24 @@
     overflow: hidden;
 }
 
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .level-warning-overlay.danger-max {
     background: rgba(40, 0, 0, 0.9);
     box-shadow: inset 0 0 100px rgba(255, 0, 0, 0.5);
+}
+
+.level-warning-overlay.win-max {
+    background: linear-gradient(135deg, rgba(10, 10, 20, 0.9), rgba(40, 30, 0, 0.9));
+    box-shadow: inset 0 0 150px rgba(255, 200, 0, 0.4);
 }
 
 .warning-content {
@@ -43,6 +58,12 @@
 .danger-max .warning-title {
     color: #ffaa00;
     text-shadow: 0 0 30px rgba(255, 100, 0, 0.9), 3px 3px 0px #fff;
+}
+
+.win-max .warning-title {
+    color: #ffd700;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 2px 2px 0px #fff;
+    font-size: 3.5rem;
 }
 
 .pulsing-text {
@@ -77,6 +98,13 @@
     box-shadow: 0 0 50px rgba(255, 100, 0, 0.8);
     width: 280px;
     height: 280px;
+}
+
+.win-max .warning-character {
+    border-color: #ffd700;
+    box-shadow: 0 0 60px rgba(255, 215, 0, 0.9), inset 0 0 20px rgba(255, 255, 255, 0.4);
+    width: 300px;
+    height: 300px;
 }
 
 .character-img {
@@ -125,7 +153,6 @@
     }
 }
 
-/* Red flashing border edge for Danger Max */
 .flashing-lights {
     position: absolute;
     top: -50vh;
