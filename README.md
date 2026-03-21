@@ -16,6 +16,11 @@ A fun, interactive, and educational card game designed for children and trivia l
 - **Enhanced Avatars & Skins**:
   - **Professor Owl (3D)**: High-quality 3D animations for University Professor, Researcher, and Friendly Inventor skins.
   - **Dynamic Shop**: Unlock premium skins and avatars using your earned coins.
+- **Endless Mode ("Smarty Crush")**:
+  - A fast-paced, continuously falling avalanche of cards similar to classic arcade match games.
+  - **Real-Time Score**: Watch your active session points climb with every match, distinctly separated from your global coin bank.
+  - **Dynamic Obstacles & Bosses**: Battle against multi-hit Bosses and Gladiator enemies with custom graphical animations.
+  - **Special Blocks**: Encounter uncrackable stone blocks, explosive power-up bombs, and a strict gravity-based layout matrix beautifully adapted for both desktop and mobile.
 - **Multi-Game Modes**:
   - **Solo**: Relaxed play at your own pace.
   - **Time Attack**: Race against a global countdown with a dedicated time-centered UI.

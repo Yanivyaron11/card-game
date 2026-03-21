@@ -462,9 +462,8 @@ function App() {
       setGameState('topic_selection');
       navigate('/play');
     } else if (config.gameMode === 'endless') {
-      const isMobile = window.innerWidth <= 768;
-      const cols = isMobile ? 4 : 5;
-      const rows = isMobile ? 10 : 5;
+      const cols = 5;
+      const rows = 5;
 
       // Unpack the massive endless deck algorithm mapping all questions database
       const newDeck = generateEndlessDeck(config.topics);
@@ -1089,6 +1088,8 @@ function App() {
             <GravityBoard
               columns={endlessColumns}
               config={gameConfig}
+              coins={survivalCorrect}
+              language={language}
               onCardSelected={(qId, cIndex, rIndex) => {
                 endlessTargetRef.current = { ...endlessTargetRef.current, col: cIndex, row: rIndex };
                 navigate(`/quiz/${qId}`);

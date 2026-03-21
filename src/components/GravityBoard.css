@@ -12,13 +12,13 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-    gap: 20px;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem;
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    background: rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
     border-radius: 20px;
-    padding: 20px;
     box-sizing: border-box;
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
@@ -26,7 +26,8 @@
 .gravity-column {
     display: grid;
     align-content: end;
-    gap: 20px;
+    justify-items: center;
+    gap: 0.8rem;
     height: 100%;
     position: relative;
 }
@@ -34,11 +35,11 @@
 .gravity-card {
     aspect-ratio: 1 / 1;
     width: 100%;
+    max-width: 80px;
     position: relative;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* The drop animation is implicitly handled if items are added/removed, flex handles layout changes smoothly if combined with Framer Motion later, or just simple CSS fade/slide */
 }
 
 .gravity-card:active {
@@ -54,13 +55,16 @@
     border-radius: 12px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
     border: 2px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    position: relative;
 }
 
 .card-question-mark {
-    font-size: 2rem;
+    font-size: clamp(2rem, 8vw, 4rem);
     color: white;
     font-weight: bold;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
 }
 
 .stone-card {
@@ -77,9 +81,17 @@
     transform: none;
 }
 
+.stone-card .card-inner {
+    background: linear-gradient(135deg, #7f8c8d, #95a5a6) !important;
+    border: 2px solid #34495e;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
 .stone-visual {
     font-size: 2rem;
-    opacity: 0.8;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 @keyframes stoneThud {
@@ -104,9 +116,17 @@
     z-index: 10;
 }
 
+.popping-card .card-inner {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
 .popping-visual {
     font-size: 3rem;
-    animation: popIcon 0.8s ease-out forwards;
+    animation: popOut 0.4s ease-out forwards;
 }
 
 @keyframes popVanish {
@@ -142,35 +162,86 @@
     }
 }
 
-.powerup-bomb {
-    animation: bombPulse 1.5s infinite alternate ease-in-out;
-}
-
-@keyframes bombPulse {
+@keyframes popOut {
     0% {
-        filter: brightness(1) drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5) rotate(10deg);
+        opacity: 0.8;
     }
 
     100% {
-        filter: brightness(1.3) drop-shadow(0 0 15px rgba(255, 215, 0, 1));
+        transform: scale(2) rotate(-10deg);
+        opacity: 0;
     }
+}
+
+.powerup-bomb {
+    animation: bombPulse 2s infinite ease-in-out;
 }
 
 .powerup-overlay {
     position: absolute;
     top: -5px;
     right: -5px;
-    background: #ffc107;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
-    box-shadow: 0 0 5px #000;
-    z-index: 5;
-    animation: iconShake 3s infinite;
+    border: 2px solid white;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: badgePulse 1.5s infinite;
+}
+
+@keyframes bombPulse {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 65, 108, 0.4));
+    }
+
+    50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 15px rgba(255, 65, 108, 0.8));
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 65, 108, 0.4));
+    }
+}
+
+.powerup-bomb .card-inner {
+    box-shadow: inset 0 0 15px rgba(255, 65, 108, 0.5);
+    border: 2px solid rgba(255, 65, 108, 0.5);
+}
+
+.powerup-bomb:active {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    15%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    5% {
+        transform: rotate(15deg);
+    }
+
+    10% {
+        transform: rotate(-15deg);
+    }
 }
 
 @keyframes iconShake {
@@ -192,5 +263,60 @@
 
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .gravity-board-wrapper {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem) !important;
+    }
+
+    .gravity-board-container {
+        padding: 0.5rem !important;
+    }
+
+    .game-controls {
+        padding: 0 0.5rem !important;
+        max-width: 100% !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .stats-header {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .gravity-grid {
+        gap: 0.3rem;
+        padding: 0.3rem;
+    }
+
+    .gravity-column {
+        gap: 0.3rem;
+    }
+
+    .gravity-card {
+        border-radius: 8px;
+        max-width: 64px !important;
+        max-height: 64px !important;
+    }
+
+    .card-inner {
+        border-radius: 8px;
+    }
+
+    .card-question-mark,
+    .stone-visual,
+    .popping-visual {
+        font-size: 1.2rem;
+    }
+
+    .powerup-overlay {
+        width: 18px;
+        height: 18px;
+        font-size: 0.6rem;
+        top: -3px;
+        right: -3px;
     }
 }
