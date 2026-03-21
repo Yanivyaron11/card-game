@@ -55,9 +55,10 @@ Smarty features a robust rewarding system to keep children engaged:
   - New High Score: **+20🪙**.
   - Course Completion: Junior (**+30🪙**) / Master (**+50🪙**).
 - **Avalanche / Smarty Crush Bonuses**:
-  - Stage 2 (Gladiator Defeated): **+50🪙**
-  - Stage 3 (Volcano Boss Defeated): **+100🪙**
-  - Ultimate WIN State: **+200🪙** !!
+  - Stage 2 (Reached at 15 Pops): **+50🪙**
+  - Stage 3 (Reached at 30 Pops): **+100🪙**
+  - Ultimate WIN State (Complete at 50 Pops): **+200🪙** !!
+  - *Note: Power-up Bombs (Row/Col/Cross) award heavily scaling coin payloads for destroyed cards, but do **not** contribute to stage progression skips. Players must manually answer 50 total questions.*
 - **Completion Bonuses**:
   - Grid 3x3: **+10🪙**
   - Grid 4x4: **+20🪙**

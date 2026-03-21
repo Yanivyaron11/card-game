@@ -125,12 +125,11 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                                             className={`gravity-card ${card.status === 'stone' ? 'stone-card' : ''} ${card.status === 'popping' ? 'popping-card' : ''} ${card.powerUp && card.status === 'active' ? 'powerup-bomb' : ''}`}
                                             onClick={() => handleCardClick(cIndex, actualRIndex, card)}
                                         >
-                                            {card.powerUp && card.status !== 'stone' && card.status !== 'popping' && (
-                                                <div className={`powerup-overlay powerup-${card.powerUp}`}>
-                                                    <img
-                                                        src={`/icons/bomb_${card.powerUp}.png?v=4`}
+                                            {card.status === 'active' && card.powerUp && (
+                                                <div className="powerup-overlay">
+                                                    <img src={`/icons/bomb_${card.powerUp === 'col' ? 'row' : card.powerUp}.png?v=5`}
                                                         alt={`${card.powerUp} bomb`}
-                                                        className="bomb-3d-icon"
+                                                        className={`bomb-3d-icon ${card.powerUp === 'col' ? 'rotate-90' : ''}`}
                                                     />
                                                 </div>
                                             )}
