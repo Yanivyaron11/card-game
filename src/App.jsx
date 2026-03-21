@@ -802,8 +802,8 @@ function App() {
               const poppedInCol = originalLength - newCols[iCol].length;
 
               let targetLvl = 1;
-              if (survivalCorrect >= 50) targetLvl = 3;
-              else if (survivalCorrect >= 20) targetLvl = 2;
+              if (survivalCorrect >= 30) targetLvl = 3;
+              else if (survivalCorrect >= 15) targetLvl = 2;
 
               for (let i = 0; i < poppedInCol; i++) {
                 let nextCard;
