@@ -20,7 +20,7 @@ import InstallPrompt from './components/InstallPrompt'
 
 function SurvivalResult({ correct, language, survivalType }) {
   const { isNewRecord, best } = useMemo(() => {
-    const HS_KEY = survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child';
+    const HS_KEY = survivalType === 'endless' ? 'endless_high_score' : (survivalType === 'adult' ? 'survival_high_score_adult' : 'survival_high_score_child');
     const prev = parseInt(localStorage.getItem(HS_KEY) || '0', 10);
     const isNew = correct > prev;
     if (isNew) localStorage.setItem(HS_KEY, correct);
@@ -48,7 +48,10 @@ function SurvivalResult({ correct, language, survivalType }) {
   return (
     <div style={{ textAlign: 'center' }}>
       <p style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>
-        {language === 'he' ? `✅ ענית נכון על ${correct} שאלות` : `✅ ${correct} correct answers`}
+        {survivalType === 'endless'
+          ? (language === 'he' ? `✅ צברת ${correct} נקודות במפולת!` : `✅ Scored ${correct} avalanche points!`)
+          : (language === 'he' ? `✅ ענית נכון על ${correct} שאלות` : `✅ ${correct} correct answers`)
+        }
       </p>
       {isNewRecord && correct > 0 && (
         <p style={{ color: 'gold', fontSize: '1.2rem', fontWeight: 'bold' }}>
@@ -56,7 +59,7 @@ function SurvivalResult({ correct, language, survivalType }) {
         </p>
       )}
       <p style={{ opacity: 0.75, fontSize: '0.95rem', marginBottom: '0.5rem' }}>
-        {survivalType === 'adult' ? t.survival_record_adult : t.survival_record_child}: {best}
+        {survivalType === 'endless' ? (language === 'he' ? 'שיא אישי במפולת' : 'Avalanche High Score') : (survivalType === 'adult' ? t.survival_record_adult : t.survival_record_child)}: {best}
       </p>
 
       {canShare && (
@@ -772,6 +775,16 @@ function App() {
           if (maxDrawnLevel > endlessLevelRef.current) {
             endlessLevelRef.current = maxDrawnLevel;
             setShowLevelWarning(maxDrawnLevel);
+
+            const levelBonus = maxDrawnLevel === 2 ? 50 : (maxDrawnLevel >= 3 ? 100 : 0);
+            if (levelBonus > 0) {
+              setTimeout(() => {
+                setSurvivalCorrect(s => s + levelBonus);
+                setTotalCoins(c => c + levelBonus);
+                setSessionCoinBreakdown(cb => ({ ...cb, bonus: cb.bonus + levelBonus }));
+                playSound('victory');
+              }, 1000); // Delay slightly so they see the warning first, then the score EXPLODES
+            }
           }
         }, 800);
 
@@ -1094,7 +1107,11 @@ function App() {
                 endlessTargetRef.current = { ...endlessTargetRef.current, col: cIndex, row: rIndex };
                 navigate(`/quiz/${qId}`);
               }}
-              onQuit={handleReturnToStart}
+              onQuit={() => {
+                applyStreakBonuses();
+                setGameState('quit');
+                navigate('/result');
+              }}
             />
           ) : (
             <GameBoard
@@ -1306,7 +1323,7 @@ function App() {
                 <SurvivalResult
                   correct={survivalCorrect}
                   language={language}
-                  survivalType={gameConfig?.gameMode === 'endless' ? 'child' : gameConfig.survivalType}
+                  survivalType={gameConfig?.gameMode === 'endless' ? 'endless' : gameConfig.survivalType}
                 />
               ) : gameConfig?.gameMode === 'time_attack' ? (
                 <div className="time-attack-result">

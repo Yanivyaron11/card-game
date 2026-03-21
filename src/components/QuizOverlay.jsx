@@ -289,19 +289,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
                 <div className="quiz-header">
                     <div className="topic-info">
-                        <span
-                            className="topic-icon"
-                            style={card.topicColor ? {
-                                backgroundColor: card.topicColor,
-                                borderRadius: '50%',
-                                padding: '2px',
-                                display: 'inline-flex',
-                                width: '1.5em',
-                                height: '1.5em',
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            } : {}}
-                        >
+                        <span className="topic-icon">
                             {card.topicIcon}
                         </span>
                         <span className="topic-name">{card.topicName[language]}</span>

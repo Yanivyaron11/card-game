@@ -14,9 +14,9 @@
     grid-auto-columns: 1fr;
     justify-content: center;
     gap: 0.8rem;
-    padding: 1rem;
+    padding: 1.5rem;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     border-radius: 20px;
     box-sizing: border-box;
@@ -90,8 +90,20 @@
 }
 
 .stone-visual {
-    font-size: 2rem;
+    font-size: 2.6rem;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    line-height: 1;
+}
+
+.gravity-card-emoji {
+    font-size: 2.6rem;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.15));
 }
 
 @keyframes stoneThud {
@@ -183,22 +195,30 @@
     animation: bombPulse 2s infinite ease-in-out;
 }
 
+.powerup-col {
+    top: -8px;
+}
+
 .powerup-overlay {
     position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 24px;
-    height: 24px;
-    background: linear-gradient(135deg, #ff416c, #ff4b2b);
-    border-radius: 50%;
+    top: -22px;
+    right: -22px;
+    width: 54px;
+    height: 54px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
-    border: 2px solid white;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    animation: badgePulse 1.5s infinite;
+}
+
+.bomb-3d-icon {
+    width: 155%;
+    height: 155%;
+    object-fit: contain;
+    pointer-events: none;
+    -webkit-mask-image: radial-gradient(circle closest-side, black 65%, transparent 95%);
+    mask-image: radial-gradient(circle closest-side, black 65%, transparent 95%);
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 @keyframes bombPulse {
@@ -266,7 +286,30 @@
     }
 }
 
+.gravity-avatar-box {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gravity-avatar-box .player-avatar-emoji {
+    font-size: 2.5rem;
+}
+
 @media (max-width: 600px) {
+    .gravity-avatar-box {
+        width: 85px !important;
+        height: 85px !important;
+        min-width: 85px;
+        min-height: 85px;
+    }
+
+    .gravity-avatar-box .player-avatar-emoji {
+        font-size: 3.5rem !important;
+    }
+
     .gravity-board-wrapper {
         margin-left: -1rem;
         margin-right: -1rem;
@@ -289,7 +332,7 @@
 
     .gravity-grid {
         gap: 0.3rem;
-        padding: 0.3rem;
+        padding: 1rem;
     }
 
     .gravity-column {
@@ -308,15 +351,19 @@
 
     .card-question-mark,
     .stone-visual,
-    .popping-visual {
-        font-size: 1.2rem;
+    .popping-visual,
+    .gravity-card-emoji {
+        font-size: 1.8rem;
     }
 
     .powerup-overlay {
-        width: 18px;
-        height: 18px;
-        font-size: 0.6rem;
-        top: -3px;
-        right: -3px;
+        width: 42px;
+        height: 42px;
+        top: -18px;
+        right: -18px;
+    }
+
+    .powerup-col {
+        top: -6px;
     }
 }

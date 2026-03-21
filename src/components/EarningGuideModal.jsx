@@ -23,6 +23,8 @@ function EarningGuideModal({ isOpen, onClose, language }) {
             rules: [
                 { icon: '💥', text: t.rule_endless_2 },
                 { icon: '✨', text: t.rule_endless_3 },
+                { icon: '🐉', text: t.rule_endless_4 },
+                { icon: '🌋', text: t.rule_endless_5 },
                 { icon: '🔥', text: t.rule_streak },
                 { icon: '🏆', text: t.rule_survival_record },
                 { icon: '🎉', text: t.rule_survival_completion },

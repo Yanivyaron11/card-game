@@ -33,19 +33,7 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars }) {
                             <span className="rebound-emoji">{rebounderEmoji}</span> {t.rebound_badge}
                         </div>
                     )}
-                    <div
-                        className="pattern"
-                        style={card.topicColor ? {
-                            backgroundColor: card.topicColor,
-                            borderRadius: '50%',
-                            width: 'min(5rem, 15vw)',
-                            height: 'min(5rem, 15vw)',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            boxShadow: `0 0 15px ${card.topicColor}`
-                        } : {}}
-                    >
+                    <div className="pattern">
                         {card.topicIcon}
                     </div>
                 </div>

@@ -47,12 +47,12 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
             {/* Pill Header */}
             <div className="stats-header glass-panel solo-mode" style={{ zIndex: 10, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 {config.avatars?.[1] && (
-                    <div className="stat-item avatar-display" data-testid="game-avatar">
-                        <div className="premium-avatar-box" style={{ width: '45px', height: '45px', display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '8px', borderWidth: '2px', background: 'rgba(255, 255, 255, 0.4)', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
+                    <div className="stat-item gravity-avatar-display" data-testid="game-avatar">
+                        <div className="premium-avatar-box gravity-avatar-box" style={{ borderRadius: '12px', borderWidth: '2px', background: 'rgba(255, 255, 255, 0.4)', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
                             {config.avatars[1].image ? (
                                 <img src={config.avatars[1].image} alt="" className="avatar-img-premium" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                             ) : (
-                                <span className="player-avatar-emoji" style={{ fontSize: '1.8rem' }}>{config.avatars[1].emoji}</span>
+                                <span className="player-avatar-emoji">{config.avatars[1].emoji}</span>
                             )}
                         </div>
                     </div>
@@ -65,8 +65,8 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                         </div>
                     </div>
                     <div className="stat-item">
-                        <div key={coins} className="coin-pill coin-pop" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '1.3rem', fontWeight: '900', color: '#FFF', textShadow: '0 2px 4px rgba(0,0,0,0.5)', background: 'linear-gradient(135deg, #f59e0b, #d97706)' }}>
-                            <span style={{ fontSize: '1.4rem', filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.3))' }}>⭐️</span> {coins}
+                        <div key={coins} className="coin-pill coin-pop" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '1.2rem', fontWeight: 'bold', color: '#ffd700', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+                            <img src="/icons/gold_coin.png" alt="coin" className="global-coin" style={{ width: '28px', filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.3))' }} /> {coins}
                         </div>
                     </div>
                 </div>
@@ -92,8 +92,12 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                                             onClick={() => handleCardClick(cIndex, actualRIndex, card)}
                                         >
                                             {card.powerUp && card.status !== 'stone' && card.status !== 'popping' && (
-                                                <div className="powerup-overlay">
-                                                    {card.powerUp === 'row' ? '↔️' : card.powerUp === 'col' ? '↕️' : '➕'}
+                                                <div className={`powerup-overlay powerup-${card.powerUp}`}>
+                                                    <img
+                                                        src={`/icons/bomb_${card.powerUp}.png?v=4`}
+                                                        alt={`${card.powerUp} bomb`}
+                                                        className="bomb-3d-icon"
+                                                    />
                                                 </div>
                                             )}
                                             {card.status === 'stone' ? (
@@ -102,23 +106,7 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                                                 <div className="popping-visual">💥</div>
                                             ) : (
                                                 <div className="card-inner" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05))' }}>
-                                                    <div
-                                                        style={card.topicColor ? {
-                                                            backgroundColor: card.topicColor,
-                                                            borderRadius: '50%',
-                                                            width: 'min(3rem, 12vw)',
-                                                            height: 'min(3rem, 12vw)',
-                                                            minWidth: 'min(3rem, 12vw)',
-                                                            minHeight: 'min(3rem, 12vw)',
-                                                            flexShrink: 0,
-                                                            aspectRatio: '1/1',
-                                                            display: 'flex',
-                                                            justifyContent: 'center',
-                                                            alignItems: 'center',
-                                                            boxShadow: `0 0 10px ${card.topicColor}`,
-                                                            fontSize: '1.5rem'
-                                                        } : { fontSize: '1.5rem' }}
-                                                    >
+                                                    <div className="gravity-card-emoji">
                                                         {card.topicIcon || '❓'}
                                                     </div>
                                                 </div>
