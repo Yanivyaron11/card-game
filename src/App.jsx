@@ -6,6 +6,7 @@ import QuizOverlay from './components/QuizOverlay'
 import LandingPage from './components/LandingPage'
 import CleaningMode from './components/CleaningMode'
 import LevelWarningOverlay from './components/LevelWarningOverlay'
+import StageBonusOverlay from './components/StageBonusOverlay'
 import { translations } from './data/translations'
 import { generateDeck, generateSurvivalDeck, generateEndlessDeck } from './utils/deck'
 import { themes } from './data/themes'
@@ -87,6 +88,7 @@ function App() {
   const isGravityPausedRef = useRef(false);
   const endlessLevelRef = useRef(1);
   const [showLevelWarning, setShowLevelWarning] = useState(null);
+  const [showStageBonus, setShowStageBonus] = useState(null);
 
   const getRandomPowerUp = () => {
     const r = Math.random();
@@ -836,11 +838,11 @@ function App() {
           setSurvivalCorrect(s => {
             const newTotal = s + 1;
             if (s < 15 && newTotal >= 15) {
-              setShowLevelWarning(2);
+              setShowStageBonus({ coins: 50, nextLevel: 2 });
               isGravityPausedRef.current = true;
               stageBonusToGive = 50;
             } else if (s < 30 && newTotal >= 30) {
-              setShowLevelWarning(3);
+              setShowStageBonus({ coins: 100, nextLevel: 3 });
               isGravityPausedRef.current = true;
               stageBonusToGive = 100;
             } else if (s < 50 && newTotal >= 50) {
@@ -1078,6 +1080,8 @@ function App() {
 
   const handleReturnToStart = () => {
     answeringRef.current.clear();
+    setShowStageBonus(null);
+    setShowLevelWarning(null);
     // If quitting during a game, treat as end of run for stats/scoring
     if (gameState === 'playing') {
       // Intentionally do NOT apply streak bonuses when quitting
@@ -1102,6 +1106,16 @@ function App() {
 
   return (
     <div className={`app-container ${language === 'he' ? 'rtl-mode' : ''}`} dir={language === 'he' ? 'rtl' : 'ltr'}>
+      {showStageBonus && (
+        <StageBonusOverlay
+          coins={showStageBonus.coins}
+          onComplete={() => {
+            const nextLvl = showStageBonus.nextLevel;
+            setShowStageBonus(null);
+            setShowLevelWarning(nextLvl);
+          }}
+        />
+      )}
       {showLevelWarning && (
         <LevelWarningOverlay
           level={showLevelWarning}
