@@ -781,10 +781,8 @@ function App() {
 
           let earnedCoins = target.level || 1;
           if (target.powerUp === 'row' || target.powerUp === 'col') {
-            earnedCoins += 10;
             playSound('explosion_small');
           } else if (target.powerUp === 'cross') {
-            earnedCoins += 25;
             playSound('explosion_large');
           }
 

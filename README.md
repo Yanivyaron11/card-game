@@ -58,7 +58,7 @@ Smarty features a robust rewarding system to keep children engaged:
   - Stage 2 (Reached at 15 Pops): **+50🪙**
   - Stage 3 (Reached at 30 Pops): **+100🪙**
   - Ultimate WIN State (Complete at 50 Pops): **+200🪙** !!
-  - *Note: Power-up Bombs (Row/Col/Cross) award heavily scaling coin payloads for destroyed cards, but do **not** contribute to stage progression skips. Players must manually answer 50 total questions.*
+  - *Note: Power-up Bombs (Row/Col/Cross) actively defend the board against the avalanche, but they do **not** award bonus coins or contribute to stage progression skips. Players must manually answer 50 total questions.*
 - **Completion Bonuses**:
   - Grid 3x3: **+10🪙**
   - Grid 4x4: **+20🪙**
