@@ -15,6 +15,7 @@ function LevelWarningOverlay({ level, onComplete, language }) {
             setTimeout(() => playSound('timpani_strike_3'), 500); // Aggressive fast swell at 0.5s, D minor sub-bass!
             setTimeout(() => playSound('timpani_strike_3'), 1500);
             setTimeout(() => playSound('timpani_strike_3'), 2500); // Triple strike!
+            setTimeout(() => playSound('evil_laugh'), 3500); // The Boss Laughs!
         } else if (level === 'WIN') {
             playSound('win_fanfare');
         }

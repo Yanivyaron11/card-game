@@ -125,6 +125,36 @@ export const playSound = (type) => {
             osc.stop(now + 0.5);
             break;
 
+        case 'evil_laugh':
+            // Advanced Human Vocal Synthesis (Mwahaha)
+            const humanLaughNotes = [{ t: 0, f: 140, d: 0.40, v: 0.8 }, { t: 0.55, f: 120, d: 0.40, v: 0.9 }, { t: 1.10, f: 100, d: 0.40, v: 0.9 }, { t: 1.65, f: 80, d: 1.80, v: 1.0 }];
+            const filter1 = ctx.createBiquadFilter(); filter1.type = 'bandpass'; filter1.frequency.value = 700; filter1.Q.value = 4;
+            const filter2 = ctx.createBiquadFilter(); filter2.type = 'bandpass'; filter2.frequency.value = 1100; filter2.Q.value = 5;
+            const filter3 = ctx.createBiquadFilter(); filter3.type = 'bandpass'; filter3.frequency.value = 2500; filter3.Q.value = 8;
+            const vocalOut = ctx.createGain(); vocalOut.gain.value = 2.5; vocalOut.connect(ctx.destination);
+            filter1.connect(vocalOut); filter2.connect(vocalOut); filter3.connect(vocalOut);
+            const nLen = ctx.sampleRate * 2; const nBuf = ctx.createBuffer(1, nLen, ctx.sampleRate); const nDataArr = nBuf.getChannelData(0);
+            for (let i = 0; i < nLen; i++) nDataArr[i] = Math.random() * 2 - 1;
+            humanLaughNotes.forEach(note => {
+                const laughOsc = ctx.createOscillator(); const laughGain = ctx.createGain(); laughOsc.type = 'sawtooth';
+                laughOsc.frequency.setValueAtTime(note.f + 15, now + note.t);
+                laughOsc.frequency.exponentialRampToValueAtTime(Math.max(note.f - 25, 20), now + note.t + note.d);
+                laughGain.gain.setValueAtTime(0, now + note.t); laughGain.gain.linearRampToValueAtTime(note.v, now + note.t + 0.03);
+                laughGain.gain.exponentialRampToValueAtTime(0.01, now + note.t + note.d);
+                const grumble = ctx.createOscillator(); const grumbleGain = ctx.createGain();
+                grumble.type = 'sine'; grumble.frequency.value = 50; grumbleGain.gain.value = 35;
+                grumble.connect(grumbleGain); grumbleGain.connect(laughOsc.frequency);
+                const breathNodeSource = ctx.createBufferSource(); breathNodeSource.buffer = nBuf;
+                const breathGainNode = ctx.createGain(); breathGainNode.gain.setValueAtTime(0, now + note.t);
+                breathGainNode.gain.linearRampToValueAtTime(note.v * 0.15, now + note.t + 0.02); breathGainNode.gain.exponentialRampToValueAtTime(0.01, now + note.t + note.d);
+                laughOsc.connect(laughGain); breathNodeSource.connect(breathGainNode);
+                laughGain.connect(filter1); laughGain.connect(filter2); laughGain.connect(filter3);
+                breathGainNode.connect(filter1); breathGainNode.connect(filter2); breathGainNode.connect(filter3);
+                grumble.start(now + note.t); laughOsc.start(now + note.t); breathNodeSource.start(now + note.t);
+                grumble.stop(now + note.t + note.d); laughOsc.stop(now + note.t + note.d); breathNodeSource.stop(now + note.t + note.d);
+            });
+            break;
+
         case 'win_fanfare':
             osc.type = 'triangle';
             osc.frequency.setValueAtTime(523.25, now);     // C5
@@ -407,4 +437,12 @@ export const stopMusic = () => {
         currentMusic.currentTime = 0;
         currentMusic = null;
     }
+};
+
+window.testBossSound = () => {
+    playSound('epic_chord_3');
+    setTimeout(() => playSound('timpani_strike_3'), 500);
+    setTimeout(() => playSound('timpani_strike_3'), 1500);
+    setTimeout(() => playSound('timpani_strike_3'), 2500);
+    setTimeout(() => playSound('evil_laugh'), 3500);
 };

@@ -478,7 +478,14 @@ function App() {
       let highestInitLvl = 1;
       for (let c = 0; c < cols; c++) {
         for (let r = 0; r < rows; r++) {
-          const deckCard = newDeck[cardIndex % newDeck.length];
+          let deckCard;
+          let failsafe = 0;
+          do {
+            deckCard = newDeck[cardIndex % newDeck.length];
+            cardIndex++;
+            failsafe++;
+          } while (deckCard.level !== 1 && failsafe < newDeck.length);
+
           if (deckCard.level > highestInitLvl) highestInitLvl = deckCard.level;
           initialCols[c].push({
             id: `init_${c}_${r}_${Math.random().toString(36).substr(2, 9)}`,
@@ -794,8 +801,19 @@ function App() {
               newCols[iCol] = newCols[iCol].filter(card => card.status !== 'popping');
               const poppedInCol = originalLength - newCols[iCol].length;
 
+              let targetLvl = 1;
+              if (survivalCorrect >= 50) targetLvl = 3;
+              else if (survivalCorrect >= 20) targetLvl = 2;
+
               for (let i = 0; i < poppedInCol; i++) {
-                const nextCard = deck[endlessTargetRef.current.nextDeckIndex % deck.length];
+                let nextCard;
+                let failsafe = 0;
+                do {
+                  nextCard = deck[endlessTargetRef.current.nextDeckIndex % deck.length];
+                  endlessTargetRef.current.nextDeckIndex++;
+                  failsafe++;
+                } while (nextCard.level !== targetLvl && failsafe < deck.length);
+
                 newCols[iCol].push({
                   id: `new_${endlessTargetRef.current.nextDeckIndex}_${Math.random().toString(36).substr(2, 9)}`,
                   questionId: nextCard.id,
