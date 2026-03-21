@@ -46,17 +46,73 @@ export const playSound = (type) => {
             osc.stop(now + 0.1);
             break;
 
-        case 'siren':
-            osc.type = 'sawtooth';
-            osc.frequency.setValueAtTime(600, now);
-            osc.frequency.linearRampToValueAtTime(300, now + 0.8);
-            osc.frequency.linearRampToValueAtTime(600, now + 1.6);
+        case 'timpani_strike_1':
+        case 'timpani_strike_2':
+        case 'timpani_strike_3':
+            // "Lord of the Rings" deep orchestral percussion hit - gets deeper and louder per level
+            const startFreq = type === 'timpani_strike_1' ? 80 : (type === 'timpani_strike_2' ? 60 : 45);
+            const dropFreq = type === 'timpani_strike_1' ? 50 : (type === 'timpani_strike_2' ? 35 : 20);
+            const impactGain = type === 'timpani_strike_1' ? 0.8 : (type === 'timpani_strike_2' ? 1.3 : 2.0);
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(startFreq, now);
+            osc.frequency.exponentialRampToValueAtTime(dropFreq, now + 0.5);
+
             gain.gain.setValueAtTime(0, now);
-            gain.gain.linearRampToValueAtTime(0.3, now + 0.1);
-            gain.gain.linearRampToValueAtTime(0.3, now + 1.5);
-            gain.gain.linearRampToValueAtTime(0, now + 1.6);
+            gain.gain.linearRampToValueAtTime(impactGain, now + 0.05);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 3);
+
             osc.start(now);
-            osc.stop(now + 1.6);
+            osc.stop(now + 3);
+            break;
+
+        case 'epic_chord_1':
+        case 'epic_chord_2':
+        case 'epic_chord_3':
+            // 1 = C Major (Warmup), 2 = A Minor (Serious), 3 = D Minor (Boss Danger)
+            let baseFreqChord, chordFreqs, swellTime, baseGain;
+
+            if (type === 'epic_chord_1') {
+                baseFreqChord = 130.81; // C3
+                chordFreqs = [baseFreqChord / 2, baseFreqChord, baseFreqChord * 1.5, baseFreqChord * 2, baseFreqChord * 2.52]; // C Major
+                swellTime = 1.5;
+                baseGain = 0.25;
+            } else if (type === 'epic_chord_2') {
+                baseFreqChord = 110.00; // A2 (Lower, darker)
+                chordFreqs = [baseFreqChord / 2, baseFreqChord, baseFreqChord * 1.5, baseFreqChord * 2, baseFreqChord * 2.38]; // A Minor (Minor 3rd = 1.189 * 2)
+                swellTime = 1.0; // Faster climax
+                baseGain = 0.35;
+            } else {
+                baseFreqChord = 73.42; // D2 (Sub-bass, huge tension)
+                chordFreqs = [baseFreqChord / 2, baseFreqChord, baseFreqChord * 1.5, baseFreqChord * 2, baseFreqChord * 2.38]; // D Minor
+                swellTime = 0.5; // Almost immediate terrifying climax
+                baseGain = 0.5; // Loudest
+            }
+
+            chordFreqs.forEach((freq, index) => {
+                const oscNode = ctx.createOscillator();
+                const gainNode = ctx.createGain();
+
+                oscNode.type = index % 2 === 0 ? 'sine' : 'triangle';
+                oscNode.frequency.setValueAtTime(freq, now);
+
+                oscNode.connect(gainNode);
+                gainNode.connect(ctx.destination);
+
+                const maxGain = baseGain / (index + 1);
+
+                gainNode.gain.setValueAtTime(0, now);
+                gainNode.gain.linearRampToValueAtTime(maxGain, now + swellTime);
+                gainNode.gain.setValueAtTime(maxGain, now + 3);
+                gainNode.gain.linearRampToValueAtTime(0.01, now + 5);
+
+                oscNode.start(now);
+                oscNode.stop(now + 5);
+            });
+
+            gain.gain.value = 0;
+            osc.start(now);
+            osc.stop(now + 0.01);
             break;
 
         case 'boss_drum':

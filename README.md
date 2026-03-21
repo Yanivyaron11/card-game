@@ -54,6 +54,10 @@ Smarty features a robust rewarding system to keep children engaged:
 - **Survival Bonuses**: 
   - New High Score: **+20🪙**.
   - Course Completion: Junior (**+30🪙**) / Master (**+50🪙**).
+- **Avalanche / Smarty Crush Bonuses**:
+  - Stage 2 (Gladiator Defeated): **+50🪙**
+  - Stage 3 (Volcano Boss Defeated): **+100🪙**
+  - Ultimate WIN State: **+200🪙** !!
 - **Completion Bonuses**:
   - Grid 3x3: **+10🪙**
   - Grid 4x4: **+20🪙**

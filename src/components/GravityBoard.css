@@ -286,6 +286,23 @@
     }
 }
 
+.gravity-hud {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+}
+
+.gravity-hud-bottom-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .gravity-avatar-box {
     width: 65px;
     height: 65px;
@@ -300,14 +317,14 @@
 
 @media (max-width: 600px) {
     .gravity-avatar-box {
-        width: 85px !important;
-        height: 85px !important;
-        min-width: 85px;
-        min-height: 85px;
+        width: 60px !important;
+        height: 60px !important;
+        min-width: 60px;
+        min-height: 60px;
     }
 
     .gravity-avatar-box .player-avatar-emoji {
-        font-size: 3.5rem !important;
+        font-size: 2.5rem !important;
     }
 
     .gravity-board-wrapper {
@@ -318,6 +335,38 @@
 
     .gravity-board-container {
         padding: 0.5rem !important;
+    }
+
+    .gravity-hud {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.3rem !important;
+    }
+
+    .gravity-hud .progress-container {
+        width: 100%;
+        min-height: 26px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .gravity-hud-bottom-row {
+        justify-content: space-between;
+        width: 100%;
+        gap: 0.2rem !important;
+    }
+
+    .gravity-hud .level-badge {
+        font-size: 0.7rem !important;
+        padding: 0.15rem 0.4rem !important;
+    }
+
+    .gravity-hud .coin-pill {
+        font-size: 0.95rem !important;
+        gap: 0.2rem !important;
+    }
+
+    .gravity-hud .global-coin {
+        width: 22px !important;
     }
 
     .game-controls {

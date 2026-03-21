@@ -813,24 +813,29 @@ function App() {
           });
 
           const coinsToGive = endlessTargetRef.current.pendingCoins || 1;
+          let stageBonusToGive = 0;
+
           setSurvivalCorrect(s => {
             const newTotal = s + coinsToGive;
-            if (s < 3 && newTotal >= 3) {
+            if (s < 20 && newTotal >= 20) {
               setShowLevelWarning(2);
               isGravityPausedRef.current = true;
-            } else if (s < 6 && newTotal >= 6) {
+              stageBonusToGive = 50;
+            } else if (s < 50 && newTotal >= 50) {
               setShowLevelWarning(3);
               isGravityPausedRef.current = true;
-            } else if (s < 10 && newTotal >= 10) {
+              stageBonusToGive = 100;
+            } else if (s < 90 && newTotal >= 90) {
               setShowLevelWarning('WIN');
               isGravityPausedRef.current = true;
+              stageBonusToGive = 200;
             }
             return newTotal;
           });
 
-          if (coinsToGive > 0) {
-            setTotalCoins(c => c + coinsToGive);
-            setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + coinsToGive }));
+          if (coinsToGive + stageBonusToGive > 0) {
+            setTotalCoins(c => c + coinsToGive + stageBonusToGive);
+            setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + coinsToGive + stageBonusToGive }));
           }
           playSound('drop');
         }, 800);

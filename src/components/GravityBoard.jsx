@@ -31,7 +31,8 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
         onQuit();
     };
 
-    const getStageInfo = (currentPops) => {
+    const getStageInfo = () => {
+        const currentPops = coins;
         if (currentPops < 20) {
             return { stage: 1, current: currentPops, target: 20, label: t.stage_1 || 'שלב 1 (חימום)' };
         } else if (currentPops < 50) {
@@ -43,7 +44,7 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
         }
     };
 
-    const stageInfo = getStageInfo(coins);
+    const stageInfo = getStageInfo();
 
     return (
         <div className="gravity-board-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', height: '100%', overflow: 'hidden' }}>
@@ -72,8 +73,8 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                     </div>
                 )}
 
-                <div className="lives-coins-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flex: 1 }}>
-                    <div className="progress-container" style={{ flex: 1, background: 'rgba(0,0,0,0.4)', borderRadius: '15px', height: '26px', position: 'relative', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.4)', boxShadow: 'inset 0 2px 5px rgba(0,0,0,0.5)' }}>
+                <div className="lives-coins-wrapper gravity-hud">
+                    <div className="progress-container" style={{ flex: '1 0 auto', minHeight: '26px', minWidth: '100px', background: 'rgba(0,0,0,0.4)', borderRadius: '15px', height: '26px', position: 'relative', overflow: 'hidden', border: '2px solid rgba(255,255,255,0.4)', boxShadow: 'inset 0 2px 5px rgba(0,0,0,0.5)' }}>
                         <motion.div
                             className="progress-fill"
                             initial={{ width: 0 }}
@@ -90,9 +91,16 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                         </div>
                     </div>
 
-                    <div className="stat-item level-display">
-                        <div className="level-badge" style={{ background: stageInfo.stage === 3 ? '#ff4b2b' : '#0083b0', color: 'white', padding: '0.2rem 0.6rem', borderRadius: '10px', fontSize: '0.8rem', fontWeight: 'bold', whiteSpace: 'nowrap' }}>
-                            {stageInfo.label}
+                    <div className="gravity-hud-bottom-row">
+                        <div className="stat-item level-display">
+                            <div className="level-badge" style={{ background: stageInfo.stage === 3 ? '#ff4b2b' : '#0083b0', color: 'white', padding: '0.2rem 0.6rem', borderRadius: '10px', fontSize: '0.8rem', fontWeight: 'bold', whiteSpace: 'nowrap' }}>
+                                {stageInfo.label}
+                            </div>
+                        </div>
+                        <div className="stat-item">
+                            <div key={coins} className="coin-pill coin-pop" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '1.2rem', fontWeight: 'bold', color: '#ffd700', textShadow: '1px 1px 2px rgba(0,0,0,0.5)' }}>
+                                <img src="/icons/gold_coin.png" alt="coin" className="global-coin" style={{ width: '28px', filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.3))' }} /> {coins}
+                            </div>
                         </div>
                     </div>
                 </div>

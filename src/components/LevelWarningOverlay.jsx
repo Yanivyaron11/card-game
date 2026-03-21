@@ -5,22 +5,23 @@ import { playSound } from '../utils/sounds';
 function LevelWarningOverlay({ level, onComplete, language }) {
     useEffect(() => {
         if (level === 1) {
-            playSound('siren');
-            setTimeout(() => playSound('boss_drum'), 800);
+            playSound('epic_chord_1');
+            setTimeout(() => playSound('timpani_strike_1'), 1500); // Swell apex at 1.5s
         } else if (level === 2) {
-            playSound('siren');
-            setTimeout(() => playSound('boss_drum'), 800);
+            playSound('epic_chord_2');
+            setTimeout(() => playSound('timpani_strike_2'), 1000); // Swell apex at 1.0s, darker A minor tone
         } else if (level === 3) {
-            playSound('siren');
-            setTimeout(() => playSound('boss_drum'), 600);
-            setTimeout(() => playSound('boss_drum'), 1200);
+            playSound('epic_chord_3');
+            setTimeout(() => playSound('timpani_strike_3'), 500); // Aggressive fast swell at 0.5s, D minor sub-bass!
+            setTimeout(() => playSound('timpani_strike_3'), 1500);
+            setTimeout(() => playSound('timpani_strike_3'), 2500); // Triple strike!
         } else if (level === 'WIN') {
             playSound('win_fanfare');
         }
 
         const t = setTimeout(() => {
             if (onComplete) onComplete();
-        }, level === 'WIN' ? 6000 : 3500);
+        }, level === 'WIN' ? 6000 : 5000); // 5 seconds for normal bosses, 6 for win
 
         return () => clearTimeout(t);
     }, [level, onComplete]);
