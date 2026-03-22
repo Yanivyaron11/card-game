@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
+import { getSoundEnabled, setSoundEnabled } from '../utils/sounds';
+import { translations } from '../data/translations';
 import './TicTacToeBoard.css';
 
 export default function TicTacToeBoard({
@@ -12,7 +14,15 @@ export default function TicTacToeBoard({
     onGameOver,
     onQuit
 }) {
+    const t = translations[language];
     const [board, setBoard] = useState(Array(9).fill(null));
+    const [soundOn, setSoundOn] = useState(getSoundEnabled());
+
+    const toggleSound = () => {
+        const newState = !soundOn;
+        setSoundEnabled(newState);
+        setSoundOn(newState);
+    };
 
     // Sync board with deck updates
     useEffect(() => {
@@ -53,13 +63,17 @@ export default function TicTacToeBoard({
     const p2Avatar = config?.avatars?.[2] || avatars?.[2];
 
     const p1Display = p1Avatar?.image ? (
-        <img src={p1Avatar.image} alt="p1" style={{ width: '50px', height: '50px', objectFit: 'contain', filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }} />
+        <div style={{ width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img src={p1Avatar.image} alt="p1" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.4)' }} />
+        </div>
     ) : (
         <span className="player-avatar-emoji">{p1Avatar?.emoji || '🔴'}</span>
     );
 
     const p2Display = p2Avatar?.image ? (
-        <img src={p2Avatar.image} alt="p2" style={{ width: '50px', height: '50px', objectFit: 'contain', filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }} />
+        <div style={{ width: '100%', height: '100%', borderRadius: '50%', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img src={p2Avatar.image} alt="p2" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.4)' }} />
+        </div>
     ) : (
         <span className="player-avatar-emoji">{p2Avatar?.emoji || '🔵'}</span>
     );
@@ -67,27 +81,42 @@ export default function TicTacToeBoard({
     return (
         <div className="tictactoe-board-container" data-testid="tictactoe-board">
             <div className="game-controls">
-                <button className="control-btn quit-btn" onClick={onQuit}>✕</button>
+                <button className="control-btn" onClick={toggleSound}>
+                    {soundOn ? '🔊' : '🔇'}
+                </button>
+                <button className="control-btn quit-btn" onClick={onQuit}>
+                    {t.quit_game} ✕
+                </button>
             </div>
 
-            <div className="tictactoe-header glass-panel">
-                <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`}>
-                    {p1Display}
-                </div>
-                <div className="vs-badge">VS</div>
-                <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`}>
-                    {p2Display}
+            <div className="stats-header glass-panel multi-mode" style={{ marginBottom: '1.5rem', marginTop: '0.5rem', alignSelf: 'center', width: '100%', padding: '0.5rem 1rem' }}>
+                <div className="multiplayer-stats" style={{ justifyContent: 'space-between', width: '100%', margin: 0, gap: '0.5rem' }}>
+                    <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
+                        {p1Display}
+                    </div>
+
+                    <div className="vs-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.3rem' }}>
+                        <div className="level-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', padding: '0.3rem clamp(0.5rem, 2.5vw, 1.5rem)' }}>
+                            <span style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)' }}>⭕</span>
+                            <span style={{ fontWeight: 'bold', whiteSpace: 'nowrap', fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>{language === 'he' ? 'איקס עיגול' : 'Tic-Tac-Toe'}</span>
+                        </div>
+                        <div className="vs-text" style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)' }}>VS</div>
+                    </div>
+
+                    <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
+                        {p2Display}
+                    </div>
                 </div>
             </div>
 
-            <div className="tictactoe-grid glass-panel mt-6 p-4">
+            <div className="tictactoe-grid glass-panel mt-2 p-4">
                 {deck.slice(0, 9).map((card, idx) => {
                     // Override card symbol for rendering
                     const displayCard = { ...card };
                     if (displayCard.isSolved) {
                         const ownerAvatar = config.avatars?.[displayCard.owner];
                         if (ownerAvatar?.image) {
-                            displayCard.ownerSymbol = <img src={ownerAvatar.image} alt="avatar" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '10px', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.4))' }} />;
+                            displayCard.ownerSymbol = <img src={ownerAvatar.image} alt="avatar" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.4)', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.4))' }} />;
                         } else {
                             displayCard.ownerSymbol = ownerAvatar?.emoji || (displayCard.owner === 1 ? '❌' : '⭕');
                         }

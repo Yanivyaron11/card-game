@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
+    max-width: 480px;
     margin: 0 auto;
     min-height: 100vh;
-    padding: 1rem;
-    padding-top: calc(env(safe-area-inset-top) + 1rem);
+    padding: 0.5rem 1rem 1rem 1rem;
     box-sizing: border-box;
+}
+
+.tictactoe-board-container .game-controls {
+    margin-bottom: 0.5rem;
 }
 
 .tictactoe-header {
@@ -18,7 +21,7 @@
     border-radius: 16px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -96,4 +99,46 @@
 .tictactoe-cell .card.player-2 .card-back {
     background: rgba(51, 204, 255, 0.2) !important;
     border: 2px solid #33ccff !important;
+}
+
+.tictactoe-header .player-box {
+    flex: none;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tictactoe-header .player-avatar-emoji {
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (min-width: 768px) {
+    .tictactoe-header .player-box {
+        width: 90px;
+        height: 90px;
+    }
+
+    .tictactoe-header .player-avatar-emoji {
+        font-size: 4.5rem;
+    }
+
+    .tictactoe-cell .owner-symbol {
+        font-size: 8rem;
+    }
+
+    .tictactoe-cell .owner-symbol img {
+        transform: scale(1.15);
+    }
 }
