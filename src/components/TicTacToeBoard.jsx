@@ -49,8 +49,20 @@ export default function TicTacToeBoard({
         }
     }, [deck, onGameOver]);
 
-    const p1Emoji = avatars?.[1]?.emoji || '🔴';
-    const p2Emoji = avatars?.[2]?.emoji || '🔵';
+    const p1Avatar = config?.avatars?.[1] || avatars?.[1];
+    const p2Avatar = config?.avatars?.[2] || avatars?.[2];
+
+    const p1Display = p1Avatar?.image ? (
+        <img src={p1Avatar.image} alt="p1" style={{ width: '50px', height: '50px', objectFit: 'contain', filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }} />
+    ) : (
+        <span className="player-avatar-emoji">{p1Avatar?.emoji || '🔴'}</span>
+    );
+
+    const p2Display = p2Avatar?.image ? (
+        <img src={p2Avatar.image} alt="p2" style={{ width: '50px', height: '50px', objectFit: 'contain', filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }} />
+    ) : (
+        <span className="player-avatar-emoji">{p2Avatar?.emoji || '🔵'}</span>
+    );
 
     return (
         <div className="tictactoe-board-container" data-testid="tictactoe-board">
@@ -60,11 +72,11 @@ export default function TicTacToeBoard({
 
             <div className="tictactoe-header glass-panel">
                 <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`}>
-                    <span className="player-avatar-emoji">{p1Emoji}</span>
+                    {p1Display}
                 </div>
                 <div className="vs-badge">VS</div>
                 <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`}>
-                    <span className="player-avatar-emoji">{p2Emoji}</span>
+                    {p2Display}
                 </div>
             </div>
 
