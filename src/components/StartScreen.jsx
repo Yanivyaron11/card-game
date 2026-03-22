@@ -258,7 +258,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
             setAlertConfig({ isOpen: true, message: t.select_avatar, icon: '👤' });
             return;
         }
-        if (gameMode === '1v1' && (!selectedAvatars[1] || !selectedAvatars[2])) {
+        if ((gameMode === '1v1' || gameMode === 'tictactoe') && (!selectedAvatars[1] || !selectedAvatars[2])) {
             setAlertConfig({ isOpen: true, message: t.select_avatars_1v1, icon: '👥' });
             return;
         }
@@ -278,7 +278,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
     const handleAvatarSelect = (avatar, playerNum) => {
         playSound('pop');
         setSelectedAvatars(prev => {
-            if (gameMode === '1v1') {
+            if (gameMode === '1v1' || gameMode === 'tictactoe') {
                 if (playerNum === 1 && prev[2]?.id === avatar.id) return prev;
                 if (playerNum === 2 && prev[1]?.id === avatar.id) return prev;
             }
@@ -365,6 +365,12 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                             <span className="mode-reward-badge"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {t.reward_survival}</span>
                         </div>
                     </button>
+                    <button className={`mode-btn ${gameMode === 'tictactoe' ? 'active' : ''}`} onClick={() => handleModeChange('tictactoe')} data-testid="start-tictactoe">
+                        <span className="mode-title">⭕ {t.tictactoe || 'Tic-Tac-Toe'}</span>
+                        <div className="mode-info">
+                            <span className="mode-reward-badge">⚔️ {t.v1 || '1v1'}</span>
+                        </div>
+                    </button>
                 </div>
             </div>
 
@@ -415,7 +421,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                             </div>
                         </div>
                     </div>
-                    {gameMode === '1v1' && (
+                    {(gameMode === '1v1' || gameMode === 'tictactoe') && (
                         <div className="avatar-player-section">
                             <h4>{language === 'he' ? 'שחקן 2' : 'Player 2'}</h4>
                             <div className="avatar-slider-wrapper">
@@ -440,12 +446,14 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
 
             {gameMode !== 'survival' && gameMode !== 'endless' && (
                 <>
-                    <div className="config-section">
-                        <h3>{t.choose_size}</h3>
-                        <div className="grid-options">
-                            {[9, 16, 25].map(s => <button key={s} className={`grid-btn ${gridSize === s ? 'active' : ''}`} onClick={() => setGridSize(s)} data-testid={`grid-size-${s}`}><span dir="ltr">{Math.sqrt(s)} x {Math.sqrt(s)}</span></button>)}
+                    {gameMode !== 'tictactoe' && (
+                        <div className="config-section">
+                            <h3>{t.choose_size}</h3>
+                            <div className="grid-options">
+                                {[9, 16, 25].map(s => <button key={s} className={`grid-btn ${gridSize === s ? 'active' : ''}`} onClick={() => setGridSize(s)} data-testid={`grid-size-${s}`}><span dir="ltr">{Math.sqrt(s)} x {Math.sqrt(s)}</span></button>)}
+                            </div>
                         </div>
-                    </div>
+                    )}
                     <div className="config-section">
                         <h3>{t.choose_difficulty}</h3>
                         <div className="diff-options">

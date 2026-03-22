@@ -98,7 +98,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
             if (randomMsg) {
                 feedbackMessageRef.current = randomMsg
-                    .replace('{name}', avatar?.name[language] || "")
+                    .replace('{name}', avatar?.name?.[language] || "")
                     .replace('{n}', currentStreak);
             } else {
                 feedbackMessageRef.current = "";
@@ -424,56 +424,58 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     })}
                 </div>
 
-                <div className="quiz-footer">
-                    <div className="powerup-section">
-                        <h4>{t.powerups}</h4>
-                        <div className="powerup-buttons">
-                            <button
-                                className={`powerup-btn half ${((gameMode === 'survival' ? usedSurvivalPowerups['5050'] : coins < 2) || (card.eliminatedIndices?.length > 0) || isAnswering) ? 'locked' : ''}`}
-                                onClick={handle5050}
-                                disabled={(gameMode === 'survival' ? usedSurvivalPowerups['5050'] : coins < 2) || (card.eliminatedIndices?.length > 0) || isAnswering}
-                            >
-                                <span className="icon">🌓</span>
-                                <span className="name">{t.powerup_5050}</span>
-                                <span className="cost">
-                                    {gameMode === 'survival'
-                                        ? (usedSurvivalPowerups['5050'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
-                                        : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 2</>}
-                                </span>
-                            </button>
-
-                            {card.level >= 3 && (
+                {gameMode !== 'tictactoe' && (
+                    <div className="quiz-footer">
+                        <div className="powerup-section">
+                            <h4>{t.powerups}</h4>
+                            <div className="powerup-buttons">
                                 <button
-                                    className={`powerup-btn hint ${((gameMode === 'survival' ? usedSurvivalPowerups['hint'] : coins < 1) || card.isHintVisible || isAnswering) ? 'locked' : ''}`}
-                                    onClick={handleHint}
-                                    disabled={(gameMode === 'survival' ? usedSurvivalPowerups['hint'] : coins < 1) || card.isHintVisible || isAnswering}
+                                    className={`powerup-btn half ${((gameMode === 'survival' ? usedSurvivalPowerups['5050'] : coins < 2) || (card.eliminatedIndices?.length > 0) || isAnswering) ? 'locked' : ''}`}
+                                    onClick={handle5050}
+                                    disabled={(gameMode === 'survival' ? usedSurvivalPowerups['5050'] : coins < 2) || (card.eliminatedIndices?.length > 0) || isAnswering}
                                 >
-                                    <span className="icon">💡</span>
-                                    <span className="name">{t.powerup_hint}</span>
+                                    <span className="icon">🌓</span>
+                                    <span className="name">{t.powerup_5050}</span>
                                     <span className="cost">
                                         {gameMode === 'survival'
-                                            ? (usedSurvivalPowerups['hint'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
-                                            : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 1</>}
+                                            ? (usedSurvivalPowerups['5050'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
+                                            : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 2</>}
                                     </span>
                                 </button>
-                            )}
 
-                            <button
-                                className={`powerup-btn solve ${((gameMode === 'survival' ? usedSurvivalPowerups['solve'] : coins < 5) || isAnswering) ? 'locked' : ''}`}
-                                onClick={handleSolve}
-                                disabled={(gameMode === 'survival' ? usedSurvivalPowerups['solve'] : coins < 5) || isAnswering}
-                            >
-                                <span className="icon">⚡</span>
-                                <span className="name">{t.powerup_solve}</span>
-                                <span className="cost">
-                                    {gameMode === 'survival'
-                                        ? (usedSurvivalPowerups['solve'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
-                                        : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 5</>}
-                                </span>
-                            </button>
+                                {card.level >= 3 && (
+                                    <button
+                                        className={`powerup-btn hint ${((gameMode === 'survival' ? usedSurvivalPowerups['hint'] : coins < 1) || card.isHintVisible || isAnswering) ? 'locked' : ''}`}
+                                        onClick={handleHint}
+                                        disabled={(gameMode === 'survival' ? usedSurvivalPowerups['hint'] : coins < 1) || card.isHintVisible || isAnswering}
+                                    >
+                                        <span className="icon">💡</span>
+                                        <span className="name">{t.powerup_hint}</span>
+                                        <span className="cost">
+                                            {gameMode === 'survival'
+                                                ? (usedSurvivalPowerups['hint'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
+                                                : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 1</>}
+                                        </span>
+                                    </button>
+                                )}
+
+                                <button
+                                    className={`powerup-btn solve ${((gameMode === 'survival' ? usedSurvivalPowerups['solve'] : coins < 5) || isAnswering) ? 'locked' : ''}`}
+                                    onClick={handleSolve}
+                                    disabled={(gameMode === 'survival' ? usedSurvivalPowerups['solve'] : coins < 5) || isAnswering}
+                                >
+                                    <span className="icon">⚡</span>
+                                    <span className="name">{t.powerup_solve}</span>
+                                    <span className="cost">
+                                        {gameMode === 'survival'
+                                            ? (usedSurvivalPowerups['solve'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
+                                            : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 5</>}
+                                    </span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
             </div>
 
             {isPaused && (

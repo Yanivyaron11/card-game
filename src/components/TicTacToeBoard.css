@@ -1,0 +1,99 @@
+.tictactoe-board-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 1rem;
+    padding-top: calc(env(safe-area-inset-top) + 1rem);
+    box-sizing: border-box;
+}
+
+.tictactoe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.tictactoe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.tictactoe-cell {
+    width: 100%;
+    height: 100%;
+}
+
+.tictactoe-cell .card {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+}
+
+.tictactoe-cell .card-inner {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.owner-symbol {
+    font-size: 4.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    animation: popClaim 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.owner-symbol.p1 {
+    color: #ff3366;
+    filter: drop-shadow(0 0 10px rgba(255, 51, 102, 0.6));
+}
+
+.owner-symbol.p2 {
+    color: #33ccff;
+    filter: drop-shadow(0 0 10px rgba(51, 204, 255, 0.6));
+}
+
+@keyframes popClaim {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.tictactoe-cell .card.solved .card-inner,
+.tictactoe-cell .card.failed .card-inner {
+    transform: none !important;
+}
+
+.tictactoe-cell .card.player-1 .card-back {
+    background: rgba(255, 51, 102, 0.2) !important;
+    border: 2px solid #ff3366 !important;
+}
+
+.tictactoe-cell .card.player-2 .card-back {
+    background: rgba(51, 204, 255, 0.2) !important;
+    border: 2px solid #33ccff !important;
+}

@@ -14,6 +14,7 @@ import { playSound, playMusic, stopMusic } from './utils/sounds'
 import Confetti from './components/Confetti'
 import Rain from './components/Rain'
 import GravityBoard from './components/GravityBoard'
+import TicTacToeBoard from './components/TicTacToeBoard'
 import './App.css'
 
 import InstallPrompt from './components/InstallPrompt'
@@ -523,6 +524,11 @@ function App() {
       setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
       setGameState('topic_selection');
       navigate('/play');
+    } else if (config.gameMode === 'tictactoe') {
+      setTimeLeft(0);
+      setDeck(generateDeck(9, config.topics, config.difficulty));
+      setGameState('playing'); // Skip topic selection wait
+      navigate('/play');
     }
 
     setCurrentPlayer(1);
@@ -957,7 +963,7 @@ function App() {
           card.id === cardId ? { ...card, isSolved: true, owner: currentPlayer } : card
         );
 
-        if (gameConfig.gameMode === '1v1') {
+        if (gameConfig.gameMode === '1v1' || gameConfig.gameMode === 'tictactoe') {
           const card = prev.find(c => c.id === cardId);
           // Rebound only if: failed once before (by opponent), NOT tainted, and > 2 options
           const isEligibleForRebound = card &&
@@ -968,6 +974,8 @@ function App() {
           const points = isEligibleForRebound ? 2 : 1;
           const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + points };
           setScores(newScores);
+          setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+        } else if (gameConfig.gameMode === 'tictactoe') {
           setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
         }
 
@@ -994,39 +1002,43 @@ function App() {
           return;
         }
       } else {
-        // 1v1: Pure point race. No heart deduction.
-        const cardRef = deck.find(c => c.id === cardId);
-        const newFailedCount = (cardRef?.failedAttempts || 0) + 1;
-        const isBinary = cardRef?.options?.he?.length <= 2;
-        const shouldLockImmediately = isBinary || cardRef?.isTainted;
-        const willFail = shouldLockImmediately || newFailedCount >= 2;
+        if (gameConfig.gameMode === '1v1' || gameConfig.gameMode === 'tictactoe') {
 
-        if (!willFail) {
-          answeringRef.current.delete(cardId);
-        }
+          // 1v1 and TicTacToe: Pure point race. No heart deduction.
+          const cardRef = deck.find(c => c.id === cardId);
+          const newFailedCount = (cardRef?.failedAttempts || 0) + 1;
+          const isTictactoe = gameConfig.gameMode === 'tictactoe';
+          const isBinary = cardRef?.options?.he?.length <= 2;
+          const shouldLockImmediately = (isBinary || cardRef?.isTainted) && !isTictactoe;
+          const willFail = shouldLockImmediately || (newFailedCount >= 2 && !isTictactoe);
 
-        setDeck(prev => {
-          const newDeck = prev.map(card => {
-            if (card.id === cardId) {
-              const currentFailedCount = (card.failedAttempts || 0) + 1;
-              const currentIsBinary = card.options.he.length <= 2;
-              const currentShouldLock = currentIsBinary || card.isTainted;
+          if (!willFail) {
+            answeringRef.current.delete(cardId);
+          }
 
-              return {
-                ...card,
-                failedAttempts: currentFailedCount,
-                lastFailedPlayer: currentPlayer,
-                isFailed: currentShouldLock || currentFailedCount >= 2
-              };
-            }
-            return card;
+          setDeck(prev => {
+            const newDeck = prev.map(card => {
+              if (card.id === cardId) {
+                const currentFailedCount = (card.failedAttempts || 0) + 1;
+                const currentIsBinary = card.options.he.length <= 2;
+                const currentShouldLock = (currentIsBinary || card.isTainted) && !isTictactoe;
+
+                return {
+                  ...card,
+                  failedAttempts: currentFailedCount,
+                  lastFailedPlayer: currentPlayer,
+                  isFailed: isTictactoe ? false : (currentShouldLock || currentFailedCount >= 2)
+                };
+              }
+              return card;
+            });
+            return newDeck;
           });
-          return newDeck;
-        });
 
-        // Always switch turn on wrong answer in 1v1
-        setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
-        setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+          // Always switch turn on wrong answer in 1v1
+          setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
+          setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+        }
       }
     }
 
@@ -1221,6 +1233,28 @@ function App() {
                 setGameState('victory');
                 navigate('/result');
               }}
+            />
+          ) : gameConfig.gameMode === 'tictactoe' ? (
+            <TicTacToeBoard
+              config={gameConfig}
+              deck={deck || []}
+              avatars={gameConfig.avatars}
+              currentPlayer={currentPlayer}
+              language={language}
+              onCardSelected={(id) => navigate(`/quiz/${id}`)}
+              onGameOver={(winnerId) => {
+                if (winnerId) {
+                  const winAward = 25;
+                  setTotalCoins(prev => prev + winAward);
+                  setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + winAward }));
+                  playSound('victory');
+                } else {
+                  playSound('game_over');
+                }
+                setGameState('victory');
+                navigate('/result');
+              }}
+              onQuit={handleReturnToStart}
             />
           ) : (
             <GameBoard

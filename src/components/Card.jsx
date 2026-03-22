@@ -8,7 +8,8 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars }) {
         card.failedAttempts === 1 &&
         card.lastFailedPlayer === currentPlayer;
 
-    const isEligibleForRebound = card.options &&
+    const isEligibleForRebound = gameMode !== 'tictactoe' &&
+        card.options &&
         card.options.he.length > 2 &&
         card.failedAttempts === 1 &&
         !card.isTainted;
@@ -33,15 +34,24 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars }) {
                             <span className="rebound-emoji">{rebounderEmoji}</span> {t.rebound_badge}
                         </div>
                     )}
-                    <div className="pattern">
+                    <div className="pattern" style={(card.isSolved || card.isFailed) && gameMode === 'tictactoe' ? { position: 'absolute', top: '4px', right: '4px', fontSize: '1.5rem', opacity: 1, zIndex: 20, filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))', margin: 0, transition: 'all 0.4s' } : {}}>
                         {card.topicIcon}
                     </div>
+                    {(card.isSolved || card.isFailed) && gameMode === 'tictactoe' && card.ownerSymbol && (
+                        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 10 }}>
+                            <span className={`owner-symbol p${card.owner}`}>{card.ownerSymbol}</span>
+                        </div>
+                    )}
                 </div>
 
                 {/* Card Front (Solved or Failed state) */}
                 <div className="card-front glass-panel">
                     <div className="status-indicator">
-                        {card.isSolved ? <span className="check">✅</span> : <span className="cross">❌</span>}
+                        {card.ownerSymbol ? (
+                            <span className={`owner-symbol p${card.owner}`}>{card.ownerSymbol}</span>
+                        ) : (
+                            card.isSolved ? <span className="check">✅</span> : <span className="cross">❌</span>
+                        )}
                     </div>
                 </div>
             </div>
