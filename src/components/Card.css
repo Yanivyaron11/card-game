@@ -64,7 +64,7 @@
 }
 
 .card-back {
-    background: linear-gradient(135deg, var(--secondary) 0%, #2b9e96 100%);
+    background: linear-gradient(135deg, #0f766e 0%, #022c22 100%);
     border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -78,7 +78,7 @@
 }
 
 .pattern {
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
     opacity: 1;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
@@ -115,7 +115,7 @@
 }
 
 .status-indicator {
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
 }
 
 .super-answer-badge {
@@ -180,9 +180,7 @@
     }
 
     .pattern {
-        font-size: 1.2rem !important;
-        top: 2px !important;
-        right: 2px !important;
+        font-size: clamp(2rem, 10vw, 3.5rem) !important;
     }
 
     .shield-badge {
