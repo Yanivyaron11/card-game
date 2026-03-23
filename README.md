@@ -24,7 +24,8 @@ A fun, interactive, and educational card game designed for children and trivia l
 - **Multi-Game Modes**:
   - **Solo**: Relaxed play at your own pace.
   - **Time Attack**: Race against a global countdown with a dedicated time-centered UI.
-  - **1v1 Mastery**: Battle a friend with a shared coin bank and a **Rebound** system—if they fail, you can swoop in for double points!
+  - **1v1 Mastery**: Battle a friend with a shared coin bank and a **Rebound** system—if they fail, you can swoop in for double points! Includes a **Thief (Sabotage)** mechanic to steal and reset an opponent's conquered card once per game.
+  - **Tic-Tac-Toe**: Classic 3x3 strategy with a twist. Answer questions to claim a square. Includes the **Thief** mechanic to break an opponent's winning line!
 - **Power-up System**: Spend your hard-earned coins for high-stakes help:
   - **🌓 50/50**: Eliminates two wrong answers.
   - **💡 Hint**: Provides a contextual clue.
