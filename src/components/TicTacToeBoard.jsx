@@ -10,6 +10,10 @@ export default function TicTacToeBoard({
     avatars,
     currentPlayer,
     language,
+    thiefAvailable,
+    isThiefModeActive,
+    onThiefToggle,
+    onThiefAction,
     onCardSelected,
     onGameOver,
     onQuit
@@ -70,6 +74,9 @@ export default function TicTacToeBoard({
         }
     }, [deck, onGameOver]);
 
+    const hasCardP1 = deck.some(c => c.owner === 1);
+    const hasCardP2 = deck.some(c => c.owner === 2);
+
     const p1Avatar = config?.avatars?.[1] || avatars?.[1];
     const p2Avatar = config?.avatars?.[2] || avatars?.[2];
 
@@ -102,8 +109,20 @@ export default function TicTacToeBoard({
 
             <div className="stats-header glass-panel multi-mode" style={{ marginBottom: '1.5rem', marginTop: '0.5rem', alignSelf: 'center', width: '100%', padding: '0.5rem 1rem' }}>
                 <div className="multiplayer-stats" style={{ justifyContent: 'space-between', width: '100%', margin: 0, gap: '0.5rem' }}>
-                    <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
-                        {p1Display}
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                        <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
+                            {p1Display}
+                        </div>
+                        {thiefAvailable && (
+                            <button
+                                className={`thief-btn ${currentPlayer === 1 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
+                                disabled={currentPlayer !== 1 || !thiefAvailable[1] || !hasCardP2}
+                                onClick={() => currentPlayer === 1 && hasCardP2 ? onThiefToggle() : null}
+                                style={{ fontSize: '0.8rem', padding: '0.2rem 0.5rem', borderRadius: '12px', background: thiefAvailable[1] && hasCardP2 ? (currentPlayer === 1 ? 'var(--primary)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', opacity: thiefAvailable[1] && hasCardP2 ? 1 : 0.5, cursor: currentPlayer === 1 && thiefAvailable[1] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                            >
+                                🥷 {t.thief_button}
+                            </button>
+                        )}
                     </div>
 
                     <div className="vs-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.3rem' }}>
@@ -114,8 +133,20 @@ export default function TicTacToeBoard({
                         <div className="vs-text" style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)' }}>VS</div>
                     </div>
 
-                    <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
-                        {p2Display}
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                        <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
+                            {p2Display}
+                        </div>
+                        {thiefAvailable && (
+                            <button
+                                className={`thief-btn ${currentPlayer === 2 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
+                                disabled={currentPlayer !== 2 || !thiefAvailable[2] || !hasCardP1}
+                                onClick={() => currentPlayer === 2 && hasCardP1 ? onThiefToggle() : null}
+                                style={{ fontSize: '0.8rem', padding: '0.2rem 0.5rem', borderRadius: '12px', background: thiefAvailable[2] && hasCardP1 ? (currentPlayer === 2 ? 'var(--secondary)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', opacity: thiefAvailable[2] && hasCardP1 ? 1 : 0.5, cursor: currentPlayer === 2 && thiefAvailable[2] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                            >
+                                🥷 {t.thief_button}
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
@@ -133,14 +164,21 @@ export default function TicTacToeBoard({
                         }
                     }
                     const isWinningCard = winningLine && winningLine.includes(idx);
+                    const targetableByThief = isThiefModeActive && displayCard.isSolved && displayCard.owner && displayCard.owner !== currentPlayer;
+
                     return (
-                        <div key={card.id} className={`tictactoe-cell ${isWinningCard ? 'winning-pulse' : ''}`}>
+                        <div key={card.id} className={`tictactoe-cell ${isWinningCard ? 'winning-pulse' : ''} ${targetableByThief ? 'targetable-thief' : ''}`}
+                            onClick={() => {
+                                if (isThiefModeActive) {
+                                    if (targetableByThief) onThiefAction(card.id);
+                                    return; // ignore clicks on other cards during thief mode
+                                }
+                                if (card.isSolved) return;
+                                onCardSelected(card.id);
+                            }}>
                             <Card
                                 card={displayCard}
-                                onClick={() => {
-                                    if (card.isSolved) return;
-                                    onCardSelected(card.id);
-                                }}
+                                onClick={() => { }} // Click handled by parent div now
                                 currentPlayer={currentPlayer}
                                 gameMode="tictactoe"
                                 language={language}

@@ -1,7 +1,7 @@
 import { translations } from '../data/translations';
 import './Card.css';
 
-function Card({ card, onClick, currentPlayer, gameMode, language, avatars }) {
+function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapperClass = '' }) {
     const t = translations[language];
     // Simple card that only displays topic and solved status
     const isBlocked = gameMode === '1v1' &&
@@ -22,7 +22,7 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars }) {
 
     return (
         <div
-            className={`card ${card.isSolved ? 'solved' : ''} ${card.isFailed ? 'failed' : ''} ${isBlocked ? 'blocked' : ''} ${ownerClass}`}
+            className={`card ${card.isSolved ? 'solved' : ''} ${card.isFailed ? 'failed' : ''} ${isBlocked ? 'blocked' : ''} ${ownerClass} ${wrapperClass}`}
             onPointerDown={isBlocked ? null : onClick}
             {...((!card.isSolved && !card.isFailed && !isBlocked) ? { 'data-testid': 'click-card' } : {})}
         >

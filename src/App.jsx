@@ -113,6 +113,8 @@ function App() {
   const [newRecordToast, setNewRecordToast] = useState(null);
   const [bestScore, setBestScore] = useState(0);
   const [rewardToast, setRewardToast] = useState(null);
+  const [thiefAvailable, setThiefAvailable] = useState({ 1: true, 2: true });
+  const [isThiefModeActive, setIsThiefModeActive] = useState(false);
   const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '100', 10));
   const recordNotifiedRef = useRef(false);
   const titleClickRef = useRef(0);
@@ -536,6 +538,8 @@ function App() {
     setStreaks({ 1: 0, 2: 0 });
     setMaxStreaks({ 1: 0, 2: 0 });
     setAwardedStreaks({ 1: [], 2: [] });
+    setThiefAvailable({ 1: true, 2: true });
+    setIsThiefModeActive(false);
     setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0, spent: 0 });
     setGameState('playing');
   };
@@ -760,6 +764,58 @@ function App() {
   const handleGravityPauseStateChange = useCallback((isPaused) => {
     isGravityPausedRef.current = isPaused;
   }, []);
+
+  const handleThiefAction = useCallback((cardId) => {
+    if (!thiefAvailable[currentPlayer]) return;
+
+    playSound('swoosh'); // Sneaky action sound
+
+    if (gameConfig.gameMode === '1v1') {
+      const card = deck.find(c => c.id === cardId);
+      if (card && card.owner) {
+        setScores(prev => ({
+          ...prev,
+          [card.owner]: Math.max(0, prev[card.owner] - 1)
+        }));
+      }
+    }
+
+    setDeck(prev => {
+      return prev.map(card => {
+        if (card.id === cardId && card.owner && card.owner !== currentPlayer) {
+          const newCardPool = generateDeck(1, gameConfig.topics, gameConfig.difficulty);
+          const replacement = newCardPool[0];
+
+          return {
+            ...card,
+            isSolved: false,
+            isFailed: false,
+            owner: null,
+            ownerSymbol: null,
+            failedAttempts: 0,
+            lastFailedPlayer: null,
+            isTainted: false,
+            questionId: replacement.id,
+            text: replacement.he || replacement.en,
+            options: replacement.options,
+            correctAnswer: replacement.correctAnswer,
+            topicColor: replacement.topicColor,
+            topicIcon: replacement.topicIcon,
+            hint: replacement.hint,
+            category: replacement.category,
+            emoji: replacement.emoji,
+            level: replacement.level
+          };
+        }
+        return card;
+      });
+    });
+
+    setThiefAvailable(prev => ({ ...prev, [currentPlayer]: false }));
+    setIsThiefModeActive(false);
+    setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
+    setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+  }, [thiefAvailable, currentPlayer, gameConfig, deck]);
 
   const handleAnswer = useCallback((cardId, isCorrect, fromQuiz = false) => {
     if (answeringRef.current.has(cardId)) return;
@@ -1250,6 +1306,10 @@ function App() {
               avatars={gameConfig.avatars}
               currentPlayer={currentPlayer}
               language={language}
+              thiefAvailable={thiefAvailable}
+              isThiefModeActive={isThiefModeActive}
+              onThiefToggle={() => setIsThiefModeActive(!isThiefModeActive)}
+              onThiefAction={handleThiefAction}
               onCardSelected={(id) => navigate(`/quiz/${id}`)}
               onGameOver={(winnerId) => {
                 if (winnerId) {
@@ -1277,6 +1337,10 @@ function App() {
               currentPlayer={currentPlayer}
               scores={scores}
               timeLeft={timeLeft}
+              thiefAvailable={thiefAvailable}
+              isThiefModeActive={isThiefModeActive}
+              onThiefToggle={() => setIsThiefModeActive(!isThiefModeActive)}
+              onThiefAction={handleThiefAction}
               onCardSelected={(id) => navigate(`/quiz/${id}`)}
               onQuit={handleReturnToStart}
             />

@@ -133,6 +133,7 @@ export const translations = {
         rule_streak: "Maximum Streak Bonus: Streak of 3-4 = +5 Coins, 5+ = +10 Coins",
         rule_time_attack: "Time Attack: Regular per-question coins (1-3) + remaining seconds converted to coin bonus!",
         rule_tictactoe: "Tic-Tac-Toe: Winning awards 10/20/30 coins based on difficulty (no per-question or streak points).",
+        rule_thief: "Thief (1v1 & Tic-Tac-Toe): Usable once per game, only if you've solved at least one card. Steal & reset an opponent's card, costing your turn.",
         rule_survival_record: "New Survival Record: +20 coins (Topic Track: +10)",
         rule_survival_completion: "Survival Completion: Junior +30 / Master +50 / Topic +40",
         rule_survival_focused: "Topic Track: Earn ½ coins compared to regular tracks (easier mode)",
@@ -157,6 +158,7 @@ export const translations = {
         owned: "Owned",
         topic_shop_title: "Theme Shop",
         shop: "Shop",
+        thief_button: "Thief",
     },
 
 
@@ -318,5 +320,6 @@ export const translations = {
         owned: "בבעלותך",
         topic_shop_title: "חנות ערכות נושא",
         shop: "חנות",
+        thief_button: "גנב",
     }
 };

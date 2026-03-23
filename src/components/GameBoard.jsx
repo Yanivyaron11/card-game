@@ -7,11 +7,14 @@ import { markQuestionAsSeen } from '../utils/deck';
 import QuitConfirmModal from './QuitConfirmModal';
 import './GameBoard.css';
 
-function GameBoard({ config, deck, lives, coins, language, onCardSelected, currentPlayer, scores, timeLeft, onQuit }) {
+function GameBoard({ config, deck, lives, coins, language, onCardSelected, currentPlayer, scores, timeLeft, onQuit, thiefAvailable, isThiefModeActive, onThiefToggle, onThiefAction }) {
     const t = translations[language];
     const navigate = useNavigate();
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
     const [isQuitModalOpen, setIsQuitModalOpen] = useState(false);
+
+    const hasCardP1 = deck.some(c => c.owner === 1);
+    const hasCardP2 = deck.some(c => c.owner === 2);
 
     const handleCardClick = (card) => {
         if (card.isSolved || card.isFailed) return;
@@ -106,6 +109,16 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                 ) : (language === 'he' ? 'שחקן 1' : 'Player 1')}
                             </div>
                             <div className="player-score-value">{t.score}: {scores[1]}</div>
+                            {config.gameMode === '1v1' && thiefAvailable && (
+                                <button
+                                    className={`thief-btn ${currentPlayer === 1 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
+                                    disabled={currentPlayer !== 1 || !thiefAvailable[1] || !hasCardP2}
+                                    onClick={(e) => { e.stopPropagation(); currentPlayer === 1 && hasCardP2 ? onThiefToggle() : null; }}
+                                    style={{ marginTop: '0.4rem', fontSize: '0.8rem', padding: '0.2rem 0.5rem', borderRadius: '12px', background: thiefAvailable[1] && hasCardP2 ? (currentPlayer === 1 ? 'var(--primary)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', opacity: thiefAvailable[1] && hasCardP2 ? 1 : 0.5, cursor: currentPlayer === 1 && thiefAvailable[1] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                >
+                                    🥷 {t.thief_button}
+                                </button>
+                            )}
                             {config.gameMode !== '1v1' && (
                                 <div className="p-hearts">
                                     {Array.from({ length: Math.max(0, (lives[1] || 0)) }).map((_, i) => (
@@ -140,6 +153,16 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                                 ) : (language === 'he' ? 'שחקן 2' : 'Player 2')}
                             </div>
                             <div className="player-score-value">{t.score}: {scores[2]}</div>
+                            {config.gameMode === '1v1' && thiefAvailable && (
+                                <button
+                                    className={`thief-btn ${currentPlayer === 2 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
+                                    disabled={currentPlayer !== 2 || !thiefAvailable[2] || !hasCardP1}
+                                    onClick={(e) => { e.stopPropagation(); currentPlayer === 2 && hasCardP1 ? onThiefToggle() : null; }}
+                                    style={{ marginTop: '0.4rem', fontSize: '0.8rem', padding: '0.2rem 0.5rem', borderRadius: '12px', background: thiefAvailable[2] && hasCardP1 ? (currentPlayer === 2 ? 'var(--secondary)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', opacity: thiefAvailable[2] && hasCardP1 ? 1 : 0.5, cursor: currentPlayer === 2 && thiefAvailable[2] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                >
+                                    🥷 {t.thief_button}
+                                </button>
+                            )}
                             {config.gameMode !== '1v1' && (
                                 <div className="p-hearts">
                                     {Array.from({ length: Math.max(0, (lives[2] || 0)) }).map((_, i) => (
@@ -168,17 +191,27 @@ function GameBoard({ config, deck, lives, coins, language, onCardSelected, curre
                 className={`card-grid size-${gridCols} glass-panel`}
                 style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)` }}
             >
-                {deck.map(card => (
-                    <Card
-                        key={card.id}
-                        card={card}
-                        language={language}
-                        onClick={() => handleCardClick(card)}
-                        currentPlayer={currentPlayer}
-                        gameMode={config.gameMode}
-                        avatars={config.avatars}
-                    />
-                ))}
+                {deck.map(card => {
+                    const targetableByThief = isThiefModeActive && card.isSolved && card.owner && card.owner !== currentPlayer;
+                    return (
+                        <Card
+                            key={card.id}
+                            card={card}
+                            language={language}
+                            wrapperClass={targetableByThief ? 'targetable-thief' : ''}
+                            onClick={() => {
+                                if (isThiefModeActive) {
+                                    if (targetableByThief) onThiefAction(card.id);
+                                    return; // Consume click if thief mode is active
+                                }
+                                handleCardClick(card);
+                            }}
+                            currentPlayer={currentPlayer}
+                            gameMode={config.gameMode}
+                            avatars={config.avatars}
+                        />
+                    );
+                })}
             </div>
             <QuitConfirmModal
                 isOpen={isQuitModalOpen}
