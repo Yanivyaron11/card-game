@@ -25,8 +25,12 @@ export default function TicTacToeBoard({
         setSoundOn(newState);
     };
 
+    const gameOverTriggered = React.useRef(false);
+
     // Sync board with deck updates
     useEffect(() => {
+        if (gameOverTriggered.current) return;
+
         const newBoard = Array(9).fill(null);
         let allClaimed = true;
         for (let i = 0; i < 9; i++) {
@@ -49,19 +53,19 @@ export default function TicTacToeBoard({
 
         for (const [a, b, c] of lines) {
             if (newBoard[a] && newBoard[a] === newBoard[b] && newBoard[a] === newBoard[c]) {
-                if (!winningLine) {
-                    setWinningLine([a, b, c]);
-                    if (soundOn) {
-                        playSound('victory');
-                    }
-                    setTimeout(() => onGameOver(newBoard[a]), 5000); // 5 second delay for celebration
+                gameOverTriggered.current = true;
+                setWinningLine([a, b, c]);
+                if (soundOn) {
+                    playSound('victory');
                 }
+                setTimeout(() => onGameOver(newBoard[a]), 5000); // 5 second delay for celebration
                 return;
             }
         }
 
         // Check Tie
         if (allClaimed) {
+            gameOverTriggered.current = true;
             setTimeout(() => onGameOver(null), 500);
         }
     }, [deck, onGameOver]);
