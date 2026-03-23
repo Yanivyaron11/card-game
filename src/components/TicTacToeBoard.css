@@ -11,6 +11,9 @@
 
 .tictactoe-board-container .game-controls {
     margin-bottom: 0.5rem;
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
 }
 
 .tictactoe-header {
