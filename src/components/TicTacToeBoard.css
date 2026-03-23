@@ -126,8 +126,7 @@
 
 @media (min-width: 768px) {
     .tictactoe-board-container {
-        max-width: 400px;
-        /* Make the board smaller on desktop as requested */
+        max-width: 540px;
     }
 
     .tictactoe-header .player-box {
