@@ -403,7 +403,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
                 <div className="quiz-options">
                     {card.options[language].map((opt, i) => {
-                        const showCorrect = (gameMode !== '1v1') || (selectedAnswer === card.correctAnswer) || (card.failedAttempts >= 1);
+                        const showCorrect = (gameMode !== '1v1' && gameMode !== 'tictactoe') || (selectedAnswer === card.correctAnswer) || (card.failedAttempts >= 1 && gameMode === '1v1');
                         const className = [
                             "quiz-option-btn",
                             isAnswering && Number(i) === Number(card.correctAnswer) && showCorrect ? 'correct' : '',

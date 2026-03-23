@@ -627,6 +627,9 @@ function App() {
       return;
     }
 
+    // TicTacToe is handled completely within TicTacToeBoard.jsx, including its own win/tie conditions and delays.
+    if (gameConfig.gameMode === 'tictactoe') return;
+
     if (allCardsProcessed) {
       applyStreakBonuses();
       if (solvedCount > deck.length / 2) {
@@ -946,17 +949,23 @@ function App() {
       const newStreaks = { ...streaks, [currentPlayer]: (streaks[currentPlayer] || 0) + 1 };
       const currentStreak = newStreaks[currentPlayer];
 
-      // Track Max Streak
-      if (currentStreak > (maxStreaks[currentPlayer] || 0)) {
-        setMaxStreaks(prev => ({ ...prev, [currentPlayer]: currentStreak }));
-      }
+      if (gameConfig.gameMode !== 'tictactoe') {
+        // Track Max Streak
+        if (currentStreak > (maxStreaks[currentPlayer] || 0)) {
+          setMaxStreaks(prev => ({ ...prev, [currentPlayer]: currentStreak }));
+        }
 
-      setTotalCoins(prev => prev + coinAward);
-      setSessionCoinBreakdown(prev => ({
-        ...prev,
-        base: prev.base + coinAward
-      }));
-      setStreaks(newStreaks);
+        setTotalCoins(prev => prev + coinAward);
+        setSessionCoinBreakdown(prev => ({
+          ...prev,
+          base: prev.base + coinAward
+        }));
+        setStreaks(newStreaks);
+      } else {
+        // In tictactoe, we just track the win, no streaks or point farming.
+        // We still need to record streaks=0 implicitly or just not update it. 
+        // We can leave streaks alone to disable streak toasts.
+      }
 
       setDeck(prev => {
         const newDeck = prev.map(card =>
@@ -1244,11 +1253,13 @@ function App() {
               onCardSelected={(id) => navigate(`/quiz/${id}`)}
               onGameOver={(winnerId) => {
                 if (winnerId) {
-                  const winAward = 25;
+                  const winAward = Number(gameConfig.difficulty || 1) * 10;
+                  setScores({ [winnerId]: 1, [winnerId === 1 ? 2 : 1]: 0 });
                   setTotalCoins(prev => prev + winAward);
                   setSessionCoinBreakdown(prev => ({ ...prev, bonus: prev.bonus + winAward }));
-                  playSound('victory');
+                  playSound('victory_level'); // Epic victory sound
                 } else {
+                  setScores({ 1: 0, 2: 0 }); // Tie
                   playSound('game_over');
                 }
                 setGameState('victory');
@@ -1330,7 +1341,7 @@ function App() {
               let isWinner = gameState === 'victory';
               let isQuit = gameState === 'quit';
 
-              if (gameConfig.gameMode !== '1v1') {
+              if (gameConfig.gameMode !== '1v1' && gameConfig.gameMode !== 'tictactoe') {
                 displayAvatar = gameConfig.avatars[1];
                 if (!displayAvatar) return null;
 
@@ -1451,7 +1462,7 @@ function App() {
 
             {/* Mode-specific content */}
             <div className="result-content">
-              {gameState === 'quit' ? null : gameConfig?.gameMode === '1v1' ? (
+              {gameState === 'quit' ? null : (gameConfig?.gameMode === '1v1' || gameConfig?.gameMode === 'tictactoe') ? (
                 <p>
                   {scores[1] > scores[2]
                     ? t.player_wins.replace('{name}', '') // Name is shown under avatar now
@@ -1459,8 +1470,12 @@ function App() {
                       ? t.player_wins.replace('{name}', '') // Name is shown under avatar now
                       : t.draw
                   }
-                  <br />
-                  {t.score}: {scores[1]} - {scores[2]}
+                  {gameConfig?.gameMode === '1v1' && (
+                    <>
+                      <br />
+                      {t.score}: {scores[1]} - {scores[2]}
+                    </>
+                  )}
                 </p>
               ) : gameConfig?.gameMode === 'survival' || gameConfig?.gameMode === 'endless' ? (
                 <SurvivalResult

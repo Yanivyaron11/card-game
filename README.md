@@ -64,6 +64,7 @@ Smarty features a robust rewarding system to keep children engaged:
   - Grid 4x4: **+20🪙**
   - Grid 5x5: **+30🪙**
 - **Time Attack Bonus**: Remaining time is converted into coins upon victory (1s = 1🪙).
+- **Tic-Tac-Toe**: Winning a game of Tic-Tac-Toe awards 10/20/30 coins depending on the chosen difficulty. No per-question or streak coins are awarded.
 - **Daily Bonus**: Log in daily to receive a **+20🪙** login gift.
 
 ## 🛠️ Technology Stack

@@ -15,6 +15,7 @@ function EarningGuideModal({ isOpen, onClose, language }) {
                 { icon: '🎯', text: t.rule_level_2 },
                 { icon: '🎯', text: t.rule_level_3 },
                 { icon: '⏱️', text: t.rule_time_attack },
+                { icon: '⭕', text: t.rule_tictactoe },
                 { icon: '☄️', text: t.rule_endless_1 }
             ]
         },

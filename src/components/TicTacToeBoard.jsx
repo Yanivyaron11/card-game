@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
-import { getSoundEnabled, setSoundEnabled } from '../utils/sounds';
+import { getSoundEnabled, setSoundEnabled, playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
 import './TicTacToeBoard.css';
 
@@ -16,6 +16,7 @@ export default function TicTacToeBoard({
 }) {
     const t = translations[language];
     const [board, setBoard] = useState(Array(9).fill(null));
+    const [winningLine, setWinningLine] = useState(null);
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
 
     const toggleSound = () => {
@@ -48,7 +49,13 @@ export default function TicTacToeBoard({
 
         for (const [a, b, c] of lines) {
             if (newBoard[a] && newBoard[a] === newBoard[b] && newBoard[a] === newBoard[c]) {
-                setTimeout(() => onGameOver(newBoard[a]), 500);
+                if (!winningLine) {
+                    setWinningLine([a, b, c]);
+                    if (soundOn) {
+                        playSound('victory');
+                    }
+                    setTimeout(() => onGameOver(newBoard[a]), 5000); // 5 second delay for celebration
+                }
                 return;
             }
         }
@@ -121,8 +128,9 @@ export default function TicTacToeBoard({
                             displayCard.ownerSymbol = ownerAvatar?.emoji || (displayCard.owner === 1 ? '❌' : '⭕');
                         }
                     }
+                    const isWinningCard = winningLine && winningLine.includes(idx);
                     return (
-                        <div key={card.id} className="tictactoe-cell">
+                        <div key={card.id} className={`tictactoe-cell ${isWinningCard ? 'winning-pulse' : ''}`}>
                             <Card
                                 card={displayCard}
                                 onClick={() => {
