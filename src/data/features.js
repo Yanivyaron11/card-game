@@ -50,5 +50,18 @@ export const features = [
         },
         icon: '🛍️',
         newUntil: '2026-04-13'
+    },
+    {
+        id: 'tictactoe_mode',
+        title: {
+            en: 'Tic-Tac-Toe Mode!',
+            he: 'מצב איקס עיגול!'
+        },
+        description: {
+            en: 'Play the classic game combined with trivia. Answer questions correctly to claim squares and use Thief & Shield to outsmart your opponent!',
+            he: 'שחקו במשחק הקלאסי משולב עם טריוויה. ענו נכון כדי לכבוש משבצות והשתמשו בגנב ובמגן כדי להערים על היריב!'
+        },
+        icon: '⭕',
+        newUntil: '2026-04-30'
     }
 ];

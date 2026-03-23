@@ -28,8 +28,6 @@ function EarningGuideModal({ isOpen, onClose, language }) {
                 { icon: '🌋', text: t.rule_endless_5 },
                 { icon: '👑', text: t.rule_endless_6 },
                 { icon: '🔥', text: t.rule_streak },
-                { icon: '🥷', text: t.rule_thief },
-                { icon: '🛡️', text: t.rule_shield },
                 { icon: '🏆', text: t.rule_survival_record },
                 { icon: '🎉', text: t.rule_survival_completion },
                 { icon: '🧩', text: t.rule_board_completion },
@@ -41,6 +39,13 @@ function EarningGuideModal({ isOpen, onClose, language }) {
             title: t.rules_section_penalties,
             rules: [
                 { icon: '🛑', text: t.rule_quit_penalty }
+            ]
+        },
+        {
+            title: t.rules_section_mechanics || 'Special Mechanics',
+            rules: [
+                { icon: '🥷', text: t.rule_thief },
+                { icon: '🛡️', text: t.rule_shield }
             ]
         }
     ];
