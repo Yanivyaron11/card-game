@@ -559,16 +559,16 @@
 
 
     .card-grid {
-        gap: 3px;
-        padding: 0 !important;
-        max-width: none;
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
+        gap: 4px;
+        padding: 0.5rem !important;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .card-grid.size-5 {
         gap: 2px;
-        padding: 0px !important;
+        padding: 0.2rem !important;
     }
 
     .card-grid.size-5 .pattern {
