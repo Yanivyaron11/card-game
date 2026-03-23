@@ -250,3 +250,23 @@
         box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
     }
 }
+
+/* Tic-Tac-Toe smaller shield */
+.shield-badge.tictactoe-badge {
+    width: 24px;
+    height: 24px;
+    font-size: 0.85rem;
+    bottom: 3px;
+    right: 3px;
+}
+
+@media (max-width: 600px) {
+    .shield-badge.tictactoe-badge {
+        width: 16px;
+        height: 16px;
+        font-size: 0.6rem;
+        bottom: 2px;
+        right: 2px;
+        border-width: 1px;
+    }
+}

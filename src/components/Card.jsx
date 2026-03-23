@@ -10,7 +10,7 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
 
     const isEligibleForRebound = gameMode !== 'tictactoe' &&
         card.options &&
-        card.options.he.length > 2 &&
+        (card.options.he?.length > 2 || card.options.en?.length > 2) &&
         card.failedAttempts === 1 &&
         !card.isTainted;
 
@@ -29,7 +29,7 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
         >
             <div className={`card-inner ${card.isSolved || card.isFailed ? 'flipped' : ''} ${isBlocked ? 'shake-locked' : ''}`}>
                 {card.isShielded && (
-                    <div className="shield-badge">🛡️</div>
+                    <div className={`shield-badge ${gameMode === 'tictactoe' ? 'tictactoe-badge' : ''}`}>🛡️</div>
                 )}
                 {/* Card Back (Default state) */}
                 <div className="card-back glass-panel">
@@ -38,9 +38,11 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
                             <span className="rebound-emoji">{rebounderEmoji}</span> {t.rebound_badge}
                         </div>
                     )}
-                    <div className="pattern" style={(card.isSolved || card.isFailed) && gameMode === 'tictactoe' ? { position: 'absolute', top: '4px', right: '4px', fontSize: '1.5rem', opacity: 1, zIndex: 20, filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))', margin: 0, transition: 'all 0.4s', pointerEvents: 'none' } : {}}>
-                        {card.topicIcon}
-                    </div>
+                    {!((card.isSolved || card.isFailed) && gameMode === 'tictactoe') && (
+                        <div className="pattern">
+                            {card.topicIcon}
+                        </div>
+                    )}
                     {(card.isSolved || card.isFailed) && gameMode === 'tictactoe' && card.ownerSymbol && (
                         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 10 }}>
                             <span className={`owner-symbol p${card.owner}`}>{card.ownerSymbol}</span>

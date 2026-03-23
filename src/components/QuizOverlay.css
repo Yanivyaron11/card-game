@@ -1051,3 +1051,32 @@
         transform: rotate(360deg);
     }
 }
+
+/* Long text handling for Desktop */
+@media (min-width: 601px) {
+    .quiz-card.mode-tictactoe {
+        height: auto;
+        min-height: 400px;
+        max-height: 85vh;
+    }
+
+    .quiz-card.long-text-mode .quiz-question {
+        font-size: 1.25rem !important;
+        line-height: 1.35;
+    }
+
+    .quiz-card.long-text-mode .option-text {
+        font-size: 1.05rem !important;
+        line-height: 1.25;
+    }
+
+    .quiz-card.long-text-mode .quiz-emoji {
+        font-size: 2rem !important;
+        margin-bottom: 0.2rem;
+    }
+
+    .quiz-card.long-text-mode .quiz-option-btn {
+        min-height: 48px;
+        padding: 0.6rem 0.8rem;
+    }
+}

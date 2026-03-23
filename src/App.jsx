@@ -792,6 +792,8 @@ function App() {
       }
     }
 
+    answeringRef.current.delete(cardId);
+
     setDeck(prev => {
       return prev.map(card => {
         if (card.id === cardId && card.owner && card.owner !== currentPlayer) {
@@ -808,7 +810,7 @@ function App() {
             lastFailedPlayer: null,
             isTainted: false,
             questionId: replacement.id,
-            text: replacement.he || replacement.en,
+            text: replacement.text,
             options: replacement.options,
             correctAnswer: replacement.correctAnswer,
             topicColor: replacement.topicColor,
@@ -842,12 +844,19 @@ function App() {
     playSound('correct'); // Satisfying "protected" sound
     setShieldAvailable(prev => ({ ...prev, [currentPlayer]: false }));
     setIsShieldModeActive(false);
-    // Does NOT switch turn
+
+    // Using the shield consumes the turn
+    setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
+    setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
   }, [shieldAvailable, currentPlayer]);
 
   const handleAnswer = useCallback((cardId, isCorrect, fromQuiz = false) => {
     if (answeringRef.current.has(cardId)) return;
     answeringRef.current.add(cardId);
+
+    // Safety reset in case user toggled an action but changed their mind instead of taking it
+    setIsShieldModeActive(false);
+    setIsThiefModeActive(false);
 
     if (gameConfig?.gameMode === 'endless') {
       const { col, row, nextDeckIndex } = endlessTargetRef.current || {};
@@ -1052,29 +1061,35 @@ function App() {
       }
 
       setDeck(prev => {
-        const newDeck = prev.map(card =>
-          card.id === cardId ? { ...card, isSolved: true, owner: currentPlayer } : card
-        );
+        try {
+          const newDeck = prev.map(card =>
+            card.id === cardId ? { ...card, isSolved: true, owner: currentPlayer } : card
+          );
 
-        if (gameConfig.gameMode === '1v1' || gameConfig.gameMode === 'tictactoe') {
-          const card = prev.find(c => c.id === cardId);
-          // Rebound only if: failed once before (by opponent), NOT tainted, and > 2 options
-          const isEligibleForRebound = card &&
-            card.failedAttempts === 1 &&
-            !card.isTainted &&
-            card.options.he.length > 2;
+          if (gameConfig.gameMode === '1v1' || gameConfig.gameMode === 'tictactoe') {
+            const card = prev.find(c => c.id === cardId);
+            // Rebound only if: failed once before (by opponent), NOT tainted, and > 2 options
+            const isEligibleForRebound = card &&
+              card.failedAttempts === 1 &&
+              !card.isTainted &&
+              (card.options?.he?.length > 2 || card.options?.en?.length > 2);
 
-          const points = isEligibleForRebound ? 2 : 1;
-          const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + points };
-          setScores(newScores);
-          setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
-        } else if (gameConfig.gameMode === 'tictactoe') {
-          setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+            const points = isEligibleForRebound ? 2 : 1;
+            const newScores = { ...scores, [currentPlayer]: scores[currentPlayer] + points };
+            setScores(newScores);
+            setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+          } else if (gameConfig.gameMode === 'tictactoe') {
+            setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+          }
+
+          return newDeck;
+        } catch (err) {
+          console.error("[handleAnswer] Error in setDeck updater (isCorrect path):", err);
+          return prev;
         }
-
-        return newDeck;
       });
     } else {
+      console.log("[handleAnswer] Wrong answer received for card:", cardId);
       if (gameConfig.gameMode === 'solo' || gameConfig.gameMode === 'time_attack' || gameConfig.gameMode === 'survival') {
         const newPlayerLives = lives[currentPlayer] - 1;
         setLives(prev => ({ ...prev, [currentPlayer]: newPlayerLives }));
@@ -1096,38 +1111,50 @@ function App() {
         }
       } else {
         if (gameConfig.gameMode === '1v1' || gameConfig.gameMode === 'tictactoe') {
+          console.log("[handleAnswer] Processing wrong answer for 1v1/tictactoe");
 
           // 1v1 and TicTacToe: Pure point race. No heart deduction.
           const cardRef = deck.find(c => c.id === cardId);
           const newFailedCount = (cardRef?.failedAttempts || 0) + 1;
           const isTictactoe = gameConfig.gameMode === 'tictactoe';
-          const isBinary = cardRef?.options?.he?.length <= 2;
+          const optionsArray = cardRef?.options?.he || cardRef?.options?.en || [];
+          const isBinary = optionsArray.length <= 2;
           const shouldLockImmediately = (isBinary || cardRef?.isTainted) && !isTictactoe;
           const willFail = shouldLockImmediately || (newFailedCount >= 2 && !isTictactoe);
 
           if (!willFail) {
+            console.log("[handleAnswer] Rebound mode activated. Unlocking answering ref.");
             answeringRef.current.delete(cardId);
+          } else {
+            console.log("[handleAnswer] Card will fail completely.");
           }
 
           setDeck(prev => {
-            const newDeck = prev.map(card => {
-              if (card.id === cardId) {
-                const currentFailedCount = (card.failedAttempts || 0) + 1;
-                const currentIsBinary = card.options.he.length <= 2;
-                const currentShouldLock = (currentIsBinary || card.isTainted) && !isTictactoe;
+            try {
+              const newDeck = prev.map(card => {
+                if (card.id === cardId) {
+                  const currentFailedCount = (card.failedAttempts || 0) + 1;
+                  const currentOptionsArray = card.options?.he || card.options?.en || [];
+                  const currentIsBinary = currentOptionsArray.length <= 2;
+                  const currentShouldLock = (currentIsBinary || card.isTainted) && !isTictactoe;
 
-                return {
-                  ...card,
-                  failedAttempts: currentFailedCount,
-                  lastFailedPlayer: currentPlayer,
-                  isFailed: isTictactoe ? false : (currentShouldLock || currentFailedCount >= 2)
-                };
-              }
-              return card;
-            });
-            return newDeck;
+                  return {
+                    ...card,
+                    failedAttempts: currentFailedCount,
+                    lastFailedPlayer: currentPlayer,
+                    isFailed: isTictactoe ? false : (currentShouldLock || currentFailedCount >= 2)
+                  };
+                }
+                return card;
+              });
+              return newDeck;
+            } catch (err) {
+              console.error("[handleAnswer] Error in setDeck updater (!isCorrect path):", err);
+              return prev;
+            }
           });
 
+          console.log("[handleAnswer] Switching turn and resetting streaks.");
           // Always switch turn on wrong answer in 1v1
           setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
           setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
@@ -1164,6 +1191,7 @@ function App() {
 
     // If we didn't navigate to /result, go back to /play
     if (location.pathname.startsWith('/quiz')) {
+      console.log("[handleAnswer] Attempting to navigate back to /play from:", location.pathname);
       navigate('/play');
     }
   }, [gameConfig, survivalCorrect, deck, applyStreakBonuses, navigate, streaks, currentPlayer, maxStreaks, scores, location.pathname, currentSurvivalIndex]);

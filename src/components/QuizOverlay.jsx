@@ -80,8 +80,13 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     if (!card) return null;
 
     const handleOptionClick = (index) => {
-        if (!isReady || isAnswering || (card.eliminatedIndices || []).includes(index)) return;
+        if (!isReady || isAnswering || (card.eliminatedIndices || []).includes(index)) {
+            console.log("[QuizOverlay] option ignored. isReady:", isReady, "isAnswering:", isAnswering);
+            return;
+        }
         if (timerRef.current) clearInterval(timerRef.current);
+
+        console.log("[QuizOverlay] Option clicked:", index, "Correct answer is:", card.correctAnswer);
 
         setIsAnswering(true);
         setSelectedAnswer(index);
@@ -108,7 +113,13 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         playSound(isCorrect ? 'correct' : 'wrong');
 
         setTimeout(() => {
-            onAnswer(card.id, isCorrect, true);
+            console.log("[QuizOverlay] Timeout finished. Calling onAnswer with correct:", isCorrect);
+            try {
+                onAnswer(card.id, isCorrect, true);
+                console.log("[QuizOverlay] onAnswer call completed successfully.");
+            } catch (err) {
+                console.error("[QuizOverlay] Error during onAnswer execution:", err);
+            }
         }, 1500);
     };
 
@@ -191,6 +202,12 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const optionLabelsHe = ['א', 'ב', 'ג', 'ד'];
     const labels = language === 'he' ? optionLabelsHe : optionLabelsEn;
 
+    const currentQuestionText = card.text[language] || card.text.en || '';
+    const currentOptions = card.options[language] || card.options.en || [];
+    const isLongText = currentQuestionText.length > 40 || currentOptions.some(opt => opt.length > 20);
+
+    console.log("[QuizOverlay] Rendering, isAnswering:", isAnswering, "selectedAnswer:", selectedAnswer);
+
     return (
         <div className="quiz-overlay-backdrop" data-testid="quiz-overlay">
             {!isReady && (
@@ -201,7 +218,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 />
             )}
             <div
-                className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''} mode-${gameMode}`}
+                className={`quiz-card glass-panel ${language === 'he' ? 'rtl' : ''} ${!isReady ? 'not-ready' : ''} mode-${gameMode} ${isLongText ? 'long-text-mode' : ''}`}
                 data-testid="quiz-card"
                 data-ready={isReady}
             >
@@ -382,7 +399,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     )}
 
 
-                    {gameMode === '1v1' && card.failedAttempts === 1 && !card.isTainted && card.options.he.length > 2 && (
+                    {gameMode === '1v1' && card.failedAttempts === 1 && !card.isTainted && (card.options.he?.length > 2 || card.options.en?.length > 2) && (
                         <div className="super-answer-indicator">
                             🚀 {t.rebound}
                         </div>
@@ -402,7 +419,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 </div>
 
                 <div className="quiz-options">
-                    {card.options[language].map((opt, i) => {
+                    {(card.options[language] || card.options.en || []).map((opt, i) => {
                         const showCorrect = (gameMode !== '1v1' && gameMode !== 'tictactoe') || (selectedAnswer === card.correctAnswer) || (card.failedAttempts >= 1 && gameMode === '1v1');
                         const className = [
                             "quiz-option-btn",
