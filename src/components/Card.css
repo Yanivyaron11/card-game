@@ -162,7 +162,11 @@
 }
 
 /* Mobile adjustments */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .card {
+        max-width: none;
+    }
+
     .super-answer-badge {
         font-size: 0.55rem;
         padding: 1px 5px;

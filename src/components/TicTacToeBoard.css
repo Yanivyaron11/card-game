@@ -142,3 +142,18 @@
         transform: scale(1.15);
     }
 }
+
+@media (max-width: 600px) {
+    .tictactoe-board-container {
+        padding: 0.5rem;
+        /* Give it a little breathing room instead of 0 */
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        /* Simple reliable centering */
+    }
+
+    .tictactoe-grid {
+        gap: 6px;
+    }
+}

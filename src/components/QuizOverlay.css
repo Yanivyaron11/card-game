@@ -17,20 +17,24 @@
 
 .quiz-card {
     width: 100%;
-    max-width: 550px;
-    height: 85vh;
+    max-width: 480px;
+    /* Reduced window width from 550px */
+    height: 80vh;
+    /* Reduced window height from 85vh */
     /* Consistent height */
-    max-height: 800px;
+    max-height: 550px;
+    /* Reduced window max-height from 800px */
     background: rgba(255, 255, 255, 0.92) !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.6);
     color: var(--text-dark);
-    padding: 1.2rem 1.5rem;
+    padding: 1.5rem 2rem;
+    /* Give components a bit more breathing room on desktop */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 0.6rem;
+    gap: 0.8rem;
     overflow-y: auto;
     border-radius: 24px;
     animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -59,9 +63,11 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #f1f5f9;
-    padding-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    /* Reduced from 0.6rem */
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
+    /* Reduced from 0.5rem */
 }
 
 .header-right-group {
@@ -459,8 +465,9 @@
 
 
 .quiz-question {
-    font-size: 1.4rem;
-    line-height: 1.2;
+    font-size: 2rem;
+    /* Increased font size for question on desktop */
+    line-height: 1.3;
     margin: 0;
 }
 
@@ -576,7 +583,8 @@
 .quiz-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.6rem;
+    /* Reduced from 1rem */
 }
 
 .quiz-option-btn {
@@ -591,6 +599,8 @@
     text-align: left;
     transition: all 0.2s;
     box-shadow: none;
+    min-height: 60px;
+    /* Make option buttons look a bit beefier */
 }
 
 @media (hover: hover) {
@@ -658,8 +668,9 @@
 }
 
 .option-text {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    /* Increased font size for desktop options */
+    font-weight: 700;
 }
 
 .quiz-option-btn.eliminated {
@@ -677,8 +688,10 @@
     flex-direction: column;
     align-items: center;
     border-top: 2px solid #f1f5f9;
-    padding-top: 0.6rem;
-    margin-top: 0.2rem;
+    padding-top: 0.4rem;
+    /* Reduced from 0.6rem */
+    margin-top: 0;
+    /* Reduced from 0.2rem */
 }
 
 
@@ -806,11 +819,13 @@
     }
 
     .quiz-question {
-        font-size: 1.15rem;
+        font-size: 1.3rem;
+        /* Slightly larger in mobile now too */
     }
 
     .quiz-emoji {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
+        /* Slightly smaller emoji to make room */
         margin-bottom: 0.2rem;
     }
 
@@ -837,11 +852,13 @@
     }
 
     .quiz-option-btn {
-        padding: 0.7rem;
+        padding: 0.8rem;
+        min-height: 48px;
     }
 
     .option-text {
-        font-size: 0.95rem;
+        font-size: 1.15rem;
+        /* Adjust option text to be readable but smaller than desktop */
     }
 
     .quiz-stats-header {

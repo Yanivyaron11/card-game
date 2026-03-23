@@ -9,6 +9,12 @@
   overflow-x: hidden;
 }
 
+@media (max-width: 600px) {
+  .app-container {
+    padding: 0.2rem;
+  }
+}
+
 h1 {
   font-size: 1.4rem;
   text-transform: uppercase;

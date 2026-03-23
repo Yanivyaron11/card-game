@@ -212,80 +212,82 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 >
                     ✕
                 </button>
-                <div className="quiz-stats-header">
-                    {gameMode !== 'survival' && (
-                        <div className="stat-item level-display">
-                            <div className="level-badge mini">{t.level} {card.level}</div>
-                        </div>
-                    )}
-                    <div className="lives-coins-group">
-                        {gameMode !== '1v1' && gameMode !== 'endless' && (
-                            <div className="stat-item lives-display">
-                                <div className="hearts mini">
-                                    {Array.from({ length: Math.max(0, lives) }).map((_, i) => (
-                                        <span key={i} className="heart-icon mini">❤️</span>
-                                    ))}
-                                </div>
+                {gameMode !== 'tictactoe' && (
+                    <div className="quiz-stats-header">
+                        {gameMode !== 'survival' && (
+                            <div className="stat-item level-display">
+                                <div className="level-badge mini">{t.level} {card.level}</div>
                             </div>
                         )}
-                        <div className="stat-item" title={t.coins}>
-                            <div key={coins} className="coin-pill dark-mode coin-pop" data-testid="quiz-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
+                        <div className="lives-coins-group">
+                            {gameMode !== '1v1' && gameMode !== 'endless' && (
+                                <div className="stat-item lives-display">
+                                    <div className="hearts mini">
+                                        {Array.from({ length: Math.max(0, lives) }).map((_, i) => (
+                                            <span key={i} className="heart-icon mini">❤️</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                            <div className="stat-item" title={t.coins}>
+                                <div key={coins} className="coin-pill dark-mode coin-pop" data-testid="quiz-coins"><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> {coins}</div>
+                            </div>
                         </div>
-                    </div>
-                    {(gameMode === 'survival' || gameMode === 'time_attack') && (
-                        <div className="stat-item survival-progress-section">
-                            {(() => {
-                                let segmentSize, indexInLevel, percentage, levelLabel;
+                        {(gameMode === 'survival' || gameMode === 'time_attack') && (
+                            <div className="stat-item survival-progress-section">
+                                {(() => {
+                                    let segmentSize, indexInLevel, percentage, levelLabel;
 
-                                if (gameMode === 'survival') {
-                                    const cardLevel = card.level;
-                                    const isAdult = gameConfig?.survivalType === 'adult';
-                                    const isFocused = gameConfig?.survivalType === 'focused';
-                                    let offset;
+                                    if (gameMode === 'survival') {
+                                        const cardLevel = card.level;
+                                        const isAdult = gameConfig?.survivalType === 'adult';
+                                        const isFocused = gameConfig?.survivalType === 'focused';
+                                        let offset;
 
-                                    if (isAdult) {
-                                        segmentSize = cardLevel === 1 ? 5 : cardLevel === 2 ? 15 : 10;
-                                        offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 5 : 20;
-                                    } else if (isFocused) {
-                                        segmentSize = cardLevel === 1 ? 10 : cardLevel === 2 ? 10 : 10;
-                                        offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 10 : 20;
+                                        if (isAdult) {
+                                            segmentSize = cardLevel === 1 ? 5 : cardLevel === 2 ? 15 : 10;
+                                            offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 5 : 20;
+                                        } else if (isFocused) {
+                                            segmentSize = cardLevel === 1 ? 10 : cardLevel === 2 ? 10 : 10;
+                                            offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 10 : 20;
+                                        } else {
+                                            segmentSize = cardLevel === 1 ? 15 : cardLevel === 2 ? 10 : 5;
+                                            offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 15 : 25;
+                                        }
+
+                                        indexInLevel = survivalIndex - offset;
+                                        percentage = segmentSize > 0 ? Math.max(5, ((indexInLevel + 1) / segmentSize) * 100) : 0;
+                                        levelLabel = `${t.level} ${card.level}`;
                                     } else {
-                                        segmentSize = cardLevel === 1 ? 15 : cardLevel === 2 ? 10 : 5;
-                                        offset = cardLevel === 1 ? 0 : cardLevel === 2 ? 15 : 25;
+                                        segmentSize = deck.length;
+                                        indexInLevel = deck.filter(c => c.isSolved || c.isFailed).length;
+                                        percentage = segmentSize > 0 ? Math.max(5, ((indexInLevel + 1) / segmentSize) * 100) : 0;
+                                        levelLabel = '⏱️';
                                     }
 
-                                    indexInLevel = survivalIndex - offset;
-                                    percentage = segmentSize > 0 ? Math.max(5, ((indexInLevel + 1) / segmentSize) * 100) : 0;
-                                    levelLabel = `${t.level} ${card.level}`;
-                                } else {
-                                    segmentSize = deck.length;
-                                    indexInLevel = deck.filter(c => c.isSolved || c.isFailed).length;
-                                    percentage = segmentSize > 0 ? Math.max(5, ((indexInLevel + 1) / segmentSize) * 100) : 0;
-                                    levelLabel = '⏱️';
-                                }
-
-                                return (
-                                    <>
-                                        <div className="survival-progress-bar-wrapper">
-                                            <div
-                                                className="survival-progress-fill"
-                                                style={{ width: `${percentage}%` }}
-                                            />
-                                            <div className="survival-progress-text-overlay">
-                                                <span className="survival-progress-text" dir="ltr">
-                                                    {indexInLevel + 1} / {segmentSize}
-                                                </span>
+                                    return (
+                                        <>
+                                            <div className="survival-progress-bar-wrapper">
+                                                <div
+                                                    className="survival-progress-fill"
+                                                    style={{ width: `${percentage}%` }}
+                                                />
+                                                <div className="survival-progress-text-overlay">
+                                                    <span className="survival-progress-text" dir="ltr">
+                                                        {indexInLevel + 1} / {segmentSize}
+                                                    </span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="survival-level-indicator">
-                                            {levelLabel}
-                                        </div>
-                                    </>
-                                );
-                            })()}
-                        </div>
-                    )}
-                </div>
+                                            <div className="survival-level-indicator">
+                                                {levelLabel}
+                                            </div>
+                                        </>
+                                    );
+                                })()}
+                            </div>
+                        )}
+                    </div>
+                )}
 
                 <div className="quiz-header">
                     <div className="topic-info">
