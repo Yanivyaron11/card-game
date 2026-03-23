@@ -178,6 +178,21 @@
     .rebound-emoji {
         font-size: 0.95rem;
     }
+
+    .pattern {
+        font-size: 1.2rem !important;
+        top: 2px !important;
+        right: 2px !important;
+    }
+
+    .shield-badge {
+        width: 22px;
+        height: 22px;
+        font-size: 0.8rem;
+        bottom: 2px;
+        right: 2px;
+        border-width: 1px;
+    }
 }
 
 /* Shield Badge */
