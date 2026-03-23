@@ -9,23 +9,34 @@ A fun, interactive, and educational card game designed for children and trivia l
   - **Tabs**: Organized into **Avatars** and **Themes**.
   - **Purchasable Topics**: Unlock entire question categories (like **Judaism**) for a premium coin price.
   - **Persistent Unlocks**: Everything you buy is saved to your local storage.
-- **Survival Mode (Junior & Master)**:
-  - Two distinct tracks: **Junior** (🟢) and **Master** (🔴) to cater to different age groups and skill levels.
-  - **Topic Selection**: Choose specific categories even in Survival mode for a tailored challenge.
-  - Separate high-score records for each track.
+## 🎮 Game Modes Detailed
+
+- **Solo Mode (יחיד)**: 
+  - Relaxed, pace-free gameplay ideal for learning and casual play.
+  - Simply match cards and answer fun trivia questions to complete the board.
+- **1v1 Mastery Mode (1 נגד 1)**: 
+  - Head-to-head split-screen trivia battle sharing a single board and coin bank.
+  - **Rebound System (ריבאונד)**: If an opponent answers incorrectly, you have a brief window to steal their card for double points!
+  - **Thief & Shield (גנב ומגן)**: Sabotage an opponent by stealing their conquered card, or protect your cards with an unbreachable shield.
+- **Time Attack Mode (נגד השעון)**: 
+  - Race against a global countdown timer (scales by difficulty level).
+  - Forces quick thinking and rewards precision. Remaining time converts directly into bonus coins at the end!
+- **Endless Mode / Avalanche (מפולת)**:
+  - A fast-paced, continuously falling avalanche of cards similar to classic arcade match games. The board continuously grows until it crushes the top of the screen.
+  - **Real-Time Score**: Watch your active session points climb with every match.
+  - **Dynamic Bosses**: Battle against multi-hit Bosses and Gladiator enemies with custom graphical animations that block your path.
+  - **Explosive Combos**: Match Row, Column, and Cross Bombs that clear massive swaths of cards to help you survive.
+- **Survival Mode (הישרדות)**:
+  - An endurance test to see how many questions you can answer correctly in a row before running out of lives.
+  - Features three unique tracks: **Junior (🟢)** for kids, **Master (🔴)** for veterans, and **Topic Track (🎯)** to focus strictly on a single category.
+  - Tracks specific longest-correct-answer streaks.
+- **Tic-Tac-Toe Mode (איקס עיגול)**:
+  - Classic 3x3 strategy combined with trivia knowledge.
+  - Players try to get 3 in a row. You must answer a trivia question correctly to claim a square. If you fail, the square locks out!
+  - Includes the **Thief** and **Shield** mechanics to dramatically alter the endgame.
 - **Enhanced Avatars & Skins**:
   - **Professor Owl (3D)**: High-quality 3D animations for University Professor, Researcher, and Friendly Inventor skins.
   - **Dynamic Shop**: Unlock premium skins and avatars using your earned coins.
-- **Endless Mode / Avalanche (מפולת)**:
-  - A fast-paced, continuously falling avalanche of cards similar to classic arcade match games.
-  - **Real-Time Score**: Watch your active session points climb with every match, distinctly separated from your global coin bank.
-  - **Dynamic Obstacles & Bosses**: Battle against multi-hit Bosses and Gladiator enemies with custom graphical animations.
-  - **Special Blocks**: Encounter uncrackable stone blocks, explosive power-up bombs, and a strict gravity-based layout matrix beautifully adapted for both desktop and mobile.
-- **Multi-Game Modes**:
-  - **Solo**: Relaxed play at your own pace.
-  - **Time Attack**: Race against a global countdown with a dedicated time-centered UI.
-  - **1v1 Mastery**: Battle a friend with a shared coin bank and a **Rebound** system—if they fail, you can swoop in for double points! Includes a **Thief (Sabotage)** mechanic to steal and reset an opponent's conquered card once per game.
-  - **Tic-Tac-Toe**: Classic 3x3 strategy with a twist. Answer questions to claim a square. Includes the **Thief** mechanic to break an opponent's winning line!
 - **Power-up System**: Spend your hard-earned coins for high-stakes help:
   - **🌓 50/50**: Eliminates two wrong answers.
   - **💡 Hint**: Provides a contextual clue.
