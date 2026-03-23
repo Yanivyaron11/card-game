@@ -52,9 +52,10 @@
 }
 
 .grid-btn.active {
-    background: #10b981;
+    background: #059669;
     border-color: white;
     transform: scale(1.05);
+    color: #ffffff !important;
 }
 
 .diff-options {
@@ -83,11 +84,13 @@
 }
 
 .diff-btn.level-1.active {
-    background: #4ade80;
+    background: #16a34a;
+    color: #ffffff !important;
 }
 
 .diff-btn.level-2.active {
     background: #fbbf24;
+    color: #111827 !important;
 }
 
 .diff-btn.level-3.active {
@@ -129,13 +132,13 @@
 }
 
 .topic-card.selected {
-    background: #10b981;
+    background: #059669;
     border-color: white;
-    color: #0f172a;
-    /* Dark text when selected */
+    color: #ffffff;
+    /* White text when selected */
     opacity: 1;
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5);
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.5);
 }
 
 .topic-name {
@@ -151,7 +154,7 @@
 
 .topic-card.selected .topic-name,
 .topic-card.selected .topic-count {
-    color: #0f172a !important;
+    color: #ffffff !important;
 }
 
 .topic-count {
@@ -205,9 +208,10 @@
 }
 
 .mode-btn.active {
-    background: #10b981;
+    background: #059669;
     border-color: white;
     transform: scale(1.05);
+    color: #ffffff !important;
 }
 
 .mode-btn:hover {
