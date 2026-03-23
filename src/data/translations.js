@@ -133,7 +133,8 @@ export const translations = {
         rule_streak: "Maximum Streak Bonus: Streak of 3-4 = +5 Coins, 5+ = +10 Coins",
         rule_time_attack: "Time Attack: Regular per-question coins (1-3) + remaining seconds converted to coin bonus!",
         rule_tictactoe: "Tic-Tac-Toe: Winning awards 10/20/30 coins based on difficulty (no per-question or streak points).",
-        rule_thief: "Thief (1v1 & Tic-Tac-Toe): Usable once per game, only if you've solved at least one card. Steal & reset an opponent's card, costing your turn.",
+        rule_thief: "Thief (1v1 & Tic-Tac-Toe): Usable once per game, only if opponent has a solved card. Steal & reset an opponent's card, costing your turn.",
+        rule_shield: "Shield (1v1 & Tic-Tac-Toe): Usable once per game, protect one of your solved cards from the Thief permanently. Free action.",
         rule_survival_record: "New Survival Record: +20 coins (Topic Track: +10)",
         rule_survival_completion: "Survival Completion: Junior +30 / Master +50 / Topic +40",
         rule_survival_focused: "Topic Track: Earn ½ coins compared to regular tracks (easier mode)",
@@ -159,6 +160,7 @@ export const translations = {
         topic_shop_title: "Theme Shop",
         shop: "Shop",
         thief_button: "Thief",
+        shield_button: "Shield",
     },
 
 
@@ -296,6 +298,8 @@ export const translations = {
         rule_streak: "בונוס רצף מקסימלי: רצף 3-4 = +5 מטבעות, רצף 5+ = +10 מטבעות",
         rule_time_attack: "נגד השעון: מטבעות רגילים לשאלה (1-3) + כל שנייה שארית מומרת למטבע!",
         rule_tictactoe: "איקס-עיגול: ניצחון מעניק 10/20/30 מטבעות לפי רמת הקושי (ללא ניקוד על רצף או תשובות בודדות).",
+        rule_thief: "גנב (1v1 ואיקס-עיגול): אפשרי פעם במשחק, רק אם ליריב יש קלף פתוח. חוטף ומאפס קלף של היריב במקום התור שלך.",
+        rule_shield: "מגן (1v1 ואיקס-עיגול): אפשרי פעם במשחק, רק אם פתרת קלף. מגן על הקלף שלך מפני גנב לנצח, ללא איבוד תור.",
         rule_survival_record: "שיא חדש בהישרדות: בונוס 20 מטבעות (לפי נושא: +10)",
         rule_survival_completion: "סיום מסלול הישרדות: ג'וניור +30 / מאסטר +50 / לפי נושא +40",
         rule_survival_focused: "מסלול נושא: זוכים ב-½ מטבעות לעומת המסלולים הרגילים (מצב קל יותר)",
@@ -321,5 +325,6 @@ export const translations = {
         topic_shop_title: "חנות ערכות נושא",
         shop: "חנות",
         thief_button: "גנב",
+        shield_button: "מגן",
     }
 };

@@ -115,6 +115,8 @@ function App() {
   const [rewardToast, setRewardToast] = useState(null);
   const [thiefAvailable, setThiefAvailable] = useState({ 1: true, 2: true });
   const [isThiefModeActive, setIsThiefModeActive] = useState(false);
+  const [shieldAvailable, setShieldAvailable] = useState({ 1: true, 2: true });
+  const [isShieldModeActive, setIsShieldModeActive] = useState(false);
   const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '100', 10));
   const recordNotifiedRef = useRef(false);
   const titleClickRef = useRef(0);
@@ -540,6 +542,8 @@ function App() {
     setAwardedStreaks({ 1: [], 2: [] });
     setThiefAvailable({ 1: true, 2: true });
     setIsThiefModeActive(false);
+    setShieldAvailable({ 1: true, 2: true });
+    setIsShieldModeActive(false);
     setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0, spent: 0 });
     setGameState('playing');
   };
@@ -768,7 +772,15 @@ function App() {
   const handleThiefAction = useCallback((cardId) => {
     if (!thiefAvailable[currentPlayer]) return;
 
-    playSound('swoosh'); // Sneaky action sound
+    // Shield guard: if the targeted card is shielded, the thief fails silently
+    const card = deck.find(c => c.id === cardId);
+    if (card?.isShielded) {
+      playSound('wrong');
+      setIsThiefModeActive(false);
+      return;
+    }
+
+    playSound('swoosh');
 
     if (gameConfig.gameMode === '1v1') {
       const card = deck.find(c => c.id === cardId);
@@ -816,6 +828,22 @@ function App() {
     setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
     setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
   }, [thiefAvailable, currentPlayer, gameConfig, deck]);
+
+  const handleShieldAction = useCallback((cardId) => {
+    if (!shieldAvailable[currentPlayer]) return;
+
+    setDeck(prev => prev.map(card => {
+      if (card.id === cardId && card.owner === currentPlayer) {
+        return { ...card, isShielded: true };
+      }
+      return card;
+    }));
+
+    playSound('correct'); // Satisfying "protected" sound
+    setShieldAvailable(prev => ({ ...prev, [currentPlayer]: false }));
+    setIsShieldModeActive(false);
+    // Does NOT switch turn
+  }, [shieldAvailable, currentPlayer]);
 
   const handleAnswer = useCallback((cardId, isCorrect, fromQuiz = false) => {
     if (answeringRef.current.has(cardId)) return;
@@ -1308,8 +1336,18 @@ function App() {
               language={language}
               thiefAvailable={thiefAvailable}
               isThiefModeActive={isThiefModeActive}
-              onThiefToggle={() => setIsThiefModeActive(!isThiefModeActive)}
+              onThiefToggle={() => {
+                if (isShieldModeActive) setIsShieldModeActive(false);
+                setIsThiefModeActive(!isThiefModeActive);
+              }}
               onThiefAction={handleThiefAction}
+              shieldAvailable={shieldAvailable}
+              isShieldModeActive={isShieldModeActive}
+              onShieldToggle={() => {
+                if (isThiefModeActive) setIsThiefModeActive(false);
+                setIsShieldModeActive(!isShieldModeActive);
+              }}
+              onShieldAction={handleShieldAction}
               onCardSelected={(id) => navigate(`/quiz/${id}`)}
               onGameOver={(winnerId) => {
                 if (winnerId) {
@@ -1339,8 +1377,18 @@ function App() {
               timeLeft={timeLeft}
               thiefAvailable={thiefAvailable}
               isThiefModeActive={isThiefModeActive}
-              onThiefToggle={() => setIsThiefModeActive(!isThiefModeActive)}
+              onThiefToggle={() => {
+                if (isShieldModeActive) setIsShieldModeActive(false);
+                setIsThiefModeActive(!isThiefModeActive);
+              }}
               onThiefAction={handleThiefAction}
+              shieldAvailable={shieldAvailable}
+              isShieldModeActive={isShieldModeActive}
+              onShieldToggle={() => {
+                if (isThiefModeActive) setIsThiefModeActive(false);
+                setIsShieldModeActive(!isShieldModeActive);
+              }}
+              onShieldAction={handleShieldAction}
               onCardSelected={(id) => navigate(`/quiz/${id}`)}
               onQuit={handleReturnToStart}
             />

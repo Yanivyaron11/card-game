@@ -14,6 +14,10 @@ export default function TicTacToeBoard({
     isThiefModeActive,
     onThiefToggle,
     onThiefAction,
+    shieldAvailable,
+    isShieldModeActive,
+    onShieldToggle,
+    onShieldAction,
     onCardSelected,
     onGameOver,
     onQuit
@@ -113,16 +117,30 @@ export default function TicTacToeBoard({
                         <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
                             {p1Display}
                         </div>
-                        {thiefAvailable && (
-                            <button
-                                className={`thief-btn ${currentPlayer === 1 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
-                                disabled={currentPlayer !== 1 || !thiefAvailable[1] || !hasCardP2}
-                                onClick={() => currentPlayer === 1 && hasCardP2 ? onThiefToggle() : null}
-                                style={{ fontSize: '0.8rem', padding: '0.2rem 0.5rem', borderRadius: '12px', background: thiefAvailable[1] && hasCardP2 ? (currentPlayer === 1 ? 'var(--primary)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', opacity: thiefAvailable[1] && hasCardP2 ? 1 : 0.5, cursor: currentPlayer === 1 && thiefAvailable[1] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
-                            >
-                                🥷 {t.thief_button}
-                            </button>
-                        )}
+                        <div style={{ display: 'flex', gap: '0.3rem', marginTop: '0.4rem' }}>
+                            {thiefAvailable && (
+                                <button
+                                    className={`action-btn ${currentPlayer === 1 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
+                                    disabled={currentPlayer !== 1 || !thiefAvailable[1] || !hasCardP2}
+                                    onClick={() => currentPlayer === 1 && hasCardP2 ? onThiefToggle() : null}
+                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: thiefAvailable[1] && hasCardP2 ? (currentPlayer === 1 ? 'var(--primary)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: thiefAvailable[1] && hasCardP2 ? 1 : 0.5, cursor: currentPlayer === 1 && thiefAvailable[1] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    title={t.thief_button}
+                                >
+                                    🥷
+                                </button>
+                            )}
+                            {shieldAvailable && (
+                                <button
+                                    className={`action-btn ${currentPlayer === 1 && isShieldModeActive ? 'active-shield-pulse' : ''}`}
+                                    disabled={currentPlayer !== 1 || !shieldAvailable[1] || !hasCardP1}
+                                    onClick={() => currentPlayer === 1 && hasCardP1 ? onShieldToggle() : null}
+                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: shieldAvailable[1] && hasCardP1 ? (currentPlayer === 1 ? 'var(--success-color)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: shieldAvailable[1] && hasCardP1 ? 1 : 0.5, cursor: currentPlayer === 1 && shieldAvailable[1] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    title={t.shield_button || 'Shield'}
+                                >
+                                    🛡️
+                                </button>
+                            )}
+                        </div>
                     </div>
 
                     <div className="vs-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.3rem' }}>
@@ -137,16 +155,30 @@ export default function TicTacToeBoard({
                         <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
                             {p2Display}
                         </div>
-                        {thiefAvailable && (
-                            <button
-                                className={`thief-btn ${currentPlayer === 2 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
-                                disabled={currentPlayer !== 2 || !thiefAvailable[2] || !hasCardP1}
-                                onClick={() => currentPlayer === 2 && hasCardP1 ? onThiefToggle() : null}
-                                style={{ fontSize: '0.8rem', padding: '0.2rem 0.5rem', borderRadius: '12px', background: thiefAvailable[2] && hasCardP1 ? (currentPlayer === 2 ? 'var(--secondary)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', color: 'white', opacity: thiefAvailable[2] && hasCardP1 ? 1 : 0.5, cursor: currentPlayer === 2 && thiefAvailable[2] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
-                            >
-                                🥷 {t.thief_button}
-                            </button>
-                        )}
+                        <div style={{ display: 'flex', gap: '0.3rem', marginTop: '0.4rem' }}>
+                            {thiefAvailable && (
+                                <button
+                                    className={`action-btn ${currentPlayer === 2 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
+                                    disabled={currentPlayer !== 2 || !thiefAvailable[2] || !hasCardP1}
+                                    onClick={() => currentPlayer === 2 && hasCardP1 ? onThiefToggle() : null}
+                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: thiefAvailable[2] && hasCardP1 ? (currentPlayer === 2 ? 'var(--secondary)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: thiefAvailable[2] && hasCardP1 ? 1 : 0.5, cursor: currentPlayer === 2 && thiefAvailable[2] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    title={t.thief_button}
+                                >
+                                    🥷
+                                </button>
+                            )}
+                            {shieldAvailable && (
+                                <button
+                                    className={`action-btn ${currentPlayer === 2 && isShieldModeActive ? 'active-shield-pulse' : ''}`}
+                                    disabled={currentPlayer !== 2 || !shieldAvailable[2] || !hasCardP2}
+                                    onClick={() => currentPlayer === 2 && hasCardP2 ? onShieldToggle() : null}
+                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: shieldAvailable[2] && hasCardP2 ? (currentPlayer === 2 ? 'var(--success-color)' : 'rgba(255,255,255,0.1)') : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: shieldAvailable[2] && hasCardP2 ? 1 : 0.5, cursor: currentPlayer === 2 && shieldAvailable[2] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    title={t.shield_button || 'Shield'}
+                                >
+                                    🛡️
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -164,14 +196,19 @@ export default function TicTacToeBoard({
                         }
                     }
                     const isWinningCard = winningLine && winningLine.includes(idx);
-                    const targetableByThief = isThiefModeActive && displayCard.isSolved && displayCard.owner && displayCard.owner !== currentPlayer;
+                    const targetableByThief = isThiefModeActive && displayCard.isSolved && displayCard.owner && displayCard.owner !== currentPlayer && !displayCard.isShielded;
+                    const targetableByShield = isShieldModeActive && displayCard.isSolved && displayCard.owner && displayCard.owner === currentPlayer && !displayCard.isShielded;
 
                     return (
-                        <div key={card.id} className={`tictactoe-cell ${isWinningCard ? 'winning-pulse' : ''} ${targetableByThief ? 'targetable-thief' : ''}`}
+                        <div key={card.id} className={`tictactoe-cell ${isWinningCard ? 'winning-pulse' : ''} ${targetableByThief ? 'targetable-thief' : ''} ${targetableByShield ? 'targetable-shield' : ''}`}
                             onClick={() => {
                                 if (isThiefModeActive) {
                                     if (targetableByThief) onThiefAction(card.id);
                                     return; // ignore clicks on other cards during thief mode
+                                }
+                                if (isShieldModeActive) {
+                                    if (targetableByShield) onShieldAction(card.id);
+                                    return; // ignore clicks on other cards during shield mode
                                 }
                                 if (card.isSolved) return;
                                 onCardSelected(card.id);
