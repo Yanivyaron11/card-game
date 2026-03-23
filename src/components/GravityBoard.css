@@ -332,13 +332,14 @@
     }
 
     .gravity-board-wrapper {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        width: calc(100% + 2rem) !important;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100% !important;
+        box-sizing: border-box;
     }
 
     .gravity-board-container {
-        padding: 0.5rem !important;
+        padding: 0.2rem !important;
     }
 
     .gravity-hud {
