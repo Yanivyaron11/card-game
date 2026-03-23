@@ -144,7 +144,7 @@ export default function TicTacToeBoard({
                     </div>
 
                     <div className="vs-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.3rem' }}>
-                        <div className="level-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', padding: '0.3rem clamp(0.5rem, 2.5vw, 1.5rem)' }}>
+                        <div className="level-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', padding: '0.3rem clamp(0.5rem, 2.5vw, 1.5rem)', color: '#111827' }}>
                             <span style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)' }}>⭕</span>
                             <span style={{ fontWeight: 'bold', whiteSpace: 'nowrap', fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>{language === 'he' ? 'איקס עיגול' : 'Tic-Tac-Toe'}</span>
                         </div>
