@@ -24,9 +24,13 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
         <div
             className={`card ${card.isSolved ? 'solved' : ''} ${card.isFailed ? 'failed' : ''} ${isBlocked ? 'blocked' : ''} ${ownerClass} ${wrapperClass}`}
             onPointerDown={isBlocked ? null : onClick}
+            onClick={onClick}
             {...((!card.isSolved && !card.isFailed && !isBlocked) ? { 'data-testid': 'click-card' } : {})}
         >
-            <div className="card-inner">
+            <div className={`card-inner ${card.isSolved || card.isFailed ? 'flipped' : ''} ${isBlocked ? 'shake-locked' : ''}`}>
+                {card.isShielded && (
+                    <div className="shield-badge">🛡️</div>
+                )}
                 {/* Card Back (Default state) */}
                 <div className="card-back glass-panel">
                     {isEligibleForRebound && !card.isSolved && !card.isFailed && !isBlocked && (
@@ -34,7 +38,7 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
                             <span className="rebound-emoji">{rebounderEmoji}</span> {t.rebound_badge}
                         </div>
                     )}
-                    <div className="pattern" style={(card.isSolved || card.isFailed) && gameMode === 'tictactoe' ? { position: 'absolute', top: '4px', right: '4px', fontSize: '1.5rem', opacity: 1, zIndex: 20, filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))', margin: 0, transition: 'all 0.4s' } : {}}>
+                    <div className="pattern" style={(card.isSolved || card.isFailed) && gameMode === 'tictactoe' ? { position: 'absolute', top: '4px', right: '4px', fontSize: '1.5rem', opacity: 1, zIndex: 20, filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))', margin: 0, transition: 'all 0.4s', pointerEvents: 'none' } : {}}>
                         {card.topicIcon}
                     </div>
                     {(card.isSolved || card.isFailed) && gameMode === 'tictactoe' && card.ownerSymbol && (
@@ -45,7 +49,7 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
                 </div>
 
                 {/* Card Front (Solved or Failed state) */}
-                <div className="card-front glass-panel">
+                <div className="card-front glass-panel" style={{ pointerEvents: 'auto' }}>
                     <div className="status-indicator">
                         {card.ownerSymbol ? (
                             <span className={`owner-symbol p${card.owner}`}>{card.ownerSymbol}</span>

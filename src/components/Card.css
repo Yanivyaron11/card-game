@@ -179,3 +179,59 @@
         font-size: 0.95rem;
     }
 }
+
+/* Shield Badge */
+.shield-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--success-color);
+    z-index: 10;
+    animation: shieldPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes shieldPopIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Targetable by Shield */
+.targetable-shield {
+    cursor: crosshair;
+}
+
+.targetable-shield .card-front {
+    animation: shieldTargetPulse 1.5s infinite;
+    pointer-events: none;
+    /* Let parent catch the click */
+}
+
+@keyframes shieldTargetPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(76, 175, 80, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
