@@ -16,7 +16,7 @@ A fun, interactive, and educational card game designed for children and trivia l
 - **Enhanced Avatars & Skins**:
   - **Professor Owl (3D)**: High-quality 3D animations for University Professor, Researcher, and Friendly Inventor skins.
   - **Dynamic Shop**: Unlock premium skins and avatars using your earned coins.
-- **Endless Mode ("Smarty Crush")**:
+- **Endless Mode / Avalanche (מפולת)**:
   - A fast-paced, continuously falling avalanche of cards similar to classic arcade match games.
   - **Real-Time Score**: Watch your active session points climb with every match, distinctly separated from your global coin bank.
   - **Dynamic Obstacles & Bosses**: Battle against multi-hit Bosses and Gladiator enemies with custom graphical animations.
@@ -55,7 +55,7 @@ Smarty features a robust rewarding system to keep children engaged:
 - **Survival Bonuses**: 
   - New High Score: **+20🪙**.
   - Course Completion: Junior (**+30🪙**) / Master (**+50🪙**).
-- **Avalanche / Smarty Crush Bonuses**:
+- **Avalanche / Endless Mode (מפולת) Bonuses**:
   - Stage 2 (Reached at 15 Pops): **+50🪙**
   - Stage 3 (Reached at 30 Pops): **+100🪙**
   - Ultimate WIN State (Complete at 50 Pops): **+200🪙** !!
