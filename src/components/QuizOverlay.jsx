@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { playSound } from '../utils/sounds';
 import { translations } from '../data/translations';
+import { markQuestionAsSeen } from '../utils/deck';
 import QuitConfirmModal from './QuitConfirmModal';
 import { themes } from '../data/themes';
 import './QuizOverlay.css';
@@ -41,6 +42,10 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
 
     useEffect(() => {
         if (!card) return;
+
+        if (card.questionId) {
+            markQuestionAsSeen(card.questionId);
+        }
 
         const readyTimeout = setTimeout(() => setIsReady(true), 500);
 

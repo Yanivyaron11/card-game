@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import { getSoundEnabled, setSoundEnabled, playSound } from '../utils/sounds';
+import { markQuestionAsSeen } from '../utils/deck';
 import { translations } from '../data/translations';
 import './TicTacToeBoard.css';
 
@@ -235,6 +236,9 @@ export default function TicTacToeBoard({
                                     return; // ignore clicks on other cards during shield mode
                                 }
                                 if (card.isSolved) return;
+                                if (card.questionId) {
+                                    markQuestionAsSeen(card.questionId);
+                                }
                                 onCardSelected(card.id);
                             }}>
                             <Card

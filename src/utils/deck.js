@@ -9,11 +9,25 @@ const shuffle = (array) => {
     return newArray;
 };
 
-// Session-level tracker to avoid repeating questions across multiple games until refresh
-export const sessionSeenQuestions = new Set();
+// Persistent memory of seen questions to avoid repeating across multiple games
+const getInitialSeen = () => {
+    try { return JSON.parse(localStorage.getItem('seen_questions')) || []; }
+    catch { return []; }
+};
+export const sessionSeenQuestions = new Set(getInitialSeen());
 
 export const markQuestionAsSeen = (id) => {
-    if (id) sessionSeenQuestions.add(id);
+    if (id) {
+        sessionSeenQuestions.add(id);
+        const seenArray = Array.from(sessionSeenQuestions);
+        // Retain rolling 500 questions memory so localStorage doesn't overflow
+        if (seenArray.length > 500) {
+            seenArray.splice(0, seenArray.length - 500);
+            sessionSeenQuestions.clear();
+            seenArray.forEach(qId => sessionSeenQuestions.add(qId));
+        }
+        localStorage.setItem('seen_questions', JSON.stringify(seenArray));
+    }
 };
 
 export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Confetti from './Confetti';
+import Rain from './Rain';
 import { getSoundEnabled, setSoundEnabled } from '../utils/sounds';
 import { translations } from '../data/translations';
+import { markQuestionAsSeen } from '../utils/deck';
 import QuitConfirmModal from './QuitConfirmModal';
 import './GravityBoard.css';
 
