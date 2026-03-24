@@ -95,27 +95,18 @@
     transition: all 0.3s;
 }
 
-.card.player-1 .card-front {
-    border-color: #ff4757;
-    background: #ff4757;
-    color: white;
-    box-shadow: none !important;
-}
-
-.card.player-2 .card-front {
-    border-color: #2e86de;
-    background: #2e86de;
-    color: white;
-    box-shadow: none !important;
-}
-
 .card.player-1 .status-indicator,
 .card.player-2 .status-indicator {
-    color: white;
+    color: var(--text-dark);
 }
 
 .status-indicator {
     font-size: clamp(2.5rem, 10vw, 4.5rem);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .super-answer-badge {
@@ -267,4 +258,42 @@
         right: 2px;
         border-width: 1px;
     }
+}
+
+.card-owner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.card-avatar-box {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 12px !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.card-avatar-box .avatar-img-premium {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+}
+
+.status-indicator .card-avatar-box {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    border-radius: 12px !important;
 }

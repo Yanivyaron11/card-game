@@ -39,14 +39,20 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
                             <span className="rebound-emoji">{rebounderEmoji}</span> {t.rebound_badge}
                         </div>
                     )}
-                    {!((card.isSolved || card.isFailed) && gameMode === 'tictactoe') && (
+                    {!((card.isSolved || card.isFailed) && (gameMode === 'tictactoe' || gameMode === '1v1')) && (
                         <div className="pattern">
                             {card.topicIcon}
                         </div>
                     )}
-                    {(card.isSolved || card.isFailed) && gameMode === 'tictactoe' && card.ownerSymbol && (
-                        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none', zIndex: 10 }}>
-                            <span className={`owner-symbol p${card.owner}`}>{card.ownerSymbol}</span>
+                    {(card.isSolved || card.isFailed) && (gameMode === 'tictactoe' || gameMode === '1v1') && card.ownerSymbol && (
+                        <div className="card-owner-overlay">
+                            {card.ownerImage ? (
+                                <div className="premium-avatar-box card-avatar-box">
+                                    <img src={card.ownerImage} alt="Owner" className="avatar-img-premium" />
+                                </div>
+                            ) : (
+                                <span className={`owner-symbol p${card.owner}`}>{card.ownerSymbol}</span>
+                            )}
                         </div>
                     )}
                 </div>
@@ -55,7 +61,13 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
                 <div className="card-front glass-panel" style={{ pointerEvents: 'auto' }}>
                     <div className="status-indicator">
                         {card.ownerSymbol ? (
-                            <span className={`owner-symbol p${card.owner}`}>{card.ownerSymbol}</span>
+                            card.ownerImage ? (
+                                <div className="premium-avatar-box card-avatar-box">
+                                    <img src={card.ownerImage} alt="Owner" className="avatar-img-premium" />
+                                </div>
+                            ) : (
+                                <span className={`owner-symbol p${card.owner}`}>{card.ownerSymbol}</span>
+                            )
                         ) : (
                             card.isSolved ? <span className="check">✅</span> : <span className="cross">❌</span>
                         )}

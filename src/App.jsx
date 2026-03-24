@@ -1085,9 +1085,18 @@ function App() {
 
       setDeck(prev => {
         try {
-          const newDeck = prev.map(card =>
-            card.id === cardId ? { ...card, isSolved: true, owner: currentPlayer } : card
-          );
+          const newDeck = prev.map(card => {
+            if (card.id === cardId) {
+              const updates = { ...card, isSolved: true, owner: currentPlayer };
+              if (gameConfig.gameMode === '1v1' || gameConfig.gameMode === 'tictactoe') {
+                const pAvatar = gameConfig.avatars?.[currentPlayer];
+                updates.ownerSymbol = pAvatar?.emoji;
+                updates.ownerImage = pAvatar?.image;
+              }
+              return updates;
+            }
+            return card;
+          });
 
           if (gameConfig.gameMode === '1v1' || gameConfig.gameMode === 'tictactoe') {
             const card = prev.find(c => c.id === cardId);
