@@ -19,10 +19,11 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
         (card.lastFailedPlayer === 1 ? avatars[2]?.emoji : avatars[1]?.emoji) : '';
 
     const ownerClass = card.owner ? `player-${card.owner}` : '';
+    const shouldShrinkEmoji = ['solo', '1v1', 'time_attack'].includes(gameMode);
 
     return (
         <div
-            className={`card ${card.isSolved ? 'solved' : ''} ${card.isFailed ? 'failed' : ''} ${isBlocked ? 'blocked' : ''} ${ownerClass} ${wrapperClass}`}
+            className={`card ${card.isSolved ? 'solved' : ''} ${card.isFailed ? 'failed' : ''} ${isBlocked ? 'blocked' : ''} ${ownerClass} ${wrapperClass} ${shouldShrinkEmoji ? 'shrink-desktop-emoji' : ''}`}
             onPointerDown={isBlocked ? null : onClick}
             onClick={onClick}
             {...((!card.isSolved && !card.isFailed && !isBlocked) ? { 'data-testid': 'click-card' } : {})}
