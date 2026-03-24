@@ -15,6 +15,7 @@ import { spaceQuestions } from './space.js';
 import { flagsQuestions } from './flags.js';
 import { robloxQuestions } from './roblox.js';
 import { kidsMoviesNewQuestions } from './kids_movies_new.js';
+import { englishAdvancedQuestions } from './english_advanced.js';
 
 export const topics = [
     // --- GENERATED_TOPICS_START ---
@@ -211,6 +212,15 @@ export const topics = [
                 },
                 "icon": "🇺🇸",
                 "hiddenIf": "en"
+            },
+            {
+                "id": "english_advanced",
+                "name": {
+                    "en": "Psychometric English",
+                    "he": "אנגלית פסיכומטרי"
+                },
+                "icon": "🎓",
+                "newUntil": "2026-04-24"
             }
         ]
     },
@@ -394,6 +404,7 @@ export const questionCounts = {
     "riddles": 250,
     "physics": 150,
     "english": 300,
+    "english_advanced": 150,
     "space": 150,
     "flags": 150,
     "roblox": 150
@@ -412,6 +423,7 @@ export const questions = [
     ...physicsQuestions,
     ...generalQuestions,
     ...englishQuestions,
+    ...englishAdvancedQuestions,
     ...spaceQuestions,
     ...flagsQuestions,
     ...robloxQuestions,
