@@ -14,6 +14,7 @@ import { englishQuestions } from './english.js';
 import { spaceQuestions } from './space.js';
 import { flagsQuestions } from './flags.js';
 import { robloxQuestions } from './roblox.js';
+import { kidsMoviesNewQuestions } from './kids_movies_new.js';
 
 export const topics = [
     // --- GENERATED_TOPICS_START ---
@@ -381,7 +382,7 @@ export const questionCounts = {
     "israeli_music": 286,
     "animals": 154,
     "countries": 246,
-    "movies": 112,
+    "movies": 262,
     "food": 320,
     "london": 201,
     "art": 101,
@@ -413,5 +414,6 @@ export const questions = [
     ...englishQuestions,
     ...spaceQuestions,
     ...flagsQuestions,
-    ...robloxQuestions
+    ...robloxQuestions,
+    ...kidsMoviesNewQuestions
 ];
