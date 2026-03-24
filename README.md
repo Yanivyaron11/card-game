@@ -33,7 +33,7 @@ A fun, interactive, and educational card game designed for children and trivia l
 - **Tic-Tac-Toe Mode (איקס עיגול)**:
   - Classic 3x3 strategy combined with trivia knowledge.
   - Players try to get 3 in a row. You must answer a trivia question correctly to claim a square. If you fail, the square locks out!
-  - Includes the **Thief** and **Shield** mechanics to dramatically alter the endgame.
+  - Includes the **Thief**, **Shield**, and **Chaos Mixer (🌪️)** mechanics to dramatically alter the endgame. The Mixer completely scrambles the board, relocating all cards and claimed squares!
 - **Enhanced Avatars & Skins**:
   - **Professor Owl (3D)**: High-quality 3D animations for University Professor, Researcher, and Friendly Inventor skins.
   - **Dynamic Shop**: Unlock premium skins and avatars using your earned coins.
