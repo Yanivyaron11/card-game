@@ -13,6 +13,7 @@ import { physicsQuestions } from './physics.js';
 import { englishQuestions } from './english.js';
 import { spaceQuestions } from './space.js';
 import { flagsQuestions } from './flags.js';
+import { robloxQuestions } from './roblox.js';
 
 export const topics = [
     // --- GENERATED_TOPICS_START ---
@@ -337,6 +338,25 @@ export const topics = [
         ]
     },
     {
+        "id": "gaming_group",
+        "name": {
+            "en": "Gaming",
+            "he": "גיימינג"
+        },
+        "icon": "🎮",
+        "subTopics": [
+            {
+                "id": "roblox",
+                "name": {
+                    "en": "Roblox",
+                    "he": "רובלוקס"
+                },
+                "icon": "😎",
+                "newUntil": "2026-04-25"
+            }
+        ]
+    },
+    {
         "id": "general",
         "name": {
             "en": "General Knowledge",
@@ -374,7 +394,8 @@ export const questionCounts = {
     "physics": 150,
     "english": 300,
     "space": 150,
-    "flags": 150
+    "flags": 150,
+    "roblox": 150
 };
 
 export const questions = [
@@ -391,5 +412,6 @@ export const questions = [
     ...generalQuestions,
     ...englishQuestions,
     ...spaceQuestions,
-    ...flagsQuestions
+    ...flagsQuestions,
+    ...robloxQuestions
 ];

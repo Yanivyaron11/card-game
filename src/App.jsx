@@ -131,7 +131,7 @@ function App() {
     const saved = localStorage.getItem('unlocked_topics');
     if (saved) return JSON.parse(saved);
     // Core categories unlocked by default
-    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'world_group', 'sports_group'];
+    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'world_group', 'sports_group', 'gaming_group'];
   });
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     const saved = localStorage.getItem('unlocked_skins');
@@ -180,6 +180,7 @@ function App() {
       let next = [...prev];
       if (!next.includes('language_group')) next.push('language_group');
       if (!next.includes('world_group')) next.push('world_group');
+      if (!next.includes('gaming_group')) next.push('gaming_group');
       return next;
     });
 
