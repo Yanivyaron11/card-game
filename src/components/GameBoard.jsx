@@ -113,30 +113,7 @@ function GameBoard({
                                 ) : (language === 'he' ? 'שחקן 1' : 'Player 1')}
                             </div>
                             <div className="player-score-value">{t.score}: {scores[1]}</div>
-                            <div style={{ display: 'flex', gap: '0.3rem', marginTop: '0.4rem', justifyContent: 'center' }}>
-                                {config.gameMode === '1v1' && thiefAvailable && (
-                                    <button
-                                        className={`action-btn ${currentPlayer === 1 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
-                                        disabled={currentPlayer !== 1 || !thiefAvailable[1] || !hasCardP2}
-                                        onClick={(e) => { e.stopPropagation(); currentPlayer === 1 && hasCardP2 ? onThiefToggle() : null; }}
-                                        style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 1 && thiefAvailable[1] && hasCardP2) ? 'var(--primary)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 1 && thiefAvailable[1] && hasCardP2) ? 1 : 0.3, cursor: currentPlayer === 1 && thiefAvailable[1] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
-                                        title={t.thief_button}
-                                    >
-                                        🥷
-                                    </button>
-                                )}
-                                {config.gameMode === '1v1' && shieldAvailable && (
-                                    <button
-                                        className={`action-btn ${currentPlayer === 1 && isShieldModeActive ? 'active-shield-pulse' : ''}`}
-                                        disabled={currentPlayer !== 1 || !shieldAvailable[1] || !hasCardP1}
-                                        onClick={(e) => { e.stopPropagation(); currentPlayer === 1 && hasCardP1 ? onShieldToggle() : null; }}
-                                        style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 1 && shieldAvailable[1] && hasCardP1) ? 'var(--success-color)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 1 && shieldAvailable[1] && hasCardP1) ? 1 : 0.3, cursor: currentPlayer === 1 && shieldAvailable[1] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
-                                        title={t.shield_button || 'Shield'}
-                                    >
-                                        🛡️
-                                    </button>
-                                )}
-                            </div>
+                            {/* Actions removed for 1v1 */}
                             {config.gameMode !== '1v1' && (
                                 <div className="p-hearts">
                                     {Array.from({ length: Math.max(0, (lives[1] || 0)) }).map((_, i) => (
@@ -171,30 +148,7 @@ function GameBoard({
                                 ) : (language === 'he' ? 'שחקן 2' : 'Player 2')}
                             </div>
                             <div className="player-score-value">{t.score}: {scores[2]}</div>
-                            <div style={{ display: 'flex', gap: '0.3rem', marginTop: '0.4rem', justifyContent: 'center' }}>
-                                {config.gameMode === '1v1' && thiefAvailable && (
-                                    <button
-                                        className={`action-btn ${currentPlayer === 2 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
-                                        disabled={currentPlayer !== 2 || !thiefAvailable[2] || !hasCardP1}
-                                        onClick={(e) => { e.stopPropagation(); currentPlayer === 2 && hasCardP1 ? onThiefToggle() : null; }}
-                                        style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 2 && thiefAvailable[2] && hasCardP1) ? 'var(--secondary)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 2 && thiefAvailable[2] && hasCardP1) ? 1 : 0.3, cursor: currentPlayer === 2 && thiefAvailable[2] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
-                                        title={t.thief_button}
-                                    >
-                                        🥷
-                                    </button>
-                                )}
-                                {config.gameMode === '1v1' && shieldAvailable && (
-                                    <button
-                                        className={`action-btn ${currentPlayer === 2 && isShieldModeActive ? 'active-shield-pulse' : ''}`}
-                                        disabled={currentPlayer !== 2 || !shieldAvailable[2] || !hasCardP2}
-                                        onClick={(e) => { e.stopPropagation(); currentPlayer === 2 && hasCardP2 ? onShieldToggle() : null; }}
-                                        style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 2 && shieldAvailable[2] && hasCardP2) ? 'var(--success-color)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 2 && shieldAvailable[2] && hasCardP2) ? 1 : 0.3, cursor: currentPlayer === 2 && shieldAvailable[2] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
-                                        title={t.shield_button || 'Shield'}
-                                    >
-                                        🛡️
-                                    </button>
-                                )}
-                            </div>
+                            {/* Actions removed for 1v1 */}
                             {config.gameMode !== '1v1' && (
                                 <div className="p-hearts">
                                     {Array.from({ length: Math.max(0, (lives[2] || 0)) }).map((_, i) => (
@@ -224,28 +178,13 @@ function GameBoard({
                 style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)` }}
             >
                 {deck.map(card => {
-                    const targetableByThief = isThiefModeActive && card.isSolved && card.owner && card.owner !== currentPlayer && !card.isShielded;
-                    const targetableByShield = isShieldModeActive && card.isSolved && card.owner && card.owner === currentPlayer && !card.isShielded;
-
-                    let wrapperClass = '';
-                    if (targetableByThief) wrapperClass = 'targetable-thief';
-                    if (targetableByShield) wrapperClass = 'targetable-shield';
-
                     return (
                         <Card
                             key={card.id}
                             card={card}
                             language={language}
-                            wrapperClass={wrapperClass}
+                            wrapperClass={''}
                             onClick={() => {
-                                if (isThiefModeActive) {
-                                    if (targetableByThief) onThiefAction(card.id);
-                                    return; // Consume click if thief mode is active
-                                }
-                                if (isShieldModeActive) {
-                                    if (targetableByShield) onShieldAction(card.id);
-                                    return;
-                                }
                                 handleCardClick(card);
                             }}
                             currentPlayer={currentPlayer}
