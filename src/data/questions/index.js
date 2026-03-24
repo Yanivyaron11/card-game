@@ -372,7 +372,7 @@ export const questionCounts = {
     "psychology": 60,
     "riddles": 250,
     "physics": 150,
-    "english": 150,
+    "english": 300,
     "space": 150,
     "flags": 150
 };

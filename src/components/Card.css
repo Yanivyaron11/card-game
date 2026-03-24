@@ -91,7 +91,7 @@
     background: white;
     color: var(--text-dark);
     transform: rotateY(180deg);
-    border: 2px solid #4ade80;
+    /* border: 2px solid #4ade80; */
     transition: all 0.3s;
 }
 
