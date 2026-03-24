@@ -18,6 +18,8 @@ export default function TicTacToeBoard({
     isShieldModeActive,
     onShieldToggle,
     onShieldAction,
+    mixerAvailable,
+    onMixerAction,
     onCardSelected,
     onGameOver,
     onQuit
@@ -118,6 +120,17 @@ export default function TicTacToeBoard({
                             {p1Display}
                         </div>
                         <div style={{ display: 'flex', gap: '0.3rem', marginTop: '0.4rem' }}>
+                            {mixerAvailable && (
+                                <button
+                                    className={`action-btn`}
+                                    disabled={currentPlayer !== 1 || !mixerAvailable[1]}
+                                    onClick={() => currentPlayer === 1 ? onMixerAction() : null}
+                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 1 && mixerAvailable[1]) ? 'var(--accent)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 1 && mixerAvailable[1]) ? 1 : 0.3, cursor: currentPlayer === 1 && mixerAvailable[1] ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    title={t.mixer_button || 'Mixer'}
+                                >
+                                    🌪️
+                                </button>
+                            )}
                             {thiefAvailable && (
                                 <button
                                     className={`action-btn ${currentPlayer === 1 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
@@ -156,6 +169,17 @@ export default function TicTacToeBoard({
                             {p2Display}
                         </div>
                         <div style={{ display: 'flex', gap: '0.3rem', marginTop: '0.4rem' }}>
+                            {mixerAvailable && (
+                                <button
+                                    className={`action-btn`}
+                                    disabled={currentPlayer !== 2 || !mixerAvailable[2]}
+                                    onClick={() => currentPlayer === 2 ? onMixerAction() : null}
+                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 2 && mixerAvailable[2]) ? 'var(--accent)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 2 && mixerAvailable[2]) ? 1 : 0.3, cursor: currentPlayer === 2 && mixerAvailable[2] ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    title={t.mixer_button || 'Mixer'}
+                                >
+                                    🌪️
+                                </button>
+                            )}
                             {thiefAvailable && (
                                 <button
                                     className={`action-btn ${currentPlayer === 2 && isThiefModeActive ? 'active-thief-pulse' : ''}`}

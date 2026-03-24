@@ -117,6 +117,7 @@ function App() {
   const [isThiefModeActive, setIsThiefModeActive] = useState(false);
   const [shieldAvailable, setShieldAvailable] = useState({ 1: true, 2: true });
   const [isShieldModeActive, setIsShieldModeActive] = useState(false);
+  const [mixerAvailable, setMixerAvailable] = useState({ 1: true, 2: true });
   const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '100', 10));
   const recordNotifiedRef = useRef(false);
   const titleClickRef = useRef(0);
@@ -544,6 +545,7 @@ function App() {
     setIsThiefModeActive(false);
     setShieldAvailable({ 1: true, 2: true });
     setIsShieldModeActive(false);
+    setMixerAvailable({ 1: true, 2: true });
     setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0, spent: 0 });
     setGameState('playing');
   };
@@ -849,6 +851,27 @@ function App() {
     setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
     setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
   }, [shieldAvailable, currentPlayer]);
+
+  const handleMixerAction = useCallback(() => {
+    if (!mixerAvailable[currentPlayer]) return;
+
+    playSound('swoosh');
+    setMixerAvailable(prev => ({ ...prev, [currentPlayer]: false }));
+
+    setDeck(prevDeck => {
+      const newDeck = [...prevDeck];
+      // Fisher-Yates shuffle for all cards on the board
+      for (let i = newDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newDeck[i], newDeck[j]] = [newDeck[j], newDeck[i]];
+      }
+      return newDeck;
+    });
+
+    setStreaks(prev => ({ ...prev, [currentPlayer]: 0 }));
+    setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
+
+  }, [mixerAvailable, currentPlayer]);
 
   const handleAnswer = useCallback((cardId, isCorrect, fromQuiz = false) => {
     if (answeringRef.current.has(cardId)) return;
@@ -1376,6 +1399,8 @@ function App() {
                 setIsShieldModeActive(!isShieldModeActive);
               }}
               onShieldAction={handleShieldAction}
+              mixerAvailable={mixerAvailable}
+              onMixerAction={handleMixerAction}
               onCardSelected={(id) => navigate(`/quiz/${id}`)}
               onGameOver={(winnerId) => {
                 if (winnerId) {
