@@ -1261,7 +1261,7 @@ function App() {
   }
 
   return (
-    <div className={`app-container ${language === 'he' ? 'rtl-mode' : ''}`} dir={language === 'he' ? 'rtl' : 'ltr'}>
+    <div className={`app-container ${language === 'he' ? 'rtl-mode' : ''} ${themes.find(t => t.id === activeTheme)?.className || 'theme-graphite'}`} dir={language === 'he' ? 'rtl' : 'ltr'}>
       {showStageBonus && (
         <StageBonusOverlay
           coins={showStageBonus.coins}
