@@ -120,8 +120,9 @@
 
 .super-answer-badge {
     position: absolute;
-    top: 2px;
-    right: 2px;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
     background: linear-gradient(135deg, #ffd700, #ffa500);
     color: #000;
     padding: 1px 4px;
@@ -146,17 +147,17 @@
 
 @keyframes badgePulse {
     0% {
-        transform: scale(1);
+        transform: translateX(-50%) scale(1);
         box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
     }
 
     50% {
-        transform: scale(1.1);
+        transform: translateX(-50%) scale(1.1);
         box-shadow: 0 0 20px rgba(255, 215, 0, 1);
     }
 
     100% {
-        transform: scale(1);
+        transform: translateX(-50%) scale(1);
         box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
     }
 }
@@ -170,8 +171,7 @@
     .super-answer-badge {
         font-size: 0.5rem;
         padding: 1px 5px;
-        top: 1px;
-        right: 1px;
+        top: 2px;
         gap: 2px;
     }
 
