@@ -36,12 +36,12 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
 
     const getStageInfo = () => {
         const currentPops = coins;
-        if (currentPops < 20) {
-            return { stage: 1, current: currentPops, target: 20, label: t.stage_1 || 'שלב 1 (חימום)' };
-        } else if (currentPops < 50) {
-            return { stage: 2, current: currentPops - 20, target: 30, label: t.stage_2 || 'שלב 2 (הגלדיאטור)' };
-        } else if (currentPops < 90) {
-            return { stage: 3, current: currentPops - 50, target: 40, label: t.stage_3 || 'שלב 3 (בוס האבן)' };
+        if (currentPops < 10) {
+            return { stage: 1, current: currentPops, target: 10, label: t.stage_1 || 'שלב 1 (חימום)' };
+        } else if (currentPops < 20) {
+            return { stage: 2, current: currentPops - 10, target: 10, label: t.stage_2 || 'שלב 2 (הגלדיאטור)' };
+        } else if (currentPops < 30) {
+            return { stage: 3, current: currentPops - 20, target: 10, label: t.stage_3 || 'שלב 3 (בוס האבן)' };
         } else {
             return { stage: 'WIN', current: 1, target: 1, label: t.stage_win || 'אלופים!' };
         }
@@ -53,7 +53,7 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
         <div className="gravity-board-wrapper" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', height: '100%', overflow: 'hidden' }}>
 
             {/* Top Bar Controls */}
-            <div className="game-controls" style={{ marginTop: '1rem', marginBottom: '0.5rem', width: '100%', maxWidth: '500px', display: 'flex', justifyContent: 'space-between', zIndex: 10, padding: '0 1rem' }}>
+            <div className="game-controls" style={{ marginTop: '1rem', marginBottom: '0.5rem', width: '100%', maxWidth: '450px', display: 'flex', justifyContent: 'space-between', zIndex: 10, padding: '0 1rem' }}>
                 <button className="control-btn" onClick={toggleSound}>
                     {soundOn ? '🔊' : '🔇'}
                 </button>
@@ -63,7 +63,7 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
             </div>
 
             {/* Pill Header */}
-            <div className="stats-header glass-panel solo-mode" style={{ zIndex: 10, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '1rem', width: '95%', maxWidth: '600px' }}>
+            <div className="stats-header glass-panel solo-mode" style={{ zIndex: 10, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '1rem', width: '95%', maxWidth: '450px' }}>
                 {config.avatars?.[1] && (
                     <div className="stat-item gravity-avatar-display" data-testid="game-avatar">
                         <div className="premium-avatar-box gravity-avatar-box" style={{ borderRadius: '12px', borderWidth: '2px', background: 'rgba(255, 255, 255, 0.4)', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>

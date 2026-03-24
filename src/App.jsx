@@ -478,8 +478,8 @@ function App() {
       setGameState('topic_selection');
       navigate('/play');
     } else if (config.gameMode === 'endless') {
-      const cols = 5;
-      const rows = 5;
+      const cols = 4;
+      const rows = 4;
 
       // Unpack the massive endless deck algorithm mapping all questions database
       const newDeck = generateEndlessDeck(config.topics);
@@ -941,8 +941,8 @@ function App() {
               const poppedInCol = originalLength - newCols[iCol].length;
 
               let targetLvl = 1;
-              if (survivalCorrect >= 30) targetLvl = 3;
-              else if (survivalCorrect >= 15) targetLvl = 2;
+              if (survivalCorrect >= 20) targetLvl = 3;
+              else if (survivalCorrect >= 10) targetLvl = 2;
 
               const newMarks = [];
               for (let i = 0; i < poppedInCol; i++) {
@@ -979,15 +979,15 @@ function App() {
           // Powerups save you from dying and give huge coins, but don't fast-track the Boss.
           setSurvivalCorrect(s => {
             const newTotal = s + 1;
-            if (s < 15 && newTotal >= 15) {
+            if (s < 10 && newTotal >= 10) {
               setShowStageBonus({ coins: 50, nextLevel: 2 });
               isGravityPausedRef.current = true;
               stageBonusToGive = 50;
-            } else if (s < 30 && newTotal >= 30) {
+            } else if (s < 20 && newTotal >= 20) {
               setShowStageBonus({ coins: 100, nextLevel: 3 });
               isGravityPausedRef.current = true;
               stageBonusToGive = 100;
-            } else if (s < 50 && newTotal >= 50) {
+            } else if (s < 30 && newTotal >= 30) {
               setShowLevelWarning('WIN');
               isGravityPausedRef.current = true;
               stageBonusToGive = 200;
