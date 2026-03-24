@@ -59,7 +59,7 @@
     align-items: center;
     padding: 0 !important;
     overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: none !important;
 }
 
 .card-back {
@@ -72,7 +72,7 @@
 }
 
 .card-back:hover {
-    box-shadow: 0 0 15px rgba(78, 205, 196, 0.5) !important;
+    box-shadow: none !important;
     transform: scale(1.05);
 }
 
@@ -93,19 +93,15 @@
 .card.player-1 .card-front {
     border-color: #ff4757;
     background: #ff4757;
-    /* Solid color */
     color: white;
-    /* Contrast text */
-    box-shadow: 0 0 15px rgba(255, 71, 87, 0.5);
+    box-shadow: none !important;
 }
 
 .card.player-2 .card-front {
     border-color: #2e86de;
     background: #2e86de;
-    /* Solid color */
     color: white;
-    /* Contrast text */
-    box-shadow: 0 0 15px rgba(46, 134, 222, 0.5);
+    box-shadow: none !important;
 }
 
 .card.player-1 .status-indicator,
