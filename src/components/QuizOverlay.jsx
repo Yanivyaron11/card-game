@@ -129,19 +129,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     };
 
     const handle5050 = () => {
-        if (gameMode === 'survival') {
-            if (!isReady || isAnswering || usedSurvivalPowerups['5050'] || (card.eliminatedIndices?.length > 0)) {
-                playSound('error');
-                return;
-            }
-            if (onSurvivalPowerupUsed) onSurvivalPowerupUsed('5050');
-        } else {
-            if (!isReady || isAnswering || coins < 2 || (card.eliminatedIndices?.length > 0)) {
-                playSound('error');
-                return;
-            }
-            onCoinsChange(coins - 2);
+        if (!isReady || isAnswering || usedSurvivalPowerups['5050'] || (card.eliminatedIndices?.length > 0)) {
+            playSound('error');
+            return;
         }
+        if (onSurvivalPowerupUsed) onSurvivalPowerupUsed('5050');
         playSound('buy');
 
         const wrongIndices = card.options.en
@@ -155,19 +147,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     };
 
     const handleSolve = () => {
-        if (gameMode === 'survival') {
-            if (!isReady || isAnswering || usedSurvivalPowerups['solve']) {
-                playSound('error');
-                return;
-            }
-            if (onSurvivalPowerupUsed) onSurvivalPowerupUsed('solve');
-        } else {
-            if (!isReady || isAnswering || coins < 5) {
-                playSound('error');
-                return;
-            }
-            onCoinsChange(coins - 5);
+        if (!isReady || isAnswering || usedSurvivalPowerups['solve']) {
+            playSound('error');
+            return;
         }
+        if (onSurvivalPowerupUsed) onSurvivalPowerupUsed('solve');
         playSound('buy');
         if (onPowerUpUsed) onPowerUpUsed(card.id, 'solve');
         if (timerRef.current) clearInterval(timerRef.current);
@@ -186,19 +170,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     };
 
     const handleHint = () => {
-        if (gameMode === 'survival') {
-            if (!isReady || isAnswering || usedSurvivalPowerups['hint'] || card.isHintVisible) {
-                playSound('error');
-                return;
-            }
-            if (onSurvivalPowerupUsed) onSurvivalPowerupUsed('hint');
-        } else {
-            if (!isReady || isAnswering || coins < 1 || card.isHintVisible) {
-                playSound('error');
-                return;
-            }
-            onCoinsChange(coins - 1);
+        if (!isReady || isAnswering || usedSurvivalPowerups['hint'] || card.isHintVisible) {
+            playSound('error');
+            return;
         }
+        if (onSurvivalPowerupUsed) onSurvivalPowerupUsed('hint');
         playSound('buy');
         if (onPowerUpUsed) onPowerUpUsed(card.id, 'hint');
     };
@@ -454,46 +430,40 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                             <h4>{t.powerups}</h4>
                             <div className="powerup-buttons">
                                 <button
-                                    className={`powerup-btn half ${((gameMode === 'survival' ? usedSurvivalPowerups['5050'] : coins < 2) || (card.eliminatedIndices?.length > 0) || isAnswering) ? 'locked' : ''}`}
+                                    className={`powerup-btn half ${(usedSurvivalPowerups['5050'] || (card.eliminatedIndices?.length > 0) || isAnswering) ? 'locked' : ''}`}
                                     onClick={handle5050}
-                                    disabled={(gameMode === 'survival' ? usedSurvivalPowerups['5050'] : coins < 2) || (card.eliminatedIndices?.length > 0) || isAnswering}
+                                    disabled={usedSurvivalPowerups['5050'] || (card.eliminatedIndices?.length > 0) || isAnswering}
                                 >
                                     <span className="icon">🌓</span>
                                     <span className="name">{t.powerup_5050}</span>
                                     <span className="cost">
-                                        {gameMode === 'survival'
-                                            ? (usedSurvivalPowerups['5050'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
-                                            : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 2</>}
+                                        {usedSurvivalPowerups['5050'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once')}
                                     </span>
                                 </button>
 
                                 {card.level >= 3 && (
                                     <button
-                                        className={`powerup-btn hint ${((gameMode === 'survival' ? usedSurvivalPowerups['hint'] : coins < 1) || card.isHintVisible || isAnswering) ? 'locked' : ''}`}
+                                        className={`powerup-btn hint ${(usedSurvivalPowerups['hint'] || card.isHintVisible || isAnswering) ? 'locked' : ''}`}
                                         onClick={handleHint}
-                                        disabled={(gameMode === 'survival' ? usedSurvivalPowerups['hint'] : coins < 1) || card.isHintVisible || isAnswering}
+                                        disabled={usedSurvivalPowerups['hint'] || card.isHintVisible || isAnswering}
                                     >
                                         <span className="icon">💡</span>
                                         <span className="name">{t.powerup_hint}</span>
                                         <span className="cost">
-                                            {gameMode === 'survival'
-                                                ? (usedSurvivalPowerups['hint'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
-                                                : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 1</>}
+                                            {usedSurvivalPowerups['hint'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once')}
                                         </span>
                                     </button>
                                 )}
 
                                 <button
-                                    className={`powerup-btn solve ${((gameMode === 'survival' ? usedSurvivalPowerups['solve'] : coins < 5) || isAnswering) ? 'locked' : ''}`}
+                                    className={`powerup-btn solve ${(usedSurvivalPowerups['solve'] || isAnswering) ? 'locked' : ''}`}
                                     onClick={handleSolve}
-                                    disabled={(gameMode === 'survival' ? usedSurvivalPowerups['solve'] : coins < 5) || isAnswering}
+                                    disabled={usedSurvivalPowerups['solve'] || isAnswering}
                                 >
                                     <span className="icon">⚡</span>
                                     <span className="name">{t.powerup_solve}</span>
                                     <span className="cost">
-                                        {gameMode === 'survival'
-                                            ? (usedSurvivalPowerups['solve'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once'))
-                                            : <><img src="/icons/gold_coin.png" alt="coin" className="global-coin" /> 5</>}
+                                        {usedSurvivalPowerups['solve'] ? (language === 'he' ? 'נוצל' : 'Used') : (language === 'he' ? 'חד פעמי' : 'Once')}
                                     </span>
                                 </button>
                             </div>

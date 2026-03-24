@@ -447,7 +447,6 @@ function App() {
       markQuestionsBatchAsSeen(survivalDeck.map(q => q.questionId));
       setCurrentSurvivalIndex(0);
       setSurvivalCorrect(0);
-      setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
       recordNotifiedRef.current = false;
       let HS_KEY;
       if (config.survivalType === 'adult') HS_KEY = 'survival_high_score_adult';
@@ -560,6 +559,7 @@ function App() {
     setIsShieldModeActive(false);
     setMixerAvailable({ 1: true, 2: true });
     setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0, spent: 0 });
+    setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
     setGameState('playing');
   };
 
@@ -1277,7 +1277,6 @@ function App() {
       navigate('/result');
     } else {
       setGameState('start');
-      setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
       navigate('/');
     }
   };

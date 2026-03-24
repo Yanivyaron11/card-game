@@ -37,7 +37,7 @@ A fun, interactive, and educational card game designed for children and trivia l
 - **Enhanced Avatars & Skins**:
   - **Professor Owl (3D)**: High-quality 3D animations for University Professor, Researcher, and Friendly Inventor skins.
   - **Dynamic Shop**: Unlock premium skins and avatars using your earned coins.
-- **Power-up System**: Spend your hard-earned coins for high-stakes help:
+- **Power-up System**: Free, single-use abilities available once per game session to provide high-stakes help:
   - **🌓 50/50**: Eliminates two wrong answers.
   - **💡 Hint**: Provides a contextual clue.
   - **⚡ Solve**: Automatically identifies the correct answer.
@@ -47,7 +47,7 @@ A fun, interactive, and educational card game designed for children and trivia l
   - **Fine-grained Category Control**: Choose exactly which topics appear in your game.
   - **Locked Content Visibility**: Locked themes appear with a 🔒 icon in settings until purchased.
 - **Premium UI Components**: Custom-designed **Alert Modals** and **Quit Confirmations** with glassmorphism, blur effects, and smooth animations.
-- **Detailed Session Summary**: A comprehensive post-game breakdown showing base coins, streak bonuses, and special rewards (records, completion, time). It also tracks and deducts coins spent on power-ups.
+- **Detailed Session Summary**: A comprehensive post-game breakdown showing base coins, streak bonuses, and special rewards (records, completion, time).
 - **Smart Record Tracking**: 
   - **Survival**: Saves the longest correct-answer streak.
   - **Time Attack**: Tracks and displays the best remaining time for each grid size.
