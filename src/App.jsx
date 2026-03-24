@@ -8,7 +8,7 @@ import CleaningMode from './components/CleaningMode'
 import LevelWarningOverlay from './components/LevelWarningOverlay'
 import StageBonusOverlay from './components/StageBonusOverlay'
 import { translations } from './data/translations'
-import { generateDeck, generateSurvivalDeck, generateEndlessDeck } from './utils/deck'
+import { generateDeck, generateSurvivalDeck, generateEndlessDeck, markQuestionsBatchAsSeen } from './utils/deck';
 import { themes } from './data/themes'
 import { playSound, playMusic, stopMusic } from './utils/sounds'
 import Confetti from './components/Confetti'
@@ -444,6 +444,7 @@ function App() {
     if (config.gameMode === 'survival') {
       const survivalDeck = generateSurvivalDeck(config.topics, config.survivalType, config.focusedTopicId || null);
       setDeck(survivalDeck);
+      markQuestionsBatchAsSeen(survivalDeck.map(q => q.questionId));
       setCurrentSurvivalIndex(0);
       setSurvivalCorrect(0);
       setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
@@ -472,7 +473,9 @@ function App() {
       const timeLimit = Math.floor(baseTime * multiplier);
 
       setTimeLeft(timeLimit);
-      setDeck(generateDeck(gSize, config.topics, config.difficulty));
+      const taDeck = generateDeck(gSize, config.topics, config.difficulty);
+      setDeck(taDeck);
+      markQuestionsBatchAsSeen(taDeck.map(q => q.questionId));
       setGameState('topic_selection');
       navigate('/play');
     } else if (config.gameMode === 'endless') {
@@ -509,6 +512,9 @@ function App() {
           cardIndex++;
         }
       }
+      const endlessInitMarks = [];
+      initialCols.forEach(col => col.forEach(c => endlessInitMarks.push(c.questionId)));
+      markQuestionsBatchAsSeen(endlessInitMarks);
       setEndlessColumns(initialCols);
       endlessTargetRef.current = { col: 0, row: 0, nextDeckIndex: cardIndex };
       endlessLevelRef.current = highestInitLvl;
@@ -521,18 +527,24 @@ function App() {
     } else if (config.gameMode === 'solo') {
       // Relaxed mode: no per-question timer
       setTimeLeft(0);
-      setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
+      const sDeck = generateDeck(config.gridSize, config.topics, config.difficulty);
+      setDeck(sDeck);
+      markQuestionsBatchAsSeen(sDeck.map(q => q.questionId));
       setGameState('topic_selection');
       navigate('/play');
     } else if (config.gameMode === '1v1') {
       // 1v1 has per-question timer
       setTimeLeft(30);
-      setDeck(generateDeck(config.gridSize, config.topics, config.difficulty));
+      const vDeck = generateDeck(config.gridSize, config.topics, config.difficulty);
+      setDeck(vDeck);
+      markQuestionsBatchAsSeen(vDeck.map(q => q.questionId));
       setGameState('topic_selection');
       navigate('/play');
     } else if (config.gameMode === 'tictactoe') {
       setTimeLeft(0);
-      setDeck(generateDeck(9, config.topics, config.difficulty));
+      const ticDeck = generateDeck(9, config.topics, config.difficulty);
+      setDeck(ticDeck);
+      markQuestionsBatchAsSeen(ticDeck.map(q => q.questionId));
       setGameState('playing'); // Skip topic selection wait
       navigate('/play');
     }
@@ -802,6 +814,7 @@ function App() {
         if (card.id === cardId && card.owner && card.owner !== currentPlayer) {
           const newCardPool = generateDeck(1, gameConfig.topics, gameConfig.difficulty);
           const replacement = newCardPool[0];
+          markQuestionsBatchAsSeen([replacement.questionId]);
 
           return {
             ...card,
@@ -931,6 +944,7 @@ function App() {
               if (survivalCorrect >= 30) targetLvl = 3;
               else if (survivalCorrect >= 15) targetLvl = 2;
 
+              const newMarks = [];
               for (let i = 0; i < poppedInCol; i++) {
                 let nextCard;
                 let failsafe = 0;
@@ -951,7 +965,9 @@ function App() {
                   status: 'active'
                 });
                 endlessTargetRef.current.nextDeckIndex++;
+                newMarks.push(nextCard.id);
               }
+              markQuestionsBatchAsSeen(newMarks);
             }
             return newCols;
           });

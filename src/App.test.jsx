@@ -23,7 +23,9 @@ Object.defineProperty(window, 'matchMedia', {
 vi.mock('./utils/deck', () => ({
     generateDeck: vi.fn(),
     generateSurvivalDeck: vi.fn(),
+    generateEndlessDeck: vi.fn(),
     markQuestionAsSeen: vi.fn(),
+    markQuestionsBatchAsSeen: vi.fn(),
 }));
 
 // Mock sound utilities
@@ -77,6 +79,7 @@ describe('App Integration Tests', () => {
         localStorage.setItem('last_login_date', new Date().toDateString());
         deckUtils.generateDeck.mockReturnValue([...mockDeck]);
         deckUtils.generateSurvivalDeck.mockReturnValue([mockDeck[0]]);
+        deckUtils.generateEndlessDeck.mockReturnValue([...mockDeck]);
     });
 
     it('renders StartScreen initially', () => {

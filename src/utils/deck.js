@@ -20,14 +20,20 @@ export const markQuestionAsSeen = (id) => {
     if (id) {
         sessionSeenQuestions.add(id);
         const seenArray = Array.from(sessionSeenQuestions);
-        // Retain rolling 500 questions memory so localStorage doesn't overflow
-        if (seenArray.length > 500) {
-            seenArray.splice(0, seenArray.length - 500);
-            sessionSeenQuestions.clear();
-            seenArray.forEach(qId => sessionSeenQuestions.add(qId));
-        }
         localStorage.setItem('seen_questions', JSON.stringify(seenArray));
     }
+};
+
+export const markQuestionsBatchAsSeen = (ids) => {
+    if (!ids || ids.length === 0) return;
+    ids.forEach(id => sessionSeenQuestions.add(id));
+    localStorage.setItem('seen_questions', JSON.stringify(Array.from(sessionSeenQuestions)));
+};
+
+export const prioritizeUnseen = (pool) => {
+    const unseen = pool.filter(q => !sessionSeenQuestions.has(q.id));
+    const seen = pool.filter(q => sessionSeenQuestions.has(q.id));
+    return [...shuffle(unseen), ...shuffle(seen)];
 };
 
 export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
@@ -252,9 +258,9 @@ export const generateSurvivalDeck = (selectedTopics = [], survivalType = 'child'
     }
 
     const deck = [
-        ...shuffle(level1).slice(0, counts.level1),
-        ...shuffle(level2).slice(0, counts.level2),
-        ...shuffle(level3).slice(0, counts.level3)
+        ...prioritizeUnseen(level1).slice(0, counts.level1),
+        ...prioritizeUnseen(level2).slice(0, counts.level2),
+        ...prioritizeUnseen(level3).slice(0, counts.level3)
     ];
 
     // 3. Map topic info and card state
@@ -315,11 +321,10 @@ export const generateEndlessDeck = (selectedTopics = []) => {
     const level2 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 2);
     const level3 = questions.filter(q => selectedTopics.includes(q.category) && q.level === 3);
 
-    // Compile everything into a massive sequential array
     const deck = [
-        ...shuffle(level1),
-        ...shuffle(level2),
-        ...shuffle(level3)
+        ...prioritizeUnseen(level1),
+        ...prioritizeUnseen(level2),
+        ...prioritizeUnseen(level3)
     ];
 
     return deck.map((q, index) => {

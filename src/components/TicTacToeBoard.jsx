@@ -115,18 +115,18 @@ export default function TicTacToeBoard({
             </div>
 
             <div className="stats-header glass-panel multi-mode" style={{ marginBottom: '1.5rem', marginTop: '0.5rem', alignSelf: 'center', width: '100%', minWidth: 'auto', padding: '0.5rem 1rem' }}>
-                <div className="multiplayer-stats" style={{ justifyContent: 'space-between', width: '100%', margin: 0, gap: '0.5rem' }}>
+                <div className="multiplayer-stats" style={{ justifyContent: 'space-between', width: '100%', margin: 0, gap: 'clamp(0.2rem, 1vw, 0.5rem)' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                         <div className={`player-box p1 ${currentPlayer === 1 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
                             {p1Display}
                         </div>
-                        <div style={{ display: 'flex', gap: '0.3rem', marginTop: '0.4rem' }}>
+                        <div style={{ display: 'flex', gap: '0.2rem', marginTop: '0.4rem' }}>
                             {mixerAvailable && (
                                 <button
                                     className={`action-btn`}
                                     disabled={currentPlayer !== 1 || !mixerAvailable[1]}
                                     onClick={() => currentPlayer === 1 ? onMixerAction() : null}
-                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 1 && mixerAvailable[1]) ? 'var(--accent)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 1 && mixerAvailable[1]) ? 1 : 0.3, cursor: currentPlayer === 1 && mixerAvailable[1] ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)', padding: '0.2rem', borderRadius: '50%', width: 'clamp(28px, 7.5vw, 36px)', height: 'clamp(28px, 7.5vw, 36px)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 1 && mixerAvailable[1]) ? 'var(--accent)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 1 && mixerAvailable[1]) ? 1 : 0.3, cursor: currentPlayer === 1 && mixerAvailable[1] ? 'pointer' : 'default', transition: 'all 0.3s' }}
                                     title={t.mixer_button || 'Mixer'}
                                 >
                                     🌪️
@@ -137,7 +137,7 @@ export default function TicTacToeBoard({
                                     className={`action-btn ${currentPlayer === 1 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
                                     disabled={currentPlayer !== 1 || !thiefAvailable[1] || !hasCardP2}
                                     onClick={() => currentPlayer === 1 && hasCardP2 ? onThiefToggle() : null}
-                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 1 && thiefAvailable[1] && hasCardP2) ? 'var(--primary)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 1 && thiefAvailable[1] && hasCardP2) ? 1 : 0.3, cursor: currentPlayer === 1 && thiefAvailable[1] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)', padding: '0.2rem', borderRadius: '50%', width: 'clamp(28px, 7.5vw, 36px)', height: 'clamp(28px, 7.5vw, 36px)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 1 && thiefAvailable[1] && hasCardP2) ? 'var(--primary)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 1 && thiefAvailable[1] && hasCardP2) ? 1 : 0.3, cursor: currentPlayer === 1 && thiefAvailable[1] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
                                     title={t.thief_button}
                                 >
                                     🥷
@@ -148,7 +148,7 @@ export default function TicTacToeBoard({
                                     className={`action-btn ${currentPlayer === 1 && isShieldModeActive ? 'active-shield-pulse' : ''}`}
                                     disabled={currentPlayer !== 1 || !shieldAvailable[1] || !hasCardP1}
                                     onClick={() => currentPlayer === 1 && hasCardP1 ? onShieldToggle() : null}
-                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 1 && shieldAvailable[1] && hasCardP1) ? 'var(--success-color)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 1 && shieldAvailable[1] && hasCardP1) ? 1 : 0.3, cursor: currentPlayer === 1 && shieldAvailable[1] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)', padding: '0.2rem', borderRadius: '50%', width: 'clamp(28px, 7.5vw, 36px)', height: 'clamp(28px, 7.5vw, 36px)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 1 && shieldAvailable[1] && hasCardP1) ? 'var(--success-color)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 1 && shieldAvailable[1] && hasCardP1) ? 1 : 0.3, cursor: currentPlayer === 1 && shieldAvailable[1] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
                                     title={t.shield_button || 'Shield'}
                                 >
                                     🛡️
@@ -157,25 +157,28 @@ export default function TicTacToeBoard({
                         </div>
                     </div>
 
-                    <div className="vs-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.3rem' }}>
-                        <div className="level-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', padding: '0.3rem clamp(0.5rem, 2.5vw, 1.5rem)', color: '#111827' }}>
-                            <span style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)' }}>⭕</span>
-                            <span style={{ fontWeight: 'bold', whiteSpace: 'nowrap', fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>{language === 'he' ? 'איקס עיגול' : 'Tic-Tac-Toe'}</span>
+                    <div className="vs-center" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.35rem' }}>
+                        <div className="level-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', padding: '0.2rem clamp(0.5rem, 2vw, 1rem)', color: '#111827', borderRadius: '10px', height: 'auto', minHeight: '26px' }}>
+                            <span style={{ fontSize: 'clamp(0.8rem, 2vw, 1rem)' }}>⭕</span>
+                            <span style={{ fontWeight: 'bold', whiteSpace: 'nowrap', fontSize: 'clamp(0.7rem, 2vw, 0.85rem)' }}>{language === 'he' ? 'איקס עיגול' : 'Tic-Tac-Toe'}</span>
                         </div>
-                        <div className="vs-text" style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)' }}>VS</div>
+                        <div style={{ display: 'flex', alignItems: 'center', padding: '0.25rem 0.8rem', color: '#fff', background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '12px', fontWeight: 'bold', fontSize: 'clamp(0.65rem, 1.5vw, 0.8rem)', whiteSpace: 'nowrap' }}>
+                            {t.level || 'רמה'} {config?.difficulty || 1}
+                        </div>
+                        <div className="vs-text" style={{ fontSize: 'clamp(0.75rem, 2vw, 0.9rem)', marginTop: '0.2rem' }}>VS</div>
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                         <div className={`player-box p2 ${currentPlayer === 2 ? 'active-turn' : ''}`} style={{ borderRadius: '50%', width: 'clamp(55px, 15vw, 70px)', height: 'clamp(55px, 15vw, 70px)', flex: 'none', padding: 0, justifyContent: 'center' }}>
                             {p2Display}
                         </div>
-                        <div style={{ display: 'flex', gap: '0.3rem', marginTop: '0.4rem' }}>
+                        <div style={{ display: 'flex', gap: '0.2rem', marginTop: '0.4rem' }}>
                             {mixerAvailable && (
                                 <button
                                     className={`action-btn`}
                                     disabled={currentPlayer !== 2 || !mixerAvailable[2]}
                                     onClick={() => currentPlayer === 2 ? onMixerAction() : null}
-                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 2 && mixerAvailable[2]) ? 'var(--accent)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 2 && mixerAvailable[2]) ? 1 : 0.3, cursor: currentPlayer === 2 && mixerAvailable[2] ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)', padding: '0.2rem', borderRadius: '50%', width: 'clamp(28px, 7.5vw, 36px)', height: 'clamp(28px, 7.5vw, 36px)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 2 && mixerAvailable[2]) ? 'var(--accent)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 2 && mixerAvailable[2]) ? 1 : 0.3, cursor: currentPlayer === 2 && mixerAvailable[2] ? 'pointer' : 'default', transition: 'all 0.3s' }}
                                     title={t.mixer_button || 'Mixer'}
                                 >
                                     🌪️
@@ -186,7 +189,7 @@ export default function TicTacToeBoard({
                                     className={`action-btn ${currentPlayer === 2 && isThiefModeActive ? 'active-thief-pulse' : ''}`}
                                     disabled={currentPlayer !== 2 || !thiefAvailable[2] || !hasCardP1}
                                     onClick={() => currentPlayer === 2 && hasCardP1 ? onThiefToggle() : null}
-                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 2 && thiefAvailable[2] && hasCardP1) ? 'var(--secondary)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 2 && thiefAvailable[2] && hasCardP1) ? 1 : 0.3, cursor: currentPlayer === 2 && thiefAvailable[2] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)', padding: '0.2rem', borderRadius: '50%', width: 'clamp(28px, 7.5vw, 36px)', height: 'clamp(28px, 7.5vw, 36px)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 2 && thiefAvailable[2] && hasCardP1) ? 'var(--secondary)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 2 && thiefAvailable[2] && hasCardP1) ? 1 : 0.3, cursor: currentPlayer === 2 && thiefAvailable[2] && hasCardP1 ? 'pointer' : 'default', transition: 'all 0.3s' }}
                                     title={t.thief_button}
                                 >
                                     🥷
@@ -197,7 +200,7 @@ export default function TicTacToeBoard({
                                     className={`action-btn ${currentPlayer === 2 && isShieldModeActive ? 'active-shield-pulse' : ''}`}
                                     disabled={currentPlayer !== 2 || !shieldAvailable[2] || !hasCardP2}
                                     onClick={() => currentPlayer === 2 && hasCardP2 ? onShieldToggle() : null}
-                                    style={{ fontSize: '1.2rem', padding: '0.3rem', borderRadius: '50%', width: '36px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 2 && shieldAvailable[2] && hasCardP2) ? 'var(--success-color)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 2 && shieldAvailable[2] && hasCardP2) ? 1 : 0.3, cursor: currentPlayer === 2 && shieldAvailable[2] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
+                                    style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)', padding: '0.2rem', borderRadius: '50%', width: 'clamp(28px, 7.5vw, 36px)', height: 'clamp(28px, 7.5vw, 36px)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: (currentPlayer === 2 && shieldAvailable[2] && hasCardP2) ? 'var(--success-color)' : 'rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.2)', opacity: (currentPlayer === 2 && shieldAvailable[2] && hasCardP2) ? 1 : 0.3, cursor: currentPlayer === 2 && shieldAvailable[2] && hasCardP2 ? 'pointer' : 'default', transition: 'all 0.3s' }}
                                     title={t.shield_button || 'Shield'}
                                 >
                                     🛡️
