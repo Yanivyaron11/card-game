@@ -64,7 +64,6 @@
 
 .card-back {
     background: linear-gradient(135deg, #0f766e 0%, #022c22 100%);
-    border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .card.failed .card-back {
