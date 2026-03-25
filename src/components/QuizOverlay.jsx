@@ -136,7 +136,8 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
         if (onSurvivalPowerupUsed) onSurvivalPowerupUsed('5050');
         playSound('buy');
 
-        const wrongIndices = card.options.en
+        const currentOptions = card.options.en || card.options.he || [];
+        const wrongIndices = currentOptions
             .map((_, index) => index)
             .filter(index => index !== card.correctAnswer);
 
@@ -214,7 +215,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 >
                     ✕
                 </button>
-                {gameMode !== 'tictactoe' && (
+                {gameMode !== 'tictactoe' && gameMode !== 'endless' && (
                     <div className="quiz-stats-header">
                         {gameMode !== 'survival' && (
                             <div className="stat-item level-display">
@@ -428,7 +429,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                     })}
                 </div>
 
-                {gameMode !== 'tictactoe' && (
+                {gameMode !== 'tictactoe' && gameMode !== 'endless' && (
                     <div className="quiz-footer">
                         <div className="powerup-section">
                             <h4>{t.powerups}</h4>
