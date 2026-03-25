@@ -404,7 +404,7 @@ export const questionCounts = {
     "riddles": 250,
     "physics": 150,
     "english": 300,
-    "english_advanced": 150,
+    "english_advanced": 200,
     "space": 150,
     "flags": 150,
     "roblox": 150
