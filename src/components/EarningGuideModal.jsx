@@ -44,6 +44,7 @@ function EarningGuideModal({ isOpen, onClose, language }) {
         {
             title: t.rules_section_mechanics || 'Special Mechanics',
             rules: [
+                { icon: '❤️', text: t.rule_hearts },
                 { icon: '🥷', text: t.rule_thief },
                 { icon: '🛡️', text: t.rule_shield },
                 { icon: '🌪️', text: t.rule_mixer }

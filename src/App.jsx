@@ -426,8 +426,7 @@ function App() {
     setGameConfig(config);
     const gridSize = Number(config.gridSize);
     const difficulty = Number(config.difficulty || 1);
-    const sizeBase = gridSize === 9 ? 3 : gridSize === 16 ? 4 : 5;
-    const initialLives = sizeBase - (difficulty - 1);
+    const initialLives = gridSize === 9 ? 2 : gridSize === 16 ? 3 : 4;
     const initialCoins = config.gridSize === 9 ? 5 : config.gridSize === 16 ? 10 : 15;
 
     // 1. Lives & Coins

@@ -56,7 +56,11 @@ A fun, interactive, and educational card game designed for children and trivia l
 - **Mobile Optimized**: Home screen shortcut support (PWA) with responsive and RTL-aware layouts.
 - **Bilingual Support**: Full support for both **English** and **Hebrew (RTL)**.
 - **Expansive Educational Categories**: Dozens of topic areas including Math, Science, Nature, Judaism, World Geography, Flags, English basics, and more.
-- **Sleek Design**: Modern glassmorphism UI with curated color palettes, vibrant gradients, and micro-animations.
+- **Hearts System**: Starting lives are fixed based on the board size to ensure a fair experience across all difficulty levels:
+  - **3x3**: ❤️❤️ (2 Hearts)
+  - **4x4**: ❤️❤️❤️ (3 Hearts)
+  - **5x5**: ❤️❤️❤️❤️ (4 Hearts)
+- **Dynamic Design**: Modern glassmorphism UI with curated color palettes, vibrant gradients, and micro-animations.
 
 ## 💰 Coin Economy
 
