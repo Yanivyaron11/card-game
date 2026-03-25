@@ -2,27 +2,29 @@ import React, { useEffect } from 'react';
 import './LevelWarningOverlay.css';
 import { playSound } from '../utils/sounds';
 
-function LevelWarningOverlay({ level, onComplete, language }) {
+function LevelWarningOverlay({ level, onComplete, language, coins }) {
     useEffect(() => {
         if (level === 1) {
             playSound('epic_chord_1');
-            setTimeout(() => playSound('timpani_strike_1'), 1500); // Swell apex at 1.5s
+            setTimeout(() => playSound('timpani_strike_1'), 1500); 
         } else if (level === 2) {
             playSound('epic_chord_2');
-            setTimeout(() => playSound('timpani_strike_2'), 1000); // Swell apex at 1.0s, darker A minor tone
+            setTimeout(() => playSound('timpani_strike_2'), 1000); 
         } else if (level === 3) {
             playSound('epic_chord_3');
-            setTimeout(() => playSound('timpani_strike_3'), 500); // Aggressive fast swell at 0.5s, D minor sub-bass!
+            setTimeout(() => playSound('timpani_strike_3'), 500); 
             setTimeout(() => playSound('timpani_strike_3'), 1500);
-            setTimeout(() => playSound('timpani_strike_3'), 2500); // Triple strike!
-            setTimeout(() => playSound('evil_laugh'), 3500); // The Boss Laughs!
+            setTimeout(() => playSound('timpani_strike_3'), 2500); 
+            setTimeout(() => playSound('evil_laugh'), 3500); 
         } else if (level === 'WIN') {
             playSound('win_fanfare');
+            // Play coin sound shortly after
+            setTimeout(() => playSound('buy'), 1000);
         }
 
         const t = setTimeout(() => {
             if (onComplete) onComplete();
-        }, level === 'WIN' ? 6000 : 5000); // 5 seconds for normal bosses, 6 for win
+        }, level === 'WIN' ? 7000 : 5000); // 7 seconds for win
 
         return () => clearTimeout(t);
     }, [level, onComplete]);
@@ -57,7 +59,7 @@ function LevelWarningOverlay({ level, onComplete, language }) {
         warningTextHe = "🏆 אלופים! 🏆";
         subTextEn = "You defeated all bosses!";
         subTextHe = "ניצחתם את כל הבוסים!";
-        imgSrc = "/assets/gladiator_level1.png";
+        imgSrc = "/assets/sack_of_gold.png";
         extraClass = 'win-max';
     }
 
@@ -73,7 +75,14 @@ function LevelWarningOverlay({ level, onComplete, language }) {
 
                 {imgSrc && (
                     <div className="warning-character">
-                        <img src={imgSrc} alt="Character" className="character-img bounce-in" />
+                        <img src={imgSrc} alt="Character" className={`character-img bounce-in ${level === 'WIN' ? 'sack-img' : ''}`} />
+                    </div>
+                )}
+
+                {level === 'WIN' && coins && (
+                    <div className="victory-coins-award">
+                        <span className="coin-amount">+{coins}</span>
+                        <span className="coin-label">{isRtl ? 'מטבעות!' : 'Coins!'}</span>
                     </div>
                 )}
 

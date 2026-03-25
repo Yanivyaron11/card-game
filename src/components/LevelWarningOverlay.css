@@ -107,6 +107,47 @@
     height: 300px;
 }
 
+.character-img.sack-img {
+    object-fit: contain;
+    padding: 20px;
+    transform: scale(1.1);
+    animation: bombPulse 2s infinite ease-in-out;
+}
+
+@keyframes bombPulse {
+    0%, 100% { transform: scale(1.1); filter: brightness(1); }
+    50% { transform: scale(1.2); filter: brightness(1.3); }
+}
+
+.victory-coins-award {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.5s;
+    opacity: 0;
+}
+
+.coin-amount {
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 900;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+
+.coin-label {
+    font-size: 2rem;
+    color: #ffd700;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
 .character-img {
     width: 100%;
     height: 100%;

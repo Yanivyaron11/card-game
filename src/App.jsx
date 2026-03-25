@@ -6,7 +6,6 @@ import QuizOverlay from './components/QuizOverlay'
 import LandingPage from './components/LandingPage'
 import CleaningMode from './components/CleaningMode'
 import LevelWarningOverlay from './components/LevelWarningOverlay'
-import StageBonusOverlay from './components/StageBonusOverlay'
 import { translations } from './data/translations'
 import { generateDeck, generateSurvivalDeck, generateEndlessDeck, markQuestionsBatchAsSeen } from './utils/deck';
 import { themes } from './data/themes'
@@ -979,11 +978,11 @@ function App() {
           setSurvivalCorrect(s => {
             const newTotal = s + 1;
             if (s < 10 && newTotal >= 10) {
-              setShowStageBonus({ coins: 50, nextLevel: 2 });
+              setShowLevelWarning(2);
               isGravityPausedRef.current = true;
               stageBonusToGive = 50;
             } else if (s < 20 && newTotal >= 20) {
-              setShowStageBonus({ coins: 100, nextLevel: 3 });
+              setShowLevelWarning(3);
               isGravityPausedRef.current = true;
               stageBonusToGive = 100;
             } else if (s < 30 && newTotal >= 30) {
@@ -1286,20 +1285,11 @@ function App() {
 
   return (
     <div className={`app-container ${language === 'he' ? 'rtl-mode' : ''} ${themes.find(t => t.id === activeTheme)?.className || 'theme-graphite'}`} dir={language === 'he' ? 'rtl' : 'ltr'}>
-      {showStageBonus && (
-        <StageBonusOverlay
-          coins={showStageBonus.coins}
-          onComplete={() => {
-            const nextLvl = showStageBonus.nextLevel;
-            setShowStageBonus(null);
-            setShowLevelWarning(nextLvl);
-          }}
-        />
-      )}
       {showLevelWarning && (
         <LevelWarningOverlay
           level={showLevelWarning}
           language={language}
+          coins={showLevelWarning === 'WIN' ? 300 : null}
           onComplete={() => {
             if (showLevelWarning === 'WIN') {
               const bonusCoins = 300;
