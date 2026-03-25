@@ -184,7 +184,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
     const labels = language === 'he' ? optionLabelsHe : optionLabelsEn;
 
     const currentQuestionText = card.text[language] || card.text.en || '';
-    const currentOptions = card.options[language] || card.options.en || [];
+    const currentOptions = (card.options[language] && card.options[language].length > 0)
+        ? card.options[language]
+        : (card.options.en && card.options.en.length > 0)
+            ? card.options.en
+            : card.options.he || [];
     const isLongText = currentQuestionText.length > 40 || currentOptions.some(opt => opt.length > 20);
 
     console.log("[QuizOverlay] Rendering, isAnswering:", isAnswering, "selectedAnswer:", selectedAnswer);

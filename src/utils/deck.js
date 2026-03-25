@@ -9,6 +9,29 @@ const shuffle = (array) => {
     return newArray;
 };
 
+const shuffleOptions = (options, correctAnswer) => {
+    if (!options) return { shuffledOptions: null, newCorrectAnswer: correctAnswer };
+
+    const originalEn = options.en || [];
+    const originalHe = options.he || [];
+    const sourceForLength = originalEn.length > 0 ? originalEn : originalHe;
+
+    if (sourceForLength.length === 0) {
+        return { shuffledOptions: options, newCorrectAnswer: correctAnswer };
+    }
+
+    const indices = Array.from({ length: sourceForLength.length }, (_, i) => i);
+    const shuffledIndices = shuffle(indices);
+
+    const shuffledOptions = {
+        en: shuffledIndices.map(i => originalEn[i] || originalHe[i] || ''),
+        he: shuffledIndices.map(i => originalHe[i] || originalEn[i] || '')
+    };
+    const newCorrectAnswer = shuffledIndices.indexOf(Number(correctAnswer));
+
+    return { shuffledOptions, newCorrectAnswer };
+};
+
 // Persistent memory of seen questions to avoid repeating across multiple games
 const getInitialSeen = () => {
     try { return JSON.parse(localStorage.getItem('seen_questions')) || []; }
@@ -184,26 +207,8 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
     const deckWithTopicInfo = deckSelection.map(q => {
         const topic = findTopicRecursively(topics, q.category);
 
-        // Shuffle options if they exist and are correctly structured
-        let shuffledOptions = q.options ? { ...q.options } : null;
-        let newCorrectAnswer = q.correctAnswer;
-
-        if (q.options?.en && q.options.en.length > 0) {
-            const originalEn = q.options.en;
-            const originalHe = q.options.he || originalEn;
-
-            // Create a mapped array of indices to shuffle consistently across languages
-            const indices = Array.from({ length: originalEn.length }, (_, i) => i);
-            const shuffledIndices = shuffle(indices);
-
-            shuffledOptions = {
-                en: shuffledIndices.map(i => originalEn[i]),
-                he: shuffledIndices.map(i => originalHe[i] || originalEn[i])
-            };
-
-            // Calculate new correct answer index by finding where the old index moved
-            newCorrectAnswer = shuffledIndices.indexOf(Number(q.correctAnswer));
-        }
+        // Shuffle options if they exist
+        const { shuffledOptions, newCorrectAnswer } = shuffleOptions(q.options, q.correctAnswer);
 
         return {
             ...q,
@@ -286,16 +291,7 @@ export const generateSurvivalDeck = (selectedTopics = [], survivalType = 'child'
         const topic = findTopicRecursively(topics, q.category);
 
         // Consistent shuffling of options
-        const originalEn = q.options?.en || [];
-        const originalHe = q.options?.he || originalEn;
-        const indices = Array.from({ length: originalEn.length }, (_, i) => i);
-        const shuffledIndices = shuffle(indices);
-
-        const shuffledOptions = {
-            en: shuffledIndices.map(i => originalEn[i]),
-            he: shuffledIndices.map(i => originalHe[i])
-        };
-        const newCorrectAnswer = shuffledIndices.indexOf(Number(q.correctAnswer));
+        const { shuffledOptions, newCorrectAnswer } = shuffleOptions(q.options, q.correctAnswer);
 
         return {
             ...q,
@@ -341,16 +337,7 @@ export const generateEndlessDeck = (selectedTopics = []) => {
 
         const topic = findTopicRecursively(topics, q.category);
 
-        const originalEn = q.options?.en || [];
-        const originalHe = q.options?.he || originalEn;
-        const indices = Array.from({ length: originalEn.length }, (_, i) => i);
-        const shuffledIndices = shuffle(indices);
-
-        const shuffledOptions = {
-            en: shuffledIndices.map(i => originalEn[i]),
-            he: shuffledIndices.map(i => originalHe[i])
-        };
-        const newCorrectAnswer = shuffledIndices.indexOf(Number(q.correctAnswer));
+        const { shuffledOptions, newCorrectAnswer } = shuffleOptions(q.options, q.correctAnswer);
 
         return {
             ...q,
