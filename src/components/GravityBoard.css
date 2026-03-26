@@ -90,9 +90,20 @@
 }
 
 .stone-visual {
-    font-size: 2.6rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
-    line-height: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.stone-3d-img {
+    width: 80%; /* Smaller as requested */
+    height: 80%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+    mix-blend-mode: screen; /* Perfect for black background */
 }
 
 .gravity-card-emoji {

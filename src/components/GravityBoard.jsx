@@ -137,7 +137,9 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                                                 </div>
                                             )}
                                             {card.status === 'stone' ? (
-                                                <div className="stone-visual">🔒</div>
+                                                <div className="stone-visual">
+                                                    <img src="/icons/stone_3d.png" alt="Stone" className="stone-3d-img" />
+                                                </div>
                                             ) : card.status === 'popping' ? (
                                                 <div className="popping-visual">💥</div>
                                             ) : (
