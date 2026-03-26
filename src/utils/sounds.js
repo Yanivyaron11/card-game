@@ -169,6 +169,55 @@ export const playSound = (type) => {
             osc.stop(now + 1.2);
             break;
 
+        case 'thud': {
+            console.log("Playing STONY thud sound...");
+            // Deep impact (Oscillator 1)
+            const osc2 = ctx.createOscillator();
+            const gain2 = ctx.createGain();
+            osc2.type = 'triangle';
+            osc2.frequency.setValueAtTime(80, now);
+            osc2.frequency.exponentialRampToValueAtTime(20, now + 0.4);
+            gain2.gain.setValueAtTime(0.6, now);
+            gain2.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+            osc2.connect(gain2);
+            gain2.connect(ctx.destination);
+            osc2.start(now);
+            osc2.stop(now + 0.4);
+
+            // Detuned body (Oscillator 2)
+            const osc3 = ctx.createOscillator();
+            const gain3 = ctx.createGain();
+            osc3.type = 'sine';
+            osc3.frequency.setValueAtTime(65, now);
+            osc3.frequency.exponentialRampToValueAtTime(30, now + 0.3);
+            gain3.gain.setValueAtTime(0.4, now);
+            gain3.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+            osc3.connect(gain3);
+            gain3.connect(ctx.destination);
+            osc3.start(now);
+            osc3.stop(now + 0.3);
+
+            // The "Stone Crunch" (Noise)
+            const bSize = ctx.sampleRate * 0.4;
+            const b = ctx.createBuffer(1, bSize, ctx.sampleRate);
+            const d = b.getChannelData(0);
+            for (let i = 0; i < bSize; i++) d[i] = Math.random() * 2 - 1;
+            const nSource = ctx.createBufferSource();
+            nSource.buffer = b;
+            const nGain = ctx.createGain();
+            const nFilter = ctx.createBiquadFilter();
+            nFilter.type = 'lowpass';
+            nFilter.frequency.setValueAtTime(400, now);
+            nFilter.frequency.exponentialRampToValueAtTime(100, now + 0.3);
+            nGain.gain.setValueAtTime(0.5, now);
+            nGain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+            nSource.connect(nFilter);
+            nFilter.connect(nGain);
+            nGain.connect(ctx.destination);
+            nSource.start(now);
+            break;
+        }
+
         case 'drop':
             osc.type = 'triangle';
             osc.frequency.setValueAtTime(400, now);

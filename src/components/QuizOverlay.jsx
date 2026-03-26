@@ -23,7 +23,7 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
             if (card.level === 2) return 25;
             return 30;
         }
-        if (card.level === 3) return 10;
+        if (card.level === 3) return 15;
         if (card.level === 2) return 20;
         return 30;
     };

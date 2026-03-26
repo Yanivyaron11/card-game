@@ -90,11 +90,17 @@ function App() {
   const [showLevelWarning, setShowLevelWarning] = useState(null);
   const [showStageBonus, setShowStageBonus] = useState(null);
 
-  const getRandomPowerUp = () => {
+  const gravityLastTickTimeRef = useRef(Date.now());
+  const gravityIntervalRef = useRef(null);
+  
+  const getRandomPowerUp = (stage = 1) => {
     const r = Math.random();
-    if (r < 0.02) return 'cross'; // 2% chance
-    if (r < 0.06) return 'row';   // 4% chance
-    if (r < 0.10) return 'col';   // 4% chance
+    // Probabilities significantly reduced per 5x5 board: 5% -> 3.5% -> 2%
+    const threshold = stage === 3 ? 0.02 : stage === 2 ? 0.035 : 0.05;
+    
+    if (r < threshold * 0.2) return 'cross'; 
+    if (r < threshold * 0.6) return 'row';   
+    if (r < threshold) return 'col';         
     return null;
   };
   const [lives, setLives] = useState({ 1: 1, 2: 1 })
@@ -476,8 +482,8 @@ function App() {
       setGameState('topic_selection');
       navigate('/play');
     } else if (config.gameMode === 'endless') {
-      const cols = 4;
-      const rows = 4;
+      const cols = 5;
+      const rows = 5;
 
       // Unpack the massive endless deck algorithm mapping all questions database
       const newDeck = generateEndlessDeck(config.topics);
@@ -503,7 +509,7 @@ function App() {
             topicIcon: deckCard.topicIcon,
             topicColor: deckCard.topicColor,
             level: deckCard.level,
-            powerUp: getRandomPowerUp(),
+            powerUp: getRandomPowerUp(1),
             status: 'active'
           });
           cardIndex++;
@@ -515,6 +521,7 @@ function App() {
       setEndlessColumns(initialCols);
       endlessTargetRef.current = { col: 0, row: 0, nextDeckIndex: cardIndex };
       endlessLevelRef.current = highestInitLvl;
+      isGravityPausedRef.current = true; // Pause for the warning
       setShowLevelWarning(1);
       setDeck(newDeck);
       setSurvivalCorrect(0);
@@ -722,50 +729,86 @@ function App() {
     }
   }, [deck, currentPlayer, gameConfig, gameState]);
 
+  // Gravity Pause Logic based on current route AND Level Warning
+  useEffect(() => {
+    if (gameConfig?.gameMode === 'endless') {
+      const isQuizOpen = location.pathname.startsWith('/quiz');
+      const isWarningOpen = !!showLevelWarning;
+      isGravityPausedRef.current = isQuizOpen || isWarningOpen;
+    }
+  }, [location.pathname, gameConfig, showLevelWarning]);
+
   // Gravity Loop logic
   const gravityTick = useCallback(() => {
     if (gameState !== 'playing' || isGravityPausedRef.current) return;
-    const now = Date.now();
-    const lastDropTime = dropAnimationTimeRef.current || now;
-    const timeSinceLastDrop = now - lastDropTime;
-    const dropInterval = 1000; // 1 second for now
+    
+    // Find the next card to lock based on the current board state
+    let cardToLock = null;
+    for (let r = 0; r < 5; r++) {
+      for (let c = 0; c < endlessColumns.length; c++) {
+        if (endlessColumns[c][r]?.status === 'active') {
+          cardToLock = { c, r };
+          break;
+        }
+      }
+      if (cardToLock) break;
+    }
 
-    if (timeSinceLastDrop >= dropInterval) {
+    if (cardToLock) {
       setEndlessColumns(prev => {
-        const newCols = prev.map(c => [...c]);
-        let hasDropped = false;
+        const newCols = prev.map(col => [...col]);
+        newCols[cardToLock.c][cardToLock.r] = {
+          ...newCols[cardToLock.c][cardToLock.r],
+          status: 'stone'
+        };
 
-        for (let c = 0; c < newCols.length; c++) {
-          for (let r = newCols[c].length - 1; r >= 0; r--) {
-            if (newCols[c][r].status === 'active') {
-              // Check if card below is 'stone' or if it's the last row
-              if (r + 1 < newCols[c].length && newCols[c][r + 1].status === 'stone') {
-                newCols[c][r].status = 'stone'; // This card becomes stone
-                hasDropped = true;
-              } else if (r === newCols[c].length - 1) {
-                newCols[c][r].status = 'stone'; // Last row card becomes stone
-                hasDropped = true;
-              }
-            }
-          }
+        // Check if THIS update caused a column to be completely full (all stones)
+        const isGameOver = newCols.some(c => c.length >= 5 && c.every(card => card.status === 'stone'));
+        if (isGameOver) {
+          setGameState('game_over');
+          navigate('/result');
         }
 
-        if (hasDropped) {
-          dropAnimationTimeRef.current = now;
-          playSound('thud');
-        } else {
-          // If no cards dropped, it means the board is full of stones or solved cards
-          // This is a game over condition for endless mode
-          const allStones = newCols.every(col => col.every(card => card.status === 'stone'));
-          if (allStones) {
-            setGameState('game_over');
-            navigate('/result');
-          }
-        }
         return newCols;
       });
+      playSound('thud');
     }
-  }, [gameState, navigate]);
+  }, [gameState, navigate, endlessColumns]); // Now depends on endlessColumns for correct logic
+
+
+  // Handle Dynamic Gravity Interval (Stabilized)
+  useEffect(() => {
+    if (gameState === 'playing' && gameConfig?.gameMode === 'endless') {
+      // Clear any existing interval to be absolutely sure
+      if (gravityIntervalRef.current) clearInterval(gravityIntervalRef.current);
+      
+      gravityLastTickTimeRef.current = Date.now();
+      
+      gravityIntervalRef.current = setInterval(() => {
+        if (isGravityPausedRef.current) {
+          gravityLastTickTimeRef.current = Date.now(); 
+          return;
+        }
+
+        const getInterval = () => {
+          if (survivalCorrect >= 20) return 3000;
+          if (survivalCorrect >= 10) return 4000;
+          return 5000;
+        };
+
+        const now = Date.now();
+        if (now - gravityLastTickTimeRef.current >= getInterval()) {
+          gravityTick();
+          gravityLastTickTimeRef.current = now;
+        }
+      }, 100);
+
+      return () => {
+        if (gravityIntervalRef.current) clearInterval(gravityIntervalRef.current);
+        gravityIntervalRef.current = null;
+      };
+    }
+  }, [gameState, gameConfig, survivalCorrect, gravityTick]);
 
   useEffect(() => {
     if (gameState === 'playing') {
@@ -959,7 +1002,7 @@ function App() {
                   topicIcon: nextCard.topicIcon,
                   topicColor: nextCard.topicColor,
                   level: nextCard.level,
-                  powerUp: getRandomPowerUp(),
+                  powerUp: getRandomPowerUp(survivalCorrect >= 20 ? 3 : (survivalCorrect >= 10 ? 2 : 1)),
                   status: 'active'
                 });
                 endlessTargetRef.current.nextDeckIndex++;
@@ -1279,6 +1322,21 @@ function App() {
     }
   };
 
+  const handleLevelWarningComplete = useCallback(() => {
+    if (showLevelWarning === 'WIN') {
+      const bonusCoins = 300;
+      setTotalCoins(c => c + bonusCoins);
+      setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + bonusCoins }));
+      applyStreakBonuses();
+      setShowLevelWarning(null);
+      setGameState('victory');
+      navigate('/result');
+    } else {
+      setShowLevelWarning(null);
+      isGravityPausedRef.current = false;
+    }
+  }, [showLevelWarning, applyStreakBonuses, navigate]);
+
   if (showLanding) {
     return <LandingPage language={language} />;
   }
@@ -1290,20 +1348,7 @@ function App() {
           level={showLevelWarning}
           language={language}
           coins={showLevelWarning === 'WIN' ? 300 : null}
-          onComplete={() => {
-            if (showLevelWarning === 'WIN') {
-              const bonusCoins = 300;
-              setTotalCoins(c => c + bonusCoins);
-              setSessionCoinBreakdown(cb => ({ ...cb, base: cb.base + bonusCoins }));
-              applyStreakBonuses();
-              setShowLevelWarning(null);
-              setGameState('victory');
-              navigate('/result');
-            } else {
-              setShowLevelWarning(null);
-              isGravityPausedRef.current = false;
-            }
-          }}
+          onComplete={handleLevelWarningComplete}
         />
       )}
       <h1 className="title-glow" onClick={() => {

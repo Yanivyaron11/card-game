@@ -22,7 +22,8 @@ A fun, interactive, and educational card game designed for children and trivia l
   - Race against a global countdown timer (scales by difficulty level).
   - Forces quick thinking and rewards precision. Remaining time converts directly into bonus coins at the end!
 - **Endless Mode / Avalanche (מפולת)**:
-  - A fast-paced, increasingly dense 4x4 avalanche of cards similar to classic arcade match games. The board continuously grows until it crushes the top of the screen.
+  - A fast-paced, increasingly dense 5x5 avalanche of cards. A "Rising Tide" of stones 🔒 systematically fills the board from the bottom row up. If any column reaches the top (5 stones), it's Game Over.
+  - **Dynamic Difficulty**: Gravity speed increases as you score (5s -> 4s -> 3s intervals).
   - **Real-Time Score**: Watch your active session points climb with every match.
   - **Dynamic Bosses**: Battle against multi-hit Bosses and Gladiator enemies with custom graphical animations that block your path.
   - **Explosive Combos**: Match Row, Column, and Cross Bombs that clear massive swaths of cards to help you survive.
@@ -71,8 +72,10 @@ Smarty features a robust rewarding system to keep children engaged:
   - New High Score: **+20🪙**.
   - Course Completion: Junior (**+30🪙**) / Master (**+50🪙**).
 - **Avalanche / Endless Mode (מפולת) Bonuses**:
-  - Stage 2 (Reached at 10 Pops): **+50🪙**
-  - Stage 3 (Reached at 20 Pops): **+100🪙**
+  - Stage 1: 5.0s / lock
+  - Stage 2 (10+ Correct): 4.0s / lock + **50🪙 bonus**
+  - Stage 3 (20+ Correct): 3.0s / lock + **100🪙 bonus**
+  - Ultimate WIN (30 Correct): **200🪙 bonus**
   - Ultimate WIN State (Complete at 30 Pops): **+200🪙** !!
   - *Note: Power-up Bombs (Row/Col/Cross) actively defend the board against the avalanche, but they do **not** award bonus coins or contribute to stage progression skips. Players must manually answer 30 total questions.*
 - **Completion Bonuses**:
