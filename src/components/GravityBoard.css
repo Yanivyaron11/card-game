@@ -40,6 +40,8 @@
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Default border color moved here */
 }
 
 .gravity-card:active {
@@ -52,11 +54,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 10px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: none; /* Border is now handled by parent .gravity-card */
     overflow: hidden;
     position: relative;
+    box-sizing: border-box;
 }
 
 .card-question-mark {
@@ -69,7 +72,7 @@
 
 .stone-card {
     background: #333;
-    border: 2px solid #222;
+    border-color: #222; /* Use border-color since border-width is now global */
     cursor: not-allowed;
     animation: stoneThud 0.4s ease-in;
     display: flex;
@@ -131,7 +134,7 @@
 
 .popping-card {
     background: #4caf50;
-    border: 2px solid #fff;
+    border-color: #fff; /* Parent already has 2px solid, just set color */
     animation: popVanish 0.8s ease-out forwards;
     display: flex;
     justify-content: center;
