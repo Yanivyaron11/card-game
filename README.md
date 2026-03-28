@@ -22,9 +22,10 @@ A fun, interactive, and educational card game designed for children and trivia l
   - Race against a global countdown timer (scales by difficulty level).
   - Forces quick thinking and rewards precision. Remaining time converts directly into bonus coins at the end!
 - **Endless Mode / Avalanche (מפולת)**:
-  - A fast-paced, increasingly dense 5x5 avalanche of cards. A "Rising Tide" of stones 🔒 systematically fills the board from the bottom row up. If any column reaches the top (5 stones), it's Game Over.
-  - **Dynamic Difficulty**: Gravity speed increases as you score (5s -> 4s -> 3s intervals).
-  - **Real-Time Score**: Watch your active session points climb with every match.
+  - A fast-paced, increasingly dense 5x5 avalanche of cards. A "Rising Tide" of stones 🔒 fills the board in random columns. If any column reaches its max height (5 stones), it's Game Over.
+  - **Dynamic Timing & Difficulty**: Gravity speed increases as you score (4s -> 3s -> 2s intervals). 
+  - **No-Pause Gravity**: The avalanche continues even while answering questions—stay alert!
+  - **Dramatic Defeat**: Defeat triggers a 10-second cinematic sequence showing the board state, highlighting the failing column, and playing a custom orchestral sound effect.
   - **Dynamic Bosses**: Battle against multi-hit Bosses and Gladiator enemies with custom graphical animations that block your path.
   - **Explosive Combos**: Match Row, Column, and Cross Bombs that clear massive swaths of cards to help you survive.
 - **Survival Mode (הישרדות)**:
@@ -72,9 +73,9 @@ Smarty features a robust rewarding system to keep children engaged:
   - New High Score: **+20🪙**.
   - Course Completion: Junior (**+30🪙**) / Master (**+50🪙**).
 - **Avalanche / Endless Mode (מפולת) Bonuses**:
-  - Stage 1: 5.0s / lock
-  - Stage 2 (10+ Correct): 4.0s / lock + **50🪙 bonus**
-  - Stage 3 (20+ Correct): 3.0s / lock + **100🪙 bonus**
+  - Stage 1: ~4.0s / stone drop
+  - Stage 2 (10+ Correct): ~3.0s / stone drop + **50🪙 bonus**
+  - Stage 3 (20+ Correct): ~2.0s / stone drop + **100🪙 bonus**
   - Ultimate WIN (30 Correct): **200🪙 bonus**
   - Ultimate WIN State (Complete at 30 Pops): **+200🪙** !!
   - *Note: Power-up Bombs (Row/Col/Cross) actively defend the board against the avalanche, but they do **not** award bonus coins or contribute to stage progression skips. Players must manually answer 30 total questions.*
