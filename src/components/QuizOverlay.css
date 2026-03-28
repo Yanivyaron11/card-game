@@ -18,10 +18,9 @@
 .quiz-card {
     width: 100%;
     max-width: 480px;
-    /* Reduced window width from 550px */
-    height: 90vh;
-    min-height: 600px;
-    max-height: 800px;
+    height: auto;
+    min-height: auto;
+    max-height: 92vh;
     /* Restored up/down stretching for desktop */
     background: rgba(255, 255, 255, 0.92) !important;
     backdrop-filter: blur(8px);

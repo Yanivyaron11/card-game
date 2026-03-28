@@ -8,7 +8,7 @@ import { markQuestionAsSeen } from '../utils/deck';
 import QuitConfirmModal from './QuitConfirmModal';
 import './GravityBoard.css';
 
-function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit }) {
+function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit, gameState, failedColumnIndex }) {
     const t = translations[language];
     const [soundOn, setSoundOn] = useState(getSoundEnabled());
     const [isQuitModalOpen, setIsQuitModalOpen] = useState(false);
@@ -16,7 +16,7 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
     if (!columns || columns.length === 0) return null;
 
     const handleCardClick = (cIndex, rIndex, card) => {
-        if (card.status === 'stone') return;
+        if (card.status === 'stone' || gameState === 'game_over') return;
         onCardSelected(card.questionId, cIndex, rIndex);
     };
 
@@ -90,7 +90,7 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                             }}
                         />
                         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'white', fontSize: '0.85rem', fontWeight: 'bold', textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}>
-                            {stageInfo.stage === 'WIN' ? 'האלוף המושלם!' : `${stageInfo.current} / ${stageInfo.target}`}
+                            {stageInfo.stage === 'WIN' ? (language === 'he' ? 'האלוף המושלם!' : 'Perfect Champion!') : `${stageInfo.current} / ${stageInfo.target}`}
                         </div>
                     </div>
 
@@ -110,10 +110,10 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
             </div>
 
             {/* Matrix Board */}
-            <div className="gravity-board-container" style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+            <div className="gravity-board-container" style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', position: 'relative' }}>
                 <div className="gravity-grid glass-panel" style={{ gridAutoFlow: 'column', gridAutoColumns: '1fr' }}>
                     {columns.map((col, cIndex) => (
-                        <div key={`col-${cIndex}`} className="gravity-column">
+                        <div key={`col-${cIndex}`} className={`gravity-column ${failedColumnIndex === cIndex ? 'flashing-column' : ''}`}>
                             <AnimatePresence mode="popLayout" initial={false}>
                                 {[...col].reverse().map((card, rIndexReversed) => {
                                     const actualRIndex = col.length - 1 - rIndexReversed;
@@ -156,6 +156,24 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                         </div>
                     ))}
                 </div>
+
+                {/* Game Over Overlay */}
+                <AnimatePresence>
+                    {gameState === 'game_over' && (
+                        <motion.div 
+                            className="game-over-overlay"
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.5 }}
+                            transition={{ type: 'spring', damping: 15 }}
+                        >
+                            <div className="game-over-content">
+                                <h1>{language === 'he' ? 'המשחק נגמר!' : 'GAME OVER!'}</h1>
+                                <p>{language === 'he' ? 'האבנים הגיעו לתקרה...' : 'The stones reached the top...'}</p>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
 
             <QuitConfirmModal

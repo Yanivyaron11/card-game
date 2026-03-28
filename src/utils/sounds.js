@@ -418,6 +418,47 @@ export const playSound = (type) => {
             break;
         }
 
+        case 'game_over': {
+            // "Dramatic Grief": A loud, resonant Minor chord with deep vibrato.
+            const now = ctx.currentTime;
+            const duration = 8.0;
+            const root = 65.41; // C2
+            const freqs = [root * 0.5, root, root * 1.2, root * 1.5, root * 1.9]; // Added sub-bass
+            
+            freqs.forEach((f, i) => {
+                const o = ctx.createOscillator();
+                const g = ctx.createGain();
+                const v = ctx.createOscillator(); 
+                const vGain = ctx.createGain();
+                
+                // Triangle waves are much louder and "warmly" dramatic than sine
+                o.type = i === 0 ? 'sine' : 'triangle';
+                o.frequency.setValueAtTime(f, now);
+                
+                // Vibrato for the "sobbing" effect
+                v.type = 'sine';
+                v.frequency.setValueAtTime(3.5 + i * 0.5, now);
+                vGain.gain.setValueAtTime(f * 0.015, now);
+                
+                v.connect(vGain);
+                vGain.connect(o.frequency);
+                
+                o.connect(g);
+                g.connect(ctx.destination);
+                
+                // Faster swell for more impact, then long fade
+                g.gain.setValueAtTime(0, now);
+                g.gain.linearRampToValueAtTime(0.8 / (i + 1), now + 0.5); // Increased gain
+                g.gain.exponentialRampToValueAtTime(0.001, now + duration);
+                
+                o.start(now);
+                v.start(now);
+                o.stop(now + duration);
+                v.stop(now + duration);
+            });
+            break;
+        }
+
         default:
             break;
     }

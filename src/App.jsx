@@ -89,18 +89,19 @@ function App() {
   const endlessLevelRef = useRef(1);
   const [showLevelWarning, setShowLevelWarning] = useState(null);
   const [showStageBonus, setShowStageBonus] = useState(null);
+  const [failedColumnIndex, setFailedColumnIndex] = useState(null);
 
   const gravityLastTickTimeRef = useRef(Date.now());
   const gravityIntervalRef = useRef(null);
-  
+
   const getRandomPowerUp = (stage = 1) => {
     const r = Math.random();
     // Probabilities significantly reduced per 5x5 board: 5% -> 3.5% -> 2%
     const threshold = stage === 3 ? 0.02 : stage === 2 ? 0.035 : 0.05;
-    
-    if (r < threshold * 0.2) return 'cross'; 
-    if (r < threshold * 0.6) return 'row';   
-    if (r < threshold) return 'col';         
+
+    if (r < threshold * 0.2) return 'cross';
+    if (r < threshold * 0.6) return 'row';
+    if (r < threshold) return 'col';
     return null;
   };
   const [lives, setLives] = useState({ 1: 1, 2: 1 })
@@ -565,6 +566,7 @@ function App() {
     setMixerAvailable({ 1: true, 2: true });
     setSessionCoinBreakdown({ base: 0, streak: 0, bonus: 0, spent: 0 });
     setUsedSurvivalPowerups({ '5050': false, 'hint': false, 'solve': false });
+    setFailedColumnIndex(null);
     setGameState('playing');
   };
 
@@ -732,41 +734,69 @@ function App() {
   // Gravity Pause Logic based on current route AND Level Warning
   useEffect(() => {
     if (gameConfig?.gameMode === 'endless') {
-      const isQuizOpen = location.pathname.startsWith('/quiz');
       const isWarningOpen = !!showLevelWarning;
-      isGravityPausedRef.current = isQuizOpen || isWarningOpen;
+      isGravityPausedRef.current = isWarningOpen;
     }
   }, [location.pathname, gameConfig, showLevelWarning]);
 
   // Gravity Loop logic
   const gravityTick = useCallback(() => {
     if (gameState !== 'playing' || isGravityPausedRef.current) return;
-    
-    // Find the next card to lock based on the current board state
-    let cardToLock = null;
-    for (let r = 0; r < 5; r++) {
-      for (let c = 0; c < endlessColumns.length; c++) {
-        if (endlessColumns[c][r]?.status === 'active') {
-          cardToLock = { c, r };
-          break;
-        }
+
+    // Identify if a quiz is currently open
+    const isQuizOpen = location.pathname.startsWith('/quiz');
+    const target = endlessTargetRef.current;
+
+    // 1. Identify all columns that have at least one 'active' card (excluding the active quiz card)
+    const availableColumns = endlessColumns
+      .map((col, cIdx) => ({ col, cIdx }))
+      .filter(({ col, cIdx }) => {
+        return col.some((card, rIdx) => {
+          if (card.status !== 'active') return false;
+          // Skip the card currently being answered
+          if (isQuizOpen && cIdx === target.col && rIdx === target.row) return false;
+          return true;
+        });
+      });
+
+    if (availableColumns.length === 0) return;
+
+    // 2. Pick a random column from the available candidates
+    const randomChoice = availableColumns[Math.floor(Math.random() * availableColumns.length)];
+    const c = randomChoice.cIdx;
+
+    // 3. Find the LOWEST index 'r' in that column that is still 'active' (and not target)
+    let r = -1;
+    for (let i = 0; i < randomChoice.col.length; i++) {
+      if (randomChoice.col[i].status === 'active') {
+        if (isQuizOpen && c === target.col && i === target.row) continue;
+        r = i;
+        break;
       }
-      if (cardToLock) break;
     }
 
-    if (cardToLock) {
+    if (r !== -1) {
       setEndlessColumns(prev => {
         const newCols = prev.map(col => [...col]);
-        newCols[cardToLock.c][cardToLock.r] = {
-          ...newCols[cardToLock.c][cardToLock.r],
+        newCols[c][r] = {
+          ...newCols[c][r],
           status: 'stone'
         };
 
         // Check if THIS update caused a column to be completely full (all stones)
-        const isGameOver = newCols.some(c => c.length >= 5 && c.every(card => card.status === 'stone'));
-        if (isGameOver) {
+        const fullColIdx = newCols.findIndex(col => col.length >= 5 && col.every(card => card.status === 'stone'));
+        if (fullColIdx !== -1) {
+          setFailedColumnIndex(fullColIdx);
           setGameState('game_over');
-          navigate('/result');
+          playSound('game_over');
+          
+          // Close question if open to show the board effects
+          navigate('/play');
+          
+          // 10-second delay to show the board and the epic Game Over screen
+          setTimeout(() => {
+            navigate('/result');
+          }, 10000);
         }
 
         return newCols;
@@ -781,12 +811,12 @@ function App() {
     if (gameState === 'playing' && gameConfig?.gameMode === 'endless') {
       // Clear any existing interval to be absolutely sure
       if (gravityIntervalRef.current) clearInterval(gravityIntervalRef.current);
-      
+
       gravityLastTickTimeRef.current = Date.now();
-      
+
       gravityIntervalRef.current = setInterval(() => {
         if (isGravityPausedRef.current) {
-          gravityLastTickTimeRef.current = Date.now(); 
+          gravityLastTickTimeRef.current = Date.now();
           return;
         }
 
@@ -1054,13 +1084,24 @@ function App() {
           colToUpdate[row] = { ...colToUpdate[row], status: 'stone' };
           newCols[col] = colToUpdate;
 
-          isGameOver = newCols.some(c => c.every(card => card.status === 'stone'));
+          const fullColIdx = newCols.findIndex(c => c.every(card => card.status === 'stone'));
+          if (fullColIdx !== -1) {
+            setFailedColumnIndex(fullColIdx);
+            isGameOver = true;
+          }
           return newCols;
         });
 
         if (isGameOver) {
           setGameState('game_over');
-          navigate('/result');
+          playSound('game_over');
+          // Navigate back to the board FIRST to show animations/overlay
+          navigate('/play');
+          
+          // 10-second delay to show the board and the epic Game Over screen
+          setTimeout(() => {
+            navigate('/result');
+          }, 10000);
         } else {
           setGameState('playing');
           navigate('/play');
@@ -1337,6 +1378,26 @@ function App() {
     }
   }, [showLevelWarning, applyStreakBonuses, navigate]);
 
+  // Developer Tool: Global command to test game over sequence
+  useEffect(() => {
+    window.testGameOver = () => {
+      if (gameState !== 'playing' || gameConfig?.gameMode !== 'endless') {
+        console.warn("Please start an Avalanche (Endless) game first to test game over!");
+        return;
+      }
+      const randomCol = Math.floor(Math.random() * 5);
+      setFailedColumnIndex(randomCol);
+      setGameState('game_over');
+      playSound('game_over');
+      navigate('/play');
+      setTimeout(() => {
+        navigate('/result');
+      }, 10000);
+      console.log(`[Dev] Triggering Game Over test on column ${randomCol}`);
+    };
+    return () => { delete window.testGameOver; };
+  }, [gameState, gameConfig, navigate]);
+
   if (showLanding) {
     return <LandingPage language={language} />;
   }
@@ -1415,6 +1476,8 @@ function App() {
               config={gameConfig}
               coins={survivalCorrect}
               language={language}
+              gameState={gameState}
+              failedColumnIndex={failedColumnIndex}
               onPauseStateChange={(isPaused) => {
                 isGravityPausedRef.current = isPaused;
               }}
