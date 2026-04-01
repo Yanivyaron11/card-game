@@ -22,6 +22,17 @@ const getAudioContext = () => {
     return globalAudioCtx;
 };
 
+const makeDistortionCurve = (amount = 50) => {
+    const n_samples = 44100;
+    const curve = new Float32Array(n_samples);
+    const deg = Math.PI / 180;
+    for (let i = 0; i < n_samples; ++i) {
+        const x = (i * 2) / n_samples - 1;
+        curve[i] = ((3 + amount) * x * 20 * deg) / (Math.PI + amount * Math.abs(x));
+    }
+    return curve;
+};
+
 export const playSound = (type) => {
     if (!isSoundEnabled) return;
     const ctx = getAudioContext();
@@ -361,60 +372,111 @@ export const playSound = (type) => {
             break;
 
         case 'explosion_small': {
-            const bufferSize = ctx.sampleRate * 0.3; // 0.3 seconds
+            const duration = 0.8;
+            const bufferSize = ctx.sampleRate * duration;
             const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
             const data = buffer.getChannelData(0);
-            for (let i = 0; i < bufferSize; i++) {
-                data[i] = Math.random() * 2 - 1;
-            }
+            for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+            
             const noise = ctx.createBufferSource();
             noise.buffer = buffer;
+            
+            const distortion = ctx.createWaveShaper();
+            distortion.curve = makeDistortionCurve(100);
+            distortion.oversample = '4x';
+
             const noiseFilter = ctx.createBiquadFilter();
-            noiseFilter.type = 'bandpass';
+            noiseFilter.type = 'lowpass';
             noiseFilter.frequency.setValueAtTime(1000, now);
-            noiseFilter.Q.value = 0.5;
+            noiseFilter.frequency.exponentialRampToValueAtTime(40, now + duration);
+            
             const noiseGain = ctx.createGain();
             noiseGain.gain.setValueAtTime(0.5, now);
-            noiseGain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
-            noise.connect(noiseFilter);
+            noiseGain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+            
+            noise.connect(distortion);
+            distortion.connect(noiseFilter);
             noiseFilter.connect(noiseGain);
             noiseGain.connect(ctx.destination);
             noise.start(now);
+
+            // Sub-thump
+            const thump = ctx.createOscillator();
+            thump.type = 'sine';
+            thump.frequency.setValueAtTime(80, now);
+            thump.frequency.exponentialRampToValueAtTime(20, now + 0.2);
+            const thumpGain = ctx.createGain();
+            thumpGain.gain.setValueAtTime(0.6, now);
+            thumpGain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+            thump.connect(thumpGain);
+            thumpGain.connect(ctx.destination);
+            thump.start(now);
+            thump.stop(now + 0.3);
             break;
         }
 
         case 'explosion_large': {
-            const bufferSizeL = ctx.sampleRate * 1.2; // 1.2 seconds
-            const bufferL = ctx.createBuffer(1, bufferSizeL, ctx.sampleRate);
-            const dataL = bufferL.getChannelData(0);
-            for (let i = 0; i < bufferSizeL; i++) {
-                dataL[i] = Math.random() * 2 - 1;
-            }
-            const noiseL = ctx.createBufferSource();
-            noiseL.buffer = bufferL;
-            const noiseFilterL = ctx.createBiquadFilter();
-            noiseFilterL.type = 'lowpass';
-            noiseFilterL.frequency.setValueAtTime(1500, now);
-            noiseFilterL.frequency.exponentialRampToValueAtTime(50, now + 1.0);
-            const noiseGainL = ctx.createGain();
-            noiseGainL.gain.setValueAtTime(1.0, now);
-            noiseGainL.gain.exponentialRampToValueAtTime(0.01, now + 1.2);
-            noiseL.connect(noiseFilterL);
-            noiseFilterL.connect(noiseGainL);
-            noiseGainL.connect(ctx.destination);
-            noiseL.start(now);
+            const duration = 3.5;
+            
+            // 1. Initial Impact "Crack" (White Noise High-Pass)
+            const crackSize = ctx.sampleRate * 0.05;
+            const crackBuffer = ctx.createBuffer(1, crackSize, ctx.sampleRate);
+            const crackData = crackBuffer.getChannelData(0);
+            for (let i = 0; i < crackSize; i++) crackData[i] = Math.random() * 2 - 1;
+            const crackSource = ctx.createBufferSource();
+            crackSource.buffer = crackBuffer;
+            const crackFilter = ctx.createBiquadFilter();
+            crackFilter.type = 'highpass';
+            crackFilter.frequency.value = 2000;
+            const crackGain = ctx.createGain();
+            crackGain.gain.setValueAtTime(1.5, now);
+            crackGain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+            crackSource.connect(crackFilter);
+            crackFilter.connect(crackGain);
+            crackGain.connect(ctx.destination);
+            crackSource.start(now);
 
-            const boom = ctx.createOscillator();
-            boom.type = 'sine';
-            boom.frequency.setValueAtTime(150, now);
-            boom.frequency.exponentialRampToValueAtTime(20, now + 1.0);
-            const boomGain = ctx.createGain();
-            boomGain.gain.setValueAtTime(1.0, now);
-            boomGain.gain.exponentialRampToValueAtTime(0.01, now + 1.0);
-            boom.connect(boomGain);
-            boomGain.connect(ctx.destination);
-            boom.start(now);
-            boom.stop(now + 1.0);
+            // 2. The Main Body (Resonant Rumbe)
+            const mainDistortion = ctx.createWaveShaper();
+            mainDistortion.curve = makeDistortionCurve(400);
+            mainDistortion.oversample = '4x';
+            
+            const rumble = ctx.createOscillator();
+            rumble.type = 'sine';
+            rumble.frequency.setValueAtTime(150, now);
+            rumble.frequency.exponentialRampToValueAtTime(20, now + 2.0);
+            const rumbleGain = ctx.createGain();
+            rumbleGain.gain.setValueAtTime(0, now);
+            rumbleGain.gain.linearRampToValueAtTime(2.0, now + 0.05);
+            rumbleGain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+            
+            rumble.connect(mainDistortion);
+            mainDistortion.connect(rumbleGain);
+            rumbleGain.connect(ctx.destination);
+            rumble.start(now);
+            rumble.stop(now + duration);
+
+            // 3. Debris & Dust (Filtered Noise)
+            const debrisBufferL = ctx.createBuffer(1, ctx.sampleRate * duration, ctx.sampleRate);
+            const debrisDataL = debrisBufferL.getChannelData(0);
+            for (let i = 0; i < debrisDataL.length; i++) debrisDataL[i] = Math.random() * 2 - 1;
+            
+            const debrisSource = ctx.createBufferSource();
+            debrisSource.buffer = debrisBufferL;
+            const debrisFilter = ctx.createBiquadFilter();
+            debrisFilter.type = 'lowpass';
+            debrisFilter.frequency.setValueAtTime(1500, now);
+            debrisFilter.frequency.exponentialRampToValueAtTime(30, now + duration);
+            debrisFilter.Q.value = 5; // Resonant resonance
+            
+            const debrisGain = ctx.createGain();
+            debrisGain.gain.setValueAtTime(1.0, now);
+            debrisGain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+            
+            debrisSource.connect(debrisFilter);
+            debrisFilter.connect(debrisGain);
+            debrisGain.connect(ctx.destination);
+            debrisSource.start(now);
             break;
         }
 
@@ -527,6 +589,11 @@ export const stopMusic = () => {
         currentMusic.currentTime = 0;
         currentMusic = null;
     }
+};
+
+window.testExplosion = () => {
+    console.log("Testing Dramatic Large Explosion...");
+    playSound('explosion_large');
 };
 
 window.testBossSound = () => {

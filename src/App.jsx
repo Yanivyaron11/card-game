@@ -96,8 +96,8 @@ function App() {
 
   const getRandomPowerUp = (stage = 1) => {
     const r = Math.random();
-    // Probabilities significantly reduced per 5x5 board: 5% -> 3.5% -> 2%
-    const threshold = stage === 3 ? 0.02 : stage === 2 ? 0.035 : 0.05;
+    // Increased probabilities: 10% -> 7.5% -> 5%
+    const threshold = stage === 3 ? 0.05 : stage === 2 ? 0.075 : 0.1;
 
     if (r < threshold * 0.2) return 'cross';
     if (r < threshold * 0.6) return 'row';
@@ -821,7 +821,7 @@ function App() {
         }
 
         const getInterval = () => {
-          return 5000;
+          return 7000;
         };
 
         const now = Date.now();
@@ -990,9 +990,7 @@ function App() {
           }
 
           let earnedCoins = target.level || 1;
-          if (target.powerUp === 'row' || target.powerUp === 'col') {
-            playSound('explosion_small');
-          } else if (target.powerUp === 'cross') {
+          if (target.powerUp === 'row' || target.powerUp === 'col' || target.powerUp === 'cross') {
             playSound('explosion_large');
           }
 

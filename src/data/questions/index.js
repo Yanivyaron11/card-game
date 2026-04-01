@@ -16,6 +16,8 @@ import { flagsQuestions } from './flags.js';
 import { robloxQuestions } from './roblox.js';
 import { kidsMoviesNewQuestions } from './kids_movies_new.js';
 import { englishAdvancedQuestions } from './english_advanced.js';
+import { curbQuestions } from './curb.js';
+
 
 export const topics = [
     // --- GENERATED_TOPICS_START ---
@@ -273,7 +275,16 @@ export const topics = [
                     "he": "הסופרנוס"
                 },
                 "icon": "🔫"
+            },
+            {
+                "id": "curb",
+                "name": {
+                    "en": "Curb Your Enthusiasm",
+                    "he": "תרגיע"
+                },
+                "icon": "👴"
             }
+
         ]
     },
     {
@@ -407,8 +418,11 @@ export const questionCounts = {
     "english_advanced": 200,
     "space": 150,
     "flags": 150,
-    "roblox": 150
+    "roblox": 150,
+    "curb": 200
 };
+
+
 
 export const questions = [
     ...israelQuestions,
@@ -427,5 +441,7 @@ export const questions = [
     ...spaceQuestions,
     ...flagsQuestions,
     ...robloxQuestions,
-    ...kidsMoviesNewQuestions
+    ...kidsMoviesNewQuestions,
+    ...curbQuestions
 ];
+
