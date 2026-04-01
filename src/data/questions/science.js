@@ -221,7 +221,7 @@ export const scienceQuestions = [
             ],
             "he": [
                 "מופנם",
-                "מוחצן (אקסטרוורט)",
+                "מוחצן",
                 "ביישן",
                 "שקט"
             ]
@@ -245,7 +245,7 @@ export const scienceQuestions = [
                 "Leader"
             ],
             "he": [
-                "מופנם (אינטרוורט)",
+                "מופנם",
                 "מוחצן",
                 "חברתי",
                 "מנהיג"
@@ -496,7 +496,7 @@ export const scienceQuestions = [
             ],
             "he": [
                 "ציטוט אינטליגנטי",
-                "מנת משכל (Intelligence Quotient)",
+                "מנת משכל",
                 "איכות פנימית",
                 "שאלה אידיאלית"
             ]
@@ -676,7 +676,7 @@ export const scienceQuestions = [
             ],
             "he": [
                 "נכון",
-                "לא נכון (זהו מיתוס)"
+                "לא נכון"
             ]
         },
         "correctAnswer": 1,
@@ -1486,7 +1486,7 @@ export const scienceQuestions = [
             ],
             "he": [
                 "הפרעת חרדה חברתית",
-                "דיכאון עונתי (Seasonal Affective Disorder)",
+                "דיכאון עונתי",
                 "הפרעת כעס חמורה",
                 "הפרעת דום נשימה בשינה"
             ]
@@ -1512,7 +1512,7 @@ export const scienceQuestions = [
             ],
             "he": [
                 "מחקר חתך",
-                "מחקר אורך (Longitudinal)",
+                "מחקר אורך",
                 "תיאור מקרה",
                 "מחקר ניסויי"
             ]

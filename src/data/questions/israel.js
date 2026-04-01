@@ -4360,7 +4360,7 @@ export const israelQuestions = [
                     "South Park"
                 ],
                 "he": [
-                    "גני יהושע (הירקון)",
+                    "גני יהושע",
                     "גן מאיר",
                     "גן העצמאות",
                     "פארק דרום"
@@ -4657,13 +4657,13 @@ export const israelQuestions = [
                     "Ramat Gan",
                     "Holon",
                     "Bat Yam",
-                    "Jaffa (part of TA)"
+                    "Jaffa"
                 ],
                 "he": [
                     "רמת גן",
                     "חולון",
                     "בת ים",
-                    "יפו (חלק מתל אביב)"
+                    "יפו"
                 ]
             },
             "correctAnswer": 3,
@@ -5080,13 +5080,13 @@ export const israelQuestions = [
             "options": {
                 "en": [
                     "Jaffa Lighthouse",
-                    "Tel Aviv Lighthouse (Port)",
+                    "Tel Aviv Lighthouse",
                     "Stella Maris",
                     "Ashdod Lighthouse"
                 ],
                 "he": [
                     "מגדלור יפו",
-                    "מגדלור תל אביב (בנמל)",
+                    "מגדלור תל אביב",
                     "מגדלור סטלה מאריס",
                     "מגדלור אשדוד"
                 ]
@@ -5129,13 +5129,13 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "South (Florentin)",
+                    "South",
                     "North",
                     "Center",
                     "Jaffa"
                 ],
                 "he": [
-                    "בדרום העיר (פלורנטין)",
+                    "בדרום העיר",
                     "בצפון העיר",
                     "במרכז העיר",
                     "ביפו"
@@ -5409,13 +5409,13 @@ export const israelQuestions = [
             "options": {
                 "en": [
                     "Eclectic",
-                    "International Style (Bauhaus)",
+                    "International Style",
                     "Brutalism",
                     "Post-modernism"
                 ],
                 "he": [
                     "אקלקטי",
-                    "סגנון בינלאומי (באוהאוס)",
+                    "סגנון בינלאומי",
                     "ברוטליזם",
                     "פוסט-מודרניזם"
                 ]
@@ -5794,7 +5794,7 @@ export const israelQuestions = [
                 ],
                 "he": [
                     "מאיר דיזנגוף",
-                    "שלמה להט (צ'יץ')",
+                    "שלמה להט",
                     "רון חולדאי",
                     "מרדכי נמיר"
                 ]
@@ -6262,13 +6262,13 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "Huge street parties (Purim, Ind.)",
+                    "Huge street parties",
                     "Military ceremonies",
                     "Protests",
                     "Farmers market"
                 ],
                 "he": [
-                    "מסיבות רחוב ענקיות (פורים, עצמאות)",
+                    "מסיבות רחוב ענקיות",
                     "טקסים צבאיים",
                     "הפגנות",
                     "שוק איכרים"
@@ -6687,13 +6687,13 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "Shlomo Lahat (Chich)",
+                    "Shlomo Lahat",
                     "Yehoshua Rabinowitz",
                     "Mordechai Namir",
                     "Ron Huldai"
                 ],
                 "he": [
-                    "שלמה להט (צ'יץ')",
+                    "שלמה להט",
                     "יהושע רבינוביץ'",
                     "מרדכי נמיר",
                     "רוני חולדאי"
@@ -6912,13 +6912,13 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "Dizengoff House (Independence Hall)",
+                    "Dizengoff House",
                     "Rokach House",
                     "Magidovitch House",
                     "Embassy House"
                 ],
                 "he": [
-                    "בית דיזנגוף (היכל העצמאות)",
+                    "בית דיזנגוף",
                     "בית רוקח",
                     "בית מגידוביץ'",
                     "בית השגרירות"
@@ -7692,13 +7692,13 @@ export const israelQuestions = [
                     "Yehoshua Rabinowitz",
                     "Shlomo Lahat",
                     "Mordechai Namir",
-                    "No mayor resigned (Yadlin was candidate)"
+                    "No mayor resigned"
                 ],
                 "he": [
                     "יהושע רבינוביץ'",
                     "שלמה להט",
                     "מרדכי נמיר",
-                    "לא התפטר ראש עיר (ידלין היה מועמד)"
+                    "לא התפטר ראש עיר"
                 ]
             },
             "correctAnswer": 3,
@@ -7898,7 +7898,7 @@ export const israelQuestions = [
                     "Israel Rokach"
                 ],
                 "he": [
-                    "שלמה להט (צ'יץ')",
+                    "שלמה להט",
                     "יהושע רבינוביץ'",
                     "מרדכי נמיר",
                     "ישראל רוקח"
@@ -8412,13 +8412,13 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "US Embassy (former)",
+                    "US Embassy",
                     "Dan Hotel",
                     "City Hall",
                     "Peres Center"
                 ],
                 "he": [
-                    "בית השגרירות האמריקאית (לשעבר)",
+                    "בית השגרירות האמריקאית",
                     "מלון דן",
                     "בית העירייה",
                     "מרכז פרס"
@@ -8512,13 +8512,13 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "Preston Scott Cohen (new bldg)",
+                    "Preston Scott Cohen",
                     "Menachem Cohen",
                     "Zeev Rechter",
                     "Dov Karmi"
                 ],
                 "he": [
-                    "פרסטון סקוט כהן (הבניין החדש)",
+                    "פרסטון סקוט כהן",
                     "מנחם כהן",
                     "זאב רכטר",
                     "דב כרמי"
@@ -8932,13 +8932,13 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "Altalena (military link)",
+                    "Altalena",
                     "Exodus",
                     "Miriam",
                     "Pan York"
                 ],
                 "he": [
-                    "אלטלנה (הקשר הצבאי)",
+                    "אלטלנה",
                     "אקסודוס",
                     "מיריים",
                     "פאן יורק"
@@ -9425,13 +9425,13 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "Germany (Bauhaus)",
+                    "Germany",
                     "USA",
                     "Italy",
                     "Greece"
                 ],
                 "he": [
-                    "גרמניה (באוהאוס)",
+                    "גרמניה",
                     "ארה''ב",
                     "איטליה",
                     "יוון"
@@ -9834,13 +9834,13 @@ export const israelQuestions = [
                 "en": [
                     "Meir Park",
                     "Independence Garden",
-                    "Yarkon Park (Ganei Yehoshua)",
+                    "Yarkon Park",
                     "South Park"
                 ],
                 "he": [
                     "גן מאיר",
                     "גן העצמאות",
-                    "פארק הירקון (גני יהושע)",
+                    "פארק הירקון",
                     "פארק דרום"
                 ]
             },
@@ -10240,13 +10240,13 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "ANU Museum (Beit Hatfutsot)",
+                    "ANU Museum",
                     "Haganah Museum",
                     "Lehi Museum",
                     "Yad Vashem"
                 ],
                 "he": [
-                    "מוזיאון אנו (בית התפוצות)",
+                    "מוזיאון אנו",
                     "מוזיאון ההגנה",
                     "מוזיאון הלח''י",
                     "יד ושם"
@@ -10781,7 +10781,7 @@ export const israelQuestions = [
             },
             "options": {
                 "en": [
-                    "White Night (Laila Lavan)",
+                    "White Night",
                     "Night of Stars",
                     "Night Marathon",
                     "Lights Festival"

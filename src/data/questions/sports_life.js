@@ -192,13 +192,13 @@ export const sports_lifeQuestions = [
         },
         "options": {
             "en": [
-                "Maccabi Star (David)",
+                "Maccabi Star",
                 "A flying Eagle",
                 "A galloping Horse",
                 "A roaring Lion"
             ],
             "he": [
-                "כוכב מכבי (מגן דוד)",
+                "כוכב מכבי",
                 "נשר במעוף",
                 "סוס דוהר",
                 "אריה שואג"
@@ -1027,13 +1027,13 @@ export const sports_lifeQuestions = [
             "en": [
                 "Cup Winners' Cup",
                 "Champions League",
-                "UEFA Cup (Europa League)",
+                "UEFA Cup",
                 "Conference League"
             ],
             "he": [
                 "גביע מחזיקות הגביע",
                 "ליגת האלופות",
-                "גביע אופ\"א (הליגה האירופית)",
+                "גביע אופ\"א",
                 "קונפרנס ליג"
             ]
         },
@@ -2829,13 +2829,13 @@ export const sports_lifeQuestions = [
             "en": [
                 "12",
                 "50",
-                "0 (Without crowd penalty)",
+                "0",
                 "100"
             ],
             "he": [
                 "12",
                 "50",
-                "0 (עונש רדיוס)",
+                "0",
                 "100"
             ]
         },
@@ -4219,7 +4219,7 @@ export const sports_lifeQuestions = [
                 "A technique for folding puff pastry"
             ],
             "he": [
-                "זיגוג (לרוב על בסיס משמש) הנותן לטארט פירות ברק ומונע התייבשות",
+                "זיגוג הנותן לטארט פירות ברק ומונע התייבשות",
                 "סוג של מפית צרפתית",
                 "השכבה התחתונה של העוגה",
                 "טכניקה לקיפול בצק עלים"
@@ -4348,7 +4348,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "בריוש נאנטר",
-                "גאלט דה רואה (Galette des Rois)",
+                "גאלט דה רואה",
                 "פריז-ברסט",
                 "בוש דה נואל"
             ]
@@ -4651,13 +4651,13 @@ export const sports_lifeQuestions = [
         "options": {
             "en": [
                 "Gelatin is sweet; Agar-Agar is salty",
-                "Gelatin is animal-based; Agar-Agar is plant-based (from seaweed)",
+                "Gelatin is animal-based; Agar-Agar is plant-based",
                 "Gelatin is blue; Agar-Agar is red",
                 "Gelatin stays liquid; Agar-Agar turns into solid rock"
             ],
             "he": [
                 "ג'לטין הוא מתוק; אגר-אגר הוא מלוח",
-                "ג'לטין הוא מהחי; אגר-אגר הוא מהצומח (מאצות)",
+                "ג'לטין הוא מהחי; אגר-אגר הוא מהצומח",
                 "ג'לטין הוא כחול; אגר-אגר הוא אדום",
                 "ג'לטין נשאר נוזלי; אגר-אגר הופך לסלע מוצק"
             ]
@@ -4729,7 +4729,7 @@ export const sports_lifeQuestions = [
         "options": {
             "en": [
                 "Coffee flavored custard",
-                "A mixture of pastry cream (Crème Pâtissière) and whipped cream",
+                "A mixture of pastry cream and whipped cream",
                 "A cream used only for state dinners",
                 "A vegan alternative to butter"
             ],
@@ -4831,16 +4831,16 @@ export const sports_lifeQuestions = [
         },
         "options": {
             "en": [
-                "France (invented in Paris)",
-                "Turkey (inspired by the flag)",
-                "Austria (based on the Kipferl)",
-                "Italy (based on Cornetto)"
+                "France",
+                "Turkey",
+                "Austria",
+                "Italy"
             ],
             "he": [
-                "צרפת (הומצא בפריז)",
-                "טורקיה (בהשראת הדגל)",
-                "אוסטריה (מבוסס על הקיפפרל)",
-                "איטליה (מבוסס על הקורנטו)"
+                "צרפת",
+                "טורקיה",
+                "אוסטריה",
+                "איטליה"
             ]
         },
         "correctAnswer": 2,
@@ -4962,13 +4962,13 @@ export const sports_lifeQuestions = [
             "en": [
                 "A type of expensive French wine",
                 "A decorative sugar flower",
-                "A paste made from caramelized nuts (usually hazelnuts or almonds)",
+                "A paste made from caramelized nuts",
                 "A French style of dancing"
             ],
             "he": [
                 "סוג של יין צרפתי יקר",
                 "פרח סוכר דקורטיבי",
-                "מחית העשויה מאגוזים מקורמלים (לרוב לוז או שקדים)",
+                "מחית העשויה מאגוזים מקורמלים",
                 "סגנון ריקוד צרפתי"
             ]
         },
@@ -19392,7 +19392,7 @@ export const sports_lifeQuestions = [
                 "תיבול קינוחים",
                 "הסמכת רטבים בסיום הבישול",
                 "השריית בשרים",
-                "דגלאסז' (ביטול משקעים)"
+                "דגלאסז'"
             ]
         },
         "correctAnswer": 1,
@@ -19598,7 +19598,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "לארד",
-                "סואט (Suet)",
+                "סואט",
                 "טאלוב",
                 "שמאלץ"
             ]
@@ -19644,13 +19644,13 @@ export const sports_lifeQuestions = [
         "options": {
             "en": [
                 "Turmeric",
-                "Asafoetida (Hing)",
+                "Asafoetida",
                 "Cumin",
                 "Fenugreek"
             ],
             "he": [
                 "כורכום",
-                "אסאפוטידה (הינג)",
+                "אסאפוטידה",
                 "כמון",
                 "חילבה"
             ]
@@ -19728,7 +19728,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "לה סוקל",
-                "לה פייה (Le pied)",
+                "לה פייה",
                 "לה באז",
                 "לה קורון"
             ]
@@ -19748,13 +19748,13 @@ export const sports_lifeQuestions = [
         "options": {
             "en": [
                 "Tuna",
-                "Small oily fish (like Anchovies)",
+                "Small oily fish",
                 "Salmon",
                 "Cod"
             ],
             "he": [
                 "טונה",
-                "דגים קטנים ושומניים (כמו אנשובי)",
+                "דגים קטנים ושומניים",
                 "סלמון",
                 "בקלה"
             ]
@@ -20179,7 +20179,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "טיגון",
-                "חליטה (בלנשינג)",
+                "חליטה",
                 "צלייה",
                 "אידוי"
             ]
@@ -20665,7 +20665,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "חמאה מלוחה",
-                "חמאה מזוקקת (גהי)",
+                "חמאה מזוקקת",
                 "מרגרינה",
                 "מרגרינה לאפייה"
             ]
@@ -20951,7 +20951,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "ציפה",
-                "זסט (גרסט)",
+                "זסט",
                 "מיץ",
                 "פילוט"
             ]
@@ -20977,7 +20977,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "כבישה",
-                "מצראציה (Macerating)",
+                "מצראציה",
                 "המלחה",
                 "שימור"
             ]
@@ -21003,7 +21003,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "הרתחה",
-                "שליקה (Poaching)",
+                "שליקה",
                 "טיגון",
                 "צלייה"
             ]
@@ -21784,7 +21784,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "רוטב",
-                "פונד (Fond)",
+                "פונד",
                 "רו",
                 "גלאסה"
             ]
@@ -21882,13 +21882,13 @@ export const sports_lifeQuestions = [
         "options": {
             "en": [
                 "Excess fat",
-                "Flavorful browned bits (fond)",
+                "Flavorful browned bits",
                 "Burnt food",
                 "Excess water"
             ],
             "he": [
                 "שומן עודף",
-                "משקעי טעם מושחמים (פונד)",
+                "משקעי טעם מושחמים",
                 "אוכל שרוף",
                 "מים עודפים"
             ]
@@ -22064,13 +22064,13 @@ export const sports_lifeQuestions = [
         "options": {
             "en": [
                 "Chicken",
-                "Kombu (seaweed)",
+                "Kombu",
                 "Beef",
                 "Pork"
             ],
             "he": [
                 "עוף",
-                "קומבו (אצת ים)",
+                "קומבו",
                 "בשר בקר",
                 "חזיר"
             ]
@@ -22096,7 +22096,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "נוקשות",
-                "שיוש (Marbling) ורכות",
+                "שיוש ורכות",
                 "צבע צהוב",
                 "טעם חמוץ"
             ]
@@ -22174,7 +22174,7 @@ export const sports_lifeQuestions = [
             ],
             "he": [
                 "מחבת טיגון",
-                "תבנית מלבנית (Loaf)",
+                "תבנית מלבנית",
                 "ווק",
                 "גריל"
             ]

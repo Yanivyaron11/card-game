@@ -789,10 +789,10 @@ function App() {
           setFailedColumnIndex(fullColIdx);
           setGameState('game_over');
           playSound('game_over');
-          
+
           // Close question if open to show the board effects
           navigate('/play');
-          
+
           // 10-second delay to show the board and the epic Game Over screen
           setTimeout(() => {
             navigate('/result');
@@ -821,8 +821,6 @@ function App() {
         }
 
         const getInterval = () => {
-          if (survivalCorrect >= 20) return 3000;
-          if (survivalCorrect >= 10) return 4000;
           return 5000;
         };
 
@@ -1097,7 +1095,7 @@ function App() {
           playSound('game_over');
           // Navigate back to the board FIRST to show animations/overlay
           navigate('/play');
-          
+
           // 10-second delay to show the board and the epic Game Over screen
           setTimeout(() => {
             navigate('/result');

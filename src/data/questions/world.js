@@ -4179,7 +4179,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "רחוב בייקר",
-                "סמטת פודינג (Pudding Lane)",
+                "סמטת פודינג",
                 "קובנט גארדן",
                 "פליט סטריט"
             ]
@@ -4254,7 +4254,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "השארד",
-                "הגרקין (המלפפון החמוץ)",
+                "הגרקין",
                 "הסקלפל",
                 "הפינאקל"
             ]
@@ -4430,7 +4430,7 @@ export const worldQuestions = [
             "he": [
                 "רחוב פנצ'רץ' 20",
                 "השארד",
-                "הפומפייה (Cheesegrater)",
+                "הפומפייה",
                 "הגרקין"
             ]
         },
@@ -4454,7 +4454,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "סטרטפורד",
-                "וייט סיטי (White City)",
+                "וייט סיטי",
                 "וומבלי",
                 "קריסטל פאלאס"
             ]
@@ -4714,7 +4714,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "המלך",
-                "מושל המצודה (Governor of the Tower)",
+                "מושל המצודה",
                 "ראש העיר",
                 "ראש הביפיטרס"
             ]
@@ -4844,7 +4844,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "בית אדינבורו",
-                "ארמון הולירד (Holyrood Palace)",
+                "ארמון הולירד",
                 "טירת היילנד",
                 "אחוזת לוך נס"
             ]
@@ -4864,13 +4864,13 @@ export const worldQuestions = [
         "options": {
             "en": [
                 "Northern Line",
-                "Hampstead Station (on Northern)",
+                "Hampstead Station",
                 "Central Line",
                 "Jubilee Line"
             ],
             "he": [
                 "הקו הצפוני",
-                "תחנת המפסטד (בקו הצפוני)",
+                "תחנת המפסטד",
                 "הקו המרכזי",
                 "קו ג'ובילי"
             ]
@@ -4890,13 +4890,13 @@ export const worldQuestions = [
         "options": {
             "en": [
                 "Coal Museum",
-                "The Crime Museum (New Scotland Yard)",
+                "The Crime Museum",
                 "Art Museum",
                 "History of London"
             ],
             "he": [
                 "מוזיאון הפחם",
-                "מוזיאון הפשיעה (New Scotland Yard)",
+                "מוזיאון הפשיעה",
                 "מוזיאון אמנות",
                 "היסטוריית לונדון"
             ]
@@ -4916,7 +4916,7 @@ export const worldQuestions = [
         "options": {
             "en": [
                 "5",
-                "30 (Approx)",
+                "30",
                 "10",
                 "50"
             ],
@@ -4974,7 +4974,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "המטבעה המלכותית",
-                "הבורסה הבלטית (Baltic Exchange)",
+                "הבורסה הבלטית",
                 "בורסת המניות הישנה",
                 "מקדש רומי"
             ]
@@ -5000,7 +5000,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "המטבעה המלכותית",
-                "הבורסה הבלטית (Baltic Exchange)",
+                "הבורסה הבלטית",
                 "בורסת המניות הישנה",
                 "מקדש רומי"
             ]
@@ -5025,7 +5025,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "גשר לונדון",
-                "גשר המצודה (Tower Bridge)",
+                "גשר המצודה",
                 "הגשר הכחול",
                 "גשר השמיים"
             ]
@@ -5049,7 +5049,7 @@ export const worldQuestions = [
                 "Royal Lake"
             ],
             "he": [
-                "הסרפנטיין (The Serpentine)",
+                "הסרפנטיין",
                 "התמזה",
                 "בריכת ריג'נט",
                 "האגם המלכותי"
@@ -5175,7 +5175,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "משטרה",
-                "ביפיטרס (Beefeaters)",
+                "ביפיטרס",
                 "ריינג'רס מלכותיים",
                 "האבירים"
             ]
@@ -5200,7 +5200,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "העגבניה",
-                "הגרקין (מלפפון חמוץ)",
+                "הגרקין",
                 "התפוח",
                 "הכרוב"
             ]
@@ -5494,13 +5494,13 @@ export const worldQuestions = [
         "options": {
             "en": [
                 "16th",
-                "18th (1710)",
+                "18th",
                 "19th",
                 "15th"
             ],
             "he": [
                 "ה-16",
-                "ה-18 (1710)",
+                "ה-18",
                 "ה-19",
                 "ה-15"
             ]
@@ -5550,7 +5550,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "עמוד נלסון",
-                "המונומנט (The Monument)",
+                "המונומנט",
                 "מארבל ארץ'",
                 "סנוטאף"
             ]
@@ -5594,13 +5594,13 @@ export const worldQuestions = [
         "options": {
             "en": [
                 "Green Park",
-                "Regent's Park (Queen Mary's)",
+                "Regent's Park",
                 "St. James's Park",
                 "Victoria Park"
             ],
             "he": [
                 "גרין פארק",
-                "ריג'נטס פארק (גן המלכה מרי)",
+                "ריג'נטס פארק",
                 "פארק סנט ג'יימס",
                 "ויקטוריה פארק"
             ]
@@ -5675,7 +5675,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "מנזר וסטמינסטר",
-                "ארמון למבת' (Lambeth Palace)",
+                "ארמון למבת'",
                 "סנט פול",
                 "מנשן האוס"
             ]
@@ -5700,7 +5700,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "ויקטורי",
-                "גולדן היינד (Golden Hinde)",
+                "גולדן היינד",
                 "דיסקברי",
                 "אנדוור"
             ]
@@ -5778,7 +5778,7 @@ export const worldQuestions = [
                 "אול האלווס שליד המצודה",
                 "סנט בריידס",
                 "סנט פול",
-                "כנסיית הטמפל (Temple Church)"
+                "כנסיית הטמפל"
             ]
         },
         "correctAnswer": 0,
@@ -5958,7 +5958,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "ג'ק המרטש",
-                "קולונל בלאד (Colonel Blood)",
+                "קולונל בלאד",
                 "דיק טרפין",
                 "גאי פוקס"
             ]
@@ -5978,13 +5978,13 @@ export const worldQuestions = [
         "options": {
             "en": [
                 "Sword",
-                "Partisan (Halberd)",
+                "Partisan",
                 "Spear",
                 "Axe"
             ],
             "he": [
                 "חרב",
-                "פרטיזן (Halberd)",
+                "פרטיזן",
                 "חנית",
                 "גרזן"
             ]
@@ -6036,7 +6036,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "השארד",
-                "בניין לידנהול (Leadenhall)",
+                "בניין לידנהול",
                 "הסקלפל",
                 "הפינאקל"
             ]
@@ -6062,7 +6062,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "גריניץ'",
-                "מאונט פלזנט (Mount Pleasant)",
+                "מאונט פלזנט",
                 "סאות'ווק",
                 "קמדן"
             ]
@@ -6140,7 +6140,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "פאב מפורסם",
-                "הבנק של אנגליה (Bank of England)",
+                "הבנק של אנגליה",
                 "פסל",
                 "הבורסה המלכותית"
             ]
@@ -6212,13 +6212,13 @@ export const worldQuestions = [
         "options": {
             "en": [
                 "It was a missile silo",
-                "Official Secrets Act (Communication hub)",
+                "Official Secrets Act",
                 "It didn't exist",
                 "Private club"
             ],
             "he": [
                 "זה היה סילו טילים",
-                "חוק הסודות הרשמיים (מרכז תקשורת)",
+                "חוק הסודות הרשמיים",
                 "הוא לא היה קיים",
                 "מועדון פרטי"
             ]
@@ -6244,7 +6244,7 @@ export const worldQuestions = [
             ],
             "he": [
                 "רולס רויס פנטום 6",
-                "בנטלי סטייט לימוזין (Bentley)",
+                "בנטלי סטייט לימוזין",
                 "ריינג' רובר",
                 "ג'גואר XJ"
             ]
@@ -10554,7 +10554,7 @@ export const worldQuestions = [
                 "Machu Picchu"
             ],
             "he": [
-                "הלונדון איי (עין לונדון)",
+                "הלונדון איי",
                 "הקולוסיאום",
                 "הטאג' מהאל",
                 "מאצ'ו פיצ'ו"

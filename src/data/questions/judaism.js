@@ -299,7 +299,7 @@ export const judaismQuestions = [
                 "A golden ring",
                 "A silver cup",
                 "A staff of leadership",
-                "A coat of many colors (ketonet passim)"
+                "A coat of many colors"
             ],
             "he": [
                 "טבעת זהב",
@@ -506,7 +506,7 @@ export const judaismQuestions = [
             "en": [
                 "The Jordan River",
                 "The Dead Sea",
-                "The Red Sea (Sea of Reeds)",
+                "The Red Sea",
                 "The Mediterranean Sea"
             ],
             "he": [
@@ -996,7 +996,7 @@ export const judaismQuestions = [
             "en": [
                 "Trumpet",
                 "Drum",
-                "Harp (Lyre/Kinnor)",
+                "Harp",
                 "Flute"
             ],
             "he": [
@@ -1149,13 +1149,13 @@ export const judaismQuestions = [
                 "Ephraim and Manasseh",
                 "Jerusalem and Samaria",
                 "Galilee and Judea",
-                "Judah (South) and Israel (North)"
+                "Judah"
             ],
             "he": [
                 "אפרים ומנשה",
                 "ירושלים ושומרון",
                 "הגליל ויהודה",
-                "יהודה (דרום) וישראל (צפון)"
+                "יהודה"
             ]
         },
         "correctAnswer": 3,
@@ -1502,10 +1502,10 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Song of Solomon (Shir HaShirim)",
-                "Proverbs (Mishlei)",
-                "Lamentations (Eicha)",
-                "Psalms (Tehillim)"
+                "Song of Solomon",
+                "Proverbs",
+                "Lamentations",
+                "Psalms"
             ],
             "he": [
                 "שיר השירים",
@@ -5532,9 +5532,9 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Pomegranate",
-                "Etrog (Citron)",
-                "Hadas (Myrtle)",
-                "Lulav (Palm frond)"
+                "Etrog",
+                "Hadas",
+                "Lulav"
             ],
             "he": [
                 "רימון",
@@ -5815,7 +5815,7 @@ export const judaismQuestions = [
                 "Tallit",
                 "Tzitzit",
                 "Shtreimel",
-                "Kippah (or Yarmulke)"
+                "Kippah"
             ],
             "he": [
                 "טלית",
@@ -5865,7 +5865,7 @@ export const judaismQuestions = [
                 "Rosh Chodesh",
                 "Yom Kippur",
                 "Chol HaMoed",
-                "Shabbat (Sabbath)"
+                "Shabbat"
             ],
             "he": [
                 "ראש חודש",
@@ -5889,7 +5889,7 @@ export const judaismQuestions = [
             "en": [
                 "Halacha",
                 "Shechita",
-                "Kashrut (Kosher)",
+                "Kashrut",
                 "Tzedakah"
             ],
             "he": [
@@ -5937,7 +5937,7 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Pareve (Parve)",
+                "Pareve",
                 "Tamei",
                 "Kosher",
                 "Glatt"
@@ -5989,7 +5989,7 @@ export const judaismQuestions = [
             "en": [
                 "Mezuzot",
                 "Tzitzit",
-                "Tefillin (Phylacteries)",
+                "Tefillin",
                 "Siddurim"
             ],
             "he": [
@@ -6217,7 +6217,7 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Torah Scroll (Sefer Torah)",
+                "Torah Scroll",
                 "Haggadah",
                 "Talmud",
                 "Siddur"
@@ -6395,7 +6395,7 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Rashi",
-                "Maimonides (Rambam)",
+                "Maimonides",
                 "Yehuda Halevi",
                 "Baal Shem Tov"
             ],
@@ -6421,13 +6421,13 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Healing the sick",
-                "Mourning the dead (Mourner's Kaddish)",
+                "Mourning the dead",
                 "Lighting candles",
                 "Before eating bread"
             ],
             "he": [
                 "רפואת חולים",
-                "אבל על מתים (קדיש יתום)",
+                "אבל על מתים",
                 "הדלקת נרות",
                 "לפני אכילת לחם"
             ]
@@ -6472,7 +6472,7 @@ export const judaismQuestions = [
             "en": [
                 "The Dome of the Rock",
                 "Tower of David",
-                "The Western Wall (Kotel)",
+                "The Western Wall",
                 "Mount of Olives"
             ],
             "he": [
@@ -6495,7 +6495,7 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Star of David (Magen David)",
+                "Star of David",
                 "Hamsa",
                 "Chai",
                 "Menorah"
@@ -6573,7 +6573,7 @@ export const judaismQuestions = [
                 "Yerushalayim Shel Zahav",
                 "Oseh Shalom",
                 "Hevenu Shalom Aleichem",
-                "Hatikvah (The Hope)"
+                "Hatikvah"
             ],
             "he": [
                 "ירושלים של זהב",
@@ -6827,7 +6827,7 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Tambourine",
-                "Gragger (Ra'ashan)",
+                "Gragger",
                 "Shofar",
                 "Dreidel"
             ],
@@ -7030,14 +7030,14 @@ export const judaismQuestions = [
             "en": [
                 "Pidyon Haberben",
                 "Simchat Bat",
-                "Brit Milah (Bris)",
+                "Brit Milah",
                 "Upsherin"
             ],
             "he": [
                 "פדיון הבן",
                 "שמחת בת",
                 "ברית מילה",
-                "חלאקה (אופשערן)"
+                "חלאקה"
             ]
         },
         "correctAnswer": 2,
@@ -7113,7 +7113,7 @@ export const judaismQuestions = [
             "he": [
                 "סופגנייה",
                 "קוגל",
-                "לביבה (לאטקה)",
+                "לביבה",
                 "בלינצ'ס"
             ]
         },
@@ -7158,7 +7158,7 @@ export const judaismQuestions = [
                 "Börek",
                 "Rugelach",
                 "Sufganiyah",
-                "Hamantaschen (Oznei Haman)"
+                "Hamantaschen"
             ],
             "he": [
                 "בורקס",
@@ -7544,13 +7544,13 @@ export const judaismQuestions = [
                 "Midnight",
                 "Sunset exactly",
                 "Sunrise",
-                "Nightfall (when stars appear)"
+                "Nightfall"
             ],
             "he": [
                 "חצות",
                 "שקיעה בדיוק",
                 "זריחה",
-                "צאת הכוכבים (כשמופיעים כוכבים)"
+                "צאת הכוכבים"
             ]
         },
         "correctAnswer": 3,
@@ -8813,7 +8813,7 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Sarah",
-                "Eve (Chava)",
+                "Eve",
                 "Rachel",
                 "Leah"
             ],
@@ -8988,7 +8988,7 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Sarah",
-                "Rebecca (Rivka)",
+                "Rebecca",
                 "Rachel",
                 "Leah"
             ],
@@ -9170,7 +9170,7 @@ export const judaismQuestions = [
             "en": [
                 "Isaiah",
                 "Jeremiah",
-                "Elijah (Eliyahu)",
+                "Elijah",
                 "Ezekiel"
             ],
             "he": [
@@ -9396,13 +9396,13 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Meat",
-                "Dairy (like cheesecake)",
+                "Dairy",
                 "Bread only",
                 "Apples and Honey"
             ],
             "he": [
                 "בשר",
-                "מאכלי חלב (כמו עוגת גבינה)",
+                "מאכלי חלב",
                 "לחם בלבד",
                 "תפוח בדבש"
             ]
@@ -9427,7 +9427,7 @@ export const judaismQuestions = [
             ],
             "he": [
                 "מצה",
-                "לטקס (לביבות)",
+                "לטקס",
                 "בייגל",
                 "פיתה"
             ]
@@ -9445,7 +9445,7 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Dreidel (Sevivon)",
+                "Dreidel",
                 "Yoyo",
                 "Top",
                 "Ball"
@@ -9621,7 +9621,7 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Money",
-                "Chametz (Leavened bread)",
+                "Chametz",
                 "Candy",
                 "Keys"
             ],
@@ -9921,13 +9921,13 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Bread",
-                "Fruits (especially from Israel)",
+                "Fruits",
                 "Meat",
                 "Dairy"
             ],
             "he": [
                 "לחם",
-                "פירות (במיוחד משבעת המינים)",
+                "פירות",
                 "בשר",
                 "חלב"
             ]
@@ -10048,7 +10048,7 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Joshua (Yehoshua)",
+                "Joshua",
                 "Caleb",
                 "Aaron",
                 "Eleazar"
@@ -10334,16 +10334,16 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Love (10)",
-                "Life (18)",
-                "Peace (25)",
-                "Joy (36)"
+                "Love",
+                "Life",
+                "Peace",
+                "Joy"
             ],
             "he": [
-                "אהבה (10)",
-                "חיים (18)",
-                "שלום (25)",
-                "שמחה (36)"
+                "אהבה",
+                "חיים",
+                "שלום",
+                "שמחה"
             ]
         },
         "correctAnswer": 1,
@@ -12358,7 +12358,7 @@ export const judaismQuestions = [
             "he": [
                 "חנוכייה ממתכת",
                 "חנוכייה מזכוכית",
-                "חנוכייה עם נרות בשורה לא ישרה (לא כשרה)",
+                "חנוכייה עם נרות בשורה לא ישרה",
                 "חנוכייה עם שמן זית"
             ]
         },
@@ -12406,7 +12406,7 @@ export const judaismQuestions = [
                 "Sukkah, lulav, etrog, hadas, arava, shofar, challah"
             ],
             "he": [
-                "חיטה, שעורה, גפן, תאנה, רימון, זית ודבש (תמר)",
+                "חיטה, שעורה, גפן, תאנה, רימון, זית ודבש",
                 "תפוח, תפוז, בננה, אפרסק, לימון, שזיף ואבטיח",
                 "מצה, יין, חרוסת, כרפס, מרור, חזרת וביצה",
                 "סוכה, לולב, אתרוג, הדס, ערבה, שופר וחלה"
@@ -13110,13 +13110,13 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Group of 5 people",
-                "Group of 10 men (traditionally)",
+                "Group of 10 men",
                 "The entire audience",
                 "Only the Rabbi"
             ],
             "he": [
                 "קבוצה של 5 אנשים",
-                "קבוצה של 10 גברים (לפי המסורת האורתודוקסית)",
+                "קבוצה של 10 גברים",
                 "כל הקהל",
                 "רק הרב"
             ]
@@ -13311,7 +13311,7 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Labriut (to your health)",
+                "Labriut",
                 "Good morning",
                 "Mazel Tov",
                 "Enjoy it"
@@ -13563,13 +13563,13 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Dancer",
-                "A capable/virtuous woman (song on Shabbat)",
+                "A capable/virtuous woman",
                 "Warrior",
                 "Queen"
             ],
             "he": [
                 "רקדנית",
-                "אישה חרוצה וטובה (נהוג לשיר לה בשבת)",
+                "אישה חרוצה וטובה",
                 "לוחמת",
                 "מלכה"
             ]
@@ -13638,13 +13638,13 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Ritual hand washing before meals (or morning)",
+                "Ritual hand washing before meals",
                 "Hand game",
                 "Handshake",
                 "Drawing on hands"
             ],
             "he": [
-                "שטיפת ידיים לפני ארוחה (או בבוקר)",
+                "שטיפת ידיים לפני ארוחה",
                 "משחק ידיים",
                 "לחיצת ידיים",
                 "ציור על הידיים"
@@ -13665,13 +13665,13 @@ export const judaismQuestions = [
         "options": {
             "en": [
                 "Tasty food",
-                "Forbidden items to move (like money or phone)",
+                "Forbidden items to move",
                 "Place name",
                 "Shabbat clothes"
             ],
             "he": [
                 "אוכל טעים",
-                "דברים שאסור לגעת בהם או להזיז אותם (כמו כסף או טלפון)",
+                "דברים שאסור לגעת בהם או להזיז אותם",
                 "שם של מקום",
                 "בגדי שבת"
             ]
@@ -13890,13 +13890,13 @@ export const judaismQuestions = [
         },
         "options": {
             "en": [
-                "Prayer praising God (also for deceased)",
+                "Prayer praising God",
                 "Happy song",
                 "Part of the Sukkah",
                 "Book name"
             ],
             "he": [
-                "תפילה להלל את השם (נאמם גם לזכר נפטרים)",
+                "תפילה להלל את השם",
                 "שיר שמח",
                 "חלק מהסוכה",
                 "שם של ספר"
