@@ -41,7 +41,11 @@ function Card({ card, onClick, currentPlayer, gameMode, language, avatars, wrapp
                     )}
                     {!((card.isSolved || card.isFailed) && (gameMode === 'tictactoe' || gameMode === '1v1')) && (
                         <div className="pattern">
-                            {card.topicIcon}
+                            {card.topicIcon?.startsWith('/') ? (
+                                <img src={card.topicIcon} alt="Topic" className="topic-img-icon-card" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                            ) : (
+                                card.topicIcon
+                            )}
                         </div>
                     )}
                     {(card.isSolved || card.isFailed) && (gameMode === 'tictactoe' || gameMode === '1v1') && card.ownerSymbol && (

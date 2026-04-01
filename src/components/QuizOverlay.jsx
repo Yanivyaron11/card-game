@@ -295,7 +295,11 @@ function QuizOverlay({ deck, lives, coins, language, onCoinsChange, onAnswer, on
                 <div className="quiz-header">
                     <div className="topic-info">
                         <span className="topic-icon">
-                            {card.topicIcon}
+                            {card.topicIcon?.startsWith('/') ? (
+                                <img src={card.topicIcon} alt="" className="topic-img-icon-mini" style={{ width: '24px', height: '24px', objectFit: 'contain', verticalAlign: 'middle' }} />
+                            ) : (
+                                card.topicIcon
+                            )}
                         </span>
                         <span className="topic-name">{card.topicName[language]}</span>
                     </div>

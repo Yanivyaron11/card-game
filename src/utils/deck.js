@@ -215,7 +215,7 @@ export const generateDeck = (gridSize, selectedTopics = [], difficulty = 1) => {
             options: shuffledOptions,
             correctAnswer: newCorrectAnswer,
             topicName: topic ? topic.name : { en: q.category, he: q.category },
-            topicIcon: topic ? topic.icon : '',
+            topicIcon: q.category === 'curb' ? '/assets/larry_david_pop.png' : (topic ? topic.icon : ''),
             topicColor: topic ? topic.color : null
         };
     });
@@ -298,7 +298,7 @@ export const generateSurvivalDeck = (selectedTopics = [], survivalType = 'child'
             options: shuffledOptions,
             correctAnswer: newCorrectAnswer,
             topicName: topic ? topic.name : { en: q.category, he: q.category },
-            topicIcon: topic ? topic.icon : '',
+            topicIcon: q.category === 'curb' ? '/assets/larry_david_pop.png' : (topic ? topic.icon : ''),
             topicColor: topic ? topic.color : null,
             questionId: q.id,
             id: `survival-q-${index}-${Math.random().toString(36).substr(2, 9)}`,
@@ -344,7 +344,7 @@ export const generateEndlessDeck = (selectedTopics = []) => {
             options: shuffledOptions,
             correctAnswer: newCorrectAnswer,
             topicName: topic ? topic.name : { en: q.category, he: q.category },
-            topicIcon: topic ? topic.icon : '',
+            topicIcon: q.category === 'curb' ? '/assets/larry_david_pop.png' : (topic ? topic.icon : ''),
             topicColor: topic ? topic.color : null,
             questionId: q.id,
             id: `endless-q-${index}-${Math.random().toString(36).substr(2, 9)}`,

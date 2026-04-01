@@ -981,6 +981,146 @@ export const curbQuestions = [
         "options": { "en": ["Larry David", "Jeff", "Richard", "Nothing"], "he": ["לארי דיוויד", "ג'ף", "ריצ'רד", "כלום"] },
         "correctAnswer": 0, "emoji": "🪄", "hint": { "en": "Logic.", "he": "לוגיקה." }
     },
+    {
+        "id": "curb_l2_71",
+        "category": "curb", "level": 2,
+        "text": { "en": "What's wrong with the glasses Larry's father wears?", "he": "מה הבעיה במשקפיים של אבא של לארי?" },
+        "options": { "en": ["One lens was missing", "They were cracked", "They were too big", "They were cheap"], "he": ["חסרה עדשה אחת", "הם היו סדוקים", "הם היו גדולים מדי", "הם היו זולים"] },
+        "correctAnswer": 0, "emoji": "👓", "hint": { "en": "Single lens.", "he": "עדשה בודדת." }
+    },
+    {
+        "id": "curb_l2_72",
+        "category": "curb", "level": 2,
+        "text": { "en": "What part of his assistant's body did Larry find distracting?", "he": "איזה חלק בגוף של העוזרת שלו הסיח את דעתו של לארי?" },
+        "options": { "en": ["The bare midriff", "Her hair", "Her hands", "Her shoes"], "he": ["הבטן החשופה", "השיער שלה", "הידיים שלה", "הנעליים שלה"] },
+        "correctAnswer": 0, "emoji": "👕", "hint": { "en": "Stomach area.", "he": "אזור הבטן." }
+    },
+    {
+        "id": "curb_l2_73",
+        "category": "curb", "level": 2,
+        "text": { "en": "Where did Larry go to hide from a specific person?", "he": "לאן לארי הלך כדי להסתתר מאדם ספציפי?" },
+        "options": { "en": ["A safe house", "A hotel", "Jeff's house", "The beach"], "he": ["בית מוגן (Safe House)", "בית מלון", "הבית של ג'ף", "חוף הים"] },
+        "correctAnswer": 0, "emoji": "🏠", "hint": { "en": "Shelter.", "he": "מפלט." }
+    },
+    {
+        "id": "curb_l2_74",
+        "category": "curb", "level": 2,
+        "text": { "en": "Why did Larry and Cheryl have a conflict about their therapist?", "he": "למה ללארי ושריל היה קונפליקט לגבי המטפל שלהם?" },
+        "options": { "en": ["They shared the same one", "The therapist was mean", "The price was high", "They were late"], "he": ["הם שיתפו את אותו מטפל", "המטפל היה רשע", "המחיר היה גבוה", "הם איחרו"] },
+        "correctAnswer": 0, "emoji": "🛋️", "hint": { "en": "Shared professional.", "he": "איש מקצוע משותף." }
+    },
+    {
+        "id": "curb_l2_75",
+        "category": "curb", "level": 2,
+        "text": { "en": "What happened to Larry's jacket at a party?", "he": "מה קרה לג'קט של לארי במסיבה?" },
+        "options": { "en": ["It went missing", "It was ruined", "Someone stole it", "It was dirty"], "he": ["הוא נעלם", "הוא נהרס", "מישהו גנב אותו", "הוא היה מלוכלך"] },
+        "correctAnswer": 0, "emoji": "🧥", "hint": { "en": "Loss.", "he": "אובדן." }
+    },
+    {
+        "id": "curb_l2_76",
+        "category": "curb", "level": 2,
+        "text": { "en": "What did Larry count in the pasta dish at the restaurant?", "he": "מה לארי ספר במנת הפסטה במסעדה?" },
+        "options": { "en": ["The number of shrimp", "The meatballs", "The pieces of onion", "The pasta"], "he": ["מספר השרימפסים", "כדורי הבשר", "חתיכות הבצל", "פסטה"] },
+        "correctAnswer": 0, "emoji": "🍝", "hint": { "en": "Seafood counting.", "he": "ספירת פירות ים." }
+    },
+    {
+        "id": "curb_l2_77",
+        "category": "curb", "level": 2,
+        "text": { "en": "What was the problem with the nanny Larry hired?", "he": "מה הייתה הבעיה עם האומנת שלארי שכר?" },
+        "options": { "en": ["She was extremely strict", "She was lazy", "She was loud", "She was slow"], "he": ["היא הייתה מחמירה מאוד", "היא הייתה עצלנית", "היא הייתה צעקנית", "היא הייתה איטית"] },
+        "correctAnswer": 0, "emoji": "👶", "hint": { "en": "Hard regime.", "he": "משטר קשוח." }
+    },
+    {
+        "id": "curb_l2_78",
+        "category": "curb", "level": 2,
+        "text": { "en": "Why did Larry's father think a passenger was a terrorist?", "he": "למה אבא של לארי חשב שנוסע במטוס הוא טרוריסט?" },
+        "options": { "en": ["He saw him holding a box", "He was talking fast", "He looked suspicious", "He was angry"], "he": ["הוא ראה אותו מחזיק קופסה", "הוא דיבר מהר", "הוא נראה חשוד", "הוא היה כעוס"] },
+        "correctAnswer": 0, "emoji": "✈️", "hint": { "en": "Suspicious object.", "he": "חפץ חשוד." }
+    },
+    {
+        "id": "curb_l2_79",
+        "category": "curb", "level": 2,
+        "text": { "en": "Who was the unexpected guest at Larry's Passover Seder?", "he": "מי היה האורח הבלתי צפוי בליל הסדר של לארי?" },
+        "options": { "en": ["A sex offender", "A thief", "A stranger", "A politician"], "he": ["עבריין מין", "גנב", "זר", "פוליטיקאי"] },
+        "correctAnswer": 0, "emoji": "🍷", "hint": { "en": "Criminal record.", "he": "עבר פלילי." }
+    },
+    {
+        "id": "curb_l2_80",
+        "category": "curb", "level": 2,
+        "text": { "en": "What did Larry accidentally do at the Bat Mitzvah?", "he": "מה לארי עשה בטעות בבת מצווה?" },
+        "options": { "en": ["He caused a scene", "He broke a glass", "He fell down", "He ate fast"], "he": ["הוא עשה סצנה", "הוא שבר כוס", "הוא נפל", "הוא אכל מהר"] },
+        "correctAnswer": 0, "emoji": "🎉", "hint": { "en": "Social disturbance.", "he": "הפרעה חברתית." }
+    },
+    {
+        "id": "curb_l2_81",
+        "category": "curb", "level": 2,
+        "text": { "en": "Why was Larry hailed as a hero on a plane?", "he": "למה היללו את לארי כגיבור במטוס?" },
+        "options": { "en": ["He tripped a man with a weapon", "He saved a pilot", "He fixed the plane", "He was cool"], "he": ["הוא הכשיל אדם עם כלי נשק", "הוא הציל טייס", "הוא תיקן את המטוס", "הוא היה מגניב"] },
+        "correctAnswer": 0, "emoji": "🦸‍♂️", "hint": { "en": "Accidental trip.", "he": "הכשלה בטעות." }
+    },
+    {
+        "id": "curb_l2_82",
+        "category": "curb", "level": 2,
+        "text": { "en": "What emoji caused a debate about texting etiquette?", "he": "איזה אימוג'י גרם לוויכוח על נימוסי הודעות?" },
+        "options": { "en": ["A smiley face", "A heart", "A thumbs up", "A laugh"], "he": ["פרצוף מחייך", "לב", "אגודל למעלה", "צחוק"] },
+        "correctAnswer": 0, "emoji": "😊", "hint": { "en": "Sarcastic smile.", "he": "חיוך סרקסטי." }
+    },
+    {
+        "id": "curb_l2_83",
+        "category": "curb", "level": 2,
+        "text": { "en": "Which friend tried to go 24 hours without speaking?", "he": "איזה חבר ניסה לעבור 24 שעות בלי לדבר?" },
+        "options": { "en": ["Richard Lewis", "Jeff Greene", "Ted Danson", "Jerry Seinfeld"], "he": ["ריצ'רד לואיס", "ג'ף גרין", "טד דנסון", "ג'רי סיינפלד"] },
+        "correctAnswer": 0, "emoji": "🙊", "hint": { "en": "Spiritual retreat.", "he": "נסיגה רוחנית." }
+    },
+    {
+        "id": "curb_l2_84",
+        "category": "curb", "level": 2,
+        "text": { "en": "What did Larry argue about at the hotel front desk?", "he": "על מה לארי התווכח בדלפק הקבלה של המלון?" },
+        "options": { "en": ["Bottled water price", "The room size", "The view", "The service"], "he": ["מחיר המים המינרליים", "גודל החדר", "הנוף", "השירות"] },
+        "correctAnswer": 0, "emoji": "🏨", "hint": { "en": "Mini-bar cost.", "he": "עלות המיני-בר." }
+    },
+    {
+        "id": "curb_l2_85",
+        "category": "curb", "level": 2,
+        "text": { "en": "Who was Larry's girlfriend in the final season?", "he": "מי הייתה בת הזוג של לארי בעונה האחרונה?" },
+        "options": { "en": ["Lexi", "Cheryl", "Sienna", "Wanda"], "he": ["לקסי", "שריל", "סיינה", "וונדה"] },
+        "correctAnswer": 0, "emoji": "👩‍❤️‍👨", "hint": { "en": "Modern relationship.", "he": "מערכת יחסים מודרנית." }
+    },
+    {
+        "id": "curb_l2_86",
+        "category": "curb", "level": 2,
+        "text": { "en": "What did Larry accidentally do to Bruce Springsteen?", "he": "מה לארי עשה בטעות לברוס ספרינגסטין?" },
+        "options": { "en": ["Gave him COVID", "Hit him", "Insulted him", "Fought him"], "he": ["הדביק אותו בקורונה", "פגע בו", "העליב אותו", "נלחם בו"] },
+        "correctAnswer": 0, "emoji": "🎸", "hint": { "en": "The Boss.", "he": "הבוס." }
+    },
+    {
+        "id": "curb_l2_87",
+        "category": "curb", "level": 2,
+        "text": { "en": "What was the rivalry between Larry and Conan about?", "he": "על מה היה היריבות בין לארי לקונאן?" },
+        "options": { "en": ["A neighborhood issue", "A parking spot", "A dog", "A show"], "he": ["עניין של השכונה", "חניה", "כלב", "תוכנית"] },
+        "correctAnswer": 0, "emoji": "🏠", "hint": { "en": "Neighbors.", "he": "שכנים." }
+    },
+    {
+        "id": "curb_l2_88",
+        "category": "curb", "level": 2,
+        "text": { "en": "Who supported Larry during his 'Fatwa' period?", "he": "מי תמך בלארי בתקופת ה'פתווה' שלו?" },
+        "options": { "en": ["Woody Harrelson", "Jerry Seinfeld", "Jeff Greene", "Ted Danson"], "he": ["וודי הארלסון", "ג'רי סיינפלד", "ג'ף גרין", "טד דנסון"] },
+        "correctAnswer": 0, "emoji": "🕶️", "hint": { "en": "Actor friend.", "he": "חבר שחקן." }
+    },
+    {
+        "id": "curb_l2_89",
+        "category": "curb", "level": 2,
+        "text": { "en": "What type of event did Albert Brooks host for himself?", "he": "איזה סוג של אירוע אלברט ברוקס אירח לעצמו?" },
+        "options": { "en": ["A living funeral", "A birthday", "A wedding", "A show"], "he": ["לוויה בחיים", "יום הולדת", "חתונה", "מופע"] },
+        "correctAnswer": 0, "emoji": "⚰️", "hint": { "en": "Impromptu mourning.", "he": "אבל מאולתר." }
+    },
+    {
+        "id": "curb_l2_90",
+        "category": "curb", "level": 2,
+        "text": { "en": "Who was the girl Larry was forced to cast in his show?", "he": "מי הייתה הבחורה שלארי נאלץ ללהק לתוכנית שלו?" },
+        "options": { "en": ["Maria Sofia", "Wendy", "Cheryl", "Susie"], "he": ["מאריה סופיה", "וונדי", "שריל", "סוזי"] },
+        "correctAnswer": 0, "emoji": "🎭", "hint": { "en": "Terrible actress.", "he": "שחקנית נוראית." }
+    },
     // --- LEVEL 3 (60 questions) ---
     {
         "id": "curb_l3_1",
@@ -1401,6 +1541,146 @@ export const curbQuestions = [
         "text": { "en": "Who is 'The Ida Funhauser' daughter's name?", "he": "מה שם הבת של 'אידה פנקהאוזר'?" },
         "options": { "en": ["Wendy", "Susie", "Cheryl", "Nothing"], "he": ["וונדי", "סוזי", "שריל", "כלום"] },
         "correctAnswer": 0, "emoji": "👧", "hint": { "en": "Offspring.", "he": "צאצא." }
+    },
+    {
+        "id": "curb_l3_61",
+        "category": "curb", "level": 3,
+        "text": { "en": "Where did Larry encounter a person he believed stole his umbrella?", "he": "איפה לארי פגש אדם שהוא האמין שגנב לו את המטרייה?" },
+        "options": { "en": ["At a museum", "At a cafe", "At the park", "In a taxi"], "he": ["במוזיאון", "בבית קפה", "בפארק", "במונית"] },
+        "correctAnswer": 0, "emoji": "☂️", "hint": { "en": "Museum incident.", "he": "תקרית במוזיאון." }
+    },
+    {
+        "id": "curb_l3_62",
+        "category": "curb", "level": 3,
+        "text": { "en": "Who did Larry compare to a contestant from the show Survivor?", "he": "את מי לארי השווה למתמודד מהתוכנית 'הישרדות'?" },
+        "options": { "en": ["A Holocaust survivor", "A war veteran", "A dog", "His agent"], "he": ["ניצול שואה", "חייל משוחרר", "כלב", "הסוכן שלו"] },
+        "correctAnswer": 0, "emoji": "🏝️", "hint": { "en": "Survivor context.", "he": "הקשר להישרדות." }
+    },
+    {
+        "id": "curb_l3_63",
+        "category": "curb", "level": 3,
+        "text": { "en": "What caused tension during the Seinfeld reunion table read?", "he": "מה גרם למתח במהלך הקראת התסריט של איחוד סיינפלד?" },
+        "options": { "en": ["Larry argued over a line", "Jerry was late", "The food was cold", "The script was lost"], "he": ["לארי התווכח על שורה", "ג'רי איחר", "האוכל היה קר", "התסריט אבד"] },
+        "correctAnswer": 0, "emoji": "🎬", "hint": { "en": "Script dispute.", "he": "מחלוקת על התסריט." }
+    },
+    {
+        "id": "curb_l3_64",
+        "category": "curb", "level": 3,
+        "text": { "en": "What is Larry's philosophical stance on fruit baskets given as gifts?", "he": "מהי העמדה הפילוסופית של לארי לגבי סלסילות פירות שניתנו כמתנה?" },
+        "options": { "en": ["You can't take them back", "They are too sweet", "They are healthy", "They are expensive"], "he": ["אי אפשר לקחת אותן חזרה", "הן מתוקות מדי", "הן בריאות", "הן יקרות"] },
+        "correctAnswer": 0, "emoji": "🧺", "hint": { "en": "Gift rule.", "he": "חוק המתנה." }
+    },
+    {
+        "id": "curb_l3_65",
+        "category": "curb", "level": 3,
+        "text": { "en": "What is Larry's most frequent complaint at coffee shops?", "he": "מהי התלונה השכיחה ביותר של לארי בבתי קפה?" },
+        "options": { "en": ["The temperature is lukewarm", "The service is slow", "The beans are bad", "The price is high"], "he": ["הטמפרטורה פושרת", "השירות איטי", "הפולים גרועים", "המחיר גבוה"] },
+        "correctAnswer": 0, "emoji": "☕", "hint": { "en": "Heat issue.", "he": "בעיית חום." }
+    },
+    {
+        "id": "curb_l3_66",
+        "category": "curb", "level": 3,
+        "text": { "en": "Why did Larry have a feud with the local weatherman?", "he": "למה ללארי היה סכסוך עם החזאי המקומי?" },
+        "options": { "en": ["Claimed deliberate wrong forecast", "He was too loud", "He stole a spot", "He was mean"], "he": ["טען לתחזית שגויה בכוונה", "הוא היה צעקני מדי", "הוא גנב מקום", "הוא היה רשע"] },
+        "correctAnswer": 0, "emoji": "☀️", "hint": { "en": "Forecast accuracy.", "he": "דיוק התחזית." }
+    },
+    {
+        "id": "curb_l3_67",
+        "category": "curb", "level": 3,
+        "text": { "en": "Why was Larry uncomfortable during his massage session?", "he": "למה לארי לא הרגיש בנוח במהלך עיסוי?" },
+        "options": { "en": ["Therapist was too friendly", "The table was hard", "The oil was cold", "The room was dark"], "he": ["המטפל היה ידידותי מדי", "המיטה הייתה קשה", "השמן היה קר", "החדר היה חשוך"] },
+        "correctAnswer": 0, "emoji": "💆‍♂️", "hint": { "en": "Inappropriate vibe.", "he": "אווירה לא הולמת." }
+    },
+    {
+        "id": "curb_l3_68",
+        "category": "curb", "level": 3,
+        "text": { "en": "What was Larry's major dispute with his dry cleaner?", "he": "מה היה הוויכוח העיקרי של לארי עם המנקה היבש שלו?" },
+        "options": { "en": ["Suspected they wore his clothes", "They lost a button", "The price changed", "They were slow"], "he": ["חשד שהם לובשים את הבגדים שלו", "הם איבדו כפתור", "המחיר השתנה", "הם היו איטיים"] },
+        "correctAnswer": 0, "emoji": "👔", "hint": { "en": "Clothes usage.", "he": "שימוש בבגדים." }
+    },
+    {
+        "id": "curb_l3_69",
+        "category": "curb", "level": 3,
+        "text": { "en": "What was the issue Larry had with his neighbor's new fence?", "he": "מה הייתה הבעיה של לארי עם הגדר החדשה של השכן?" },
+        "options": { "en": ["It was too high", "It was the wrong color", "It was broken", "It was ugly"], "he": ["היא הייתה גבוהה מדי", "היא הייתה בצבע הלא נכון", "היא הייתה שבורה", "היא הייתה מכוערת"] },
+        "correctAnswer": 0, "emoji": "🚧", "hint": { "en": "Height limit.", "he": "מגבלת גובה." }
+    },
+    {
+        "id": "curb_l3_70",
+        "category": "curb", "level": 3,
+        "text": { "en": "Whose birthday did Larry famously forget, causing a social rift?", "he": "של מי יום ההולדת שלארי שכח במפורסם, מה שגרם לקרע חברתי?" },
+        "options": { "en": ["His own assistant's", "Jeff's", "Richard's", "Susie's"], "he": ["של העוזרת שלו", "של ג'ף", "של ריצ'רד", "של סוזי"] },
+        "correctAnswer": 0, "emoji": "🎂", "hint": { "en": "Forgetfulness.", "he": "שכחנות." }
+    },
+    {
+        "id": "curb_l3_71",
+        "category": "curb", "level": 3,
+        "text": { "en": "What kitchen appliance did Larry try and fail to fix himself?", "he": "איזה מכשיר מטבח לארי ניסה ולא הצליח לתקן בעצמו?" },
+        "options": { "en": ["The toaster", "The blender", "The fridge", "The oven"], "he": ["מצנם (טוסטר)", "בלנדר", "מקרר", "תנור"] },
+        "correctAnswer": 0, "emoji": "🍞", "hint": { "en": "Bread burner.", "he": "שורף לחם." }
+    },
+    {
+        "id": "curb_l3_72",
+        "category": "curb", "level": 3,
+        "text": { "en": "What packaging design does Larry find most frustrating?", "he": "איזה עיצוב אריזה לארי מוצא הכי מתסכל?" },
+        "options": { "en": ["Cereal boxes", "Milk cartons", "Soda cans", "Paper bags"], "he": ["קופסאות דגנים", "קרטוני חלב", "פחיות סודה", "שקיות נייר"] },
+        "correctAnswer": 0, "emoji": "🥣", "hint": { "en": "Breakfast struggle.", "he": "מאבק ארוחת הבוקר." }
+    },
+    {
+        "id": "curb_l3_73",
+        "category": "curb", "level": 3,
+        "text": { "en": "What condiment usage did Larry find offensive at a steakhouse?", "he": "איזה שימוש ברוטב לארי מצא פוגעני במסעדת בשרים?" },
+        "options": { "en": ["Ketchup on a steak", "Salt on fries", "Pepper on soup", "Mustard on bread"], "he": ["קטשופ על סטייק", "מלח על צ'יפס", "פלפל על מרק", "חרדל על לחם"] },
+        "correctAnswer": 0, "emoji": "🥩", "hint": { "en": "Sauce crime.", "he": "פשע רטבים." }
+    },
+    {
+        "id": "curb_l3_74",
+        "category": "curb", "level": 3,
+        "text": { "en": "What was the name-related issue Larry had with a specialist?", "he": "מה הייתה הבעיה הקשורה לשם שהייתה ללארי עם מומחית?" },
+        "options": { "en": ["Her name was Dr. Salivas", "She had no name", "It was too long", "It was funny"], "he": ["קראו לה ד''ר סליבאס", "לא היה לה שם", "זה היה ארוך מדי", "זה היה מצחיק"] },
+        "correctAnswer": 0, "emoji": "🩺", "hint": { "en": "Odd surname.", "he": "שם משפחה מוזר." }
+    },
+    {
+        "id": "curb_l3_75",
+        "category": "curb", "level": 3,
+        "text": { "en": "Why did Larry refuse to give water to someone in a movie theater?", "he": "למה לארי סירב לתת מים למישהו בקולנוע?" },
+        "options": { "en": ["Thought they were cutting the line", "He was thirsty", "The water was hot", "It was expensive"], "he": ["חשב שהם עוקפים בתור", "הוא היה צמא", "המים היו חמים", "זה היה יקר"] },
+        "correctAnswer": 0, "emoji": "🥤", "hint": { "en": "Line etiquette.", "he": "נימוסי תור." }
+    },
+    {
+        "id": "curb_l3_76",
+        "category": "curb", "level": 3,
+        "text": { "en": "What airplane feature caused Larry physical pain in Season 10?", "he": "איזה מאפיין במטוס גרם ללארי כאב פיזי בעונה 10?" },
+        "options": { "en": ["An overheated hot towel", "The small seat", "The loud engine", "The bad food"], "he": ["מגבת חמה מדי", "הכיסא הקטן", "המנוע הרועש", "האוכל הגרוע"] },
+        "correctAnswer": 0, "emoji": "✈️", "hint": { "en": "Burning comfort.", "he": "נוחות שורפת." }
+    },
+    {
+        "id": "curb_l3_77",
+        "category": "curb", "level": 3,
+        "text": { "en": "What brand of glasses does Larry's father insist on wearing?", "he": "איזה סוג משקפיים אבא של לארי מתעקש להרכיב?" },
+        "options": { "en": ["Antique bi-focals", "Modern frames", "Sunglasses", "No glasses"], "he": ["בי-פוקל עתיקות", "מסגרות מודרניות", "משקפי שמש", "בלי משקפיים"] },
+        "correctAnswer": 0, "emoji": "👓", "hint": { "en": "Old model.", "he": "דגם ישן." }
+    },
+    {
+        "id": "curb_l3_78",
+        "category": "curb", "level": 3,
+        "text": { "en": "Who was the person that sent Larry the emoji he hated?", "he": "מי היה האדם ששלח ללארי את האימוג'י שהוא שנא?" },
+        "options": { "en": ["A woman he was dating", "Jeff", "Richard", "His assistant"], "he": ["אישה שיצא איתה", "ג'ף", "ריצ'רד", "העוזרת שלו"] },
+        "correctAnswer": 0, "emoji": "📱", "hint": { "en": "Text sender.", "he": "שולח ההודעה." }
+    },
+    {
+        "id": "curb_l3_79",
+        "category": "curb", "level": 3,
+        "text": { "en": "What did Larry ask the Mormon man about his lifestyle?", "he": "מה לארי שאל את הגבר המורמוני על אורח החיים שלו?" },
+        "options": { "en": ["Remembering all wives' names", "The number of kids", "The food", "The house"], "he": ["איך הוא זוכר את כל שמות נשותיו", "מספר הילדים", "האוכל", "הבית"] },
+        "correctAnswer": 0, "emoji": "🏠", "hint": { "en": "Polygamy question.", "he": "שאלה על פוליגמיה." }
+    },
+    {
+        "id": "curb_l3_80",
+        "category": "curb", "level": 3,
+        "text": { "en": "What specific line did Larry struggle to deliver during the reunion?", "he": "על איזו שורה ספציפית לארי נאבק להגיד במהלך האיחוד?" },
+        "options": { "en": ["A joke about a car", "A greeting", "A goodbye", "A name"], "he": ["בדיחה על רכב", "ברכת שלום", "פרדת שלום", "שם"] },
+        "correctAnswer": 0, "emoji": "🎬", "hint": { "en": "Comedy delivery.", "he": "הגשת קומדיה." }
     }
 ];
 

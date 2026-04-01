@@ -419,7 +419,7 @@ export const questionCounts = {
     "space": 150,
     "flags": 150,
     "roblox": 150,
-    "curb": 200
+    "curb": 240
 };
 
 

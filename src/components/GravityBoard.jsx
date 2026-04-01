@@ -145,7 +145,11 @@ function GravityBoard({ columns, config, coins, language, onCardSelected, onQuit
                                             ) : (
                                                 <div className="card-inner" style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05))' }}>
                                                     <div className="gravity-card-emoji">
-                                                        {card.topicIcon || '❓'}
+                                                        {card.topicIcon?.startsWith('/') ? (
+                                                            <img src={card.topicIcon} alt="" className="topic-img-icon" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '4px' }} />
+                                                        ) : (
+                                                            card.topicIcon || '❓'
+                                                        )}
                                                     </div>
                                                 </div>
                                             )}
