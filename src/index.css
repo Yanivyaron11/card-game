@@ -190,6 +190,13 @@ body::before {
   margin: 0 auto;
 }
 
+@media (max-height: 850px) {
+  #root {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
 h1,
 h2,
 h3 {
