@@ -275,9 +275,10 @@
 .top-controls {
     position: absolute;
     top: 1rem;
-    right: 1.2rem;
+    left: 1.2rem;
     display: flex;
     gap: 0.8rem;
+    z-index: 100;
 }
 
 .shop-invite-btn {
@@ -569,16 +570,22 @@
 
     .top-controls {
         top: 1.5rem;
-        padding: 0 2.5rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 0 0.4rem; /* Maximum push towards the left edge */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start; /* Align LEFT in LTR */
+    }
+
+    [dir="rtl"] .top-controls {
+        justify-content: flex-end; /* Align LEFT in RTL */
     }
 
     .top-controls-actions {
-        margin-left: auto;
-    }
-
-    [dir="rtl"] .top-controls-actions {
-        margin-right: auto;
-        margin-left: 0;
+        display: flex;
+        gap: 0.8rem;
     }
 
     .total-questions-count {
