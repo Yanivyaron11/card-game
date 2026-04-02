@@ -149,8 +149,8 @@ export const curbQuestions = [
         "category": "curb",
         "level": 1,
         "text": {
-            "en": "Who moved in with Larry in Season 6?",
-            "he": "מי עבר לגור עם לארי בעונה השישית?"
+            "en": "Played by J.B. Smoove, who moved in with Larry in Season 6?",
+            "he": "מי עבר לגור עם לארי בעונה 6 (מגולם על ידי ג'יי.בי סמוב)?"
         },
         "options": {
             "en": [
@@ -178,8 +178,8 @@ export const curbQuestions = [
         "category": "curb",
         "level": 1,
         "text": {
-            "en": "Larry's catchphrase when he agrees with something is...?",
-            "he": "משפט המפתח של לארי כשהוא מסכים עם משהו הוא...?"
+            "en": "Larry's iconic catchphrase when he highly approves of something is...?",
+            "he": "מהו ביטוי המפתח המפורסם של לארי כשהוא מרוצה מאוד ממשהו?"
         },
         "options": {
             "en": [
@@ -189,17 +189,17 @@ export const curbQuestions = [
                 "Serenity now"
             ],
             "he": [
-                "פריטי, פריטי, פריטי גוד",
-                "ממש לא",
-                "חבל מאוד",
-                "סרניטי נאו"
+                "Pretty, pretty, pretty good",
+                "Absolutely not",
+                "That's a shame",
+                "Serenity now"
             ]
         },
         "correctAnswer": 0,
         "emoji": "👌",
         "hint": {
             "en": "Usually said with an OK sign.",
-            "he": "נאמר בדרך כלל עם סימן OK."
+            "he": "נאמר בדרך כלל בליווי סימן OK עם היד."
         }
     },
     {
@@ -439,8 +439,8 @@ export const curbQuestions = [
         "category": "curb",
         "level": 1,
         "text": {
-            "en": "What is Larry's spite coffee shop called?",
-            "he": "איך קוראים לבית קפה של לארי?"
+            "en": "In Season 10, what is the name of Larry's 'Spite Store' coffee shop?",
+            "he": "בעונה 10, איך קראו לבית הקפה שפתחת לארי כחנות נקמה (Spite Store)?"
         },
         "options": {
             "en": [
@@ -450,17 +450,17 @@ export const curbQuestions = [
                 "Larry's Coffee"
             ],
             "he": [
-                "לאטה לארי'ס",
-                "ספייט ברו",
-                "מוקה ג'ו 2",
-                "הקפה של לארי"
+                "Latte Larry's",
+                "Spite Brew",
+                "Mocha Joe's 2",
+                "Larry's Coffee"
             ]
         },
         "correctAnswer": 0,
         "emoji": "☕",
         "hint": {
-            "en": "Spite store.",
-            "he": "חנות נקמה."
+            "en": "He opened it right next to Mocha Joe's.",
+            "he": "הוא פתח אותו ממש בצמוד למוקה ג'ו."
         }
     },
     {
@@ -903,8 +903,8 @@ export const curbQuestions = [
         "category": "curb",
         "level": 1,
         "text": {
-            "en": "What is the name of the Palestinian restaurant?",
-            "he": "איך קוראים למסעדה הפלסטינית?"
+            "en": "In the iconic Season 8 episode 'Palestinian Chicken', what is the name of the restaurant Larry and Jeff love?",
+            "he": "בפרק האייקוני 'Palestinian Chicken' (עונה 8), איך קוראים למסעדה שבא לארי וג'ף אוהבים לאכול?"
         },
         "options": {
             "en": [
@@ -914,17 +914,17 @@ export const curbQuestions = [
                 "Gaza Bird"
             ],
             "he": [
-                "אל-עבאס",
-                "מלך העוף",
-                "הגריל",
-                "עזה בירד"
+                "Al-Abbas",
+                "Chicken King",
+                "The Grill",
+                "Gaza Bird"
             ]
         },
         "correctAnswer": 0,
         "emoji": "🍗",
         "hint": {
-            "en": "Famous chicken.",
-            "he": "עוף מפורסם."
+            "en": "The best chicken in town.",
+            "he": "העוף הכי טוב בעיר."
         }
     },
     {
@@ -932,28 +932,28 @@ export const curbQuestions = [
         "category": "curb",
         "level": 1,
         "text": {
-            "en": "What did Larry do to the swan?",
-            "he": "מה לארי עשה לברבור?"
+            "en": "In the Season 7 episode 'The Black Swan', what does Larry accidentally do at the golf club?",
+            "he": "בפרק 'The Black Swan' (עונה 7), מה לארי עושה בטעות במועדון הגולף?"
         },
         "options": {
             "en": [
-                "Killed it with a golf club",
-                "Fed it",
-                "Saved it",
-                "Painted it"
+                "Kill the mascot swan with a golf club",
+                "Feed the swan forbidden bread",
+                "Save the swan from a pond",
+                "Paint the swan white"
             ],
             "he": [
-                "הרג אותו עם מחבט גולף",
-                "האכיל אותו",
-                "הציל אותו",
-                "צבע אותו"
+                "הורג את הברבור של המועדון עם מחבט גולף",
+                "מאכיל את הברבור בלחם אסור",
+                "מציל את הברבור מהאגם",
+                "צובע את הברבור בלבן"
             ]
         },
         "correctAnswer": 0,
         "emoji": "🦢",
         "hint": {
-            "en": "Accidental kill.",
-            "he": "הריגה בשוגג."
+            "en": "It was self-defense (kind of).",
+            "he": "זאת הייתה הגנה עצמית (בערך)."
         }
     },
     {
@@ -1048,28 +1048,28 @@ export const curbQuestions = [
         "category": "curb",
         "level": 1,
         "text": {
-            "en": "Who is 'The Bam-Bam'?",
-            "he": "מי היא 'באם-באם'?"
+            "en": "In the context of Marty Funkhouser's family in Season 7, who is 'Bam-Bam'?",
+            "he": "בהקשר של משפחת פנקהאוזר (עונה 7), מי היא הדמות המכונה 'Bam-Bam'?"
         },
         "options": {
             "en": [
-                "Funkhouser's sister",
-                "Larry's cousin",
-                "A dog",
-                "A baby"
+                "Marty's mentally unstable sister",
+                "Larry's long-lost cousin",
+                "Jeff's secret mistress",
+                "The Greene's new pet dog"
             ],
             "he": [
-                "אחותו של פנקהאוזר",
-                "בת דודה של לארי",
-                "כלב",
-                "תינוק"
+                "אחותו המעורערת בנפשה של מרטי",
+                "בת דודה רחוקה של לארי",
+                "המאהבת הסודית של ג'ף",
+                "הכלב החדש של משפחת גרין"
             ]
         },
         "correctAnswer": 0,
         "emoji": "🧠",
         "hint": {
-            "en": "Unpredictable.",
-            "he": "לא צפויה."
+            "en": "Catherine O'Hara plays her.",
+            "he": "קתרין אוהרה מגלמת אותה."
         }
     },
     {
@@ -5304,6 +5304,441 @@ export const curbQuestions = [
         "hint": {
             "en": "Comedy delivery.",
             "he": "הגשת קומדיה."
+        }
+    },
+    {
+        "id": "curb_l1_71",
+        "category": "curb",
+        "level": 1,
+        "text": {
+            "en": "In Season 6, why did the Black family (including Leon) move into Larry's house?",
+            "he": "בעונה 6, למה משפחת בלק (כולל ליאון) עברה לגור בבית של לארי?"
+        },
+        "options": {
+            "en": [
+                "They were displaced by Hurricane Edna",
+                "They won a radio contest",
+                "Larry was their landlord in New York",
+                "They were Jeff's distant relatives"
+            ],
+            "he": [
+                "הם פונו מביתם בעקבות הוריקן אדנה",
+                "הם זכו בתחרות רדיו",
+                "לארי היה בעל הבית שלהם בניו יורק",
+                "הם היו קרובי משפחה רחוקים של ג'ף"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🏠",
+        "hint": {
+            "en": "Displaced by a natural disaster.",
+            "he": "פונו בגלל אסון טבע."
+        }
+    },
+    {
+        "id": "curb_l1_72",
+        "category": "curb",
+        "level": 1,
+        "text": {
+            "en": "In Season 4, what 'gift' does Cheryl give Larry for their 10th wedding anniversary?",
+            "he": "בעונה 4, איזו 'מתנה' מיוחדת שריל נותנת ללארי לכבוד יום הנישואין ה-10 שלהם?"
+        },
+        "options": {
+            "en": [
+                "A one-time 'hall pass' to sleep with another woman",
+                "A new luxury hybrid car",
+                "A trip to Japan for golf",
+                "A signed Seinfeld script"
+            ],
+            "he": [
+                "פטור חד פעמי ('Hall pass') שמאפשר לו לשכב עם אישה אחרת",
+                "רכב היברידי יוקרתי חדש",
+                "טיול גולף ליפן",
+                "תסריט חתום של סיינפלד"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎁",
+        "hint": {
+            "en": "Larry spends the whole season trying to use it.",
+            "he": "לארי מבלה את כל העונה בניסיון לממש אותה."
+        }
+    },
+    {
+        "id": "curb_l1_73",
+        "category": "curb",
+        "level": 1,
+        "text": {
+            "en": "In Season 10, what was the primary cause of the fire that burned down 'Latte Larry's'?",
+            "he": "בעונה 10, מה היה הגורם העיקרי לשריפה שכילתה את 'Latte Larry's'?"
+        },
+        "options": {
+            "en": [
+                "Overheating the 'urinal cake' warmers",
+                "A gas leak in the kitchen",
+                "Leon left a lit cigarette",
+                "Mocha Joe's sabotage"
+            ],
+            "he": [
+                "חימום יתר של מחממי ה'urinal cake' בשרותים",
+                "דליפת גז במטבח",
+                "ליאון השאיר סיגריה דולקת",
+                "חבלה מצד מוקה ג'ו"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🔥",
+        "hint": {
+            "en": "Larry's obsession with comfort backfired.",
+            "he": "האובססיה של לארי לנוחות חזרה אליו כמו בומרנג."
+        }
+    },
+    {
+        "id": "curb_l1_74",
+        "category": "curb",
+        "level": 1,
+        "text": {
+            "en": "In Season 5, why does Larry get annoyed by Ted Danson's 'Anonymous' donation to the museum?",
+            "he": "בעונה 5, למה לארי מתעצבן מהתרומה 'האנונימית' של טד דנסון למוזיאון?"
+        },
+        "options": {
+            "en": [
+                "Because Ted told everyone it was him, making Larry's non-anonymous donation look bad",
+                "Because Ted donated more money than Larry",
+                "Because Ted's name was accidentally left on the plaque",
+                "Because Ted stole Larry's idea for a donation"
+            ],
+            "he": [
+                "כי טד סיפר לכולם שזה הוא, מה שגרם לתרומה הגלויה של לארי להיראות רע",
+                "כי טד תרם הרבה יותר כסף מלארי",
+                "כי השם של טד נשאר בטעות על השלט",
+                "כי טד גנב ללארי את הרעיון לתרומה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🤫",
+        "hint": {
+            "en": "It's only 'Anonymous' in name.",
+            "he": "זו תרומה 'אנונימית' רק בשם."
+        }
+    },
+    {
+        "id": "curb_l2_91",
+        "category": "curb",
+        "level": 2,
+        "text": {
+            "en": "In the episode 'The Black Swan', why is Larry so terrified after his round of golf?",
+            "he": "בפרק 'The Black Swan' (עונה 7), למה לארי כל כך מבועת אחרי שסיים את משחק הגולף שלו?"
+        },
+        "options": {
+            "en": [
+                "He accidentally killed the club's mascot swan with a golf club",
+                "He lost a bet for $10,000 to Marty Funkhouser",
+                "He broke the club's strict dress code for socks",
+                "He insulted the club president's wife by mistake"
+            ],
+            "he": [
+                "הוא הרג בטעות את הברבור של המועדון עם מחבט גולף",
+                "הוא הפסיד 10,000 דולר בהתערבות למרטי פנקהאוזר",
+                "הוא עבר על קוד הלבוש המחמיר של המועדון לגבי גרביים",
+                "הוא העליב בטעות את אשתו של נשיא המועדון"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🦢",
+        "hint": {
+            "en": "It was a kill in self-defense (of his sandwich).",
+            "he": "זאת הייתה הגנה עצמית (על הסנדוויץ' שלו)."
+        }
+    },
+    {
+        "id": "curb_l2_92",
+        "category": "curb",
+        "level": 2,
+        "text": {
+            "en": "At Ben Stiller's birthday party, what accidental injury does Larry cause that ruins the night?",
+            "he": "במסיבת יום ההולדת של בן סטילר (עונה 4), איזו פציעה מקרית לארי גורם לבן שמהרסת את הערב?"
+        },
+        "options": {
+            "en": [
+                "He pokes Ben in the eye with a skewer (shish kabob)",
+                "He spills red wine on Ben's white suit",
+                "He trips Ben during a dance",
+                "He drops a heavy cake on Ben's head"
+            ],
+            "he": [
+                "הוא תוקע לבן שיפוד (שיש-קבב) בעין בטעות",
+                "הוא שופך יין אדום על החליפה הלבנה של בן",
+                "הוא מכשיל את בן במהלך ריקוד",
+                "הוא מפיל עוגה כבדה על הראש של בן"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "👁️",
+        "hint": {
+            "en": "It happened during a very close, intense conversation.",
+            "he": "זה קרה במהלך שיחה צפופה ואינטנסיבית."
+        }
+    },
+    {
+        "id": "curb_l2_93",
+        "category": "curb",
+        "level": 2,
+        "text": {
+            "en": "In the episode 'The Jewelry Store', why is Larry initially refused entry to the shop?",
+            "he": "בפרק 'The Jewelry Store' (עונה 2), למה לארי לא מורשה להיכנס לחנות התכשיטים היוקרתית בהתחלה?"
+        },
+        "options": {
+            "en": [
+                "The security guard thinks he is homeless because of his tracksuit",
+                "He forgot his wallet and ID at home",
+                "He was previously banned from the mall",
+                "He was carrying a loud portable radio"
+            ],
+            "he": [
+                "המאבטח חושב שהוא הומלס בגלל חליפת הטרנינג שלו",
+                "הוא שכח את הארנק והתעודה המזהה שלו בבית",
+                "הוא הורחק בעבר מהקניון בגלל התנהגות לא נאותה",
+                "הוא נשא איתו מכשיר רדיו נייד שהרעיש"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "💎",
+        "hint": {
+            "en": "It's all about the 'Tracksuit' look in a high-end store.",
+            "he": "הכל עניין של מראה הטרנינג בחנות יוקרה."
+        }
+    },
+    {
+        "id": "curb_l2_94",
+        "category": "curb",
+        "level": 2,
+        "text": {
+            "en": "During the Seinfeld reunion rehearsals, what is Larry's main complaint about Jason Alexander?",
+            "he": "במהלך החזרות לאיחוד של סיינפלד (עונה 7), מהי התלונה העיקרית של לארי כלפי ג'ייסון אלכסנדר?"
+        },
+        "options": {
+            "en": [
+                "Jason is acting too much like 'Seinfeld-era George' and not the current version",
+                "Jason is late to every rehearsal by 30 minutes",
+                "Jason forgot all of his lines from the original show",
+                "Jason is too tall to play George anymore"
+            ],
+            "he": [
+                "ג'ייסון משחק יותר מדי כמו 'ג'ורג' של סיינפלד' ולא כמו הגרסה החדשה",
+                "ג'ייסון מאחר לכל חזרה ב-30 דקות לפחות",
+                "ג'ייסון שכח את כל השורות שלו מהסדרה המקורית",
+                "ג'ייסון גבוה מדי בשביל לשחק את ג'ורג' עכשיו"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎭",
+        "hint": {
+            "en": "Larry doesn't like it when Jason 'acts' too much.",
+            "he": "לארי לא אוהב כשג'ייסון 'משחק' יותר מדי."
+        }
+    },
+    {
+        "id": "curb_l2_95",
+        "category": "curb",
+        "level": 2,
+        "text": {
+            "en": "What is the recurring 'battle' between Larry and Richard Lewis whenever they meet at a restaurant?",
+            "he": "מהו ה'קרב' החוזר והמפורסם בין לארי לריצ'רד לואיס בכל פעם שהם נפגשים במסעדה?"
+        },
+        "options": {
+            "en": [
+                "Racing to see who gets the 'good seat' with the better view",
+                "Arguing over who pays the bill at the end",
+                "Trying to order the last piece of cake before the other",
+                "Comparing who has more social grievances"
+            ],
+            "he": [
+                "מי יקבל את 'המושב הטוב' עם הנוף/המיקום הטוב ביותר",
+                "מי ישלם את החשבון בסוף הארוחה",
+                "מי יזמין את חתיכת העוגה האחרונה לפני השני",
+                "מי מהם סובל מיותר עוולות חברתיות ביום-יום"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🍽️",
+        "hint": {
+            "en": "Neither of them wants to face the wall.",
+            "he": "אף אחד מהם לא רוצה לשבת עם הפנים לקיר."
+        }
+    },
+    {
+        "id": "curb_l2_96",
+        "category": "curb",
+        "level": 2,
+        "text": {
+            "en": "Why does David Schwimmer's father get angry at Larry during 'The Producers' rehearsals?",
+            "he": "למה אבא של דיוויד שווימר כועס על לארי במהלך החזרות למחזמר 'The Producers'?"
+        },
+        "options": {
+            "en": [
+                "Larry is suspected of stealing his expensive watch (but it was a misunderstanding)",
+                "Larry insulted his acting ability in front of the cast",
+                "Larry accidentally ate his specially prepared lunch",
+                "Larry refused to give him a seat in the front row"
+            ],
+            "he": [
+                "לארי נחשד בגניבת השעון היקר שלו (מה שהתברר כאי-הבנה)",
+                "לארי העליב את כישורי המשחק שלו מול כל הצוות",
+                "לארי אכל בטעות את ארוחת הצוהריים המיוחדת שלו",
+                "לארי סירב לתת לו מקום ישיבה בשורה הראשונה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "⌚",
+        "hint": {
+            "en": "It involves a lost item and a lot of suspicion.",
+            "he": "זה קשור לחפץ אבוד והרבה חשדנות."
+        }
+    },
+    {
+        "id": "curb_l3_81",
+        "category": "curb",
+        "level": 3,
+        "text": {
+            "en": "In the series finale 'No Lessons Learned', which character from Season 2 returns to testify about Larry's past 'doll' incident?",
+            "he": "בפרק סיום הסדרה 'No Lessons Learned' (עונה 12), איזו דמות מהעונה השנייה חוזרת כדי להעיד על תקרית 'הבובה' של לארי?"
+        },
+        "options": {
+            "en": [
+                "Sammy (Jeff and Susie's daughter, now an adult)",
+                "The owner of the toy store",
+                "Cheryl's younger sister",
+                "The maid who found the doll"
+            ],
+            "he": [
+                "סמי (הבת של ג'ף וסוזי, עכשיו בוגרת)",
+                "הבעלים של חנות הצעצועים",
+                "אחותה הצעירה של שריל",
+                "המנקת שמצאה את הבובה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "👧",
+        "hint": {
+            "en": "She still remembers 'Judy' and the water bottle.",
+            "he": "היא עדיין זוכרת את 'ג'ודי' ואת בקבוק המים."
+        }
+    },
+    {
+        "id": "curb_l3_82",
+        "category": "curb",
+        "level": 3,
+        "text": {
+            "en": "In Season 5, what leads to a physical argument between Larry and a man at a dinner party regarding 'Survival'?",
+            "he": "בעונה 5, מה מוביל לוויכוח פיזי בין לארי לבין אדם במסיבת ארוחת ערב בנושא 'הישרדות'?"
+        },
+        "options": {
+            "en": [
+                "Arguing over who is a 'real' survivor - a reality TV contestant or a Holocaust survivor",
+                "Larry accused the man of cheating on a board game",
+                "They were fighting over the last piece of cake",
+                "The man stole Larry's assigned seat at the table"
+            ],
+            "he": [
+                "ויכוח על מי נחשב ניצול 'אמיתי' - משתתף בריאליטי או ניצול שואה",
+                "לארי האשים את האיש ברמאות במשחק קופסה",
+                "הם רבו על חתיכת העוגה האחרונה",
+                "האיש גנב ללארי את המקום המיועד לו בשולחן"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "🎗️",
+        "hint": {
+            "en": "It happened during a very tense dinner at Jeff's.",
+            "he": "זה קרה במהלך ארוחת ערב מתוחה מאוד אצל ג'ף."
+        }
+    },
+    {
+        "id": "curb_l3_83",
+        "category": "curb",
+        "level": 3,
+        "text": {
+            "en": "In the final season, what is the 'burden' Larry feels regarding Richard Lewis's will?",
+            "he": "בעונה האחרונה, מהו ה'נטל' שלארי מרגיש בנוגע לצוואה של ריצ'רד לואיס?"
+        },
+        "options": {
+            "en": [
+                "Richard wants to leave Larry all his money, but Larry doesn't want the responsibility",
+                "Richard excluded Larry from the will entirely",
+                "Richard asked Larry to take care of his 12 step-children",
+                "Richard left Larry a massive debt from the coffee shop"
+            ],
+            "he": [
+                "ריצ'רד רוצה להוריש ללארי את כל כספו, אך לארי לא רוצה את האחריות",
+                "ריצ'רד הוציא את לארי מהצוואה לחלוטין",
+                "ריצ'רד ביקש מלארי לטפל ב-12 ילדיו החורגים",
+                "ריצ'רד השאיר ללארי חוב ענק מבית הקפה"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "📜",
+        "hint": {
+            "en": "Larry thinks it's too much of a 'favor'.",
+            "he": "לארי חושב שזו 'טובה' גדולה מדי."
+        }
+    },
+    {
+        "id": "curb_l3_84",
+        "category": "curb",
+        "level": 3,
+        "text": {
+            "en": "What was the name of the 1999 HBO special that served as the pilot for the series?",
+            "he": "איך קראו לספיישל ה-HBO משנת 1999 ששימש כפיילוט לסדרה?"
+        },
+        "options": {
+            "en": [
+                "Larry David: Curb Your Enthusiasm",
+                "The Larry David Story",
+                "Pretty Good: The Return of Larry",
+                "Seinfeld's Mind: Life After Jerry"
+            ],
+            "he": [
+                "Larry David: Curb Your Enthusiasm",
+                "The Larry David Story",
+                "Pretty Good: The Return of Larry",
+                "Seinfeld's Mind: Life After Jerry"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "📺",
+        "hint": {
+            "en": "It was a mockumentary about his return to stand-up.",
+            "he": "זה היה מוקומנטרי על החזרה שלו לסטנד-אפ."
+        }
+    },
+    {
+        "id": "curb_l3_85",
+        "category": "curb",
+        "level": 3,
+        "text": {
+            "en": "In the Season 5 finale 'The End', why is Larry's experience in Heaven cut short?",
+            "he": "בסיום עונה 5 'The End', למה החוויה של לארי בגן עדן נקטעת?"
+        },
+        "options": {
+            "en": [
+                "He gets into an argument with his guardian angels over a DVD case",
+                "He was caught trying to steal a cloud",
+                "He couldn't find a good seat for the concert",
+                "He decided he missed Susie's yelling"
+            ],
+            "he": [
+                "הוא נקלע לוויכוח עם מלאכי השרת שלו על קופסת DVD",
+                "הוא נתפס מנסה לגנוב ענן",
+                "הוא לא הצליח למצוא מקום ישיבה טוב להופעה",
+                "הוא החליט שהוא מתגעגע לצעקות של סוזי"
+            ]
+        },
+        "correctAnswer": 0,
+        "emoji": "😇",
+        "hint": {
+            "en": "The angels were played by Dustin Hoffman and Bea Arthur.",
+            "he": "המלאכים גולמו על ידי דסטין הופמן ובי ארתור."
         }
     }
 ];
