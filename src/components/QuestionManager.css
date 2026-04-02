@@ -1,0 +1,190 @@
+.question-manager {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 64px rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.manager-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.manager-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #fff, #aaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.manager-filters {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.search-box {
+    flex-grow: 1;
+}
+
+.search-box input {
+    width: 100%;
+}
+
+.questions-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.questions-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.questions-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.question-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.question-item.marked-removed {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.3);
+    opacity: 0.7;
+}
+
+.item-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-texts {
+    display: flex;
+    gap: 1rem;
+}
+
+.item-texts textarea {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+    resize: none;
+    min-height: 80px;
+    transition: border-color 0.2s;
+}
+
+.item-texts textarea:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.text-he {
+    direction: rtl;
+}
+
+.item-meta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.id-tag {
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.btn-primary, .btn-secondary, .btn-toggle {
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: #f59e0b;
+    color: white;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.btn-remove {
+    background: rgba(239, 68, 68, 0.6);
+    color: white;
+}
+
+.btn-undo {
+    background: rgba(74, 222, 128, 0.6);
+    color: white;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-toggle:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.question-item:hover {
+    transform: translateX(4px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}

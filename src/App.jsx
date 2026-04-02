@@ -5,6 +5,7 @@ import GameBoard from './components/GameBoard'
 import QuizOverlay from './components/QuizOverlay'
 import LandingPage from './components/LandingPage'
 import CleaningMode from './components/CleaningMode'
+import QuestionManager from './components/QuestionManager'
 import LevelWarningOverlay from './components/LevelWarningOverlay'
 import { translations } from './data/translations'
 import { generateDeck, generateSurvivalDeck, generateEndlessDeck, markQuestionsBatchAsSeen } from './utils/deck';
@@ -1824,6 +1825,12 @@ function App() {
         } />
         <Route path="/admin/clean" element={
           <CleaningMode
+            language={language}
+            onQuit={() => navigate('/')}
+          />
+        } />
+        <Route path="/admin/questions" element={
+          <QuestionManager
             language={language}
             onQuit={() => navigate('/')}
           />

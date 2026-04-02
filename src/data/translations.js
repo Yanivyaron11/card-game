@@ -166,6 +166,7 @@ export const translations = {
         thief_button: "Thief",
         shield_button: "Shield",
         mixer_button: "Mixer",
+        content_review: "Content Review",
     },
 
 
@@ -336,5 +337,6 @@ export const translations = {
         thief_button: "גנב",
         shield_button: "מגן",
         mixer_button: "מערבל",
+        content_review: "בדיקת תוכן",
     }
 };

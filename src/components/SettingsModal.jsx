@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { topics } from '../data/questions/index';
 import { translations } from '../data/translations';
 import EarningGuideModal from './EarningGuideModal';
@@ -17,6 +18,7 @@ function SettingsModal({
     onMusicChange,
     unlockedTopics
 }) {
+    const navigate = useNavigate();
     const [expandedTopics, setExpandedTopics] = useState([]);
     const [isEarningGuideOpen, setIsEarningGuideOpen] = useState(false);
 
@@ -185,9 +187,18 @@ function SettingsModal({
                         </section>
                     </div>
 
-                    <button className="modal-footer-btn start-btn" onClick={onClose}>
-                        {t.close}
-                    </button>
+                    <div className="modal-footer-actions">
+                        <button 
+                            className="settings-btn admin-link-btn" 
+                            style={{ flex: 1, opacity: 0.6, fontSize: '0.8rem' }}
+                            onClick={() => { onClose(); navigate('/admin/questions'); }}
+                        >
+                            🛠️ {t.content_review}
+                        </button>
+                        <button className="modal-footer-btn start-btn" style={{ flex: 2 }} onClick={onClose}>
+                            {t.close}
+                        </button>
+                    </div>
                 </div>
             </div>
 
