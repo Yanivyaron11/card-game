@@ -9,7 +9,8 @@
     position: relative;
     padding-top: 3.5rem;
     /* Space for absolute controls */
-    transition: max-width 0.3s ease;
+    transition: max-width 0.3s ease, min-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: space-between; /* Push start button to bottom */
 }
 
 .start-screen-header {
@@ -556,6 +557,7 @@
 @media (min-width: 900px) {
     .start-screen {
         max-width: 1200px;
+        height: 820px; /* Refined to be large but not excessively tall */
         padding: 1.5rem 2rem;
         padding-top: 3.5rem;
         gap: 0.8rem;
@@ -702,6 +704,7 @@
 @media (max-width: 600px) {
     .start-screen {
         padding: 1rem;
+        min-height: 1250px; /* Refined mobile min-height */
         gap: 0.8rem;
         padding-top: 3.2rem;
     }
