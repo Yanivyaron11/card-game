@@ -456,7 +456,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                     {gameMode !== 'survival' && gameMode !== 'endless' && (
                         <div className="mode-params-container">
                             <div className="config-section">
-                                <h3>{language === 'he' ? '3. הגדרות משחק' : '3. Game Settings'}</h3>
+                                <h3>{`3. ${language === 'he' ? 'הגדרות משחק' : 'Game Settings'}`}</h3>
                                 {gameMode !== 'tictactoe' && (
                                     <div className="grid-options">
                                         {[9, 16, 25].map(s => <button key={s} className={`grid-btn ${gridSize === s ? 'active' : ''}`} onClick={() => setGridSize(s)} data-testid={`grid-size-${s}`}><span dir="ltr">{Math.sqrt(s)} x {Math.sqrt(s)}</span></button>)}
@@ -470,7 +470,7 @@ function StartScreen({ onStart, language, onLanguageChange, totalCoins, unlocked
                     )}
 
                     <div className="config-section">
-                        <h3>{gameMode === 'survival' && survivalType === 'focused' ? t.survival_focused_pick : t.choose_topics}</h3>
+                        <h3>{`${gameMode === 'survival' || gameMode === 'endless' ? '3.' : '4.'} ${gameMode === 'survival' && survivalType === 'focused' ? t.survival_focused_pick : t.choose_topics}`}</h3>
                         <div className="topic-options">
                             {visibleTopics.map(topic => {
                                 const isFocusedSurvival = gameMode === 'survival' && survivalType === 'focused';
