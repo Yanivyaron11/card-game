@@ -822,7 +822,9 @@ function App() {
         }
 
         const getInterval = () => {
-          return 7000;
+          if (survivalCorrect >= 20) return 2000; // Stage 3: 2 seconds
+          if (survivalCorrect >= 10) return 3000; // Stage 2: 3 seconds
+          return 4000; // Stage 1: 4 seconds
         };
 
         const now = Date.now();
