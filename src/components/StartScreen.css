@@ -10,7 +10,6 @@
     padding-top: 3.5rem;
     /* Space for absolute controls */
     transition: max-width 0.3s ease, min-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    justify-content: space-between; /* Push start button to bottom */
 }
 
 .start-screen-header {
@@ -43,6 +42,7 @@
 .total-questions-count {
     font-size: 0.85rem;
     opacity: 0.7;
+    margin-top: 0.5rem; /* Pushed down slightly */
     margin-bottom: 0;
     font-weight: 500;
 }
@@ -52,6 +52,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    flex-grow: 1; /* Allow to fill space and push button down */
 }
 
 .layout-col-left, .layout-col-right {
@@ -704,9 +705,18 @@
 @media (max-width: 600px) {
     .start-screen {
         padding: 1rem;
-        min-height: 1250px; /* Refined mobile min-height */
+        min-height: auto; /* Remove excessive height that causes scrolling on mobile */
         gap: 0.8rem;
-        padding-top: 3.2rem;
+        padding-top: 2.8rem; /* Compressed top padding */
+    }
+
+    .start-screen-main-layout {
+        gap: 1rem; /* Compressed internal gaps */
+        flex-grow: 0; /* Don't force push the button to the absolute bottom on mobile */
+    }
+
+    .layout-col-left, .layout-col-right {
+        gap: 1.2rem;
     }
 
     .top-controls {
