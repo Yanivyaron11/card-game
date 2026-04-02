@@ -137,7 +137,7 @@ function App() {
     const saved = localStorage.getItem('unlocked_topics');
     if (saved) return JSON.parse(saved);
     // Core categories unlocked by default
-    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'world_group', 'sports_group', 'gaming_group'];
+    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'world_group', 'sports_group', 'gaming_group', 'entertainment_group'];
   });
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     const saved = localStorage.getItem('unlocked_skins');
@@ -187,6 +187,7 @@ function App() {
       if (!next.includes('language_group')) next.push('language_group');
       if (!next.includes('world_group')) next.push('world_group');
       if (!next.includes('gaming_group')) next.push('gaming_group');
+      if (!next.includes('entertainment_group')) next.push('entertainment_group');
       return next;
     });
 
@@ -233,7 +234,7 @@ function App() {
   // Migration: If user had old topics/avatars unlocked, ensure consistency with new economy
   useEffect(() => {
     // 1. Relock topics that became premium
-    const premiumGroups = ['judaism_group', 'entertainment_group', 'lifestyle_group', 'world_group'];
+    const premiumGroups = ['judaism_group', 'lifestyle_group', 'world_group'];
     const hasToRelock = unlockedTopics.some(id => premiumGroups.includes(id)) && !localStorage.getItem('premium_migration_done');
 
     if (hasToRelock) {

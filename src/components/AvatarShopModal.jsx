@@ -30,8 +30,6 @@ function AvatarShopModal({
     // Define purchasable topics
     const themePrices = {
         'judaism_group': 555,
-        'sports_group': 450,
-        'entertainment_group': 400,
         'lifestyle_group': 300,
         'world_group': 350
     };
