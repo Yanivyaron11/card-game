@@ -84,7 +84,7 @@ describe('App Integration Tests', () => {
 
     it('renders StartScreen initially', () => {
         renderApp();
-        expect(screen.getByText(/Smarty/i) || screen.getByText(/סמארטי/i)).toBeDefined();
+        expect(screen.getByTestId('start-game-btn')).toBeDefined();
     });
 
     describe('Game Modes Setup', () => {

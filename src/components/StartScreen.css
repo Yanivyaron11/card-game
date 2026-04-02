@@ -9,18 +9,61 @@
     position: relative;
     padding-top: 3.5rem;
     /* Space for absolute controls */
+    transition: max-width 0.3s ease;
 }
 
-.start-screen h2 {
-    font-size: 1.5rem;
-    margin: 0 0 0.2rem 0;
+.start-screen-header {
+    width: 100%;
+    margin-bottom: 0.2rem;
+    text-align: center;
 }
+
+.top-controls {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+}
+
+.top-controls-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+
 
 .total-questions-count {
     font-size: 0.85rem;
     opacity: 0.7;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     font-weight: 500;
+}
+
+.start-screen-main-layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.layout-col-left, .layout-col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.mode-params-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
 .config-section {
@@ -171,7 +214,7 @@
 
 .mode-options {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.8rem;
     justify-content: center;
     width: 100%;
@@ -187,23 +230,23 @@
     align-items: center;
     justify-content: center;
     gap: 0.2rem;
-    min-height: 60px;
+    min-height: 55px;
     height: 100%;
 }
 
 .mode-title {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     line-height: 1.1;
     text-align: center;
 }
 
 .mode-reward-badge {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     opacity: 0.85;
     background: rgba(0, 0, 0, 0.15);
-    padding: 2px 6px;
-    border-radius: 10px;
+    padding: 1px 5px;
+    border-radius: 8px;
     white-space: nowrap;
 }
 
@@ -220,9 +263,9 @@
 
 .start-btn {
     width: 100%;
-    font-size: 1.2rem;
-    padding: 1rem;
-    margin-top: 1rem;
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
     background: var(--accent);
     color: var(--text-dark);
 }
@@ -303,133 +346,6 @@
 
 [dir="rtl"] .topic-card {
     flex-direction: row-reverse;
-}
-
-@media (max-width: 600px) {
-    .start-screen {
-        padding: 1rem;
-        gap: 0.8rem;
-    }
-
-    .start-screen h2 {
-        font-size: 1.2rem;
-        width: 100%;
-        text-align: left;
-    }
-
-    [dir="rtl"] .start-screen h2 {
-        text-align: right;
-    }
-
-    .top-controls {
-        top: 0.8rem;
-        gap: 0.4rem;
-    }
-
-    .shop-invite-btn {
-        height: 32px;
-        padding: 0 0.8rem;
-        font-size: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 1;
-    }
-
-    .start-screen {
-        padding-top: 3.2rem;
-    }
-
-    .total-coins-display {
-        height: 32px;
-        padding: 0 0.8rem;
-        font-size: 0.8rem;
-    }
-
-    .coin-count {
-        font-size: 15px;
-    }
-
-    .icon-toggle-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 1.2rem;
-        border-radius: 6px;
-    }
-
-    .topic-options {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
-    }
-
-    .topic-card {
-        padding: 0.5rem;
-        gap: 4px;
-        min-width: 0;
-    }
-
-    .topic-icon {
-        font-size: 1.2rem;
-    }
-
-    .topic-card {
-        aspect-ratio: 1.2 / 1;
-        min-height: 72px;
-    }
-
-    .topic-name {
-        font-size: 0.85rem;
-    }
-
-    .grid-options,
-    .diff-options {
-        gap: 0.6rem;
-    }
-
-    .mode-options {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-        width: 100%;
-    }
-
-    .grid-btn,
-    .diff-btn {
-        padding: 0.6rem;
-        font-size: 0.85rem;
-    }
-
-    .mode-btn {
-        padding: 0.6rem 0.4rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 80px;
-        /* Ensure all buttons in same row have same height */
-        height: 100%;
-        gap: 0.2rem;
-    }
-
-    .mode-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-    }
-
-    .mode-reward-badge {
-        font-size: 0.7rem;
-        padding: 2px 5px;
-    }
-
-    .start-btn {
-        padding: 0.8rem;
-        font-size: 1.1rem;
-        margin-top: 0.8rem;
-    }
-
-    .config-section h3 {
-        font-size: 0.85rem;
-    }
 }
 
 .avatar-selection-container {
@@ -636,27 +552,194 @@
     font-size: 0.6rem;
 }
 
+/* TABLET & DESKTOP ENHANCEMENTS */
+@media (min-width: 900px) {
+    .start-screen {
+        max-width: 1200px;
+        padding: 1.5rem 2rem;
+        padding-top: 3.5rem;
+        gap: 0.8rem;
+        border-width: 2px;
+        border-radius: 40px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .top-controls {
+        top: 1.5rem;
+        padding: 0 2.5rem;
+    }
+
+    .top-controls-actions {
+        margin-left: auto;
+    }
+
+    [dir="rtl"] .top-controls-actions {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .total-questions-count {
+        font-size: 1.1rem;
+        opacity: 0.6;
+    }
+
+    .start-screen-main-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+        width: 100%;
+        margin-bottom: 0.2rem;
+    }
+
+    .layout-col-left {
+        flex: 1;
+        min-width: 0;
+        /* Allow shrinking if needed to prevent overflow */
+    }
+
+    .layout-col-right {
+        flex: 1.1;
+        min-width: 0;
+    }
+
+    .mode-params-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .config-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .mode-options {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+
+    .mode-btn {
+        min-height: 75px;
+        padding: 0.6rem;
+        border-radius: 18px;
+    }
+
+    .mode-title {
+        font-size: 1rem;
+    }
+
+    .mode-reward-badge {
+        font-size: 0.8rem;
+    }
+
+    .topic-options {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+
+    .topic-card {
+        min-height: 48px;
+        padding: 0.6rem 0.4rem;
+        border-radius: 16px;
+    }
+
+    .topic-name {
+        font-size: 0.95rem;
+    }
+
+    .avatar-btn-mini {
+        width: 95px;
+        height: 95px;
+        border-radius: 20px;
+    }
+
+    .multi-player .avatar-btn-mini {
+        width: 75px;
+        height: 75px;
+        border-radius: 16px;
+    }
+
+    .avatar-emoji-mini {
+        font-size: 3.5rem;
+    }
+
+    .multi-player .avatar-emoji-mini {
+        font-size: 2.8rem;
+    }
+
+    .avatar-img-premium {
+        width: 75px;
+        height: 75px;
+    }
+
+    .multi-player .avatar-img-premium {
+        width: 60px;
+        height: 60px;
+    }
+
+    .start-btn {
+        max-width: 350px;
+        padding: 0.65rem;
+        font-size: 1.15rem;
+        margin-top: 0.2rem;
+        border-radius: 14px;
+    }
+
+    .top-controls {
+        top: 2rem;
+        right: 2.5rem;
+    }
+
+    [dir="rtl"] .top-controls {
+        left: 2.5rem;
+    }
+}
+
+/* MOBILE REFINEMENTS - Keep existing logic mostly intact but wrap in query */
 @media (max-width: 600px) {
-    .avatar-grid {
-        grid-template-columns: repeat(5, 1fr);
-        gap: 0.4rem;
+    .start-screen {
+        padding: 1rem;
+        gap: 0.8rem;
+        padding-top: 3.2rem;
     }
 
-    .avatar-btn {
-        padding: 0.4rem;
+    .top-controls {
+        top: 0.6rem;
+        padding: 0 0.5rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        left: 0;
     }
 
-    .avatar-emoji {
-        font-size: 1.4rem;
+    .top-controls-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        flex-shrink: 0;
     }
 
-    .avatar-name {
-        display: none;
-        /* Hide names on mobile to save space */
+    .shop-invite-btn {
+        height: 32px;
+        padding: 0 0.8rem;
+        font-size: 15px;
     }
 
-    .avatar-grid.small .avatar-emoji {
+    .icon-toggle-btn {
+        width: 32px;
+        height: 32px;
         font-size: 1.2rem;
+        border-radius: 6px;
+    }
+
+    .topic-options {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
     }
 
     .topic-card {
@@ -673,6 +756,16 @@
         font-size: 0.6rem;
     }
 
+    .grid-options,
+    .diff-options {
+        gap: 0.6rem;
+    }
+
+    .mode-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+    }
+
     .mode-btn {
         min-height: 50px;
         padding: 0.3rem 0.1rem;
@@ -683,7 +776,30 @@
         font-size: 0.75rem;
     }
 
-    .mode-reward-badge {
-        font-size: 0.6rem;
+    .avatar-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.4rem;
+    }
+
+    .avatar-btn {
+        padding: 0.4rem;
+    }
+
+    .avatar-emoji {
+        font-size: 1.4rem;
+    }
+
+    .avatar-name {
+        display: none;
+    }
+
+    .start-btn {
+        padding: 0.65rem;
+        font-size: 1rem;
+        margin-top: 0.4rem;
+    }
+
+    .config-section h3 {
+        font-size: 0.85rem;
     }
 }

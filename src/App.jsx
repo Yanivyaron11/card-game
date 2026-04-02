@@ -126,7 +126,7 @@ function App() {
   const [mixerAvailable, setMixerAvailable] = useState({ 1: true, 2: true });
   const [totalCoins, setTotalCoins] = useState(() => parseInt(localStorage.getItem('total_coins') || '100', 10));
   const recordNotifiedRef = useRef(false);
-  const titleClickRef = useRef(0);
+  const answeringRef = useRef(new Set());
   const [unlockedAvatars, setUnlockedAvatars] = useState(() => {
     const saved = localStorage.getItem('unlocked_avatars');
     if (saved) return JSON.parse(saved);
@@ -170,7 +170,7 @@ function App() {
     bonus: 0,
     spent: 0
   });
-  const answeringRef = useRef(new Set());
+
 
   useEffect(() => {
     localStorage.setItem('total_coins', totalCoins);
@@ -1409,15 +1409,7 @@ function App() {
           onComplete={handleLevelWarningComplete}
         />
       )}
-      <h1 className="title-glow" onClick={() => {
-        titleClickRef.current += 1;
-        if (titleClickRef.current >= 5) {
-          titleClickRef.current = 0;
-          navigate('/admin/clean');
-        } else {
-          handleReturnToStart();
-        }
-      }} style={{ cursor: 'pointer' }}>{t.title}</h1>
+
 
       <InstallPrompt language={language} />
       <div className="toast-container">
