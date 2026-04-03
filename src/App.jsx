@@ -138,7 +138,7 @@ function App() {
     const saved = localStorage.getItem('unlocked_topics');
     if (saved) return JSON.parse(saved);
     // Core categories unlocked by default
-    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'world_group', 'sports_group', 'gaming_group', 'entertainment_group'];
+    return ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'sports_group', 'gaming_group', 'entertainment_group'];
   });
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     const saved = localStorage.getItem('unlocked_skins');
@@ -186,7 +186,6 @@ function App() {
     setUnlockedTopics(prev => {
       let next = [...prev];
       if (!next.includes('language_group')) next.push('language_group');
-      if (!next.includes('world_group')) next.push('world_group');
       if (!next.includes('gaming_group')) next.push('gaming_group');
       if (!next.includes('entertainment_group')) next.push('entertainment_group');
       return next;
@@ -240,7 +239,7 @@ function App() {
 
     if (hasToRelock) {
       // Keep only strictly basic ones
-      const coreOnly = ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general'];
+      const coreOnly = ['israel_group', 'nature_group', 'science_group', 'culture_group', 'general', 'language_group', 'gaming_group', 'entertainment_group', 'sports_group'];
       setUnlockedTopics(coreOnly);
       localStorage.setItem('premium_migration_done', 'true');
     }
